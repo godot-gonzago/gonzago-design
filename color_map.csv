@@ -1,0 +1,34 @@
+#ffffff,#414141,White
+#e0e0e0,#5a5a5a,Common icon color
+#b4b4b4,#363636,Darker icon color
+#fc9c9c,#cd3838,Spatial
+#a5b7f3,#3d64dd,2d
+#a5efac,#2fa139,Control
+#ffd684,#fea900,Mesh (orange)
+#40a2ff,#68b6ff,Shape (blue)
+#cea4f1,#a85de9,Animation
+
+#ff8484,#ff3333,Remove (red)
+#84ffb1,#00db50,Add (green)
+#84c2ff,#5caeff,Selection (blue)
+#ffdd65,#ca8a04,Warning (yellow)
+#ff5d5d,#ff5d5d,Error (red)
+
+#ff7070,#ff2929,Rainbow - Red
+#ffeb70,#ffe337,Rainbow - Yellow
+#9dff70,#74ff34,Rainbow - Green
+#70ffb9,#2cff98,Rainbow - Aqua
+#70deff,#22ccff,Rainbow - Blue
+#9f70ff,#702aff,Rainbow - Purple
+#ff70ac,#ff2781,Rainbow - Pink
+
+#69ecbd,#25e3a0,Type - Variant
+#8da6f0,#6d8eeb,Type - Bool
+#7dc6ef,#4fb2e9,Type - Int
+#61daf4,#27ccf0,Type - Float
+#6ba7ec,#4690e7,Type - String
+#79f3e8,#12d5c3,Type - Object
+#bd91f1,#ad76ee,Type - Position 2D
+#f191a5,#ee758e,Type - Shape 2D
+#e286f0,#dc6aed,Type - Position 3D
+#ee7991,#ee7991,Type - Shape 3D

@@ -1,0 +1,18 @@
+name: Gonzago Framework
+description: |-
+  Main colors for Gonzago Framework designs
+  <https://github.com/godot-gonzago/gonzago-design>
+category: Gonzago
+colors:
+  - name:  Base
+    dark:  0x2d2523
+    light: 0x2d2523
+  - name:  Contrast
+    dark:  0xfff7f8
+    light: 0xfff7f8
+  - name:  Primary Accent
+    dark:  0xffda45
+    light: 0xffda45
+  - name:  Secondary Accent
+    dark:  0xff4f69
+    light: 0xff4f69
