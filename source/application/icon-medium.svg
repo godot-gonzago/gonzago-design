@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32"
+   height="32"
+   viewBox="0 0 32 32"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="icon_small.inkscape.svg"
+   inkscape:export-filename="icon16x16.png"
+   inkscape:export-xdpi="48"
+   inkscape:export-ydpi="48"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="base_view"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="false"
+     inkscape:document-units="px"
+     showgrid="true"
+     units="px"
+     width="16px"
+     viewbox-height="16"
+     inkscape:zoom="16"
+     inkscape:cx="17.84375"
+     inkscape:cy="15.96875"
+     inkscape:window-width="1368"
+     inkscape:window-height="850"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showborder="true"
+     inkscape:snap-grids="true"
+     inkscape:showpageshadow="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:grid
+       type="xygrid"
+       id="base_grid"
+       dotted="true"
+       empspacing="4" />
+  </sodipodi:namedview>
+  <defs
+     id="base_definitions" />
+  <g
+     inkscape:label="Base Layer"
+     inkscape:groupmode="layer"
+     id="base_layer">
+    <circle
+       cx="16"
+       cy="16"
+       r="14.25"
+       fill="#ff4f69"
+       id="background" />
+    <path
+       id="accent"
+       d="M 3.6,23 C 10,32 22,32 28.4,23 22,16 10,16 3.6,23 Z"
+       fill="#ffda45" />
+    <circle
+       cx="16"
+       cy="16"
+       r="14.25"
+       fill="none"
+       id="ring"
+       stroke="#2d2523"
+       stroke-width="3.5" />
+    <g
+       id="head"
+       fill="#2d2523">
+      <path
+         d="m 14,23 -2,7 h 8 l -2,-7"
+         id="neck" />
+      <rect
+         id="top"
+         width="8"
+         height="5"
+         x="12"
+         y="5"
+         ry="1.5" />
+      <rect
+         id="left"
+         width="8"
+         height="5"
+         x="-25.856407"
+         y="-5.1435933"
+         ry="1.5"
+         transform="rotate(-120)" />
+      <rect
+         id="right"
+         width="8"
+         height="5"
+         x="1.8564065"
+         y="-32.856407"
+         ry="1.5"
+         transform="rotate(120)" />
+      <circle
+         id="base"
+         cx="16"
+         cy="16"
+         r="9" />
+      <circle
+         id="eye"
+         cx="16"
+         cy="16"
+         r="3.5"
+         stroke="#fff7f8"
+         stroke-width="2.5" />
+    </g>
+  </g>
+</svg>

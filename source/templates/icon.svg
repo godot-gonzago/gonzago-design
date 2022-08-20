@@ -6,8 +6,8 @@
    height="16"
    viewBox="0 0 16 16"
    version="1.1"
-   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    id="icon_svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
@@ -25,6 +25,8 @@
        dotted="true"
        empspacing="4" />
   </sodipodi:namedview>
+  <defs
+     id="base_definitions" />
   <g
      inkscape:label="Base Layer"
      inkscape:groupmode="layer"
