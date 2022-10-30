@@ -3,13 +3,8 @@
 echo Setup virtual environment
 echo =========================
 
-call check_environment.bat
-if errorlevel 1 goto stop
-
+call run.bat ..\make_palettes.py
 echo.
-cmd /k
-exit
-
-:stop
-echo.
+if %ERRORLEVEL% neq 0 echo Error %ERRORLEVEL%
 pause
+exit /B %ERRORLEVEL%
