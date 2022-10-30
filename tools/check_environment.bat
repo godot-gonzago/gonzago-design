@@ -1,36 +1,35 @@
 :: Ensure Python Environment and Activate
 @echo off
 
-if exist ..\env\Scripts\activate.bat goto activate
+call check_python.bat
+if %ERRORLEVEL% neq 0 exit /B %ERRORLEVEL%
 
-echo Virtual environment doesn't exist. Creating environment...
-python -m venv ..\env
-if errorlevel 1 goto errorCreate
+if exist ..\env\Scripts\activate.bat (
+	echo Activating environment...
+	call :activate
+	exit /B %ERRORLEVEL%
+) else (
+    echo Virtual environment doesn't exist. Creating environment...
+    python -m venv ..\env
+	if %ERRORLEVEL% neq 0 (
+        echo Error^: Couldn't create virtual environment.
+		exit /B %ERRORLEVEL%
+    )
+	
+	call :activate
+	if %ERRORLEVEL% neq 0 exit /B %ERRORLEVEL%
+	
+	echo Installing requirements...
+    echo.
+    pip install -r ..\requirements.txt
+    if %ERRORLEVEL% neq 0 (
+        echo Error^: Couldn't install requirements to virtual environment.
+    )
+)
 
-call ..\env\Scripts\activate.bat
-if errorlevel 1 goto errorActivate
-
-echo Installing requirements...
-echo.
-pip install -r ..\requirements.txt
-if errorlevel 1 goto errorPip
-
-exit /B 0
+exit /B %ERRORLEVEL%
 
 :activate
-echo Activating environment...
 call ..\env\Scripts\activate.bat
-if errorlevel 1 goto errorActivate
-exit /B 0
-
-:errorActivate
-echo Error^: Couldn't activate virtual environment.
-exit /B 1
-
-:errorCreate
-echo Error^: Couldn't create virtual environment.
-exit /B 2
-
-:errorPip
-echo Error^: Couldn't install requirements to virtual environment.
-exit /B 3
+if %ERRORLEVEL% neq 0 echo Error^: Couldn't activate virtual environment.
+exit /B %ERRORLEVEL%
