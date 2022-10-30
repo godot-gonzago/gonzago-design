@@ -3,10 +3,12 @@ import yaml
 from io import TextIOWrapper
 from tokenize import String
 from PIL import ImageColor
+from pathlib import PurePath
 
+path = PurePath(__file__).parent
 
 def read_yaml():
-    with open('./colors/godot.map') as f:
+    with open(path.joinpath('./colors/godot.map')) as f:
         config = yaml.safe_load(f)
     return config
 
@@ -40,14 +42,14 @@ def write_palette_space(file: TextIOWrapper):
 def write_palette_footer(file: TextIOWrapper):
     file.write('\n\n')
 
-
-dark_palette = open("./palettes/godot-dark.gpl", "w")
-light_palette = open("./palettes/godot-light.gpl", "w")
+# TODO: Handle non existent palettes folder
+dark_palette = open(path.joinpath('./palettes/godot-dark.gpl'), "w")
+light_palette = open(path.joinpath('./palettes/godot-light.gpl'), "w")
 
 write_palette_header(dark_palette, "Dark")
 write_palette_header(light_palette, "Light")
 
-with open('color_map.csv') as file:
+with open(path.joinpath('color_map.csv')) as file:
     reader = csv.reader(file)
     for row in reader:
         if len(row) == 3:

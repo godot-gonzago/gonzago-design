@@ -10,8 +10,7 @@ if [%~1]==[] (
     cmd /k
 ) else (
     if %ERRORLEVEL% neq 0 exit /B %ERRORLEVEL%
-    cd %~dp1
-    python %~nx1
+    python %~f1
 )
 exit /B %ERRORLEVEL%
 
