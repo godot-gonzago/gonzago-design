@@ -43,28 +43,33 @@ def write_palette_space(file: TextIOWrapper):
 def write_palette_footer(file: TextIOWrapper):
     file.write('\n\n')
 
-# TODO: Handle non existent palettes folder
-dark_palette = open(path.joinpath('./palettes/godot-dark.gpl'), "w")
-light_palette = open(path.joinpath('./palettes/godot-light.gpl'), "w")
 
-write_palette_header(dark_palette, "Dark")
-write_palette_header(light_palette, "Light")
+if __name__ == '__main__':
+    print('Building palettes')
+    print('=================')
 
-with open(path.joinpath('color_map.csv')) as file:
-    reader = csv.reader(file)
-    for row in reader:
-        if len(row) == 3:
-            write_palette_entry(dark_palette, row[0], row[2])
-            write_palette_entry(light_palette, row[1], row[2])
-        else:
-            write_palette_space(dark_palette)
-            write_palette_space(light_palette)
+    # TODO: Handle non existent palettes folder
+    dark_palette = open(path.joinpath('./palettes/godot-dark.gpl'), "w")
+    light_palette = open(path.joinpath('./palettes/godot-light.gpl'), "w")
 
-write_palette_footer(dark_palette)
-write_palette_footer(light_palette)
+    write_palette_header(dark_palette, "Dark")
+    write_palette_header(light_palette, "Light")
 
-dark_palette.close()
-light_palette.close()
+    with open(path.joinpath('color_map.csv')) as file:
+        reader = csv.reader(file)
+        for row in reader:
+            if len(row) == 3:
+                write_palette_entry(dark_palette, row[0], row[2])
+                write_palette_entry(light_palette, row[1], row[2])
+            else:
+                write_palette_space(dark_palette)
+                write_palette_space(light_palette)
 
-print('Exported dark palette')
-print('Exported light palette')
+    write_palette_footer(dark_palette)
+    write_palette_footer(light_palette)
+
+    dark_palette.close()
+    light_palette.close()
+
+    print('Exported dark palette')
+    print('Exported light palette')
