@@ -22,12 +22,13 @@ def hex_to_rgb(hex):
 
 
 def write_palette_header(file: TextIOWrapper, name: String):
-    file.write('GIMP Palette\n')
-    file.write('Name: Godot Editor Icons ({} Theme)\n'.format(name))
-    file.write('# Icon colors based on {} editor theme\n'.format(name.lower()))
     file.write(
-        '# <https://docs.godotengine.org/en/stable/development/editor/creating_icons.html>\n')
-    file.write('\n\n')
+        'GIMP Palette\n' +
+        'Name: Godot Editor Icons ({} Theme)\n'.format(name) +
+        '# Icon colors based on {} editor theme\n'.format(name.lower()) +
+        '# <https://docs.godotengine.org/en/stable/development/editor/creating_icons.html>\n' +
+        '\n\n'
+    )
 
 
 def write_palette_entry(file: TextIOWrapper, hex: String, name: String):
@@ -64,3 +65,6 @@ write_palette_footer(light_palette)
 
 dark_palette.close()
 light_palette.close()
+
+print('Exported dark palette')
+print('Exported light palette')

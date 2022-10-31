@@ -22,4 +22,5 @@ if %ERRORLEVEL% neq 0 exit /B %ERRORLEVEL%
 echo Running script %~1
 echo.
 python %~f1
+echo.
 exit /B %ERRORLEVEL%
