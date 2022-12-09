@@ -1,5 +1,5 @@
 @echo off
 
-call run.cmd .\scripts\build_palettes.py
+call run.cmd .\scripts\make.py
 pause
 exit /B %ERRORLEVEL%
