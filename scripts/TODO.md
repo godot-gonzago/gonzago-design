@@ -1,9 +1,31 @@
 # TODO
 
+- Python basics
 - File modified cache using MD5 or something of the sort.
     - We then can crawl through the filesystem and only handle sources with changes.
+    - https://docs.python.org/3/library/os.path.html#os.path.getmtime
+    - https://realpython.com/python-pathlib/#find-the-last-modified-file
+    - https://www.debugpointer.com/python/create-md5-hash-of-a-file-in-python
+    - https://docs.python.org/3/library/hashlib.html#file-hashing
+    - https://www.geeksforgeeks.org/write-a-dictionary-to-a-file-in-python/
 - Crawl through filesystem (recursion?) and keep paths.
+    - https://thispointer.com/python-how-to-get-list-of-files-in-directory-and-sub-directories/
+    - https://www.delftstack.com/howto/python/python-list-all-files-in-directory-and-subdirectories/
+    - https://pynative.com/python-list-files-in-a-directory/
+    - https://docs.python.org/3/library/os.html#os.DirEntry
 - Some sort of build config might be necessairy to specify what needs to be done.
 - Conversion from svg to png.
+    - https://clay-atlas.com/us/blog/2021/03/08/python-en-svglib-convert-svg-png/
+    - https://cairosvg.org/
+    - https://github.com/deeplook/svglib
+- Conversion svg or whatever to ico etc.
+    - https://pypi.org/project/icnsutil/
+    - https://www.geeksforgeeks.org/convert-png-to-ico-with-pillow-in-python/
+    - https://learning-python.com/iconify.html
+    - https://github.com/kray74/svgtoico
+    - https://github.com/python-pillow/Pillow/pull/6122
+    - https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#icns
+    - https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#ico
 - Get real color info from Godot source.
 - How to handle 3D assets and sound/video assets and themes and so forth?
+    - Probably export manually as it is to much of a hassle to automate
