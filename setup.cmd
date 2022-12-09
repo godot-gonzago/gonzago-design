@@ -3,6 +3,8 @@
 @echo off
 setlocal
 
+title Gonzago Design Tools - Setup
+
 echo GONZAGO DESIGN TOOLS - SETUP
 echo ============================
 
