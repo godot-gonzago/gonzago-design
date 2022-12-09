@@ -1,5 +1,5 @@
 @echo off
 
-call run.bat ..\make_palettes.py
+call run.cmd ..\make_palettes.py
 pause
 exit /B %ERRORLEVEL%

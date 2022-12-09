@@ -3,7 +3,7 @@
 @echo off
 
 :: Initial checks and setup
-call init.bat
+call init.cmd
 echo.
 
 :: If has no argument keep window open for user
