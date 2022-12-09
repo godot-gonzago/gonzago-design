@@ -49,13 +49,13 @@ if __name__ == '__main__':
     print('=================')
 
     # TODO: Handle non existent palettes folder
-    dark_palette = open(path.joinpath('./palettes/godot-dark.gpl'), "w")
-    light_palette = open(path.joinpath('./palettes/godot-light.gpl'), "w")
+    dark_palette = open(path.joinpath('../palettes/godot-dark.gpl'), "w")
+    light_palette = open(path.joinpath('../palettes/godot-light.gpl'), "w")
 
     write_palette_header(dark_palette, "Dark")
     write_palette_header(light_palette, "Light")
 
-    with open(path.joinpath('color_map.csv')) as file:
+    with open(path.joinpath('../source/palettes/godot.csv')) as file:
         reader = csv.reader(file)
         for row in reader:
             if len(row) == 3:
