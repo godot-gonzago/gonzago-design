@@ -2,7 +2,7 @@
 :: ================================================
 @echo off
 
-:: Initial checks and setup
+:: Initial virtual environment checks and setup
 call init.cmd
 echo.
 

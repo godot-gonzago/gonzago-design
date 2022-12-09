@@ -11,7 +11,7 @@ echo ====================
 for /F "tokens=* USEBACKQ" %%i in (`python --version 3`) do set PYTHON_VERSION=%%i
 if %ERRORLEVEL% neq 0 (
     echo Error: Python not found!
-    echo Please ensure Python is installed and added to environment.
+    echo Please ensure Python is installed and added to system environment.
     goto eof
 )
 echo %PYTHON_VERSION% found!
