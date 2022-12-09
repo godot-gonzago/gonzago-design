@@ -1,6 +1,8 @@
 # TODO
 
 - Python basics
+    - https://docs.python-guide.org/
+    - https://betterprogramming.pub/write-better-python-scripts-ce58c1ebf690
 - File modified cache using MD5 or something of the sort.
     - We then can crawl through the filesystem and only handle sources with changes.
     - https://docs.python.org/3/library/os.path.html#os.path.getmtime
