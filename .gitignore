@@ -1,5 +1,5 @@
-# Caches
-.cache
+# Cache folder
+.cache/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

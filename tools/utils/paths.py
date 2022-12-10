@@ -5,7 +5,8 @@ ROOT_DIR = Path(__file__).parent.parent.parent
 SOURCE_DIR = ROOT_DIR.joinpath('source')
 EXPORT_DIR = ROOT_DIR
 
-CACHE_DIR = ROOT_DIR.joinpath('.cache')
+TOOL_DIR = Path(__file__).parent.parent
+CACHE_DIR = TOOL_DIR.joinpath('.cache')
 FILE_CACHE = CACHE_DIR.joinpath('files.yaml')
 
 

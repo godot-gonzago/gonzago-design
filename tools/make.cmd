@@ -1,5 +1,5 @@
 @echo off
 
-call run.cmd .\tools\make.py
+call run.cmd .\make.py
 pause
 exit /B %ERRORLEVEL%

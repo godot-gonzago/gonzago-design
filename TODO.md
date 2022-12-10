@@ -1,9 +1,32 @@
 # TODO
 
+- Restructuring
+    - add .gitattributes in tools?
+        - <https://stackoverflow.com/questions/6670140/how-do-i-set-all-files-in-a-subdirectory-to-use-a-specific-eol-using-gitattribut>
+        - <https://gist.github.com/dreftymac/a589eea7d67e79bd84fe>
+    - add .gitignore in tools as python ignores are only needed there?
 - Python basics
     - <https://docs.python-guide.org/>
     - <https://betterprogramming.pub/write-better-python-scripts-ce58c1ebf690>
     - <https://docs.python.org/3/library/typing.html>
+- Make better setup batch
+    - <https://stackoverflow.com/questions/9307512/create-a-batch-file-with-multiple-options>
+    - Init check
+        - Python installed
+        - Virtual environment created
+    - Options if installed
+        - Recreate virtual environment
+            - Wizard like with choices
+                - Install pip tools
+        - Update virtual environment/packages etc.
+        - ...
+- Make better run batch
+    - Call init check in setup.cmd via passing argument
+    - Options
+        - Enter Setup
+        - Enter virtual environment
+        - Run all generators
+        - ...
 - Add PipTools batches or something (on setup?)
     - <https://github.com/jazzband/pip-tools>
     - <https://note.nkmk.me/en/python-pip-install-requirements/>
