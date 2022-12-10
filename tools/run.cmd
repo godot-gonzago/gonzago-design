@@ -2,6 +2,9 @@
 :: ====================================================================
 @echo off
 
+title Gonzago Design Tools
+
+cls
 echo GONZAGO DESIGN TOOLS
 echo ====================
 
