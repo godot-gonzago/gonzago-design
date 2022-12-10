@@ -4,6 +4,9 @@
     - <https://docs.python-guide.org/>
     - <https://betterprogramming.pub/write-better-python-scripts-ce58c1ebf690>
     - <https://docs.python.org/3/library/typing.html>
+- Add PipTools batches or something (on setup?)
+    - <https://github.com/jazzband/pip-tools>
+    - <https://note.nkmk.me/en/python-pip-install-requirements/>
 - File modified cache using MD5 or something of the sort.
     - We then can crawl through the filesystem and only handle sources with changes.
     - <https://docs.python.org/3/library/os.path.html#os.path.getmtime>
@@ -22,13 +25,17 @@
     - <https://cairosvg.org/>
     - <https://github.com/deeplook/svglib>
 - Conversion svg or whatever to ico etc.
-    - <https://pypi.org/project/icnsutil/>
-    - <https://www.geeksforgeeks.org/convert-png-to-ico-with-pillow-in-python/>
-    - <https://learning-python.com/iconify.html>
-    - <https://github.com/kray74/svgtoico>
-    - <https://github.com/python-pillow/Pillow/pull/6122>
-    - <https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#icns>
-    - <https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#ico>
+    - <https://docs.godotengine.org/en/stable/tutorials/export/changing_application_icon_for_windows.html>
+        - min 16×16, 32×32, 48×48, 64×64, 128×128, 256×256
+        - <https://en.wikipedia.org/wiki/ICO_(file_format)>
+        - <https://www.geeksforgeeks.org/convert-png-to-ico-with-pillow-in-python/>
+        - <https://learning-python.com/iconify.html>
+        - <https://github.com/python-pillow/Pillow/pull/6122>
+        - <https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#ico>
+    - <https://docs.fileformat.com/image/icns/>
+        - <https://en.wikipedia.org/wiki/Apple_Icon_Image_format>
+        - <https://pypi.org/project/icnsutil/>
+        - <https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#icns>
 - Get real color info from Godot source.
     - Extract from source code via regex <https://github.com/godotengine/godot/blob/master/editor/editor_themes.cpp>
         - <https://regexr.com/399o9>
