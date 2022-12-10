@@ -9,7 +9,7 @@
     - <https://docs.python-guide.org/>
     - <https://betterprogramming.pub/write-better-python-scripts-ce58c1ebf690>
     - <https://docs.python.org/3/library/typing.html>
-- Make better setup batch
+- Make better setup batch (maybe integrate into run.cmd?)
     - <https://stackoverflow.com/questions/9307512/create-a-batch-file-with-multiple-options>
     - Init check
         - Python installed
@@ -24,7 +24,7 @@
     - Call init check in setup.cmd via passing argument
     - Options
         - Enter Setup
-        - Enter virtual environment
+        - Enter virtual environment (get user input with active environment)
         - Run all generators
         - ...
 - Add PipTools batches or something (on setup?)
