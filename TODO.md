@@ -26,6 +26,10 @@
         - Enter Setup
         - Enter virtual environment (get user input with active environment)
         - Run all generators
+        - Run specific generator
+            - <https://ss64.com/nt/>
+            - <https://stackoverflow.com/questions/54284559/get-all-files-with-a-specific-extension>
+            - <https://superuser.com/questions/1610276/write-bat-file-and-execute-command-based-on-input-windows>
         - ...
 - Add PipTools batches or something (on setup?)
     - <https://github.com/jazzband/pip-tools>
