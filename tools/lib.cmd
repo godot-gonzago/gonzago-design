@@ -1,6 +1,9 @@
 :: Function library
 :: ================
 :: https://stackoverflow.com/a/30168257
+:: https://stackoverflow.com/questions/5837418/how-do-you-get-the-string-length-in-a-batch-file
+:: https://www.tutorialspoint.com/batch_script/batch_script_string_length.htm
+:: https://www.tutorialspoint.com/batch_script/batch_script_empty_string.htm
 @echo off
 call :%*
 exit /b %ERRORLEVEL%
