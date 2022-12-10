@@ -1,8 +1,10 @@
-import os
-import yaml
 import hashlib
+import os
 from pathlib import Path
+
+import yaml
 from utils import paths
+
 
 def compute_md5(path: str | os.PathLike) -> str:
     path = Path(path)
@@ -13,7 +15,7 @@ def compute_md5(path: str | os.PathLike) -> str:
     if path.is_file():
         md5 = hashlib.md5()
         with path.open('rb') as file:
-            while chunk := file.read(65536): # 64kb chunks
+            while chunk := file.read(65536):  # 64kb chunks
                 md5.update(chunk)
         return md5.hexdigest()
 
@@ -37,7 +39,7 @@ def gather_file_cache():
     cache = {}
     for (root, dirs, files) in os.walk(paths.SOURCE_DIR):
         for file in files:
-            #file.endswith()
+            # file.endswith()
             file_path = paths.SOURCE_DIR.joinpath(root, file)
             #print(f'Suffix: {file_path.suffix}')
             rel_path = file_path.relative_to(paths.SOURCE_DIR).as_posix()
@@ -50,6 +52,7 @@ def gather_file_cache():
             }
 
     return cache
+
 
 def diff_file_cache():
     old_cache = load_cache_from_file()
@@ -86,6 +89,7 @@ def diff_file_cache():
     print(deleted)
 
     save_cache_to_file(current_cache)
+
 
 if __name__ == '__main__':
     print('Gathering files')

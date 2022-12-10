@@ -30,5 +30,10 @@
     - <https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#icns>
     - <https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#ico>
 - Get real color info from Godot source.
+    - Extract from source code via regex <https://github.com/godotengine/godot/blob/master/editor/editor_themes.cpp>
+        - <https://regexr.com/399o9>
+        - <https://regexr.com/3ai9g>
+        - add_conversion_color_pair("{dark}", "{light}"); // {comment}
+        - Maybe this is too dumb and we go back to yamls done manually, because this shouldn't change that often
 - How to handle 3D assets and sound/video assets and themes and so forth?
     - Probably export manually as it is to much of a hassle to automate

@@ -1,11 +1,13 @@
 import csv
-import yaml
 from io import TextIOWrapper
-from tokenize import String
-from PIL import ImageColor
 from pathlib import PurePath
+from tokenize import String
+
+import yaml
+from PIL import ImageColor
 
 path = PurePath(__file__).parent
+
 
 def read_yaml():
     with open(path.joinpath('./colors/godot.map')) as f:
