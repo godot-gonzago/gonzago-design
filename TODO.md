@@ -36,6 +36,22 @@
         - Directly in python? <https://www.activestate.com/resources/quick-reads/how-to-install-python-packages-using-a-script/>
     - <https://peps.python.org/pep-0008/>
     - Visual Studio code integration?
+        - <https://code.visualstudio.com/docs/editor/tasks>
+        - <https://realpython.com/advanced-visual-studio-code-python/>
+            - <https://realpython.com/advanced-visual-studio-code-python/#configuring-a-launch-file>
+    - Python Poetry Visual Studio Code
+        - <https://www.pythoncheatsheet.org/blog/python-projects-with-poetry-and-vscode-part-1>
+        - <https://www.pythoncheatsheet.org/blog/python-projects-with-poetry-and-vscode-part-2>
+        - <https://openqa-bites.github.io/posts/2022-02-15-vscode-poetry/>
+        - <https://zhauniarovich.com/post/2020/2020-04-starting-new-python-project/>
+    - Git Attributes
+        - <https://git-scm.com/docs/gitattributes>
+        - <https://www.pixelite.co.nz/article/using-git-attributes-exclude-files-your-release/>
+        - <https://docs.github.com/en/repositories/working-with-files/managing-files/customizing-how-changed-files-appear-on-github>
+        - <https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases>
+        - <https://github.com/Richienb/git-files/blob/master/files/.gitattributes>
+        - <https://github.com/git/git/blob/master/.gitattributes>
+        - <https://github.com/git/git/blob/master/userdiff.c>
 - Python basics
     - <https://docs.python-guide.org/>
     - <https://betterprogramming.pub/write-better-python-scripts-ce58c1ebf690>
@@ -51,6 +67,17 @@
     - <https://lyz-code.github.io/blue-book/coding/python/python_project_template/python_cli_template/>
     - <https://github.com/d-w-d/python-project-template>
     - <https://zhauniarovich.com/post/2020/2020-04-starting-new-python-project/>
+    - Make better use of classes etc.
+    - <https://www.geeksforgeeks.org/usage-of-__main__-py-in-python/>
+    - <https://dev.to/codemouse92/dead-simple-python-project-structure-and-imports-38c6>
+    - <https://chriswarrick.com/blog/2014/09/15/python-apps-the-right-way-entry_points-and-scripts/>
+    - <https://setuptools.pypa.io/en/latest/userguide/quickstart.html>
+        - <https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/>
+        - <https://stackoverflow.com/questions/62983756/what-is-pyproject-toml-file-for>
+        - <https://godatadriven.com/blog/a-practical-guide-to-setuptools-and-pyproject-toml/>
+        - <https://ianhopkinson.org.uk/2022/02/understanding-setup-py-setup-cfg-and-pyproject-toml-in-python/>
+    - Setup.py reference <https://github.com/jamesabel/pyship>
+    - <https://blog.emacsos.com/bootstrap-a-python-project.html>
 - File modified cache using MD5 or something of the sort.
     - We then can crawl through the filesystem and only handle sources with changes.
     - <https://docs.python.org/3/library/os.path.html#os.path.getmtime>
