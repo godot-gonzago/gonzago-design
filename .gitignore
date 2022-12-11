@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/windows,linux,osx
-# Edit at https://www.toptal.com/developers/gitignore?templates=windows,linux,osx
+# Created by https://www.toptal.com/developers/gitignore/api/osx,linux,windows,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=osx,linux,windows,visualstudiocode
 
 ### Linux ###
 *~
@@ -45,6 +45,25 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
@@ -71,4 +90,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/windows,linux,osx
+# End of https://www.toptal.com/developers/gitignore/api/osx,linux,windows,visualstudiocode

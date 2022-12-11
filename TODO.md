@@ -10,7 +10,7 @@
         - Init check
             - Python installed
                 - Ask if user wants to open download website
-                    - open url with following command: start https://www.python.org/downloads/
+                    - open url with following command: `start https://www.python.org/downloads/`
             - Virtual environment created
         - Options if installed
             - Recreate virtual environment
