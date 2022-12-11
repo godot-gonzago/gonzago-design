@@ -20,9 +20,9 @@ if %ERRORLEVEL% neq 0 (
 echo %PYTHON_VERSION% found!
 
 :: Look for existing virtual environment and activate it
-if exist .\env\Scripts\activate.bat (
+if exist .\.venv\Scripts\activate.bat (
     echo Activating virtual environment...
-    call .\env\Scripts\activate.bat
+    call .\.venv\Scripts\activate
     if %ERRORLEVEL% neq 0 (
         echo Error: Couldn't activate virtual environment.
     )
@@ -32,14 +32,14 @@ if exist .\env\Scripts\activate.bat (
 :: Create virtual environment if it didn't exist
 echo Virtual environment doesn't exist.
 echo Creating virtual environment...
-python -m venv .\env
+python -m venv .\.venv
 if %ERRORLEVEL% neq 0 (
     echo Error: Couldn't create virtual environment.
     goto eof
 )
 
 :: Activate virtual environment
-call .\env\Scripts\activate.bat
+call .\.venv\Scripts\activate
 if %ERRORLEVEL% neq 0 (
     echo Error: Couldn't activate virtual environment.
     goto eof

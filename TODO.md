@@ -5,35 +5,52 @@
         - <https://stackoverflow.com/questions/6670140/how-do-i-set-all-files-in-a-subdirectory-to-use-a-specific-eol-using-gitattribut>
         - <https://gist.github.com/dreftymac/a589eea7d67e79bd84fe>
     - add .gitignore in tools as python ignores are only needed there?
+    - Make better setup batch (maybe integrate into run.cmd?) - Do in python?
+        - <https://stackoverflow.com/questions/9307512/create-a-batch-file-with-multiple-options>
+        - Init check
+            - Python installed
+                - Ask if user wants to open download website
+                    - open url with following command: start https://www.python.org/downloads/
+            - Virtual environment created
+        - Options if installed
+            - Recreate virtual environment
+                - Wizard like with choices
+                    - Install pip tools
+            - Update virtual environment/packages etc.
+            - <https://pipenv.pypa.io/en/latest/>
+            - ...
+    - Make better run batch - Do in python except intial python check?
+        - Call init check in setup.cmd via passing argument
+        - Options
+            - Enter Setup
+            - Enter virtual environment (get user input with active environment)
+            - Run all generators
+            - Run specific generator
+                - <https://ss64.com/nt/>
+                - <https://stackoverflow.com/questions/54284559/get-all-files-with-a-specific-extension>
+                - <https://superuser.com/questions/1610276/write-bat-file-and-execute-command-based-on-input-windows>
+            - ...
+    - Add PipTools batches or something (on setup?)
+        - <https://github.com/jazzband/pip-tools>
+        - <https://note.nkmk.me/en/python-pip-install-requirements/>
+        - Directly in python? <https://www.activestate.com/resources/quick-reads/how-to-install-python-packages-using-a-script/>
+    - <https://peps.python.org/pep-0008/>
+    - Visual Studio code integration?
 - Python basics
     - <https://docs.python-guide.org/>
     - <https://betterprogramming.pub/write-better-python-scripts-ce58c1ebf690>
     - <https://docs.python.org/3/library/typing.html>
-- Make better setup batch (maybe integrate into run.cmd?)
-    - <https://stackoverflow.com/questions/9307512/create-a-batch-file-with-multiple-options>
-    - Init check
-        - Python installed
-        - Virtual environment created
-    - Options if installed
-        - Recreate virtual environment
-            - Wizard like with choices
-                - Install pip tools
-        - Update virtual environment/packages etc.
-        - ...
-- Make better run batch
-    - Call init check in setup.cmd via passing argument
-    - Options
-        - Enter Setup
-        - Enter virtual environment (get user input with active environment)
-        - Run all generators
-        - Run specific generator
-            - <https://ss64.com/nt/>
-            - <https://stackoverflow.com/questions/54284559/get-all-files-with-a-specific-extension>
-            - <https://superuser.com/questions/1610276/write-bat-file-and-execute-command-based-on-input-windows>
-        - ...
-- Add PipTools batches or something (on setup?)
-    - <https://github.com/jazzband/pip-tools>
-    - <https://note.nkmk.me/en/python-pip-install-requirements/>
+    - <https://data-flair.training/blogs/python-best-practices/>
+    - <https://towardsdatascience.com/the-good-way-to-structure-a-python-project-d914f27dfcc9>
+    - <https://simpleprogrammer.com/python-best-practices/>
+    - <https://climbtheladder.com/10-python-project-setup-best-practices/>
+    - <https://github.com/yngvem/python-project-structure#the-setup-files>
+    - <https://github.com/rochacbruno/python-project-template>
+    - <https://blog.wolt.com/engineering/2022/08/11/project-template-for-modern-python-packages/>
+    - <https://lyz-code.github.io/blue-book/coding/python/python_project_template/>
+    - <https://lyz-code.github.io/blue-book/coding/python/python_project_template/python_cli_template/>
+    - <https://github.com/d-w-d/python-project-template>
+    - <https://zhauniarovich.com/post/2020/2020-04-starting-new-python-project/>
 - File modified cache using MD5 or something of the sort.
     - We then can crawl through the filesystem and only handle sources with changes.
     - <https://docs.python.org/3/library/os.path.html#os.path.getmtime>
