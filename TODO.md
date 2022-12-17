@@ -113,5 +113,6 @@
         - <https://regexr.com/3ai9g>
         - add_conversion_color_pair("{dark}", "{light}"); // {comment}
         - Maybe this is too dumb and we go back to yamls done manually, because this shouldn't change that often
+    - List of color palette formats <https://www.cyotek.com/cyotek-palette-editor/supported-palette-formats>
 - How to handle 3D assets and sound/video assets and themes and so forth?
     - Probably export manually as it is to much of a hassle to automate
