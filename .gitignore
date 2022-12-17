@@ -91,3 +91,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/osx,linux,windows,visualstudiocode
+
+# Files
+*.blend[1-9]

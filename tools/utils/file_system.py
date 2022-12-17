@@ -1,14 +1,30 @@
 import hashlib
-import os
+from os import PathLike, walk, stat
 from pathlib import Path
 
 import yaml
-from utils import paths
 
-FILE_CACHE = paths.CACHE_DIR.joinpath('files.yaml')
+_SCRIPT_FILE = Path(__file__)
+_SCRIPT_DIR = _SCRIPT_FILE.parent
+_TOOLS_DIR = _SCRIPT_DIR.parent
+
+_CACHE_DIR = _TOOLS_DIR.joinpath('.cache')
+_CACHE_FILE = _CACHE_DIR.joinpath('files.yaml')
+
+ROOT_DIR = _TOOLS_DIR.parent
+SOURCE_DIR = ROOT_DIR.joinpath('source')
+EXPORT_DIR = ROOT_DIR
 
 
-def compute_md5(path: str | os.PathLike) -> str:
+def create_directories(path: str | PathLike) -> None:
+    if not path is Path:
+        path = Path(path)
+
+    if not path.is_dir():
+        path.mkdir(parents=True, exist_ok=True)
+
+
+def compute_md5(path: str | PathLike) -> str:
     if not path is Path:
         path = Path(path)
 
@@ -25,29 +41,30 @@ def compute_md5(path: str | os.PathLike) -> str:
     return ""
 
 
-def load_cache_from_file():
-    if not FILE_CACHE.exists():
+def load_cache_from_file() -> dict:
+    if not _CACHE_FILE.exists():
         return {}
-    with FILE_CACHE.open() as file:
+
+    with _CACHE_FILE.open() as file:
         return yaml.full_load(file)
 
 
-def save_cache_to_file(cache):
-    paths.create_directories(FILE_CACHE)
-    with FILE_CACHE.open('w+') as file:
+def save_cache_to_file(cache: dict) -> None:
+    create_directories(_CACHE_DIR)
+    with _CACHE_FILE.open('w+') as file:
         yaml.dump(cache, file)
 
 
 def gather_file_cache():
     cache = {}
-    for (root, dirs, files) in os.walk(paths.SOURCE_DIR):
+    for (root, dirs, files) in walk(SOURCE_DIR):
         for file in files:
             # file.endswith()
-            file_path = paths.SOURCE_DIR.joinpath(root, file)
+            file_path = SOURCE_DIR.joinpath(root, file)
             # print(f'Suffix: {file_path.suffix}')
-            rel_path = file_path.relative_to(paths.SOURCE_DIR).as_posix()
+            rel_path = file_path.relative_to(SOURCE_DIR).as_posix()
 
-            statinfo = os.stat(file_path)
+            statinfo = stat(file_path)
             cache[rel_path] = {
                 'lmod': statinfo.st_mtime,
                 'size': statinfo.st_size,
