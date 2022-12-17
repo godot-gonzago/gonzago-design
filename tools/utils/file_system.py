@@ -16,9 +16,12 @@ SOURCE_DIR = ROOT_DIR.joinpath('source')
 EXPORT_DIR = ROOT_DIR
 
 
-def create_directories(path: str | PathLike) -> None:
+def create_directories(path: str | PathLike, is_file_path : bool = False) -> None:
     if not path is Path:
         path = Path(path)
+
+    if is_file_path:
+        path = path.parent
 
     if not path.is_dir():
         path.mkdir(parents=True, exist_ok=True)
@@ -55,29 +58,61 @@ def save_cache_to_file(cache: dict) -> None:
         yaml.dump(cache, file)
 
 
+class DirStats:
+    lmod: float
+    hash: str
+
+    def __init__(self, lmod: float, hash: str):
+        self.lmod = lmod
+        self.hash = hash
+
+    # https://www.tutorialspoint.com/How-to-overload-Python-comparison-operators
+
+
+class FileStats:
+    lmod: float
+    size: int
+    hash: str
+
+    def __init__(self, lmod: float, size: int, hash: str):
+        self.lmod = lmod
+        self.size = size
+        self.hash = hash
+
+
 class FileSystemCache:
-    class DirStats:
-        lmod: float
-        hash: str
-
-        def __init__(self, lmod: float, hash: str):
-            self.lmod = lmod
-            self.hash = hash
-
-        # https://www.tutorialspoint.com/How-to-overload-Python-comparison-operators
-
-    class FileStats:
-        lmod: float
-        size: int
-        hash: str
-
-        def __init__(self, lmod: float, size: int, hash: str):
-            self.lmod = lmod
-            self.size = size
-            self.hash = hash
-
     dirs: dict[str, DirStats] = {}
     files: dict[str, FileStats] = {}
+
+    def gather(self) -> None:
+        self.dirs.clear()
+        self.files.clear()
+
+        for (root, dirs, files) in walk(SOURCE_DIR):
+            for dir in dirs:
+                dir_path: Path = SOURCE_DIR.joinpath(root, dir)
+                rel_path: Path = dir_path.relative_to(SOURCE_DIR).as_posix()
+
+                statinfo = stat(file_path)
+                self.dirs[rel_path] = DirStats(
+                    statinfo.st_mtime,
+                    statinfo.st_size,
+                    compute_md5(dir_path)
+                )
+
+            for file in files:
+                # file.endswith()
+                file_path = SOURCE_DIR.joinpath(root, file)
+                #file_path.match('*.svg')
+                # print(f'Suffix: {file_path.suffix}')
+                rel_path = file_path.relative_to(SOURCE_DIR).as_posix()
+
+                statinfo = stat(file_path)
+                self.files[rel_path] = FileStats(
+                    statinfo.st_mtime,
+                    statinfo.st_size,
+                    compute_md5(file_path)
+                )
 
 
 # class CacheDiff:
