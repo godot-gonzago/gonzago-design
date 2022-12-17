@@ -4,16 +4,17 @@ from pathlib import Path
 
 import yaml
 
-_SCRIPT_FILE = Path(__file__)
-_SCRIPT_DIR = _SCRIPT_FILE.parent
-_TOOLS_DIR = _SCRIPT_DIR.parent
+_SCRIPT_FILE : Path = Path(__file__)
+_SCRIPT_DIR : Path = _SCRIPT_FILE.parent
+_TOOLS_DIR : Path = _SCRIPT_DIR.parent
 
-_CACHE_DIR = _TOOLS_DIR.joinpath('.cache')
-_CACHE_FILE = _CACHE_DIR.joinpath('files.yaml')
+_CACHE_DIR : Path = _TOOLS_DIR.joinpath('.cache')
+_CACHE_FILE : Path = _CACHE_DIR.joinpath('files.yaml')
+_MD5_CHUNK_SIZE: int = 65536  # 64kb chunks
 
-ROOT_DIR = _TOOLS_DIR.parent
-SOURCE_DIR = ROOT_DIR.joinpath('source')
-EXPORT_DIR = ROOT_DIR
+ROOT_DIR : Path = _TOOLS_DIR.parent
+SOURCE_DIR : Path = ROOT_DIR.joinpath('source')
+EXPORT_DIR : Path = ROOT_DIR
 
 
 def create_directories(path: str | PathLike, is_file_path : bool = False) -> None:
@@ -37,11 +38,11 @@ def compute_md5(path: str | PathLike) -> str:
     if path.is_file():
         md5 = hashlib.md5()
         with path.open('rb') as file:
-            while chunk := file.read(65536):  # 64kb chunks
+            while chunk := file.read(_MD5_CHUNK_SIZE):
                 md5.update(chunk)
         return md5.hexdigest()
 
-    return ""
+    return ''
 
 
 def load_cache_from_file() -> dict:
