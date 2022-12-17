@@ -54,7 +54,7 @@ def load_cache_from_file() -> dict:
 
 
 def save_cache_to_file(cache: dict) -> None:
-    create_directories(_CACHE_DIR)
+    create_directories(_CACHE_FILE, True)
     with _CACHE_FILE.open('w+') as file:
         yaml.dump(cache, file)
 
@@ -84,6 +84,12 @@ class FileStats:
 class FileSystemCache:
     dirs: dict[str, DirStats] = {}
     files: dict[str, FileStats] = {}
+
+    def save(path: str | PathLike = _CACHE_FILE) -> None:
+        pass
+
+    def load(path: str | PathLike = _CACHE_FILE) -> None:
+        pass
 
     def gather(self) -> None:
         self.dirs.clear()
@@ -122,6 +128,7 @@ class FileSystemCache:
 #    missing : list[str] = []
 #    def __init__():
 #        pass
+
 
 def gather_file_cache() -> dict:
     cache = {}
