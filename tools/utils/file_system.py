@@ -55,7 +55,39 @@ def save_cache_to_file(cache: dict) -> None:
         yaml.dump(cache, file)
 
 
-def gather_file_cache():
+class FileSystemCache:
+    class DirStats:
+        lmod: float
+        hash: str
+
+        def __init__(self, lmod: float, hash: str):
+            self.lmod = lmod
+            self.hash = hash
+
+        # https://www.tutorialspoint.com/How-to-overload-Python-comparison-operators
+
+    class FileStats:
+        lmod: float
+        size: int
+        hash: str
+
+        def __init__(self, lmod: float, size: int, hash: str):
+            self.lmod = lmod
+            self.size = size
+            self.hash = hash
+
+    dirs: dict[str, DirStats] = {}
+    files: dict[str, FileStats] = {}
+
+
+# class CacheDiff:
+#    new : list[str] = []
+#    modified : list[str] = []
+#    missing : list[str] = []
+#    def __init__():
+#        pass
+
+def gather_file_cache() -> dict:
     cache = {}
     for (root, dirs, files) in walk(SOURCE_DIR):
         for file in files:
@@ -74,7 +106,7 @@ def gather_file_cache():
     return cache
 
 
-def diff_file_cache():
+def diff_file_cache() -> None:
     old_cache = load_cache_from_file()
     current_cache = gather_file_cache()
 
