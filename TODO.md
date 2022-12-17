@@ -113,6 +113,30 @@
         - <https://regexr.com/3ai9g>
         - add_conversion_color_pair("{dark}", "{light}"); // {comment}
         - Maybe this is too dumb and we go back to yamls done manually, because this shouldn't change that often
-    - List of color palette formats <https://www.cyotek.com/cyotek-palette-editor/supported-palette-formats>
+    - List of color palette formats
+        - <https://www.cyotek.com/cyotek-palette-editor/supported-palette-formats>
+            - 18-bit RGB VGA Palette, pal
+            - 24-bit RGB VGA Palette, pal
+            - Adobe Colour Table, act
+            - Adobe Photoshop Colour Swatch, aco
+            - Adobe Swatch Exchange, ase
+            - CoreDRAW4, pal, xml
+            - DeluxePaint Image, bbm, lbm
+            - Fractint, map
+            - GIMP, gpl
+            - Gravit, gvswatch
+            - Hex, hex
+            - JASC, pal, PspPalette
+            - Microsoft RIFF, pal
+            - Paint.NET, txt
+        - <https://lospec.com/palette-list/fuzzyfour>
+            - PNG 1px
+            - PNG 8px
+            - PNG 32px
+            - PAL File (JASC)
+            - Photoshop ASE
+            - Paint.Net TXT
+            - GIMP GPL
+            - HEX File
 - How to handle 3D assets and sound/video assets and themes and so forth?
     - Probably export manually as it is to much of a hassle to automate
