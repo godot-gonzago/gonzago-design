@@ -2,4 +2,4 @@
 
 call run.cmd .\make.py
 pause
-exit /B %ERRORLEVEL%
+exit /b %ERRORLEVEL%

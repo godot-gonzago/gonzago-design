@@ -8,50 +8,20 @@ cls
 echo GONZAGO DESIGN TOOLS
 echo ====================
 
-:: Virtual python environment handling
-:: -----------------------------------
-:: Look for python installation
-for /F "tokens=* USEBACKQ" %%i in (`python --version 3`) do set PYTHON_VERSION=%%i
-if %ERRORLEVEL% neq 0 (
-    echo Error: Python not found!
-    echo Please ensure Python is installed and added to system environment.
-    goto eof
-)
-echo %PYTHON_VERSION% found!
+call setup.cmd has_python
+if %ERRORLEVEL% neq 0 goto eof
 
-:: Look for existing virtual environment and activate it
-if exist .\.venv\Scripts\activate.bat (
-    echo Activating virtual environment...
-    call .\.venv\Scripts\activate
-    if %ERRORLEVEL% neq 0 (
-        echo Error: Couldn't activate virtual environment.
-    )
+call setup.cmd has_environment
+if %ERRORLEVEL% equ 0 (
+    call setup.cmd activate_environment
     goto eof
 )
 
-:: Create virtual environment if it didn't exist
-echo Virtual environment doesn't exist.
-echo Creating virtual environment...
-python -m venv .\.venv
-if %ERRORLEVEL% neq 0 (
-    echo Error: Couldn't create virtual environment.
-    goto eof
-)
+call setup.cmd create_environment
+if %ERRORLEVEL% neq 0 goto eof
 
-:: Activate virtual environment
-call .\.venv\Scripts\activate
-if %ERRORLEVEL% neq 0 (
-    echo Error: Couldn't activate virtual environment.
-    goto eof
-)
-
-:: Install dependancies from requirements.txt
-echo Installing requirements...
-echo.
-pip install -r .\requirements.txt
-if %ERRORLEVEL% neq 0 (
-    echo Error: Couldn't install requirements to virtual environment.
-)
+call setup.cmd install_requirements
+if %ERRORLEVEL% neq 0 goto eof
 
 :eof
 echo.
@@ -62,17 +32,17 @@ echo.
 if [%~1]==[] (
     if %ERRORLEVEL% neq 0 (
         pause
-        exit /B %ERRORLEVEL%
+        exit /b %ERRORLEVEL%
     )
     cmd /k
-    exit /B %ERRORLEVEL%
+    exit /b %ERRORLEVEL%
 )
 
 :: Otherwise try to execute script from argument
-if %ERRORLEVEL% neq 0 exit /B %ERRORLEVEL%
+if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
 
 echo Running script %~1
 echo.
 python %~f1
 echo.
-exit /B %ERRORLEVEL%
+exit /b %ERRORLEVEL%
