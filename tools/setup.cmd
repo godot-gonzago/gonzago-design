@@ -79,6 +79,11 @@ exit /b %ERRORLEVEL%
     )
     exit /b 0
 
+:: Has an active virtual environment. Returns 0 if active, otherwise 1.
+:has_active_environment
+    if defined VIRTUAL_ENV exit /b 0
+    exit /b 1
+
 :: Activating virtual environment. Returns 0 if successful, otherwise returns %ERRORLEVEL%.
 :activate_environment
     echo Activating virtual environment...
@@ -91,25 +96,36 @@ exit /b %ERRORLEVEL%
 
 :: Ensure and activate virtual environment. Returns 0 if successful, otherwise returns %ERRORLEVEL%.
 :ensure_and_activate_environment
-call :has_python
-if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
+    call :has_python
+    if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
 
-call :has_environment
-if %ERRORLEVEL% equ 0 (
-    call :activate_environment
+    call :has_environment
+    if %ERRORLEVEL% equ 0 (
+        call :activate_environment
+        exit /b %ERRORLEVEL%
+    )
+
+    call :create_environment
+    if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
+
+    call :install_requirements
     exit /b %ERRORLEVEL%
-)
 
-call :create_environment
-if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
-
-call :install_requirements
-exit /b %ERRORLEVEL%
+:: Activating virtual environment. Returns 0 if successful, otherwise returns %ERRORLEVEL%.
+:deactivate_environment
+    echo Deactivating virtual environment...
+    call .\.venv\Scripts\deactivate.bat
+    if %ERRORLEVEL% neq 0 (
+        echo ERROR: Failed to deactivate virtual environment.
+        exit /b %ERRORLEVEL%
+    )
+    exit /b 0
 
 :: -------------
 :: Setup routine
 :: -------------
 :start_setup
+setlocal
 
 title Gonzago Design Tools - Setup
 
