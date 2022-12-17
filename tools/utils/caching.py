@@ -5,9 +5,12 @@ from pathlib import Path
 import yaml
 from utils import paths
 
+FILE_CACHE = paths.CACHE_DIR.joinpath('files.yaml')
+
 
 def compute_md5(path: str | os.PathLike) -> str:
-    path = Path(path)
+    if not path is Path:
+        path = Path(path)
 
     if path.is_dir():
         return hashlib.md5(path).hexdigest()
@@ -23,15 +26,15 @@ def compute_md5(path: str | os.PathLike) -> str:
 
 
 def load_cache_from_file():
-    if not paths.FILE_CACHE.exists():
+    if not FILE_CACHE.exists():
         return {}
-    with paths.FILE_CACHE.open() as file:
+    with FILE_CACHE.open() as file:
         return yaml.full_load(file)
 
 
 def save_cache_to_file(cache):
-    paths.create_directories(paths.CACHE_DIR)
-    with paths.FILE_CACHE.open('w+') as file:
+    paths.create_directories(FILE_CACHE)
+    with FILE_CACHE.open('w+') as file:
         yaml.dump(cache, file)
 
 
@@ -41,7 +44,7 @@ def gather_file_cache():
         for file in files:
             # file.endswith()
             file_path = paths.SOURCE_DIR.joinpath(root, file)
-            #print(f'Suffix: {file_path.suffix}')
+            # print(f'Suffix: {file_path.suffix}')
             rel_path = file_path.relative_to(paths.SOURCE_DIR).as_posix()
 
             statinfo = os.stat(file_path)
