@@ -214,13 +214,11 @@ goto mode_scripts
 
 :enter_virtual_environment
     call :activate_environment > nul
-
     echo.
     cmd /k
     echo.
-
     call :deactivate_environment
-    exit /b %ERRORLEVEL%
+    goto :menu_root
 
 :: -----------
 :: End of file
