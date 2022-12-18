@@ -18,7 +18,17 @@ if %ERRORLEVEL% neq 0 goto eof
 if [%~1]==[] goto mode_menu
 goto mode_scripts
 
-:: TODO: https://www.dostips.com/DtTipsMenu.php - https://www.instructables.com/Big-Helpfull-Batch-File-Menu/
+:: TODO:
+:: - https://www.dostips.com/DtTipsMenu.php
+:: - https://www.instructables.com/Big-Helpfull-Batch-File-Menu/
+:: - https://gist.github.com/davidruhmann/4638781
+:: - http://lallouslab.net/2016/06/06/batchography-dynamic-menus-1/
+:: - https://techexpert.tips/windows/batch-script-creating-user-menu/
+:: - https://stackoverflow.com/questions/17605767/create-list-or-arrays-in-windows-batch
+:: - https://www.geeksforgeeks.org/batch-script-iterating-over-an-array/
+:: - https://jakash3.wordpress.com/2009/12/18/arrays-in-batch/
+:: - https://www.dostips.com/forum/viewtopic.php?t=3244
+:: TODO: https://ss64.com/nt/syntax-ansi.html
 
 :: ---------
 :: Functions
