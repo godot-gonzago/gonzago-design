@@ -25,6 +25,51 @@ exit /b %ERRORLEVEL%
     echo ====================
     exit /b 0
 
+:initialize
+    setlocal
+    echo Looking for Python...
+    call :has_python
+    if %ERRORLEVEL% neq 0 (
+        echo Error: Python not found!
+        echo Please ensure Python is installed and added to system environment.
+        echo.
+
+        set RETURN_VALUE = %ERRORLEVEL%
+        choice /m "Do you want to open the Python downloads website"
+        if %ERRORLEVEL% equ 1 start www.python.org/downloads/
+
+        exit /b %RETURN_VALUE%
+    )
+
+    echo %PYTHON_VERSION% found!
+    echo.
+
+    echo Looking for virtual environment...
+    call :has_environment
+    if %ERRORLEVEL% neq 0 (
+        echo Virtual environment doesn't exist.
+        echo Creating virtual environment...
+        call :create_environment
+        if %ERRORLEVEL% neq 0 (
+            echo ERROR: Failed to create virtual environment.
+            exit /b %ERRORLEVEL%
+        )
+        echo Virtual environment created!
+        echo.
+
+        echo Installing dependencies from requirements.txt...
+        echo.
+        call :install_requirements
+        echo.
+        if %ERRORLEVEL% neq 0 (
+            echo ERROR: Failed to install dependencies from requirements.txt.
+            exit /b %ERRORLEVEL%
+        )
+    ) else (
+        echo Found virtual environment!
+    )
+    exit /b %ERRORLEVEL%
+
 :: Look for python installation.
 :has_python
     setlocal
@@ -118,7 +163,7 @@ exit /b %ERRORLEVEL%
 
 :self_contained
     call :echo_header
-    call :ensure_environment
+    call :initialize
     if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
 
     goto menu_root
@@ -126,27 +171,6 @@ exit /b %ERRORLEVEL%
 
 :menu_root
     call :echo_header
-
-    echo ┌───────────────┐
-    echo │ box drawing 1 │
-    echo └───────────────┘
-
-    echo ╔═══════════════╗
-    echo ║ box drawing 2 ║
-    echo ╚═══════════════╝
-
-    echo  ╔═════════════════════╗
-    echo  ║        Menu         ║
-    echo  ╠═════════════════════╣
-    echo  ║ 1. Blood            ║
-    echo  ║ 2. Cryptic Passage  ║
-    echo  ║ 3.+ MODS            ║
-    echo  ║ 4.+ Multiplayer     ║
-    echo  ║ 5.+ Editors         ║
-    echo  ║ 6. Setup            ║
-    echo  ║ 7. DOS Prompt       ║
-    echo  ║ 8. Exit             ║
-    echo  ╚═════════════════════╝
 
     echo Main menu:
     echo - [S]etup tools
