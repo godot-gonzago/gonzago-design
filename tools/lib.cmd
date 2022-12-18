@@ -80,6 +80,11 @@ goto mode_scripts
     del /Q .\.venv
     exit /b %ERRORLEVEL%
 
+:: Look for active virtual environment.
+:has_active_environment
+    if not defined VIRTUAL_ENV exit /b 1
+    exit /b 0
+
 :: Activating virtual environment.
 :activate_environment
     echo Activating environment...
