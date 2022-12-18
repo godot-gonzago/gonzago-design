@@ -36,6 +36,7 @@ goto mode_scripts
     echo ====================
     echo GONZAGO DESIGN TOOLS
     echo ====================
+    exit /b 0
 
 :init
     setlocal
@@ -214,9 +215,11 @@ goto mode_scripts
 
 :enter_virtual_environment
     call :activate_environment > nul
+
     echo.
     cmd /k
     echo.
+
     call :deactivate_environment
     goto :menu_root
 
