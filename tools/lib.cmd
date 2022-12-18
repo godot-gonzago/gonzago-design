@@ -9,7 +9,6 @@ title Gonzago Design Tools
 
 call :echo_header
 call :setup_basics
-echo.
 if %ERRORLEVEL% neq 0 goto eof
 
 :: If has no arguments run menu mode, otherwise run scripts mode.
@@ -37,12 +36,6 @@ goto mode_scripts
     echo ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
     echo บ                   GONZAGO DESIGN TOOLS                   บ
     echo ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
-
-    echo.
-    call :echo_error "This is a test!"
-    call :echo_warning "This is a test!"
-
-    echo.
     exit /b 0
 
 :echo_warning
@@ -180,6 +173,9 @@ goto mode_scripts
 :: Scripts mode
 :: ------------
 :mode_scripts
+    cls
+    call :echo_header
+
     call :environment_activate
     if %ERRORLEVEL% neq 0 goto eof
 
@@ -199,10 +195,11 @@ goto mode_scripts
 :: Menu mode
 :: ---------
 :mode_menu
-    goto menu_root
+    cls
+    call :echo_header
 
-:menu_root
     echo Main menu:
+    echo.
     echo   - [S]etup tools
     echo   - [B]uild tools
     echo   - [E]nter virtual environment
@@ -210,15 +207,19 @@ goto mode_scripts
     echo.
 
     choice /c SBEQ /n /m "Enter selection:"
-    if %ERRORLEVEL% equ 1 goto :menu_setup_tools
-    if %ERRORLEVEL% equ 2 goto :menu_build_tools
-    if %ERRORLEVEL% equ 3 goto :enter_virtual_environment
-    if %ERRORLEVEL% equ 4 exit /b %ERRORLEVEL%
-    exit /b %ERRORLEVEL%
+    if %ERRORLEVEL% equ 1 goto menu_setup_tools
+    if %ERRORLEVEL% equ 2 goto menu_build_tools
+    if %ERRORLEVEL% equ 3 goto enter_virtual_environment
+    if %ERRORLEVEL% equ 4 exit /b 0
+    exit /b 0
 
 :menu_setup_tools
+    cls
+    call :echo_header
+
     :: python.exe -m pip install --upgrade pip
     echo Setup tools:
+    echo.
     echo   - [R]ebuild virtual environment
     echo   - [B]ack
     echo   - [Q]uit
@@ -226,12 +227,16 @@ goto mode_scripts
 
     choice /c RBQ /n /m "Enter selection:"
     if %ERRORLEVEL% equ 1 start www.python.org/downloads/
-    if %ERRORLEVEL% equ 2 goto :menu_root
-    if %ERRORLEVEL% equ 3 exit /b %ERRORLEVEL%
-    exit /b %ERRORLEVEL%
+    if %ERRORLEVEL% equ 2 goto mode_menu
+    if %ERRORLEVEL% equ 3 exit /b 0
+    exit /b 0
 
 :menu_build_tools
+    cls
+    call :echo_header
+
     echo Build tools:
+    echo.
     echo   - [R]ebuild everything
     echo   - [B]ack
     echo   - [Q]uit
@@ -239,19 +244,18 @@ goto mode_scripts
 
     choice /c RBQ /n /m "Enter selection:"
     if %ERRORLEVEL% equ 1 start www.python.org/downloads/
-    if %ERRORLEVEL% equ 2 goto :menu_root
-    if %ERRORLEVEL% equ 3 exit /b %ERRORLEVEL%
-    exit /b %ERRORLEVEL%
+    if %ERRORLEVEL% equ 2 goto mode_menu
+    if %ERRORLEVEL% equ 3 exit /b 0
+    exit /b 0
 
 :enter_virtual_environment
-    call :environment_activate > nul
+    cls
+    call :echo_header
 
-    echo.
-    cmd /k
-    echo.
-
-    call :environment_deactivate
-    goto :menu_root
+    echo Entering virtual environment at:
+    echo %cd%
+    call :environment_call "cmd /k prompt $CGonzago$F$G"
+    goto mode_menu
 
 :: -----------
 :: End of file
