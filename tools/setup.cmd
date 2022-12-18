@@ -21,7 +21,13 @@ exit /b %ERRORLEVEL%
     if %ERRORLEVEL% neq 0 (
         echo Error: Python not found!
         echo Please ensure Python is installed and added to system environment.
-        exit /b %ERRORLEVEL%
+        echo.
+
+        set RETURN_VALUE = %ERRORLEVEL%
+        choice /m "Do you want to open the Python downloads website"
+        if %ERRORLEVEL% equ 1 start www.python.org/downloads/
+
+        exit /b %RETURN_VALUE%
     )
 
     echo %PYTHON_VERSION% found!
