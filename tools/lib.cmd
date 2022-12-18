@@ -25,6 +25,7 @@ goto mode_scripts
 :: - https://www.geeksforgeeks.org/batch-script-iterating-over-an-array/
 :: - https://jakash3.wordpress.com/2009/12/18/arrays-in-batch/
 :: - https://www.dostips.com/forum/viewtopic.php?t=3244
+:: - https://stackoverflow.com/questions/34553934/how-can-i-accept-arrow-key-presses-from-user-input
 :: TODO: https://ss64.com/nt/syntax-ansi.html
 :: TODO: https://stackoverflow.com/a/45070967
 
