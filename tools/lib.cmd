@@ -12,6 +12,8 @@ if [%~1]==[] (
 pause
 exit /b %ERRORLEVEL%
 
+:: TODO: https://www.dostips.com/DtTipsMenu.php - https://www.instructables.com/Big-Helpfull-Batch-File-Menu/
+
 :: ---------
 :: Functions
 :: ---------
@@ -124,6 +126,27 @@ exit /b %ERRORLEVEL%
 
 :menu_root
     call :echo_header
+
+    echo ┌───────────────┐
+    echo │ box drawing 1 │
+    echo └───────────────┘
+
+    echo ╔═══════════════╗
+    echo ║ box drawing 2 ║
+    echo ╚═══════════════╝
+
+    echo  ╔═════════════════════╗
+    echo  ║        Menu         ║
+    echo  ╠═════════════════════╣
+    echo  ║ 1. Blood            ║
+    echo  ║ 2. Cryptic Passage  ║
+    echo  ║ 3.+ MODS            ║
+    echo  ║ 4.+ Multiplayer     ║
+    echo  ║ 5.+ Editors         ║
+    echo  ║ 6. Setup            ║
+    echo  ║ 7. DOS Prompt       ║
+    echo  ║ 8. Exit             ║
+    echo  ╚═════════════════════╝
 
     echo Main menu:
     echo - [S]etup tools
