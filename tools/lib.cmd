@@ -34,13 +34,13 @@ goto mode_scripts
 :: ---------
 
 :echo_header
-    echo [97m[45m                                                          [0m
-    echo [97m[45m                   GONZAGO DESIGN TOOLS                   [0m
-    echo [97m[45m                                                          [0m
+    echo ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+    echo บ                   GONZAGO DESIGN TOOLS                   บ
+    echo ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
 
-    ::echo.
-    ::call :echo_error "This is a test!"
-    ::call :echo_warning "This is a test!"
+    echo.
+    call :echo_error "This is a test!"
+    call :echo_warning "This is a test!"
 
     echo.
     exit /b 0
@@ -77,6 +77,8 @@ goto mode_scripts
     if %ERRORLEVEL% neq 0 exit /b 1
 
     exit /b 0
+
+:: TODO: https://www.activestate.com/products/python/pip-tools/
 
 :setup_pip_tools
     setlocal
