@@ -3,12 +3,12 @@
 @echo off
 setlocal
 
-:: Initialization
+:: setup_basicsialization
 :: --------------
 title Gonzago Design Tools
 
 call :echo_header
-call :init
+call :setup_basics
 echo.
 if %ERRORLEVEL% neq 0 goto eof
 
@@ -34,21 +34,26 @@ goto mode_scripts
 :: ---------
 
 :echo_header
-    echo ^+------------------------------------------------^+
-    echo ^|              GONZAGO DESIGN TOOLS              ^|
-    echo ^+------------------------------------------------^+
+    echo [97m[45m                                                          [0m
+    echo [97m[45m                   GONZAGO DESIGN TOOLS                   [0m
+    echo [97m[45m                                                          [0m
+
+    ::echo.
+    ::call :echo_error "This is a test!"
+    ::call :echo_warning "This is a test!"
+
     echo.
     exit /b 0
 
 :echo_warning
-    echo WARNING: %~1 1>&2
+    echo [97m[43mWARNING:[0m %~1 1>&2
     exit /b 0
 
 :echo_error
-    echo ERROR: %~1 1>&2
+    echo [97m[41mERROR:[0m %~1 1>&2
     exit /b 0
 
-:init
+:setup_basics
     setlocal
     call :python_exists
     if %ERRORLEVEL% neq 0 (
@@ -71,6 +76,14 @@ goto mode_scripts
     call :requirements_install
     if %ERRORLEVEL% neq 0 exit /b 1
 
+    exit /b 0
+
+:setup_pip_tools
+    setlocal
+    echo Installing pip tools...
+    call :environment_call "pip install pip-tools"
+    if %ERRORLEVEL% neq 0 exit /b 1
+    echo Installed pip tools!
     exit /b 0
 
 :: Look for python installation.
@@ -127,6 +140,21 @@ goto mode_scripts
     if %ERRORLEVEL% neq 0 call :echo_error "Failed to deactivate virtual environment!" & exit /b 1
     echo Virtual environment deactivated! & exit /b 0
 
+:environment_call
+    setlocal
+    call :environment_activate > nul
+    if %ERRORLEVEL% neq 0 exit /b 1
+
+    set /a RETURN_VALUE = 0
+    for %%x in (%*) do (
+        %%~x
+        if %ERRORLEVEL% neq 0 set /a RETURN_VALUE = 1
+    )
+
+    call :environment_deactivate > nul
+    if %ERRORLEVEL% neq 0 set /a RETURN_VALUE = 1
+    exit /b %RETURN_VALUE%
+
 :: Look for requirements.txt.
 :requirements_exists
     echo Looking for requirements.txt...
@@ -140,22 +168,11 @@ goto mode_scripts
     call :requirements_exists > nul
     if %ERRORLEVEL% neq 0 exit /b 1
 
-    call :environment_exists > nul
-    if %ERRORLEVEL% neq 0 exit /b 2
+    call :environment_call "pip install -r .\requirements.txt"
+    if %ERRORLEVEL% neq 0 exit /b 1
 
-    call :environment_activate > nul
-    if %ERRORLEVEL% neq 0 exit /b 4
-
-    pip install -r .\requirements.txt
-
-    set /a RETURN_VALUE = 0
-    if %ERRORLEVEL% neq 0 set /a RETURN_VALUE = %RETURN_VALUE% + 8
-
-    call :environment_deactivate > nul
-    if %ERRORLEVEL% neq 0 set /a RETURN_VALUE = %RETURN_VALUE% + 16
-
-    if %RETURN_VALUE% equ 0 echo Installed dependencies from requirements.txt!
-    exit /b %RETURN_VALUE%
+    echo Installed dependencies from requirements.txt!
+    exit /b 0
 
 :: ------------
 :: Scripts mode
