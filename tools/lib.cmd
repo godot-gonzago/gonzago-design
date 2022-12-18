@@ -33,9 +33,9 @@ goto mode_scripts
 :: ---------
 
 :echo_header
-    echo ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-    echo บ                   GONZAGO DESIGN TOOLS                   บ
-    echo ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+    echo [97m[45m                                                          [0m
+    echo [97m[45m                   GONZAGO DESIGN TOOLS                   [0m
+    echo [97m[45m                                                          [0m
     exit /b 0
 
 :echo_warning
@@ -195,6 +195,49 @@ goto mode_scripts
 :: Menu mode
 :: ---------
 :mode_menu
+    goto menu_root
+
+:: https://superuser.com/a/1587274
+:: https://www.geeksforgeeks.org/batch-script-arrays/
+:handle_menu
+    setlocal enabledelayedexpansion
+
+    set /a SELECTED=%1+1
+
+    set ARGS_COUNT=0
+    for %%x in (%*) do (
+        set /a ARGS_COUNT+=1
+        set ARGS_LIST[!ARGS_COUNT!]=%%~x
+    )
+
+    for /l %%i in (2,1,%ARGS_COUNT%) do (
+        if %%i equ %SELECTED% (
+            echo [7m ^> !ARGS_LIST[%%i]! [0m
+        ) else (
+            echo    !ARGS_LIST[%%i]!
+        )
+    )
+
+    ::W = UP, S = DOWN, X = Select
+    set SELECTED_INDEX=%1
+
+    choice /c wsx > nul
+    if %ERRORLEVEL% equ 1 (
+        set /a SELECTED_INDEX=%SELECTED_INDEX%-1
+        if %SELECTED_INDEX% lss 1 exit /b %1
+        exit /b %SELECTED_INDEX%
+    )
+    if %ERRORLEVEL% equ 2 (
+        set /a SELECTED_INDEX=%SELECTED_INDEX%+1
+        if %SELECTED_INDEX% gre %ARGS_COUNT% exit /b %1
+        exit /b %SELECTED_INDEX%
+    )
+    if %ERRORLEVEL% equ 3 exit /b 0
+
+    exit /b %1
+
+:menu_root
+    set SELECTED=1
     cls
     call :echo_header
 
@@ -205,6 +248,12 @@ goto mode_scripts
     echo   - [E]nter virtual environment
     echo   - [Q]uit
     echo.
+
+    call :handle_menu %SELECTED% "Setup tools" "Build tools" "Enter virtual environment" "Quit"
+    if %ERRORLEVEL% neq 0 (
+        set SELECTED=%ERRORLEVEL%
+        goto do_it
+    )
 
     choice /c SBEQ /n /m "Enter selection:"
     if %ERRORLEVEL% equ 1 goto menu_setup_tools
@@ -227,7 +276,7 @@ goto mode_scripts
 
     choice /c RBQ /n /m "Enter selection:"
     if %ERRORLEVEL% equ 1 start www.python.org/downloads/
-    if %ERRORLEVEL% equ 2 goto mode_menu
+    if %ERRORLEVEL% equ 2 goto menu_root
     if %ERRORLEVEL% equ 3 exit /b 0
     exit /b 0
 
@@ -244,7 +293,7 @@ goto mode_scripts
 
     choice /c RBQ /n /m "Enter selection:"
     if %ERRORLEVEL% equ 1 start www.python.org/downloads/
-    if %ERRORLEVEL% equ 2 goto mode_menu
+    if %ERRORLEVEL% equ 2 goto menu_root
     if %ERRORLEVEL% equ 3 exit /b 0
     exit /b 0
 
