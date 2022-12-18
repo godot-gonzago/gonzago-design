@@ -7,9 +7,7 @@ setlocal
 :: --------------
 title Gonzago Design Tools
 
-echo GONZAGO DESIGN TOOLS
-echo ====================
-
+call :header
 call :init
 echo.
 if %ERRORLEVEL% neq 0 goto eof
@@ -33,6 +31,11 @@ goto mode_scripts
 :: ---------
 :: Functions
 :: ---------
+
+:header
+    echo ====================
+    echo GONZAGO DESIGN TOOLS
+    echo ====================
 
 :init
     setlocal
