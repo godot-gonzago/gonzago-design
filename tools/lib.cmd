@@ -3,17 +3,35 @@
 @echo off
 setlocal
 
-:: setup_basicsialization
-:: --------------
+:: Initialize
 title Gonzago Design Tools
-
-call :echo_header
+call :echo_header "Basic setup"
 call :setup_basics
 if %ERRORLEVEL% neq 0 goto eof
 
-:: If has no arguments run menu mode, otherwise run scripts mode.
-if [%~1]==[] goto mode_menu
-goto mode_scripts
+:: If has no arguments run menu mode, ...
+if [%1]==[] goto mode_menu
+
+:: ...otherwise run scripts mode
+call :echo_header "Script runner"
+call :environment_activate
+if %ERRORLEVEL% neq 0 goto eof
+
+for %%x in (%*) do (
+    echo Running script %%~x
+    echo.
+    python %%~fx
+    echo.
+)
+
+call :environment_deactivate
+goto eof
+
+:: Fail while retaining user input
+:eof
+    echo.
+    pause
+    exit /b %ERRORLEVEL%
 
 :: TODO:
 :: - https://www.dostips.com/DtTipsMenu.php
@@ -34,9 +52,11 @@ goto mode_scripts
 :: ---------
 
 :echo_header
-    echo [97m[45m                                                          [0m
-    echo [97m[45m                   GONZAGO DESIGN TOOLS                   [0m
-    echo [97m[45m                                                          [0m
+    cls
+    echo GONZAGO DESIGN TOOLS
+    echo ====================
+    if not [%1]==[] echo %~1:
+    echo.
     exit /b 0
 
 :echo_warning
@@ -170,28 +190,6 @@ goto mode_scripts
     echo Installed dependencies from requirements.txt!
     exit /b 0
 
-:: ------------
-:: Scripts mode
-:: ------------
-:mode_scripts
-    cls
-    call :echo_header
-
-    call :environment_activate
-    if %ERRORLEVEL% neq 0 goto eof
-
-    for %%x in (%*) do (
-        echo Running script %%~x
-        echo.
-        python %%~fx
-        echo.
-    )
-
-    call :environment_deactivate
-    if %ERRORLEVEL% neq 0 goto eof
-
-    goto eof
-
 :: ---------
 :: Menu mode
 :: ---------
@@ -238,26 +236,13 @@ goto mode_scripts
     exit /b %1
 
 :menu_root
-    set SELECTED=1
-    cls
-    call :echo_header
-
-    echo Main menu:
-    echo.
+    call :echo_header "Main menu"
     echo   - [S]etup tools
     echo   - [B]uild tools
     echo   - [E]nter virtual environment
     echo   - [Q]uit
     echo.
-
-    :do_it
-    call :handle_menu %SELECTED% "Setup tools" "Build tools" "Enter virtual environment" "Quit"
-    if %ERRORLEVEL% neq 0 (
-        set SELECTED=%ERRORLEVEL%
-        goto do_it
-    )
-
-    choice /c SBEQ /n /m "Enter selection:"
+    choice /c SBEQ /n > nul
     if %ERRORLEVEL% equ 1 goto menu_setup_tools
     if %ERRORLEVEL% equ 2 goto menu_build_tools
     if %ERRORLEVEL% equ 3 goto enter_virtual_environment
@@ -265,53 +250,39 @@ goto mode_scripts
     exit /b 0
 
 :menu_setup_tools
-    cls
-    call :echo_header
-
+    call :echo_header "Setup tools"
     :: python.exe -m pip install --upgrade pip
-    echo Setup tools:
-    echo.
     echo   - [R]ebuild virtual environment
     echo   - [B]ack
     echo   - [Q]uit
     echo.
-
-    choice /c RBQ /n /m "Enter selection:"
+    choice /c RBQ /n > nul
     if %ERRORLEVEL% equ 1 start www.python.org/downloads/
     if %ERRORLEVEL% equ 2 goto menu_root
     if %ERRORLEVEL% equ 3 exit /b 0
     exit /b 0
 
 :menu_build_tools
-    cls
-    call :echo_header
-
-    echo Build tools:
-    echo.
+    call :echo_header "Build tools"
     echo   - [R]ebuild everything
     echo   - [B]ack
     echo   - [Q]uit
     echo.
-
-    choice /c RBQ /n /m "Enter selection:"
+    choice /c RBQ /n > nul
     if %ERRORLEVEL% equ 1 start www.python.org/downloads/
     if %ERRORLEVEL% equ 2 goto menu_root
     if %ERRORLEVEL% equ 3 exit /b 0
     exit /b 0
 
+:: --------------
+:: Menu functions
+:: --------------
 :enter_virtual_environment
-    cls
-    call :echo_header
+    call :echo_header "Virtual environment"
 
-    echo Entering virtual environment at:
+    echo Entered virtual environment at
     echo %cd%
+    echo Type 'exit' to return to the main menu.
+
     call :environment_call "cmd /k prompt $CGonzago$F$G"
     goto mode_menu
-
-:: -----------
-:: End of file
-:: -----------
-:eof
-    echo.
-    pause
-    exit /b %ERRORLEVEL%
