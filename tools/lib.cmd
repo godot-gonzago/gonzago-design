@@ -7,7 +7,7 @@ setlocal
 :: --------------
 title Gonzago Design Tools
 
-call :header
+call :echo_header
 call :init
 echo.
 if %ERRORLEVEL% neq 0 goto eof
@@ -27,20 +27,30 @@ goto mode_scripts
 :: - https://jakash3.wordpress.com/2009/12/18/arrays-in-batch/
 :: - https://www.dostips.com/forum/viewtopic.php?t=3244
 :: TODO: https://ss64.com/nt/syntax-ansi.html
+:: TODO: https://stackoverflow.com/a/45070967
 
 :: ---------
 :: Functions
 :: ---------
 
-:header
-    echo ====================
-    echo GONZAGO DESIGN TOOLS
-    echo ====================
+:echo_header
+    echo ^+------------------------------------------------^+
+    echo ^|              GONZAGO DESIGN TOOLS              ^|
+    echo ^+------------------------------------------------^+
+    echo.
+    exit /b 0
+
+:echo_warning
+    echo WARNING: %~1 1>&2
+    exit /b 0
+
+:echo_error
+    echo ERROR: %~1 1>&2
     exit /b 0
 
 :init
     setlocal
-    call :has_python
+    call :python_exists
     if %ERRORLEVEL% neq 0 (
         echo Please ensure Python is installed and added to system environment.
         echo.
@@ -49,90 +59,91 @@ goto mode_scripts
         exit /b 1
     )
 
-    call :has_environment
+    call :environment_exists
     if %ERRORLEVEL% equ 0 exit /b 0
 
-    call :create_environment
+    call :environment_create
     if %ERRORLEVEL% neq 0 exit /b 1
 
-    call :has_requirements
+    call :requirements_exists
     if %ERRORLEVEL% neq 0 exit /b 0
 
-    call :install_requirements
+    call :requirements_install
     if %ERRORLEVEL% neq 0 exit /b 1
 
     exit /b 0
 
 :: Look for python installation.
-:has_python
+:python_exists
     setlocal
     echo Looking for Python...
     for /F "tokens=* USEBACKQ" %%i in (`python --version 3`) do set PYTHON_VERSION=%%i
-    if %ERRORLEVEL% neq 0 echo Error: Python not found! 1>&2 & exit /b 1
+    if %ERRORLEVEL% neq 0 call :echo_error "Python not found!" & exit /b 1
     endlocal & set PYTHON_VERSION=%PYTHON_VERSION%
     echo %PYTHON_VERSION% found! & exit /b 0
 
 :: Look for existing virtual environment.
-:has_environment
+:environment_exists
     echo Looking for virtual environment...
-    if not exist .\.venv echo ERROR: Virtual environment doesn't exist. 1>&2 & exit /b 1
-    if not exist .\.venv\Scripts\activate.bat echo ERROR: Virtual environment doesn't exist. 1>&2 & exit /b 1
-    if not exist .\.venv\Scripts\deactivate.bat echo ERROR: Virtual environment doesn't exist. 1>&2 & exit /b 1
+    if not exist .\.venv call :echo_error "Virtual environment doesn't exist." & exit /b 1
+    if not exist .\.venv\Scripts\activate.bat call :echo_error "Virtual environment doesn't exist." & exit /b 1
+    if not exist .\.venv\Scripts\deactivate.bat call :echo_error "Virtual environment doesn't exist." & exit /b 1
     echo Virtual environment found! & exit /b 0
 
 :: Create virtual environment.
-:create_environment
+:environment_create
     echo Creating virtual environment...
     ::python -m venv --prompt "Gonzago" --upgrade-deps .\.venv
     python -m venv --prompt "Gonzago" .\.venv
-    if %ERRORLEVEL% neq 0 echo ERROR: Failed to create virtual environment. 1>&2 & exit /b 1
+    if %ERRORLEVEL% neq 0 call :echo_error "Failed to create virtual environment." & exit /b 1
     echo Virtual environment created! & exit /b 0
 
 :: Remove virtual environment.
-:remove_environment
+:environment_remove
     if not exist .\.venv exit /b 0
     del /Q .\.venv
     exit /b %ERRORLEVEL%
 
 :: Look for active virtual environment.
-:has_active_environment
+:environment_is_active
     if not defined VIRTUAL_ENV exit /b 1
+    :: TODO: Check path
     exit /b 0
 
 :: Activating virtual environment.
-:activate_environment
+:environment_activate
     echo Activating environment...
-    if not exist .\.venv\Scripts\activate.bat echo ERROR: Failed to activate virtual environment! 1>&2 exit /b 1
+    if not exist .\.venv\Scripts\activate.bat call :echo_error "Failed to activate virtual environment!" & exit /b 1
     call .\.venv\Scripts\activate.bat
-    if %ERRORLEVEL% neq 0 echo ERROR: Failed to activate virtual environment! 1>&2 exit /b 1
+    if %ERRORLEVEL% neq 0 call :echo_error "Failed to activate virtual environment!" & exit /b 1
     echo Virtual environment activated! & exit /b 0
 
 :: Dectivating virtual environment.
-:deactivate_environment
+:environment_deactivate
     echo Deactivating environment...
     if not defined VIRTUAL_ENV echo Virtual environment already deactivated! & exit /b 0
-    if not exist .\.venv\Scripts\deactivate.bat echo ERROR: Failed to deactivate virtual environment! 1>&2 exit /b 1
+    if not exist .\.venv\Scripts\deactivate.bat call :echo_error "Failed to deactivate virtual environment!" & exit /b 1
     call .\.venv\Scripts\deactivate.bat
-    if %ERRORLEVEL% neq 0 echo ERROR: Failed to deactivate virtual environment! 1>&2 exit /b 1
+    if %ERRORLEVEL% neq 0 call :echo_error "Failed to deactivate virtual environment!" & exit /b 1
     echo Virtual environment deactivated! & exit /b 0
 
 :: Look for requirements.txt.
-:has_requirements
+:requirements_exists
     echo Looking for requirements.txt...
-    if not exist .\requirements.txt echo ERROR: requirements.txt not found! 1>&2 & exit /b 1
+    if not exist .\requirements.txt call :echo_error "requirements.txt not found!" & exit /b 1
     echo Found requirements.txt! & exit /b 0
 
 :: Install dependencies from requirements.txt.
-:install_requirements
+:requirements_install
     setlocal
     echo Installing dependencies from requirements.txt...
-    call :has_requirements > nul
+    call :requirements_exists > nul
     if %ERRORLEVEL% neq 0 exit /b 1
 
-    call :has_environment > nul
+    call :environment_exists > nul
     if %ERRORLEVEL% neq 0 exit /b 2
 
-    call :activate_environment > nul
+    call :environment_activate > nul
     if %ERRORLEVEL% neq 0 exit /b 4
 
     pip install -r .\requirements.txt
@@ -140,7 +151,7 @@ goto mode_scripts
     set /a RETURN_VALUE = 0
     if %ERRORLEVEL% neq 0 set /a RETURN_VALUE = %RETURN_VALUE% + 8
 
-    call :deactivate_environment > nul
+    call :environment_deactivate > nul
     if %ERRORLEVEL% neq 0 set /a RETURN_VALUE = %RETURN_VALUE% + 16
 
     if %RETURN_VALUE% equ 0 echo Installed dependencies from requirements.txt!
@@ -150,7 +161,7 @@ goto mode_scripts
 :: Scripts mode
 :: ------------
 :mode_scripts
-    call :activate_environment
+    call :environment_activate
     if %ERRORLEVEL% neq 0 goto eof
 
     for %%x in (%*) do (
@@ -160,7 +171,7 @@ goto mode_scripts
         echo.
     )
 
-    call :deactivate_environment
+    call :environment_deactivate
     if %ERRORLEVEL% neq 0 goto eof
 
     goto eof
@@ -173,10 +184,10 @@ goto mode_scripts
 
 :menu_root
     echo Main menu:
-    echo - [S]etup tools
-    echo - [B]uild tools
-    echo - [E]nter virtual environment
-    echo - [Q]uit
+    echo   - [S]etup tools
+    echo   - [B]uild tools
+    echo   - [E]nter virtual environment
+    echo   - [Q]uit
     echo.
 
     choice /c SBEQ /n /m "Enter selection:"
@@ -189,9 +200,9 @@ goto mode_scripts
 :menu_setup_tools
     :: python.exe -m pip install --upgrade pip
     echo Setup tools:
-    echo - [R]ebuild virtual environment
-    echo - [B]ack
-    echo - [Q]uit
+    echo   - [R]ebuild virtual environment
+    echo   - [B]ack
+    echo   - [Q]uit
     echo.
 
     choice /c RBQ /n /m "Enter selection:"
@@ -202,9 +213,9 @@ goto mode_scripts
 
 :menu_build_tools
     echo Build tools:
-    echo - [R]ebuild everything
-    echo - [B]ack
-    echo - [Q]uit
+    echo   - [R]ebuild everything
+    echo   - [B]ack
+    echo   - [Q]uit
     echo.
 
     choice /c RBQ /n /m "Enter selection:"
@@ -214,13 +225,13 @@ goto mode_scripts
     exit /b %ERRORLEVEL%
 
 :enter_virtual_environment
-    call :activate_environment > nul
+    call :environment_activate > nul
 
     echo.
     cmd /k
     echo.
 
-    call :deactivate_environment
+    call :environment_deactivate
     goto :menu_root
 
 :: -----------
