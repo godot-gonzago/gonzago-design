@@ -11,13 +11,9 @@ title Gonzago Design Tools
 call :echo_header "Basic setup"
 call :setup_basics
 
-:: If has no arguments run menu mode, ...
-if [%1]==[] (
-    if %ERRORLEVEL% neq 0 pause & exit /b 1
-    goto mode_menu
-)
+:: If has no arguments run menu mode, otherwise run scripts mode
+if [%1]==[] goto mode_menu
 
-:: ...otherwise run scripts mode
 :mode_script
     if %ERRORLEVEL% neq 0 exit /b 1
 
@@ -34,6 +30,11 @@ if [%1]==[] (
 
     call :environment_deactivate > nul
     if %ERRORLEVEL% neq 0 exit /b 1
+    exit /b 0
+
+:mode_menu
+    if %ERRORLEVEL% neq 0 pause & exit /b 1
+    goto menu_main
     exit /b 0
 
 
@@ -187,8 +188,6 @@ if [%1]==[] (
 :: ----------
 :: Menu logic
 :: ----------
-:mode_menu
-    goto menu_main
 
 :: https://superuser.com/a/1587274
 :: https://www.geeksforgeeks.org/batch-script-arrays/
