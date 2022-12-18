@@ -221,7 +221,7 @@ goto mode_scripts
     ::W = UP, S = DOWN, X = Select
     set SELECTED_INDEX=%1
 
-    choice /c wsx > nul
+    choice /c wsx /n
     if %ERRORLEVEL% equ 1 (
         set /a SELECTED_INDEX=%SELECTED_INDEX%-1
         if %SELECTED_INDEX% lss 1 exit /b %1
@@ -249,6 +249,7 @@ goto mode_scripts
     echo   - [Q]uit
     echo.
 
+    :do_it
     call :handle_menu %SELECTED% "Setup tools" "Build tools" "Enter virtual environment" "Quit"
     if %ERRORLEVEL% neq 0 (
         set SELECTED=%ERRORLEVEL%
