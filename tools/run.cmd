@@ -12,28 +12,33 @@ call :echo_header "Basic setup"
 call :setup_basics
 
 :: If has no arguments run menu mode, otherwise run scripts mode
-if [%1]==[] goto mode_menu
+if [%1]==[] (
+    if %ERRORLEVEL% neq 0 pause & exit /b 1
+    goto mode_menu
+) else (
+    if %ERRORLEVEL% neq 0 exit /b 1
+    goto mode_script
+)
 
 :mode_script
-    if %ERRORLEVEL% neq 0 exit /b 1
-
     call :echo_header "Script runner"
-    call :environment_activate > nul
+    call :environment_call "call :run_scripts %*"
     if %ERRORLEVEL% neq 0 exit /b 1
+    exit /b 0
 
+:run_scripts
+    setlocal
+    set /a RETURN_VALUE = 0
     for %%x in (%*) do (
         echo Running script %%~x
         echo.
         python %%~fx
         echo.
+        if %ERRORLEVEL% neq 0 set /a RETURN_VALUE = 1
     )
-
-    call :environment_deactivate > nul
-    if %ERRORLEVEL% neq 0 exit /b 1
-    exit /b 0
+    exit /b %RETURN_VALUE%
 
 :mode_menu
-    if %ERRORLEVEL% neq 0 pause & exit /b 1
     goto menu_main
     exit /b 0
 
@@ -184,85 +189,40 @@ if [%1]==[] goto mode_menu
 
     call :echo_success "Installed dependencies from requirements.txt!" & exit /b 0
 
-
 :: ----------
 :: Menu logic
 :: ----------
 
-:: https://superuser.com/a/1587274
-:: https://www.geeksforgeeks.org/batch-script-arrays/
-:handle_menu
-    setlocal enabledelayedexpansion
-
-    set /a SELECTED=%1+1
-
-    set ARGS_COUNT=0
-    for %%x in (%*) do (
-        set /a ARGS_COUNT+=1
-        set ARGS_LIST[!ARGS_COUNT!]=%%~x
-    )
-
-    for /l %%i in (2,1,%ARGS_COUNT%) do (
-        if %%i equ %SELECTED% (
-            echo [7m ^> !ARGS_LIST[%%i]! [0m
-        ) else (
-            echo    !ARGS_LIST[%%i]!
-        )
-    )
-
-    ::W = UP, S = DOWN, X = Select
-    set SELECTED_INDEX=%1
-
-    choice /c wsx /n
-    if %ERRORLEVEL% equ 1 (
-        set /a SELECTED_INDEX=%SELECTED_INDEX%-1
-        if %SELECTED_INDEX% lss 1 exit /b %1
-        exit /b %SELECTED_INDEX%
-    )
-    if %ERRORLEVEL% equ 2 (
-        set /a SELECTED_INDEX=%SELECTED_INDEX%+1
-        if %SELECTED_INDEX% gre %ARGS_COUNT% exit /b %1
-        exit /b %SELECTED_INDEX%
-    )
-    if %ERRORLEVEL% equ 3 exit /b 0
-
-    exit /b %1
-
 :menu_main
-    setlocal
+    setlocal enabledelayedexpansion
     call :echo_header "Main menu"
-    echo [1] Asset tools
-    echo [2] Developer tools
+
+    set CHOICES=DVQ
+    set SCRIPT_FILES_COUNT=0
+    for %%f in (*.py) do (
+        set /a SCRIPT_FILES_COUNT+=1
+        set SCRIPT_FILES_LIST[!SCRIPT_FILES_COUNT!]=%%f
+        set CHOICES=!CHOICES!!SCRIPT_FILES_COUNT!
+
+        echo [!SCRIPT_FILES_COUNT!] Run script: %%f
+    )
     echo.
+
+    echo [D] Developer tools
     echo [V] Enter virtual environment
     echo [Q] Quit
     echo.
-    choice /c 12VQ /n > nul
-    if %ERRORLEVEL% equ 1 goto menu_asset_tools
-    if %ERRORLEVEL% equ 2 goto menu_dev_tools
-    if %ERRORLEVEL% equ 3 goto enter_virtual_environment
-    if %ERRORLEVEL% equ 4 exit /b 0
-    exit /b 0
 
-:menu_asset_tools
-    setlocal
-    call :echo_header "Asset tools"
-    echo [1] Build all
-    echo [2] Build editor icons
-    echo [3] Build application images
-    echo [4] Build palettes
-    echo.
-    echo [B] Back
-    echo [Q] Quit
-    echo.
-    choice /c 1234BQ /n > nul
-    if %ERRORLEVEL% equ 1 start www.python.org/downloads/
-    if %ERRORLEVEL% equ 2 start www.python.org/downloads/
-    if %ERRORLEVEL% equ 3 start www.python.org/downloads/
-    if %ERRORLEVEL% equ 4 start www.python.org/downloads/
-    if %ERRORLEVEL% equ 5 goto menu_main
-    if %ERRORLEVEL% equ 6 exit /b 0
-    exit /b 0
+    choice /c %CHOICES% /n > nul
+    if %ERRORLEVEL% equ 1 goto menu_dev_tools
+    if %ERRORLEVEL% equ 2 goto enter_virtual_environment
+    if %ERRORLEVEL% equ 3 exit /b 0
+
+    set /a SCRIPT_INDEX=%ERRORLEVEL%-3
+    set SCRIPT=!SCRIPT_FILES_LIST[%SCRIPT_INDEX%]!
+    call :mode_script %SCRIPT%
+    pause
+    goto menu_main
 
 :menu_dev_tools
     setlocal
