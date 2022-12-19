@@ -5,9 +5,10 @@ setlocal
 
 :: Script initialization
 :: ---------------------
+title Gonzago Design Tools
+call :echo_title
 
 :: Ensure basic setup
-title Gonzago Design Tools
 call :echo_header "Basic setup"
 call :setup_basics
 
@@ -30,10 +31,9 @@ if [%1]==[] (
     setlocal
     set /a RETURN_VALUE = 0
     for %%x in (%*) do (
-        echo Running script %%~x
+        call :echo_info "Running script %%~x"
         echo.
         python %%~fx
-        echo.
         if %ERRORLEVEL% neq 0 set /a RETURN_VALUE = 1
     )
     exit /b %RETURN_VALUE%
@@ -46,12 +46,16 @@ if [%1]==[] (
 :: Common functions
 :: ----------------
 
-:echo_header
-    cls
+:echo_title
+    echo ====================================================
     echo GONZAGO DESIGN TOOLS
-    echo ====================
-    if not [%1]==[] echo %~1:
+    echo ====================================================
+    exit /b 0
+
+:echo_header
     echo.
+    echo %~1
+    echo ----------------------------------------------------
     exit /b 0
 
 :echo_info
@@ -211,7 +215,6 @@ if [%1]==[] (
     echo [D] Developer tools
     echo [V] Enter virtual environment
     echo [Q] Quit
-    echo.
 
     choice /c %CHOICES% /n > nul
     if %ERRORLEVEL% equ 1 goto menu_dev_tools
@@ -221,7 +224,6 @@ if [%1]==[] (
     set /a SCRIPT_INDEX=%ERRORLEVEL%-3
     set SCRIPT=!SCRIPT_FILES_LIST[%SCRIPT_INDEX%]!
     call :mode_script %SCRIPT%
-    pause
     goto menu_main
 
 :menu_dev_tools
@@ -238,7 +240,7 @@ if [%1]==[] (
     echo.
     echo [B] Back
     echo [Q] Quit
-    echo.
+
     choice /c 123BQ /n > nul
     if %ERRORLEVEL% equ 1 start www.python.org/downloads/
     if %ERRORLEVEL% equ 2 start www.python.org/downloads/
