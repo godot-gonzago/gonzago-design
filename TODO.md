@@ -2,6 +2,20 @@
 
 - Restructuring
     - <https://medium.com/coders-camp/60-python-projects-with-source-code-919cd8a6e512>
+    - <https://keathmilligan.net/5-project-templates>
+    - <https://github.com/keathmilligan/python-app-template>
+    - <https://python-textbok.readthedocs.io/en/latest/Introduction.html>
+    - <https://setuptools.pypa.io/en/latest/userguide/index.html>
+    - <https://www.pythonguis.com/tutorials/packaging-pyqt5-pyside2-applications-windows-pyinstaller/>
+    - <https://gitlab.com/megabyte-labs/templates/python-cli>
+    - <https://www.mndwrk.com/blog/python-click-or-how-to-write-professional-cli-applications>
+    - <https://opensource.com/article/22/7/bootstrap-python-command-line-application>
+    - <https://code.visualstudio.com/docs/python/environments>
+    - <https://python-3-patterns-idioms-test.readthedocs.io/en/latest/>
+    - <https://stackoverflow.com/questions/4042905/what-is-main-py>
+    - <https://packaging.python.org/en/latest/guides/packaging-namespace-packages/#native-namespace-packages>
+    - <https://docs.python.org/3/library/importlib.html#module-importlib.resources>
+    - <https://python-packaging.readthedocs.io/en/latest/index.html>
     - add .gitattributes in tools?
         - <https://stackoverflow.com/questions/6670140/how-do-i-set-all-files-in-a-subdirectory-to-use-a-specific-eol-using-gitattribut>
         - <https://gist.github.com/dreftymac/a589eea7d67e79bd84fe>

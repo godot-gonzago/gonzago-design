@@ -4,7 +4,9 @@
 # https://packaging.python.org/en/latest/specifications/declaring-project-metadata/#declaring-project-metadata
 
 [build-system]
-requires = ["setuptools"]
+requires = [
+  "setuptools"
+]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -25,7 +27,34 @@ dependencies = [
   "scour"
 ]
 
+[project.optional-dependencies]
+test = [
+  "pytest",
+  "pytest-cov"
+]
+doc = [
+  "sphinx",
+  "furo"
+]
+
 [project.urls]
 homepage = "https://github.com/godot-gonzago/gonzago-design"
 documentation = "https://github.com/godot-gonzago/gonzago-design"
 repository = "https://github.com/godot-gonzago/gonzago-design"
+
+# ... other project metadata fields as specified in:
+#     https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
+
+#[project.scripts]
+#spam-cli = "spam:main_cli"
+#
+#[project.gui-scripts]
+#spam-gui = "spam:main_gui"
+#
+#[project.entry-points."spam.magical"]
+#tomatoes = "spam:main_tomatoes"
+
+[tool.pytest.ini_options]
+testpaths = [
+  "tests"
+]
