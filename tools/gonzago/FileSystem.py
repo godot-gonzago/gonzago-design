@@ -4,20 +4,23 @@ from pathlib import Path
 
 import yaml
 
-_SCRIPT_FILE : Path = Path(__file__)
-_SCRIPT_DIR : Path = _SCRIPT_FILE.parent
-_TOOLS_DIR : Path = _SCRIPT_DIR.parent
+_SCRIPT_FILE: Path = Path(__file__)
+_SCRIPT_DIR: Path = _SCRIPT_FILE.parent
+_TOOLS_DIR: Path = _SCRIPT_DIR.parent
 
-_CACHE_DIR : Path = _TOOLS_DIR.joinpath('.cache')
-_CACHE_FILE : Path = _CACHE_DIR.joinpath('files.yaml')
+CONFIG_DIR: Path = _TOOLS_DIR.joinpath('config')
+CACHE_DIR: Path = _TOOLS_DIR.joinpath('.cache')
+TEMP_DIR: Path = _TOOLS_DIR.joinpath('.temp')
+
+ROOT_DIR: Path = _TOOLS_DIR.parent
+SOURCE_DIR: Path = ROOT_DIR.joinpath('source')
+EXPORT_DIR: Path = ROOT_DIR
+
+_CACHE_FILE: Path = CACHE_DIR.joinpath('files.yaml')
 _MD5_CHUNK_SIZE: int = 65536  # 64kb chunks
 
-ROOT_DIR : Path = _TOOLS_DIR.parent
-SOURCE_DIR : Path = ROOT_DIR.joinpath('source')
-EXPORT_DIR : Path = ROOT_DIR
 
-
-def create_directories(path: str | PathLike, is_file_path : bool = False) -> None:
+def create_directories(path: str | PathLike, is_file_path: bool = False) -> None:
     if not path is Path:
         path = Path(path)
 
@@ -28,7 +31,7 @@ def create_directories(path: str | PathLike, is_file_path : bool = False) -> Non
         path.mkdir(parents=True, exist_ok=True)
 
 
-def compute_md5(path: str | PathLike) -> str:
+def compute_md5(path: str | PathLike, chunk_size: int = 65536) -> str:
     if not path is Path:
         path = Path(path)
 
@@ -38,7 +41,7 @@ def compute_md5(path: str | PathLike) -> str:
     if path.is_file():
         md5 = hashlib.md5()
         with path.open('rb') as file:
-            while chunk := file.read(_MD5_CHUNK_SIZE):
+            while chunk := file.read(chunk_size):
                 md5.update(chunk)
         return md5.hexdigest()
 
@@ -110,7 +113,7 @@ class FileSystemCache:
             for file in files:
                 # file.endswith()
                 file_path = SOURCE_DIR.joinpath(root, file)
-                #file_path.match('*.svg')
+                # file_path.match('*.svg')
                 # print(f'Suffix: {file_path.suffix}')
                 rel_path = file_path.relative_to(SOURCE_DIR).as_posix()
 
