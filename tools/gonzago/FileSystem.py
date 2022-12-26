@@ -3,7 +3,7 @@ from os import PathLike, stat, walk
 from pathlib import Path
 
 import yaml
-import shared.Paths as Paths
+from gonzago import Paths
 
 _CACHE_FILE: Path = Path(Paths.CACHE_DIR.joinpath('files.yaml'))
 _MD5_CHUNK_SIZE: int = 65536  # 64kb chunks
