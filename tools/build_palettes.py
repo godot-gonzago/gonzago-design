@@ -1,8 +1,10 @@
 import csv
+import re
 from io import TextIOWrapper
 from pathlib import PurePath
 from tokenize import String
 
+import requests
 import yaml
 from PIL import ImageColor
 
@@ -49,6 +51,15 @@ def write_palette_footer(file: TextIOWrapper):
 if __name__ == '__main__':
     print('Building palettes')
     print('=================')
+
+    url: String = 'https://github.com/godotengine/godot/raw/master/editor/editor_themes.cpp'
+    respone: requests.Response = requests.get(url)
+    # print(respone.text)
+
+    # https://pythex.org/
+    pattern: re.Pattern[str] = r'"(?P<dark_color>#[a-fA-F0-9]{6})".*"(?P<light_color>#[a-fA-F0-9]{6})"(?:.*[\/]{2}?[ \t]*(?P<comment>\w+[ \t\w]*))?'
+    for result in re.finditer(pattern, respone.text):
+        print(result.groups())
 
     # TODO: Handle non existent palettes folder
     dark_palette = open(path.joinpath('../palettes/godot-dark.gpl'), "w")
