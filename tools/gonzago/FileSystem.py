@@ -1,50 +1,31 @@
 import hashlib
-from os import PathLike, walk, stat
+from os import PathLike, stat, walk
 from pathlib import Path
 
+import Paths
 import yaml
 
-_SCRIPT_FILE: Path = Path(__file__)
-_SCRIPT_DIR: Path = _SCRIPT_FILE.parent
-_TOOLS_DIR: Path = _SCRIPT_DIR.parent
-
-CONFIG_DIR: Path = _TOOLS_DIR.joinpath('config')
-CACHE_DIR: Path = _TOOLS_DIR.joinpath('.cache')
-TEMP_DIR: Path = _TOOLS_DIR.joinpath('.temp')
-
-ROOT_DIR: Path = _TOOLS_DIR.parent
-SOURCE_DIR: Path = ROOT_DIR.joinpath('source')
-EXPORT_DIR: Path = ROOT_DIR
-
-_CACHE_FILE: Path = CACHE_DIR.joinpath('files.yaml')
+_CACHE_FILE: Path = Path(Paths.CACHE_DIR.joinpath('files.yaml'))
 _MD5_CHUNK_SIZE: int = 65536  # 64kb chunks
 
-
-def create_directories(path: str | PathLike, is_file_path: bool = False) -> None:
-    if not path is Path:
-        path = Path(path)
-
+def create_directories(path: Paths.StrPath, is_file_path: bool = False) -> None:
+    p: Path = Paths.get_path(path)
     if is_file_path:
-        path = path.parent
+        p = p.parent
+    if not p.is_dir():
+        p.mkdir(parents=True, exist_ok=True)
 
-    if not path.is_dir():
-        path.mkdir(parents=True, exist_ok=True)
 
-
-def compute_md5(path: str | PathLike, chunk_size: int = 65536) -> str:
-    if not path is Path:
-        path = Path(path)
-
-    if path.is_dir():
-        return hashlib.md5(path).hexdigest()
-
-    if path.is_file():
+def compute_md5(path: Paths.StrPath, chunk_size: int = _MD5_CHUNK_SIZE) -> str:
+    p: Path = Paths.get_path(path)
+    if p.is_dir():
+        return hashlib.md5(p.resolve()).hexdigest()
+    if p.is_file():
         md5 = hashlib.md5()
-        with path.open('rb') as file:
+        with p.open('rb') as file:
             while chunk := file.read(chunk_size):
                 md5.update(chunk)
         return md5.hexdigest()
-
     return ''
 
 
@@ -98,10 +79,11 @@ class FileSystemCache:
         self.dirs.clear()
         self.files.clear()
 
-        for (root, dirs, files) in walk(SOURCE_DIR):
+        for (root, dirs, files) in walk(Paths.SOURCE_DIR):
             for dir in dirs:
-                dir_path: Path = SOURCE_DIR.joinpath(root, dir)
-                rel_path: Path = dir_path.relative_to(SOURCE_DIR).as_posix()
+                dir_path: Path = Paths.SOURCE_DIR.joinpath(root, dir)
+                rel_path: Path = dir_path.relative_to(
+                    Paths.SOURCE_DIR).as_posix()
 
                 statinfo = stat(file_path)
                 self.dirs[rel_path] = DirStats(
@@ -112,10 +94,10 @@ class FileSystemCache:
 
             for file in files:
                 # file.endswith()
-                file_path = SOURCE_DIR.joinpath(root, file)
+                file_path = Paths.SOURCE_DIR.joinpath(root, file)
                 # file_path.match('*.svg')
                 # print(f'Suffix: {file_path.suffix}')
-                rel_path = file_path.relative_to(SOURCE_DIR).as_posix()
+                rel_path = file_path.relative_to(Paths.SOURCE_DIR).as_posix()
 
                 statinfo = stat(file_path)
                 self.files[rel_path] = FileStats(
@@ -135,12 +117,12 @@ class FileSystemCache:
 
 def gather_file_cache() -> dict:
     cache = {}
-    for (root, dirs, files) in walk(SOURCE_DIR):
+    for (root, dirs, files) in walk(Paths.SOURCE_DIR):
         for file in files:
             # file.endswith()
-            file_path = SOURCE_DIR.joinpath(root, file)
+            file_path = Paths.SOURCE_DIR.joinpath(root, file)
             # print(f'Suffix: {file_path.suffix}')
-            rel_path = file_path.relative_to(SOURCE_DIR).as_posix()
+            rel_path = file_path.relative_to(Paths.SOURCE_DIR).as_posix()
 
             statinfo = stat(file_path)
             cache[rel_path] = {
