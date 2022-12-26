@@ -96,20 +96,22 @@ call :echo_success "Installed dependencies from requirements.txt!" & goto menu_m
     :: - https://github.com/jazzband/pip-tools
     :: - piptools compile
     :: - pip-compile --upgrade
-    echo [1] Recreate virtual environment
-    echo [2] Upgrade virtual environment
-    echo [3] Install dev tools ^(pip-tools^)
+    echo [1] Install pip-tools
+    echo [2] Compile updated requirements files
+    echo [3] Sync requirements with regular environment
+    echo [4] Sync requirements with dev environment
     echo.
     echo [B] Back
     echo [Q] Quit
 
-    choice /c 123BQ /n > nul
-    if %ERRORLEVEL% equ 1 start www.python.org/downloads/
-    if %ERRORLEVEL% equ 2 start www.python.org/downloads/
-    if %ERRORLEVEL% equ 3 call :python_package_installed fart
+    choice /c 1234BQ /n > nul
+    if %ERRORLEVEL% equ 1 call :pip_tools_install
+    if %ERRORLEVEL% equ 2 call :pip_tools_generate_requirements
+    if %ERRORLEVEL% equ 3 call :pip_tools_sync
+    if %ERRORLEVEL% equ 4 call :pip_tools_sync_dev
 
-    if %ERRORLEVEL% equ 4 endlocal & goto menu_main
-    if %ERRORLEVEL% equ 5 exit /b 0
+    if %ERRORLEVEL% equ 5 endlocal & goto menu_main
+    if %ERRORLEVEL% equ 6 exit /b 0
 
     endlocal & goto menu_dev_tools
 
@@ -129,21 +131,19 @@ call :echo_success "Installed dependencies from requirements.txt!" & goto menu_m
 
 :pip_tools_generate_requirements
     echo Compiling requirements files...
-    pip-compile -o .\requirements.txt .\pyproject.toml && call :echo_success "Compiled requirements.txt." || call :echo_error "Failed to compile requirements.txt."
-    pip-compile --extra dev -o .\dev-requirements.txt .\pyproject.toml && call :echo_success "Compiled dev-requirements.txt." || call :echo_error "Failed to compile dev-requirements.txt."
-
-:pip_tools_sync_dev
-    echo Syncing with development environment...
-    pip-sync .\dev-requirements.txt .\requirements.txt
+    pip-compile --resolver=backtracking --upgrade -o .\requirements.txt .\pyproject.toml && call :echo_success "Compiled requirements.txt." || call :echo_error "Failed to compile requirements.txt."
+    pip-compile --resolver=backtracking --upgrade --extra dev -o .\dev-requirements.txt .\pyproject.toml && call :echo_success "Compiled dev-requirements.txt." || call :echo_error "Failed to compile dev-requirements.txt."
+    exit /b 0
 
 :pip_tools_sync
     echo Syncing with regular environment...
     pip-sync .\requirements.txt
+    exit /b 0
 
-:pip_tools_upgrade
-    echo Upgrading dependancies...
-    pip-compile --upgrade && call :echo_success "Upgraded from pip-tools." || call :echo_error "Failed to upgrade from pip-tools."
-    python -m pip install --upgrade && call :echo_success "Upgraded from pip." || call :echo_error "Failed to upgrade from pip."
+:pip_tools_sync_dev
+    echo Syncing with development environment...
+    pip-sync .\dev-requirements.txt .\requirements.txt
+    exit /b 0
 
 
 :: Echo functions
