@@ -33,8 +33,7 @@ if exist .\.venv\Scripts\activate.bat (
 :: Create virtual environment if it didn't exist
 call :echo_error "Virtual environment doesn't exist."
 echo Creating virtual environment...
-::python -m venv --prompt "Gonzago" --upgrade-deps .\.venv || (call :echo_error "Failed to create virtual environment." & exit /b 1)
-python -m venv --prompt "Gonzago" .\.venv || (call :echo_error "Failed to create virtual environment." & pause & exit /b 1)
+python -m venv --prompt "Gonzago" --upgrade-deps .\.venv || (call :echo_error "Failed to create virtual environment." & exit /b 1)
 call :echo_success "Virtual environment created!"
 
 :: Activate virtual environment
