@@ -8,6 +8,7 @@ name = "gonzago_design_tools"
 description = "Tools for Gonzago design assets."
 version = "0.0.1"
 readme = "README.md"
+license = { file = "LICENSE" }
 authors = [
   { name = "David Krummenacher and Gonzago Framework contributors" }
 ]
@@ -16,6 +17,7 @@ dependencies = [
   "CairoSVG",
   "Pillow",
   "PyYAML",
+  "requests",
   "scour"
 ]
 
@@ -26,4 +28,6 @@ dev = [
 ]
 
 [project.urls]
+homepage = "https://github.com/godot-gonzago/gonzago-design"
+documentation = "https://github.com/godot-gonzago/gonzago-design"
 repository = "https://github.com/godot-gonzago/gonzago-design"

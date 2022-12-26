@@ -8,12 +8,18 @@ cairocffi==1.4.0
     # via cairosvg
 cairosvg==2.5.2
     # via gonzago-design-tools (.\pyproject.toml)
+certifi==2022.12.7
+    # via requests
 cffi==1.15.1
     # via cairocffi
+charset-normalizer==2.1.1
+    # via requests
 cssselect2==0.7.0
     # via cairosvg
 defusedxml==0.7.1
     # via cairosvg
+idna==3.4
+    # via requests
 pillow==9.3.0
     # via
     #   cairosvg
@@ -21,6 +27,8 @@ pillow==9.3.0
 pycparser==2.21
     # via cffi
 pyyaml==6.0
+    # via gonzago-design-tools (.\pyproject.toml)
+requests==2.28.1
     # via gonzago-design-tools (.\pyproject.toml)
 scour==0.38.2
     # via gonzago-design-tools (.\pyproject.toml)
@@ -30,6 +38,8 @@ tinycss2==1.2.1
     # via
     #   cairosvg
     #   cssselect2
+urllib3==1.26.13
+    # via requests
 webencodings==0.5.1
     # via
     #   cssselect2
