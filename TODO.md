@@ -1,6 +1,7 @@
 # TODO
 
 - Restructuring
+    - <https://medium.com/coders-camp/60-python-projects-with-source-code-919cd8a6e512>
     - add .gitattributes in tools?
         - <https://stackoverflow.com/questions/6670140/how-do-i-set-all-files-in-a-subdirectory-to-use-a-specific-eol-using-gitattribut>
         - <https://gist.github.com/dreftymac/a589eea7d67e79bd84fe>

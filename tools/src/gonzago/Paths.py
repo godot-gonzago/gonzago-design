@@ -3,7 +3,7 @@ from pathlib import Path, PurePath
 
 _SCRIPT_FILE: PurePath = PurePath(__file__)
 _SCRIPT_DIR: PurePath = _SCRIPT_FILE.parent
-_TOOLS_DIR: PurePath = _SCRIPT_DIR.parent
+_TOOLS_DIR: PurePath = _SCRIPT_DIR.parent.parent
 
 CONFIG_DIR: PurePath = _TOOLS_DIR.joinpath('config')
 CACHE_DIR: PurePath = _TOOLS_DIR.joinpath('.cache')

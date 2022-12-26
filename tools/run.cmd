@@ -57,7 +57,7 @@ call :echo_success "Installed dependencies from requirements.txt!" & goto menu_m
 
     set CHOICES=VDQ
     set SCRIPT_FILES_COUNT=0
-    for %%f in (*.py) do (
+    for %%f in (src\*.py) do (
         set /a SCRIPT_FILES_COUNT+=1
         set SCRIPT_FILES_LIST[!SCRIPT_FILES_COUNT!]=%%f
         set CHOICES=!CHOICES!!SCRIPT_FILES_COUNT!

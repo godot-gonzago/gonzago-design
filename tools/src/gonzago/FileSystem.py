@@ -3,7 +3,9 @@ from os import PathLike, stat, walk
 from pathlib import Path
 
 import yaml
-from gonzago import Paths
+from . import Paths
+# https://stackoverflow.com/questions/16981921/relative-imports-in-python-3
+# https://techwithtech.com/importerror-attempted-relative-import-with-no-known-parent-package/
 
 _CACHE_FILE: Path = Path(Paths.CACHE_DIR.joinpath('files.yaml'))
 _MD5_CHUNK_SIZE: int = 65536  # 64kb chunks
@@ -170,10 +172,3 @@ def diff_file_cache() -> None:
     print(deleted)
 
     save_cache_to_file(current_cache)
-
-
-if __name__ == '__main__':
-    print('Gathering files')
-    print('===============')
-
-    diff_file_cache()

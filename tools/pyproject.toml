@@ -7,9 +7,6 @@
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools]
-packages = ["gonzago"]
-
 [project]
 name = "gonzago_design_tools"
 description = "Tools for Gonzago design assets."
@@ -26,12 +23,6 @@ dependencies = [
   "PyYAML",
   "requests",
   "scour"
-]
-
-[project.optional-dependencies]
-dev = [
-  "pytest",
-  "vermin"
 ]
 
 [project.urls]
