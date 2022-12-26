@@ -12,7 +12,7 @@ license = { file = "LICENSE" }
 authors = [
   { name = "David Krummenacher and Gonzago Framework contributors" }
 ]
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 dependencies = [
   "CairoSVG",
   "Pillow",

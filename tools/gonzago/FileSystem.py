@@ -2,11 +2,13 @@ import hashlib
 from os import PathLike, stat, walk
 from pathlib import Path
 
-import Paths
 import yaml
+
+from gonzago import Paths
 
 _CACHE_FILE: Path = Path(Paths.CACHE_DIR.joinpath('files.yaml'))
 _MD5_CHUNK_SIZE: int = 65536  # 64kb chunks
+
 
 def create_directories(path: Paths.StrPath, is_file_path: bool = False) -> None:
     p: Path = Paths.get_path(path)
