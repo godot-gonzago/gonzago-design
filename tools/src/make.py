@@ -1,4 +1,4 @@
-from gonzago import FileSystem
+from gonzago import files as FileSystem
 
 if __name__ == '__main__':
     print('Gathering files')
