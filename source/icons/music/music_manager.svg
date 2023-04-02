@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="icon_svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="music.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="base_view"
+     inkscape:document-units="px"
+     showgrid="true"
+     units="px"
+     width="16px"
+     viewbox-height="16"
+     inkscape:snap-grids="true"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:current-layer="base_layer">
+    <inkscape:grid
+       type="xygrid"
+       id="base_grid"
+       dotted="true"
+       empspacing="4" />
+  </sodipodi:namedview>
+  <defs
+     id="base_definitions">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clip_path">
+      <path
+         id="mask_path"
+         d="M 0,0 V 16 H 7 V 11 C 7.0000524,10.191194 7.4871993,9.4620147 8.234375,9.1523438 8.9817673,8.8428023 9.8420325,9.0139304 10.414062,9.5859375 L 12,11.171875 13.585938,9.5859375 C 13.979683,9.1924659 14.46027,9.0099018 14.935547,8.9980469 14.990996,8.9966569 16,9 16,9 V 0 Z" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Base Layer"
+     inkscape:groupmode="layer"
+     id="base_layer">
+    <g
+       id="mask"
+       clip-path="url(#clip_path)">
+      <g
+         inkscape:label="Clip"
+         id="audio">
+        <path
+           d="M 5,12 V 4 l 7,-2 v 8.5"
+           id="connection"
+           fill="none"
+           stroke="#e0e0e0"
+           stroke-width="2"
+           stroke-linejoin="round" />
+        <circle
+           id="circle_right"
+           cx="10.5"
+           cy="10.5"
+           r="2.5"
+           fill="#e0e0e0" />
+        <circle
+           id="circle_left"
+           cx="3.5"
+           cy="12"
+           r="2.5"
+           fill="#e0e0e0" />
+      </g>
+    </g>
+    <path
+       d="m 9,16 v -5 l 3,3 3,-3 v 5"
+       id="manager"
+       fill="none"
+       stroke="#80ff45"
+       stroke-linejoin="round"
+       stroke-width="2" />
+  </g>
+</svg>
