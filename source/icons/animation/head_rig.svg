@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="icon_svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="head_rig.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="base_view"
+     inkscape:document-units="px"
+     showgrid="true"
+     units="px"
+     width="16px"
+     viewbox-height="16"
+     inkscape:snap-grids="true"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:current-layer="base_layer">
+    <inkscape:grid
+       type="xygrid"
+       id="base_grid"
+       dotted="true"
+       empspacing="4" />
+  </sodipodi:namedview>
+  <defs
+     id="base_definitions">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clip_path">
+      <g
+         id="features"
+         style="display:none">
+        <path
+           id="mouth"
+           d="M 5.1796875,9 A 3.0000052,3.0000052 0 0 0 8,11 3.0000052,3.0000052 0 0 0 10.820312,9 Z" />
+        <circle
+           id="eye_r"
+           r="1"
+           cy="7"
+           cx="10"
+           d="M 11,7 A 1,1 0 0 1 10,8 1,1 0 0 1 9,7 1,1 0 0 1 10,6 1,1 0 0 1 11,7 Z" />
+        <circle
+           id="eye_l"
+           cx="6"
+           cy="7"
+           d="M 7,7 A 1,1 0 0 1 6,8 1,1 0 0 1 5,7 1,1 0 0 1 6,6 1,1 0 0 1 7,7 Z"
+           r="1" />
+      </g>
+      <path
+         id="inverse-clip-effect"
+         class="powerclip"
+         d="M -2,-4 H 18 V 18 H -2 Z M 5.1796875,9 A 3.0000052,3.0000052 0 0 0 8,11 3.0000052,3.0000052 0 0 0 10.820312,9 Z M 11,7 A 1,1 0 0 0 10,6 1,1 0 0 0 9,7 1,1 0 0 0 10,8 1,1 0 0 0 11,7 Z M 7,7 A 1,1 0 0 0 6,6 1,1 0 0 0 5,7 1,1 0 0 0 6,8 1,1 0 0 0 7,7 Z" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Base Layer"
+     inkscape:groupmode="layer"
+     id="base_layer">
+    <path
+       d="M 12.345703,12.242188 C 11.287573,13.327248 9.8083425,14 8.0014993,14 6.194656,14 4.7178896,13.32962 3.6601562,12.248047 2.5981945,12.989624 2.0039084,13.97474 2,15 h 12 c -7.5e-5,-1.026746 -0.592382,-2.014157 -1.654297,-2.757812 z"
+       id="shoulders"
+       fill="#c38ef1" />
+    <rect
+       id="head_base"
+       width="10"
+       height="12"
+       x="3"
+       y="1"
+       ry="5"
+       fill="#c38ef1"
+       clip-path="url(#clip_path)"
+       d="m 8,1 c 2.77,0 5,2.23 5,5 v 2 c 0,2.77 -2.23,5 -5,5 C 5.23,13 3,10.77 3,8 V 6 C 3,3.23 5.23,1 8,1 Z" />
+  </g>
+</svg>

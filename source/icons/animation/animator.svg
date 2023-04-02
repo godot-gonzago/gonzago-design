@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="icon_svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="animator.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="base_view"
+     inkscape:document-units="px"
+     showgrid="true"
+     units="px"
+     width="16px"
+     viewbox-height="16"
+     inkscape:snap-grids="true"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:current-layer="base_layer">
+    <inkscape:grid
+       type="xygrid"
+       id="base_grid"
+       dotted="true"
+       empspacing="4" />
+  </sodipodi:namedview>
+  <defs
+     id="base_definitions">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clip_path">
+      <path
+         id="mask_path"
+         d="M 2 1 C 1.4460024 1 1 1.4460024 1 2 L 1 14 C 1 14.553996 1.4460024 15 2 15 L 14 15 C 14.553996 15 15 14.553996 15 14 L 15 2 C 15 1.4460024 14.553996 1 14 1 L 2 1 z M 6.4492188 5.390625 C 6.5707196 5.3865532 6.7094282 5.4248757 6.8574219 5.5136719 L 10.142578 7.4863281 C 10.616158 7.770476 10.616158 8.229524 10.142578 8.5136719 L 6.8574219 10.486328 C 6.3838421 10.770476 6 10.552284 6 10 L 6 6 C 6 5.6203046 6.1819169 5.399583 6.4492188 5.390625 z " />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Base Layer"
+     inkscape:groupmode="layer"
+     id="base_layer">
+    <path
+       id="edges"
+       d="m 0,0 v 16 h 2 v -3 h 2 v 3 h 8 v -3 h 2 v 3 h 2 V 0 H 14 V 3 H 12 V 0 H 4 V 3 H 2 V 0 Z M 2,5 H 4 V 7 H 2 Z m 10,0 h 2 V 7 H 12 Z M 2,9 h 2 v 2 H 2 Z m 10,0 h 2 v 2 h -2 z"
+       fill="#c38ef1"
+       clip-path="url(#clip_path)" />
+  </g>
+</svg>
