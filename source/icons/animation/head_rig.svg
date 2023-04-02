@@ -36,35 +36,7 @@
        empspacing="4" />
   </sodipodi:namedview>
   <defs
-     id="base_definitions">
-    <clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="clip_path">
-      <g
-         id="features"
-         style="display:none">
-        <path
-           id="mouth"
-           d="M 5.1796875,9 A 3.0000052,3.0000052 0 0 0 8,11 3.0000052,3.0000052 0 0 0 10.820312,9 Z" />
-        <circle
-           id="eye_r"
-           r="1"
-           cy="7"
-           cx="10"
-           d="M 11,7 A 1,1 0 0 1 10,8 1,1 0 0 1 9,7 1,1 0 0 1 10,6 1,1 0 0 1 11,7 Z" />
-        <circle
-           id="eye_l"
-           cx="6"
-           cy="7"
-           d="M 7,7 A 1,1 0 0 1 6,8 1,1 0 0 1 5,7 1,1 0 0 1 6,6 1,1 0 0 1 7,7 Z"
-           r="1" />
-      </g>
-      <path
-         id="inverse-clip-effect"
-         class="powerclip"
-         d="M -2,-4 H 18 V 18 H -2 Z M 5.1796875,9 A 3.0000052,3.0000052 0 0 0 8,11 3.0000052,3.0000052 0 0 0 10.820312,9 Z M 11,7 A 1,1 0 0 0 10,6 1,1 0 0 0 9,7 1,1 0 0 0 10,8 1,1 0 0 0 11,7 Z M 7,7 A 1,1 0 0 0 6,6 1,1 0 0 0 5,7 1,1 0 0 0 6,8 1,1 0 0 0 7,7 Z" />
-    </clipPath>
-  </defs>
+     id="base_definitions" />
   <g
      inkscape:label="Base Layer"
      inkscape:groupmode="layer"
@@ -80,8 +52,19 @@
        x="3"
        y="1"
        ry="5"
-       fill="#c38ef1"
-       clip-path="url(#clip_path)"
-       d="m 8,1 c 2.77,0 5,2.23 5,5 v 2 c 0,2.77 -2.23,5 -5,5 C 5.23,13 3,10.77 3,8 V 6 C 3,3.23 5.23,1 8,1 Z" />
+       fill="#c38ef1" />
+    <circle
+       id="eye_l"
+       cx="6"
+       cy="7"
+       r="1" />
+    <circle
+       id="eye_r"
+       r="1"
+       cy="7"
+       cx="10" />
+    <path
+       id="mouth"
+       d="M 5.2,9 A 3,3 0 0 0 8,11 3,3 0 0 0 10.812,9 Z" />
   </g>
 </svg>
