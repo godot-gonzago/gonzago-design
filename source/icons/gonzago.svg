@@ -7,7 +7,7 @@
    viewBox="0 0 16 16"
    version="1.1"
    id="icon_svg"
-   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    sodipodi:docname="gonzago.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -34,7 +34,7 @@
      inkscape:window-x="-6"
      inkscape:window-y="-6"
      inkscape:window-maximized="1"
-     inkscape:current-layer="head"
+     inkscape:current-layer="base_layer"
      showborder="true"
      inkscape:snap-grids="true"
      inkscape:showpageshadow="0"
@@ -54,35 +54,42 @@
     <g
        id="head"
        fill="#e0e0e0">
-      <path
-         id="neck"
-         d="m 6.2,13 h 3.6 l 0.9,3 H 5.3 Z" />
       <rect
          id="top"
          width="6"
          height="3.5"
          x="5"
-         y="0"
+         y="1"
          ry="1" />
       <rect
          id="left"
          width="6"
          height="3.5"
-         x="-13.944942"
-         y="-5.0086565"
+         x="-14.810965"
+         y="-5.5086584"
          ry="1"
          transform="rotate(-120)" />
       <rect
          id="right"
          width="6"
          height="3.5"
-         x="-0.055059973"
-         y="-18.865061"
+         x="0.81096542"
+         y="-19.365053"
          ry="1"
          transform="rotate(120)" />
-      <path
-         id="base"
-         d="M 8 1.8 A 6.2 6.2 0 0 0 1.8 8 A 6.2 6.2 0 0 0 8 14.2 A 6.2 6.2 0 0 0 14.2 8 A 6.2 6.2 0 0 0 8 1.8 z M 8 4.4 C 10 4.4 11.6 6 11.6 8 C 11.6 10 10 11.6 8 11.6 C 6 11.6 4.4 10 4.4 8 C 4.4 6 6 4.4 8 4.4 z M 8 6.4 C 7.1 6.4 6.4 7.1 6.4 8 C 6.4 8.9 7.1 9.6 8 9.6 C 8.9 9.6 9.6 8.9 9.6 8 C 9.6 7.1 8.9 6.4 8 6.4 z " />
+      <circle
+         id="eye"
+         cx="8"
+         cy="9"
+         r="1.5" />
     </g>
+    <circle
+       id="outline"
+       cx="8"
+       cy="9"
+       r="5"
+       stroke="#e0e0e0"
+       fill="none"
+       stroke-width="2.5" />
   </g>
 </svg>
