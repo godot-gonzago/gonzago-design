@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="icon_svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="achievement.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="base_view"
+     inkscape:document-units="px"
+     showgrid="true"
+     units="px"
+     width="16px"
+     viewbox-height="16"
+     inkscape:snap-grids="true"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:current-layer="base_layer">
+    <inkscape:grid
+       type="xygrid"
+       id="base_grid"
+       dotted="true"
+       empspacing="4" />
+  </sodipodi:namedview>
+  <defs
+     id="base_definitions">
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="8,4"
+       end_point="6,9"
+       center_point="6,6.5"
+       id="handle-mirror-effect"
+       is_visible="true"
+       lpeversion="1.2"
+       lpesatellites=""
+       mode="vertical"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false"
+       split_items="false"
+       split_open="false"
+       link_styles="false" />
+    <inkscape:path-effect
+       effect="perspective-envelope"
+       up_left_point="0,3"
+       up_right_point="6,4"
+       down_left_point="3,8.5"
+       down_right_point="7,9"
+       id="handle-perspective-effect"
+       is_visible="true"
+       lpeversion="1"
+       deform_type="perspective"
+       horizontal_mirror="false"
+       vertical_mirror="false"
+       overflow_perspective="true" />
+    <inkscape:path-effect
+       effect="perspective-envelope"
+       up_left_point="4,1"
+       up_right_point="12,1"
+       down_left_point="5,11"
+       down_right_point="11,11"
+       id="cup-perspective-effect"
+       is_visible="true"
+       lpeversion="1"
+       deform_type="perspective"
+       horizontal_mirror="false"
+       vertical_mirror="false"
+       overflow_perspective="true" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="base_clip_path">
+      <rect
+         id="base_mask_rect"
+         width="8"
+         height="4"
+         x="4"
+         y="11" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Base Layer"
+     inkscape:groupmode="layer"
+     id="base_layer">
+    <path
+       id="cup"
+       width="8"
+       height="10"
+       x="4"
+       y="1"
+       rx="1"
+       ry="1"
+       inkscape:path-effect="#cup-perspective-effect"
+       d="m 5,1 6,0 c 0.554,0 0.941404,0.5859555 0.870968,1.2903226 L 11.076923,10.230769 C 11.033827,10.661728 10.6655,11 10.25,11 H 5.75 C 5.3345,11 4.9661728,10.661728 4.9230769,10.230769 L 4.1290323,2.2903226 C 4.0585955,1.5859555 4.446,1 5,1 Z"
+       sodipodi:type="rect"
+       fill="#e0e0e0" />
+    <circle
+       id="base"
+       cx="8"
+       cy="15"
+       r="3"
+       clip-path="url(#base_clip_path)"
+       fill="#e0e0e0" />
+    <path
+       id="side_handle"
+       fill="none"
+       stroke="#e0e0e0"
+       stroke-width="2"
+       inkscape:path-effect="#handle-perspective-effect;#handle-mirror-effect"
+       sodipodi:type="arc"
+       sodipodi:cx="4"
+       sodipodi:cy="6.5"
+       sodipodi:rx="2"
+       sodipodi:ry="2.5"
+       d="M 6.5940594,6.970297 C 6.8353595,8.1767977 6.1279097,8.8909887 5.0338983,8.7542373 3.9192118,8.6149015 2.5126893,7.6065971 1.7938144,6.2886598 0.90053779,4.650986 1.3959991,3.2326665 3.075,3.5125 4.708268,3.7847113 6.2968062,5.4840309 6.5940594,6.970297 Z m 2.8118812,0 C 9.1646405,8.1767977 9.8720903,8.8909887 10.966102,8.7542373 12.080788,8.6149015 13.487311,7.6065971 14.206186,6.2886598 15.099462,4.650986 14.604001,3.2326665 12.925,3.5125 11.291732,3.7847113 9.7031938,5.4840309 9.4059406,6.970297 Z"
+       class="UnoptimicedTransforms" />
+    <path
+       d="m 8,11 v 2"
+       id="handle"
+       fill="none"
+       stroke="#e0e0e0"
+       stroke-width="2" />
+  </g>
+</svg>

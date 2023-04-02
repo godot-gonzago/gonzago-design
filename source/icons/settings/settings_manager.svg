@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="icon_svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="settings_manager.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="base_view"
+     inkscape:document-units="px"
+     showgrid="true"
+     units="px"
+     width="16px"
+     viewbox-height="16"
+     inkscape:snap-grids="true"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:current-layer="mask">
+    <inkscape:grid
+       type="xygrid"
+       id="base_grid"
+       dotted="true"
+       empspacing="4" />
+  </sodipodi:namedview>
+  <defs
+     id="base_definitions">
+    <inkscape:path-effect
+       effect="copy_rotate"
+       starting_point="19.313708,8"
+       origin="8,8"
+       id="copy-effect"
+       is_visible="true"
+       lpeversion="1.2"
+       lpesatellites=""
+       method="normal"
+       num_copies="8"
+       starting_angle="0"
+       rotation_angle="45"
+       gap="0"
+       copies_to_360="true"
+       mirror_copies="false"
+       split_items="false"
+       link_styles="false" />
+    <inkscape:path-effect
+       effect="perspective-envelope"
+       up_left_point="7,1"
+       up_right_point="9,1"
+       down_left_point="6,5"
+       down_right_point="10,5"
+       id="warp-effect"
+       is_visible="true"
+       lpeversion="1"
+       deform_type="perspective"
+       horizontal_mirror="false"
+       vertical_mirror="false"
+       overflow_perspective="false" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clip_path">
+      <path
+         id="mask_path"
+         d="M 0,0 V 16 H 7 V 11 C 7.0000524,10.191194 7.4871993,9.4620147 8.234375,9.1523438 8.9817673,8.8428023 9.8420325,9.0139304 10.414062,9.5859375 L 12,11.171875 13.585938,9.5859375 C 13.979683,9.1924659 14.46027,9.0099018 14.935547,8.9980469 14.990996,8.9966569 16,9 16,9 V 0 Z" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Base Layer"
+     inkscape:groupmode="layer"
+     id="base_layer">
+    <g
+       id="cog"
+       clip-path="url(#clip_path)">
+      <g
+         inkscape:label="Clip"
+         id="mask">
+        <circle
+           id="circle"
+           cx="8"
+           cy="8"
+           r="3.5"
+           fill="none"
+           stroke="#e0e0e0"
+           stroke-width="3" />
+        <path
+           id="tooth"
+           width="4"
+           height="4"
+           x="6"
+           y="1"
+           ry="1"
+           rx="1"
+           fill="#e0e0e0"
+           d="m 7.55,1 h 0.9 C 8.7547,1 9.0590416,1.2361663 9.1428571,1.5714286 L 9.6,3.4 C 9.7993702,4.1974809 9.5094,5 8.9,5 H 7.1 C 6.4906,5 6.2006298,4.1974809 6.4,3.4 L 6.8571429,1.5714286 C 6.9409584,1.2361663 7.2453,1 7.55,1 Z M 2.7320545,3.3684506 3.3684506,2.7320545 C 3.583906,2.516599 3.9661028,2.4683918 4.2624356,2.6461915 L 5.8786797,3.615938 c 0.7048801,0.4229281 1.0673069,1.1954347 0.636396,1.6263456 L 5.2422836,6.5150757 C 4.8113727,6.9459866 4.0388661,6.5835598 3.615938,5.8786797 L 2.6461915,4.2624356 C 2.4683918,3.9661028 2.516599,3.583906 2.7320545,3.3684506 Z M 1,8.45 V 7.55 C 1,7.2453 1.2361663,6.9409584 1.5714286,6.8571429 L 3.4,6.4 C 4.1974809,6.2006298 5,6.4906 5,7.1 V 8.9 C 5,9.5094 4.1974809,9.7993702 3.4,9.6 L 1.5714286,9.1428571 C 1.2361663,9.0590416 1,8.7547 1,8.45 Z M 3.3684506,13.267946 2.7320545,12.631549 C 2.516599,12.416094 2.4683918,12.033897 2.6461915,11.737564 L 3.615938,10.12132 C 4.0388661,9.4164402 4.8113727,9.0540134 5.2422836,9.4849243 l 1.2727921,1.2727917 c 0.4309109,0.430911 0.068484,1.203418 -0.636396,1.626346 l -1.6162441,0.969746 c -0.2963328,0.1778 -0.6785296,0.129593 -0.893985,-0.08586 z M 8.45,15 H 7.55 C 7.2453,15 6.9409584,14.763834 6.8571429,14.428571 L 6.4,12.6 C 6.2006298,11.802519 6.4906,11 7.1,11 h 1.8 c 0.6094,0 0.8993702,0.802519 0.7,1.6 L 9.1428571,14.428571 C 9.0590416,14.763834 8.7547,15 8.45,15 Z m 4.817946,-2.368451 -0.636397,0.636397 c -0.215455,0.215455 -0.597652,0.263662 -0.893985,0.08586 L 10.12132,12.384062 C 9.4164402,11.961134 9.0540134,11.188627 9.4849243,10.757716 L 10.757716,9.4849243 c 0.430911,-0.4309109 1.203418,-0.068484 1.626346,0.6363957 l 0.969746,1.616244 c 0.1778,0.296333 0.129593,0.67853 -0.08586,0.893985 z M 15,7.55 v 0.9 c 0,0.3047 -0.236166,0.6090416 -0.571429,0.6928571 L 12.6,9.6 C 11.802519,9.7993702 11,9.5094 11,8.9 V 7.1 c 0,-0.6094 0.802519,-0.8993702 1.6,-0.7 l 1.828571,0.4571429 C 14.763834,6.9409584 15,7.2453 15,7.55 Z m -2.368451,-4.8179455 0.636397,0.6363961 c 0.215455,0.2154554 0.263662,0.5976522 0.08586,0.893985 l -0.969746,1.6162441 c -0.422928,0.7048801 -1.195435,1.0673069 -1.626346,0.636396 L 9.4849243,5.2422836 C 9.0540134,4.8113727 9.4164402,4.0388661 10.12132,3.615938 l 1.616244,-0.9697465 c 0.296333,-0.1777997 0.67853,-0.1295925 0.893985,0.085863 z"
+           inkscape:path-effect="#warp-effect;#copy-effect"
+           class="UnoptimicedTransforms"
+           sodipodi:type="rect" />
+      </g>
+    </g>
+    <path
+       d="m 9,16 v -5 l 3,3 3,-3 v 5"
+       id="manager"
+       fill="none"
+       stroke="#80ff45"
+       stroke-linejoin="round"
+       stroke-width="2" />
+  </g>
+</svg>
