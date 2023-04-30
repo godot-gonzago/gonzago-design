@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="icon_svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="link.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="base_view"
+     inkscape:document-units="px"
+     showgrid="true"
+     units="px"
+     width="16px"
+     viewbox-height="16"
+     inkscape:snap-grids="true"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:current-layer="base_layer">
+    <inkscape:grid
+       type="xygrid"
+       id="base_grid"
+       dotted="true"
+       empspacing="4" />
+  </sodipodi:namedview>
+  <defs
+     id="base_definitions" />
+  <g
+     inkscape:label="Base Layer"
+     inkscape:groupmode="layer"
+     id="base_layer">
+    <g
+       id="fills"
+       fill="#e0e0e0">
+      <path
+         id="left"
+         d="M 8.864228,9.9669612 6.4155946,12.415595 C 5.6429525,13.188071 4.3611901,13.18669 3.5885485,12.414214 2.8160721,11.641572 2.8146917,10.359809 3.5871675,9.5871675 L 6.0302766,7.1440583 a 4,4 0 0 0 -3.8587037,1.0275146 4,4 0 0 0 0,5.6568541 4,4 0 0 0 5.6568542,0 4,4 0 0 0 1.0358009,-3.8614658 z" />
+      <path
+         id="right"
+         d="M 7.1357722,6.0330387 9.5844056,3.5844053 C 10.357048,2.8119286 11.63881,2.81331 12.411452,3.5857862 c 0.772476,0.7726419 0.773857,2.0544046 0.0014,2.8270462 L 9.9697236,8.8559415 a 4,4 0 0 0 3.8587034,-1.0275145 4,4 0 0 0 0,-5.6568543 4,4 0 0 0 -5.6568539,0 4,4 0 0 0 -1.0358009,3.861466 z" />
+    </g>
+    <path
+       d="M 5,11 11,5"
+       id="line"
+       stroke="#e0e0e0"
+       stroke-width="2"
+       stroke-linecap="round" />
+  </g>
+</svg>

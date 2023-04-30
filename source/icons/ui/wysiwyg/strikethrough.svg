@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="icon_svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="strikethrough.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="base_view"
+     inkscape:document-units="px"
+     showgrid="true"
+     units="px"
+     width="16px"
+     viewbox-height="16"
+     inkscape:snap-grids="true"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:current-layer="base_layer">
+    <inkscape:grid
+       type="xygrid"
+       id="base_grid"
+       dotted="true"
+       empspacing="4" />
+  </sodipodi:namedview>
+  <defs
+     id="base_definitions" />
+  <g
+     inkscape:label="Base Layer"
+     inkscape:groupmode="layer"
+     id="base_layer">
+    <path
+       d="m 11.397,10.788 q 0,1.5638 -1.1358,2.4363 -1.1358,0.87245 -3.0618,0.87245 -0.98768,0 -1.8272,-0.14815 Q 4.53268,13.80045 3.973,13.53707 v -1.4157 q 0.59261,0.26338 1.4651,0.47738 0.88891,0.214 1.8272,0.214 1.3004,0 1.9754,-0.5103 0.67491,-0.5103 0.67491,-1.3827 0,-0.57615 -0.24692,-0.97122 Q 9.42177,9.55346 8.8127,9.22423 8.20363,8.895 7.1501,8.49993 5.6357,7.95671 4.8784,7.16653 4.1211,6.37635 4.12118,5.01013 q 0,-0.92183 0.47738,-1.5967 0.47738,-0.67487 1.3169,-1.0371 0.83952,-0.36223 1.9589,-0.36215 0.95476,0 1.7614,0.18107 0.8066,0.18107 1.4815,0.47738 l -0.46092,1.2675 Q 10.04727,3.67675 9.32294,3.49567 8.59864,3.3146 7.84144,3.3146 q -1.1029,0 -1.6626,0.47738 -0.55968,0.46092 -0.55968,1.2346 0,0.59261 0.24692,0.98768 0.24692,0.39507 0.8066,0.7243 0.55968,0.31276 1.5144,0.65845 1.0371,0.37861 1.7449,0.82306 0.7243,0.42799 1.0864,1.0371 0.37861,0.60907 0.37861,1.5309 z"
+       id="s"
+       fill="#e0e0e0" />
+    <path
+       d="M 2,8 H 14"
+       id="line"
+       stroke="#e0e0e0"
+       stroke-width="2" />
+  </g>
+</svg>
