@@ -48,16 +48,10 @@
        stroke-width="3">
       <path
          id="line_v"
-         d="m 7.5,1.5 v 12" />
+         d="M 8,2 V 14" />
       <path
          id="line_h"
-         d="M 13.5,7.5 H 1.5" />
+         d="M 14,8 H 2" />
     </g>
-    <circle
-       cx="13"
-       cy="13"
-       r="2"
-       id="dot"
-       fill="#ac73f1" />
   </g>
 </svg>

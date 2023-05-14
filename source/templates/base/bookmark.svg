@@ -8,7 +8,7 @@
    version="1.1"
    id="icon_svg"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
-   sodipodi:docname="vector2.svg"
+   sodipodi:docname="bookmark.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -41,23 +41,9 @@
      inkscape:label="Base Layer"
      inkscape:groupmode="layer"
      id="base_layer">
-    <g
-       id="vector2"
-       fill="none"
-       stroke="#ac73f1"
-       stroke-width="3">
-      <path
-         id="line_v"
-         d="m 7.5,1.5 v 12" />
-      <path
-         id="line_h"
-         d="M 13.5,7.5 H 1.5" />
-    </g>
-    <circle
-       cx="13"
-       cy="13"
-       r="2"
-       id="dot"
-       fill="#ac73f1" />
+    <path
+       id="bookmark"
+       d="M 5,1 C 4,1 3,1.9 3,3 v 12 l 5,-3 5,3 V 3 C 13,1.9 12,1 11,1 Z"
+       fill="#e0e0e0" />
   </g>
 </svg>

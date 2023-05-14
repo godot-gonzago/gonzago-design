@@ -48,13 +48,19 @@
        id="vector3">
       <path
          id="line_v"
-         d="m 8,1.5 v 13" />
+         d="M 6,1 V 14" />
       <path
          id="line_h_1"
-         d="m 13.5,4.5 -11,7" />
+         d="m 11.5,4 -11,7" />
       <path
          id="line_h_2"
-         d="m 2.5,4.5 11,7" />
+         d="m 0.5,4 11,7" />
     </g>
+    <circle
+       cx="14"
+       cy="13"
+       r="2"
+       id="dot"
+       fill="#de66f0" />
   </g>
 </svg>
