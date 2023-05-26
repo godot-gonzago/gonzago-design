@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="icon_svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="heart_empty.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="base_view"
+     inkscape:document-units="px"
+     showgrid="true"
+     units="px"
+     width="16px"
+     viewbox-height="16"
+     inkscape:snap-grids="true"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:current-layer="base_layer">
+    <inkscape:grid
+       type="xygrid"
+       id="base_grid"
+       dotted="true"
+       empspacing="4" />
+  </sodipodi:namedview>
+  <defs
+     id="base_definitions" />
+  <g
+     inkscape:label="Base Layer"
+     inkscape:groupmode="layer"
+     id="base_layer">
+    <path
+       id="heart"
+       d="M 3.25,4.25 C 2.5,5 2.25,6.5 3,7.5 L 8,13 13,7.5 c 0.75,-1 0.5,-2.5 -0.25,-3.25 -1,-1 -2.5,-1 -3.5,0 C 8.5,5 8,5.4 8,5.4 8,5.4 7.5,5 6.75,4.25 c -1,-1 -2.5,-1 -3.5,0 z"
+       fill="none"
+       stroke="#fc7f7f"
+       stroke-width="2"
+       stroke-linejoin="round" />
+  </g>
+</svg>
