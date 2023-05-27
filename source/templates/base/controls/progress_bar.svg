@@ -8,7 +8,7 @@
    version="1.1"
    id="icon_svg"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
-   sodipodi:docname="advanced_item_list.svg"
+   sodipodi:docname="progress_bar.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -29,14 +29,14 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="29.5"
-     inkscape:cx="7.0169492"
-     inkscape:cy="7.8474576"
+     inkscape:cx="5.3050847"
+     inkscape:cy="5.8474576"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
      inkscape:window-y="-6"
      inkscape:window-maximized="1"
-     inkscape:current-layer="content">
+     inkscape:current-layer="base_layer">
     <inkscape:grid
        type="xygrid"
        id="base_grid"
@@ -52,32 +52,19 @@
     <rect
        id="container"
        width="12"
-       height="12"
+       height="8"
        x="2"
-       y="2"
+       y="4"
        ry="1"
        fill="none"
        stroke="#8eef97"
        stroke-width="2" />
-    <g
-       id="content"
+    <path
+       d="M 4,8 H 9"
+       id="bars"
        fill="none"
        stroke="#8eef97"
-       stroke-width="2">
-      <path
-         d="m 4,5 h 8"
-         id="group" />
-      <path
-         d="m 5,7 v 5"
-         id="category" />
-      <path
-         d="m 7,8 h 5"
-         id="items1"
-         stroke-dasharray="2, 1" />
-      <path
-         d="m 7,11 h 5"
-         id="items2"
-         stroke-dasharray="2, 1" />
-    </g>
+       stroke-width="4"
+       stroke-dasharray="1" />
   </g>
 </svg>

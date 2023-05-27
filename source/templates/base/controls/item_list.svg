@@ -8,7 +8,7 @@
    version="1.1"
    id="icon_svg"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
-   sodipodi:docname="advanced_item_list.svg"
+   sodipodi:docname="item_list.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="29.5"
-     inkscape:cx="7.0169492"
+     inkscape:cx="3.3728814"
      inkscape:cy="7.8474576"
      inkscape:window-width="1368"
      inkscape:window-height="850"
@@ -63,21 +63,17 @@
        id="content"
        fill="none"
        stroke="#8eef97"
-       stroke-width="2">
+       stroke-width="2"
+       stroke-dasharray="2, 1">
       <path
          d="m 4,5 h 8"
-         id="group" />
+         id="items1" />
       <path
-         d="m 5,7 v 5"
-         id="category" />
+         d="m 4,8 h 8"
+         id="items2" />
       <path
-         d="m 7,8 h 5"
-         id="items1"
-         stroke-dasharray="2, 1" />
-      <path
-         d="m 7,11 h 5"
-         id="items2"
-         stroke-dasharray="2, 1" />
+         d="m 4,11 h 8"
+         id="items3" />
     </g>
   </g>
 </svg>
