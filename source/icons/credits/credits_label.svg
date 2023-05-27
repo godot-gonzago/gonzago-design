@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="icon_svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="credits_label.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="base_view"
+     inkscape:document-units="px"
+     showgrid="true"
+     units="px"
+     width="16px"
+     viewbox-height="16"
+     inkscape:snap-grids="true"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="8"
+     inkscape:cx="7.375"
+     inkscape:cy="-4.8125"
+     inkscape:window-width="1368"
+     inkscape:window-height="850"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="credits">
+    <inkscape:grid
+       type="xygrid"
+       id="base_grid"
+       dotted="true"
+       empspacing="4" />
+  </sodipodi:namedview>
+  <defs
+     id="base_definitions" />
+  <g
+     inkscape:label="Base Layer"
+     inkscape:groupmode="layer"
+     id="base_layer">
+    <rect
+       id="container"
+       width="12"
+       height="12"
+       x="2"
+       y="2"
+       ry="1"
+       fill="none"
+       stroke="#8eef97"
+       stroke-width="2" />
+    <g
+       id="credits"
+       fill="none"
+       stroke="#8eef97"
+       stroke-width="2">
+      <path
+         d="M 4,5 H 8"
+         id="line_1" />
+      <path
+         d="M 8,8 H 5"
+         id="line_2"
+         sodipodi:nodetypes="cc" />
+      <path
+         d="M 4,11 H 8"
+         id="line_3" />
+    </g>
+    <path
+       id="arrows"
+       d="M 10.5 3.5 L 8.5 6.5 L 9.75 6.5 L 9.75 9.5 L 8.5 9.5 L 10.5 12.5 L 12.5 9.5 L 11.25 9.5 L 11.25 6.5 L 12.5 6.5 L 10.5 3.5 z "
+       fill="#8eef97" />
+  </g>
+</svg>
