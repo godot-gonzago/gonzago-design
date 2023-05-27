@@ -29,7 +29,7 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="29.5"
-     inkscape:cx="9.2542373"
+     inkscape:cx="8.5254237"
      inkscape:cy="9.0338983"
      inkscape:window-width="1368"
      inkscape:window-height="850"
@@ -61,49 +61,20 @@
        stroke-width="2" />
     <g
        id="content"
-       fill="#8eef97">
-      <rect
-         id="month"
-         width="8"
-         height="2"
-         x="4"
-         y="4" />
-      <rect
-         id="item_1"
-         width="2"
-         height="2"
-         x="4"
-         y="7" />
-      <rect
-         id="item_2"
-         width="2"
-         height="2"
-         x="7"
-         y="7" />
-      <rect
-         id="item_3"
-         width="2"
-         height="2"
-         x="10"
-         y="7" />
-      <rect
-         id="item_4"
-         width="2"
-         height="2"
-         x="4"
-         y="10" />
-      <rect
-         id="item_5"
-         width="2"
-         height="2"
-         x="7"
-         y="10" />
-      <rect
-         id="item_6"
-         width="2"
-         height="2"
-         x="10"
-         y="10" />
+       fill="none"
+       stroke="#8eef97"
+       stroke-width="2">
+      <path
+         d="m 4,5 h 8"
+         id="month" />
+      <path
+         d="m 4,8 h 8"
+         id="line1"
+         stroke-dasharray="2, 1" />
+      <path
+         d="m 4,11 h 8"
+         id="line2"
+         stroke-dasharray="2, 1" />
     </g>
   </g>
 </svg>
