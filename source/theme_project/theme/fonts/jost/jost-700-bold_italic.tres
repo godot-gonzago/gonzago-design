@@ -1,0 +1,9 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://sabphh836k04"]
+
+[ext_resource type="FontFile" uid="uid://bw1trbjyx5ory" path="res://theme/fonts/jost/jost-italic-variable.ttf" id="1_orjoq"]
+
+[resource]
+base_font = ExtResource("1_orjoq")
+variation_opentype = {
+2003265652: 700
+}

@@ -1,0 +1,6 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://d2vb4ccm4mm5a"]
+
+[ext_resource type="FontFile" uid="uid://d3a1j1b8mbusg" path="res://theme/fonts/jost/jost-variable.ttf" id="1_kntw6"]
+
+[resource]
+base_font = ExtResource("1_kntw6")

@@ -1,0 +1,9 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://cvys5o01aq8uf"]
+
+[ext_resource type="FontFile" uid="uid://d3a1j1b8mbusg" path="res://theme/fonts/jost/jost-variable.ttf" id="1_cbxmk"]
+
+[resource]
+base_font = ExtResource("1_cbxmk")
+variation_opentype = {
+2003265652: 500
+}

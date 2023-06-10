@@ -49,8 +49,8 @@
        id="shape"
        fill="none"
        stroke="#ffffff"
-       stroke-width="2"
-       sodipodi:nodetypes="ccc" />
+       stroke-width="2.4"
+       stroke-linejoin="round" />
     <use
        x="0"
        y="0"

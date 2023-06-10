@@ -46,9 +46,9 @@
     <rect
        id="back"
        width="20"
-       height="20"
+       height="17"
        x="2"
-       y="2"
+       y="4"
        rx="1"
        ry="1"
        fill="none"
@@ -59,7 +59,7 @@
        width="20"
        height="4"
        x="2"
-       y="2"
+       y="4"
        fill="#ffffff" />
   </g>
 </svg>

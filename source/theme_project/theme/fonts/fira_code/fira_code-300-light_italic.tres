@@ -1,0 +1,7 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://7ahu8dc4uedk"]
+
+[ext_resource type="FontFile" uid="uid://ditote7snxwg5" path="res://theme/fonts/fira_code/fira_code-variable.ttf" id="1_4ggda"]
+
+[resource]
+base_font = ExtResource("1_4ggda")
+variation_transform = Transform2D(1, 0.24, 0, 1, 0, 0)

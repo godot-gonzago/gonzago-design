@@ -1,0 +1,9 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://b32udtsdg3ggx"]
+
+[ext_resource type="FontFile" uid="uid://ditote7snxwg5" path="res://theme/fonts/fira_code/fira_code-variable.ttf" id="1_phbx6"]
+
+[resource]
+base_font = ExtResource("1_phbx6")
+variation_opentype = {
+2003265652: 500
+}
