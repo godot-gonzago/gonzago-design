@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://myfl3lwaomr1"]
+[gd_scene load_steps=50 format=3 uid="uid://cr6l1yviaeos1"]
 
 [ext_resource type="Texture2D" uid="uid://dyy1t7xd2gexh" path="res://theme/icons/check/unchecked.svg" id="1_81eps"]
 [ext_resource type="Theme" uid="uid://rtiq6sexshcr" path="res://theme/default.theme" id="1_p5no7"]
@@ -37,8 +37,16 @@
 [ext_resource type="FontVariation" uid="uid://cw0ahqq8gwsqr" path="res://theme/fonts/jost/jost-900-black_italic.tres" id="22_gy5eq"]
 [ext_resource type="FontVariation" uid="uid://d2vb4ccm4mm5a" path="res://theme/fonts/jost/jost-400-regular.tres" id="22_jnkcg"]
 [ext_resource type="FontVariation" uid="uid://bnks6aej2d105" path="res://theme/fonts/jost/jost-400-regular_italic.tres" id="23_1ndrm"]
+[ext_resource type="Texture2D" uid="uid://dparsg701a1gy" path="res://theme/icons/checkerboard.svg" id="26_1i28s"]
+[ext_resource type="Texture2D" uid="uid://8fehg2pmd1ym" path="res://theme/icons/arrows/updown.svg" id="26_jsxai"]
+[ext_resource type="Texture2D" uid="uid://dwvxcul3cgkd7" path="res://theme/icons/arrows/up.svg" id="27_pl8db"]
 [ext_resource type="FontVariation" uid="uid://dn1my1lhxtqt1" path="res://theme/fonts/fira_code/fira_code-600-semi_bold.tres" id="27_v41kw"]
+[ext_resource type="Texture2D" uid="uid://d0u7yklts4evh" path="res://theme/icons/arrows/down.svg" id="28_ixcfb"]
+[ext_resource type="Texture2D" uid="uid://q1jl0l7tlsv0" path="res://theme/icons/reload.svg" id="29_b177p"]
 [ext_resource type="FontVariation" uid="uid://c53n6oif7d66l" path="res://theme/fonts/fira_code/fira_code-600-semi_bold_italic.tres" id="29_jplrd"]
+[ext_resource type="Texture2D" uid="uid://bfk3apk8m4r3s" path="res://theme/icons/arrows/left.svg" id="29_vsati"]
+[ext_resource type="Texture2D" uid="uid://chpmxtlqb8xm3" path="res://theme/icons/arrows/right.svg" id="30_opdaf"]
+[ext_resource type="Texture2D" uid="uid://x3jlcg0tftih" path="res://theme/icons/arrows/select.svg" id="31_lsswv"]
 [ext_resource type="FontVariation" uid="uid://cbermmw36vb8s" path="res://theme/fonts/fira_code/fira_code-300-light.tres" id="35_da22e"]
 [ext_resource type="FontVariation" uid="uid://7ahu8dc4uedk" path="res://theme/fonts/fira_code/fira_code-300-light_italic.tres" id="38_pbrjn"]
 
@@ -204,9 +212,48 @@ layout_mode = 2
 texture = ExtResource("12_laol0")
 stretch_mode = 3
 
+[node name="Arrows" type="HBoxContainer" parent="Margin/Objects/Icons"]
+layout_mode = 2
+alignment = 2
+
+[node name="updown" type="TextureRect" parent="Margin/Objects/Icons/Arrows"]
+layout_mode = 2
+texture = ExtResource("26_jsxai")
+stretch_mode = 3
+
+[node name="up" type="TextureRect" parent="Margin/Objects/Icons/Arrows"]
+layout_mode = 2
+texture = ExtResource("27_pl8db")
+stretch_mode = 3
+
+[node name="down" type="TextureRect" parent="Margin/Objects/Icons/Arrows"]
+layout_mode = 2
+texture = ExtResource("28_ixcfb")
+stretch_mode = 3
+
+[node name="left" type="TextureRect" parent="Margin/Objects/Icons/Arrows"]
+layout_mode = 2
+texture = ExtResource("29_vsati")
+stretch_mode = 3
+
+[node name="right" type="TextureRect" parent="Margin/Objects/Icons/Arrows"]
+layout_mode = 2
+texture = ExtResource("30_opdaf")
+stretch_mode = 3
+
+[node name="dropdown" type="TextureRect" parent="Margin/Objects/Icons/Arrows"]
+layout_mode = 2
+texture = ExtResource("31_lsswv")
+stretch_mode = 3
+
 [node name="General" type="HBoxContainer" parent="Margin/Objects/Icons"]
 layout_mode = 2
 alignment = 2
+
+[node name="checkerboard" type="TextureRect" parent="Margin/Objects/Icons/General"]
+layout_mode = 2
+texture = ExtResource("26_1i28s")
+stretch_mode = 3
 
 [node name="menu" type="TextureRect" parent="Margin/Objects/Icons/General"]
 layout_mode = 2
@@ -221,6 +268,11 @@ stretch_mode = 3
 [node name="tick" type="TextureRect" parent="Margin/Objects/Icons/General"]
 layout_mode = 2
 texture = ExtResource("16_ves5f")
+stretch_mode = 3
+
+[node name="reload" type="TextureRect" parent="Margin/Objects/Icons/General"]
+layout_mode = 2
+texture = ExtResource("29_b177p")
 stretch_mode = 3
 
 [node name="Fonts" type="VBoxContainer" parent="Margin/Objects"]
