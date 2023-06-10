@@ -8,7 +8,7 @@
    version="1.1"
    id="icon_svg"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
-   sodipodi:docname="reload.svg"
+   sodipodi:docname="parent_folder.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -29,9 +29,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:current-layer="base_layer"
-     inkscape:zoom="27.812867"
-     inkscape:cx="8.0178718"
-     inkscape:cy="12.062762"
+     inkscape:zoom="19.666667"
+     inkscape:cx="12.864407"
+     inkscape:cy="13.194915"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
@@ -51,15 +51,17 @@
      inkscape:label="Base Layer"
      inkscape:groupmode="layer"
      id="base_layer">
-    <path
-       id="path"
-       d="m 4,12 c 0,-4.4 3.6,-8 8,-8 4.4,0 8,3.6 8,8 0,4.4 -3.6,8 -8,8"
+    <g
+       id="arrow"
        fill="none"
        stroke="#ffffff"
-       stroke-width="2.8" />
-    <path
-       d="m 0,12 4,6 4,-6"
-       id="head"
-       fill="#ffffff" />
+       stroke-width="2.6">
+      <path
+         d="m 4,13 8,-7 8,7"
+         id="head" />
+      <path
+         d="M 12,6 V 20"
+         id="path1449" />
+    </g>
   </g>
 </svg>
