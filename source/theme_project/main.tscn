@@ -1,11 +1,11 @@
-[gd_scene load_steps=32 format=3 uid="uid://ghxqvgmkxv0p"]
+[gd_scene load_steps=32 format=3 uid="uid://myfl3lwaomr1"]
 
 [ext_resource type="Texture2D" uid="uid://dyy1t7xd2gexh" path="res://theme/icons/check/unchecked.svg" id="1_81eps"]
 [ext_resource type="Theme" uid="uid://rtiq6sexshcr" path="res://theme/default.theme" id="1_p5no7"]
 [ext_resource type="Texture2D" uid="uid://3xqiblmtx4yy" path="res://theme/icons/check/checked.svg" id="2_murxw"]
 [ext_resource type="Texture2D" uid="uid://olt3a4l1xes1" path="res://theme/icons/check/indeterminate.svg" id="3_xdry2"]
-[ext_resource type="Texture2D" uid="uid://dushfti0wiefb" path="res://theme/icons/radio/unchecked.svg" id="4_v58mf"]
-[ext_resource type="Texture2D" uid="uid://cr8r0jgjtkk7u" path="res://theme/icons/radio/checked.svg" id="5_s2lvr"]
+[ext_resource type="Texture2D" uid="uid://dushfti0wiefb" path="res://theme/icons/check/radio_unchecked.svg" id="5_e77vj"]
+[ext_resource type="Texture2D" uid="uid://cr8r0jgjtkk7u" path="res://theme/icons/check/radio_checked.svg" id="6_48rmq"]
 [ext_resource type="Texture2D" uid="uid://kb8n3mnn1k5x" path="res://theme/icons/toggle/off.svg" id="6_ov0i6"]
 [ext_resource type="Texture2D" uid="uid://c5tr2ip1ygsuk" path="res://theme/icons/toggle/on.svg" id="7_cf7g4"]
 [ext_resource type="Texture2D" uid="uid://bto8ehvd12a31" path="res://theme/icons/window/fullscreen.svg" id="8_3a71n"]
@@ -85,12 +85,12 @@ alignment = 2
 
 [node name="radio_unchecked" type="TextureRect" parent="Margin/Objects/Icons/Radio"]
 layout_mode = 2
-texture = ExtResource("4_v58mf")
+texture = ExtResource("5_e77vj")
 stretch_mode = 3
 
 [node name="radio_checked" type="TextureRect" parent="Margin/Objects/Icons/Radio"]
 layout_mode = 2
-texture = ExtResource("5_s2lvr")
+texture = ExtResource("6_48rmq")
 stretch_mode = 3
 
 [node name="Toggle" type="HBoxContainer" parent="Margin/Objects/Icons"]
