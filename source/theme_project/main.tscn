@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bs2dm67v5beux"]
+[gd_scene load_steps=32 format=3 uid="uid://ghxqvgmkxv0p"]
 
 [ext_resource type="Texture2D" uid="uid://dyy1t7xd2gexh" path="res://theme/icons/check/unchecked.svg" id="1_81eps"]
 [ext_resource type="Theme" uid="uid://rtiq6sexshcr" path="res://theme/default.theme" id="1_p5no7"]
@@ -13,8 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://bb84w14jmddyp" path="res://theme/icons/window/minimize.svg" id="10_5apf7"]
 [ext_resource type="Texture2D" uid="uid://csqfcm386b4h" path="res://theme/icons/window/maximize.svg" id="11_7tbup"]
 [ext_resource type="Texture2D" uid="uid://bf11anfy0lcfk" path="res://theme/icons/window/close.svg" id="12_laol0"]
-[ext_resource type="Texture2D" uid="uid://d1qhbnvnjhobn" path="res://theme/icons/window/resizer.svg" id="13_ex6wd"]
 [ext_resource type="Texture2D" uid="uid://bkovyksmq74ff" path="res://theme/icons/menu.svg" id="14_krntv"]
+[ext_resource type="Texture2D" uid="uid://rcw23hf1g8uy" path="res://theme/icons/window/resizer_nw.svg" id="14_lewjj"]
+[ext_resource type="Texture2D" uid="uid://d1qhbnvnjhobn" path="res://theme/icons/window/resizer_se.svg" id="14_sxcl8"]
 [ext_resource type="Texture2D" uid="uid://brjcavln2by61" path="res://theme/icons/spinner.svg" id="15_dn3xb"]
 [ext_resource type="Texture2D" uid="uid://boowk1tagxlxv" path="res://theme/icons/tick.svg" id="16_ves5f"]
 [ext_resource type="FontVariation" uid="uid://cyaxjbdc7un3e" path="res://theme/fonts/fira_code/fira_code-400-regular.tres" id="17_14b76"]
@@ -120,6 +121,16 @@ layout_mode = 2
 texture = ExtResource("9_3l423")
 stretch_mode = 3
 
+[node name="resizer_nw" type="TextureRect" parent="Margin/Objects/Icons/Window"]
+layout_mode = 2
+texture = ExtResource("14_lewjj")
+stretch_mode = 3
+
+[node name="resizer_se" type="TextureRect" parent="Margin/Objects/Icons/Window"]
+layout_mode = 2
+texture = ExtResource("14_sxcl8")
+stretch_mode = 3
+
 [node name="minimize" type="TextureRect" parent="Margin/Objects/Icons/Window"]
 layout_mode = 2
 texture = ExtResource("10_5apf7")
@@ -133,11 +144,6 @@ stretch_mode = 3
 [node name="close" type="TextureRect" parent="Margin/Objects/Icons/Window"]
 layout_mode = 2
 texture = ExtResource("12_laol0")
-stretch_mode = 3
-
-[node name="resizer" type="TextureRect" parent="Margin/Objects/Icons/Window"]
-layout_mode = 2
-texture = ExtResource("13_ex6wd")
 stretch_mode = 3
 
 [node name="General" type="HBoxContainer" parent="Margin/Objects/Icons"]

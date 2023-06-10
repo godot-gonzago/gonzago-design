@@ -8,7 +8,7 @@
    version="1.1"
    id="icon_svg"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
-   sodipodi:docname="resizer.svg"
+   sodipodi:docname="resizer_nw.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -44,8 +44,10 @@
      inkscape:groupmode="layer"
      id="base_layer">
     <path
+       d="M 3.25,16 V 3.25 H 16"
        id="corner"
-       d="m 22,4 -2.5,2.5 v 13 H 6.5 L 4,22 h 18 z"
-       fill="#ffffff" />
+       fill="none"
+       stroke="#ffffff"
+       stroke-width="2.5" />
   </g>
 </svg>
