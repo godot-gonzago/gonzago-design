@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://cr6l1yviaeos1"]
+[gd_scene load_steps=52 format=3 uid="uid://cr6l1yviaeos1"]
 
 [ext_resource type="Texture2D" uid="uid://dyy1t7xd2gexh" path="res://theme/icons/check/unchecked.svg" id="1_81eps"]
 [ext_resource type="Theme" uid="uid://rtiq6sexshcr" path="res://theme/default.theme" id="1_p5no7"]
@@ -48,6 +48,8 @@
 [ext_resource type="Texture2D" uid="uid://chpmxtlqb8xm3" path="res://theme/icons/arrows/right.svg" id="30_opdaf"]
 [ext_resource type="Texture2D" uid="uid://x3jlcg0tftih" path="res://theme/icons/arrows/select.svg" id="31_lsswv"]
 [ext_resource type="FontVariation" uid="uid://cbermmw36vb8s" path="res://theme/fonts/fira_code/fira_code-300-light.tres" id="35_da22e"]
+[ext_resource type="Texture2D" uid="uid://y1pjqaf1lf4q" path="res://theme/icons/add.svg" id="36_3h20h"]
+[ext_resource type="Texture2D" uid="uid://bdyc54u3sur4k" path="res://theme/icons/remove.svg" id="37_durdc"]
 [ext_resource type="FontVariation" uid="uid://7ahu8dc4uedk" path="res://theme/fonts/fira_code/fira_code-300-light_italic.tres" id="38_pbrjn"]
 
 [node name="Main" type="ColorRect"]
@@ -268,6 +270,16 @@ stretch_mode = 3
 [node name="tick" type="TextureRect" parent="Margin/Objects/Icons/General"]
 layout_mode = 2
 texture = ExtResource("16_ves5f")
+stretch_mode = 3
+
+[node name="add" type="TextureRect" parent="Margin/Objects/Icons/General"]
+layout_mode = 2
+texture = ExtResource("36_3h20h")
+stretch_mode = 3
+
+[node name="remove" type="TextureRect" parent="Margin/Objects/Icons/General"]
+layout_mode = 2
+texture = ExtResource("37_durdc")
 stretch_mode = 3
 
 [node name="reload" type="TextureRect" parent="Margin/Objects/Icons/General"]
