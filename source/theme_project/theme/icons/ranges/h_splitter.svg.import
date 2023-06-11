@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnoving1rdw26"
-path="res://.godot/imported/vsplitter.svg-f2458c5bfea2deb08de48e561a07b578.ctex"
+uid="uid://cxh28qv2hhiob"
+path="res://.godot/imported/h_splitter.svg-12c84af301f8bdeea2385fd775e2f3c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://theme/icons/_todo/slider/vsplitter.svg"
-dest_files=["res://.godot/imported/vsplitter.svg-f2458c5bfea2deb08de48e561a07b578.ctex"]
+source_file="res://theme/icons/ranges/h_splitter.svg"
+dest_files=["res://.godot/imported/h_splitter.svg-12c84af301f8bdeea2385fd775e2f3c3.ctex"]
 
 [params]
 

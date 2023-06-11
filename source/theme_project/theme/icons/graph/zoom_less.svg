@@ -29,9 +29,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:current-layer="base_layer"
-     inkscape:zoom="19.666667"
-     inkscape:cx="4.6271186"
-     inkscape:cy="12.635593"
+     inkscape:zoom="16"
+     inkscape:cx="6.9375"
+     inkscape:cy="8.34375"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
@@ -51,14 +51,19 @@
      inkscape:label="Base Layer"
      inkscape:groupmode="layer"
      id="base_layer">
-    <g
+    <circle
+       id="back"
+       cx="12"
+       cy="12"
+       r="10"
+       fill="#16171a"
+       stroke="#e2e4e6"
+       stroke-width="2" />
+    <path
+       d="M 6,12 H 18"
        id="minus"
        fill="none"
        stroke="#e2e4e6"
-       stroke-width="3">
-      <path
-         d="M 3,12 H 21"
-         id="h_line" />
-    </g>
+       stroke-width="2" />
   </g>
 </svg>

@@ -1,10 +1,10 @@
-[gd_resource type="Theme" load_steps=88 format=3 uid="uid://blfq6x2c22oqv"]
+[gd_resource type="Theme" load_steps=90 format=3]
 
-[ext_resource type="StyleBox" uid="uid://db018nyyw03ml" path="res://theme/styleboxes/disabled.tres" id="1_r2vi7"]
-[ext_resource type="StyleBox" uid="uid://dxk3ev6b523o1" path="res://theme/styleboxes/focus.tres" id="2_muin1"]
-[ext_resource type="StyleBox" uid="uid://cmgd0t08u3jd0" path="res://theme/styleboxes/hover.tres" id="3_hv6my"]
-[ext_resource type="StyleBox" uid="uid://u473a3ia8k5l" path="res://theme/styleboxes/normal.tres" id="4_a15q8"]
-[ext_resource type="StyleBox" uid="uid://buexjuyujd07i" path="res://theme/styleboxes/pressed.tres" id="5_hmixu"]
+[ext_resource type="StyleBox" uid="uid://db018nyyw03ml" path="res://theme/styleboxes/basic/disabled.tres" id="1_r2vi7"]
+[ext_resource type="StyleBox" uid="uid://dxk3ev6b523o1" path="res://theme/styleboxes/basic/focus.tres" id="2_muin1"]
+[ext_resource type="StyleBox" uid="uid://cmgd0t08u3jd0" path="res://theme/styleboxes/basic/hover.tres" id="3_hv6my"]
+[ext_resource type="StyleBox" uid="uid://u473a3ia8k5l" path="res://theme/styleboxes/basic/normal.tres" id="4_a15q8"]
+[ext_resource type="StyleBox" uid="uid://buexjuyujd07i" path="res://theme/styleboxes/basic/pressed.tres" id="5_hmixu"]
 [ext_resource type="Texture2D" uid="uid://3xqiblmtx4yy" path="res://theme/icons/check/checked.svg" id="6_dwx73"]
 [ext_resource type="Texture2D" uid="uid://b28qn11xigi4i" path="res://theme/icons/check/checked_disabled.svg" id="7_wbtt4"]
 [ext_resource type="Texture2D" uid="uid://cr8r0jgjtkk7u" path="res://theme/icons/check/radio_checked.svg" id="8_k0x7f"]
@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://cr73l27qvax4i" path="res://theme/icons/toggle/off_disabled.svg" id="20_bpngv"]
 [ext_resource type="Texture2D" uid="uid://ceeq3gcgh36bh" path="res://theme/icons/toggle/off_mirrored_disabled.svg" id="21_jguqf"]
 [ext_resource type="Texture2D" uid="uid://bdw4yqurdbt5s" path="res://theme/icons/toggle/off_mirrored.svg" id="22_x0xs0"]
-[ext_resource type="StyleBox" uid="uid://cn1mx1nibt3d4" path="res://theme/styleboxes/focus_minimal.tres" id="23_qomb7"]
+[ext_resource type="StyleBox" uid="uid://cn1mx1nibt3d4" path="res://theme/styleboxes/minimal/focus_minimal.tres" id="23_qomb7"]
 [ext_resource type="FontVariation" uid="uid://cbermmw36vb8s" path="res://theme/fonts/fira_code/fira_code-300-light.tres" id="24_vue3g"]
 [ext_resource type="Texture2D" uid="uid://c6lhfn4yh6ry1" path="res://theme/icons/text/bookmark.svg" id="25_fviuu"]
 [ext_resource type="Texture2D" uid="uid://cih400fi381f6" path="res://theme/icons/text/breakpoint.svg" id="26_dew32"]
@@ -59,7 +59,7 @@
 [ext_resource type="Texture2D" uid="uid://bjaqcddj0s3v8" path="res://theme/icons/arrows/left_pressed.svg" id="56_jd4v5"]
 [ext_resource type="Texture2D" uid="uid://x3jlcg0tftih" path="res://theme/icons/arrows/select.svg" id="57_b1yxp"]
 [ext_resource type="Texture2D" uid="uid://qiqny0dipcmv" path="res://theme/icons/arrows/right_muted.svg" id="57_gkwgh"]
-[ext_resource type="StyleBox" uid="uid://jsjuu8k6i0uw" path="res://theme/styleboxes/fill.tres" id="58_ru2o8"]
+[ext_resource type="StyleBox" uid="uid://jsjuu8k6i0uw" path="res://theme/styleboxes/ranges/fill.tres" id="58_ru2o8"]
 [ext_resource type="Texture2D" uid="uid://cntwu1qqah0yd" path="res://theme/icons/arrows/right_pressed.svg" id="58_vjqyc"]
 [ext_resource type="FontVariation" uid="uid://sabphh836k04" path="res://theme/fonts/jost/jost-700-bold_italic.tres" id="59_j5lvn"]
 [ext_resource type="Texture2D" uid="uid://dp6snlvirbwve" path="res://theme/icons/ranges/grabber.svg" id="59_wjrs2"]
@@ -80,6 +80,8 @@
 [ext_resource type="Texture2D" uid="uid://c6iut8aa088ox" path="res://theme/icons/arrows/right_button.svg" id="66_c8ig0"]
 [ext_resource type="Texture2D" uid="uid://dwvxcul3cgkd7" path="res://theme/icons/arrows/up.svg" id="66_j67x3"]
 [ext_resource type="Texture2D" uid="uid://cnbwquyd2d5h6" path="res://theme/icons/window/close_pressed.svg" id="68_f8uw1"]
+[ext_resource type="Texture2D" uid="uid://cxh28qv2hhiob" path="res://theme/icons/ranges/h_splitter.svg" id="72_pyw1x"]
+[ext_resource type="Texture2D" uid="uid://cl30muph2h6nw" path="res://theme/icons/ranges/v_splitter.svg" id="73_pyfxj"]
 [ext_resource type="Texture2D" uid="uid://c8du7jcq2was1" path="res://theme/icons/arrows/up_muted.svg" id="75_87trl"]
 [ext_resource type="Texture2D" uid="uid://bwjqooeleoa7m" path="res://theme/icons/arrows/up_pressed.svg" id="77_ohwvc"]
 [ext_resource type="StyleBox" uid="uid://c3r82vcccqnwa" path="res://theme/styleboxes/panels/tooltip_panel.tres" id="78_axvja"]
@@ -235,6 +237,7 @@ HSlider/styles/grabber_area = ExtResource("63_ctryn")
 HSlider/styles/grabber_area_highlight = ExtResource("63_ctryn")
 HSlider/styles/slider = ExtResource("64_wytxf")
 HSplitContainer/constants/separation = 24
+HSplitContainer/icons/grabber = ExtResource("72_pyw1x")
 HeaderLarge/font_sizes/font_size = 48
 HeaderMedium/font_sizes/font_size = 32
 HeaderSmall/font_sizes/font_size = 26
@@ -350,6 +353,8 @@ RichTextLabel/styles/focus = ExtResource("2_muin1")
 ScrollContainer/styles/panel = ExtResource("50_bo1sh")
 SpinBox/icons/updown = ExtResource("62_44fwr")
 SplitContainer/constants/separation = 24
+SplitContainer/icons/h_grabber = ExtResource("72_pyw1x")
+SplitContainer/icons/v_grabber = ExtResource("73_pyfxj")
 TabBar/colors/drop_mark_color = Color(1, 1, 1, 1)
 TabBar/colors/font_disabled_color = Color(0.321569, 0.32549, 0.337255, 1)
 TabBar/colors/font_outline_color = Color(0.0862745, 0.0901961, 0.101961, 1)
@@ -427,6 +432,7 @@ VSlider/styles/grabber_area = ExtResource("86_lhxjt")
 VSlider/styles/grabber_area_highlight = ExtResource("86_lhxjt")
 VSlider/styles/slider = ExtResource("64_wytxf")
 VSplitContainer/constants/separation = 24
+VSplitContainer/icons/grabber = ExtResource("73_pyfxj")
 Window/colors/title_color = Color(0.886275, 0.894118, 0.901961, 1)
 Window/icons/close = ExtResource("52_5mt3s")
 Window/icons/close_pressed = ExtResource("68_f8uw1")

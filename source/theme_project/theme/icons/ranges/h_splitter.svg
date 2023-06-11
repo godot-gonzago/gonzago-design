@@ -2,13 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="24"
-   height="24"
-   viewBox="0 0 24 24"
+   width="8"
+   height="48"
+   viewBox="0 0 8 48"
    version="1.1"
    id="icon_svg"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
-   sodipodi:docname="radio_unchecked.svg"
+   sodipodi:docname="h_splitter.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -29,9 +29,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:current-layer="base_layer"
-     inkscape:zoom="9.8333333"
-     inkscape:cx="-5.1864407"
-     inkscape:cy="12.050847"
+     inkscape:zoom="11.313709"
+     inkscape:cx="-3.2261745"
+     inkscape:cy="21.787727"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
@@ -51,13 +51,12 @@
      inkscape:label="Base Layer"
      inkscape:groupmode="layer"
      id="base_layer">
-    <circle
-       id="back"
-       cx="12"
-       cy="12"
-       r="10"
-       fill="#16171a"
-       stroke="#e2e4e6"
-       stroke-width="2.5" />
+    <path
+       d="M 4,4 V 44"
+       id="bar"
+       fill="none"
+       stroke="#9a9c9e"
+       stroke-width="2"
+       stroke-linecap="round" />
   </g>
 </svg>

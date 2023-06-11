@@ -30,7 +30,7 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:current-layer="menu"
      inkscape:zoom="9.8333333"
-     inkscape:cx="3.3559322"
+     inkscape:cx="-13.728814"
      inkscape:cy="12.050847"
      inkscape:window-width="1368"
      inkscape:window-height="850"
@@ -51,19 +51,27 @@
      inkscape:label="Base Layer"
      inkscape:groupmode="layer"
      id="base_layer">
+    <circle
+       id="back"
+       cx="12"
+       cy="12"
+       r="10"
+       fill="#16171a"
+       stroke="#e2e4e6"
+       stroke-width="2" />
     <g
        id="menu"
        fill="#e2e4e6">
       <circle
          id="c_top"
          cx="12"
-         cy="7"
-         r="2" />
+         cy="8.5"
+         r="1.8" />
       <circle
          id="c_bottom"
          cx="12"
-         cy="17"
-         r="2" />
+         cy="15.5"
+         r="1.8" />
     </g>
   </g>
 </svg>
