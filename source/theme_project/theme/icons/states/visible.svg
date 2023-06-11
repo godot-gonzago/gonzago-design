@@ -8,7 +8,7 @@
    version="1.1"
    id="icon_svg"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
-   sodipodi:docname="tick.svg"
+   sodipodi:docname="visible.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:current-layer="base_layer">
+     inkscape:current-layer="base_layer"
+     inkscape:zoom="19.666667"
+     inkscape:cx="10.881356"
+     inkscape:cy="12.991525"
+     inkscape:window-width="1368"
+     inkscape:window-height="850"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
        id="base_grid"
@@ -44,10 +52,16 @@
      inkscape:groupmode="layer"
      id="base_layer">
     <path
-       d="M 3,14 10,19 21,2"
-       id="tick"
+       id="back"
+       d="m 22,12 c 0,0 -4,7 -10,7 C 6,19 2,12 2,12 2,12 6,5 12,5 c 6,0 10,7 10,7 z"
        fill="none"
        stroke="#ffffff"
-       stroke-width="3" />
+       stroke-width="2.2" />
+    <circle
+       id="dot"
+       cx="12"
+       cy="12"
+       r="3"
+       fill="#ffffff" />
   </g>
 </svg>

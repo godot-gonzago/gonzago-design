@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://ooxooawydv2c"]
+[gd_scene load_steps=76 format=3 uid="uid://dy4yvk6jk3ny7"]
 
 [ext_resource type="Texture2D" uid="uid://dyy1t7xd2gexh" path="res://theme/icons/check/unchecked.svg" id="1_81eps"]
 [ext_resource type="Theme" uid="uid://rtiq6sexshcr" path="res://theme/default.theme" id="1_p5no7"]
@@ -23,9 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://rcw23hf1g8uy" path="res://theme/icons/window/resizer_nw.svg" id="14_lewjj"]
 [ext_resource type="Texture2D" uid="uid://d1qhbnvnjhobn" path="res://theme/icons/window/resizer_se.svg" id="14_sxcl8"]
 [ext_resource type="Texture2D" uid="uid://bdw4yqurdbt5s" path="res://theme/icons/toggle/off_mirrored.svg" id="15_7ewpl"]
-[ext_resource type="Texture2D" uid="uid://brjcavln2by61" path="res://theme/icons/spinner.svg" id="15_dn3xb"]
 [ext_resource type="Texture2D" uid="uid://ceeq3gcgh36bh" path="res://theme/icons/toggle/off_mirrored_disabled.svg" id="16_400lb"]
-[ext_resource type="Texture2D" uid="uid://boowk1tagxlxv" path="res://theme/icons/tick.svg" id="16_ves5f"]
 [ext_resource type="FontVariation" uid="uid://cyaxjbdc7un3e" path="res://theme/fonts/fira_code/fira_code-400-regular.tres" id="17_14b76"]
 [ext_resource type="Texture2D" uid="uid://dcih3feh82mrw" path="res://theme/icons/toggle/on_mirrored.svg" id="17_cnlgk"]
 [ext_resource type="Texture2D" uid="uid://d0gdspiok3wco" path="res://theme/icons/toggle/on_mirrored_disabled.svg" id="18_bo30r"]
@@ -48,7 +46,6 @@
 [ext_resource type="Texture2D" uid="uid://bfk3apk8m4r3s" path="res://theme/icons/arrows/left.svg" id="29_vsati"]
 [ext_resource type="Texture2D" uid="uid://chpmxtlqb8xm3" path="res://theme/icons/arrows/right.svg" id="30_opdaf"]
 [ext_resource type="Texture2D" uid="uid://x3jlcg0tftih" path="res://theme/icons/arrows/select.svg" id="31_lsswv"]
-[ext_resource type="Texture2D" uid="uid://dxmngdkspnni2" path="res://theme/icons/visibility.svg" id="33_g740x"]
 [ext_resource type="Texture2D" uid="uid://dsv7guinqm4u5" path="res://theme/icons/text/clear.svg" id="34_0kf8d"]
 [ext_resource type="FontVariation" uid="uid://cbermmw36vb8s" path="res://theme/fonts/fira_code/fira_code-300-light.tres" id="35_da22e"]
 [ext_resource type="Texture2D" uid="uid://b7mr47mvqvxw2" path="res://theme/icons/text/search.svg" id="35_j5gv3"]
@@ -73,6 +70,11 @@
 [ext_resource type="Texture2D" uid="uid://xtlc4s46of4n" path="res://theme/icons/graph/minimap.svg" id="51_oegpk"]
 [ext_resource type="Texture2D" uid="uid://con265xf0u8wy" path="res://theme/icons/graph/layout.svg" id="51_ry47r"]
 [ext_resource type="Texture2D" uid="uid://dt5tyjydxt7kv" path="res://theme/icons/graph/snap.svg" id="53_ojbe6"]
+[ext_resource type="Texture2D" uid="uid://dxmngdkspnni2" path="res://theme/icons/states/visible.svg" id="54_n8m0h"]
+[ext_resource type="Texture2D" uid="uid://brjcavln2by61" path="res://theme/icons/states/spinner.svg" id="54_wlsn7"]
+[ext_resource type="Texture2D" uid="uid://dk6ujc52trl7k" path="res://theme/icons/states/invisible.svg" id="55_3dt2v"]
+[ext_resource type="Texture2D" uid="uid://boowk1tagxlxv" path="res://theme/icons/states/success.svg" id="55_34qe5"]
+[ext_resource type="Texture2D" uid="uid://craeya6kd6lqk" path="res://theme/icons/states/failure.svg" id="56_qhmkk"]
 
 [node name="Main" type="ColorRect"]
 anchors_preset = 15
@@ -392,6 +394,35 @@ layout_mode = 2
 texture = ExtResource("53_ojbe6")
 stretch_mode = 3
 
+[node name="States" type="HBoxContainer" parent="Margin/Objects/Icons"]
+layout_mode = 2
+alignment = 2
+
+[node name="spinner" type="TextureRect" parent="Margin/Objects/Icons/States"]
+layout_mode = 2
+texture = ExtResource("54_wlsn7")
+stretch_mode = 3
+
+[node name="success" type="TextureRect" parent="Margin/Objects/Icons/States"]
+layout_mode = 2
+texture = ExtResource("55_34qe5")
+stretch_mode = 3
+
+[node name="failure" type="TextureRect" parent="Margin/Objects/Icons/States"]
+layout_mode = 2
+texture = ExtResource("56_qhmkk")
+stretch_mode = 3
+
+[node name="visible" type="TextureRect" parent="Margin/Objects/Icons/States"]
+layout_mode = 2
+texture = ExtResource("54_n8m0h")
+stretch_mode = 3
+
+[node name="invisible" type="TextureRect" parent="Margin/Objects/Icons/States"]
+layout_mode = 2
+texture = ExtResource("55_3dt2v")
+stretch_mode = 3
+
 [node name="General" type="HBoxContainer" parent="Margin/Objects/Icons"]
 layout_mode = 2
 alignment = 2
@@ -401,24 +432,9 @@ layout_mode = 2
 texture = ExtResource("26_1i28s")
 stretch_mode = 3
 
-[node name="visibility" type="TextureRect" parent="Margin/Objects/Icons/General"]
-layout_mode = 2
-texture = ExtResource("33_g740x")
-stretch_mode = 3
-
 [node name="menu" type="TextureRect" parent="Margin/Objects/Icons/General"]
 layout_mode = 2
 texture = ExtResource("14_krntv")
-stretch_mode = 3
-
-[node name="spinner" type="TextureRect" parent="Margin/Objects/Icons/General"]
-layout_mode = 2
-texture = ExtResource("15_dn3xb")
-stretch_mode = 3
-
-[node name="tick" type="TextureRect" parent="Margin/Objects/Icons/General"]
-layout_mode = 2
-texture = ExtResource("16_ves5f")
 stretch_mode = 3
 
 [node name="add" type="TextureRect" parent="Margin/Objects/Icons/General"]
