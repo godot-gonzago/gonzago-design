@@ -123,6 +123,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 48
 theme_override_constants/margin_bottom = 48
 
 [node name="Objects" type="HBoxContainer" parent="Margin"]
@@ -704,3 +707,14 @@ popup/item_5/disabled = true
 
 [node name="ColorPickerButton" type="ColorPickerButton" parent="Margin/Objects/UI"]
 layout_mode = 2
+
+[node name="CodeEdit" type="CodeEdit" parent="Margin/Objects/UI"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+text = "super._init()"
+gutters_draw_breakpoints_gutter = true
+gutters_draw_bookmarks = true
+gutters_draw_executing_lines = true
+gutters_draw_line_numbers = true
+gutters_zero_pad_line_numbers = true
+gutters_draw_fold_gutter = true
