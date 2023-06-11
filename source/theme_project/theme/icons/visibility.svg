@@ -7,7 +7,7 @@
    viewBox="0 0 24 24"
    version="1.1"
    id="icon_svg"
-   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    sodipodi:docname="visibility.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -53,7 +53,7 @@
      id="base_layer">
     <path
        id="back"
-       d="m 23,12 c 0,0 -4,7 -11,7 C 5,19 1,12 1,12 1,12 5,5 12,5 c 7,0 11,7 11,7 z"
+       d="m 23,12 c 0,0 -3,7 -11,7 C 4,19 1,12 1,12 1,12 4,5 12,5 c 8,0 11,7 11,7 z"
        fill="none"
        stroke="#ffffff"
        stroke-width="2" />

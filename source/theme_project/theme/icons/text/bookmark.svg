@@ -8,7 +8,7 @@
    version="1.1"
    id="icon_svg"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
-   sodipodi:docname="folder.svg"
+   sodipodi:docname="bookmark.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -52,8 +52,8 @@
      inkscape:groupmode="layer"
      id="base_layer">
     <path
-       d="M 14,7 12,4 H 3 V 21 H 21 V 7 Z"
-       id="folder"
+       d="M 16,3 H 8 C 6,3 5,4 5,6 v 15 l 7,-5 7,5 V 6 C 19,4 18,3 16,3 Z"
+       id="bookmark"
        fill="none"
        stroke="#ffffff"
        stroke-width="2.4"

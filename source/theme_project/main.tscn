@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://bssbcj38en1g8"]
+[gd_scene load_steps=74 format=3 uid="uid://ooxooawydv2c"]
 
 [ext_resource type="Texture2D" uid="uid://dyy1t7xd2gexh" path="res://theme/icons/check/unchecked.svg" id="1_81eps"]
 [ext_resource type="Theme" uid="uid://rtiq6sexshcr" path="res://theme/default.theme" id="1_p5no7"]
@@ -49,16 +49,30 @@
 [ext_resource type="Texture2D" uid="uid://chpmxtlqb8xm3" path="res://theme/icons/arrows/right.svg" id="30_opdaf"]
 [ext_resource type="Texture2D" uid="uid://x3jlcg0tftih" path="res://theme/icons/arrows/select.svg" id="31_lsswv"]
 [ext_resource type="Texture2D" uid="uid://dxmngdkspnni2" path="res://theme/icons/visibility.svg" id="33_g740x"]
-[ext_resource type="Texture2D" uid="uid://dsv7guinqm4u5" path="res://theme/icons/io/clear.svg" id="34_r06go"]
+[ext_resource type="Texture2D" uid="uid://dsv7guinqm4u5" path="res://theme/icons/text/clear.svg" id="34_0kf8d"]
 [ext_resource type="FontVariation" uid="uid://cbermmw36vb8s" path="res://theme/fonts/fira_code/fira_code-300-light.tres" id="35_da22e"]
-[ext_resource type="Texture2D" uid="uid://b7mr47mvqvxw2" path="res://theme/icons/io/search.svg" id="35_geyg0"]
+[ext_resource type="Texture2D" uid="uid://b7mr47mvqvxw2" path="res://theme/icons/text/search.svg" id="35_j5gv3"]
 [ext_resource type="Texture2D" uid="uid://y1pjqaf1lf4q" path="res://theme/icons/add.svg" id="36_3h20h"]
 [ext_resource type="Texture2D" uid="uid://ffpufqdcwq3q" path="res://theme/icons/io/file.svg" id="36_r1uq0"]
 [ext_resource type="Texture2D" uid="uid://bdyc54u3sur4k" path="res://theme/icons/remove.svg" id="37_durdc"]
 [ext_resource type="Texture2D" uid="uid://clignrahrxbsx" path="res://theme/icons/io/folder.svg" id="37_gmwdk"]
 [ext_resource type="Texture2D" uid="uid://dyaeutywee2su" path="res://theme/icons/io/parent_folder.svg" id="38_3d3p2"]
+[ext_resource type="Texture2D" uid="uid://d2w3qapmjwqmv" path="res://theme/icons/io/broken_file.svg" id="38_p7l74"]
 [ext_resource type="FontVariation" uid="uid://7ahu8dc4uedk" path="res://theme/fonts/fira_code/fira_code-300-light_italic.tres" id="38_pbrjn"]
+[ext_resource type="Texture2D" uid="uid://c6lhfn4yh6ry1" path="res://theme/icons/text/bookmark.svg" id="40_8msqs"]
+[ext_resource type="Texture2D" uid="uid://cih400fi381f6" path="res://theme/icons/text/breakpoint.svg" id="41_jk6fn"]
+[ext_resource type="Texture2D" uid="uid://djlx83e2lyecp" path="res://theme/icons/text/ellipsis.svg" id="42_l2els"]
+[ext_resource type="Texture2D" uid="uid://dsvn850ppr5pd" path="res://theme/icons/text/space.svg" id="42_vfepq"]
+[ext_resource type="Texture2D" uid="uid://w86u2bpyi5tb" path="res://theme/icons/text/tab.svg" id="43_fajbf"]
 [ext_resource type="Texture2D" uid="uid://q1jl0l7tlsv0" path="res://theme/icons/io/reload.svg" id="46_8w5jq"]
+[ext_resource type="Texture2D" uid="uid://4kmo5aoo2sl6" path="res://theme/icons/text/executing.svg" id="46_usbnf"]
+[ext_resource type="Texture2D" uid="uid://cfovcmnsfamei" path="res://theme/icons/graph/zoom_less.svg" id="47_mxnqa"]
+[ext_resource type="Texture2D" uid="uid://dxt0eenmtkf41" path="res://theme/icons/graph/zoom_more.svg" id="48_b6vdf"]
+[ext_resource type="Texture2D" uid="uid://dcn3w7ymjm0eq" path="res://theme/icons/graph/zoom_reset.svg" id="48_ciuef"]
+[ext_resource type="Texture2D" uid="uid://demha2ys3tuem" path="res://theme/icons/graph/port.svg" id="50_6fhns"]
+[ext_resource type="Texture2D" uid="uid://xtlc4s46of4n" path="res://theme/icons/graph/minimap.svg" id="51_oegpk"]
+[ext_resource type="Texture2D" uid="uid://con265xf0u8wy" path="res://theme/icons/graph/layout.svg" id="51_ry47r"]
+[ext_resource type="Texture2D" uid="uid://dt5tyjydxt7kv" path="res://theme/icons/graph/snap.svg" id="53_ojbe6"]
 
 [node name="Main" type="ColorRect"]
 anchors_preset = 15
@@ -270,16 +284,6 @@ stretch_mode = 3
 layout_mode = 2
 alignment = 2
 
-[node name="clear" type="TextureRect" parent="Margin/Objects/Icons/IO"]
-layout_mode = 2
-texture = ExtResource("34_r06go")
-stretch_mode = 3
-
-[node name="search" type="TextureRect" parent="Margin/Objects/Icons/IO"]
-layout_mode = 2
-texture = ExtResource("35_geyg0")
-stretch_mode = 3
-
 [node name="reload" type="TextureRect" parent="Margin/Objects/Icons/IO"]
 layout_mode = 2
 texture = ExtResource("46_8w5jq")
@@ -298,6 +302,94 @@ stretch_mode = 3
 [node name="parent_folder" type="TextureRect" parent="Margin/Objects/Icons/IO"]
 layout_mode = 2
 texture = ExtResource("38_3d3p2")
+stretch_mode = 3
+
+[node name="broken_file" type="TextureRect" parent="Margin/Objects/Icons/IO"]
+layout_mode = 2
+texture = ExtResource("38_p7l74")
+stretch_mode = 3
+
+[node name="Text" type="HBoxContainer" parent="Margin/Objects/Icons"]
+layout_mode = 2
+alignment = 2
+
+[node name="clear" type="TextureRect" parent="Margin/Objects/Icons/Text"]
+layout_mode = 2
+texture = ExtResource("34_0kf8d")
+stretch_mode = 3
+
+[node name="search" type="TextureRect" parent="Margin/Objects/Icons/Text"]
+layout_mode = 2
+texture = ExtResource("35_j5gv3")
+stretch_mode = 3
+
+[node name="bookmark" type="TextureRect" parent="Margin/Objects/Icons/Text"]
+layout_mode = 2
+texture = ExtResource("40_8msqs")
+stretch_mode = 3
+
+[node name="breakpoint" type="TextureRect" parent="Margin/Objects/Icons/Text"]
+layout_mode = 2
+texture = ExtResource("41_jk6fn")
+stretch_mode = 3
+
+[node name="ellipsis" type="TextureRect" parent="Margin/Objects/Icons/Text"]
+layout_mode = 2
+texture = ExtResource("42_l2els")
+stretch_mode = 3
+
+[node name="space" type="TextureRect" parent="Margin/Objects/Icons/Text"]
+layout_mode = 2
+texture = ExtResource("42_vfepq")
+stretch_mode = 3
+
+[node name="tab" type="TextureRect" parent="Margin/Objects/Icons/Text"]
+layout_mode = 2
+texture = ExtResource("43_fajbf")
+stretch_mode = 3
+
+[node name="executing" type="TextureRect" parent="Margin/Objects/Icons/Text"]
+layout_mode = 2
+texture = ExtResource("46_usbnf")
+stretch_mode = 3
+
+[node name="Graph" type="HBoxContainer" parent="Margin/Objects/Icons"]
+layout_mode = 2
+alignment = 2
+
+[node name="zoom_more" type="TextureRect" parent="Margin/Objects/Icons/Graph"]
+layout_mode = 2
+texture = ExtResource("48_b6vdf")
+stretch_mode = 3
+
+[node name="zoom_reset" type="TextureRect" parent="Margin/Objects/Icons/Graph"]
+layout_mode = 2
+texture = ExtResource("48_ciuef")
+stretch_mode = 3
+
+[node name="zoom_less" type="TextureRect" parent="Margin/Objects/Icons/Graph"]
+layout_mode = 2
+texture = ExtResource("47_mxnqa")
+stretch_mode = 3
+
+[node name="port" type="TextureRect" parent="Margin/Objects/Icons/Graph"]
+layout_mode = 2
+texture = ExtResource("50_6fhns")
+stretch_mode = 3
+
+[node name="layout" type="TextureRect" parent="Margin/Objects/Icons/Graph"]
+layout_mode = 2
+texture = ExtResource("51_ry47r")
+stretch_mode = 3
+
+[node name="minimap" type="TextureRect" parent="Margin/Objects/Icons/Graph"]
+layout_mode = 2
+texture = ExtResource("51_oegpk")
+stretch_mode = 3
+
+[node name="snap" type="TextureRect" parent="Margin/Objects/Icons/Graph"]
+layout_mode = 2
+texture = ExtResource("53_ojbe6")
 stretch_mode = 3
 
 [node name="General" type="HBoxContainer" parent="Margin/Objects/Icons"]
