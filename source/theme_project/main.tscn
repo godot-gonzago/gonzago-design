@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://dy4yvk6jk3ny7"]
+[gd_scene load_steps=85 format=3 uid="uid://dy4yvk6jk3ny7"]
 
 [ext_resource type="Texture2D" uid="uid://dyy1t7xd2gexh" path="res://theme/icons/check/unchecked.svg" id="1_81eps"]
 [ext_resource type="Theme" uid="uid://rtiq6sexshcr" path="res://theme/default.theme" id="1_p5no7"]
@@ -75,6 +75,35 @@
 [ext_resource type="Texture2D" uid="uid://dk6ujc52trl7k" path="res://theme/icons/states/invisible.svg" id="55_3dt2v"]
 [ext_resource type="Texture2D" uid="uid://boowk1tagxlxv" path="res://theme/icons/states/success.svg" id="55_34qe5"]
 [ext_resource type="Texture2D" uid="uid://craeya6kd6lqk" path="res://theme/icons/states/failure.svg" id="56_qhmkk"]
+[ext_resource type="StyleBox" uid="uid://dunqmhd0k2qqa" path="res://theme/styleboxes/panel.stylebox" id="76_cu3s6"]
+[ext_resource type="StyleBox" uid="uid://eqsfpr33ymwy" path="res://theme/styleboxes/disabled.stylebox" id="76_qr8hn"]
+[ext_resource type="StyleBox" uid="uid://bp55tuh8mjcqi" path="res://theme/styleboxes/focus.stylebox" id="77_r6ffn"]
+[ext_resource type="StyleBox" uid="uid://dyv1urivfpqcl" path="res://theme/styleboxes/normal.stylebox" id="78_vm7r0"]
+[ext_resource type="StyleBox" uid="uid://bluk70knk8oad" path="res://theme/styleboxes/hover.stylebox" id="79_qrf3m"]
+[ext_resource type="StyleBox" uid="uid://bu4nldhat6eis" path="res://theme/styleboxes/pressed.stylebox" id="80_ovots"]
+[ext_resource type="StyleBox" uid="uid://dtdvayvirpbmk" path="res://theme/styleboxes/fill.stylebox" id="82_fic1h"]
+
+[sub_resource type="Animation" id="Animation_8oayk"]
+resource_name = "test"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.4, 1.9, 2.4, 3.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 100.0, 100.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jf2uf"]
+_data = {
+"test": SubResource("Animation_8oayk")
+}
 
 [node name="Main" type="ColorRect"]
 anchors_preset = 15
@@ -94,14 +123,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 48
-theme_override_constants/margin_top = 48
-theme_override_constants/margin_right = 48
 theme_override_constants/margin_bottom = 48
 
 [node name="Objects" type="HBoxContainer" parent="Margin"]
 layout_mode = 2
-theme_override_constants/separation = 24
 
 [node name="Icons" type="VBoxContainer" parent="Margin/Objects"]
 layout_mode = 2
@@ -544,3 +569,138 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("17_14b76")
 theme_override_font_sizes/font_size = 14
 text = "Hello there"
+
+[node name="Styleboxes" type="VBoxContainer" parent="Margin/Objects"]
+layout_mode = 2
+
+[node name="panel" type="PanelContainer" parent="Margin/Objects/Styleboxes"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("76_cu3s6")
+
+[node name="Label" type="Label" parent="Margin/Objects/Styleboxes/panel"]
+layout_mode = 2
+text = "panel"
+
+[node name="focus" type="PanelContainer" parent="Margin/Objects/Styleboxes"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("77_r6ffn")
+
+[node name="Label" type="Label" parent="Margin/Objects/Styleboxes/focus"]
+layout_mode = 2
+text = "focus"
+
+[node name="normal" type="PanelContainer" parent="Margin/Objects/Styleboxes"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("78_vm7r0")
+
+[node name="Label" type="Label" parent="Margin/Objects/Styleboxes/normal"]
+layout_mode = 2
+text = "normal"
+
+[node name="hovered" type="PanelContainer" parent="Margin/Objects/Styleboxes"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("79_qrf3m")
+
+[node name="Label" type="Label" parent="Margin/Objects/Styleboxes/hovered"]
+layout_mode = 2
+text = "hovered"
+
+[node name="pressed" type="PanelContainer" parent="Margin/Objects/Styleboxes"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("80_ovots")
+
+[node name="Label" type="Label" parent="Margin/Objects/Styleboxes/pressed"]
+layout_mode = 2
+text = "pressed"
+
+[node name="disabled" type="PanelContainer" parent="Margin/Objects/Styleboxes"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("76_qr8hn")
+
+[node name="Label" type="Label" parent="Margin/Objects/Styleboxes/disabled"]
+layout_mode = 2
+text = "disabled"
+
+[node name="fill" type="PanelContainer" parent="Margin/Objects/Styleboxes"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("82_fic1h")
+
+[node name="Label" type="Label" parent="Margin/Objects/Styleboxes/fill"]
+layout_mode = 2
+text = "fill"
+
+[node name="UI" type="VBoxContainer" parent="Margin/Objects"]
+layout_mode = 2
+
+[node name="simple_button" type="Button" parent="Margin/Objects/UI"]
+layout_mode = 2
+text = "Button"
+
+[node name="disabled_button" type="Button" parent="Margin/Objects/UI"]
+layout_mode = 2
+disabled = true
+text = "Disabled"
+
+[node name="flat_button" type="Button" parent="Margin/Objects/UI"]
+layout_mode = 2
+text = "Flat"
+flat = true
+
+[node name="CheckButton" type="CheckButton" parent="Margin/Objects/UI"]
+layout_mode = 2
+text = "CheckButton"
+
+[node name="ProgressBar" type="ProgressBar" parent="Margin/Objects/UI"]
+layout_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Margin/Objects/UI/ProgressBar"]
+autoplay = "test"
+libraries = {
+"": SubResource("AnimationLibrary_jf2uf")
+}
+
+[node name="HSlider" type="HSlider" parent="Margin/Objects/UI"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="Margin/Objects/UI"]
+layout_mode = 2
+text = "LineEdit"
+placeholder_text = "Filter..."
+right_icon = ExtResource("35_j5gv3")
+
+[node name="LineEdit_disabled" type="LineEdit" parent="Margin/Objects/UI"]
+layout_mode = 2
+text = "disabled"
+editable = false
+
+[node name="LineEdit_flat" type="LineEdit" parent="Margin/Objects/UI"]
+layout_mode = 2
+text = "LineEdit"
+placeholder_text = "Hello..."
+clear_button_enabled = true
+flat = true
+
+[node name="MenuButton" type="MenuButton" parent="Margin/Objects/UI"]
+layout_mode = 2
+text = "Merp"
+item_count = 6
+popup/item_0/text = "Test"
+popup/item_0/id = 0
+popup/item_1/text = ""
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "Test 2"
+popup/item_2/checkable = 1
+popup/item_2/id = 2
+popup/item_3/text = "Test 3"
+popup/item_3/checkable = 2
+popup/item_3/id = 3
+popup/item_4/text = "Named"
+popup/item_4/id = 4
+popup/item_4/separator = true
+popup/item_5/text = "Oh no"
+popup/item_5/id = 5
+popup/item_5/disabled = true
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="Margin/Objects/UI"]
+layout_mode = 2
