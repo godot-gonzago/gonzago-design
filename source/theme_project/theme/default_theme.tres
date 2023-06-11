@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=67 format=3 uid="uid://dloccq3t036e4"]
+[gd_resource type="Theme" load_steps=69 format=3 uid="uid://oedg3w6r0u61"]
 
 [ext_resource type="StyleBox" uid="uid://db018nyyw03ml" path="res://theme/styleboxes/disabled.tres" id="1_r2vi7"]
 [ext_resource type="StyleBox" uid="uid://dxk3ev6b523o1" path="res://theme/styleboxes/focus.tres" id="2_muin1"]
@@ -62,10 +62,12 @@
 [ext_resource type="FontVariation" uid="uid://bnks6aej2d105" path="res://theme/fonts/jost/jost-400-regular_italic.tres" id="60_vew1e"]
 [ext_resource type="FontVariation" uid="uid://d2vb4ccm4mm5a" path="res://theme/fonts/jost/jost-400-regular.tres" id="61_l1u04"]
 [ext_resource type="Texture2D" uid="uid://8fehg2pmd1ym" path="res://theme/icons/arrows/updown.svg" id="62_44fwr"]
+[ext_resource type="Texture2D" uid="uid://ea08t40hnxm2" path="res://theme/icons/menu_disabled.svg" id="63_mrrw7"]
 [ext_resource type="Texture2D" uid="uid://bkovyksmq74ff" path="res://theme/icons/menu.svg" id="63_spajg"]
 [ext_resource type="StyleBox" uid="uid://c3r82vcccqnwa" path="res://theme/styleboxes/tooltip_panel.tres" id="64_71usc"]
 [ext_resource type="Texture2D" uid="uid://olt3a4l1xes1" path="res://theme/icons/check/indeterminate.svg" id="65_d3ep6"]
 [ext_resource type="Texture2D" uid="uid://dwvxcul3cgkd7" path="res://theme/icons/arrows/up.svg" id="66_j67x3"]
+[ext_resource type="Texture2D" uid="uid://cnbwquyd2d5h6" path="res://theme/icons/window/close_pressed.svg" id="68_f8uw1"]
 
 [resource]
 default_font = ExtResource("61_l1u04")
@@ -330,7 +332,8 @@ TabContainer/colors/font_disabled_color = Color(0.321569, 0.32549, 0.337255, 1)
 TabContainer/colors/font_outline_color = Color(0.0862745, 0.0901961, 0.101961, 1)
 TabContainer/colors/font_selected_color = Color(0.886275, 0.894118, 0.901961, 1)
 TabContainer/colors/font_unselected_color = Color(0.603922, 0.611765, 0.619608, 1)
-TabContainer/icons/menu = ExtResource("63_spajg")
+TabContainer/icons/menu = ExtResource("63_mrrw7")
+TabContainer/icons/menu_highlight = ExtResource("63_spajg")
 TabContainer/styles/tabbar_background = ExtResource("14_urvgo")
 TextEdit/colors/font_color = Color(0.886275, 0.894118, 0.901961, 1)
 TextEdit/colors/font_outline_color = Color(0.0862745, 0.0901961, 0.101961, 1)
@@ -377,3 +380,4 @@ VSlider/icons/grabber = ExtResource("55_q1ln8")
 VSplitContainer/constants/separation = 24
 Window/colors/title_color = Color(0.886275, 0.894118, 0.901961, 1)
 Window/icons/close = ExtResource("52_5mt3s")
+Window/icons/close_pressed = ExtResource("68_f8uw1")
