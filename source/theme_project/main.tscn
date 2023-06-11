@@ -1,7 +1,7 @@
-[gd_scene load_steps=89 format=3 uid="uid://dy4yvk6jk3ny7"]
+[gd_scene load_steps=90 format=3 uid="uid://dy4yvk6jk3ny7"]
 
+[ext_resource type="Theme" uid="uid://dloccq3t036e4" path="res://theme/default_theme.tres" id="1_4iqpx"]
 [ext_resource type="Texture2D" uid="uid://dyy1t7xd2gexh" path="res://theme/icons/check/unchecked.svg" id="1_81eps"]
-[ext_resource type="Theme" uid="uid://rtiq6sexshcr" path="res://theme/default.theme" id="1_p5no7"]
 [ext_resource type="Texture2D" uid="uid://3xqiblmtx4yy" path="res://theme/icons/check/checked.svg" id="2_murxw"]
 [ext_resource type="Texture2D" uid="uid://d0xrppgh3c3ut" path="res://pattern.png" id="2_pmffp"]
 [ext_resource type="Texture2D" uid="uid://soee3t1w3265" path="res://theme/icons/check/unchecked_disabled.svg" id="3_njcj8"]
@@ -76,16 +76,16 @@
 [ext_resource type="Texture2D" uid="uid://dk6ujc52trl7k" path="res://theme/icons/states/invisible.svg" id="55_3dt2v"]
 [ext_resource type="Texture2D" uid="uid://boowk1tagxlxv" path="res://theme/icons/states/success.svg" id="55_34qe5"]
 [ext_resource type="Texture2D" uid="uid://craeya6kd6lqk" path="res://theme/icons/states/failure.svg" id="56_qhmkk"]
-[ext_resource type="StyleBox" uid="uid://dunqmhd0k2qqa" path="res://theme/styleboxes/panel.stylebox" id="76_cu3s6"]
-[ext_resource type="StyleBox" uid="uid://eqsfpr33ymwy" path="res://theme/styleboxes/disabled.stylebox" id="76_qr8hn"]
-[ext_resource type="StyleBox" uid="uid://bp55tuh8mjcqi" path="res://theme/styleboxes/focus.stylebox" id="77_r6ffn"]
-[ext_resource type="StyleBox" uid="uid://bbiqjwp68qkty" path="res://theme/styleboxes/focus_rounded.stylebox" id="78_tp6ni"]
-[ext_resource type="StyleBox" uid="uid://dyv1urivfpqcl" path="res://theme/styleboxes/normal.stylebox" id="78_vm7r0"]
-[ext_resource type="StyleBox" uid="uid://dwiu6es0o20m6" path="res://theme/styleboxes/focus_minimal.stylebox" id="79_fqw8w"]
-[ext_resource type="StyleBox" uid="uid://bluk70knk8oad" path="res://theme/styleboxes/hover.stylebox" id="79_qrf3m"]
-[ext_resource type="StyleBox" uid="uid://bu4nldhat6eis" path="res://theme/styleboxes/pressed.stylebox" id="80_ovots"]
-[ext_resource type="StyleBox" uid="uid://dtdvayvirpbmk" path="res://theme/styleboxes/fill.stylebox" id="82_fic1h"]
-[ext_resource type="StyleBox" uid="uid://bvrwcgdl4ojtv" path="res://theme/styleboxes/normal_rounded.stylebox" id="84_68qlc"]
+[ext_resource type="StyleBox" uid="uid://cbdxn0sg2fyra" path="res://theme/styleboxes/panel.tres" id="77_dxksu"]
+[ext_resource type="StyleBox" uid="uid://dxk3ev6b523o1" path="res://theme/styleboxes/focus.tres" id="78_k5agx"]
+[ext_resource type="StyleBox" uid="uid://cn1mx1nibt3d4" path="res://theme/styleboxes/focus_minimal.tres" id="80_tehji"]
+[ext_resource type="StyleBox" uid="uid://u473a3ia8k5l" path="res://theme/styleboxes/normal.tres" id="81_4kki8"]
+[ext_resource type="StyleBox" uid="uid://cmgd0t08u3jd0" path="res://theme/styleboxes/hover.tres" id="82_u78pc"]
+[ext_resource type="StyleBox" uid="uid://buexjuyujd07i" path="res://theme/styleboxes/pressed.tres" id="83_a6hiy"]
+[ext_resource type="StyleBox" uid="uid://db018nyyw03ml" path="res://theme/styleboxes/disabled.tres" id="84_qcpaq"]
+[ext_resource type="StyleBox" uid="uid://jsjuu8k6i0uw" path="res://theme/styleboxes/fill.tres" id="85_1kr3m"]
+[ext_resource type="StyleBox" uid="uid://dlao4glc2in24" path="res://theme/styleboxes/normal_rounded.tres" id="86_y6r30"]
+[ext_resource type="StyleBox" uid="uid://do3uu4efro02b" path="res://theme/styleboxes/focus_rounded.tres" id="87_55jpm"]
 
 [sub_resource type="Animation" id="Animation_8oayk"]
 resource_name = "test"
@@ -109,6 +109,13 @@ _data = {
 "test": SubResource("Animation_8oayk")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i74he"]
+draw_center = false
+border_width_bottom = 2
+border_color = Color(0.407843, 0.682353, 0.831373, 1)
+corner_detail = 5
+expand_margin_bottom = 2.0
+
 [node name="Main" type="TextureRect"]
 self_modulate = Color(0.776471, 0.776471, 0.776471, 1)
 anchors_preset = 15
@@ -116,7 +123,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_p5no7")
+theme = ExtResource("1_4iqpx")
 texture = ExtResource("2_pmffp")
 stretch_mode = 1
 
@@ -660,7 +667,7 @@ layout_mode = 2
 
 [node name="panel" type="PanelContainer" parent="Margin/Objects/Styleboxes"]
 layout_mode = 2
-theme_override_styles/panel = ExtResource("76_cu3s6")
+theme_override_styles/panel = ExtResource("77_dxksu")
 
 [node name="Label" type="Label" parent="Margin/Objects/Styleboxes/panel"]
 layout_mode = 2
@@ -668,7 +675,7 @@ text = "panel"
 
 [node name="focus" type="PanelContainer" parent="Margin/Objects/Styleboxes"]
 layout_mode = 2
-theme_override_styles/panel = ExtResource("77_r6ffn")
+theme_override_styles/panel = ExtResource("78_k5agx")
 
 [node name="Label" type="Label" parent="Margin/Objects/Styleboxes/focus"]
 layout_mode = 2
@@ -676,7 +683,7 @@ text = "focus"
 
 [node name="focus_rounded" type="PanelContainer" parent="Margin/Objects/Styleboxes"]
 layout_mode = 2
-theme_override_styles/panel = ExtResource("78_tp6ni")
+theme_override_styles/panel = ExtResource("87_55jpm")
 
 [node name="Label" type="Label" parent="Margin/Objects/Styleboxes/focus_rounded"]
 layout_mode = 2
@@ -684,7 +691,7 @@ text = "focus rounded"
 
 [node name="focus_minimal" type="PanelContainer" parent="Margin/Objects/Styleboxes"]
 layout_mode = 2
-theme_override_styles/panel = ExtResource("79_fqw8w")
+theme_override_styles/panel = ExtResource("80_tehji")
 
 [node name="Label" type="Label" parent="Margin/Objects/Styleboxes/focus_minimal"]
 layout_mode = 2
@@ -693,7 +700,7 @@ text = "focus minimal
 
 [node name="normal" type="PanelContainer" parent="Margin/Objects/Styleboxes"]
 layout_mode = 2
-theme_override_styles/panel = ExtResource("78_vm7r0")
+theme_override_styles/panel = ExtResource("81_4kki8")
 
 [node name="Label" type="Label" parent="Margin/Objects/Styleboxes/normal"]
 layout_mode = 2
@@ -701,7 +708,7 @@ text = "normal"
 
 [node name="hovered" type="PanelContainer" parent="Margin/Objects/Styleboxes"]
 layout_mode = 2
-theme_override_styles/panel = ExtResource("79_qrf3m")
+theme_override_styles/panel = ExtResource("82_u78pc")
 
 [node name="Label" type="Label" parent="Margin/Objects/Styleboxes/hovered"]
 layout_mode = 2
@@ -709,7 +716,7 @@ text = "hovered"
 
 [node name="pressed" type="PanelContainer" parent="Margin/Objects/Styleboxes"]
 layout_mode = 2
-theme_override_styles/panel = ExtResource("80_ovots")
+theme_override_styles/panel = ExtResource("83_a6hiy")
 
 [node name="Label" type="Label" parent="Margin/Objects/Styleboxes/pressed"]
 layout_mode = 2
@@ -717,7 +724,7 @@ text = "pressed"
 
 [node name="disabled" type="PanelContainer" parent="Margin/Objects/Styleboxes"]
 layout_mode = 2
-theme_override_styles/panel = ExtResource("76_qr8hn")
+theme_override_styles/panel = ExtResource("84_qcpaq")
 
 [node name="Label" type="Label" parent="Margin/Objects/Styleboxes/disabled"]
 layout_mode = 2
@@ -725,7 +732,7 @@ text = "disabled"
 
 [node name="fill" type="PanelContainer" parent="Margin/Objects/Styleboxes"]
 layout_mode = 2
-theme_override_styles/panel = ExtResource("82_fic1h")
+theme_override_styles/panel = ExtResource("85_1kr3m")
 
 [node name="Label" type="Label" parent="Margin/Objects/Styleboxes/fill"]
 layout_mode = 2
@@ -785,8 +792,8 @@ caret_blink_interval = 0.5
 
 [node name="search" type="LineEdit" parent="Margin/Objects/UI"]
 layout_mode = 2
-theme_override_styles/normal = ExtResource("84_68qlc")
-theme_override_styles/focus = ExtResource("78_tp6ni")
+theme_override_styles/normal = ExtResource("86_y6r30")
+theme_override_styles/focus = ExtResource("87_55jpm")
 text = "Search"
 placeholder_text = "Filter..."
 right_icon = ExtResource("35_j5gv3")
@@ -802,7 +809,7 @@ caret_blink_interval = 0.5
 
 [node name="LineEdit_flat" type="LineEdit" parent="Margin/Objects/UI"]
 layout_mode = 2
-theme_override_styles/focus = ExtResource("79_fqw8w")
+theme_override_styles/focus = SubResource("StyleBoxFlat_i74he")
 text = "LineEdit"
 placeholder_text = "Hello..."
 clear_button_enabled = true
