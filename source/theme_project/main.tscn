@@ -144,286 +144,82 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "Bubblegum 16 Palette"
 
-[node name="NeutralsLabel" type="Label" parent="Margin/Objects/Colors"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 16
-text = "Neutrals
-"
-
-[node name="Neutrals" type="GridContainer" parent="Margin/Objects/Colors"]
+[node name="Values" type="GridContainer" parent="Margin/Objects/Colors"]
 custom_minimum_size = Vector2(172, 0)
 layout_mode = 2
 columns = 4
 
-[node name="panel" type="ColorRect" parent="Margin/Objects/Colors/Neutrals"]
+[node name="bg_panel" type="ColorRect" parent="Margin/Objects/Colors/Values"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 size_flags_horizontal = 3
-color = Color(0.980392, 0.992157, 1, 0.0392157)
+color = Color(0.117647, 0.117647, 0.117647, 1)
 
-[node name="bg_disabled" type="ColorRect" parent="Margin/Objects/Colors/Neutrals"]
+[node name="bg_hover" type="ColorRect" parent="Margin/Objects/Colors/Values"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 size_flags_horizontal = 3
-color = Color(0.980392, 0.992157, 1, 0.0980392)
+color = Color(0.156863, 0.156863, 0.156863, 1)
 
-[node name="bg_normal" type="ColorRect" parent="Margin/Objects/Colors/Neutrals"]
+[node name="bg_pressed" type="ColorRect" parent="Margin/Objects/Colors/Values"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 size_flags_horizontal = 3
-color = Color(0.980392, 0.992157, 1, 0.176471)
+color = Color(0.235294, 0.235294, 0.235294, 1)
 
-[node name="background" type="ColorRect" parent="Margin/Objects/Colors/Neutrals"]
+[node name="fg_disable" type="ColorRect" parent="Margin/Objects/Colors/Values"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 size_flags_horizontal = 3
-color = Color(0.0862745, 0.0901961, 0.101961, 1)
+color = Color(0.235294, 0.235294, 0.235294, 1)
 
-[node name="fg_muted" type="ColorRect" parent="Margin/Objects/Colors/Neutrals"]
+[node name="fg_normal" type="ColorRect" parent="Margin/Objects/Colors/Values"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 size_flags_horizontal = 3
-color = Color(0.980392, 0.992157, 1, 0.392157)
+color = Color(0.705882, 0.705882, 0.705882, 1)
 
-[node name="fg_normal" type="ColorRect" parent="Margin/Objects/Colors/Neutrals"]
+[node name="fg_pressed" type="ColorRect" parent="Margin/Objects/Colors/Values"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 size_flags_horizontal = 3
-color = Color(0.980392, 0.992157, 1, 0.784314)
+color = Color(0.862745, 0.862745, 0.862745, 1)
 
-[node name="fg_highlight" type="ColorRect" parent="Margin/Objects/Colors/Neutrals"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.980392, 0.992157, 1, 1)
-
-[node name="bg_highlight_fg_disabled" type="ColorRect" parent="Margin/Objects/Colors/Neutrals"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.980392, 0.992157, 1, 0.25098)
-
-[node name="PrimaryLabel" type="Label" parent="Margin/Objects/Colors"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 16
-text = "Primary"
-
-[node name="Primary" type="GridContainer" parent="Margin/Objects/Colors"]
-custom_minimum_size = Vector2(172, 0)
-layout_mode = 2
-columns = 4
-
-[node name="disabled" type="ColorRect" parent="Margin/Objects/Colors/Primary"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.580392, 0.129412, 0.415686, 0.25098)
-
-[node name="normal" type="ColorRect" parent="Margin/Objects/Colors/Primary"]
+[node name="primary" type="ColorRect" parent="Margin/Objects/Colors/Values"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 size_flags_horizontal = 3
 color = Color(0.580392, 0.129412, 0.415686, 1)
 
-[node name="highlight_disabled" type="ColorRect" parent="Margin/Objects/Colors/Primary"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.713726, 0.415686, 0.607843, 0.25098)
-
-[node name="highlight" type="ColorRect" parent="Margin/Objects/Colors/Primary"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.713726, 0.415686, 0.607843, 1)
-
-[node name="contrast_disabled" type="ColorRect" parent="Margin/Objects/Colors/Primary"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(1, 0.501961, 0.643137, 0.25098)
-
-[node name="contrast" type="ColorRect" parent="Margin/Objects/Colors/Primary"]
+[node name="primary_contrast" type="ColorRect" parent="Margin/Objects/Colors/Values"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 size_flags_horizontal = 3
 color = Color(1, 0.501961, 0.643137, 1)
 
-[node name="contrast_highlight_disabled" type="ColorRect" parent="Margin/Objects/Colors/Primary"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.992157, 0.662745, 0.760784, 0.25098)
-
-[node name="contrast_highlight" type="ColorRect" parent="Margin/Objects/Colors/Primary"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.992157, 0.662745, 0.760784, 1)
-
-[node name="SecondaryLabel" type="Label" parent="Margin/Objects/Colors"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 16
-text = "Secondary"
-
-[node name="Secondary" type="GridContainer" parent="Margin/Objects/Colors"]
-custom_minimum_size = Vector2(172, 0)
-layout_mode = 2
-columns = 4
-
-[node name="disabled" type="ColorRect" parent="Margin/Objects/Colors/Secondary"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.262745, 0, 0.403922, 0.25098)
-
-[node name="normal" type="ColorRect" parent="Margin/Objects/Colors/Secondary"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.262745, 0, 0.403922, 1)
-
-[node name="highlight_disabled" type="ColorRect" parent="Margin/Objects/Colors/Secondary"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.501961, 0.329412, 0.6, 0.25098)
-
-[node name="highlight" type="ColorRect" parent="Margin/Objects/Colors/Secondary"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.501961, 0.329412, 0.6, 1)
-
-[node name="contrast_disabled" type="ColorRect" parent="Margin/Objects/Colors/Secondary"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.388235, 0.109804, 0.219608, 1)
-
-[node name="contrast" type="ColorRect" parent="Margin/Objects/Colors/Secondary"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(1, 0.14902, 0.454902, 1)
-
-[node name="contrast_highlight_disabled" type="ColorRect" parent="Margin/Objects/Colors/Secondary"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.992157, 0.427451, 0.635294, 0.25098)
-
-[node name="contrast_highlight" type="ColorRect" parent="Margin/Objects/Colors/Secondary"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.992157, 0.427451, 0.635294, 1)
-
-[node name="ExtendedLabel" type="Label" parent="Margin/Objects/Colors"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 16
-text = "Extended"
-
-[node name="Extended" type="GridContainer" parent="Margin/Objects/Colors"]
-custom_minimum_size = Vector2(172, 0)
-layout_mode = 2
-columns = 4
-
-[node name="info_disabled" type="ColorRect" parent="Margin/Objects/Colors/Extended"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.407843, 0.682353, 0.831373, 0.25098)
-
-[node name="info_normal" type="ColorRect" parent="Margin/Objects/Colors/Extended"]
+[node name="info" type="ColorRect" parent="Margin/Objects/Colors/Values"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 size_flags_horizontal = 3
 color = Color(0.407843, 0.682353, 0.831373, 1)
 
-[node name="info_hl_disabled" type="ColorRect" parent="Margin/Objects/Colors/Extended"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.596078, 0.784314, 0.886275, 0.25098)
-
-[node name="info_hl" type="ColorRect" parent="Margin/Objects/Colors/Extended"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.596078, 0.784314, 0.886275, 1)
-
-[node name="warning_disabled" type="ColorRect" parent="Margin/Objects/Colors/Extended"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(1, 0.819608, 0, 0.25098)
-
-[node name="warning_normal" type="ColorRect" parent="Margin/Objects/Colors/Extended"]
+[node name="warning" type="ColorRect" parent="Margin/Objects/Colors/Values"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 size_flags_horizontal = 3
 color = Color(1, 0.819608, 0, 1)
 
-[node name="warning_hl_disabled" type="ColorRect" parent="Margin/Objects/Colors/Extended"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.992157, 0.87451, 0.333333, 0.25098)
-
-[node name="warning_hl" type="ColorRect" parent="Margin/Objects/Colors/Extended"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.992157, 0.87451, 0.333333, 1)
-
-[node name="error_disabled" type="ColorRect" parent="Margin/Objects/Colors/Extended"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.839216, 0.141176, 0.0666667, 0.25098)
-
-[node name="error_normal" type="ColorRect" parent="Margin/Objects/Colors/Extended"]
+[node name="error" type="ColorRect" parent="Margin/Objects/Colors/Values"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 size_flags_horizontal = 3
 color = Color(0.839216, 0.141176, 0.0666667, 1)
 
-[node name="error_hl_disabled" type="ColorRect" parent="Margin/Objects/Colors/Extended"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.886275, 0.423529, 0.376471, 0.25098)
-
-[node name="error_hl" type="ColorRect" parent="Margin/Objects/Colors/Extended"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.886275, 0.423529, 0.376471, 1)
-
-[node name="success_disabled" type="ColorRect" parent="Margin/Objects/Colors/Extended"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.0627451, 0.823529, 0.458824, 0.25098)
-
-[node name="success_normal" type="ColorRect" parent="Margin/Objects/Colors/Extended"]
+[node name="success" type="ColorRect" parent="Margin/Objects/Colors/Values"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 size_flags_horizontal = 3
 color = Color(0.0627451, 0.823529, 0.458824, 1)
-
-[node name="success_hl_disabled" type="ColorRect" parent="Margin/Objects/Colors/Extended"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.368627, 0.878431, 0.639216, 0.25098)
-
-[node name="success_hl" type="ColorRect" parent="Margin/Objects/Colors/Extended"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.368627, 0.878431, 0.639216, 1)
 
 [node name="Icons" type="VBoxContainer" parent="Margin/Objects"]
 custom_minimum_size = Vector2(280, 0)
