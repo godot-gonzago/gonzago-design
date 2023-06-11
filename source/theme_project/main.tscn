@@ -130,13 +130,102 @@ theme_override_constants/margin_bottom = 48
 
 [node name="Objects" type="HBoxContainer" parent="Margin"]
 layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="Colors" type="GridContainer" parent="Margin/Objects"]
+custom_minimum_size = Vector2(172, 0)
+layout_mode = 2
+columns = 3
+
+[node name="regular" type="ColorRect" parent="Margin/Objects/Colors"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.909804, 0.909804, 0.909804, 1)
+
+[node name="highlight" type="ColorRect" parent="Margin/Objects/Colors"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="disabled" type="ColorRect" parent="Margin/Objects/Colors"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.909804, 0.909804, 0.909804, 0.501961)
+
+[node name="contrast" type="ColorRect" parent="Margin/Objects/Colors"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.0784314, 0.0784314, 0.0784314, 1)
+
+[node name="contrast_hi" type="ColorRect" parent="Margin/Objects/Colors"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.12549, 0.12549, 0.12549, 1)
+
+[node name="contrast_disabled" type="ColorRect" parent="Margin/Objects/Colors"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.08, 0.08, 0.08, 0.5)
+
+[node name="contrast2" type="ColorRect" parent="Margin/Objects/Colors"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.235294, 0.235294, 0.235294, 1)
+
+[node name="muted_accent" type="ColorRect" parent="Margin/Objects/Colors"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.376471, 0.376471, 0.376471, 1)
+
+[node name="accent" type="ColorRect" parent="Margin/Objects/Colors"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.372549, 0.698039, 1, 1)
+
+[node name="selection" type="ColorRect" parent="Margin/Objects/Colors"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.37, 0.7, 1, 0.1)
+
+[node name="info" type="ColorRect" parent="Margin/Objects/Colors"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.372549, 0.698039, 1, 1)
+
+[node name="warning" type="ColorRect" parent="Margin/Objects/Colors"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 0.866667, 0.396078, 1)
+
+[node name="error" type="ColorRect" parent="Margin/Objects/Colors"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 0.372549, 0.372549, 1)
+
+[node name="success" type="ColorRect" parent="Margin/Objects/Colors"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.372549, 1, 0.592157, 1)
 
 [node name="Icons" type="VBoxContainer" parent="Margin/Objects"]
+custom_minimum_size = Vector2(280, 0)
 layout_mode = 2
 
-[node name="Check" type="HBoxContainer" parent="Margin/Objects/Icons"]
+[node name="Check" type="HFlowContainer" parent="Margin/Objects/Icons"]
 layout_mode = 2
-alignment = 2
 
 [node name="unchecked" type="TextureRect" parent="Margin/Objects/Icons/Check"]
 layout_mode = 2
@@ -183,9 +272,8 @@ layout_mode = 2
 texture = ExtResource("10_3kcse")
 stretch_mode = 3
 
-[node name="Toggle" type="HBoxContainer" parent="Margin/Objects/Icons"]
+[node name="Toggle" type="HFlowContainer" parent="Margin/Objects/Icons"]
 layout_mode = 2
-alignment = 2
 
 [node name="off" type="TextureRect" parent="Margin/Objects/Icons/Toggle"]
 layout_mode = 2
@@ -227,9 +315,8 @@ layout_mode = 2
 texture = ExtResource("18_bo30r")
 stretch_mode = 3
 
-[node name="Window" type="HBoxContainer" parent="Margin/Objects/Icons"]
+[node name="Window" type="HFlowContainer" parent="Margin/Objects/Icons"]
 layout_mode = 2
-alignment = 2
 
 [node name="fullscreen" type="TextureRect" parent="Margin/Objects/Icons/Window"]
 layout_mode = 2
@@ -266,9 +353,8 @@ layout_mode = 2
 texture = ExtResource("12_laol0")
 stretch_mode = 3
 
-[node name="Arrows" type="HBoxContainer" parent="Margin/Objects/Icons"]
+[node name="Arrows" type="HFlowContainer" parent="Margin/Objects/Icons"]
 layout_mode = 2
-alignment = 2
 
 [node name="updown" type="TextureRect" parent="Margin/Objects/Icons/Arrows"]
 layout_mode = 2
@@ -310,9 +396,8 @@ layout_mode = 2
 texture = ExtResource("31_lsswv")
 stretch_mode = 3
 
-[node name="IO" type="HBoxContainer" parent="Margin/Objects/Icons"]
+[node name="IO" type="HFlowContainer" parent="Margin/Objects/Icons"]
 layout_mode = 2
-alignment = 2
 
 [node name="reload" type="TextureRect" parent="Margin/Objects/Icons/IO"]
 layout_mode = 2
@@ -339,9 +424,8 @@ layout_mode = 2
 texture = ExtResource("38_p7l74")
 stretch_mode = 3
 
-[node name="Text" type="HBoxContainer" parent="Margin/Objects/Icons"]
+[node name="Text" type="HFlowContainer" parent="Margin/Objects/Icons"]
 layout_mode = 2
-alignment = 2
 
 [node name="clear" type="TextureRect" parent="Margin/Objects/Icons/Text"]
 layout_mode = 2
@@ -383,9 +467,8 @@ layout_mode = 2
 texture = ExtResource("46_usbnf")
 stretch_mode = 3
 
-[node name="Graph" type="HBoxContainer" parent="Margin/Objects/Icons"]
+[node name="Graph" type="HFlowContainer" parent="Margin/Objects/Icons"]
 layout_mode = 2
-alignment = 2
 
 [node name="zoom_more" type="TextureRect" parent="Margin/Objects/Icons/Graph"]
 layout_mode = 2
@@ -422,9 +505,8 @@ layout_mode = 2
 texture = ExtResource("53_ojbe6")
 stretch_mode = 3
 
-[node name="States" type="HBoxContainer" parent="Margin/Objects/Icons"]
+[node name="States" type="HFlowContainer" parent="Margin/Objects/Icons"]
 layout_mode = 2
-alignment = 2
 
 [node name="spinner" type="TextureRect" parent="Margin/Objects/Icons/States"]
 layout_mode = 2
@@ -451,9 +533,8 @@ layout_mode = 2
 texture = ExtResource("55_3dt2v")
 stretch_mode = 3
 
-[node name="General" type="HBoxContainer" parent="Margin/Objects/Icons"]
+[node name="General" type="HFlowContainer" parent="Margin/Objects/Icons"]
 layout_mode = 2
-alignment = 2
 
 [node name="checkerboard" type="TextureRect" parent="Margin/Objects/Icons/General"]
 layout_mode = 2
@@ -478,102 +559,96 @@ stretch_mode = 3
 [node name="Fonts" type="VBoxContainer" parent="Margin/Objects"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Margin/Objects/Fonts"]
-layout_mode = 2
-theme_override_constants/separation = 16
-
-[node name="jost_regular" type="VBoxContainer" parent="Margin/Objects/Fonts/HBoxContainer"]
+[node name="jost_regular" type="VBoxContainer" parent="Margin/Objects/Fonts"]
 layout_mode = 2
 
-[node name="jost-200" type="Label" parent="Margin/Objects/Fonts/HBoxContainer/jost_regular"]
+[node name="jost-200" type="Label" parent="Margin/Objects/Fonts/jost_regular"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("19_t6xld")
 text = "Hello there"
 
-[node name="jost-400" type="Label" parent="Margin/Objects/Fonts/HBoxContainer/jost_regular"]
+[node name="jost-400" type="Label" parent="Margin/Objects/Fonts/jost_regular"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("22_jnkcg")
 text = "Hello there"
 
-[node name="jost-700" type="Label" parent="Margin/Objects/Fonts/HBoxContainer/jost_regular"]
+[node name="jost-700" type="Label" parent="Margin/Objects/Fonts/jost_regular"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("19_ue04s")
 text = "Hello there"
 
-[node name="jost-900" type="Label" parent="Margin/Objects/Fonts/HBoxContainer/jost_regular"]
+[node name="jost-900" type="Label" parent="Margin/Objects/Fonts/jost_regular"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("21_tjwid")
 text = "Hello there"
 
-[node name="jost-400-small" type="Label" parent="Margin/Objects/Fonts/HBoxContainer/jost_regular"]
+[node name="jost-400-small" type="Label" parent="Margin/Objects/Fonts/jost_regular"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("22_jnkcg")
 theme_override_font_sizes/font_size = 16
 text = "Hello there"
 
-[node name="jost_italic" type="VBoxContainer" parent="Margin/Objects/Fonts/HBoxContainer"]
-layout_mode = 2
-
-[node name="jost-200-italic" type="Label" parent="Margin/Objects/Fonts/HBoxContainer/jost_italic"]
+[node name="jost-200-italic" type="Label" parent="Margin/Objects/Fonts/jost_regular"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("20_yxah3")
 text = "Hello there"
 
-[node name="jost-400-italic" type="Label" parent="Margin/Objects/Fonts/HBoxContainer/jost_italic"]
+[node name="jost-400-italic" type="Label" parent="Margin/Objects/Fonts/jost_regular"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("23_1ndrm")
 text = "Hello there"
 
-[node name="jost-700-italic" type="Label" parent="Margin/Objects/Fonts/HBoxContainer/jost_italic"]
+[node name="jost-700-italic" type="Label" parent="Margin/Objects/Fonts/jost_regular"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("20_utw68")
 text = "Hello there"
 
-[node name="jost-900-italic" type="Label" parent="Margin/Objects/Fonts/HBoxContainer/jost_italic"]
+[node name="jost-900-italic" type="Label" parent="Margin/Objects/Fonts/jost_regular"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("22_gy5eq")
 text = "Hello there"
 
-[node name="jost-200-italic-small" type="Label" parent="Margin/Objects/Fonts/HBoxContainer/jost_italic"]
+[node name="jost-200-italic-small" type="Label" parent="Margin/Objects/Fonts/jost_regular"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("20_yxah3")
 theme_override_font_sizes/font_size = 16
 text = "Hello there"
 
-[node name="fira_code" type="VBoxContainer" parent="Margin/Objects/Fonts/HBoxContainer"]
+[node name="fira_code" type="VBoxContainer" parent="Margin/Objects/Fonts"]
 layout_mode = 2
 
-[node name="fira_code-300" type="Label" parent="Margin/Objects/Fonts/HBoxContainer/fira_code"]
+[node name="fira_code-300" type="Label" parent="Margin/Objects/Fonts/fira_code"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("35_da22e")
 theme_override_font_sizes/font_size = 24
 text = "Hello there"
 
-[node name="fira_code-600" type="Label" parent="Margin/Objects/Fonts/HBoxContainer/fira_code"]
+[node name="fira_code-600" type="Label" parent="Margin/Objects/Fonts/fira_code"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("27_v41kw")
 theme_override_font_sizes/font_size = 24
 text = "Hello there"
 
-[node name="fira_code-300-italic" type="Label" parent="Margin/Objects/Fonts/HBoxContainer/fira_code"]
+[node name="fira_code-300-italic" type="Label" parent="Margin/Objects/Fonts/fira_code"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("38_pbrjn")
 theme_override_font_sizes/font_size = 24
 text = "Hello there"
 
-[node name="fira_code-600-italic" type="Label" parent="Margin/Objects/Fonts/HBoxContainer/fira_code"]
+[node name="fira_code-600-italic" type="Label" parent="Margin/Objects/Fonts/fira_code"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("29_jplrd")
 theme_override_font_sizes/font_size = 24
 text = "Hello there"
 
-[node name="fira_code-400-small" type="Label" parent="Margin/Objects/Fonts/HBoxContainer/fira_code"]
+[node name="fira_code-400-small" type="Label" parent="Margin/Objects/Fonts/fira_code"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("17_14b76")
 theme_override_font_sizes/font_size = 14
 text = "Hello there"
 
 [node name="Styleboxes" type="VBoxContainer" parent="Margin/Objects"]
+custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 
 [node name="panel" type="PanelContainer" parent="Margin/Objects/Styleboxes"]
@@ -633,6 +708,7 @@ layout_mode = 2
 text = "fill"
 
 [node name="UI" type="VBoxContainer" parent="Margin/Objects"]
+custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
 
 [node name="simple_button" type="Button" parent="Margin/Objects/UI"]
@@ -668,6 +744,10 @@ layout_mode = 2
 [node name="LineEdit" type="LineEdit" parent="Margin/Objects/UI"]
 layout_mode = 2
 text = "LineEdit"
+
+[node name="search" type="LineEdit" parent="Margin/Objects/UI"]
+layout_mode = 2
+text = "Search"
 placeholder_text = "Filter..."
 right_icon = ExtResource("35_j5gv3")
 
