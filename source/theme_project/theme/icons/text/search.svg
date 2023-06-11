@@ -28,9 +28,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:current-layer="base_layer"
+     inkscape:current-layer="lines"
      inkscape:zoom="9.8333333"
-     inkscape:cx="3.3559322"
+     inkscape:cx="-5.1864407"
      inkscape:cy="12.050847"
      inkscape:window-width="1368"
      inkscape:window-height="850"
@@ -54,7 +54,7 @@
     <g
        id="lines"
        fill="none"
-       stroke="#ffffff"
+       stroke="#e2e4e6"
        stroke-width="2.6">
       <circle
          id="lens"
@@ -63,8 +63,7 @@
          r="7" />
       <path
          d="M 21,21 15,15"
-         id="handle"
-         sodipodi:nodetypes="cc" />
+         id="handle" />
     </g>
   </g>
 </svg>

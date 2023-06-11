@@ -28,9 +28,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:current-layer="arrows"
+     inkscape:current-layer="base_layer"
      inkscape:zoom="16"
-     inkscape:cx="11.625"
+     inkscape:cx="6.375"
      inkscape:cy="11.40625"
      inkscape:window-width="1368"
      inkscape:window-height="850"
@@ -54,7 +54,7 @@
     <g
        id="arrows"
        fill="none"
-       stroke="#ffffff"
+       stroke="#e2e4e6"
        stroke-width="2.5">
       <path
          d="m 6,8 6,-6 6,6"

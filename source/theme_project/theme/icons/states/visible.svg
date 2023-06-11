@@ -7,7 +7,7 @@
    viewBox="0 0 24 24"
    version="1.1"
    id="icon_svg"
-   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    sodipodi:docname="visible.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -30,7 +30,7 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:current-layer="base_layer"
      inkscape:zoom="19.666667"
-     inkscape:cx="10.881356"
+     inkscape:cx="6.6101694"
      inkscape:cy="12.991525"
      inkscape:window-width="1368"
      inkscape:window-height="850"
@@ -54,14 +54,14 @@
     <path
        id="back"
        d="m 22,12 c 0,0 -4,7 -10,7 C 6,19 2,12 2,12 2,12 6,5 12,5 c 6,0 10,7 10,7 z"
-       fill="none"
-       stroke="#ffffff"
+       fill="#16171a"
+       stroke="#e2e4e6"
        stroke-width="2.2" />
     <circle
        id="dot"
        cx="12"
        cy="12"
        r="3"
-       fill="#ffffff" />
+       fill="#e2e4e6" />
   </g>
 </svg>

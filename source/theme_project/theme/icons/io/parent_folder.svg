@@ -28,9 +28,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:current-layer="base_layer"
+     inkscape:current-layer="arrow"
      inkscape:zoom="19.666667"
-     inkscape:cx="12.864407"
+     inkscape:cx="8.5932202"
      inkscape:cy="13.194915"
      inkscape:window-width="1368"
      inkscape:window-height="850"
@@ -54,14 +54,14 @@
     <g
        id="arrow"
        fill="none"
-       stroke="#ffffff"
+       stroke="#e2e4e6"
        stroke-width="2.6">
       <path
          d="m 4,13 8,-7 8,7"
          id="head" />
       <path
          d="M 12,6 V 20"
-         id="path1449" />
+         id="path" />
     </g>
   </g>
 </svg>

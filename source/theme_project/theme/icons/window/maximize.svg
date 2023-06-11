@@ -7,7 +7,7 @@
    viewBox="0 0 24 24"
    version="1.1"
    id="icon_svg"
-   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    sodipodi:docname="maximize.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -28,7 +28,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:current-layer="base_layer">
+     inkscape:current-layer="base_layer"
+     inkscape:zoom="9.8333333"
+     inkscape:cx="3.3559322"
+     inkscape:cy="12.050847"
+     inkscape:window-width="1368"
+     inkscape:window-height="850"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
        id="base_grid"
@@ -51,8 +59,8 @@
        y="4"
        rx="1"
        ry="1"
-       fill="none"
-       stroke="#ffffff"
+       fill="#16171a"
+       stroke="#e2e4e6"
        stroke-width="2" />
     <rect
        id="bar"
@@ -60,6 +68,6 @@
        height="4"
        x="2"
        y="4"
-       fill="#ffffff" />
+       fill="#e2e4e6" />
   </g>
 </svg>

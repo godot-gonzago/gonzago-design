@@ -7,7 +7,7 @@
    viewBox="0 0 12 12"
    version="1.1"
    id="icon_svg"
-   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    sodipodi:docname="tab.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -29,9 +29,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:current-layer="base_layer"
-     inkscape:zoom="19.666667"
-     inkscape:cx="12.838983"
-     inkscape:cy="14.262712"
+     inkscape:zoom="37.182032"
+     inkscape:cx="5.1906793"
+     inkscape:cy="6.8715987"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
@@ -51,19 +51,19 @@
      inkscape:label="Base Layer"
      inkscape:groupmode="layer"
      id="base_layer">
-    <path
-       d="m 10.25,1.5 v 9"
-       id="bar"
+    <g
+       id="tab"
        fill="none"
-       stroke="#ffffff"
-       stroke-width="2.5" />
-    <path
-       d="M 2.5,2.5 6,6 2.5,9.5"
-       id="arrow"
-       fill="none"
-       stroke="#ffffff"
-       stroke-width="2.5"
-       stroke-linecap="round"
-       stroke-linejoin="round" />
+       stroke="#e2e4e6"
+       stroke-width="2.5">
+      <path
+         d="m 10.25,1.5 v 9"
+         id="bar" />
+      <path
+         d="M 2.5,2.5 6,6 2.5,9.5"
+         id="arrow"
+         stroke-linecap="round"
+         stroke-linejoin="round" />
+    </g>
   </g>
 </svg>

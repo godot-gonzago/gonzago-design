@@ -8,7 +8,7 @@
    version="1.1"
    id="icon_svg"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
-   sodipodi:docname="arrow_right.svg"
+   sodipodi:docname="right.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -30,8 +30,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:current-layer="base_layer"
      inkscape:zoom="27.812867"
-     inkscape:cx="10.588624"
-     inkscape:cy="11.595353"
+     inkscape:cx="7.5504622"
+     inkscape:cy="11.631307"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
@@ -55,7 +55,7 @@
        d="M 10,18 15,12 10,6"
        id="arrow"
        fill="none"
-       stroke="#ffffff"
+       stroke="#e2e4e6"
        stroke-width="2.6" />
   </g>
 </svg>

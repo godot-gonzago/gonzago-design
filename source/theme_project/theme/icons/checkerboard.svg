@@ -30,8 +30,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:current-layer="base_layer"
      inkscape:zoom="13.906434"
-     inkscape:cx="15.172833"
-     inkscape:cy="8.0178717"
+     inkscape:cx="9.1324634"
+     inkscape:cy="8.0897806"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
@@ -57,11 +57,10 @@
        height="24"
        x="0"
        y="0"
-       fill="#cccccc" />
+       fill="#e2e4e6" />
     <g
        id="shades"
-       fill="#000000"
-       fill-opacity="0.5">
+       fill="#9a9c9e">
       <rect
          id="nw"
          width="12"

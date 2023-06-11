@@ -7,7 +7,7 @@
    viewBox="0 0 24 24"
    version="1.1"
    id="icon_svg"
-   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    sodipodi:docname="breakpoint.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -30,8 +30,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:current-layer="base_layer"
      inkscape:zoom="19.666667"
-     inkscape:cx="12.838983"
-     inkscape:cy="14.262712"
+     inkscape:cx="8.5932202"
+     inkscape:cy="14.313559"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
@@ -56,6 +56,6 @@
        cx="12"
        cy="12"
        r="8"
-       fill="#ff5f5f" />
+       fill="#d62411" />
   </g>
 </svg>

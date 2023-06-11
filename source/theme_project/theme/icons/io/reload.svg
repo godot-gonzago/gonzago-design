@@ -30,7 +30,7 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:current-layer="base_layer"
      inkscape:zoom="19.666667"
-     inkscape:cx="12.813559"
+     inkscape:cx="8.5423727"
      inkscape:cy="16.652542"
      inkscape:window-width="1368"
      inkscape:window-height="850"
@@ -51,17 +51,18 @@
      inkscape:label="Base Layer"
      inkscape:groupmode="layer"
      id="base_layer">
-    <path
-       id="path"
-       d="m 13,20 c 4.4,0 8,-3.6 8,-8 C 21,7.6 17.4,4 13,4 8.6,4 5,7.6 5,12 v 4"
+    <g
+       id="arrow"
        fill="none"
-       stroke="#ffffff"
-       stroke-width="2.8" />
-    <path
-       d="m 1,12 4,4 4,-4"
-       id="head"
-       fill="none"
-       stroke="#ffffff"
-       stroke-width="2.5" />
+       stroke="#e2e4e6">
+      <path
+         id="path"
+         d="m 13,20 c 4.4,0 8,-3.6 8,-8 C 21,7.6 17.4,4 13,4 8.6,4 5,7.6 5,12 v 4"
+         stroke-width="2.8" />
+      <path
+         d="m 1,12 4,4 4,-4"
+         id="head"
+         stroke-width="2.5" />
+    </g>
   </g>
 </svg>

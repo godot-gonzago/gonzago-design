@@ -7,7 +7,7 @@
    viewBox="0 0 20 12"
    version="1.1"
    id="icon_svg"
-   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    sodipodi:docname="ellipsis.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -28,10 +28,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:current-layer="base_layer"
+     inkscape:current-layer="dots"
      inkscape:zoom="19.666667"
-     inkscape:cx="12.838983"
-     inkscape:cy="14.262712"
+     inkscape:cx="8.5423727"
+     inkscape:cy="14.313559"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
@@ -53,7 +53,7 @@
      id="base_layer">
     <g
        id="dots"
-       fill="#ffffff">
+       fill="#e2e4e6">
       <circle
          id="dot_l"
          cx="4"

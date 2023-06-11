@@ -7,7 +7,7 @@
    viewBox="0 0 24 24"
    version="1.1"
    id="icon_svg"
-   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    sodipodi:docname="minimap.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -30,8 +30,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:current-layer="base_layer"
      inkscape:zoom="19.666667"
-     inkscape:cx="12.177966"
-     inkscape:cy="10.245763"
+     inkscape:cx="7.9322033"
+     inkscape:cy="10.29661"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
@@ -54,21 +54,21 @@
     <path
        id="base"
        d="M 3,6 9,4 15,6 21,4 V 18 L 15,20 9,18 3,20 Z"
-       fill="none"
-       stroke="#ffffff"
+       fill="#16171a"
+       stroke="#e2e4e6"
        stroke-width="2.4"
        stroke-linejoin="round" />
-    <path
-       d="M 9,18 V 4"
-       id="fold_1"
+    <g
+       id="folds"
        fill="none"
-       stroke="#ffffff"
-       stroke-width="2" />
-    <path
-       d="M 15,20 V 6"
-       id="fold_2"
-       fill="none"
-       stroke="#ffffff"
-       stroke-width="2" />
+       stroke="#e2e4e6"
+       stroke-width="2">
+      <path
+         d="M 9,18 V 4"
+         id="fold_1" />
+      <path
+         d="M 15,20 V 6"
+         id="fold_2" />
+    </g>
   </g>
 </svg>

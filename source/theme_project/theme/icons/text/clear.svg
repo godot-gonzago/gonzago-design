@@ -28,9 +28,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:current-layer="lines"
+     inkscape:current-layer="base_layer"
      inkscape:zoom="9.8333333"
-     inkscape:cx="0.96610169"
+     inkscape:cx="-7.6271187"
      inkscape:cy="12.050847"
      inkscape:window-width="1368"
      inkscape:window-height="850"
@@ -54,7 +54,7 @@
     <g
        id="lines"
        fill="none"
-       stroke="#ffffff"
+       stroke="#e2e4e6"
        stroke-width="2.6">
       <path
          d="M 20,20 4,4"
