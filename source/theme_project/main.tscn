@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=3 uid="uid://dy4yvk6jk3ny7"]
+[gd_scene load_steps=88 format=3 uid="uid://dy4yvk6jk3ny7"]
 
 [ext_resource type="Texture2D" uid="uid://dyy1t7xd2gexh" path="res://theme/icons/check/unchecked.svg" id="1_81eps"]
 [ext_resource type="Theme" uid="uid://rtiq6sexshcr" path="res://theme/default.theme" id="1_p5no7"]
@@ -80,6 +80,7 @@
 [ext_resource type="StyleBox" uid="uid://bp55tuh8mjcqi" path="res://theme/styleboxes/focus.stylebox" id="77_r6ffn"]
 [ext_resource type="StyleBox" uid="uid://bbiqjwp68qkty" path="res://theme/styleboxes/focus_rounded.stylebox" id="78_tp6ni"]
 [ext_resource type="StyleBox" uid="uid://dyv1urivfpqcl" path="res://theme/styleboxes/normal.stylebox" id="78_vm7r0"]
+[ext_resource type="StyleBox" uid="uid://dwiu6es0o20m6" path="res://theme/styleboxes/focus_minimal.stylebox" id="79_fqw8w"]
 [ext_resource type="StyleBox" uid="uid://bluk70knk8oad" path="res://theme/styleboxes/hover.stylebox" id="79_qrf3m"]
 [ext_resource type="StyleBox" uid="uid://bu4nldhat6eis" path="res://theme/styleboxes/pressed.stylebox" id="80_ovots"]
 [ext_resource type="StyleBox" uid="uid://dtdvayvirpbmk" path="res://theme/styleboxes/fill.stylebox" id="82_fic1h"]
@@ -937,6 +938,15 @@ theme_override_styles/panel = ExtResource("78_tp6ni")
 [node name="Label" type="Label" parent="Margin/Objects/Styleboxes/focus_rounded"]
 layout_mode = 2
 text = "focus rounded"
+
+[node name="focus_minimal" type="PanelContainer" parent="Margin/Objects/Styleboxes"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("79_fqw8w")
+
+[node name="Label" type="Label" parent="Margin/Objects/Styleboxes/focus_minimal"]
+layout_mode = 2
+text = "focus minimal
+"
 
 [node name="normal" type="PanelContainer" parent="Margin/Objects/Styleboxes"]
 layout_mode = 2
