@@ -755,6 +755,7 @@ text = "CheckButton"
 
 [node name="ProgressBar" type="ProgressBar" parent="Margin/Objects/UI"]
 layout_mode = 2
+tooltip_text = "This is a test tooltip"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Margin/Objects/UI/ProgressBar"]
 autoplay = "test"
