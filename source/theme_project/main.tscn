@@ -1,8 +1,9 @@
-[gd_scene load_steps=88 format=3 uid="uid://dy4yvk6jk3ny7"]
+[gd_scene load_steps=89 format=3 uid="uid://dy4yvk6jk3ny7"]
 
 [ext_resource type="Texture2D" uid="uid://dyy1t7xd2gexh" path="res://theme/icons/check/unchecked.svg" id="1_81eps"]
 [ext_resource type="Theme" uid="uid://rtiq6sexshcr" path="res://theme/default.theme" id="1_p5no7"]
 [ext_resource type="Texture2D" uid="uid://3xqiblmtx4yy" path="res://theme/icons/check/checked.svg" id="2_murxw"]
+[ext_resource type="Texture2D" uid="uid://d0xrppgh3c3ut" path="res://pattern.png" id="2_pmffp"]
 [ext_resource type="Texture2D" uid="uid://soee3t1w3265" path="res://theme/icons/check/unchecked_disabled.svg" id="3_njcj8"]
 [ext_resource type="Texture2D" uid="uid://olt3a4l1xes1" path="res://theme/icons/check/indeterminate.svg" id="3_xdry2"]
 [ext_resource type="Texture2D" uid="uid://dushfti0wiefb" path="res://theme/icons/check/radio_unchecked.svg" id="5_e77vj"]
@@ -108,16 +109,15 @@ _data = {
 "test": SubResource("Animation_8oayk")
 }
 
-[node name="Main" type="ColorRect"]
+[node name="Main" type="TextureRect"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 1.0
-offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_p5no7")
-color = Color(0.0862745, 0.0901961, 0.101961, 1)
+texture = ExtResource("2_pmffp")
+stretch_mode = 1
 
 [node name="Margin" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -965,6 +965,8 @@ layout_mode = 2
 [node name="LineEdit" type="LineEdit" parent="Margin/Objects/UI"]
 layout_mode = 2
 text = "LineEdit"
+caret_blink = true
+caret_blink_interval = 0.5
 
 [node name="search" type="LineEdit" parent="Margin/Objects/UI"]
 layout_mode = 2
@@ -973,18 +975,25 @@ theme_override_styles/focus = ExtResource("78_tp6ni")
 text = "Search"
 placeholder_text = "Filter..."
 right_icon = ExtResource("35_j5gv3")
+caret_blink = true
+caret_blink_interval = 0.5
 
 [node name="LineEdit_disabled" type="LineEdit" parent="Margin/Objects/UI"]
 layout_mode = 2
 text = "disabled"
 editable = false
+caret_blink = true
+caret_blink_interval = 0.5
 
 [node name="LineEdit_flat" type="LineEdit" parent="Margin/Objects/UI"]
 layout_mode = 2
+theme_override_styles/focus = ExtResource("79_fqw8w")
 text = "LineEdit"
 placeholder_text = "Hello..."
 clear_button_enabled = true
 flat = true
+caret_blink = true
+caret_blink_interval = 0.5
 
 [node name="MenuButton" type="MenuButton" parent="Margin/Objects/UI"]
 layout_mode = 2
