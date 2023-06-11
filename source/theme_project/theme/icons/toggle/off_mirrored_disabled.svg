@@ -7,7 +7,7 @@
    viewBox="0 0 42 24"
    version="1.1"
    id="icon_svg"
-   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    sodipodi:docname="off_mirrored_disabled.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -58,18 +58,16 @@
        x="2"
        y="2"
        ry="10"
-       fill="none"
-       stroke="#ffffff"
-       stroke-width="2.2"
-       stroke-opacity="0.5" />
+       fill="#1e1e1e"
+       stroke="#3c3c3c"
+       stroke-width="2.2" />
     <circle
        id="dot"
        cx="30"
        cy="12"
        r="5"
        fill="none"
-       stroke="#ffffff"
-       stroke-width="2"
-       stroke-opacity="0.5" />
+       stroke="#3c3c3c"
+       stroke-width="2" />
   </g>
 </svg>

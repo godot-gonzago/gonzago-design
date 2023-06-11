@@ -110,6 +110,7 @@ _data = {
 }
 
 [node name="Main" type="TextureRect"]
+self_modulate = Color(0.776471, 0.776471, 0.776471, 1)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -954,6 +955,17 @@ text = "CheckButton"
 layout_mode = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Margin/Objects/UI/ProgressBar"]
+autoplay = "test"
+libraries = {
+"": SubResource("AnimationLibrary_jf2uf")
+}
+
+[node name="ProgressBar2" type="ProgressBar" parent="Margin/Objects/UI"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+show_percentage = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Margin/Objects/UI/ProgressBar2"]
 autoplay = "test"
 libraries = {
 "": SubResource("AnimationLibrary_jf2uf")

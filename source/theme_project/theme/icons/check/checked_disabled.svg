@@ -7,7 +7,7 @@
    viewBox="0 0 24 24"
    version="1.1"
    id="icon_svg"
-   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    sodipodi:docname="checked_disabled.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -59,16 +59,14 @@
        y="2"
        rx="1"
        ry="1"
-       fill="none"
-       stroke="#ffffff"
-       stroke-width="2"
-       stroke-opacity="0.5" />
+       fill="#1e1e1e"
+       stroke="#3c3c3c"
+       stroke-width="2" />
     <path
        d="m 6,14 4,3 8,-11"
        id="tick"
        fill="none"
-       stroke="#ffffff"
-       stroke-width="3"
-       stroke-opacity="0.5" />
+       stroke="#3c3c3c"
+       stroke-width="3" />
   </g>
 </svg>

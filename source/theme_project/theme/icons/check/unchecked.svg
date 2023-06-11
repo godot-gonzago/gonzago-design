@@ -51,8 +51,8 @@
        y="2"
        rx="1"
        ry="1"
-       fill="none"
-       stroke="#ffffff"
+       fill="#1e1e1e"
+       stroke="#b4b4b4"
        stroke-width="2" />
   </g>
 </svg>

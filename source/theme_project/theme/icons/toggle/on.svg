@@ -50,14 +50,14 @@
        x="2"
        y="2"
        ry="10"
-       fill="none"
-       stroke="#ffffff"
+       fill="#1e1e1e"
+       stroke="#b4b4b4"
        stroke-width="2.2" />
     <circle
        id="dot"
        cx="30"
        cy="12"
        r="5"
-       fill="#ffffff" />
+       fill="#b4b4b4" />
   </g>
 </svg>

@@ -1,9 +1,0 @@
-[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://c5laodh284xex"]
-
-[ext_resource type="FontFile" uid="uid://ditote7snxwg5" path="res://theme/fonts/fira_code/fira_code-variable.ttf" id="1_pnanf"]
-
-[resource]
-base_font = ExtResource("1_pnanf")
-variation_opentype = {
-2003265652: 700
-}

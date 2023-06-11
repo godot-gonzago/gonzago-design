@@ -1,9 +1,0 @@
-[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://bj6v3ny7iqluy"]
-
-[ext_resource type="FontFile" uid="uid://bw1trbjyx5ory" path="res://theme/fonts/jost/jost-italic-variable.ttf" id="1_6k7ai"]
-
-[resource]
-base_font = ExtResource("1_6k7ai")
-variation_opentype = {
-2003265652: 600
-}

@@ -1,9 +1,0 @@
-[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://dj7mi888tk7rg"]
-
-[ext_resource type="FontFile" uid="uid://d3a1j1b8mbusg" path="res://theme/fonts/jost/jost-variable.ttf" id="1_o7ges"]
-
-[resource]
-base_font = ExtResource("1_o7ges")
-variation_opentype = {
-2003265652: 600
-}
