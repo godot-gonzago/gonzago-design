@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jtrd1s7txkkp"
-path="res://.godot/imported/vslider_tick.svg-5a3ad9c8290c22cafa3c3e6b6b461b52.ctex"
+uid="uid://c6iut8aa088ox"
+path="res://.godot/imported/right_button.svg-584624016dcc8ae3f247928bc2a15c3b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://theme/icons/_todo/slider/vslider_tick.svg"
-dest_files=["res://.godot/imported/vslider_tick.svg-5a3ad9c8290c22cafa3c3e6b6b461b52.ctex"]
+source_file="res://theme/icons/arrows/right_button.svg"
+dest_files=["res://.godot/imported/right_button.svg-584624016dcc8ae3f247928bc2a15c3b.ctex"]
 
 [params]
 

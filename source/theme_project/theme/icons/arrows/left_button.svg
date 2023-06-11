@@ -8,7 +8,7 @@
    version="1.1"
    id="icon_svg"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
-   sodipodi:docname="menu_disabled.svg"
+   sodipodi:docname="left_button.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -29,9 +29,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:current-layer="base_layer"
-     inkscape:zoom="9.8333333"
-     inkscape:cx="-5.1864407"
-     inkscape:cy="12.050847"
+     inkscape:zoom="19.666667"
+     inkscape:cx="10.90678"
+     inkscape:cy="13.194915"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
@@ -52,23 +52,21 @@
      inkscape:groupmode="layer"
      id="base_layer">
     <g
-       id="menu"
-       fill="#525356">
+       id="button"
+       fill="none"
+       stroke="#e2e4e6"
+       stroke-width="2">
       <circle
-         id="c_top"
-         cx="12"
-         cy="4"
-         r="2" />
-      <circle
-         id="c_center"
+         id="back"
          cx="12"
          cy="12"
-         r="2" />
-      <circle
-         id="c_bottom"
-         cx="12"
-         cy="20"
-         r="2" />
+         r="8"
+         fill="#16171a" />
+      <path
+         d="m 13,9 -3,3 3,3"
+         id="arrow"
+         stroke-linejoin="round"
+         stroke-linecap="round" />
     </g>
   </g>
 </svg>

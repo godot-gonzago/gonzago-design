@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yltki484w14w"
-path="res://.godot/imported/scroll_button_right.svg-ae1ac838669e1f6c1d00878ea775e074.ctex"
+uid="uid://ea08t40hnxm2"
+path="res://.godot/imported/menu_muted.svg-17961e86f3972f2ffff0a38a959b6aca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://theme/icons/_todo/arrows/scroll_button_right.svg"
-dest_files=["res://.godot/imported/scroll_button_right.svg-ae1ac838669e1f6c1d00878ea775e074.ctex"]
+source_file="res://theme/icons/menu_muted.svg"
+dest_files=["res://.godot/imported/menu_muted.svg-17961e86f3972f2ffff0a38a959b6aca.ctex"]
 
 [params]
 

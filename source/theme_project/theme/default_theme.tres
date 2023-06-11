@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=69 format=3 uid="uid://oedg3w6r0u61"]
+[gd_resource type="Theme" load_steps=88 format=3 uid="uid://blfq6x2c22oqv"]
 
 [ext_resource type="StyleBox" uid="uid://db018nyyw03ml" path="res://theme/styleboxes/disabled.tres" id="1_r2vi7"]
 [ext_resource type="StyleBox" uid="uid://dxk3ev6b523o1" path="res://theme/styleboxes/focus.tres" id="2_muin1"]
@@ -49,25 +49,44 @@
 [ext_resource type="Texture2D" uid="uid://dxt0eenmtkf41" path="res://theme/icons/graph/zoom_more.svg" id="47_4yx6q"]
 [ext_resource type="Texture2D" uid="uid://dcn3w7ymjm0eq" path="res://theme/icons/graph/zoom_reset.svg" id="48_akh18"]
 [ext_resource type="Texture2D" uid="uid://dt5tyjydxt7kv" path="res://theme/icons/graph/snap.svg" id="49_6tch7"]
-[ext_resource type="StyleBox" uid="uid://cbdxn0sg2fyra" path="res://theme/styleboxes/panel.tres" id="50_5yigh"]
+[ext_resource type="StyleBox" uid="uid://cbdxn0sg2fyra" path="res://theme/styleboxes/panels/panel.tres" id="50_bo1sh"]
 [ext_resource type="Texture2D" uid="uid://d1qhbnvnjhobn" path="res://theme/icons/window/resizer_se.svg" id="51_siex2"]
 [ext_resource type="Texture2D" uid="uid://bf11anfy0lcfk" path="res://theme/icons/window/close.svg" id="52_5mt3s"]
 [ext_resource type="Texture2D" uid="uid://demha2ys3tuem" path="res://theme/icons/graph/port.svg" id="53_hlavg"]
 [ext_resource type="Texture2D" uid="uid://bfk3apk8m4r3s" path="res://theme/icons/arrows/left.svg" id="54_cvr6e"]
-[ext_resource type="Texture2D" uid="uid://dp6snlvirbwve" path="res://theme/icons/grabber.svg" id="55_q1ln8"]
+[ext_resource type="Texture2D" uid="uid://bl8m0ggvsu67a" path="res://theme/icons/arrows/left_muted.svg" id="54_mpg8b"]
 [ext_resource type="Texture2D" uid="uid://dsv7guinqm4u5" path="res://theme/icons/text/clear.svg" id="56_g0dy4"]
+[ext_resource type="Texture2D" uid="uid://bjaqcddj0s3v8" path="res://theme/icons/arrows/left_pressed.svg" id="56_jd4v5"]
 [ext_resource type="Texture2D" uid="uid://x3jlcg0tftih" path="res://theme/icons/arrows/select.svg" id="57_b1yxp"]
+[ext_resource type="Texture2D" uid="uid://qiqny0dipcmv" path="res://theme/icons/arrows/right_muted.svg" id="57_gkwgh"]
 [ext_resource type="StyleBox" uid="uid://jsjuu8k6i0uw" path="res://theme/styleboxes/fill.tres" id="58_ru2o8"]
+[ext_resource type="Texture2D" uid="uid://cntwu1qqah0yd" path="res://theme/icons/arrows/right_pressed.svg" id="58_vjqyc"]
 [ext_resource type="FontVariation" uid="uid://sabphh836k04" path="res://theme/fonts/jost/jost-700-bold_italic.tres" id="59_j5lvn"]
+[ext_resource type="Texture2D" uid="uid://dp6snlvirbwve" path="res://theme/icons/ranges/grabber.svg" id="59_wjrs2"]
+[ext_resource type="Texture2D" uid="uid://cbspt8wajqsi4" path="res://theme/icons/ranges/grabber_disabled.svg" id="60_ru0ce"]
 [ext_resource type="FontVariation" uid="uid://bnks6aej2d105" path="res://theme/fonts/jost/jost-400-regular_italic.tres" id="60_vew1e"]
+[ext_resource type="Texture2D" uid="uid://boext5ktc7k5q" path="res://theme/icons/ranges/grabber_pressed.svg" id="61_asbti"]
 [ext_resource type="FontVariation" uid="uid://d2vb4ccm4mm5a" path="res://theme/fonts/jost/jost-400-regular.tres" id="61_l1u04"]
 [ext_resource type="Texture2D" uid="uid://8fehg2pmd1ym" path="res://theme/icons/arrows/updown.svg" id="62_44fwr"]
-[ext_resource type="Texture2D" uid="uid://ea08t40hnxm2" path="res://theme/icons/menu_disabled.svg" id="63_mrrw7"]
+[ext_resource type="Texture2D" uid="uid://bm1tq6esiqpbv" path="res://theme/icons/ranges/h_tick.svg" id="62_hvbrr"]
+[ext_resource type="Texture2D" uid="uid://s0ndwfuom6ud" path="res://theme/icons/arrows/left_button_muted.svg" id="63_1hvlh"]
+[ext_resource type="StyleBox" uid="uid://c36iupd3d22ow" path="res://theme/styleboxes/ranges/slider_h_fill.tres" id="63_ctryn"]
+[ext_resource type="Texture2D" uid="uid://ea08t40hnxm2" path="res://theme/icons/menu_muted.svg" id="63_mrrw7"]
 [ext_resource type="Texture2D" uid="uid://bkovyksmq74ff" path="res://theme/icons/menu.svg" id="63_spajg"]
-[ext_resource type="StyleBox" uid="uid://c3r82vcccqnwa" path="res://theme/styleboxes/tooltip_panel.tres" id="64_71usc"]
+[ext_resource type="StyleBox" uid="uid://b2ieqlpws7q8d" path="res://theme/styleboxes/ranges/slider.tres" id="64_wytxf"]
+[ext_resource type="Texture2D" uid="uid://d34564qsrd2li" path="res://theme/icons/arrows/left_button.svg" id="64_x73xe"]
+[ext_resource type="Texture2D" uid="uid://dim5sbfbuv4ch" path="res://theme/icons/arrows/right_button_muted.svg" id="65_41rc7"]
 [ext_resource type="Texture2D" uid="uid://olt3a4l1xes1" path="res://theme/icons/check/indeterminate.svg" id="65_d3ep6"]
+[ext_resource type="Texture2D" uid="uid://c6iut8aa088ox" path="res://theme/icons/arrows/right_button.svg" id="66_c8ig0"]
 [ext_resource type="Texture2D" uid="uid://dwvxcul3cgkd7" path="res://theme/icons/arrows/up.svg" id="66_j67x3"]
 [ext_resource type="Texture2D" uid="uid://cnbwquyd2d5h6" path="res://theme/icons/window/close_pressed.svg" id="68_f8uw1"]
+[ext_resource type="Texture2D" uid="uid://c8du7jcq2was1" path="res://theme/icons/arrows/up_muted.svg" id="75_87trl"]
+[ext_resource type="Texture2D" uid="uid://bwjqooeleoa7m" path="res://theme/icons/arrows/up_pressed.svg" id="77_ohwvc"]
+[ext_resource type="StyleBox" uid="uid://c3r82vcccqnwa" path="res://theme/styleboxes/panels/tooltip_panel.tres" id="78_axvja"]
+[ext_resource type="Texture2D" uid="uid://bq611dk652env" path="res://theme/icons/arrows/down_muted.svg" id="78_c5kox"]
+[ext_resource type="Texture2D" uid="uid://ct4d5nm61fdke" path="res://theme/icons/arrows/down_pressed.svg" id="79_4iyiy"]
+[ext_resource type="Texture2D" uid="uid://cyk6ohivs2fqy" path="res://theme/icons/ranges/v_tick.svg" id="83_m48t3"]
+[ext_resource type="StyleBox" uid="uid://dt37nuj5lv10m" path="res://theme/styleboxes/ranges/slider_v_fill.tres" id="86_lhxjt"]
 
 [resource]
 default_font = ExtResource("61_l1u04")
@@ -189,7 +208,7 @@ GraphEdit/icons/minus = ExtResource("46_i61wb")
 GraphEdit/icons/more = ExtResource("47_4yx6q")
 GraphEdit/icons/reset = ExtResource("48_akh18")
 GraphEdit/icons/snap = ExtResource("49_6tch7")
-GraphEdit/styles/bg = ExtResource("50_5yigh")
+GraphEdit/styles/bg = ExtResource("50_bo1sh")
 GraphEditMinimap/icons/resizer = ExtResource("51_siex2")
 GraphNode/colors/title_color = Color(0.886275, 0.894118, 0.901961, 1)
 GraphNode/icons/close = ExtResource("52_5mt3s")
@@ -200,10 +219,21 @@ GridContainer/constants/v_separation = 8
 HBoxContainer/constants/separation = 10
 HFlowContainer/constants/h_separation = 8
 HFlowContainer/constants/v_separation = 8
-HScrollBar/icons/decrement = ExtResource("54_cvr6e")
-HScrollBar/icons/increment = ExtResource("29_k73nb")
+HScrollBar/icons/decrement = ExtResource("54_mpg8b")
+HScrollBar/icons/decrement_highlight = ExtResource("54_cvr6e")
+HScrollBar/icons/decrement_pressed = ExtResource("56_jd4v5")
+HScrollBar/icons/increment = ExtResource("57_gkwgh")
+HScrollBar/icons/increment_highlight = ExtResource("29_k73nb")
+HScrollBar/icons/increment_pressed = ExtResource("58_vjqyc")
 HSeparator/constants/separation = 8
-HSlider/icons/grabber = ExtResource("55_q1ln8")
+HSlider/constants/grabber_offset = 0
+HSlider/icons/grabber = ExtResource("59_wjrs2")
+HSlider/icons/grabber_disabled = ExtResource("60_ru0ce")
+HSlider/icons/grabber_highlight = ExtResource("61_asbti")
+HSlider/icons/tick = ExtResource("62_hvbrr")
+HSlider/styles/grabber_area = ExtResource("63_ctryn")
+HSlider/styles/grabber_area_highlight = ExtResource("63_ctryn")
+HSlider/styles/slider = ExtResource("64_wytxf")
 HSplitContainer/constants/separation = 24
 HeaderLarge/font_sizes/font_size = 48
 HeaderMedium/font_sizes/font_size = 32
@@ -280,9 +310,9 @@ OptionButton/styles/focus = ExtResource("2_muin1")
 OptionButton/styles/hover = ExtResource("3_hv6my")
 OptionButton/styles/normal = ExtResource("4_a15q8")
 OptionButton/styles/pressed = ExtResource("5_hmixu")
-Panel/styles/panel = ExtResource("50_5yigh")
-PanelContainer/styles/panel = ExtResource("50_5yigh")
-PopupDialog/styles/panel = ExtResource("50_5yigh")
+Panel/styles/panel = ExtResource("50_bo1sh")
+PanelContainer/styles/panel = ExtResource("50_bo1sh")
+PopupDialog/styles/panel = ExtResource("50_bo1sh")
 PopupMenu/colors/font_color = Color(0.886275, 0.894118, 0.901961, 1)
 PopupMenu/colors/font_disabled_color = Color(0.227451, 0.231373, 0.243137, 1)
 PopupMenu/colors/font_hover_color = Color(0.886275, 0.894118, 0.901961, 1)
@@ -302,8 +332,8 @@ PopupMenu/icons/submenu_mirrored = ExtResource("35_rropo")
 PopupMenu/icons/unchecked = ExtResource("12_4sjr4")
 PopupMenu/icons/unchecked_disabled = ExtResource("13_nodna")
 PopupMenu/styles/hover = ExtResource("3_hv6my")
-PopupMenu/styles/panel = ExtResource("50_5yigh")
-PopupPanel/styles/panel = ExtResource("50_5yigh")
+PopupMenu/styles/panel = ExtResource("50_bo1sh")
+PopupPanel/styles/panel = ExtResource("50_bo1sh")
 ProgressBar/colors/font_color = Color(0.886275, 0.894118, 0.901961, 1)
 ProgressBar/colors/font_outline_color = Color(0.0862745, 0.0901961, 0.101961, 1)
 ProgressBar/styles/background = ExtResource("4_a15q8")
@@ -317,7 +347,7 @@ RichTextLabel/fonts/italics_font = ExtResource("60_vew1e")
 RichTextLabel/fonts/mono_font = ExtResource("24_vue3g")
 RichTextLabel/fonts/normal_font = ExtResource("61_l1u04")
 RichTextLabel/styles/focus = ExtResource("2_muin1")
-ScrollContainer/styles/panel = ExtResource("50_5yigh")
+ScrollContainer/styles/panel = ExtResource("50_bo1sh")
 SpinBox/icons/updown = ExtResource("62_44fwr")
 SplitContainer/constants/separation = 24
 TabBar/colors/drop_mark_color = Color(1, 1, 1, 1)
@@ -327,11 +357,19 @@ TabBar/colors/font_selected_color = Color(0.886275, 0.894118, 0.901961, 1)
 TabBar/colors/font_unselected_color = Color(0.603922, 0.611765, 0.619608, 1)
 TabBar/constants/h_separation = 8
 TabBar/icons/close = ExtResource("52_5mt3s")
+TabBar/icons/decrement = ExtResource("63_1hvlh")
+TabBar/icons/decrement_highlight = ExtResource("64_x73xe")
+TabBar/icons/increment = ExtResource("65_41rc7")
+TabBar/icons/increment_highlight = ExtResource("66_c8ig0")
 TabContainer/colors/drop_mark_color = Color(1, 1, 1, 1)
 TabContainer/colors/font_disabled_color = Color(0.321569, 0.32549, 0.337255, 1)
 TabContainer/colors/font_outline_color = Color(0.0862745, 0.0901961, 0.101961, 1)
 TabContainer/colors/font_selected_color = Color(0.886275, 0.894118, 0.901961, 1)
 TabContainer/colors/font_unselected_color = Color(0.603922, 0.611765, 0.619608, 1)
+TabContainer/icons/decrement = ExtResource("63_1hvlh")
+TabContainer/icons/decrement_highlight = ExtResource("64_x73xe")
+TabContainer/icons/increment = ExtResource("65_41rc7")
+TabContainer/icons/increment_highlight = ExtResource("66_c8ig0")
 TabContainer/icons/menu = ExtResource("63_mrrw7")
 TabContainer/icons/menu_highlight = ExtResource("63_spajg")
 TabContainer/styles/tabbar_background = ExtResource("14_urvgo")
@@ -354,7 +392,7 @@ TooltipLabel/constants/shadow_offset_y = 0
 TooltipLabel/font_sizes/font_size = 24
 TooltipLabel/fonts/font = ExtResource("61_l1u04")
 TooltipPanel/base_type = &"Panel"
-TooltipPanel/styles/panel = ExtResource("64_71usc")
+TooltipPanel/styles/panel = ExtResource("78_axvja")
 Tree/colors/font_color = Color(0.603922, 0.611765, 0.619608, 1)
 Tree/colors/font_outline_color = Color(0.0862745, 0.0901961, 0.101961, 1)
 Tree/colors/font_selected_color = Color(0.980392, 0.992157, 1, 1)
@@ -369,14 +407,25 @@ Tree/icons/select_arrow = ExtResource("57_b1yxp")
 Tree/icons/unchecked = ExtResource("12_4sjr4")
 Tree/icons/updown = ExtResource("62_44fwr")
 Tree/styles/focus = ExtResource("2_muin1")
-Tree/styles/panel = ExtResource("50_5yigh")
+Tree/styles/panel = ExtResource("50_bo1sh")
 VBoxContainer/constants/separation = 10
 VFlowContainer/constants/h_separation = 8
 VFlowContainer/constants/v_separation = 8
-VScrollBar/icons/decrement = ExtResource("66_j67x3")
-VScrollBar/icons/increment = ExtResource("27_h3rxm")
+VScrollBar/icons/decrement = ExtResource("75_87trl")
+VScrollBar/icons/decrement_highlight = ExtResource("66_j67x3")
+VScrollBar/icons/decrement_pressed = ExtResource("77_ohwvc")
+VScrollBar/icons/increment = ExtResource("78_c5kox")
+VScrollBar/icons/increment_highlight = ExtResource("27_h3rxm")
+VScrollBar/icons/increment_pressed = ExtResource("79_4iyiy")
 VSeparator/constants/separation = 8
-VSlider/icons/grabber = ExtResource("55_q1ln8")
+VSlider/constants/grabber_offset = 0
+VSlider/icons/grabber = ExtResource("59_wjrs2")
+VSlider/icons/grabber_disabled = ExtResource("60_ru0ce")
+VSlider/icons/grabber_highlight = ExtResource("61_asbti")
+VSlider/icons/tick = ExtResource("83_m48t3")
+VSlider/styles/grabber_area = ExtResource("86_lhxjt")
+VSlider/styles/grabber_area_highlight = ExtResource("86_lhxjt")
+VSlider/styles/slider = ExtResource("64_wytxf")
 VSplitContainer/constants/separation = 24
 Window/colors/title_color = Color(0.886275, 0.894118, 0.901961, 1)
 Window/icons/close = ExtResource("52_5mt3s")

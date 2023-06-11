@@ -1,6 +1,6 @@
-[gd_scene load_steps=90 format=3 uid="uid://dy4yvk6jk3ny7"]
+[gd_scene load_steps=103 format=3 uid="uid://bx6ou4k14dmk2"]
 
-[ext_resource type="Theme" uid="uid://oedg3w6r0u61" path="res://theme/default_theme.tres" id="1_4iqpx"]
+[ext_resource type="Theme" uid="uid://blfq6x2c22oqv" path="res://theme/default_theme.tres" id="1_4iqpx"]
 [ext_resource type="Texture2D" uid="uid://dyy1t7xd2gexh" path="res://theme/icons/check/unchecked.svg" id="1_81eps"]
 [ext_resource type="Texture2D" uid="uid://3xqiblmtx4yy" path="res://theme/icons/check/checked.svg" id="2_murxw"]
 [ext_resource type="Texture2D" uid="uid://d0xrppgh3c3ut" path="res://pattern.png" id="2_pmffp"]
@@ -46,19 +46,31 @@
 [ext_resource type="FontVariation" uid="uid://c53n6oif7d66l" path="res://theme/fonts/fira_code/fira_code-600-semi_bold_italic.tres" id="29_jplrd"]
 [ext_resource type="Texture2D" uid="uid://bfk3apk8m4r3s" path="res://theme/icons/arrows/left.svg" id="29_vsati"]
 [ext_resource type="Texture2D" uid="uid://chpmxtlqb8xm3" path="res://theme/icons/arrows/right.svg" id="30_opdaf"]
+[ext_resource type="Texture2D" uid="uid://c8du7jcq2was1" path="res://theme/icons/arrows/up_muted.svg" id="31_iwo7u"]
 [ext_resource type="Texture2D" uid="uid://x3jlcg0tftih" path="res://theme/icons/arrows/select.svg" id="31_lsswv"]
+[ext_resource type="Texture2D" uid="uid://bwjqooeleoa7m" path="res://theme/icons/arrows/up_pressed.svg" id="32_7yn4r"]
 [ext_resource type="Texture2D" uid="uid://dsv7guinqm4u5" path="res://theme/icons/text/clear.svg" id="34_0kf8d"]
+[ext_resource type="Texture2D" uid="uid://bq611dk652env" path="res://theme/icons/arrows/down_muted.svg" id="34_03jry"]
+[ext_resource type="Texture2D" uid="uid://ct4d5nm61fdke" path="res://theme/icons/arrows/down_pressed.svg" id="35_a1w1a"]
 [ext_resource type="FontVariation" uid="uid://cbermmw36vb8s" path="res://theme/fonts/fira_code/fira_code-300-light.tres" id="35_da22e"]
 [ext_resource type="Texture2D" uid="uid://b7mr47mvqvxw2" path="res://theme/icons/text/search.svg" id="35_j5gv3"]
+[ext_resource type="Texture2D" uid="uid://d34564qsrd2li" path="res://theme/icons/arrows/left_button.svg" id="35_ybimw"]
 [ext_resource type="Texture2D" uid="uid://y1pjqaf1lf4q" path="res://theme/icons/add.svg" id="36_3h20h"]
+[ext_resource type="Texture2D" uid="uid://s0ndwfuom6ud" path="res://theme/icons/arrows/left_button_muted.svg" id="36_jwd8q"]
+[ext_resource type="Texture2D" uid="uid://c6iut8aa088ox" path="res://theme/icons/arrows/right_button.svg" id="36_qg7i1"]
 [ext_resource type="Texture2D" uid="uid://ffpufqdcwq3q" path="res://theme/icons/io/file.svg" id="36_r1uq0"]
 [ext_resource type="Texture2D" uid="uid://bdyc54u3sur4k" path="res://theme/icons/remove.svg" id="37_durdc"]
 [ext_resource type="Texture2D" uid="uid://clignrahrxbsx" path="res://theme/icons/io/folder.svg" id="37_gmwdk"]
+[ext_resource type="Texture2D" uid="uid://bl8m0ggvsu67a" path="res://theme/icons/arrows/left_muted.svg" id="37_pcrij"]
 [ext_resource type="Texture2D" uid="uid://dyaeutywee2su" path="res://theme/icons/io/parent_folder.svg" id="38_3d3p2"]
+[ext_resource type="Texture2D" uid="uid://dim5sbfbuv4ch" path="res://theme/icons/arrows/right_button_muted.svg" id="38_64a2y"]
+[ext_resource type="Texture2D" uid="uid://bjaqcddj0s3v8" path="res://theme/icons/arrows/left_pressed.svg" id="38_htgg4"]
 [ext_resource type="Texture2D" uid="uid://d2w3qapmjwqmv" path="res://theme/icons/io/broken_file.svg" id="38_p7l74"]
 [ext_resource type="FontVariation" uid="uid://7ahu8dc4uedk" path="res://theme/fonts/fira_code/fira_code-300-light_italic.tres" id="38_pbrjn"]
 [ext_resource type="Texture2D" uid="uid://c6lhfn4yh6ry1" path="res://theme/icons/text/bookmark.svg" id="40_8msqs"]
+[ext_resource type="Texture2D" uid="uid://qiqny0dipcmv" path="res://theme/icons/arrows/right_muted.svg" id="40_gvyif"]
 [ext_resource type="Texture2D" uid="uid://cih400fi381f6" path="res://theme/icons/text/breakpoint.svg" id="41_jk6fn"]
+[ext_resource type="Texture2D" uid="uid://cntwu1qqah0yd" path="res://theme/icons/arrows/right_pressed.svg" id="41_pl0k6"]
 [ext_resource type="Texture2D" uid="uid://djlx83e2lyecp" path="res://theme/icons/text/ellipsis.svg" id="42_l2els"]
 [ext_resource type="Texture2D" uid="uid://dsvn850ppr5pd" path="res://theme/icons/text/space.svg" id="42_vfepq"]
 [ext_resource type="Texture2D" uid="uid://w86u2bpyi5tb" path="res://theme/icons/text/tab.svg" id="43_fajbf"]
@@ -76,7 +88,7 @@
 [ext_resource type="Texture2D" uid="uid://dk6ujc52trl7k" path="res://theme/icons/states/invisible.svg" id="55_3dt2v"]
 [ext_resource type="Texture2D" uid="uid://boowk1tagxlxv" path="res://theme/icons/states/success.svg" id="55_34qe5"]
 [ext_resource type="Texture2D" uid="uid://craeya6kd6lqk" path="res://theme/icons/states/failure.svg" id="56_qhmkk"]
-[ext_resource type="StyleBox" uid="uid://cbdxn0sg2fyra" path="res://theme/styleboxes/panel.tres" id="77_dxksu"]
+[ext_resource type="Texture2D" uid="uid://ea08t40hnxm2" path="res://theme/icons/menu_muted.svg" id="66_c3c65"]
 [ext_resource type="StyleBox" uid="uid://dxk3ev6b523o1" path="res://theme/styleboxes/focus.tres" id="78_k5agx"]
 [ext_resource type="StyleBox" uid="uid://cn1mx1nibt3d4" path="res://theme/styleboxes/focus_minimal.tres" id="80_tehji"]
 [ext_resource type="StyleBox" uid="uid://u473a3ia8k5l" path="res://theme/styleboxes/normal.tres" id="81_4kki8"]
@@ -86,6 +98,7 @@
 [ext_resource type="StyleBox" uid="uid://jsjuu8k6i0uw" path="res://theme/styleboxes/fill.tres" id="85_1kr3m"]
 [ext_resource type="StyleBox" uid="uid://dlao4glc2in24" path="res://theme/styleboxes/normal_rounded.tres" id="86_y6r30"]
 [ext_resource type="StyleBox" uid="uid://do3uu4efro02b" path="res://theme/styleboxes/focus_rounded.tres" id="87_55jpm"]
+[ext_resource type="StyleBox" uid="uid://cbdxn0sg2fyra" path="res://theme/styleboxes/panels/panel.tres" id="90_vkt5y"]
 
 [sub_resource type="Animation" id="Animation_8oayk"]
 resource_name = "test"
@@ -390,9 +403,29 @@ layout_mode = 2
 texture = ExtResource("27_pl8db")
 stretch_mode = 3
 
+[node name="up_muted" type="TextureRect" parent="Margin/Objects/Icons/Arrows"]
+layout_mode = 2
+texture = ExtResource("31_iwo7u")
+stretch_mode = 3
+
+[node name="up_pressed" type="TextureRect" parent="Margin/Objects/Icons/Arrows"]
+layout_mode = 2
+texture = ExtResource("32_7yn4r")
+stretch_mode = 3
+
 [node name="down" type="TextureRect" parent="Margin/Objects/Icons/Arrows"]
 layout_mode = 2
 texture = ExtResource("28_ixcfb")
+stretch_mode = 3
+
+[node name="down_muted" type="TextureRect" parent="Margin/Objects/Icons/Arrows"]
+layout_mode = 2
+texture = ExtResource("34_03jry")
+stretch_mode = 3
+
+[node name="down_pressed" type="TextureRect" parent="Margin/Objects/Icons/Arrows"]
+layout_mode = 2
+texture = ExtResource("35_a1w1a")
 stretch_mode = 3
 
 [node name="left" type="TextureRect" parent="Margin/Objects/Icons/Arrows"]
@@ -400,14 +433,54 @@ layout_mode = 2
 texture = ExtResource("29_vsati")
 stretch_mode = 3
 
+[node name="left_muted" type="TextureRect" parent="Margin/Objects/Icons/Arrows"]
+layout_mode = 2
+texture = ExtResource("37_pcrij")
+stretch_mode = 3
+
+[node name="left_pressed" type="TextureRect" parent="Margin/Objects/Icons/Arrows"]
+layout_mode = 2
+texture = ExtResource("38_htgg4")
+stretch_mode = 3
+
 [node name="right" type="TextureRect" parent="Margin/Objects/Icons/Arrows"]
 layout_mode = 2
 texture = ExtResource("30_opdaf")
 stretch_mode = 3
 
+[node name="right_muted" type="TextureRect" parent="Margin/Objects/Icons/Arrows"]
+layout_mode = 2
+texture = ExtResource("40_gvyif")
+stretch_mode = 3
+
+[node name="right_pressed" type="TextureRect" parent="Margin/Objects/Icons/Arrows"]
+layout_mode = 2
+texture = ExtResource("41_pl0k6")
+stretch_mode = 3
+
 [node name="dropdown" type="TextureRect" parent="Margin/Objects/Icons/Arrows"]
 layout_mode = 2
 texture = ExtResource("31_lsswv")
+stretch_mode = 3
+
+[node name="left_button" type="TextureRect" parent="Margin/Objects/Icons/Arrows"]
+layout_mode = 2
+texture = ExtResource("35_ybimw")
+stretch_mode = 3
+
+[node name="left_button_muted" type="TextureRect" parent="Margin/Objects/Icons/Arrows"]
+layout_mode = 2
+texture = ExtResource("36_jwd8q")
+stretch_mode = 3
+
+[node name="right_button" type="TextureRect" parent="Margin/Objects/Icons/Arrows"]
+layout_mode = 2
+texture = ExtResource("36_qg7i1")
+stretch_mode = 3
+
+[node name="right_button_muted" type="TextureRect" parent="Margin/Objects/Icons/Arrows"]
+layout_mode = 2
+texture = ExtResource("38_64a2y")
 stretch_mode = 3
 
 [node name="IO" type="HFlowContainer" parent="Margin/Objects/Icons"]
@@ -560,6 +633,11 @@ layout_mode = 2
 texture = ExtResource("14_krntv")
 stretch_mode = 3
 
+[node name="menu_muted" type="TextureRect" parent="Margin/Objects/Icons/General"]
+layout_mode = 2
+texture = ExtResource("66_c3c65")
+stretch_mode = 3
+
 [node name="add" type="TextureRect" parent="Margin/Objects/Icons/General"]
 layout_mode = 2
 texture = ExtResource("36_3h20h")
@@ -667,7 +745,7 @@ layout_mode = 2
 
 [node name="panel" type="PanelContainer" parent="Margin/Objects/Styleboxes"]
 layout_mode = 2
-theme_override_styles/panel = ExtResource("77_dxksu")
+theme_override_styles/panel = ExtResource("90_vkt5y")
 
 [node name="Label" type="Label" parent="Margin/Objects/Styleboxes/panel"]
 layout_mode = 2
@@ -783,6 +861,8 @@ libraries = {
 
 [node name="HSlider" type="HSlider" parent="Margin/Objects/UI"]
 layout_mode = 2
+value = 10.0
+tick_count = 6
 
 [node name="LineEdit" type="LineEdit" parent="Margin/Objects/UI"]
 layout_mode = 2
@@ -852,3 +932,8 @@ gutters_draw_executing_lines = true
 gutters_draw_line_numbers = true
 gutters_zero_pad_line_numbers = true
 gutters_draw_fold_gutter = true
+
+[node name="VSlider" type="VSlider" parent="Margin/Objects/UI"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+tick_count = 6
