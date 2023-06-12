@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://iaim8bc6e2c"
-path="res://.godot/imported/color_picker_overbright.svg-0455cdc01352b2e60facdef7aa015775.ctex"
+uid="uid://b0gl361xjvvcm"
+path="res://.godot/imported/bar.svg-58583f5e70ced52c7c6c7d35521d7b4e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://theme/icons/_todo/color_picker/color_picker_overbright.svg"
-dest_files=["res://.godot/imported/color_picker_overbright.svg-0455cdc01352b2e60facdef7aa015775.ctex"]
+source_file="res://theme/icons/color_picker/bar.svg"
+dest_files=["res://.godot/imported/bar.svg-58583f5e70ced52c7c6c7d35521d7b4e.ctex"]
 
 [params]
 

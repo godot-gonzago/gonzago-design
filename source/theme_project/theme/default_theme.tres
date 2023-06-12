@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=90 format=3]
+[gd_resource type="Theme" load_steps=97 format=3 uid="uid://bemrpj8irb4cj"]
 
 [ext_resource type="StyleBox" uid="uid://db018nyyw03ml" path="res://theme/styleboxes/basic/disabled.tres" id="1_r2vi7"]
 [ext_resource type="StyleBox" uid="uid://dxk3ev6b523o1" path="res://theme/styleboxes/basic/focus.tres" id="2_muin1"]
@@ -33,14 +33,21 @@
 [ext_resource type="Texture2D" uid="uid://dsvn850ppr5pd" path="res://theme/icons/text/space.svg" id="31_x5ohs"]
 [ext_resource type="Texture2D" uid="uid://w86u2bpyi5tb" path="res://theme/icons/text/tab.svg" id="32_sv72c"]
 [ext_resource type="Texture2D" uid="uid://y1pjqaf1lf4q" path="res://theme/icons/add.svg" id="33_2rc8x"]
+[ext_resource type="Texture2D" uid="uid://b0gl361xjvvcm" path="res://theme/icons/color_picker/bar.svg" id="34_jaq6e"]
 [ext_resource type="Texture2D" uid="uid://dparsg701a1gy" path="res://theme/icons/checkerboard.svg" id="34_x7f52"]
+[ext_resource type="Texture2D" uid="uid://pd1sifbbs1kl" path="res://theme/icons/color_picker/overbright.svg" id="35_pndus"]
 [ext_resource type="Texture2D" uid="uid://b78kgtafu44ol" path="res://theme/icons/arrows/previous.svg" id="35_rropo"]
 [ext_resource type="Texture2D" uid="uid://ffpufqdcwq3q" path="res://theme/icons/io/file.svg" id="36_g7bfm"]
+[ext_resource type="Texture2D" uid="uid://djrd2ltmmesfc" path="res://theme/icons/color_picker/cursor.svg" id="36_tk6ph"]
 [ext_resource type="Texture2D" uid="uid://clignrahrxbsx" path="res://theme/icons/io/folder.svg" id="37_q73gs"]
+[ext_resource type="Texture2D" uid="uid://bpa75w6fsg4v1" path="res://theme/icons/color_picker/pipette.svg" id="38_1r5vd"]
 [ext_resource type="Texture2D" uid="uid://bljb4tqllinxf" path="res://theme/icons/arrows/next.svg" id="38_l56sm"]
+[ext_resource type="Texture2D" uid="uid://dhs4fyumqew6q" path="res://theme/icons/color_picker/circle.svg" id="39_gfqto"]
 [ext_resource type="Texture2D" uid="uid://dyaeutywee2su" path="res://theme/icons/io/parent_folder.svg" id="39_oxig3"]
+[ext_resource type="Texture2D" uid="uid://bw6vrqfugqetm" path="res://theme/icons/color_picker/rectangle.svg" id="40_413tc"]
 [ext_resource type="Texture2D" uid="uid://q1jl0l7tlsv0" path="res://theme/icons/io/reload.svg" id="40_pa7jq"]
 [ext_resource type="Texture2D" uid="uid://dxmngdkspnni2" path="res://theme/icons/states/visible.svg" id="41_4nwga"]
+[ext_resource type="Texture2D" uid="uid://bqqs7pmk1fb18" path="res://theme/icons/color_picker/wheel.svg" id="41_4r6t8"]
 [ext_resource type="FontVariation" uid="uid://dy6aq08jgl5kx" path="res://theme/fonts/jost/jost-700-bold.tres" id="42_cjldr"]
 [ext_resource type="FontVariation" uid="uid://cyaxjbdc7un3e" path="res://theme/fonts/fira_code/fira_code-400-regular.tres" id="43_1yqdi"]
 [ext_resource type="Texture2D" uid="uid://con265xf0u8wy" path="res://theme/icons/graph/layout.svg" id="44_57ahp"]
@@ -173,9 +180,16 @@ CodeEdit/icons/tab = ExtResource("32_sv72c")
 CodeEdit/styles/focus = ExtResource("2_muin1")
 ColorPicker/constants/margin = 8
 ColorPicker/icons/add_preset = ExtResource("33_2rc8x")
+ColorPicker/icons/bar_arrow = ExtResource("34_jaq6e")
 ColorPicker/icons/expanded_arrow = ExtResource("27_h3rxm")
 ColorPicker/icons/folded_arrow = ExtResource("29_k73nb")
+ColorPicker/icons/overbright_indicator = ExtResource("35_pndus")
+ColorPicker/icons/picker_cursor = ExtResource("36_tk6ph")
 ColorPicker/icons/sample_bg = ExtResource("34_x7f52")
+ColorPicker/icons/screen_picker = ExtResource("38_1r5vd")
+ColorPicker/icons/shape_circle = ExtResource("39_gfqto")
+ColorPicker/icons/shape_rect = ExtResource("40_413tc")
+ColorPicker/icons/shape_rect_wheel = ExtResource("41_4r6t8")
 ColorPickerButton/colors/font_color = Color(0.886275, 0.894118, 0.901961, 1)
 ColorPickerButton/colors/font_disabled_color = Color(0.321569, 0.32549, 0.337255, 1)
 ColorPickerButton/colors/font_focus_color = Color(0.886275, 0.894118, 0.901961, 1)
@@ -189,6 +203,7 @@ ColorPickerButton/styles/focus = ExtResource("2_muin1")
 ColorPickerButton/styles/hover = ExtResource("3_hv6my")
 ColorPickerButton/styles/normal = ExtResource("4_a15q8")
 ColorPickerButton/styles/pressed = ExtResource("5_hmixu")
+ColorPresetButton/icons/overbright_indicator = ExtResource("35_pndus")
 ColorPresetButton/icons/preset_bg = ExtResource("34_x7f52")
 FileDialog/colors/file_disabled_color = Color(1, 1, 1, 1)
 FileDialog/colors/file_icon_color = Color(1, 1, 1, 1)

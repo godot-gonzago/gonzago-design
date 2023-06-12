@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dp7ie7pvx1vfu"
-path="res://.godot/imported/picker_shape_rectangle_wheel.svg-971e44ecb0de7b5b017329b7c27e872c.ctex"
+uid="uid://bqqs7pmk1fb18"
+path="res://.godot/imported/wheel.svg-c2b5a9d9c984945be5de4da174befc4d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://theme/icons/_todo/color_picker/picker_shape_rectangle_wheel.svg"
-dest_files=["res://.godot/imported/picker_shape_rectangle_wheel.svg-971e44ecb0de7b5b017329b7c27e872c.ctex"]
+source_file="res://theme/icons/color_picker/wheel.svg"
+dest_files=["res://.godot/imported/wheel.svg-c2b5a9d9c984945be5de4da174befc4d.ctex"]
 
 [params]
 
