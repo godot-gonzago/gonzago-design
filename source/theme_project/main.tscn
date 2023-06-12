@@ -821,61 +821,64 @@ theme_override_styles/panel = ExtResource("95_w4xis")
 layout_mode = 2
 text = "fill"
 
-[node name="UI" type="VBoxContainer" parent="Margin/Objects"]
+[node name="UI" type="HBoxContainer" parent="Margin/Objects"]
 custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
 
-[node name="simple_button" type="Button" parent="Margin/Objects/UI"]
+[node name="Group1" type="VBoxContainer" parent="Margin/Objects/UI"]
+layout_mode = 2
+
+[node name="simple_button" type="Button" parent="Margin/Objects/UI/Group1"]
 layout_mode = 2
 text = "Button"
 
-[node name="disabled_button" type="Button" parent="Margin/Objects/UI"]
+[node name="disabled_button" type="Button" parent="Margin/Objects/UI/Group1"]
 layout_mode = 2
 disabled = true
 text = "Disabled"
 
-[node name="flat_button" type="Button" parent="Margin/Objects/UI"]
+[node name="flat_button" type="Button" parent="Margin/Objects/UI/Group1"]
 layout_mode = 2
 text = "Flat"
 flat = true
 
-[node name="CheckButton" type="CheckButton" parent="Margin/Objects/UI"]
+[node name="CheckButton" type="CheckButton" parent="Margin/Objects/UI/Group1"]
 layout_mode = 2
 text = "CheckButton"
 
-[node name="ProgressBar" type="ProgressBar" parent="Margin/Objects/UI"]
+[node name="ProgressBar" type="ProgressBar" parent="Margin/Objects/UI/Group1"]
 layout_mode = 2
 tooltip_text = "This is a test tooltip"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Margin/Objects/UI/ProgressBar"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Margin/Objects/UI/Group1/ProgressBar"]
 autoplay = "test"
 libraries = {
 "": SubResource("AnimationLibrary_jf2uf")
 }
 
-[node name="ProgressBar2" type="ProgressBar" parent="Margin/Objects/UI"]
+[node name="ProgressBar2" type="ProgressBar" parent="Margin/Objects/UI/Group1"]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 show_percentage = false
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Margin/Objects/UI/ProgressBar2"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Margin/Objects/UI/Group1/ProgressBar2"]
 autoplay = "test"
 libraries = {
 "": SubResource("AnimationLibrary_jf2uf")
 }
 
-[node name="HSlider" type="HSlider" parent="Margin/Objects/UI"]
+[node name="HSlider" type="HSlider" parent="Margin/Objects/UI/Group1"]
 layout_mode = 2
 value = 10.0
 tick_count = 6
 
-[node name="LineEdit" type="LineEdit" parent="Margin/Objects/UI"]
+[node name="LineEdit" type="LineEdit" parent="Margin/Objects/UI/Group1"]
 layout_mode = 2
 text = "LineEdit"
 caret_blink = true
 caret_blink_interval = 0.5
 
-[node name="search" type="LineEdit" parent="Margin/Objects/UI"]
+[node name="search" type="LineEdit" parent="Margin/Objects/UI/Group1"]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("99_hcth5")
 theme_override_styles/focus = ExtResource("92_j8qqk")
@@ -885,7 +888,7 @@ right_icon = ExtResource("35_j5gv3")
 caret_blink = true
 caret_blink_interval = 0.5
 
-[node name="LineEdit_disabled" type="LineEdit" parent="Margin/Objects/UI"]
+[node name="LineEdit_disabled" type="LineEdit" parent="Margin/Objects/UI/Group1"]
 visible = false
 layout_mode = 2
 text = "disabled"
@@ -893,7 +896,7 @@ editable = false
 caret_blink = true
 caret_blink_interval = 0.5
 
-[node name="LineEdit_flat" type="LineEdit" parent="Margin/Objects/UI"]
+[node name="LineEdit_flat" type="LineEdit" parent="Margin/Objects/UI/Group1"]
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxFlat_i74he")
 text = "LineEdit"
@@ -903,7 +906,7 @@ flat = true
 caret_blink = true
 caret_blink_interval = 0.5
 
-[node name="MenuButton" type="MenuButton" parent="Margin/Objects/UI"]
+[node name="MenuButton" type="MenuButton" parent="Margin/Objects/UI/Group1"]
 layout_mode = 2
 text = "Merp"
 item_count = 6
@@ -925,10 +928,7 @@ popup/item_5/text = "Oh no"
 popup/item_5/id = 5
 popup/item_5/disabled = true
 
-[node name="ColorPickerButton" type="ColorPickerButton" parent="Margin/Objects/UI"]
-layout_mode = 2
-
-[node name="CodeEdit" type="CodeEdit" parent="Margin/Objects/UI"]
+[node name="CodeEdit" type="CodeEdit" parent="Margin/Objects/UI/Group1"]
 custom_minimum_size = Vector2(300, 200)
 layout_mode = 2
 text = "super._init()"
@@ -939,32 +939,38 @@ gutters_draw_line_numbers = true
 gutters_zero_pad_line_numbers = true
 gutters_draw_fold_gutter = true
 
-[node name="VSlider" type="VSlider" parent="Margin/Objects/UI"]
+[node name="VSlider" type="VSlider" parent="Margin/Objects/UI/Group1"]
 custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 tick_count = 6
 
-[node name="HSplitContainer" type="HSplitContainer" parent="Margin/Objects/UI"]
+[node name="Group2" type="VBoxContainer" parent="Margin/Objects/UI"]
 layout_mode = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="Margin/Objects/UI/HSplitContainer"]
+[node name="HSplitContainer" type="HSplitContainer" parent="Margin/Objects/UI/Group2"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Margin/Objects/UI/Group2/HSplitContainer"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 
-[node name="TabBar" type="TabBar" parent="Margin/Objects/UI/HSplitContainer/PanelContainer"]
+[node name="TabBar" type="TabBar" parent="Margin/Objects/UI/Group2/HSplitContainer/PanelContainer"]
 layout_mode = 2
 tab_count = 3
 tab_0/title = "asdf"
 tab_1/title = "fdsa"
 tab_2/title = "asdf"
 
-[node name="PanelContainer2" type="PanelContainer" parent="Margin/Objects/UI/HSplitContainer"]
+[node name="PanelContainer2" type="PanelContainer" parent="Margin/Objects/UI/Group2/HSplitContainer"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 
-[node name="TabBar" type="TabBar" parent="Margin/Objects/UI/HSplitContainer/PanelContainer2"]
+[node name="TabBar" type="TabBar" parent="Margin/Objects/UI/Group2/HSplitContainer/PanelContainer2"]
 layout_mode = 2
 tab_count = 3
 tab_0/title = "asdf"
 tab_1/title = "fdsa"
 tab_2/title = "asdf"
+
+[node name="ColorPicker" type="ColorPicker" parent="Margin/Objects/UI/Group2"]
+layout_mode = 2
