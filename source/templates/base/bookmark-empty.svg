@@ -8,7 +8,7 @@
    version="1.1"
    id="icon_svg"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
-   sodipodi:docname="action_cut.svg"
+   sodipodi:docname="bookmark-empty.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -62,11 +62,11 @@
      borderopacity="1"
      inkscape:pageopacity="0"
      inkscape:deskcolor="#1c202b"
-     inkscape:current-layer="shears"
+     inkscape:current-layer="base_layer"
      inkscape:showpageshadow="0"
-     inkscape:zoom="20"
-     inkscape:cx="2.25"
-     inkscape:cy="9.125"
+     inkscape:zoom="22.627417"
+     inkscape:cx="6.3860581"
+     inkscape:cy="10.230951"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
@@ -90,37 +90,11 @@
      inkscape:label="Base Layer"
      inkscape:groupmode="layer"
      id="base_layer">
-    <g
-       id="lines"
+    <path
+       id="bookmark"
+       d="M 5,2 C 4.6,2 4,2.5 4,3 v 10 l 4,-3 4,3 V 3 C 12,2.5 11.5,2 11,2 Z"
        fill="none"
        stroke="#e0e0e0"
-       stroke-width="2">
-      <circle
-         id="circle_left"
-         cx="4"
-         cy="13"
-         r="2" />
-      <circle
-         id="circle_right"
-         cx="12"
-         cy="13"
-         r="2" />
-      <path
-         d="M 5.725,14 8.9,8.5"
-         id="line_left" />
-      <path
-         d="M 10.275,14 7.1,8.5"
-         id="line_right" />
-    </g>
-    <g
-       id="shears"
-       fill="#e0e0e0">
-      <path
-         d="M 8,8 3.6,0.5 C 1.9,2.9 2,4 3,6 4,8 6,11 8,8 Z"
-         id="shear_left" />
-      <path
-         d="M 8,8 12.4,0.5 C 14.1,2.9 14,4 13,6 12,8 10,11 8,8 Z"
-         id="shear_right" />
-    </g>
+       stroke-width="2" />
   </g>
 </svg>
