@@ -64,9 +64,9 @@
      inkscape:deskcolor="#1c202b"
      inkscape:current-layer="base_layer"
      inkscape:showpageshadow="0"
-     inkscape:zoom="20"
-     inkscape:cx="7.5"
-     inkscape:cy="8.925"
+     inkscape:zoom="40"
+     inkscape:cx="7.825"
+     inkscape:cy="9.0625"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
@@ -85,7 +85,18 @@
        opacity="0.3" />
   </sodipodi:namedview>
   <defs
-     id="base_definitions" />
+     id="base_definitions">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="base_clip">
+      <rect
+         id="base_clip_shape"
+         width="10"
+         height="3"
+         x="3"
+         y="7" />
+    </clipPath>
+  </defs>
   <g
      inkscape:label="Base Layer"
      inkscape:groupmode="layer"
@@ -97,10 +108,15 @@
        stroke="#e0e0e0"
        stroke-linecap="round"
        stroke-width="2" />
-    <path
-       d="M 3,10 H 13 V 9 C 13,8 12,7 11,7 H 5 C 4,7 3,8 3,9 Z"
+    <rect
        id="base"
-       fill="#e0e0e0" />
+       width="10"
+       height="6"
+       x="3"
+       y="7"
+       ry="2"
+       fill="#e0e0e0"
+       clip-path="url(#base_clip)" />
     <path
        d="m 3,11 v 4 l 10,-1 v -3 z"
        id="head"

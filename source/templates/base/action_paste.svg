@@ -62,11 +62,11 @@
      borderopacity="1"
      inkscape:pageopacity="0"
      inkscape:deskcolor="#1c202b"
-     inkscape:current-layer="base_layer"
+     inkscape:current-layer="clipboard"
      inkscape:showpageshadow="0"
      inkscape:zoom="28.284271"
-     inkscape:cx="8.4145708"
-     inkscape:cy="8.3968931"
+     inkscape:cx="8.4499261"
+     inkscape:cy="8.2908271"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
@@ -85,28 +85,57 @@
        opacity="0.3" />
   </sodipodi:namedview>
   <defs
-     id="base_definitions" />
+     id="base_definitions">
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask">
+      <g
+         id="mask_group">
+        <rect
+           id="mask_base"
+           width="16"
+           height="16"
+           x="0"
+           y="0"
+           fill="#ffffff" />
+        <rect
+           id="mask_board"
+           width="8"
+           height="5"
+           x="4"
+           y="7"
+           fill="#000000" />
+        <circle
+           id="mask_hole"
+           cx="8"
+           cy="4"
+           r="1"
+           fill="#000000" />
+      </g>
+    </mask>
+  </defs>
   <g
      inkscape:label="Base Layer"
      inkscape:groupmode="layer"
      id="base_layer">
     <g
        id="clipboard"
-       fill="none"
-       stroke="#e0e0e0"
-       stroke-width="2"
-       stroke-linejoin="round">
-      <circle
-         id="clip_hole"
-         cx="8"
-         cy="4"
-         r="2" />
-      <path
-         d="m 5,6 h 6"
-         id="clip_base" />
+       mask="url(#mask)">
       <path
          d="m 10,4 h 4 V 14 H 2 V 4 h 4"
-         id="board" />
+         id="board"
+         fill="none"
+         stroke="#e0e0e0"
+         stroke-width="2"
+         stroke-linejoin="round" />
+      <rect
+         id="clip"
+         width="6"
+         height="9"
+         x="5"
+         y="1"
+         ry="3"
+         fill="#e0e0e0" />
     </g>
   </g>
 </svg>

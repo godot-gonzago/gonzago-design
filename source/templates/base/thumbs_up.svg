@@ -65,8 +65,8 @@
      inkscape:current-layer="base_layer"
      inkscape:showpageshadow="0"
      inkscape:zoom="20"
-     inkscape:cx="2.25"
-     inkscape:cy="9.125"
+     inkscape:cx="5.2"
+     inkscape:cy="8.425"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
@@ -85,7 +85,28 @@
        opacity="0.3" />
   </sodipodi:namedview>
   <defs
-     id="base_definitions" />
+     id="base_definitions">
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask">
+      <g
+         id="mask_group">
+        <rect
+           id="mask_base"
+           width="16"
+           height="16"
+           x="0"
+           y="0"
+           fill="#ffffff" />
+        <circle
+           id="mask_hole"
+           cx="3"
+           cy="12"
+           r="1"
+           fill="#000000" />
+      </g>
+    </mask>
+  </defs>
   <g
      inkscape:label="Base Layer"
      inkscape:groupmode="layer"
@@ -97,7 +118,8 @@
        x="1"
        y="5"
        ry="1"
-       fill="#e0e0e0" />
+       fill="#e0e0e0"
+       mask="url(#mask)" />
     <path
        id="hand"
        d="m 7,14 h 4 a 3.4,3.4 0 0 0 3.3,-3 L 14.6,8 A 2.7,2.7 0 0 0 12,5 H 9 V 3 A 2,2 0 0 0 7,1 H 6 v 12 a 1,1 0 0 0 1,1 z"
