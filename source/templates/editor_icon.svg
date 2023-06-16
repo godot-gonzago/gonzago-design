@@ -16,51 +16,15 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <sodipodi:namedview
-     id="base_view"
-     inkscape:document-units="px"
-     showgrid="true"
-     units="px"
-     width="16px"
-     viewbox-height="16"
-     inkscape:snap-grids="true"
-     pagecolor="#333b4f"
-     bordercolor="#999999"
-     borderopacity="1"
-     inkscape:showpageshadow="0"
-     inkscape:pageopacity="0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="14.75"
-     inkscape:cx="-2.6440678"
-     inkscape:cy="8.9830508"
-     inkscape:window-width="1368"
-     inkscape:window-height="850"
-     inkscape:window-x="-6"
-     inkscape:window-y="-6"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="base_layer">
-    <inkscape:grid
-       type="xygrid"
-       id="base_grid"
-       dotted="true"
-       empspacing="4" />
-  </sodipodi:namedview>
-  <defs
-     id="base_definitions" />
-  <g
-     inkscape:label="Base Layer"
-     inkscape:groupmode="layer"
-     id="base_layer" />
   <inkscape:templateinfo>
     <inkscape:name>Godot Editor Icon</inkscape:name>
     <inkscape:author>David Krummenacher</inkscape:author>
     <inkscape:shortdesc>Godot Editor Icon, 16x16px</inkscape:shortdesc>
     <inkscape:date>2022-08-20</inkscape:date>
-    <inkscape:keywords>Godot, Gonzago, Icon</inkscape:keywords>
+    <inkscape:keywords>Godot, Gonzago, Icon, Editor</inkscape:keywords>
   </inkscape:templateinfo>
   <metadata
-     id="metadata130">
+     id="metadata">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -93,11 +57,44 @@
       </cc:License>
     </rdf:RDF>
   </metadata>
-  <inkscape:templateinfo>
-    <inkscape:name>Godot Editor Icon</inkscape:name>
-    <inkscape:author>David Krummenacher</inkscape:author>
-    <inkscape:shortdesc>Editor icon for the Godot game engine.</inkscape:shortdesc>
-    <inkscape:date>2023-06-16</inkscape:date>
-    <inkscape:keywords>editor, icon, godot</inkscape:keywords>
-  </inkscape:templateinfo>
+  <sodipodi:namedview
+     id="base_view"
+     showgrid="true"
+     units="px"
+     width="16px"
+     viewbox-height="16"
+     inkscape:snap-grids="true"
+     pagecolor="#333b4f"
+     bordercolor="#8f939e"
+     borderopacity="1"
+     inkscape:pageopacity="0"
+     inkscape:deskcolor="#1c202b"
+     inkscape:current-layer="base_layer"
+     inkscape:showpageshadow="0"
+     inkscape:zoom="20"
+     inkscape:cx="6.45"
+     inkscape:cy="9.125"
+     inkscape:window-width="1368"
+     inkscape:window-height="850"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:document-units="px"
+     inkscape:pagecheckerboard="0">
+    <inkscape:grid
+       type="xygrid"
+       id="base_grid"
+       dotted="true"
+       empspacing="4"
+       empcolor="#699ce8"
+       empopacity="0.3"
+       color="#699ce8"
+       opacity="0.3" />
+  </sodipodi:namedview>
+  <defs
+     id="base_definitions" />
+  <g
+     inkscape:label="Base Layer"
+     inkscape:groupmode="layer"
+     id="base_layer" />
 </svg>
