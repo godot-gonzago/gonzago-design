@@ -34,6 +34,7 @@
           </cc:Agent>
         </dc:publisher>
         <dc:source>https://github.com/godot-gonzago</dc:source>
+        <dc:description>Recreation of https://github.com/godotengine/godot/blob/master/editor/icons/Container.svg</dc:description>
       </cc:Work>
       <cc:License
          rdf:about="http://creativecommons.org/licenses/by/4.0/">

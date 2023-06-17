@@ -34,6 +34,7 @@
           </cc:Agent>
         </dc:publisher>
         <dc:source>https://github.com/godot-gonzago</dc:source>
+        <dc:description>Based on https://github.com/godotengine/godot/blob/master/editor/icons/HelpSearch.svg</dc:description>
       </cc:Work>
       <cc:License
          rdf:about="http://creativecommons.org/licenses/by/4.0/">
