@@ -78,3 +78,8 @@ Other:
 ======
 Config (_masks/config, ???)
 Help (generic/help, create rescue thingy)
+Add more media/resource types (like image, video, sfx, music)?
+Add more variant types? (maybe replace with editor icons for 2D and 3D?)
+
+
+- Create default theme icon set etc (base on godot default theme, but also add own variant like already started)
