@@ -65,8 +65,8 @@
      inkscape:current-layer="base_layer"
      inkscape:showpageshadow="0"
      inkscape:zoom="40"
-     inkscape:cx="7.8"
-     inkscape:cy="7.2375"
+     inkscape:cx="8.55"
+     inkscape:cy="7.6125"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
@@ -97,26 +97,22 @@
          id="reel_right"
          cx="9"
          cy="5"
-         r="3"
-         style="fill:#e0e0e0" />
+         r="3" />
       <circle
          id="reel_left"
          cx="4"
          cy="7"
-         r="3"
-         style="fill:#e0e0e0" />
+         r="3" />
       <rect
          id="body"
          width="8"
          height="7"
          x="3"
          y="6"
-         ry="1"
-         style="fill:#e0e0e0" />
+         ry="1" />
       <path
          d="M 14,7 9.5,10 14,13 Z"
-         id="lens"
-         style="fill:#e0e0e0" />
+         id="lens" />
     </g>
   </g>
 </svg>
