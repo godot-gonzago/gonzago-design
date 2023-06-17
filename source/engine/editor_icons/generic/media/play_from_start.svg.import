@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnd22mfecyip"
-path="res://.godot/imported/from_start.svg-bd07f0b031982afb2060145d64f6452a.ctex"
+path="res://.godot/imported/play_from_start.svg-1db29e9549797a39c9ab698211189798.ctex"
 metadata={
 "editor_dark_theme": true,
 "editor_scale": 1.0,
@@ -13,8 +13,8 @@ metadata={
 
 [deps]
 
-source_file="res://editor_icons/generic/media/from_start.svg"
-dest_files=["res://.godot/imported/from_start.svg-bd07f0b031982afb2060145d64f6452a.ctex"]
+source_file="res://editor_icons/generic/media/play_from_start.svg"
+dest_files=["res://.godot/imported/play_from_start.svg-1db29e9549797a39c9ab698211189798.ctex"]
 
 [params]
 
