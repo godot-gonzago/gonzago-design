@@ -8,7 +8,7 @@
    version="1.1"
    id="icon_svg"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
-   sodipodi:docname="advanced_line_edit.svg"
+   sodipodi:docname="media_repeat_one.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +62,7 @@
      borderopacity="1"
      inkscape:pageopacity="0"
      inkscape:deskcolor="#1c202b"
-     inkscape:current-layer="hashtag"
+     inkscape:current-layer="loop"
      inkscape:showpageshadow="0"
      inkscape:zoom="20"
      inkscape:cx="2.25"
@@ -86,47 +86,62 @@
   </sodipodi:namedview>
   <defs
      id="base_definitions">
-    <clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="clip">
-      <rect
-         id="clip_shape"
-         width="14"
-         height="2"
-         x="1"
-         y="11" />
-    </clipPath>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="loop_mask">
+      <g
+         id="loop_mask_group">
+        <rect
+           id="loop_mask_base"
+           width="16"
+           height="16"
+           x="0"
+           y="0"
+           fill="#ffffff" />
+        <rect
+           id="loop_mask_center"
+           width="10"
+           height="6"
+           x="3"
+           y="5"
+           ry="3"
+           fill="#000000" />
+      </g>
+    </mask>
   </defs>
   <g
      inkscape:label="Base Layer"
      inkscape:groupmode="layer"
      id="base_layer">
-    <rect
-       id="base"
-       width="14"
-       height="4"
-       x="1"
-       y="9"
-       ry="2"
-       clip-path="url(#clip)"
-       fill="#8eef97" />
     <g
-       id="hashtag"
-       stroke="#8eef97"
-       stroke-width="1.5"
-       stroke-linecap="round">
+       id="loop"
+       mask="url(#loop_mask)">
       <path
-         d="m 4.5,3 -1,6"
-         id="line_v1" />
+         id="arrow_top"
+         d="M 2.8,10.4 A 4,4 0 0 1 2.4,6.2 4,4 0 0 1 6,4 h 2"
+         fill="none"
+         stroke="#e0e0e0"
+         stroke-width="2" />
       <path
-         d="m 7.5,3 -1,6"
-         id="line_v2" />
+         id="arrow_bottom"
+         d="m 13.2,5.6 c 1,1.2 1,2.8 0.4,4.2 C 12.9,11.1 11.5,12 10,12 H 8"
+         fill="none"
+         stroke="#e0e0e0"
+         stroke-width="2" />
       <path
-         d="M 2.5,4.5 H 9"
-         id="line_h1" />
+         d="M 8,1 V 7 L 12,4 Z"
+         id="arrow_head_top"
+         fill="#e0e0e0" />
       <path
-         d="M 2,7.5 H 8.5"
-         id="line_h2" />
+         d="m 8,9 v 6 L 4,12 Z"
+         id="arrow_head_bottom"
+         fill="#e0e0e0" />
     </g>
+    <circle
+       id="dot"
+       cx="8"
+       cy="8"
+       r="1.5"
+       fill="#e0e0e0" />
   </g>
 </svg>

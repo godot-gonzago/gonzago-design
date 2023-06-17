@@ -97,15 +97,15 @@
        stroke="#e0e0e0"
        stroke-width="2" />
     <path
-       d="M 8,1 V 7 L 12,4 Z"
-       id="arrow_head_top"
-       fill="#e0e0e0" />
-    <path
        id="arrow_bottom"
        d="m 13.2,5.6 c 1,1.2 1,2.8 0.4,4.2 C 12.9,11.1 11.5,12 10,12 H 8"
        fill="none"
        stroke="#e0e0e0"
        stroke-width="2" />
+    <path
+       d="M 8,1 V 7 L 12,4 Z"
+       id="arrow_head_top"
+       fill="#e0e0e0" />
     <path
        d="m 8,9 v 6 L 4,12 Z"
        id="arrow_head_bottom"

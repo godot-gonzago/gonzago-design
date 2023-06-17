@@ -1,0 +1,150 @@
+[gd_scene load_steps=3 format=3 uid="uid://k0m807sdxmgp"]
+
+[ext_resource type="Texture2D" uid="uid://degcqdioi20dc" path="res://default.svg" id="1_0roi6"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_6caam"]
+
+[node name="Panel" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ToolBar" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="TabBar" type="TabBar" parent="ToolBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+tab_count = 2
+tab_0/title = "Editor"
+tab_1/title = "Default"
+
+[node name="TypesOptions" type="OptionButton" parent="ToolBar"]
+visible = false
+layout_mode = 2
+item_count = 1
+selected = 0
+popup/item_0/text = "Any Type"
+popup/item_0/id = 0
+
+[node name="DataTypesOptions" type="OptionButton" parent="ToolBar"]
+visible = false
+layout_mode = 2
+item_count = 1
+selected = 0
+popup/item_0/text = "All Data Types"
+popup/item_0/id = 0
+
+[node name="Search" type="LineEdit" parent="ToolBar"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+caret_blink = true
+caret_blink_interval = 0.5
+
+[node name="DetailToggle" type="Button" parent="ToolBar"]
+layout_mode = 2
+
+[node name="EntriesContainer" type="HSplitContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Scroll" type="ScrollContainer" parent="EntriesContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="Types" type="VBoxContainer" parent="EntriesContainer/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Type" type="VBoxContainer" parent="EntriesContainer/Scroll/Types"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HeaderPanel" type="PanelContainer" parent="EntriesContainer/Scroll/Types/Type"]
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="EntriesContainer/Scroll/Types/Type/HeaderPanel"]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="EntriesContainer/Scroll/Types/Type/HeaderPanel/Header"]
+layout_mode = 2
+texture = ExtResource("1_0roi6")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="EntriesContainer/Scroll/Types/Type/HeaderPanel/Header"]
+layout_mode = 2
+text = "TypeName"
+
+[node name="DataTypes" type="VBoxContainer" parent="EntriesContainer/Scroll/Types/Type"]
+layout_mode = 2
+
+[node name="Icons" type="HBoxContainer" parent="EntriesContainer/Scroll/Types/Type/DataTypes"]
+layout_mode = 2
+
+[node name="TypePanel" type="PanelContainer" parent="EntriesContainer/Scroll/Types/Type/DataTypes/Icons"]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="EntriesContainer/Scroll/Types/Type/DataTypes/Icons/TypePanel"]
+layout_mode = 2
+texture = ExtResource("1_0roi6")
+stretch_mode = 2
+
+[node name="Entries" type="HFlowContainer" parent="EntriesContainer/Scroll/Types/Type/DataTypes/Icons"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Entry" type="PanelContainer" parent="EntriesContainer/Scroll/Types/Type/DataTypes/Icons/Entries"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="EntriesContainer/Scroll/Types/Type/DataTypes/Icons/Entries/Entry"]
+layout_mode = 2
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_6caam")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="EntriesContainer/Scroll/Types/Type/DataTypes/Icons/Entries/Entry"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="EntriesContainer/Scroll/Types/Type/DataTypes/Icons/Entries/Entry/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_0roi6")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="EntriesContainer/Scroll/Types/Type/DataTypes/Icons/Entries/Entry/VBoxContainer"]
+layout_mode = 2
+text = "ItemName"
+
+[node name="EntryDetails" type="VBoxContainer" parent="EntriesContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Preview" type="TextureRect" parent="EntriesContainer/EntryDetails"]
+layout_mode = 2
+texture = ExtResource("1_0roi6")
+stretch_mode = 3
+
+[node name="PreviewOptions" type="HBoxContainer" parent="EntriesContainer/EntryDetails"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="EntriesContainer/EntryDetails/PreviewOptions"]
+layout_mode = 2
+
+[node name="Properties" type="Tree" parent="EntriesContainer/EntryDetails"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Options" type="VBoxContainer" parent="EntriesContainer/EntryDetails"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="EntriesContainer/EntryDetails/Options"]
+layout_mode = 2
+text = "Copy to clipboard"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 2
