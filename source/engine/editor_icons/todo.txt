@@ -1,11 +1,5 @@
 EditorIcons:
 ============
-AudioStreamPlayer (_masks/player)
-CurveCreate (_masks/create)
-CurveDelete (_masks/delete)
-CurveEdit (_masks/edit)
-
-Duplicate (actions/duplicate)
 Reload (actions/reload)
 Rename (actions/rename)
 
@@ -22,8 +16,6 @@ Close (generic/close)
 ColorPick (generic/pipette)
 CryptoKey (generic/key_alt)
 ExternalLink (generic/link_external)
-FogVolume (for cloud,  generic/cloud_download, generic/cloud_upload)
-GPUParticles3D (for cloud,  generic/cloud_download, generic/cloud_upload)
 History (generic/history)
 NavigationAgent3D (generic/location)
 Pin (generic/pin)
@@ -77,9 +69,67 @@ CombineLines (wysiwyg/collapse)
 Other:
 ======
 Config (_masks/config, ???)
-Help (generic/help, create rescue thingy)
-Add more media/resource types (like image, video, sfx, music)?
-Add more variant types? (maybe replace with editor icons for 2D and 3D?)
+Help (generic/help, lifebuoy)
+Drawing/Editing tools??? (Brightness, Contrast, Rotate, Flip, Mirror)
+SaveAll (floppy disks)
+Characters
+Factions
+Interactables, Interactors, Interactions
+Touch input?
+Progress/Spinner?
+Mouth/Lips?
+Palette
+Weather??
+
+https://icomoon.io/preview-free.html or https://icomoon.io/#preview-ultimate:
+-----------------------------------------------------------------------------
+Printer (io/print)
+Folder (io/folder_plus, io/folder_minus, io/folder_download, io/folder_upload)???
+Compass
+Envelope
+Book/Books
+Mic
+User (add, remove, edit)
+Sliders (for settings, equializer)
+Heart broken???
+Fire/Flames
+Lab (Flask)
+Magnet
+Target
+Blocked
+Flag
+AidKit
+Bug (already in Godot)
+Attachment
+Volume Controls in media
+Sort (sort_alpha_asc, sort_alpha_desc, sort_num_asc, sort_num_desc)
+Globe???
+Speech/Thought bubble
+Home
+Headphones???
+Camera (photo, eg. for screenshots)
+Connection
+Tag/Tags (price tag)
+BarCode/QRCode
+Charts (dots/bars)
+Finger pointers in direction???
+Share
+Cloud?
+Enlarge/Shrink
+Enter/Exit???
+Undo/Redo???
+Forward/Reply/Replay all???
+Antenna
+Satelite Dish
+Cash
+Cup/Mug/Cutlery???
+Tree/Mountains???
+Notebook
+
+- Add more media/resource types (like image, video, sfx, music, zip in io)?
+- Add more variant types? (maybe replace with editor icons for 2D and 3D?)
 
 
 - Create default theme icon set etc (base on godot default theme, but also add own variant like already started)
+- Fill out meta data in all files to reference where Godot original icons were recreated
+  - Meta data can be used for creating AUTHORS.md or license information

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="icon_svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="eye.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata
+     id="metadata">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>David Krummenacher</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>Gonzago Framework</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:source>https://github.com/godot-gonzago</dc:source>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     id="base_view"
+     showgrid="true"
+     units="px"
+     width="16px"
+     viewbox-height="16"
+     inkscape:snap-grids="true"
+     pagecolor="#333b4f"
+     bordercolor="#8f939e"
+     borderopacity="1"
+     inkscape:pageopacity="0"
+     inkscape:deskcolor="#1c202b"
+     inkscape:current-layer="base_layer"
+     inkscape:showpageshadow="0"
+     inkscape:zoom="22.627417"
+     inkscape:cx="6.3860581"
+     inkscape:cy="10.230951"
+     inkscape:window-width="1368"
+     inkscape:window-height="850"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:document-units="px"
+     inkscape:pagecheckerboard="0">
+    <inkscape:grid
+       type="xygrid"
+       id="base_grid"
+       dotted="true"
+       empspacing="4"
+       empcolor="#699ce8"
+       empopacity="0.3"
+       color="#699ce8"
+       opacity="0.3" />
+  </sodipodi:namedview>
+  <defs
+     id="base_definitions">
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="eye_mask">
+      <g
+         id="eye_mask_group">
+        <rect
+           id="eye_mask_base"
+           width="16"
+           height="16"
+           x="0"
+           y="0"
+           fill="#ffffff" />
+        <circle
+           id="eye_mask_shape"
+           cx="8"
+           cy="8"
+           r="3"
+           fill="none"
+           stroke="#000000"
+           stroke-width="2" />
+      </g>
+    </mask>
+  </defs>
+  <g
+     inkscape:label="Base Layer"
+     inkscape:groupmode="layer"
+     id="base_layer">
+    <path
+       id="eye"
+       d="M 15,8 C 15,9 12.7,14 8,14 3.3,14 1,9 1,8 1,7 3.4,2 8,2 c 4.6,0 7,5 7,6 z"
+       fill="#e0e0e0"
+       mask="url(#eye_mask)" />
+  </g>
+</svg>
