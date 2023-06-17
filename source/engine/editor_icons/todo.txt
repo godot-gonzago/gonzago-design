@@ -1,9 +1,7 @@
 EditorIcons:
 ============
 
-Bone (generic/bone)
-Bucket (generic/bucket)
-CanvasItem (generic/brush)
+Bucket (generic/bucket) // THIS IS HORRIBLE
 Callable (generic/bullhorn)
 CharacterBody3D (generic/character?)
 Close (generic/close)
