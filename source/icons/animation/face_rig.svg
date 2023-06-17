@@ -12,69 +12,148 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata
+     id="metadata">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>David Krummenacher</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>Gonzago Framework</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:source>https://github.com/godot-gonzago</dc:source>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
   <sodipodi:namedview
      id="base_view"
-     inkscape:document-units="px"
      showgrid="true"
      units="px"
      width="16px"
      viewbox-height="16"
      inkscape:snap-grids="true"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     inkscape:current-layer="face">
+     pagecolor="#333b4f"
+     bordercolor="#8f939e"
+     borderopacity="1"
+     inkscape:pageopacity="0"
+     inkscape:deskcolor="#1c202b"
+     inkscape:current-layer="base_layer"
+     inkscape:showpageshadow="0"
+     inkscape:zoom="40"
+     inkscape:cx="7.75"
+     inkscape:cy="8.2375"
+     inkscape:window-width="1368"
+     inkscape:window-height="850"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:document-units="px"
+     inkscape:pagecheckerboard="0">
     <inkscape:grid
        type="xygrid"
        id="base_grid"
        dotted="true"
-       empspacing="4" />
+       empspacing="4"
+       empcolor="#699ce8"
+       empopacity="0.3"
+       color="#699ce8"
+       opacity="0.3" />
   </sodipodi:namedview>
   <defs
      id="base_definitions">
     <clipPath
        clipPathUnits="userSpaceOnUse"
-       id="clip_path">
-      <path
-         id="eye_mask_path"
-         d="M -3,-4 H 19 V 20 H -3 Z M 5.5,5 C 4.6690016,5 4,5.6690016 4,6.5 V 7 C 4,7.5539988 4.4460012,8 5,8 H 6 C 6.5539988,8 7,7.5539988 7,7 V 6 C 7,5.4460012 6.5539988,5 6,5 Z M 10,5 C 9.4460012,5 9,5.4460012 9,6 v 1 c 0,0.5539988 0.4460012,1 1,1 h 1 c 0.553998,0 1,-0.4460012 1,-1 V 6.5 C 12,5.6690016 11.330998,5 10.5,5 Z" />
+       id="eyes_outer_clip">
+      <rect
+         id="eyes_outer_clip_shape"
+         width="8"
+         height="6"
+         x="4"
+         y="5"
+         ry="1.5" />
     </clipPath>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="face_mask">
+      <g
+         id="face_mask_group">
+        <rect
+           id="face_mask_base"
+           width="16"
+           height="16"
+           x="0"
+           y="0"
+           fill="#ffffff" />
+        <rect
+           id="face_mask_eye_left"
+           width="3"
+           height="3"
+           x="4"
+           y="5"
+           ry="1"
+           fill="#000000"
+           clip-path="url(#eyes_outer_clip)" />
+        <rect
+           id="face_mask_eye_right"
+           width="3"
+           height="3"
+           x="9"
+           y="5"
+           ry="1"
+           fill="#000000"
+           clip-path="url(#eyes_outer_clip)" />
+      </g>
+    </mask>
   </defs>
   <g
      inkscape:label="Base Layer"
      inkscape:groupmode="layer"
      id="base_layer">
     <g
-       id="mask"
-       clip-path="url(#clip_path)">
-      <g
-         inkscape:label="Clip"
-         id="face">
-        <rect
-           id="base"
-           width="12"
-           height="9"
-           x="2"
-           y="1"
-           fill="#c38ef1"
-           ry="1"
-           rx="1"
-           d="m 3,1 h 10 c 0.554,0 1,0.446 1,1 v 7 c 0,0.554 -0.446,1 -1,1 H 3 C 2.446,10 2,9.554 2,9 V 2 C 2,1.446 2.446,1 3,1 Z" />
-        <circle
-           id="mouth"
-           cx="8"
-           cy="9"
-           r="5"
-           fill="none"
-           stroke="#c38ef1"
-           stroke-width="2"
-           d="M 13,9 A 5,5 0 0 1 8,14 5,5 0 0 1 3,9 5,5 0 0 1 8,4 5,5 0 0 1 13,9 Z" />
-      </g>
+       id="face"
+       mask="url(#face_mask)">
+      <rect
+         id="base"
+         width="12"
+         height="9"
+         x="2"
+         y="1"
+         fill="#c38ef1"
+         ry="1"
+         rx="1" />
+      <circle
+         id="mouth"
+         cx="8"
+         cy="9"
+         r="5"
+         fill="none"
+         stroke="#c38ef1"
+         stroke-width="2" />
     </g>
   </g>
 </svg>

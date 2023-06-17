@@ -65,8 +65,8 @@
      inkscape:current-layer="base_layer"
      inkscape:showpageshadow="0"
      inkscape:zoom="20"
-     inkscape:cx="2.25"
-     inkscape:cy="9.125"
+     inkscape:cx="4.3"
+     inkscape:cy="9.825"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
@@ -85,31 +85,82 @@
        opacity="0.3" />
   </sodipodi:namedview>
   <defs
-     id="base_definitions" />
+     id="base_definitions">
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="search_mask">
+      <g
+         id="search_mask_group">
+        <rect
+           id="search_mask_base"
+           width="16"
+           height="16"
+           x="0"
+           y="0"
+           fill="#ffffff" />
+        <path
+           d="m 16,8 v 8 H 8 c 0,0 0,-1.8 0,-4 0,-2.2 1.8,-4 4,-4 2.2,0 4,0 4,0 z"
+           id="search_mask_shape"
+           fill="#000000" />
+      </g>
+    </mask>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="search_clipping_pos">
+      <path
+         id="search_clipping_pos_shape"
+         d="m 8,16 v -4 c 0,-2.2 1.8,-4 4,-4 2.2,0 4,0 4,0 V 0 H 0 v 16 z" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="search_clipping_neg">
+      <path
+         d="m 16,8 v 8 H 8 c 0,0 0,-1.8 0,-4 0,-2.2 1.8,-4 4,-4 2.2,0 4,0 4,0 z"
+         id="search_clipping_neg_shape" />
+    </clipPath>
+  </defs>
   <g
      inkscape:label="Base Layer"
      inkscape:groupmode="layer"
      id="base_layer">
-    <path
-       id="mask_neg"
-       d="m 16,8 v 8 H 8 c 0,0 0,-1.8 0,-4 0,-2.2 1.8,-4 4,-4 2.2,0 4,0 4,0 z" />
-    <path
-       id="mask_pos"
-       d="m 8,16 v -4 c 0,-2.2 1.8,-4 4,-4 2.2,0 4,0 4,0 V 0 H 0 v 16 z" />
+    <rect
+       id="search_clipped_element_neg"
+       width="16"
+       height="16"
+       x="0"
+       y="0"
+       fill="#cccccc"
+       clip-path="url(#search_clipping_neg)" />
+    <rect
+       id="search_clipped_element_pos"
+       width="16"
+       height="16"
+       x="0"
+       y="0"
+       fill="#aaaaaa"
+       clip-path="url(#search_clipping_pos)" />
+    <rect
+       id="search_masked_element"
+       width="16"
+       height="16"
+       x="0"
+       y="0"
+       fill="#888888"
+       mask="url(#search_mask)" />
     <g
-       id="search"
+       id="search_icon"
        fill="none"
        stroke="#e0e0e0"
        stroke-width="2"
        stroke-linecap="round">
       <circle
-         id="circle"
+         id="search_icon_lens"
          cx="12"
          cy="12"
          r="2" />
       <path
          d="m 14,14 1,1"
-         id="handle" />
+         id="search_icon_handle" />
     </g>
   </g>
 </svg>

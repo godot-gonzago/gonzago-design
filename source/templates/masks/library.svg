@@ -65,8 +65,8 @@
      inkscape:current-layer="base_layer"
      inkscape:showpageshadow="0"
      inkscape:zoom="20"
-     inkscape:cx="2.25"
-     inkscape:cy="9.125"
+     inkscape:cx="5.95"
+     inkscape:cy="10.925"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
@@ -85,19 +85,70 @@
        opacity="0.3" />
   </sodipodi:namedview>
   <defs
-     id="base_definitions" />
+     id="base_definitions">
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="library_mask">
+      <g
+         id="library_mask_group">
+        <rect
+           id="library_mask_base"
+           width="16"
+           height="16"
+           x="0"
+           y="0"
+           fill="#ffffff" />
+        <path
+           d="m 8,7 v 9 h 8 V 7 Z"
+           id="library_mask_shape"
+           fill="#000000" />
+      </g>
+    </mask>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="library_clipping_pos">
+      <path
+         id="library_clipping_pos_shape"
+         d="M 0,0 V 16 H 8 V 7 h 8 V 0 Z" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="library_clipping_neg">
+      <path
+         d="m 8,7 v 9 h 8 V 7 Z"
+         id="library_clipping_neg_shape" />
+    </clipPath>
+  </defs>
   <g
      inkscape:label="Base Layer"
      inkscape:groupmode="layer"
      id="base_layer">
+    <rect
+       id="library_clipped_element_neg"
+       width="16"
+       height="16"
+       x="0"
+       y="0"
+       fill="#cccccc"
+       clip-path="url(#library_clipping_neg)" />
+    <rect
+       id="library_clipped_element_pos"
+       width="16"
+       height="16"
+       x="0"
+       y="0"
+       fill="#aaaaaa"
+       clip-path="url(#library_clipping_pos)" />
+    <rect
+       id="library_masked_element"
+       width="16"
+       height="16"
+       x="0"
+       y="0"
+       fill="#888888"
+       mask="url(#library_mask)" />
     <path
-       d="m 8,7 v 9 h 8 V 7 Z"
-       id="mask_neg" />
-    <path
-       d="M 0,0 V 16 H 8 V 7 h 8 V 0 Z"
-       id="mask_pos" />
-    <path
-       id="book"
+       id="library_icon"
        d="m 9,8 v 7 h 5 c 0.5,0 1,-0.5 1,-1 V 9 C 15,8.5 14.5,8 14,8 v 4 l -1,-1 -1,1 V 8 Z"
        fill="#e0e0e0" />
   </g>

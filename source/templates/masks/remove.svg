@@ -8,7 +8,7 @@
    version="1.1"
    id="icon_svg"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
-   sodipodi:docname="element_remove.svg"
+   sodipodi:docname="remove.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -65,8 +65,8 @@
      inkscape:current-layer="base_layer"
      inkscape:showpageshadow="0"
      inkscape:zoom="20"
-     inkscape:cx="2.25"
-     inkscape:cy="9.125"
+     inkscape:cx="8.55"
+     inkscape:cy="10.325"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
@@ -85,20 +85,71 @@
        opacity="0.3" />
   </sodipodi:namedview>
   <defs
-     id="base_definitions" />
+     id="base_definitions">
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="remove_mask">
+      <g
+         id="remove_mask_group">
+        <rect
+           id="remove_mask_base"
+           width="16"
+           height="16"
+           x="0"
+           y="0"
+           fill="#ffffff" />
+        <path
+           d="M 10.5,7 7,10.5 8.5,12 7,13.5 9.5,16 c 2,0 4.5,0 6.5,0 0,-2 0,-4.5 0,-6.5 L 13.5,7 12,8.5 Z"
+           id="remove_mask_shape"
+           fill="#000000" />
+      </g>
+    </mask>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="remove_clipping_pos">
+      <path
+         id="remove_clipping_pos_shape"
+         d="M 0,0 V 16 H 9.5 L 7,13.5 8.5,12 7,10.5 10.5,7 12,8.5 13.5,7 16,9.5 V 0 Z" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="remove_clipping_neg">
+      <path
+         d="M 10.5,7 7,10.5 8.5,12 7,13.5 9.5,16 c 2,0 4.5,0 6.5,0 0,-2 0,-4.5 0,-6.5 L 13.5,7 12,8.5 Z"
+         id="remove_clipping_neg_shape" />
+    </clipPath>
+  </defs>
   <g
      inkscape:label="Base Layer"
      inkscape:groupmode="layer"
      id="base_layer">
-    <path
-       id="mask_neg"
-       d="M 10.5,7 7,10.5 8.5,12 7,13.5 9.5,16 c 2,0 4.5,0 6.5,0 0,-2 0,-4.5 0,-6.5 L 13.5,7 12,8.5 Z" />
-    <path
-       id="mask_pos"
-       d="M 0,0 V 16 H 9.5 L 7,13.5 8.5,12 7,10.5 10.5,7 12,8.5 13.5,7 16,9.5 V 0 Z" />
+    <rect
+       id="remove_clipped_element_neg"
+       width="16"
+       height="16"
+       x="0"
+       y="0"
+       fill="#cccccc"
+       clip-path="url(#remove_clipping_neg)" />
+    <rect
+       id="remove_clipped_element_pos"
+       width="16"
+       height="16"
+       x="0"
+       y="0"
+       fill="#aaaaaa"
+       clip-path="url(#remove_clipping_pos)" />
+    <rect
+       id="remove_masked_element"
+       width="16"
+       height="16"
+       x="0"
+       y="0"
+       fill="#888888"
+       mask="url(#remove_mask)" />
     <path
        d="m 13.4,12 1.4,-1.4 -1.4,-1.4 -1.4,1.4 -1.4,-1.4 -1.4,1.4 1.4,1.4 -1.4,1.4 1.4,1.4 1.4,-1.4 1.4,1.4 1.4,-1.4 z"
        fill="#ff5f5f"
-       id="cross" />
+       id="remove_icon" />
   </g>
 </svg>

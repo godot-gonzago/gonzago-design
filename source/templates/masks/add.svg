@@ -8,7 +8,7 @@
    version="1.1"
    id="icon_svg"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
-   sodipodi:docname="element_add.svg"
+   sodipodi:docname="add.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -64,9 +64,9 @@
      inkscape:deskcolor="#1c202b"
      inkscape:current-layer="base_layer"
      inkscape:showpageshadow="0"
-     inkscape:zoom="20"
-     inkscape:cx="2.25"
-     inkscape:cy="9.125"
+     inkscape:zoom="28.284271"
+     inkscape:cx="9.6873629"
+     inkscape:cy="10.341437"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
@@ -85,20 +85,71 @@
        opacity="0.3" />
   </sodipodi:namedview>
   <defs
-     id="base_definitions" />
+     id="base_definitions">
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="add_mask">
+      <g
+         id="add_mask_group">
+        <rect
+           id="add_mask_base"
+           width="16"
+           height="16"
+           x="0"
+           y="0"
+           fill="#ffffff" />
+        <path
+           d="m 10,8 v 2 H 8 v 4 h 2 v 2 h 6 V 10 H 14 V 8 Z"
+           id="add_mask_shape"
+           fill="#000000" />
+      </g>
+    </mask>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="add_clipping_neg">
+      <path
+         d="m 10,8 v 2 H 8 v 4 h 2 v 2 h 6 V 10 H 14 V 8 Z"
+         id="add_clipping_neg_shape" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="add_clipping_pos">
+      <path
+         id="add_clipping_pos_shape"
+         d="M 0,0 V 16 H 10 V 14 H 8 v -4 h 2 V 8 h 4 v 2 h 2 V 0 Z" />
+    </clipPath>
+  </defs>
   <g
      inkscape:label="Base Layer"
      inkscape:groupmode="layer"
      id="base_layer">
-    <path
-       d="m 10,8 v 2 H 8 v 4 h 2 v 2 h 4 2 V 14 10 H 14 V 8 Z"
-       id="mask_neg" />
-    <path
-       id="mask_pos"
-       d="M 0,0 V 16 H 10 V 14 H 8 v -4 h 2 V 8 h 4 v 2 h 2 V 0 Z" />
+    <rect
+       id="add_clipped_element_neg"
+       width="16"
+       height="16"
+       x="0"
+       y="0"
+       fill="#cccccc"
+       clip-path="url(#add_clipping_neg)" />
+    <rect
+       id="add_clipped_element_pos"
+       width="16"
+       height="16"
+       x="0"
+       y="0"
+       fill="#aaaaaa"
+       clip-path="url(#add_clipping_pos)" />
+    <rect
+       id="add_masked_element"
+       width="16"
+       height="16"
+       x="0"
+       y="0"
+       fill="#888888"
+       mask="url(#add_mask)" />
     <path
        d="m 13,13 h 2 V 11 H 13 V 9 h -2 v 2 H 9 v 2 h 2 v 2 h 2 z"
        fill="#5fff97"
-       id="plus" />
+       id="add_icon" />
   </g>
 </svg>

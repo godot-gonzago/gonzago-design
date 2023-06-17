@@ -8,7 +8,7 @@
    version="1.1"
    id="icon_svg"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
-   sodipodi:docname="extention.svg"
+   sodipodi:docname="entity.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -62,11 +62,11 @@
      borderopacity="1"
      inkscape:pageopacity="0"
      inkscape:deskcolor="#1c202b"
-     inkscape:current-layer="base_layer"
+     inkscape:current-layer="entity_icon"
      inkscape:showpageshadow="0"
      inkscape:zoom="20"
-     inkscape:cx="2.25"
-     inkscape:cy="9.125"
+     inkscape:cx="0.1"
+     inkscape:cy="9.875"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
@@ -85,20 +85,84 @@
        opacity="0.3" />
   </sodipodi:namedview>
   <defs
-     id="base_definitions" />
+     id="base_definitions">
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="entity_mask">
+      <g
+         id="entity_mask_group">
+        <rect
+           id="entity_mask_base"
+           width="16"
+           height="16"
+           x="0"
+           y="0"
+           fill="#ffffff" />
+        <path
+           d="m 16,8 v 8 H 8 c 0,0 0,-1.8 0,-4 0,-2.2 1.8,-4 4,-4 2.2,0 4,0 4,0 z"
+           id="entity_mask_shape"
+           fill="#000000" />
+      </g>
+    </mask>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="entity_clipping_pos">
+      <path
+         id="entity_clipping_pos_shape"
+         d="m 8,16 v -4 c 0,-2.2 1.8,-4 4,-4 2.2,0 4,0 4,0 V 0 H 0 v 16 z" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="entity_clipping_neg">
+      <path
+         d="m 16,8 v 8 H 8 c 0,0 0,-1.8 0,-4 0,-2.2 1.8,-4 4,-4 2.2,0 4,0 4,0 z"
+         id="entity_clipping_neg_shape" />
+    </clipPath>
+  </defs>
   <g
      inkscape:label="Base Layer"
      inkscape:groupmode="layer"
      id="base_layer">
-    <path
-       id="mask_neg"
-       d="M 12,6.6 V 10 H 8 v 4 h 4 v 2 h 4 v -5.4 z" />
-    <path
-       id="mask_pos"
-       d="M 0,0 V 16 H 12 V 14 H 8 v -4 h 4 V 6.6 l 4,4 V 0 Z" />
-    <path
-       d="M 16,12 13,9 v 2 H 9 v 2 h 4 v 2 z"
-       fill="#5fb2ff"
-       id="arrow" />
+    <rect
+       id="entity_clipped_element_neg"
+       width="16"
+       height="16"
+       x="0"
+       y="0"
+       fill="#cccccc"
+       clip-path="url(#entity_clipping_neg)" />
+    <rect
+       id="entity_clipped_element_pos"
+       width="16"
+       height="16"
+       x="0"
+       y="0"
+       fill="#aaaaaa"
+       clip-path="url(#entity_clipping_pos)" />
+    <rect
+       id="entity_masked_element"
+       width="16"
+       height="16"
+       x="0"
+       y="0"
+       fill="#888888"
+       mask="url(#entity_mask)" />
+    <g
+       id="entity_icon">
+      <circle
+         cy="12.5"
+         cx="12.5"
+         id="entity_icon_center"
+         fill="#e0e0e0"
+         r="1.5" />
+      <circle
+         cy="12.5"
+         cx="12.5"
+         id="entity_icon_ring"
+         stroke="#e0e0e0"
+         stroke-width="1"
+         r="3"
+         fill="none" />
+    </g>
   </g>
 </svg>

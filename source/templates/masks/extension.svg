@@ -8,7 +8,7 @@
    version="1.1"
    id="icon_svg"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
-   sodipodi:docname="music.svg"
+   sodipodi:docname="extension.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -65,8 +65,8 @@
      inkscape:current-layer="base_layer"
      inkscape:showpageshadow="0"
      inkscape:zoom="20"
-     inkscape:cx="2.25"
-     inkscape:cy="9.125"
+     inkscape:cx="5.95"
+     inkscape:cy="9.025"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
@@ -85,29 +85,71 @@
        opacity="0.3" />
   </sodipodi:namedview>
   <defs
-     id="base_definitions" />
+     id="base_definitions">
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="extension_mask">
+      <g
+         id="extension_mask_group">
+        <rect
+           id="extension_mask_base"
+           width="16"
+           height="16"
+           x="0"
+           y="0"
+           fill="#ffffff" />
+        <path
+           d="M 12,6.6 V 10 H 8 v 4 h 4 v 2 h 4 v -5.4 z"
+           id="extension_mask_shape"
+           fill="#000000" />
+      </g>
+    </mask>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="extension_clipping_pos">
+      <path
+         id="extension_clipping_pos_shape"
+         d="M 0,0 V 16 H 12 V 14 H 8 v -4 h 4 V 6.6 l 4,4 V 0 Z" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="extension_clipping_neg">
+      <path
+         d="M 12,6.6 V 10 H 8 v 4 h 4 v 2 h 4 v -5.4 z"
+         id="extension_clipping_neg_shape" />
+    </clipPath>
+  </defs>
   <g
      inkscape:label="Base Layer"
      inkscape:groupmode="layer"
      id="base_layer">
+    <rect
+       id="extension_clipped_element_neg"
+       width="16"
+       height="16"
+       x="0"
+       y="0"
+       fill="#cccccc"
+       clip-path="url(#extension_clipping_neg)" />
+    <rect
+       id="extension_clipped_element_pos"
+       width="16"
+       height="16"
+       x="0"
+       y="0"
+       fill="#aaaaaa"
+       clip-path="url(#extension_clipping_pos)" />
+    <rect
+       id="extension_masked_element"
+       width="16"
+       height="16"
+       x="0"
+       y="0"
+       fill="#888888"
+       mask="url(#extension_mask)" />
     <path
-       d="M 5,12 V 4 l 7,-2 v 8.5"
-       id="connection"
-       fill="none"
-       stroke="#e0e0e0"
-       stroke-width="2"
-       stroke-linejoin="round" />
-    <circle
-       id="circle_right"
-       cx="10.5"
-       cy="10.5"
-       r="2.5"
-       fill="#e0e0e0" />
-    <circle
-       id="circle_left"
-       cx="3.5"
-       cy="12"
-       r="2.5"
-       fill="#e0e0e0" />
+       d="M 16,12 13,9 v 2 H 9 v 2 h 4 v 2 z"
+       fill="#5fb2ff"
+       id="extension_icon" />
   </g>
 </svg>

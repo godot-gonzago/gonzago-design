@@ -9,35 +9,55 @@
    id="icon_svg"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    sodipodi:docname="settings.svg"
+   xml:space="preserve"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"><metadata
+     id="metadata"><rdf:RDF><cc:Work
+         rdf:about=""><cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/4.0/" /><dc:creator><cc:Agent><dc:title>David Krummenacher</dc:title></cc:Agent></dc:creator><dc:publisher><cc:Agent><dc:title>Gonzago Framework</dc:title></cc:Agent></dc:publisher><dc:source>https://github.com/godot-gonzago</dc:source></cc:Work><cc:License
+         rdf:about="http://creativecommons.org/licenses/by/4.0/"><cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" /><cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" /><cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" /><cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" /><cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" /></cc:License></rdf:RDF></metadata><sodipodi:namedview
      id="base_view"
-     inkscape:document-units="px"
      showgrid="true"
      units="px"
      width="16px"
      viewbox-height="16"
      inkscape:snap-grids="true"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     inkscape:current-layer="base_layer">
-    <inkscape:grid
+     pagecolor="#333b4f"
+     bordercolor="#8f939e"
+     borderopacity="1"
+     inkscape:pageopacity="0"
+     inkscape:deskcolor="#1c202b"
+     inkscape:current-layer="base_layer"
+     inkscape:showpageshadow="0"
+     inkscape:zoom="20"
+     inkscape:cx="11.525"
+     inkscape:cy="10.175"
+     inkscape:window-width="1368"
+     inkscape:window-height="850"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:document-units="px"
+     inkscape:pagecheckerboard="0"><inkscape:grid
        type="xygrid"
        id="base_grid"
        dotted="true"
-       empspacing="4" />
-  </sodipodi:namedview>
-  <defs
-     id="base_definitions">
-    <inkscape:path-effect
+       empspacing="4"
+       empcolor="#699ce8"
+       empopacity="0.3"
+       color="#699ce8"
+       opacity="0.3" /></sodipodi:namedview><defs
+     id="base_definitions"><inkscape:path-effect
        effect="copy_rotate"
        starting_point="19.313708,8"
        origin="8,8"
@@ -53,8 +73,7 @@
        copies_to_360="true"
        mirror_copies="false"
        split_items="false"
-       link_styles="false" />
-    <inkscape:path-effect
+       link_styles="false" /><inkscape:path-effect
        effect="perspective-envelope"
        up_left_point="7,1"
        up_right_point="9,1"
@@ -66,32 +85,20 @@
        deform_type="perspective"
        horizontal_mirror="false"
        vertical_mirror="false"
-       overflow_perspective="false" />
-  </defs>
-  <g
+       overflow_perspective="false" /></defs><g
      inkscape:label="Base Layer"
      inkscape:groupmode="layer"
-     id="base_layer">
-    <circle
+     id="base_layer"><circle
        id="circle"
        cx="8"
        cy="8"
        r="3.5"
        fill="none"
        stroke="#e0e0e0"
-       stroke-width="3" />
-    <path
+       stroke-width="3" /><path
        id="tooth"
-       width="4"
-       height="4"
-       x="6"
-       y="1"
-       ry="1"
-       rx="1"
        fill="#e0e0e0"
        d="m 7.5,1 h 1 C 8.777,1 9.0590416,1.2361663 9.1428571,1.5714286 L 9.6,3.4 C 9.7993702,4.1974809 9.554,5 9,5 H 7 C 6.446,5 6.2006298,4.1974809 6.4,3.4 L 6.8571429,1.5714286 C 6.9409584,1.2361663 7.223,1 7.5,1 Z M 2.6966991,3.4038059 3.4038059,2.6966991 C 3.5996745,2.5008306 3.9661028,2.4683918 4.2624356,2.6461915 L 5.8786797,3.615938 C 6.5835598,4.0388661 6.9775236,4.7798357 6.5857864,5.1715729 L 5.1715729,6.5857864 C 4.7798357,6.9775236 4.0388661,6.5835598 3.615938,5.8786797 L 2.6461915,4.2624356 C 2.4683918,3.9661028 2.5008306,3.5996745 2.6966991,3.4038059 Z M 1,8.5 v -1 C 1,7.223 1.2361663,6.9409584 1.5714286,6.8571429 L 3.4,6.4 C 4.1974809,6.2006298 5,6.446 5,7 V 9 C 5,9.554 4.1974809,9.7993702 3.4,9.6 L 1.5714286,9.1428571 C 1.2361663,9.0590416 1,8.777 1,8.5 Z M 3.4038059,13.303301 2.6966991,12.596194 C 2.5008306,12.400325 2.4683918,12.033897 2.6461915,11.737564 L 3.615938,10.12132 C 4.0388661,9.4164402 4.7798357,9.0224764 5.1715729,9.4142136 l 1.4142135,1.4142134 c 0.3917372,0.391737 -0.00223,1.132707 -0.7071067,1.555635 l -1.6162441,0.969746 c -0.2963328,0.1778 -0.6627611,0.145361 -0.8586297,-0.05051 z M 8.5,15 h -1 C 7.223,15 6.9409584,14.763834 6.8571429,14.428571 L 6.4,12.6 C 6.2006298,11.802519 6.446,11 7,11 h 2 c 0.554,0 0.7993702,0.802519 0.6,1.6 L 9.1428571,14.428571 C 9.0590416,14.763834 8.777,15 8.5,15 Z m 4.803301,-2.403806 -0.707107,0.707107 c -0.195869,0.195868 -0.562297,0.228307 -0.85863,0.05051 L 10.12132,12.384062 C 9.4164402,11.961134 9.0224764,11.220164 9.4142136,10.828427 L 10.828427,9.4142136 c 0.391737,-0.3917372 1.132707,0.00223 1.555635,0.7071064 l 0.969746,1.616244 c 0.1778,0.296333 0.145361,0.662761 -0.05051,0.85863 z M 15,7.5 v 1 c 0,0.277 -0.236166,0.5590416 -0.571429,0.6428571 L 12.6,9.6 C 11.802519,9.7993702 11,9.554 11,9 V 7 c 0,-0.554 0.802519,-0.7993702 1.6,-0.6 l 1.828571,0.4571429 C 14.763834,6.9409584 15,7.223 15,7.5 Z m -2.403806,-4.8033009 0.707107,0.7071068 c 0.195868,0.1958686 0.228307,0.5622969 0.05051,0.8586297 L 12.384062,5.8786797 C 11.961134,6.5835598 11.220164,6.9775236 10.828427,6.5857864 L 9.4142136,5.1715729 C 9.0224764,4.7798357 9.4164402,4.0388661 10.12132,3.615938 l 1.616244,-0.9697465 c 0.296333,-0.1777997 0.662761,-0.1453609 0.85863,0.050508 z"
        inkscape:path-effect="#warp-effect;#copy-effect"
        class="UnoptimicedTransforms"
-       sodipodi:type="rect" />
-  </g>
-</svg>
+       sodipodi:type="rect" /></g></svg>
