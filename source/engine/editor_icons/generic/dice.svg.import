@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://conogquktxx67"
-path="res://.godot/imported/remove.svg-adc69a13e148d18931f2ea6a12237ce3.ctex"
+uid="uid://b1854aqwhr5b7"
+path="res://.godot/imported/dice.svg-23663e2e6a700eb2f7bdbc86f22d44a0.ctex"
 metadata={
 "editor_dark_theme": true,
 "editor_scale": 1.0,
@@ -13,8 +13,8 @@ metadata={
 
 [deps]
 
-source_file="res://editor_icons/generic/actions/remove.svg"
-dest_files=["res://.godot/imported/remove.svg-adc69a13e148d18931f2ea6a12237ce3.ctex"]
+source_file="res://editor_icons/generic/dice.svg"
+dest_files=["res://.godot/imported/dice.svg-23663e2e6a700eb2f7bdbc86f22d44a0.ctex"]
 
 [params]
 

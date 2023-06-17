@@ -1,12 +1,6 @@
 EditorIcons:
 ============
-Reload (actions/reload)
-Rename (actions/rename)
 
-Add (generic/plus, create generic/minus)
-AnimationFilter (generic/filter)
-AssetLib (generic/download, create generic/upload)
-AtlasTexture (generic/map)
 Bone (generic/bone)
 Bucket (generic/bucket)
 CanvasItem (generic/brush)
@@ -20,7 +14,6 @@ History (generic/history)
 NavigationAgent3D (generic/location)
 Pin (generic/pin)
 PinJoint2D (generic/pin_alt)
-RandomNumberGenerator (generic/die, create generic/dice)
 Time (generic/clock, create generic/calendar)
 Timer (generic/hourglass)
 Tools (generic/tools)

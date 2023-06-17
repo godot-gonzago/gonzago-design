@@ -8,7 +8,7 @@
    version="1.1"
    id="icon_svg"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
-   sodipodi:docname="remove.svg"
+   sodipodi:docname="die.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -64,9 +64,9 @@
      inkscape:deskcolor="#1c202b"
      inkscape:current-layer="base_layer"
      inkscape:showpageshadow="0"
-     inkscape:zoom="20"
-     inkscape:cx="2.25"
-     inkscape:cy="9.125"
+     inkscape:zoom="28.284271"
+     inkscape:cx="9.1039998"
+     inkscape:cy="8.184761"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
@@ -85,15 +85,48 @@
        opacity="0.3" />
   </sodipodi:namedview>
   <defs
-     id="base_definitions" />
+     id="base_definitions">
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="die_mask">
+      <g
+         id="die_mask_group">
+        <rect
+           id="die_mask_base"
+           width="16"
+           height="16"
+           x="0"
+           y="0"
+           fill="#ffffff" />
+        <circle
+           id="die_mask_eye_1"
+           cx="4"
+           cy="4"
+           r="2"
+           fill="#000000" />
+        <circle
+           id="die_mask_eye_2"
+           cx="8"
+           cy="8"
+           r="2"
+           fill="#000000" />
+        <circle
+           id="die_mask_eye_3"
+           cx="12"
+           cy="12"
+           r="2"
+           fill="#000000" />
+      </g>
+    </mask>
+  </defs>
   <g
      inkscape:label="Base Layer"
      inkscape:groupmode="layer"
      id="base_layer">
     <path
-       d="M 2,8 H 14"
-       id="h_line"
-       stroke="#e0e0e0"
-       stroke-width="2" />
+       id="die"
+       d="m 16,8 c 0,8 0,8 -8,8 C 0,16 0,16 0,8 0,0 0,0 8,0 c 8,0 8,0 8,8 z"
+       mask="url(#die_mask)"
+       fill="#e0e0e0" />
   </g>
 </svg>

@@ -8,7 +8,7 @@
    version="1.1"
    id="icon_svg"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
-   sodipodi:docname="remove.svg"
+   sodipodi:docname="reload.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -85,15 +85,31 @@
        opacity="0.3" />
   </sodipodi:namedview>
   <defs
-     id="base_definitions" />
+     id="base_definitions">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="circle_clip">
+      <path
+         d="M 0,8 V 0 H 16 V 16 H 9 V 8 Z"
+         id="circle_clip_shape" />
+    </clipPath>
+  </defs>
   <g
      inkscape:label="Base Layer"
      inkscape:groupmode="layer"
      id="base_layer">
-    <path
-       d="M 2,8 H 14"
-       id="h_line"
+    <circle
+       id="circle"
+       fill="none"
        stroke="#e0e0e0"
-       stroke-width="2" />
+       stroke-width="2"
+       r="5"
+       cy="8"
+       cx="9"
+       clip-path="url(#circle_clip)" />
+    <path
+       d="M 1,8 H 7 L 4,12 Z"
+       id="arrow"
+       fill="#e0e0e0" />
   </g>
 </svg>

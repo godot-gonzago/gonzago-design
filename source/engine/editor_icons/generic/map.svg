@@ -8,7 +8,7 @@
    version="1.1"
    id="icon_svg"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
-   sodipodi:docname="remove.svg"
+   sodipodi:docname="map.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -91,9 +91,18 @@
      inkscape:groupmode="layer"
      id="base_layer">
     <path
-       d="M 2,8 H 14"
-       id="h_line"
+       d="M 2,3.5 6,2 10,4 14,2.5 v 10 L 10,14 6,12 2,13.5 Z"
+       id="border"
+       fill="none"
        stroke="#e0e0e0"
        stroke-width="2" />
+    <path
+       d="M 2,3.5 6,2 v 10 l -4,1.5 z"
+       id="left_flap"
+       fill="#e0e0e0" />
+    <path
+       d="m 10,4 4,-1.5 v 10 L 10,14 Z"
+       id="right_flap"
+       fill="#e0e0e0" />
   </g>
 </svg>

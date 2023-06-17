@@ -8,7 +8,7 @@
    version="1.1"
    id="icon_svg"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
-   sodipodi:docname="remove.svg"
+   sodipodi:docname="filter.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -91,9 +91,10 @@
      inkscape:groupmode="layer"
      id="base_layer">
     <path
-       d="M 2,8 H 14"
-       id="h_line"
+       d="m 1.5,2 h 13 l -5,5 v 4 l -3,2.5 V 7 Z"
+       id="filter"
+       fill="#e0e0e0"
        stroke="#e0e0e0"
-       stroke-width="2" />
+       stroke-linejoin="round" />
   </g>
 </svg>

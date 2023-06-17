@@ -8,7 +8,7 @@
    version="1.1"
    id="icon_svg"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
-   sodipodi:docname="remove.svg"
+   sodipodi:docname="action_remove.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -65,8 +65,8 @@
      inkscape:current-layer="base_layer"
      inkscape:showpageshadow="0"
      inkscape:zoom="20"
-     inkscape:cx="2.25"
-     inkscape:cy="9.125"
+     inkscape:cx="2.2"
+     inkscape:cy="10.725"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
@@ -85,15 +85,58 @@
        opacity="0.3" />
   </sodipodi:namedview>
   <defs
-     id="base_definitions" />
+     id="base_definitions">
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask">
+      <g
+         id="mask_group">
+        <rect
+           id="mask_base"
+           width="16"
+           height="16"
+           x="0"
+           y="0"
+           fill="#ffffff" />
+        <rect
+           id="mask_top"
+           width="16"
+           height="5"
+           x="0"
+           y="0"
+           fill="#000000" />
+        <path
+           d="M 3,10 H 13"
+           id="mask_holes"
+           stroke="#000000"
+           stroke-width="6"
+           stroke-dasharray="2" />
+      </g>
+    </mask>
+  </defs>
   <g
      inkscape:label="Base Layer"
      inkscape:groupmode="layer"
      id="base_layer">
-    <path
-       d="M 2,8 H 14"
-       id="h_line"
+    <g
+       id="lid"
        stroke="#e0e0e0"
-       stroke-width="2" />
+       stroke-width="2">
+      <path
+         d="M 1,3 H 15"
+         id="lid_base" />
+      <path
+         d="m 5,2 h 6"
+         id="lid_handle" />
+    </g>
+    <rect
+       id="body"
+       width="12"
+       height="12"
+       x="2"
+       y="3"
+       ry="2"
+       fill="#e0e0e0"
+       mask="url(#mask)" />
   </g>
 </svg>
