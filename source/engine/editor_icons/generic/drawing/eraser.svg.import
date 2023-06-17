@@ -3,18 +3,18 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://deqr3qks7vjlw"
-path="res://.godot/imported/eraser.svg-14d3fe87b9edfb224be81e71a1a02135.ctex"
+path="res://.godot/imported/eraser.svg-576edcedfa958e1d37f70f723dcf910e.ctex"
 metadata={
 "editor_dark_theme": true,
-"editor_scale": 1.0,
+"editor_scale": 2.0,
 "has_editor_variant": true,
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://editor_icons/generic/eraser.svg"
-dest_files=["res://.godot/imported/eraser.svg-14d3fe87b9edfb224be81e71a1a02135.ctex"]
+source_file="res://editor_icons/generic/drawing/eraser.svg"
+dest_files=["res://.godot/imported/eraser.svg-576edcedfa958e1d37f70f723dcf910e.ctex"]
 
 [params]
 

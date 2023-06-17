@@ -3,18 +3,18 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://efcrtv2wgdyq"
-path="res://.godot/imported/bucket.svg-fc542c550944da930036b2a9405cabfb.ctex"
+path="res://.godot/imported/bucket.svg-ee7feb7cec5745342aa8613178bcd72e.ctex"
 metadata={
 "editor_dark_theme": true,
-"editor_scale": 1.0,
+"editor_scale": 2.0,
 "has_editor_variant": true,
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://editor_icons/generic/bucket.svg"
-dest_files=["res://.godot/imported/bucket.svg-fc542c550944da930036b2a9405cabfb.ctex"]
+source_file="res://editor_icons/generic/drawing/bucket.svg"
+dest_files=["res://.godot/imported/bucket.svg-ee7feb7cec5745342aa8613178bcd72e.ctex"]
 
 [params]
 

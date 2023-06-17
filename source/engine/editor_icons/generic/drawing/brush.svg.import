@@ -3,18 +3,18 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cf186oqxmth0l"
-path="res://.godot/imported/brush.svg-d65dfa6f5bb9b33cded3a9327ed1738c.ctex"
+path="res://.godot/imported/brush.svg-50f4a15ed225b635c22d30702c1084a2.ctex"
 metadata={
 "editor_dark_theme": true,
-"editor_scale": 1.0,
+"editor_scale": 2.0,
 "has_editor_variant": true,
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://editor_icons/generic/brush.svg"
-dest_files=["res://.godot/imported/brush.svg-d65dfa6f5bb9b33cded3a9327ed1738c.ctex"]
+source_file="res://editor_icons/generic/drawing/brush.svg"
+dest_files=["res://.godot/imported/brush.svg-50f4a15ed225b635c22d30702c1084a2.ctex"]
 
 [params]
 
