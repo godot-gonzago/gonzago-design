@@ -11,12 +11,13 @@ ExternalLink (generic/link_external)
 History (generic/history)
 NavigationAgent3D (generic/location)
 Pin (generic/pin)
-PinJoint2D (generic/pin_alt)
+PinJoint2D (generic/drawing/pin)
 Time (generic/clock, create generic/calendar)
 Timer (generic/hourglass)
 Tools (generic/tools)
 Unlinked (generic/link_broken?)
 AudioListener2D (generic/ear?)
+Label (mirrored) (generic/tag, create tags)
 
 Notification (toggles/bell)
 Notification_disabled (toggles/bell_disabled)
@@ -34,18 +35,12 @@ MoveLeft (arrows/move_left)
 MoveRight (arrows/move_right)
 MoveUp (arrows/move_up)
 
-FileBroken (io/file_broken)
-FileDead (io/file_dead)
-Joypad (io/joypad)
-Keyboard (io/keyboard)
-KeyboardError (io/keyboard_error)
-MissingResource (io/missing)
-Mouse (io/mouse)
-
-AutoEnd (media/auto_end)
-AutoPlay (media/auto_play)
-
 CombineLines (wysiwyg/collapse)
+
+PackedScene?
+Tanslation?
+Progress (generic/toggles/progress_1)
+preset_gb (generic/drawing/checkerbaord)
 
 Other:
 ======
