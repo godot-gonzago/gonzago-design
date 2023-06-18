@@ -3,15 +3,12 @@ EditorIcons:
 
 CharacterBody3D (generic/character?)
 CryptoKey (generic/key_alt)
-ExternalLink (generic/link_external)
 History (generic/history)
-NavigationAgent3D (generic/location)
 Pin (generic/pin)
 PinJoint2D (generic/drawing/pin)
 Time (generic/clock, create generic/calendar)
 Timer (generic/hourglass)
 Tools (generic/tools)
-Unlinked (generic/link_broken?)
 AudioListener2D (generic/ear?)
 Label (mirrored) (generic/tag, create tags)
 

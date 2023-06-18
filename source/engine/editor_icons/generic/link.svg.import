@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bobibsmmeb2cj"
-path="res://.godot/imported/link.svg-99c16f55385e7742dd387faf342a5f64.ctex"
+path="res://.godot/imported/link.svg-d4cd1490ed8cae9121c716bb7347dfcf.ctex"
 metadata={
 "editor_dark_theme": true,
 "editor_scale": 1.0,
@@ -13,8 +13,8 @@ metadata={
 
 [deps]
 
-source_file="res://editor_icons/generic/wysiwyg/link.svg"
-dest_files=["res://.godot/imported/link.svg-99c16f55385e7742dd387faf342a5f64.ctex"]
+source_file="res://editor_icons/generic/link.svg"
+dest_files=["res://.godot/imported/link.svg-d4cd1490ed8cae9121c716bb7347dfcf.ctex"]
 
 [params]
 
