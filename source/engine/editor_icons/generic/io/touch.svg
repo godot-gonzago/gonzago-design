@@ -91,7 +91,7 @@
        clipPathUnits="userSpaceOnUse"
        id="button_clip">
       <path
-         d="M 9,2 H 5 V 6 H 1 V 0 H 13 V 6 H 9 Z"
+         d="M 9,4 C 9,1 5,1 5,4 V 6 H 1 V 0 H 13 V 6 H 9 Z"
          id="button_clip_shape" />
     </clipPath>
   </defs>
@@ -99,15 +99,12 @@
      inkscape:label="Base Layer"
      inkscape:groupmode="layer"
      id="base_layer">
-    <rect
+    <circle
        id="button"
-       width="9"
-       height="3"
-       x="2.5"
-       y="1.5"
-       ry="0.5"
-       fill="none"
-       stroke="#e0e0e0"
+       cx="7"
+       cy="3"
+       r="3"
+       fill="#e0e0e0"
        clip-path="url(#button_clip)" />
     <rect
        id="base"
@@ -127,7 +124,7 @@
     <path
        d="m 7,4 v 6"
        id="finger"
-       fill="fill"
+       fill="none"
        stroke="#e0e0e0"
        stroke-width="2"
        stroke-linecap="round" />
