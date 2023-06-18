@@ -1,10 +1,7 @@
 EditorIcons:
 ============
 
-Callable (generic/bullhorn)
 CharacterBody3D (generic/character?)
-Close (generic/close)
-ColorPick (generic/pipette)
 CryptoKey (generic/key_alt)
 ExternalLink (generic/link_external)
 History (generic/history)
@@ -18,8 +15,6 @@ Unlinked (generic/link_broken?)
 AudioListener2D (generic/ear?)
 Label (mirrored) (generic/tag, create tags)
 
-Notification (toggles/bell)
-Notification_disabled (toggles/bell_disabled)
 ViewportZoom (toggles/zoom_in, create toggles/zoom_out and toggles/zoom_reset)
 Zoom (toggles/zoom_in, create toggles/zoom_out and toggles/zoom_reset)
 
@@ -45,7 +40,7 @@ Other:
 ======
 Config (_masks/config, ???)
 Help (generic/help, lifebuoy)
-Drawing/Editing tools??? (Brightness, Contrast, Rotate, Flip, Mirror)
+Drawing/Editing tools??? (Brightness, Contrast, Rotate, Flip, Mirror, Transparent)
 SaveAll (floppy disks)
 Characters
 Factions
