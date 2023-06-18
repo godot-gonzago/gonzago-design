@@ -1,7 +1,6 @@
 EditorIcons:
 ============
 
-Bucket (generic/bucket) // THIS IS HORRIBLE
 Callable (generic/bullhorn)
 CharacterBody3D (generic/character?)
 Close (generic/close)
@@ -53,7 +52,6 @@ Factions
 Interactables, Interactors, Interactions
 Touch input?
 Progress/Spinner?
-Mouth/Lips?
 Palette
 Weather??
 
