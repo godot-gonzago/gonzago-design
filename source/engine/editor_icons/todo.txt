@@ -8,7 +8,6 @@ Pin (generic/pin)
 PinJoint2D (generic/drawing/pin)
 Time (generic/clock, create generic/calendar)
 Tools (generic/tools)
-Label (mirrored) (generic/tag, create tags)
 
 ViewportZoom (toggles/zoom_in, create toggles/zoom_out and toggles/zoom_reset)
 Zoom (toggles/zoom_in, create toggles/zoom_out and toggles/zoom_reset)
