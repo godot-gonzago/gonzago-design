@@ -2,19 +2,19 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bs4pd0hlauy4m"
-path="res://.godot/imported/load.svg-e0ce1fa209022d835ad0618229080e0f.ctex"
+uid="uid://dx45vrnctydw1"
+path="res://.godot/imported/upload.svg-ceea81028b9d83e1b4ccea53638d34c2.ctex"
 metadata={
 "editor_dark_theme": true,
-"editor_scale": 1.0,
+"editor_scale": 2.0,
 "has_editor_variant": true,
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://editor_icons/generic/io/load.svg"
-dest_files=["res://.godot/imported/load.svg-e0ce1fa209022d835ad0618229080e0f.ctex"]
+source_file="res://editor_icons/generic/actions/upload.svg"
+dest_files=["res://.godot/imported/upload.svg-ceea81028b9d83e1b4ccea53638d34c2.ctex"]
 
 [params]
 

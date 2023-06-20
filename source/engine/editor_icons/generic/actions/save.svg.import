@@ -2,16 +2,19 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkupkwksl52om"
-path="res://.godot/imported/cloud_download.svg-05abb455309382549bbcb109979445ab.ctex"
+uid="uid://cfuq6d7a3tqt"
+path="res://.godot/imported/save.svg-5741b399a8ca27f4d56472b34c778dc4.ctex"
 metadata={
+"editor_dark_theme": true,
+"editor_scale": 2.0,
+"has_editor_variant": true,
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://editor_icons/generic/io/cloud_download.svg"
-dest_files=["res://.godot/imported/cloud_download.svg-05abb455309382549bbcb109979445ab.ctex"]
+source_file="res://editor_icons/generic/actions/save.svg"
+dest_files=["res://.godot/imported/save.svg-5741b399a8ca27f4d56472b34c778dc4.ctex"]
 
 [params]
 
@@ -33,5 +36,5 @@ process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
 svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
+editor/scale_with_editor_scale=true
+editor/convert_colors_with_editor_theme=true
