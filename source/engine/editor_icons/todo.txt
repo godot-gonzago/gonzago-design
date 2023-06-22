@@ -12,17 +12,21 @@ Tools (generic/tools)
 ViewportZoom (toggles/zoom_in, create toggles/zoom_out and toggles/zoom_reset)
 Zoom (toggles/zoom_in, create toggles/zoom_out and toggles/zoom_reset)
 
-MoveDown (arrows/move_down)
-MoveLeft (arrows/move_left)
-MoveRight (arrows/move_right)
-MoveUp (arrows/move_up)
-
 CombineLines (wysiwyg/collapse)
 
 PackedScene?
 Tanslation?
 Progress (generic/toggles/progress_1)
 preset_gb (generic/drawing/checkerbaord)
+
+GUITabMenu (generic/menu)
+MaterialPreviewLight1 (generic/sun)
+PreviewSun (generic/sun)
+SphereOccluder (generic/moon)
+Onion (onion)
+
+RotateLeft (arrows)
+RotateRight (arrows)
 
 Other:
 ======
@@ -37,23 +41,24 @@ Touch input?
 Progress/Spinner?
 Palette
 Weather??
+HandVictory??
 
 Variant.Type:
 -------------
-nil
+nil (Node, with dot inside?)
 rect2/i
 transform2d
 vector4/i
-plane
-aabb
+plane (PlaneMesh?)
+aabb (Object?)
 basis
 transform3d
 projection
 node_path??
 rid??
 object??
-callable??
-signal??
+callable?? (Callable)
+signal?? (Signals)
 dictionary
 array/packedarray (byte, int32, int64, float32, float64, string, vector2, vector3, color)
 
