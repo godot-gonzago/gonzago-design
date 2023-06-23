@@ -15,7 +15,6 @@ Zoom (toggles/zoom_in, create toggles/zoom_out and toggles/zoom_reset)
 CombineLines (wysiwyg/collapse)
 
 PackedScene?
-Tanslation?
 Progress (generic/toggles/progress_1)
 preset_gb (generic/drawing/checkerbaord)
 
