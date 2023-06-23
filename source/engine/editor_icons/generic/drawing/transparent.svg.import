@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b00okbaq028e1"
-path="res://.godot/imported/mouse.svg-82dae66434de19a010196aea8a7e2011.ctex"
+uid="uid://dp6b5at0bkpn3"
+path="res://.godot/imported/transparent.svg-97e79385b88b718301652558242e7764.ctex"
 metadata={
 "editor_dark_theme": true,
 "editor_scale": 1.0,
@@ -13,8 +13,8 @@ metadata={
 
 [deps]
 
-source_file="res://editor_icons/generic/io/mouse.svg"
-dest_files=["res://.godot/imported/mouse.svg-82dae66434de19a010196aea8a7e2011.ctex"]
+source_file="res://editor_icons/generic/drawing/transparent.svg"
+dest_files=["res://.godot/imported/transparent.svg-97e79385b88b718301652558242e7764.ctex"]
 
 [params]
 

@@ -16,7 +16,6 @@ CombineLines (wysiwyg/collapse)
 
 PackedScene?
 Progress (generic/toggles/progress_1)
-preset_gb (generic/drawing/checkerbaord)
 
 GUITabMenu (generic/menu)
 MaterialPreviewLight1 (generic/sun)
