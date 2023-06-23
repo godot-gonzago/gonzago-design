@@ -24,9 +24,6 @@ PreviewSun (generic/sun)
 SphereOccluder (generic/moon)
 Onion (onion)
 
-RotateLeft (arrows)
-RotateRight (arrows)
-
 Other:
 ======
 Config (_masks/config, ???)
