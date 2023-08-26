@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkupkwksl52om"
-path="res://.godot/imported/cloud_download.svg-18e4ece018571917f78aa0e3fb539d4b.ctex"
+uid="uid://s2kddsxc65er"
+path="res://.godot/imported/connection_mid.svg-4ce356b0d92631311c8c145617df606a.ctex"
 metadata={
 "editor_dark_theme": true,
 "editor_scale": 2.0,
@@ -13,8 +13,8 @@ metadata={
 
 [deps]
 
-source_file="res://editor_icons/generic/actions/cloud_download.svg"
-dest_files=["res://.godot/imported/cloud_download.svg-18e4ece018571917f78aa0e3fb539d4b.ctex"]
+source_file="res://editor_icons/generic/toggles/connection_mid.svg"
+dest_files=["res://.godot/imported/connection_mid.svg-4ce356b0d92631311c8c145617df606a.ctex"]
 
 [params]
 
