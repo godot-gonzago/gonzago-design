@@ -34,7 +34,7 @@
           </cc:Agent>
         </dc:publisher>
         <dc:source>https://github.com/godot-gonzago</dc:source>
-        <dc:description>Recreation of https://github.com/godotengine/godot/blob/master/editor/icons/Signals.svg</dc:description>
+        <dc:description>Based on https://github.com/godotengine/godot/blob/master/editor/icons/Signals.svg</dc:description>
       </cc:Work>
       <cc:License
          rdf:about="http://creativecommons.org/licenses/by/4.0/">
@@ -66,7 +66,7 @@
      inkscape:current-layer="base_layer"
      inkscape:showpageshadow="0"
      inkscape:zoom="20"
-     inkscape:cx="-0.8"
+     inkscape:cx="-5"
      inkscape:cy="9.875"
      inkscape:window-width="1368"
      inkscape:window-height="850"
