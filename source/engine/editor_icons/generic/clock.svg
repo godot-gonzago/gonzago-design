@@ -34,7 +34,6 @@
           </cc:Agent>
         </dc:publisher>
         <dc:source>https://github.com/godot-gonzago</dc:source>
-        <dc:description>Recreation of https://github.com/godotengine/godot/blob/master/editor/icons/Node.svg</dc:description>
       </cc:Work>
       <cc:License
          rdf:about="http://creativecommons.org/licenses/by/4.0/">
@@ -66,8 +65,8 @@
      inkscape:current-layer="clock"
      inkscape:showpageshadow="0"
      inkscape:zoom="28.284271"
-     inkscape:cx="8.4676037"
-     inkscape:cy="9.3161318"
+     inkscape:cx="5.4800776"
+     inkscape:cy="9.3161319"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
