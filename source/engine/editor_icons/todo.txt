@@ -3,10 +3,8 @@ EditorIcons:
 
 CharacterBody3D (generic/character?)
 CryptoKey (generic/key_alt)
-History (generic/history)
 Pin (generic/pin)
 PinJoint2D (generic/drawing/pin)
-Time (generic/clock, create generic/calendar)
 Tools (generic/tools)
 
 ViewportZoom (toggles/zoom_in, create toggles/zoom_out and toggles/zoom_reset)
@@ -18,9 +16,6 @@ PackedScene?
 Progress (generic/toggles/progress_1)
 
 GUITabMenu (generic/menu)
-MaterialPreviewLight1 (generic/sun)
-PreviewSun (generic/sun)
-SphereOccluder (generic/moon)
 Onion (onion)
 
 Other:
@@ -59,7 +54,6 @@ array/packedarray (byte, int32, int64, float32, float64, string, vector2, vector
 
 https://icomoon.io/preview-free.html or https://icomoon.io/#preview-ultimate:
 -----------------------------------------------------------------------------
-Printer (io/print)
 Folder (io/folder_plus, io/folder_minus, io/folder_download, io/folder_upload)???
 Compass
 Envelope
