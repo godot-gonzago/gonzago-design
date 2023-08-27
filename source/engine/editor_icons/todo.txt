@@ -56,7 +56,6 @@ https://icomoon.io/preview-free.html or https://icomoon.io/#preview-ultimate:
 -----------------------------------------------------------------------------
 Folder (io/folder_plus, io/folder_minus, io/folder_download, io/folder_upload)???
 Compass
-Envelope
 Book/Books
 Mic
 User (add, remove, edit)
@@ -66,7 +65,6 @@ Fire/Flames
 Lab (Flask)
 Magnet
 Target
-Blocked
 Flag
 AidKit
 Bug (already in Godot)
@@ -75,11 +73,9 @@ Volume Controls in media
 Sort (sort_alpha_asc, sort_alpha_desc, sort_num_asc, sort_num_desc)
 Globe???
 Speech/Thought bubble
-Home
 Headphones???
 Camera (photo, eg. for screenshots)
 Connection
-Tag/Tags (price tag)
 BarCode/QRCode
 Charts (dots/bars)
 Finger pointers in direction???
