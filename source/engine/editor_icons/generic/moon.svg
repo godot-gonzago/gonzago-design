@@ -34,7 +34,6 @@
           </cc:Agent>
         </dc:publisher>
         <dc:source>https://github.com/godot-gonzago</dc:source>
-        <dc:description>Recreation of https://github.com/godotengine/godot/blob/master/editor/icons/OccluderInstance3D.svg</dc:description>
       </cc:Work>
       <cc:License
          rdf:about="http://creativecommons.org/licenses/by/4.0/">
@@ -66,8 +65,8 @@
      inkscape:current-layer="base_layer"
      inkscape:showpageshadow="0"
      inkscape:zoom="22.627417"
-     inkscape:cx="2.2539029"
-     inkscape:cy="10.451922"
+     inkscape:cx="7.2478445"
+     inkscape:cy="10.672893"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
@@ -101,9 +100,9 @@
            fill="#ffffff" />
         <circle
            id="base_mask_shape"
-           cx="5.5"
-           cy="5.5"
-           r="4.5"
+           cx="11"
+           cy="6"
+           r="5"
            fill="#000000" />
       </g>
     </mask>
