@@ -5,7 +5,6 @@ CharacterBody3D (generic/character?)
 CryptoKey (generic/key_alt)
 Pin (generic/pin)
 PinJoint2D (generic/drawing/pin)
-Tools (generic/tools)
 
 ViewportZoom (toggles/zoom_in, create toggles/zoom_out and toggles/zoom_reset)
 Zoom (toggles/zoom_in, create toggles/zoom_out and toggles/zoom_reset)
@@ -14,9 +13,6 @@ CombineLines (wysiwyg/collapse)
 
 PackedScene?
 Progress (generic/toggles/progress_1)
-
-GUITabMenu (generic/menu)
-Onion (onion)
 
 Other:
 ======
