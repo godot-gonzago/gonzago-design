@@ -28,6 +28,7 @@ Progress/Spinner?
 Palette
 Weather??
 HandVictory??
+Upload/Download (_masks/upload, ???)
 
 Variant.Type:
 -------------
