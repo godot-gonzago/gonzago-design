@@ -70,7 +70,6 @@ Sort (sort_alpha_asc, sort_alpha_desc, sort_num_asc, sort_num_desc)
 Globe???
 Speech/Thought bubble
 Headphones???
-Camera (photo, eg. for screenshots)
 Connection
 BarCode/QRCode
 Charts (dots/bars)
