@@ -11,6 +11,7 @@
    sodipodi:docname="sliders.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -63,11 +64,11 @@
      borderopacity="1"
      inkscape:pageopacity="0"
      inkscape:deskcolor="#1c202b"
-     inkscape:current-layer="grabers"
+     inkscape:current-layer="slider_1"
      inkscape:showpageshadow="0"
      inkscape:zoom="20"
-     inkscape:cx="6.575"
-     inkscape:cy="9.175"
+     inkscape:cx="2.35"
+     inkscape:cy="9.225"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
@@ -104,18 +105,6 @@
          cy="3"
          r="4"
          fill="#000000" />
-      <circle
-         id="lines_mask_shape_2"
-         cx="3"
-         cy="8"
-         r="4"
-         fill="#000000" />
-      <circle
-         id="lines_mask_shape_3"
-         cx="13"
-         cy="13"
-         r="4"
-         fill="#000000" />
     </mask>
   </defs>
   <g
@@ -123,40 +112,31 @@
      inkscape:groupmode="layer"
      id="base_layer">
     <g
-       id="lines"
-       stroke="#e0e0e0"
-       stroke-width="2"
-       stroke-linecap="round"
-       mask="url(#lines_mask)">
+       id="slider_1">
       <path
          d="M 14,3 H 2"
          id="line_1"
-         sodipodi:nodetypes="cc" />
-      <path
-         d="M 14,8 H 2"
-         id="line_2" />
-      <path
-         d="M 14,13 H 2"
-         id="line_3" />
-    </g>
-    <g
-       id="grabers"
-       fill="#e0e0e0">
+         stroke="#e0e0e0"
+         stroke-width="2"
+         stroke-linecap="round"
+         mask="url(#lines_mask)" />
       <circle
          id="graber_1"
          cx="13"
          cy="3"
-         r="2" />
-      <circle
-         id="graber_2"
-         cx="3"
-         cy="8"
-         r="2" />
-      <circle
-         id="graber_3"
-         cx="13"
-         cy="13"
-         r="2" />
+         r="2"
+         fill="#e0e0e0" />
     </g>
+    <use
+       x="0"
+       y="5"
+       xlink:href="#slider_1"
+       id="slider_2"
+       transform="matrix(-1,0,0,1,16,0)" />
+    <use
+       x="0"
+       y="10"
+       xlink:href="#slider_1"
+       id="slider_3" />
   </g>
 </svg>
