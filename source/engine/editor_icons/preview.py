@@ -24,6 +24,7 @@ if __name__ == "__main__":
         ])
 
         for image in dir.rglob("*.svg"):
+            # https://realpython.com/python-xml-parser/#document-object-model-dom
             html.writelines([
                 '<li>',
                 '<img src="%s">\n' % image.relative_to(dir),
