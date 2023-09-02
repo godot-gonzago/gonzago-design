@@ -6,92 +6,47 @@
    height="16"
    viewBox="0 0 16 16"
    version="1.1"
-   id="icon_svg"
+   id="svg5"
    inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
    sodipodi:docname="gonzago.svg"
+   inkscape:export-filename="icon16x16.png"
+   inkscape:export-xdpi="96.480339"
+   inkscape:export-ydpi="96.480339"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <metadata
-     id="metadata">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:creator>
-          <cc:Agent>
-            <dc:title>David Krummenacher</dc:title>
-          </cc:Agent>
-        </dc:creator>
-        <dc:publisher>
-          <cc:Agent>
-            <dc:title>Gonzago Framework</dc:title>
-          </cc:Agent>
-        </dc:publisher>
-        <dc:source>https://github.com/godot-gonzago</dc:source>
-        <cc:license
-           rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
-        <dc:subject>
-          <rdf:Bag>
-            <rdf:li>gonzago</rdf:li>
-            <rdf:li>icon</rdf:li>
-            <rdf:li>mono</rdf:li>
-            <rdf:li>monochrome</rdf:li>
-          </rdf:Bag>
-        </dc:subject>
-      </cc:Work>
-      <cc:License
-         rdf:about="http://creativecommons.org/licenses/by/4.0/">
-        <cc:permits
-           rdf:resource="http://creativecommons.org/ns#Reproduction" />
-        <cc:permits
-           rdf:resource="http://creativecommons.org/ns#Distribution" />
-        <cc:requires
-           rdf:resource="http://creativecommons.org/ns#Notice" />
-        <cc:requires
-           rdf:resource="http://creativecommons.org/ns#Attribution" />
-        <cc:permits
-           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
-      </cc:License>
-    </rdf:RDF>
-  </metadata>
+   xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
-     id="base_view"
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="false"
+     inkscape:document-units="px"
      showgrid="true"
      units="px"
      width="16px"
      viewbox-height="16"
-     inkscape:snap-grids="true"
-     pagecolor="#333b4f"
-     bordercolor="#8f939e"
-     borderopacity="1"
-     inkscape:pageopacity="0"
-     inkscape:deskcolor="#1c202b"
-     inkscape:current-layer="base_layer"
-     inkscape:showpageshadow="0"
-     inkscape:zoom="32"
-     inkscape:cx="8.734375"
-     inkscape:cy="8.671875"
+     inkscape:zoom="8"
+     inkscape:cx="-3.4375"
+     inkscape:cy="-6.4375"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
      inkscape:window-y="-6"
      inkscape:window-maximized="1"
-     inkscape:document-units="px"
-     inkscape:pagecheckerboard="0">
+     inkscape:current-layer="layer1"
+     showborder="true"
+     inkscape:snap-grids="true"
+     inkscape:showpageshadow="0"
+     inkscape:deskcolor="#d1d1d1">
     <inkscape:grid
        type="xygrid"
-       id="base_grid"
+       id="grid902"
        dotted="true"
        empspacing="4"
-       empcolor="#699ce8"
-       empopacity="0.3"
-       color="#699ce8"
-       opacity="0.3"
        originx="0"
        originy="0"
        spacingy="1"
@@ -100,46 +55,14 @@
        visible="true" />
   </sodipodi:namedview>
   <defs
-     id="base_definitions" />
+     id="defs2" />
   <g
-     inkscape:label="Base Layer"
+     inkscape:label="Ebene 1"
      inkscape:groupmode="layer"
-     id="base_layer">
-    <g
-       id="head"
-       fill="#e0e0e0">
-      <rect
-         id="top"
-         width="6"
-         height="3.5"
-         x="5"
-         y="1"
-         ry="1" />
-      <use
-         x="-19.8"
-         y="-6.5"
-         xlink:href="#top"
-         id="left"
-         transform="rotate(-120)" />
-      <use
-         x="-4.2"
-         y="-20.3"
-         xlink:href="#top"
-         id="right"
-         transform="rotate(120)" />
-      <circle
-         id="eye"
-         cx="8"
-         cy="9"
-         r="1.5" />
-    </g>
-    <circle
-       id="outline"
-       cx="8"
-       cy="9"
-       r="5"
-       stroke="#e0e0e0"
-       fill="none"
-       stroke-width="2.5" />
+     id="layer1">
+    <path
+       id="gonzago"
+       d="M 8,1.4 5,4 2,2.2 V 7 H 14 V 2.2 L 11,4 Z M 2,8 v 2 c 0,1.3 0.8,2.4 2,2.8 V 14 c 0,0.6 0.4,1 1,1 h 6 c 0.6,0 1,-0.4 1,-1 v -1.2 c 1.2,-0.4 2,-1.5 2,-2.8 V 8 Z m 1.2,2 h 1 c 0,0.6 0.4,1 1,1 0.6,0 1,-0.4 1,-1 h 1 c 0,1.1 -0.9,2 -2,2 -1.1,0 -2,-0.9 -2,-2 z m 5.6,0 h 1 c 0,0.6 0.4,1 1,1 0.6,0 1,-0.4 1,-1 h 1 c 0,1.1 -0.9,2 -2,2 -1.1,0 -2,-0.9 -2,-2 z M 8,11 9,13 H 7 Z"
+       fill="#e0e0e0" />
   </g>
 </svg>

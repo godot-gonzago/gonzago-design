@@ -7,8 +7,8 @@
    viewBox="0 0 64 64"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
-   sodipodi:docname="icon.inkscape.svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="gonzago-icon-large.svg"
    inkscape:export-filename="export/github.png"
    inkscape:export-xdpi="768"
    inkscape:export-ydpi="768"
@@ -17,7 +17,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
-     id="base_view"
+     id="namedview7"
      pagecolor="#ffffff"
      bordercolor="#999999"
      borderopacity="1"
@@ -29,90 +29,56 @@
      units="px"
      width="16px"
      viewbox-height="16"
-     inkscape:zoom="5.6568542"
-     inkscape:cx="45.696776"
-     inkscape:cy="30.49398"
+     inkscape:zoom="7.9999999"
+     inkscape:cx="33.5"
+     inkscape:cy="36.875"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
      inkscape:window-y="-6"
      inkscape:window-maximized="1"
-     inkscape:current-layer="head"
+     inkscape:current-layer="layer1"
      showborder="true"
      inkscape:snap-grids="true"
      inkscape:showpageshadow="0"
      inkscape:deskcolor="#d1d1d1">
     <inkscape:grid
        type="xygrid"
-       id="base_grid"
+       id="grid902"
        dotted="true"
-       empspacing="4" />
+       empspacing="4"
+       originx="0"
+       originy="0"
+       spacingy="1"
+       spacingx="1"
+       units="px"
+       visible="true" />
   </sodipodi:namedview>
   <defs
-     id="base_definitions" />
+     id="defs2" />
   <g
-     inkscape:label="Base Layer"
+     inkscape:label="Ebene 1"
      inkscape:groupmode="layer"
-     id="base_layer">
-    <circle
-       id="background"
-       fill="#ff4f69"
-       r="28"
-       cy="32"
-       cx="32" />
+     id="layer1">
     <path
-       id="accent"
-       d="M 8,47 C 20,64 44,64 56,47 44,32 20,32 8,47 Z"
+       d="M 8,1.8 V 36 c 0,4.7 2.5,8.5 6,11.1 -0.1,2.8 0.6,5.3 2.7,7.2 C 18.4,56.4 20.8,57 23,57 h 18 c 2.2,0 4.6,-0.6 6.3,-2.7 C 49.5,52.5 50,49.8 50,47.1 53.5,44.5 56,40.7 56,36 V 1.8 L 41.6,10.7 32,2.3 c -3.2,2.8 -6.4,5.6 -9.6,8.4 z"
+       id="gonzago-outline"
+       fill="#fff7f8" />
+    <path
+       d="M 32,6.3 22.7,14.4 11,7.2 V 36 c 0,4.2 2.4,7.5 6,9.6 V 48 c 0,1.5 0.6,3.3 1.8,4.2 0.9,1.2 2.7,1.8 4.2,1.8 h 18 c 1.5,0 3.3,-0.6 4.2,-1.8 C 46.4,51.3 47,49.5 47,48 v -2.4 c 3.6,-2.1 6,-5.4 6,-9.6 V 7.2 l -11.7,7.2 z"
+       id="gonzago-border"
+       fill="#2d2523" />
+    <path
+       d="m 32,10.2 9,7.8 9,-5.4 V 27 H 14 V 12.6 l 9,5.4 z"
+       id="gonzago_crown"
        fill="#ffda45" />
-    <circle
-       id="ring"
-       cx="32"
-       cy="32"
-       r="28"
-       stroke="#2d2523"
-       stroke-width="8"
-       fill="none" />
-    <g
-       id="head"
-       fill="#2d2523">
-      <path
-         d="M 28,44 24,60 H 40 L 36,44"
-         id="neck" />
-      <rect
-         id="top"
-         width="16"
-         height="13"
-         x="24"
-         y="11"
-         ry="4" />
-      <rect
-         id="left"
-         width="16"
-         height="13"
-         x="-51.712814"
-         y="-9.2871866"
-         ry="4"
-         transform="rotate(-120)" />
-      <rect
-         id="right"
-         width="16"
-         height="13"
-         x="3.7128129"
-         y="-64.712814"
-         ry="4"
-         transform="rotate(120)" />
-      <circle
-         id="base"
-         cx="32"
-         cy="32"
-         r="16" />
-      <circle
-         id="eye"
-         cx="32"
-         cy="32"
-         r="6"
-         stroke="#fff7f8"
-         stroke-width="4" />
-    </g>
+    <path
+       id="gonzago_base"
+       d="m 14,30 v 6 c 0,3.9 2.4,7.2 6,8.4 V 48 c 0,1.8 1.2,3 3,3 1.8,0 3,-1.2 3,-3 0,1.8 1.2,3 3,3 1.8,0 3,-1.2 3,-3 0,1.8 1.2,3 3,3 1.8,0 3,-1.2 3,-3 0,1.8 1.2,3 3,3 1.8,0 3,-1.2 3,-3 v -3.6 c 3.6,-1.2 6,-4.5 6,-8.4 v -6 z"
+       fill="#fff7f8" />
+    <path
+       id="gonzago_face"
+       d="m 17.6,36 c 0,3.3 2.7,6 6,6 3.3,0 6,-2.7 6,-6 h -3 c 0,1.8 -1.2,3 -3,3 -1.8,0 -3,-1.2 -3,-3 z m 16.8,0 c 0,3.3 2.7,6 6,6 3.3,0 6,-2.7 6,-6 h -3 c 0,1.8 -1.2,3 -3,3 -1.8,0 -3,-1.2 -3,-3 z m -2.4,3 -3,6 3,-1.5 3,1.5 z"
+       fill="#2d2523" />
   </g>
 </svg>
