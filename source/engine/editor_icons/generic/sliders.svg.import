@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g1we4ea74adi"
-path="res://.godot/imported/image.svg-05836b2668e9164b88ff3faa072cb517.ctex"
+uid="uid://mmt43e1rl8pg"
+path="res://.godot/imported/sliders.svg-c26ef1beab05030cdfeee36fdc589a96.ctex"
 metadata={
 "editor_dark_theme": true,
 "editor_scale": 2.0,
@@ -13,8 +13,8 @@ metadata={
 
 [deps]
 
-source_file="res://editor_icons/generic/image.svg"
-dest_files=["res://.godot/imported/image.svg-05836b2668e9164b88ff3faa072cb517.ctex"]
+source_file="res://editor_icons/generic/sliders.svg"
+dest_files=["res://.godot/imported/sliders.svg-c26ef1beab05030cdfeee36fdc589a96.ctex"]
 
 [params]
 

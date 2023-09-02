@@ -56,7 +56,6 @@ Compass
 Book/Books
 Mic
 User (add, remove, edit)
-Sliders (for settings, equializer)
 Heart broken???
 Fire/Flames
 Lab (Flask)
