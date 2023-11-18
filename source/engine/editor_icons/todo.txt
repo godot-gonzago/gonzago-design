@@ -1,11 +1,6 @@
 EditorIcons:
 ============
 
-CharacterBody3D (generic/character?)
-CryptoKey (generic/key_alt)
-Pin (generic/pin)
-PinJoint2D (generic/drawing/pin)
-
 ViewportZoom (toggles/zoom_in, create toggles/zoom_out and toggles/zoom_reset)
 Zoom (toggles/zoom_in, create toggles/zoom_out and toggles/zoom_reset)
 
