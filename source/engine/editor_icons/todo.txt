@@ -4,8 +4,6 @@ EditorIcons:
 ViewportZoom (toggles/zoom_in, create toggles/zoom_out and toggles/zoom_reset)
 Zoom (toggles/zoom_in, create toggles/zoom_out and toggles/zoom_reset)
 
-PackedScene?
-
 Other:
 ======
 Config (_masks/config, ???)
@@ -19,7 +17,6 @@ Progress/Spinner?
 Palette
 Weather??
 HandVictory??
-Upload/Download (_masks/upload, ???)
 
 Variant.Type:
 -------------
