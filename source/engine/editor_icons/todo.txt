@@ -46,7 +46,6 @@ Folder (io/folder_plus, io/folder_minus, io/folder_download, io/folder_upload)??
 Book/Books
 Mic
 User (add, remove, edit)
-Heart broken???
 Fire/Flames
 Lab (Flask)
 Magnet
