@@ -11,7 +11,6 @@ Other:
 Config (_masks/config, ???)
 Help (generic/help, lifebuoy)
 Drawing/Editing tools??? (Brightness, Contrast, Rotate, Flip, Mirror, Transparent)
-SaveAll (floppy disks)
 Characters
 Factions
 Interactables, Interactors, Interactions
@@ -64,9 +63,7 @@ Headphones???
 Connection
 BarCode/QRCode
 Charts (dots/bars)
-Finger pointers in direction???
 Share
-Cloud?
 Enlarge/Shrink
 Enter/Exit???
 Undo/Redo???
