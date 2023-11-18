@@ -4,10 +4,7 @@ EditorIcons:
 ViewportZoom (toggles/zoom_in, create toggles/zoom_out and toggles/zoom_reset)
 Zoom (toggles/zoom_in, create toggles/zoom_out and toggles/zoom_reset)
 
-CombineLines (wysiwyg/collapse)
-
 PackedScene?
-Progress (generic/toggles/progress_1)
 
 Other:
 ======

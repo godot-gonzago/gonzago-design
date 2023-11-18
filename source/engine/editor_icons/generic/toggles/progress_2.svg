@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="icon_svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="progress_2.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata
+     id="metadata">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>David Krummenacher</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>Gonzago Framework</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:source>https://github.com/godot-gonzago</dc:source>
+        <dc:description>Recreation of https://github.com/godotengine/godot/blob/master/editor/icons/Progress2.svg</dc:description>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     id="base_view"
+     showgrid="true"
+     units="px"
+     width="16px"
+     viewbox-height="16"
+     inkscape:snap-grids="true"
+     pagecolor="#333b4f"
+     bordercolor="#8f939e"
+     borderopacity="1"
+     inkscape:pageopacity="0"
+     inkscape:deskcolor="#1c202b"
+     inkscape:current-layer="icon_svg"
+     inkscape:showpageshadow="0"
+     inkscape:zoom="20"
+     inkscape:cx="9.075"
+     inkscape:cy="8.05"
+     inkscape:window-width="1368"
+     inkscape:window-height="850"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:document-units="px"
+     inkscape:pagecheckerboard="0">
+    <inkscape:grid
+       type="xygrid"
+       id="base_grid"
+       dotted="true"
+       empspacing="4"
+       empcolor="#699ce8"
+       empopacity="0.3"
+       color="#699ce8"
+       opacity="0.3"
+       originx="0"
+       originy="0"
+       spacingy="1"
+       spacingx="1"
+       units="px"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="base_definitions">
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="ring_mask">
+      <g
+         id="ring_mask_group">
+        <rect
+           id="ring_mask_base"
+           width="16"
+           height="16"
+           x="0"
+           y="0"
+           fill="#333333" />
+        <path
+           d="M 8,8 16,0 V 8 Z"
+           id="ring_mask_highlight"
+           fill="#ffffff" />
+        <path
+           d="m -1,8 h 18 v 9 L -1,-1 H 8 V 17 H -1 L 17,-1"
+           id="ring_mask_lines"
+           fill="none"
+           stroke="#000000"
+           stroke-width="2" />
+      </g>
+    </mask>
+  </defs>
+  <g
+     inkscape:label="Base Layer"
+     inkscape:groupmode="layer"
+     id="base_layer">
+    <circle
+       id="ring"
+       cx="8"
+       cy="8"
+       r="5.5"
+       fill="none"
+       stroke="#e0e0e0"
+       stroke-width="3"
+       mask="url(#ring_mask)" />
+  </g>
+</svg>
