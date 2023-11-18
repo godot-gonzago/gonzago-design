@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddjm2g4gtj7i2"
-path="res://.godot/imported/collapse.svg-9205eacfdee0e3f63abcb8eee4b25f2e.ctex"
+uid="uid://1c2txbgpsha"
+path="res://.godot/imported/flag.svg-a0e385bbc7fead4ebfdaf61665b83cb8.ctex"
 metadata={
 "has_editor_variant": true,
 "vram_texture": false
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://editor_icons/generic/wysiwyg/collapse.svg"
-dest_files=["res://.godot/imported/collapse.svg-9205eacfdee0e3f63abcb8eee4b25f2e.ctex"]
+source_file="res://editor_icons/generic/flag.svg"
+dest_files=["res://.godot/imported/flag.svg-a0e385bbc7fead4ebfdaf61665b83cb8.ctex"]
 
 [params]
 

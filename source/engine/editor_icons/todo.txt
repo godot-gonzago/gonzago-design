@@ -50,7 +50,6 @@ Fire/Flames
 Lab (Flask)
 Magnet
 Target
-Flag
 AidKit
 Bug (already in Godot)
 Attachment
