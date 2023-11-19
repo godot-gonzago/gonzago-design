@@ -47,7 +47,6 @@ Fire/Flames
 Lab (Flask)
 Magnet
 Target
-AidKit
 Bug (already in Godot)
 Attachment
 Volume Controls in media
@@ -55,7 +54,6 @@ Sort (sort_alpha_asc, sort_alpha_desc, sort_num_asc, sort_num_desc)
 Globe???
 Speech/Thought bubble
 Headphones???
-Connection
 BarCode/QRCode
 Charts (dots/bars)
 Share
