@@ -62,7 +62,7 @@
      borderopacity="1"
      inkscape:pageopacity="0"
      inkscape:deskcolor="#1c202b"
-     inkscape:current-layer="base_layer"
+     inkscape:current-layer="mic"
      inkscape:showpageshadow="0"
      inkscape:zoom="20"
      inkscape:cx="8.025"
@@ -130,7 +130,7 @@
          fill="#e0e0e0" />
       <path
          id="stand"
-         d="m 13,9 c 0,2.8 -2.2,5 -5,5 C 5.2,14 3,11.8 3,9"
+         d="M 12,12 C 11,13 10,14 8,14 6,14 5,13 4,12"
          fill="none"
          stroke="#e0e0e0"
          stroke-width="2"

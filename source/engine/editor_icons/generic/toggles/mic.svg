@@ -32,8 +32,6 @@
           </cc:Agent>
         </dc:publisher>
         <dc:source>https://github.com/godot-gonzago</dc:source>
-        <cc:license
-           rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
       </cc:Work>
       <cc:License
          rdf:about="http://creativecommons.org/licenses/by/4.0/">
@@ -108,7 +106,7 @@
          fill="#e0e0e0" />
       <path
          id="stand"
-         d="m 13,9 c 0,2.8 -2.2,5 -5,5 C 5.2,14 3,11.8 3,9"
+         d="M 12,12 C 11,13 10,14 8,14 6,14 5,13 4,12"
          fill="none"
          stroke="#e0e0e0"
          stroke-width="2"
