@@ -18,6 +18,10 @@ Palette
 Weather??
 HandVictory??
 
+Animals??
+Buildings??
+Scenery??
+
 Door (open/closed)?
 
 Variant.Type:
