@@ -76,3 +76,7 @@ Notebook
 - Create default theme icon set etc (base on godot default theme, but also add own variant like already started)
 - Fill out meta data in all files to reference where Godot original icons were recreated
   - Meta data can be used for creating AUTHORS.md or license information
+
+https://icons.getbootstrap.com/
+-------------------------------
+
