@@ -18,6 +18,8 @@ Palette
 Weather??
 HandVictory??
 
+Door (open/closed)?
+
 Variant.Type:
 -------------
 nil (Node, with dot inside?)
@@ -41,7 +43,6 @@ https://icomoon.io/preview-free.html or https://icomoon.io/#preview-ultimate:
 -----------------------------------------------------------------------------
 Folder (io/folder_plus, io/folder_minus, io/folder_download, io/folder_upload)???
 Book/Books
-Mic
 User (add, remove, edit)
 Fire/Flames
 Lab (Flask)
