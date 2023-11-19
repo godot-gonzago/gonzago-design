@@ -77,6 +77,33 @@ Notebook
 - Fill out meta data in all files to reference where Godot original icons were recreated
   - Meta data can be used for creating AUTHORS.md or license information
 
-https://icons.getbootstrap.com/
+https://icons.getbootstrap.com/ (great naming)
 -------------------------------
-
+- arrow-right-square-fill
+- bag??
+- arrow-through-heart-fill??
+- chat, chat-square
+- cup_hot_fill
+- database_fill
+- headphones, headset
+- lightning-charge-fill
+- nut-fill
+- person-arms-up
+- person-fill
+- person-raised-hand
+- person-standing
+- person-walking
+- person-vcard
+- power
+- question-diamond-fill, question-circle-fill, question-octagon-fill (for info, warning, error)
+- reply-fill, reply-all-fill
+- shield-fill
+- sort-alpha-down
+- symmetry-horizontal, symmetry-vertical
+- terminal-fill
+- umbrella-fill
+- universal-access
+- volume-down-fill
+- watch
+- wallet2??
+- water
