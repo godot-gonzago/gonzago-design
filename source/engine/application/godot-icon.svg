@@ -1,1 +1,155 @@
-<svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><g stroke-width=".32031" transform="matrix(.017241 0 0 .017241 -.82759 -2.7)"><path d="m0 0s-.325 1.994-.515 1.976l-36.182-3.491c-2.879-.278-5.115-2.574-5.317-5.459l-.994-14.247-27.992-1.997-1.904 12.912c-.424 2.872-2.932 5.037-5.835 5.037h-38.188c-2.902 0-5.41-2.165-5.834-5.037l-1.905-12.912-27.992 1.997-.994 14.247c-.202 2.886-2.438 5.182-5.317 5.46l-36.2 3.49c-.187.018-.324-1.978-.511-1.978l-.049-7.83 30.658-4.944 1.004-14.374c.203-2.91 2.551-5.263 5.463-5.472l38.551-2.75c.146-.01.29-.016.434-.016 2.897 0 5.401 2.166 5.825 5.038l1.959 13.286h28.005l1.959-13.286c.423-2.871 2.93-5.037 5.831-5.037.142 0 .284.005.423.015l38.556 2.75c2.911.209 5.26 2.562 5.463 5.472l1.003 14.374 30.645 4.966z" fill="#fff" transform="matrix(4.1626 0 0 -4.1626 919.24 771.67)"/><path d="m0 0v-59.041c.108-.001.216-.005.323-.015l36.196-3.49c1.896-.183 3.382-1.709 3.514-3.609l1.116-15.978 31.574-2.253 2.175 14.747c.282 1.912 1.922 3.329 3.856 3.329h38.188c1.933 0 3.573-1.417 3.855-3.329l2.175-14.747 31.575 2.253 1.115 15.978c.133 1.9 1.618 3.425 3.514 3.609l36.182 3.49c.107.01.214.014.322.015v4.711l.015.005v54.325h.134c4.795 6.12 9.232 12.569 13.487 19.449-5.651 9.62-12.575 18.217-19.976 26.182-6.864-3.455-13.531-7.369-19.828-11.534-3.151 3.132-6.7 5.694-10.186 8.372-3.425 2.751-7.285 4.768-10.946 7.118 1.09 8.117 1.629 16.108 1.846 24.448-9.446 4.754-19.519 7.906-29.708 10.17-4.068-6.837-7.788-14.241-11.028-21.479-3.842.642-7.702.88-11.567.926v.006c-.027 0-.052-.006-.075-.006-.024 0-.049.006-.073.006v-.006c-3.872-.046-7.729-.284-11.572-.926-3.238 7.238-6.956 14.642-11.03 21.479-10.184-2.264-20.258-5.416-29.703-10.17.216-8.34.755-16.331 1.848-24.448-3.668-2.35-7.523-4.367-10.949-7.118-3.481-2.678-7.036-5.24-10.188-8.372-6.297 4.165-12.962 8.079-19.828 11.534-7.401-7.965-14.321-16.562-19.974-26.182 4.253-6.88 8.693-13.329 13.487-19.449z" fill="#478cbf" transform="matrix(4.1626 0 0 -4.1626 104.7 525.91)"/><path d="m0 0-1.121-16.063c-.135-1.936-1.675-3.477-3.611-3.616l-38.555-2.751c-.094-.007-.188-.01-.281-.01-1.916 0-3.569 1.406-3.852 3.33l-2.211 14.994h-31.459l-2.211-14.994c-.297-2.018-2.101-3.469-4.133-3.32l-38.555 2.751c-1.936.139-3.476 1.68-3.611 3.616l-1.121 16.063-32.547 3.138c.015-3.498.06-7.33.06-8.093 0-34.374 43.605-50.896 97.781-51.086h.133c54.176.19 97.766 16.712 97.766 51.086 0 .777.047 4.593.063 8.093z" fill="#478cbf" transform="matrix(4.1626 0 0 -4.1626 784.07 817.24)"/><path d="m0 0c0-12.052-9.765-21.815-21.813-21.815-12.042 0-21.81 9.763-21.81 21.815 0 12.044 9.768 21.802 21.81 21.802 12.048 0 21.813-9.758 21.813-21.802" fill="#fff" transform="matrix(4.1626 0 0 -4.1626 389.21 625.67)"/><path d="m0 0c0-7.994-6.479-14.473-14.479-14.473-7.996 0-14.479 6.479-14.479 14.473s6.483 14.479 14.479 14.479c8 0 14.479-6.485 14.479-14.479" fill="#414042" transform="matrix(4.1626 0 0 -4.1626 367.37 631.06)"/><path d="m0 0c-3.878 0-7.021 2.858-7.021 6.381v20.081c0 3.52 3.143 6.381 7.021 6.381s7.028-2.861 7.028-6.381v-20.081c0-3.523-3.15-6.381-7.028-6.381" fill="#fff" transform="matrix(4.1626 0 0 -4.1626 511.99 724.74)"/><path d="m0 0c0-12.052 9.765-21.815 21.815-21.815 12.041 0 21.808 9.763 21.808 21.815 0 12.044-9.767 21.802-21.808 21.802-12.05 0-21.815-9.758-21.815-21.802" fill="#fff" transform="matrix(4.1626 0 0 -4.1626 634.79 625.67)"/><path d="m0 0c0-7.994 6.477-14.473 14.471-14.473 8.002 0 14.479 6.479 14.479 14.473s-6.477 14.479-14.479 14.479c-7.994 0-14.471-6.485-14.471-14.479" fill="#414042" transform="matrix(4.1626 0 0 -4.1626 656.64 631.06)"/></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="16"
+   viewBox="0 0 16 16"
+   width="16"
+   version="1.1"
+   id="application_icon"
+   sodipodi:docname="godot-icon.svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title">Godot Engine Logo</title>
+  <metadata
+     id="metadata">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Godot Engine Logo</dc:title>
+        <dc:date>2023-11-19</dc:date>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Copyright (c) 2017 Andrea Calabró</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Andrea Calabró</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>Godot Engine</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:identifier>godot.application.icon</dc:identifier>
+        <dc:source>https://github.com/godotengine/godot</dc:source>
+        <dc:language>en</dc:language>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>application</rdf:li>
+            <rdf:li>icon</rdf:li>
+            <rdf:li>logo</rdf:li>
+            <rdf:li>godot</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:contributor>
+          <cc:Agent>
+            <dc:title>Andrea Calabró&#10;David Krummenacher</dc:title>
+          </cc:Agent>
+        </dc:contributor>
+        <dc:description>Logo of Godot Engine showing a blue robot head. Recreation of https://github.com/godotengine/godot/blob/master/editor/icons/Godot.svg.</dc:description>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     id="base_view"
+     pagecolor="#595959"
+     bordercolor="#333333"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#404040"
+     inkscape:zoom="16"
+     inkscape:cx="3.03125"
+     inkscape:cy="11"
+     inkscape:window-width="1368"
+     inkscape:window-height="850"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="base_layer"
+     showgrid="true">
+    <inkscape:grid
+       id="base_grid"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#999999"
+       empopacity="0.30196078"
+       color="#999999"
+       opacity="0.14901961"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="base_definitions" />
+  <g
+     inkscape:groupmode="layer"
+     id="base_layer"
+     inkscape:label="Base Layer">
+    <path
+       id="head"
+       d="M 6.37,0.32 C 5.64,0.49 4.92,0.71 4.24,1.05 4.26,1.65 4.29,2.23 4.37,2.81 3.81,3.11 3.34,3.52 2.86,3.92 2.41,3.62 1.93,3.34 1.43,3.09 0.9,3.66 0.41,4.28 0,4.97 c 0.31,0.49 0.62,0.96 0.97,1.4 0,0 0.01,5.32 0.01,5.38 0,2.47 3.13,3.65 7.02,3.65 3.89,-0 7.02,-1.19 7.02,-3.65 0,-0.06 0.01,-5.38 0.01,-5.38 C 15.38,5.93 15.69,5.46 16,4.97 15.59,4.28 15.1,3.66 14.57,3.09 14.07,3.34 13.59,3.62 13.14,3.92 12.69,3.48 12.16,3.14 11.63,2.81 11.71,2.23 11.74,1.65 11.76,1.05 11.08,0.71 10.36,0.49 9.63,0.32 9.34,0.81 9.07,1.35 8.84,1.87 c -0.52,-0.09 -1.15,-0.09 -1.67,0 C 6.93,1.35 6.67,0.81 6.37,0.32 Z"
+       fill="#478cbf" />
+    <circle
+       id="eye_l"
+       cx="4.32"
+       cy="8.09"
+       fill="#ffffff"
+       r="1.57" />
+    <circle
+       id="eye_r"
+       cx="11.68"
+       cy="8.09"
+       fill="#ffffff"
+       r="1.57" />
+    <path
+       d="m 8,9.8 c -0.28,0 -0.5,-0.21 -0.5,-0.46 v -1.44 c 0,-0.25 0.23,-0.46 0.5,-0.46 0.28,0 0.5,0.21 0.5,0.46 v 1.44 c 0,0.25 -0.23,0.46 -0.5,0.46"
+       fill="#ffffff"
+       id="nose" />
+    <path
+       id="mouth"
+       d="m 0.98,11.16 2.33,0.23 0.08,1.15 c 0.01,0.14 0.12,0.25 0.26,0.26 L 6.42,13 c 0.15,0.01 0.28,-0.09 0.3,-0.24 l 0.16,-1.08 h 2.26 l 0.16,1.08 C 9.31,12.9 9.43,13 9.56,13 c 0.01,0 2.79,-0.2 2.79,-0.2 0.14,-0.01 0.25,-0.12 0.26,-0.26 l 0.08,-1.15 2.33,-0.23 v -0.56 c -0.01,0 -2.62,0.25 -2.62,0.25 -0.14,0.01 -0.24,0.12 -0.25,0.26 l -0.08,1.15 -2.27,0.16 -0.16,-1.06 C 9.63,11.23 9.51,11.13 9.37,11.13 H 6.63 c -0.14,0 -0.26,0.1 -0.28,0.24 l -0.16,1.06 -2.27,-0.16 -0.08,-1.15 c -0.01,-0.14 -0.12,-0.25 -0.25,-0.26 0,0 -2.61,-0.25 -2.62,-0.25 z"
+       fill="#ffffff" />
+    <circle
+       id="pupil_l"
+       cx="4.47"
+       cy="8.18"
+       r="1.04"
+       fill="#414042" />
+    <circle
+       id="pupil_r"
+       cx="11.53"
+       cy="8.18"
+       r="1.04"
+       fill="#414042" />
+  </g>
+</svg>
