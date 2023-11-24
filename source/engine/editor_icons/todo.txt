@@ -3,6 +3,14 @@ EditorIcons:
 
 Add meta data:
 - generic/*
+  - *
+  - actions
+  - arrows
+  - drawing
+  - io
+  - media
+  - toggles
+  - wysiwyg
 
 
 ViewportZoom (toggles/zoom_in, create toggles/zoom_out and toggles/zoom_reset)
