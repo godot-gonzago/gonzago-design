@@ -1,6 +1,12 @@
 EditorIcons:
 ============
 
+Add meta data:
+- core/*
+- debug/*
+- generic/*
+
+
 ViewportZoom (toggles/zoom_in, create toggles/zoom_out and toggles/zoom_reset)
 Zoom (toggles/zoom_in, create toggles/zoom_out and toggles/zoom_reset)
 
