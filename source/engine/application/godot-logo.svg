@@ -56,6 +56,7 @@
             <dc:title>Andrea Calabró&#10;David Krummenacher</dc:title>
           </cc:Agent>
         </dc:contributor>
+        <dc:relation>https://github.com/godotengine/godot/blob/master/editor/icons/Logo.svg</dc:relation>
       </cc:Work>
       <cc:License
          rdf:about="http://creativecommons.org/licenses/by/4.0/">

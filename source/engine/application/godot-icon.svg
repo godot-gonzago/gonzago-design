@@ -51,6 +51,7 @@
         </dc:subject>
         <cc:license
            rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
+        <dc:relation>https://github.com/godotengine/godot/blob/master/editor/icons/Godot.svg</dc:relation>
         <dc:description>Icon of Godot Engine showing a blue robot head. Recreation of https://github.com/godotengine/godot/blob/master/editor/icons/Godot.svg.</dc:description>
         <dc:contributor>
           <cc:Agent>
@@ -83,7 +84,7 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#404040"
      inkscape:zoom="45.254834"
-     inkscape:cx="12.562194"
+     inkscape:cx="12.584291"
      inkscape:cy="11.578874"
      inkscape:window-width="1368"
      inkscape:window-height="850"
