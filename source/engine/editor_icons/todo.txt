@@ -3,7 +3,6 @@ EditorIcons:
 
 Add meta data:
 - core/*
-- debug/*
 - generic/*
 
 
