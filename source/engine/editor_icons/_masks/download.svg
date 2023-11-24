@@ -16,6 +16,8 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title">Download Editor Icon Mask</title>
   <metadata
      id="metadata">
     <rdf:RDF>
@@ -32,16 +34,33 @@
           </cc:Agent>
         </dc:publisher>
         <dc:source>https://github.com/godot-gonzago</dc:source>
-        <cc:license
-           rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
         <dc:subject>
           <rdf:Bag>
+            <rdf:li>editor</rdf:li>
+            <rdf:li>icon</rdf:li>
             <rdf:li>mask</rdf:li>
             <rdf:li>download</rdf:li>
             <rdf:li>down</rdf:li>
             <rdf:li>arrow</rdf:li>
           </rdf:Bag>
         </dc:subject>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
+        <dc:title>Download Editor Icon Mask</dc:title>
+        <dc:date>2023-11-19</dc:date>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Copyright (c) 2023 David Krummenacher and Gonzago Framework contributors</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:identifier>gonzago.editor_icons.masks.download</dc:identifier>
+        <dc:language>en</dc:language>
+        <dc:description>A gray arrow pointing down used for masking. Mask files provide a key shape and multiple additinal shapes used for masking.</dc:description>
+        <dc:contributor>
+          <cc:Agent>
+            <dc:title>David Krummenacher</dc:title>
+          </cc:Agent>
+        </dc:contributor>
       </cc:Work>
       <cc:License
          rdf:about="http://creativecommons.org/licenses/by/4.0/">
@@ -73,8 +92,8 @@
      inkscape:current-layer="base_layer"
      inkscape:showpageshadow="0"
      inkscape:zoom="28.284271"
-     inkscape:cx="9.6873629"
-     inkscape:cy="10.341437"
+     inkscape:cx="9.7050407"
+     inkscape:cy="10.359114"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
