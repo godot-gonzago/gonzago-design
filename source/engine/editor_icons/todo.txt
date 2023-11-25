@@ -5,7 +5,6 @@ Add meta data:
 - generic/*
   - *
   - actions
-  - arrows
   - drawing
   - io
   - media

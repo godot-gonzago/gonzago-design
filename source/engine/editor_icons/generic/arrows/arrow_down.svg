@@ -34,8 +34,6 @@
           </cc:Agent>
         </dc:publisher>
         <dc:source>https://github.com/godot-gonzago</dc:source>
-        <cc:license
-           rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
         <dc:title>Arrow Down Editor Icon</dc:title>
         <dc:date>2023-11-19</dc:date>
         <dc:rights>
@@ -54,6 +52,8 @@
             <rdf:li>down</rdf:li>
           </rdf:Bag>
         </dc:subject>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
         <dc:description>An arrow pointing down. Recreation of https://github.com/godotengine/godot/blob/master/editor/icons/ArrowDown.svg</dc:description>
         <dc:contributor>
           <cc:Agent>
