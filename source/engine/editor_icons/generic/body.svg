@@ -7,7 +7,7 @@
    viewBox="0 0 16 16"
    version="1.1"
    id="icon_svg"
-   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
    sodipodi:docname="body.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -16,13 +16,13 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title">Body Editor Icon</title>
   <metadata
      id="metadata">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
-        <cc:license
-           rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
         <dc:creator>
           <cc:Agent>
             <dc:title>David Krummenacher</dc:title>
@@ -34,6 +34,32 @@
           </cc:Agent>
         </dc:publisher>
         <dc:source>https://github.com/godot-gonzago</dc:source>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
+        <dc:title>Body Editor Icon</dc:title>
+        <dc:date>2023-11-19</dc:date>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Copyright (c) 2023 David Krummenacher and Gonzago Framework contributors</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:identifier>gonzago.editor_icons.body</dc:identifier>
+        <dc:language>en</dc:language>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>editor</rdf:li>
+            <rdf:li>icon</rdf:li>
+            <rdf:li>body</rdf:li>
+            <rdf:li>human</rdf:li>
+            <rdf:li>pose</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:description>A human standing.</dc:description>
+        <dc:contributor>
+          <cc:Agent>
+            <dc:title>David Krummenacher</dc:title>
+          </cc:Agent>
+        </dc:contributor>
       </cc:Work>
       <cc:License
          rdf:about="http://creativecommons.org/licenses/by/4.0/">
@@ -65,8 +91,8 @@
      inkscape:current-layer="base_layer"
      inkscape:showpageshadow="0"
      inkscape:zoom="20"
-     inkscape:cx="7.25"
-     inkscape:cy="10.475"
+     inkscape:cx="7.275"
+     inkscape:cy="10.45"
      inkscape:window-width="1368"
      inkscape:window-height="850"
      inkscape:window-x="-6"
@@ -82,7 +108,13 @@
        empcolor="#699ce8"
        empopacity="0.3"
        color="#699ce8"
-       opacity="0.3" />
+       opacity="0.3"
+       originx="0"
+       originy="0"
+       spacingy="1"
+       spacingx="1"
+       units="px"
+       visible="true" />
   </sodipodi:namedview>
   <defs
      id="base_definitions" />
