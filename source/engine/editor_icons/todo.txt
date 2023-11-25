@@ -4,9 +4,9 @@ EditorIcons:
 Add meta data:
 - generic/*
   - *
-  - media
-  - toggles
-  - wysiwyg
+  - media/*
+  - toggles/*
+  - wysiwyg/*
 
 
 ViewportZoom (toggles/zoom_in, create toggles/zoom_out and toggles/zoom_reset)
