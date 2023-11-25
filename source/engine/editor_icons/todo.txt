@@ -4,7 +4,6 @@ EditorIcons:
 Add meta data:
 - generic/*
   - *
-  - actions
   - drawing
   - io
   - media

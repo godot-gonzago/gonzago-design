@@ -34,8 +34,6 @@
           </cc:Agent>
         </dc:publisher>
         <dc:source>https://github.com/godot-gonzago</dc:source>
-        <cc:license
-           rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
         <dc:relation>https://github.com/godotengine/godot/blob/master/editor/icons/Add.svg</dc:relation>
         <dc:language>en</dc:language>
         <dc:subject>
@@ -44,6 +42,7 @@
             <rdf:li>icon</rdf:li>
             <rdf:li>action</rdf:li>
             <rdf:li>add</rdf:li>
+            <rdf:li>plus</rdf:li>
           </rdf:Bag>
         </dc:subject>
         <dc:identifier>gonzago.editor_icons.actions.add</dc:identifier>
@@ -54,6 +53,8 @@
         </dc:rights>
         <dc:date>2023-11-19</dc:date>
         <dc:title>Add Editor Icon</dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
         <dc:description>A plus sign. Recreation of https://github.com/godotengine/godot/blob/master/editor/icons/Add.svg</dc:description>
         <dc:contributor>
           <cc:Agent>
