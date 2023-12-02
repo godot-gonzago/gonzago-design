@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="texture"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="mask_curtain.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title">Texture Mask Curtain</title>
+  <metadata
+     id="metadata">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>David Krummenacher</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>Gonzago Framework</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:source>https://github.com/godot-gonzago</dc:source>
+        <dc:date>2023-11-19</dc:date>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Copyright (c) 2023 David Krummenacher and Gonzago Framework contributors</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:identifier>gonzago.texture.mask_curtain</dc:identifier>
+        <dc:language>en</dc:language>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>gonzago</rdf:li>
+            <rdf:li>texture</rdf:li>
+            <rdf:li>mask</rdf:li>
+            <rdf:li>curtain</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:title>Texture Mask Curtain</dc:title>
+        <dc:description>A texture mask following a curtain pattern.</dc:description>
+        <dc:contributor>
+          <cc:Agent>
+            <dc:title>David Krummenacher</dc:title>
+          </cc:Agent>
+        </dc:contributor>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     id="base_view"
+     showgrid="true"
+     units="px"
+     width="16px"
+     viewbox-height="16"
+     inkscape:snap-grids="true"
+     pagecolor="#333b4f"
+     bordercolor="#8f939e"
+     borderopacity="1"
+     inkscape:pageopacity="0"
+     inkscape:deskcolor="#1c202b"
+     inkscape:current-layer="base_layer"
+     inkscape:showpageshadow="0"
+     inkscape:zoom="0.625"
+     inkscape:cx="250.4"
+     inkscape:cy="363.2"
+     inkscape:window-width="1368"
+     inkscape:window-height="850"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:document-units="px"
+     inkscape:pagecheckerboard="0">
+    <inkscape:grid
+       type="xygrid"
+       id="base_grid"
+       dotted="true"
+       empspacing="4"
+       empcolor="#699ce8"
+       empopacity="0.3"
+       color="#699ce8"
+       opacity="0.3"
+       originx="0"
+       originy="0"
+       spacingy="1"
+       spacingx="1"
+       units="px"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="base_definitions">
+    <linearGradient
+       id="gradient_stops"
+       inkscape:collect="always"
+       inkscape:label="gradient">
+      <stop
+         style="stop-color:#000000;stop-opacity:1"
+         offset="0"
+         id="stop1" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="0.5"
+         id="stop3" />
+      <stop
+         style="stop-color:#000000;stop-opacity:1"
+         offset="1"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#gradient_stops"
+       id="gradient"
+       x1="0"
+       y1="256"
+       x2="512"
+       y2="256"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Base Layer"
+     inkscape:groupmode="layer"
+     id="base_layer">
+    <rect
+       id="block"
+       width="512"
+       height="512"
+       x="0"
+       y="0"
+       fill="url(#gradient)" />
+  </g>
+</svg>
