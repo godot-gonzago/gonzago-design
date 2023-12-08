@@ -2,6 +2,8 @@
 
 Design elements, templates and guidelines for Gonzago Framework
 
+![Gonzago Editor Icon](/icons/gonzago.svg)
+
 ## Gettings started
 
 setup.cmd
