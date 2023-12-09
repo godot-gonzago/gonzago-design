@@ -1,0 +1,85 @@
+GIMP Palette
+Name: Godot 4 Editor
+Columns: 0
+# Description: Colors based on default editor theme of Godot Engine 4. These colors are replaced by Godot's SVG color mapping based on the chosen theme.
+# Version: 1.0.0
+# Source: https://github.com/godotengine/godot/blob/4.0/editor/editor_themes.cpp
+#
+71	140	191	Godot Blue
+65	64	66	Godot Gray
+255	255	255	Pure white
+0	0	0	Pure black
+255	0	0	Pure red
+0	255	0	Pure green
+0	0	255	Pure blue
+224	224	224	GUI - Common icon color
+254	254	254	GUI - Forced light color
+128	128	128	GUI - GUI disabled color
+179	179	179	GUI - GUI disabled light color
+105	156	232	GUI - GUI highlight color
+249	249	249	GUI - Scrollbar grabber highlight color
+195	142	241	Animation
+252	127	127	Spatial
+141	165	243	2D
+75	112	234	2D Dark
+142	239	151	Control
+95	178	255	Selection (blue)
+0	62	122	Selection (darker blue)
+247	245	207	Gizmo (yellow)
+255	69	69	Rainbow - Red
+255	227	69	Rainbow - Yellow
+128	255	69	Rainbow - Green
+69	255	162	Rainbow - Aqua
+69	215	255	Rainbow - Blue
+128	69	255	Rainbow - Purple
+255	69	150	Rainbow - Pink
+225	218	91	Audio gradients - Yellow
+98	174	255	Audio gradients - Frozen gradient top
+117	209	230	Audio gradients - Frozen gradient middle
+132	255	238	Audio gradients - Frozen gradient bottom
+247	0	0	Audio gradients - Color track red
+238	195	21	Audio gradients - Color track orange
+219	238	21	Audio gradients - Color track yellow
+40	128	39	Audio gradients - Color track green
+255	202	95	Mesh resource (orange)
+41	152	255	Shape resource (blue)
+162	210	255	Shape resource (light blue)
+234	121	64	Animation editor - 3D Position track
+255	43	136	Animation editor - 3D Rotation track
+234	200	64	Animation editor - 3D Scale track
+60	243	78	Animation editor - Call Method track
+40	119	246	Animation editor - Bezier Curve track
+234	228	64	Animation editor - Audio Playback track
+164	72	240	Animation editor - Animation Playback track
+90	213	196	Animation editor - Blend Shape track
+214	214	214	Control layouts - Highlighted part
+71	71	71	Control layouts - Background part
+145	145	145	Control layouts - Border part
+252	224	14	TileSet - New Single Tile
+14	113	252	TileSet - New Autotile
+198	206	212	TileSet - New Atlas
+65	236	173	VisualScript - Variant
+111	145	240	VisualScript - Bool
+90	187	239	VisualScript - Int
+53	212	244	VisualScript - Float
+69	147	236	VisualScript - String
+172	115	241	VisualScript - Vector2
+241	115	143	VisualScript - Rect2
+222	102	240	VisualScript - Vector3
+185	236	65	VisualScript - Transform2D
+247	73	73	VisualScript - Plane
+236	65	142	VisualScript - Quat
+238	86	119	VisualScript - AABB
+225	236	65	VisualScript - Basis
+246	143	69	VisualScript - Transform
+65	122	236	VisualScript - NodePath
+65	236	128	VisualScript - RID
+85	243	227	VisualScript - Object
+84	237	158	VisualScript - Dictionary
+119	206	87	Visual shaders - Vector funcs
+234	104	108	Visual shaders - Vector transforms
+234	201	104	Visual shaders - Textures and cubemaps
+207	104	234	Visual shaders - Functions and expressions
+255	95	95	Error
+95	255	151	Success
+255	221	101	Warning

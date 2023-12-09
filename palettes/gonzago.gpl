@@ -1,0 +1,10 @@
+GIMP Palette
+Name: Gonzago Framework
+Columns: 0
+# Description: Colors used for Gonzago Framework assets.
+# Version: 1.0.0
+#
+45	37	35	Base
+255	247	248	Contrast
+255	218	69	Primary Accent
+255	79	105	Secondary Accent
