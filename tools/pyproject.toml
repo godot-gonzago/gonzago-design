@@ -1,60 +1,38 @@
-# https://hynek.me/til/pip-tools-and-pyproject-toml/
-# https://peps.python.org/pep-0621/
-# https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
-# https://packaging.python.org/en/latest/specifications/declaring-project-metadata/#declaring-project-metadata
+[tool.poetry]
+name = "Gonzago Design Tools"
+version = "0.0.1"
+description = "Automation and tooling for Gonzago Framework design elements."
+authors = [
+  "David Krummenacher and Gonzago Framework contributors "
+]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/godot-gonzago/gonzago-design"
+packages = [
+  { include = "gonzago" }
+]
+
+[tool.poetry.urls]
+"Issue Tracker" = "https://github.com/godot-gonzago/gonzago-design/issues"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = {extras = ["all"], version = "^0.9.0"}
+pydantic = "^2.5.2"
+pydantic-extra-types = "^2.1.0"
+semver = "^3.0.2"
+tomlkit = "^0.12.3"
+pyyaml = "^6.0.1"
+jsonschema = "^4.20.0"
+pillow = "^10.1.0"
+scour = "^0.38.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+
+[tool.poetry.scripts]
+gonzago = 'gonzago.cli:app'
 
 [build-system]
-requires = [
-  "setuptools"
-]
-build-backend = "setuptools.build_meta"
-
-[project]
-name = "gonzago_design_tools"
-description = "Tools for Gonzago design assets."
-version = "0.0.1"
-readme = "README.md"
-license = { file = "LICENSE" }
-authors = [
-  { name = "David Krummenacher and Gonzago Framework contributors" }
-]
-requires-python = ">=3.10"
-dependencies = [
-  "CairoSVG",
-  "Pillow",
-  "PyYAML",
-  "requests",
-  "scour"
-]
-
-[project.optional-dependencies]
-test = [
-  "pytest",
-  "pytest-cov"
-]
-doc = [
-  "sphinx",
-  "furo"
-]
-
-[project.urls]
-homepage = "https://github.com/godot-gonzago/gonzago-design"
-documentation = "https://github.com/godot-gonzago/gonzago-design"
-repository = "https://github.com/godot-gonzago/gonzago-design"
-
-# ... other project metadata fields as specified in:
-#     https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
-
-#[project.scripts]
-#spam-cli = "spam:main_cli"
-#
-#[project.gui-scripts]
-#spam-gui = "spam:main_gui"
-#
-#[project.entry-points."spam.magical"]
-#tomatoes = "spam:main_tomatoes"
-
-[tool.pytest.ini_options]
-testpaths = [
-  "tests"
-]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

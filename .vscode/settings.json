@@ -1,6 +1,5 @@
 {
     "markdownlint.config": {
         "MD007": { "indent": 4 }
-    },
-    "python.defaultInterpreterPath": "${workspaceFolder}/tools/.venv",
+    }
 }

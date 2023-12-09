@@ -1,0 +1,13 @@
+---
+name: Gonzago Framework
+description: Colors used for Gonzago Framework assets.
+version: 1.0.0
+colors:
+  - name: Base
+    color: "#2d2523"
+  - name: Contrast
+    color: "#fff7f8"
+  - name: Primary Accent
+    color: "#ffda45"
+  - name: Secondary Accent
+    color: "#ff4f69"

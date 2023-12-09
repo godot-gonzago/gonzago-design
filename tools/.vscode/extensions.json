@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+      "editorconfig.editorconfig",
+      "ms-python.python",
+      "ms-python.vscode-pylance",
+      "ms-python.isort",
+      "njpwerner.autodocstring",
+      "yzhang.markdown-all-in-one",
+      "davidanson.vscode-markdownlint",
+      "redhat.vscode-yaml"
+    ]
+}

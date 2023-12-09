@@ -1,0 +1,17 @@
+# Gonzao Design Tools
+/.cache/
+/.temp/
+
+# Python
+__pycache__/
+*.egg-info/
+/.venv/
+
+# VisualStudioCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+.history

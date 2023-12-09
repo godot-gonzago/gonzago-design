@@ -1,0 +1,173 @@
+---
+name: Godot 4 Editor
+description: Colors based on default editor theme of Godot Engine 4. These colors are replaced by Godot's SVG color mapping based on the chosen theme.
+version: 1.0.0
+source: https://github.com/godotengine/godot/blob/4.0/editor/editor_themes.cpp
+colors:
+  - name: Godot Blue
+    color: "#478cbf"
+  - name: Godot Gray
+    color: "#414042"
+  - name: Pure white
+    color: "#ffffff"
+  - name: Pure black
+    color: "#000000"
+  - name: Pure red
+    color: "#ff0000"
+  - name: Pure green
+    color: "#00ff00"
+  - name: Pure blue
+    color: "#0000ff"
+
+  - name: GUI - Common icon color
+    color: "#e0e0e0"
+  - name: GUI - Forced light color
+    color: "#fefefe"
+  - name: GUI - GUI disabled color
+    color: "#808080"
+  - name: GUI - GUI disabled light color
+    color: "#b3b3b3"
+  - name: GUI - GUI highlight color
+    color: "#699ce8"
+  - name: GUI - Scrollbar grabber highlight color
+    color: "#f9f9f9"
+
+  - name: Animation
+    color: "#c38ef1"
+  - name: Spatial
+    color: "#fc7f7f"
+  - name: 2D
+    color: "#8da5f3"
+  - name: 2D Dark
+    color: "#4b70ea"
+  - name: Control
+    color: "#8eef97"
+
+  - name: Selection (blue)
+    color: "#5fb2ff"
+  - name: Selection (darker blue)
+    color: "#003e7a"
+  - name: Gizmo (yellow)
+    color: "#f7f5cf"
+
+  - name: Rainbow - Red
+    color: "#ff4545"
+  - name: Rainbow - Yellow
+    color: "#ffe345"
+  - name: Rainbow - Green
+    color: "#80ff45"
+  - name: Rainbow - Aqua
+    color: "#45ffa2"
+  - name: Rainbow - Blue
+    color: "#45d7ff"
+  - name: Rainbow - Purple
+    color: "#8045ff"
+  - name: Rainbow - Pink
+    color: "#ff4596"
+
+  - name: Audio gradients - Yellow
+    color: "#e1da5b"
+  - name: Audio gradients - Frozen gradient top
+    color: "#62aeff"
+  - name: Audio gradients - Frozen gradient middle
+    color: "#75d1e6"
+  - name: Audio gradients - Frozen gradient bottom
+    color: "#84ffee"
+  - name: Audio gradients - Color track red
+    color: "#f70000"
+  - name: Audio gradients - Color track orange
+    color: "#eec315"
+  - name: Audio gradients - Color track yellow
+    color: "#dbee15"
+  - name: Audio gradients - Color track green
+    color: "#288027"
+
+  - name: Mesh resource (orange)
+    color: "#ffca5f"
+  - name: Shape resource (blue)
+    color: "#2998ff"
+  - name: Shape resource (light blue)
+    color: "#a2d2ff"
+
+  - name: Animation editor - 3D Position track
+    color: "#ea7940"
+  - name: Animation editor - 3D Rotation track
+    color: "#ff2b88"
+  - name: Animation editor - 3D Scale track
+    color: "#eac840"
+  - name: Animation editor - Call Method track
+    color: "#3cf34e"
+  - name: Animation editor - Bezier Curve track
+    color: "#2877f6"
+  - name: Animation editor - Audio Playback track
+    color: "#eae440"
+  - name: Animation editor - Animation Playback track
+    color: "#a448f0"
+  - name: Animation editor - Blend Shape track
+    color: "#5ad5c4"
+
+  - name: Control layouts - Highlighted part
+    color: "#d6d6d6"
+  - name: Control layouts - Background part
+    color: "#474747"
+  - name: Control layouts - Border part
+    color: "#919191"
+
+  - name: TileSet - New Single Tile
+    color: "#fce00e"
+  - name: TileSet - New Autotile
+    color: "#0e71fc"
+  - name: TileSet - New Atlas
+    color: "#c6ced4"
+
+  - name: VisualScript - Variant
+    color: "#41ecad"
+  - name: VisualScript - Bool
+    color: "#6f91f0"
+  - name: VisualScript - Int
+    color: "#5abbef"
+  - name: VisualScript - Float
+    color: "#35d4f4"
+  - name: VisualScript - String
+    color: "#4593ec"
+  - name: VisualScript - Vector2
+    color: "#ac73f1"
+  - name: VisualScript - Rect2
+    color: "#f1738f"
+  - name: VisualScript - Vector3
+    color: "#de66f0"
+  - name: VisualScript - Transform2D
+    color: "#b9ec41"
+  - name: VisualScript - Plane
+    color: "#f74949"
+  - name: VisualScript - Quat
+    color: "#ec418e"
+  - name: VisualScript - AABB
+    color: "#ee5677"
+  - name: VisualScript - Basis
+    color: "#e1ec41"
+  - name: VisualScript - Transform
+    color: "#f68f45"
+  - name: VisualScript - NodePath
+    color: "#417aec"
+  - name: VisualScript - RID
+    color: "#41ec80"
+  - name: VisualScript - Object
+    color: "#55f3e3"
+  - name: VisualScript - Dictionary
+    color: "#54ed9e"
+  - name: Visual shaders - Vector funcs
+    color: "#77ce57"
+  - name: Visual shaders - Vector transforms
+    color: "#ea686c"
+  - name: Visual shaders - Textures and cubemaps
+    color: "#eac968"
+  - name: Visual shaders - Functions and expressions
+    color: "#cf68ea"
+
+  - name: Error
+    color: "#ff5f5f"
+  - name: Success
+    color: "#5fff97"
+  - name: Warning
+    color: "#ffdd65"
