@@ -2,8 +2,6 @@
 
 Design elements, templates and guidelines for Gonzago Framework
 
-<img src="/icons/gonzago.svg" width="16">
-
 ## Gettings started
 
 setup.cmd
