@@ -2,7 +2,8 @@
 
 Design elements, templates and guidelines for Gonzago Framework
 
-![Gonzago Editor Icon](/icons/gonzago.svg =16x16)
+![Gonzago Editor Icon](/icons/gonzago.svg)
+<img src="/icons/gonzago.svg" width="16">
 
 ## Gettings started
 
