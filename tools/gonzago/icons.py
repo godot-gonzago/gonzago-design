@@ -188,41 +188,69 @@ def build_readme():
     with console.status("Building readme...") as status:
         path: Path = ICONS_DST_DIR.joinpath("README.md").resolve()
         with path.open("w") as readme:
-            readme.write("# Gonzago Framework Editor Icons\n\n")
-            readme.write("Editor icons for use in Gonzago Framework\n\n")
+            readme.write(
+                "# Gonzago Framework Editor Icons\n\n"
+                "Editor icons for use in Gonzago Framework\n\n"
+                "## Icons\n\n"
+            )
 
             folder: Path = Path(".")
-            readme.write("## Gonzago\n\n")
-            readme.write("<table>\n")
+            readme.write(
+                "<table>\n"
+                "<thead><tr><th align=\"left\" colspan=\"4\" width=\"2048\">Gonzago</th></tr></thead>\n"
+                "<tbody>\n"
+            )
+            files_in_row: int = 0
             for file in find_icons(ICONS_SOURCE_DIR):
                 rel_path: Path = file.relative_to(ICONS_SOURCE_DIR)
                 new_folder: Path = rel_path.parent
-                if folder != new_folder:
-                    readme.write("</table>\n\n")
-                    header: str = string.capwords(new_folder.as_posix().replace("/", "."), ".")
-                    readme.write(f"## {header}\n\n")
-                    readme.write("<table>\n")
-                    folder = new_folder
-                console.print(f"Getting meta {rel_path}")
 
+                if folder != new_folder:
+                    if files_in_row == 1:
+                        readme.write(
+                            "    <td colspan=\"2\"></td>\n"
+                            "  </tr>\n"
+                        )
+                        files_in_row = 0
+                    header: str = string.capwords(new_folder.as_posix().replace("/", "."), ".")
+                    readme.write(
+                        "</tbody>\n"
+                        f"<thead><tr><th align=\"left\" colspan=\"4\">{header}</th></tr></thead>\n"
+                        "<tbody>\n"
+                    )
+                    folder = new_folder
+
+                console.print(f"Getting meta {rel_path}")
                 image_src: str = Path("/icons").joinpath(rel_path).as_posix()
                 meta: dict[str] = get_meta_data(file)
-                readme.write("<tr><td>\n")
-                readme.write(
-                    f"  <img src=\"{image_src}\" "
-                    f"width=\"{str(meta.get('width', 16))}\" "
-                    f"height=\"{str(meta.get('height', 16))}\">\n"
-                )
-                readme.write("</td><td>\n")
-                readme.write(
-                    f"  <b>{meta.get('title', rel_path.stem)}</b><br>\n"
-                )
-                readme.write("</td></tr>\n")
-
                 status.update(f"Writing readme entry for [i]{file}[/i]")
-            readme.write("</table>\n")
 
-            readme.write("\n")
+                if files_in_row == 0:
+                    readme.write("  <tr>\n")
+
+                readme.write(
+                    f"    <td><img src=\"{image_src}\"></td>\n"
+                    f"    <td><b>{meta.get('title', rel_path.stem)}</b><br></td>\n"
+                )
+
+                if files_in_row == 1:
+                    readme.write("  </tr>\n")
+
+                files_in_row += 1
+                if files_in_row > 1:
+                    files_in_row = 0
+
+            if files_in_row == 1:
+                readme.write(
+                    "    <td colspan=\"2\"></td>\n"
+                    "  </tr>\n"
+                )
+            readme.write(
+                "</tbody>\n"
+                "</table>\n"
+                "\n"
+            )
+
         console.print("Done")
 
 
