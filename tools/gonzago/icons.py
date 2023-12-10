@@ -1,6 +1,6 @@
 import os
 import xml.etree.ElementTree as ET
-from typing import Iterator, List
+from typing import Any, Iterator, List
 from xml.dom import minidom
 from pathlib import Path
 from xml.dom.expatbuilder import TEXT_NODE
@@ -75,19 +75,13 @@ def find_icons(root: Path) -> Iterator[Path]:
                 yield path
 
 
-# TODO: SVG Meta
-# https://docs.python.org/3/library/xml.dom.minidom.html
-# https://docs.python.org/3/library/xml.etree.elementtree.html#tutorial
-# https://inkscape.org/de/entwickeln/das-svg-format/
-
-
-def get_meta_data(file: Path) -> dict:
+def get_meta_data(file: Path) -> dict[str, Any]:
     rel_path: Path = file.relative_to(ICONS_SOURCE_DIR)
-    meta: dict = {
+    meta: dict[str, Any] = {
         "rel_path": rel_path.as_posix()
     }
 
-    namespaces: dict = {
+    namespaces: dict[str, str] = {
         # Default SVG namespaces
         # https://www.w3.org/2000/svg
         "": "http://www.w3.org/2000/svg",
@@ -118,10 +112,10 @@ def get_meta_data(file: Path) -> dict:
         vb: str = svg.get("viewBox")
         vb_split: list[str] = vb.split(" ")
         meta["view_box"] = (
-            int(vb_split[0]),
-            int(vb_split[1]),
-            int(vb_split[2]),
-            int(vb_split[3])
+            float(vb_split[0]),
+            float(vb_split[1]),
+            float(vb_split[2]),
+            float(vb_split[3])
         )
     if "version" in svg.keys():
         meta["version"] = svg.get("version")
@@ -178,6 +172,36 @@ def test_meta_data():
     #print(path.read_text())
     meta: dict = get_meta_data(path)
     print(meta)
+
+
+@app.command("readme")
+def build_readme():
+    console.print(f"Building readme...")
+    with console.status("Building readme...") as status:
+        path: Path = ICONS_DST_DIR.joinpath("README.md").resolve()
+        with path.open("w") as readme:
+            readme.write("# Gonzago Framework Editor Icons\n\n")
+            readme.write("Editor icons for use in Gonzago Framework\n\n")
+
+            readme.write("<p>\n")
+            for file in find_icons(ICONS_SOURCE_DIR):
+                rel_path: Path = file.relative_to(ICONS_SOURCE_DIR)
+                console.print(f"Getting meta {rel_path}")
+
+                image_src: str = Path("/icons").joinpath(rel_path).as_posix()
+                meta: dict[str] = get_meta_data(file)
+                readme.write(
+                    f"  <img src=\"{image_src}\" "
+                    f"width=\"{str(meta.get('width', 16))}\" "
+                    f"height=\"{str(meta.get('height', 16))}\">\n"
+                )
+
+                status.update(f"Writing readme entry for [i]{file}[/i]")
+            readme.write("</p>\n")
+
+            readme.write("\n")
+        console.print("Done")
+
 
 @app.command("build")
 def build():
