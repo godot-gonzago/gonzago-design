@@ -174,6 +174,22 @@ def get_meta_data(file: Path) -> dict[str, Any]:
 
 # Width can be defined by table header https://gist.github.com/panoply/176101828af8393adc821e49578ac588
 
+# <details>
+#
+# <summary>Tips for collapsed sections</summary>
+#
+# ### You can add a header
+#
+# You can add text within a collapsed section.
+#
+# You can add an image or a code block, too.
+#
+# ```ruby
+#    puts "Hello World"
+# ```
+#
+# </details>
+
 @app.command("meta")
 def test_meta_data():
     path: Path = ICONS_SOURCE_DIR.joinpath("camera/camera.svg").resolve()
@@ -242,7 +258,7 @@ def build_readme():
                     if "icon" in subject:
                         subject.remove("icon")
                     if len(subject) > 0:
-                        readme.write(f"<br><small><var>{', '.join(subject)}</var></small>")
+                        readme.write(f"<br><var>{', '.join(subject)}</var>")
                 readme.write("</p></td>\n")
 
                 if files_in_row == 1:
