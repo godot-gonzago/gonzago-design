@@ -1,3 +1,4 @@
+from base64 import b64encode
 from pathlib import Path
 
 import typer
@@ -165,10 +166,14 @@ def build_readme():
                                 f"<br>{entry.description}"
                             )
                         readme.write("<br>")
-                        readme.write(
+                        svg: str = (
                             "<svg width=\"24\" height=\"24\" xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">"
                             f"<rect width=\"24\" height=\"24\" rx=\"8\" fill=\"{entry.color}\" />"
                             "</svg>"
+                        )
+                        base64: bytes = b64encode(svg.encode())
+                        readme.write(
+                            f"<img src=\"data:image/svg+xml;base64,{base64}\" />"
                         )
                         readme.write(
                             f"<br>{entry.color}</p>"
