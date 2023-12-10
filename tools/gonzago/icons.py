@@ -1,9 +1,7 @@
 import os
 import xml.etree.ElementTree as ET
-from typing import Any, Iterator, List
-from xml.dom import minidom
+from typing import Any, Iterator
 from pathlib import Path
-from xml.dom.expatbuilder import TEXT_NODE
 
 import typer
 from scour import scour
@@ -164,7 +162,13 @@ def get_meta_data(file: Path) -> dict[str, Any]:
 # https://github.github.com/gfm/
 # https://github.github.com/gfm/#html-blocks
 # https://gist.github.com/seanh/13a93686bf4c2cb16e658b3cf96807f2
-
+# https://naereen.github.io/StrapDown.js/example7.html
+# https://gist.github.com/pierrejoubert73/902cc94d79424356a8d20be2b382e1ab
+# https://github.com/mundimark/awesome-markdown#github-flavored-markdown-gfm
+# https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#images
+# https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting
+# https://gist.github.com/trusktr/93175b620d47827ffdedbf52433e3b37
+# https://github.com/davidwells/markdown-magic
 
 @app.command("meta")
 def test_meta_data():
