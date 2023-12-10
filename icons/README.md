@@ -4,7 +4,7 @@ Editor icons for use in Gonzago Framework
 
 ## Gonzago
 
-<table>
+<table width="100%">
 <tr><td>
   <img src="/icons/gonzago.svg" width="16" height="16">
 </td><td>

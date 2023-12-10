@@ -190,7 +190,7 @@ def build_readme():
 
             folder: Path = Path(".")
             readme.write("## Gonzago\n\n")
-            readme.write("<table>\n")
+            readme.write("<table width=\"100%\">\n")
             for file in find_icons(ICONS_SOURCE_DIR):
                 rel_path: Path = file.relative_to(ICONS_SOURCE_DIR)
                 new_folder: Path = rel_path.parent
