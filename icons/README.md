@@ -8,17 +8,20 @@ Editor icons for use in Gonzago Framework
 <thead><tr><th align="left"  colspan="4" width="2048">Gonzago</th></tr></thead>
 <tbody>
   <tr>
-    <td><img src="/icons/gonzago.svg" width="100%" height="auto"></td>
+    <td><img src="/icons/gonzago.svg"></td>
     <td><b>Gonzago Framework Editor Icon</b><br></td>
     <td colspan="2"></td>
   </tr>
 </tbody>
+</table>
+
+<table>
 <thead><tr><th align="left" colspan="4">Achievements</th></tr></thead>
 <tbody>
   <tr>
-    <td><img src="/icons/achievements/achievement.svg" width="100%" height="auto"></td>
+    <td><img src="/icons/achievements/achievement.svg"></td>
     <td><b>Achievement Editor Icon</b><br></td>
-    <td><img src="/icons/achievements/achievement_manager.svg" width="100%" height="auto"></td>
+    <td><img src="/icons/achievements/achievement_manager.svg"></td>
     <td><b>Achievement Manager Editor Icon</b><br></td>
   </tr>
 </tbody>
