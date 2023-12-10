@@ -230,12 +230,15 @@ def build_readme():
 
                 readme.write(
                     f"    <td><img src=\"{image_src}\"></td>\n"
-                    f"    <td><p>{meta.get('title', rel_path.stem)}"
+                    f"    <td><p><b>{meta.get('title', rel_path.stem)}</b>"
                 )
                 relation: str = meta.get("relation")
                 if relation:
                     readme.write(f" <a href=\"{relation}\" target=\"_blank\">rel</a>")
                 readme.write("</p>")
+                description: str = meta.get("description")
+                if description:
+                    readme.write(f"<p>{description}</p>")
                 subject: list[str] = meta["subject"]
                 if subject:
                     if "editor" in subject:
