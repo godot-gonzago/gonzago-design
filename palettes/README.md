@@ -28,316 +28,238 @@ Colors based on default editor theme of Godot Engine 4. These colors are replace
 <th>Colors</th>
 <td>
 <p>Godot Blue
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzQ3OGNiZiIgLz48L3N2Zz4=" />
-<br>#478cbf
+<br><img src="https://placehold.co/24x24/478cbf/478cbf/png" /><br>#478cbf
 </p>
 <p>Godot Gray
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzQxNDA0MiIgLz48L3N2Zz4=" />
-<br>#414042
+<br><img src="https://placehold.co/24x24/414042/414042/png" /><br>#414042
 </p>
 <p>Pure white
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0id2hpdGUiIC8+PC9zdmc+" />
-<br>white
+<br><img src="https://placehold.co/24x24/ffffff/ffffff/png" /><br>white
 </p>
 <p>Pure black
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iYmxhY2siIC8+PC9zdmc+" />
-<br>black
+<br><img src="https://placehold.co/24x24/000000/000000/png" /><br>black
 </p>
 <p>Pure red
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0icmVkIiAvPjwvc3ZnPg==" />
-<br>red
+<br><img src="https://placehold.co/24x24/ff0000/ff0000/png" /><br>red
 </p>
 <p>Pure green
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0ibGltZSIgLz48L3N2Zz4=" />
-<br>lime
+<br><img src="https://placehold.co/24x24/00ff00/00ff00/png" /><br>lime
 </p>
 <p>Pure blue
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iYmx1ZSIgLz48L3N2Zz4=" />
-<br>blue
+<br><img src="https://placehold.co/24x24/0000ff/0000ff/png" /><br>blue
 </p>
 <p>GUI - Common icon color
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2UwZTBlMCIgLz48L3N2Zz4=" />
-<br>#e0e0e0
+<br><img src="https://placehold.co/24x24/e0e0e0/e0e0e0/png" /><br>#e0e0e0
 </p>
 <p>GUI - Forced light color
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2ZlZmVmZSIgLz48L3N2Zz4=" />
-<br>#fefefe
+<br><img src="https://placehold.co/24x24/fefefe/fefefe/png" /><br>#fefefe
 </p>
 <p>GUI - GUI disabled color
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iZ3JleSIgLz48L3N2Zz4=" />
-<br>grey
+<br><img src="https://placehold.co/24x24/808080/808080/png" /><br>grey
 </p>
 <p>GUI - GUI disabled light color
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2IzYjNiMyIgLz48L3N2Zz4=" />
-<br>#b3b3b3
+<br><img src="https://placehold.co/24x24/b3b3b3/b3b3b3/png" /><br>#b3b3b3
 </p>
 <p>GUI - GUI highlight color
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzY5OWNlOCIgLz48L3N2Zz4=" />
-<br>#699ce8
+<br><img src="https://placehold.co/24x24/699ce8/699ce8/png" /><br>#699ce8
 </p>
 <p>GUI - Scrollbar grabber highlight color
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2Y5ZjlmOSIgLz48L3N2Zz4=" />
-<br>#f9f9f9
+<br><img src="https://placehold.co/24x24/f9f9f9/f9f9f9/png" /><br>#f9f9f9
 </p>
 <p>Animation
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2MzOGVmMSIgLz48L3N2Zz4=" />
-<br>#c38ef1
+<br><img src="https://placehold.co/24x24/c38ef1/c38ef1/png" /><br>#c38ef1
 </p>
 <p>Spatial
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2ZjN2Y3ZiIgLz48L3N2Zz4=" />
-<br>#fc7f7f
+<br><img src="https://placehold.co/24x24/fc7f7f/fc7f7f/png" /><br>#fc7f7f
 </p>
 <p>2D
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzhkYTVmMyIgLz48L3N2Zz4=" />
-<br>#8da5f3
+<br><img src="https://placehold.co/24x24/8da5f3/8da5f3/png" /><br>#8da5f3
 </p>
 <p>2D Dark
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzRiNzBlYSIgLz48L3N2Zz4=" />
-<br>#4b70ea
+<br><img src="https://placehold.co/24x24/4b70ea/4b70ea/png" /><br>#4b70ea
 </p>
 <p>Control
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzhlZWY5NyIgLz48L3N2Zz4=" />
-<br>#8eef97
+<br><img src="https://placehold.co/24x24/8eef97/8eef97/png" /><br>#8eef97
 </p>
 <p>Selection (blue)
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzVmYjJmZiIgLz48L3N2Zz4=" />
-<br>#5fb2ff
+<br><img src="https://placehold.co/24x24/5fb2ff/5fb2ff/png" /><br>#5fb2ff
 </p>
 <p>Selection (darker blue)
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzAwM2U3YSIgLz48L3N2Zz4=" />
-<br>#003e7a
+<br><img src="https://placehold.co/24x24/003e7a/003e7a/png" /><br>#003e7a
 </p>
 <p>Gizmo (yellow)
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2Y3ZjVjZiIgLz48L3N2Zz4=" />
-<br>#f7f5cf
+<br><img src="https://placehold.co/24x24/f7f5cf/f7f5cf/png" /><br>#f7f5cf
 </p>
 <p>Rainbow - Red
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2ZmNDU0NSIgLz48L3N2Zz4=" />
-<br>#ff4545
+<br><img src="https://placehold.co/24x24/ff4545/ff4545/png" /><br>#ff4545
 </p>
 <p>Rainbow - Yellow
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2ZmZTM0NSIgLz48L3N2Zz4=" />
-<br>#ffe345
+<br><img src="https://placehold.co/24x24/ffe345/ffe345/png" /><br>#ffe345
 </p>
 <p>Rainbow - Green
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzgwZmY0NSIgLz48L3N2Zz4=" />
-<br>#80ff45
+<br><img src="https://placehold.co/24x24/80ff45/80ff45/png" /><br>#80ff45
 </p>
 <p>Rainbow - Aqua
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzQ1ZmZhMiIgLz48L3N2Zz4=" />
-<br>#45ffa2
+<br><img src="https://placehold.co/24x24/45ffa2/45ffa2/png" /><br>#45ffa2
 </p>
 <p>Rainbow - Blue
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzQ1ZDdmZiIgLz48L3N2Zz4=" />
-<br>#45d7ff
+<br><img src="https://placehold.co/24x24/45d7ff/45d7ff/png" /><br>#45d7ff
 </p>
 <p>Rainbow - Purple
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzgwNDVmZiIgLz48L3N2Zz4=" />
-<br>#8045ff
+<br><img src="https://placehold.co/24x24/8045ff/8045ff/png" /><br>#8045ff
 </p>
 <p>Rainbow - Pink
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2ZmNDU5NiIgLz48L3N2Zz4=" />
-<br>#ff4596
+<br><img src="https://placehold.co/24x24/ff4596/ff4596/png" /><br>#ff4596
 </p>
 <p>Audio gradients - Yellow
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2UxZGE1YiIgLz48L3N2Zz4=" />
-<br>#e1da5b
+<br><img src="https://placehold.co/24x24/e1da5b/e1da5b/png" /><br>#e1da5b
 </p>
 <p>Audio gradients - Frozen gradient top
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzYyYWVmZiIgLz48L3N2Zz4=" />
-<br>#62aeff
+<br><img src="https://placehold.co/24x24/62aeff/62aeff/png" /><br>#62aeff
 </p>
 <p>Audio gradients - Frozen gradient middle
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzc1ZDFlNiIgLz48L3N2Zz4=" />
-<br>#75d1e6
+<br><img src="https://placehold.co/24x24/75d1e6/75d1e6/png" /><br>#75d1e6
 </p>
 <p>Audio gradients - Frozen gradient bottom
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzg0ZmZlZSIgLz48L3N2Zz4=" />
-<br>#84ffee
+<br><img src="https://placehold.co/24x24/84ffee/84ffee/png" /><br>#84ffee
 </p>
 <p>Audio gradients - Color track red
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2Y3MDAwMCIgLz48L3N2Zz4=" />
-<br>#f70000
+<br><img src="https://placehold.co/24x24/f70000/f70000/png" /><br>#f70000
 </p>
 <p>Audio gradients - Color track orange
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2VlYzMxNSIgLz48L3N2Zz4=" />
-<br>#eec315
+<br><img src="https://placehold.co/24x24/eec315/eec315/png" /><br>#eec315
 </p>
 <p>Audio gradients - Color track yellow
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2RiZWUxNSIgLz48L3N2Zz4=" />
-<br>#dbee15
+<br><img src="https://placehold.co/24x24/dbee15/dbee15/png" /><br>#dbee15
 </p>
 <p>Audio gradients - Color track green
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzI4ODAyNyIgLz48L3N2Zz4=" />
-<br>#288027
+<br><img src="https://placehold.co/24x24/288027/288027/png" /><br>#288027
 </p>
 <p>Mesh resource (orange)
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2ZmY2E1ZiIgLz48L3N2Zz4=" />
-<br>#ffca5f
+<br><img src="https://placehold.co/24x24/ffca5f/ffca5f/png" /><br>#ffca5f
 </p>
 <p>Shape resource (blue)
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzI5OThmZiIgLz48L3N2Zz4=" />
-<br>#2998ff
+<br><img src="https://placehold.co/24x24/2998ff/2998ff/png" /><br>#2998ff
 </p>
 <p>Shape resource (light blue)
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2EyZDJmZiIgLz48L3N2Zz4=" />
-<br>#a2d2ff
+<br><img src="https://placehold.co/24x24/a2d2ff/a2d2ff/png" /><br>#a2d2ff
 </p>
 <p>Animation editor - 3D Position track
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2VhNzk0MCIgLz48L3N2Zz4=" />
-<br>#ea7940
+<br><img src="https://placehold.co/24x24/ea7940/ea7940/png" /><br>#ea7940
 </p>
 <p>Animation editor - 3D Rotation track
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2ZmMmI4OCIgLz48L3N2Zz4=" />
-<br>#ff2b88
+<br><img src="https://placehold.co/24x24/ff2b88/ff2b88/png" /><br>#ff2b88
 </p>
 <p>Animation editor - 3D Scale track
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2VhYzg0MCIgLz48L3N2Zz4=" />
-<br>#eac840
+<br><img src="https://placehold.co/24x24/eac840/eac840/png" /><br>#eac840
 </p>
 <p>Animation editor - Call Method track
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzNjZjM0ZSIgLz48L3N2Zz4=" />
-<br>#3cf34e
+<br><img src="https://placehold.co/24x24/3cf34e/3cf34e/png" /><br>#3cf34e
 </p>
 <p>Animation editor - Bezier Curve track
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzI4NzdmNiIgLz48L3N2Zz4=" />
-<br>#2877f6
+<br><img src="https://placehold.co/24x24/2877f6/2877f6/png" /><br>#2877f6
 </p>
 <p>Animation editor - Audio Playback track
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2VhZTQ0MCIgLz48L3N2Zz4=" />
-<br>#eae440
+<br><img src="https://placehold.co/24x24/eae440/eae440/png" /><br>#eae440
 </p>
 <p>Animation editor - Animation Playback track
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2E0NDhmMCIgLz48L3N2Zz4=" />
-<br>#a448f0
+<br><img src="https://placehold.co/24x24/a448f0/a448f0/png" /><br>#a448f0
 </p>
 <p>Animation editor - Blend Shape track
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzVhZDVjNCIgLz48L3N2Zz4=" />
-<br>#5ad5c4
+<br><img src="https://placehold.co/24x24/5ad5c4/5ad5c4/png" /><br>#5ad5c4
 </p>
 <p>Control layouts - Highlighted part
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2Q2ZDZkNiIgLz48L3N2Zz4=" />
-<br>#d6d6d6
+<br><img src="https://placehold.co/24x24/d6d6d6/d6d6d6/png" /><br>#d6d6d6
 </p>
 <p>Control layouts - Background part
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzQ3NDc0NyIgLz48L3N2Zz4=" />
-<br>#474747
+<br><img src="https://placehold.co/24x24/474747/474747/png" /><br>#474747
 </p>
 <p>Control layouts - Border part
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzkxOTE5MSIgLz48L3N2Zz4=" />
-<br>#919191
+<br><img src="https://placehold.co/24x24/919191/919191/png" /><br>#919191
 </p>
 <p>TileSet - New Single Tile
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2ZjZTAwZSIgLz48L3N2Zz4=" />
-<br>#fce00e
+<br><img src="https://placehold.co/24x24/fce00e/fce00e/png" /><br>#fce00e
 </p>
 <p>TileSet - New Autotile
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzBlNzFmYyIgLz48L3N2Zz4=" />
-<br>#0e71fc
+<br><img src="https://placehold.co/24x24/0e71fc/0e71fc/png" /><br>#0e71fc
 </p>
 <p>TileSet - New Atlas
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2M2Y2VkNCIgLz48L3N2Zz4=" />
-<br>#c6ced4
+<br><img src="https://placehold.co/24x24/c6ced4/c6ced4/png" /><br>#c6ced4
 </p>
 <p>VisualScript - Variant
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzQxZWNhZCIgLz48L3N2Zz4=" />
-<br>#41ecad
+<br><img src="https://placehold.co/24x24/41ecad/41ecad/png" /><br>#41ecad
 </p>
 <p>VisualScript - Bool
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzZmOTFmMCIgLz48L3N2Zz4=" />
-<br>#6f91f0
+<br><img src="https://placehold.co/24x24/6f91f0/6f91f0/png" /><br>#6f91f0
 </p>
 <p>VisualScript - Int
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzVhYmJlZiIgLz48L3N2Zz4=" />
-<br>#5abbef
+<br><img src="https://placehold.co/24x24/5abbef/5abbef/png" /><br>#5abbef
 </p>
 <p>VisualScript - Float
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzM1ZDRmNCIgLz48L3N2Zz4=" />
-<br>#35d4f4
+<br><img src="https://placehold.co/24x24/35d4f4/35d4f4/png" /><br>#35d4f4
 </p>
 <p>VisualScript - String
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzQ1OTNlYyIgLz48L3N2Zz4=" />
-<br>#4593ec
+<br><img src="https://placehold.co/24x24/4593ec/4593ec/png" /><br>#4593ec
 </p>
 <p>VisualScript - Vector2
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2FjNzNmMSIgLz48L3N2Zz4=" />
-<br>#ac73f1
+<br><img src="https://placehold.co/24x24/ac73f1/ac73f1/png" /><br>#ac73f1
 </p>
 <p>VisualScript - Rect2
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2YxNzM4ZiIgLz48L3N2Zz4=" />
-<br>#f1738f
+<br><img src="https://placehold.co/24x24/f1738f/f1738f/png" /><br>#f1738f
 </p>
 <p>VisualScript - Vector3
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2RlNjZmMCIgLz48L3N2Zz4=" />
-<br>#de66f0
+<br><img src="https://placehold.co/24x24/de66f0/de66f0/png" /><br>#de66f0
 </p>
 <p>VisualScript - Transform2D
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2I5ZWM0MSIgLz48L3N2Zz4=" />
-<br>#b9ec41
+<br><img src="https://placehold.co/24x24/b9ec41/b9ec41/png" /><br>#b9ec41
 </p>
 <p>VisualScript - Plane
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2Y3NDk0OSIgLz48L3N2Zz4=" />
-<br>#f74949
+<br><img src="https://placehold.co/24x24/f74949/f74949/png" /><br>#f74949
 </p>
 <p>VisualScript - Quat
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2VjNDE4ZSIgLz48L3N2Zz4=" />
-<br>#ec418e
+<br><img src="https://placehold.co/24x24/ec418e/ec418e/png" /><br>#ec418e
 </p>
 <p>VisualScript - AABB
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2VlNTY3NyIgLz48L3N2Zz4=" />
-<br>#ee5677
+<br><img src="https://placehold.co/24x24/ee5677/ee5677/png" /><br>#ee5677
 </p>
 <p>VisualScript - Basis
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2UxZWM0MSIgLz48L3N2Zz4=" />
-<br>#e1ec41
+<br><img src="https://placehold.co/24x24/e1ec41/e1ec41/png" /><br>#e1ec41
 </p>
 <p>VisualScript - Transform
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2Y2OGY0NSIgLz48L3N2Zz4=" />
-<br>#f68f45
+<br><img src="https://placehold.co/24x24/f68f45/f68f45/png" /><br>#f68f45
 </p>
 <p>VisualScript - NodePath
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzQxN2FlYyIgLz48L3N2Zz4=" />
-<br>#417aec
+<br><img src="https://placehold.co/24x24/417aec/417aec/png" /><br>#417aec
 </p>
 <p>VisualScript - RID
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzQxZWM4MCIgLz48L3N2Zz4=" />
-<br>#41ec80
+<br><img src="https://placehold.co/24x24/41ec80/41ec80/png" /><br>#41ec80
 </p>
 <p>VisualScript - Object
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzU1ZjNlMyIgLz48L3N2Zz4=" />
-<br>#55f3e3
+<br><img src="https://placehold.co/24x24/55f3e3/55f3e3/png" /><br>#55f3e3
 </p>
 <p>VisualScript - Dictionary
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzU0ZWQ5ZSIgLz48L3N2Zz4=" />
-<br>#54ed9e
+<br><img src="https://placehold.co/24x24/54ed9e/54ed9e/png" /><br>#54ed9e
 </p>
 <p>Visual shaders - Vector funcs
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzc3Y2U1NyIgLz48L3N2Zz4=" />
-<br>#77ce57
+<br><img src="https://placehold.co/24x24/77ce57/77ce57/png" /><br>#77ce57
 </p>
 <p>Visual shaders - Vector transforms
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2VhNjg2YyIgLz48L3N2Zz4=" />
-<br>#ea686c
+<br><img src="https://placehold.co/24x24/ea686c/ea686c/png" /><br>#ea686c
 </p>
 <p>Visual shaders - Textures and cubemaps
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2VhYzk2OCIgLz48L3N2Zz4=" />
-<br>#eac968
+<br><img src="https://placehold.co/24x24/eac968/eac968/png" /><br>#eac968
 </p>
 <p>Visual shaders - Functions and expressions
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2NmNjhlYSIgLz48L3N2Zz4=" />
-<br>#cf68ea
+<br><img src="https://placehold.co/24x24/cf68ea/cf68ea/png" /><br>#cf68ea
 </p>
 <p>Error
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2ZmNWY1ZiIgLz48L3N2Zz4=" />
-<br>#ff5f5f
+<br><img src="https://placehold.co/24x24/ff5f5f/ff5f5f/png" /><br>#ff5f5f
 </p>
 <p>Success
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzVmZmY5NyIgLz48L3N2Zz4=" />
-<br>#5fff97
+<br><img src="https://placehold.co/24x24/5fff97/5fff97/png" /><br>#5fff97
 </p>
 <p>Warning
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2ZmZGQ2NSIgLz48L3N2Zz4=" />
-<br>#ffdd65
+<br><img src="https://placehold.co/24x24/ffdd65/ffdd65/png" /><br>#ffdd65
 </p>
 </td>
 </tr>
@@ -353,20 +275,16 @@ Colors used for Gonzago Framework assets.
 <th>Colors</th>
 <td>
 <p>Base
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iIzJkMjUyMyIgLz48L3N2Zz4=" />
-<br>#2d2523
+<br><img src="https://placehold.co/24x24/2d2523/2d2523/png" /><br>#2d2523
 </p>
 <p>Contrast
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2ZmZjdmOCIgLz48L3N2Zz4=" />
-<br>#fff7f8
+<br><img src="https://placehold.co/24x24/fff7f8/fff7f8/png" /><br>#fff7f8
 </p>
 <p>Primary Accent
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2ZmZGE0NSIgLz48L3N2Zz4=" />
-<br>#ffda45
+<br><img src="https://placehold.co/24x24/ffda45/ffda45/png" /><br>#ffda45
 </p>
 <p>Secondary Accent
-<br><img width="24" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iOCIgZmlsbD0iI2ZmNGY2OSIgLz48L3N2Zz4=" />
-<br>#ff4f69
+<br><img src="https://placehold.co/24x24/ff4f69/ff4f69/png" /><br>#ff4f69
 </p>
 </td>
 </tr>
