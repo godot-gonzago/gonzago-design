@@ -167,14 +167,15 @@ def build_readme():
                             )
                         readme.write("<br>")
                         svg: str = (
-                            "<svg width=\"24\" height=\"24\" xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">"
-                            f"<rect width=\"24\" height=\"24\" rx=\"8\" fill=\"{entry.color}\" />"
+                            "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">"
+                            f"<rect x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" rx=\"10%\" fill=\"{entry.color}\" />"
                             "</svg>"
                         )
-                        base64: bytes = b64encode(svg.encode())
-                        readme.write(
-                            f"<img src=\"data:image/svg+xml;base64,{base64}\" />"
-                        )
+                        readme.write(f"<br>{svg}")
+                        #base64: bytes = b64encode(svg.encode())
+                        #readme.write(
+                        #    f"<img src=\"data:image/svg+xml;base64,{base64}\" />"
+                        #)
                         readme.write(
                             f"<br>{entry.color}</p>"
                         )
