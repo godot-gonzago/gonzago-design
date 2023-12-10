@@ -13,7 +13,7 @@ Editor icons for use in Gonzago Framework
     <td colspan="2"></td>
   </tr>
 </tbody>
-<thead><tr><th colspan="4" align="left">Achievements</th></tr></thead>
+<thead><tr><th align="right" colspan="4">Achievements</th></tr></thead>
 <tbody>
   <tr>
     <td><img src="/icons/achievements/achievement.svg"></td>
