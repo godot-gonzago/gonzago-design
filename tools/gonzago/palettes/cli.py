@@ -86,6 +86,101 @@ def list_exporters():
     console.print(table)
 
 
+@app.command("readme")
+def build_readme():
+    """
+    Build readme from all palettes.
+    """
+
+    if not PALETTES_SOURCE_DIR.exists():
+        console.print(f"Path {PALETTES_SOURCE_DIR} does not exist!")
+        return
+
+    with console.status("Building readme...") as status:
+        path: Path = PALETTES_DST_DIR.joinpath("README.md").resolve()
+        with path.open("w") as readme:
+            readme.write(
+                "# Gonzago Framework Palettes\n\n"
+                "Different palettes for use in Gonzago Framework and its design elements.\n\n"
+            )
+
+            readme.write(
+                "## Formats\n\n"
+                "<table>\n"
+                "<thead><tr>"
+                "<th align=\"left\">ID</th>"
+                "<th align=\"left\">Suffix</th>"
+                "<th align=\"left\">Description</th>"
+                "</tr></thead>\n"
+                "<tbody>\n"
+            )
+            for id, (suffix, description, _) in EXPORTERS.items():
+                readme.write(
+                    f"<tr><td>{id}</td><td>{suffix}</td><td>{description}</td></tr>\n"
+                )
+            readme.write(
+                "</tbody>\n"
+                "</table>\n\n"
+            )
+
+            readme.write(
+                "## Palettes\n\n"
+            )
+            for file in find_templates(PALETTES_SOURCE_DIR):
+                rel_path: Path = file.relative_to(PALETTES_SOURCE_DIR)
+                console.print(rel_path)
+                status.update(f"Exporting {rel_path}")
+                try:
+                    template: Template = Template.load(file)
+                    readme.write(
+                        f"### {template.name}\n\n"
+                    )
+                    if template.description:
+                        readme.write(f"{template.description}\n\n")
+                    readme.write(
+                        "<table>\n"
+                    )
+                    if template.version:
+                        readme.write(
+                            f"<tr><th>Version</th><td>{template.version}</td></tr>\n"
+                        )
+                    if template.author:
+                        readme.write(
+                            f"<tr><th>Author</th><td>{template.author}</td></tr>\n"
+                        )
+                    if template.source:
+                        readme.write(
+                            f"<tr><th>Source</th><td>{template.source}</td></tr>\n"
+                        )
+
+                    readme.write(
+                            "<tr>\n<th>Colors</th>\n<td>\n"
+                        )
+                    for entry in template.colors:
+                        readme.write(
+                            f"<p>{entry.name}"
+                        )
+                        if entry.description:
+                            readme.write(
+                                f"<br>{entry.description}"
+                            )
+                        readme.write(
+                            f"<br>{entry.color}</p>"
+                        )
+                    readme.write(
+                            "</td>\n</tr>\n"
+                        )
+                    readme.write(
+                        "</table>\n\n"
+                    )
+                except Exception as e:
+                    console.print(
+                        f"{type(e).__name__}: {str(e)}" if e else "Export failed",
+                        style="red",
+                    )
+            console.print("Done")
+
+
 @app.command("build")
 def build():
     """
