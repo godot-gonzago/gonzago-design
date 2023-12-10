@@ -7,7 +7,7 @@ Editor icons for use in Gonzago Framework
 <table>
 <thead>
   <tr><th align="left"  colspan="4" width="2048">Gonzago</th></tr>
-  <tr><th width="10%" /><th width="*" /><th width="10%" /><th width="*" /></tr><
+  <tr><th width="10%" /><th width="auto" /><th width="10%" /><th width="auto" /></tr><
 </thead>
 <tbody>
   <tr>
