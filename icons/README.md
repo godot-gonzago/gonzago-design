@@ -8,7 +8,7 @@ Editor icons for use in Gonzago Framework
 <thead><tr><th align="left"  colspan="4" width="2048">Gonzago</th></tr></thead>
 <tbody>
   <tr>
-    <td><img src="/icons/gonzago.svg"></td>
+    <td><img src="/icons/gonzago.svg" width="10%" height="auto"></td>
     <td><b>Gonzago Framework Editor Icon</b><br></td>
     <td colspan="2"></td>
   </tr>
