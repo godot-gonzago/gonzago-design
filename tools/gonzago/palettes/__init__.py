@@ -1,5 +1,5 @@
-from .templates import Template, TemplateEntry
+from .templates import Template, TemplateEntry, find_templates
 from .formatters import ExporterInfo, EXPORTERS
 from .cli import app
 
-__all__ = ["Template", "TemplateEntry", "ExporterInfo", "EXPORTERS", "app"]
+__all__ = ["Template", "TemplateEntry", "find_templates", "ExporterInfo", "EXPORTERS", "app"]

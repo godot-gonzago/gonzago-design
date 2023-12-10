@@ -1,5 +1,6 @@
+import os
 from pathlib import Path
-from typing import List, Optional
+from typing import Iterator, List, Optional
 
 import yaml
 from pydantic import BaseModel
@@ -63,3 +64,23 @@ class Template(BaseModel):
         file.parent.mkdir(parents=True, exist_ok=True)  # Ensure folders
         with file.open("w") as stream:
             yaml.safe_dump(data, stream, sort_keys=False)
+
+
+def find_templates(root: Path) -> Iterator[Path]:
+    root = root.resolve()
+    if not root.exists():
+        raise StopIteration
+
+    if root.is_file():
+        if root.match(TEMPLATE_FILE_PATTERN):
+            yield root
+        raise StopIteration
+
+    for current, dirs, files in os.walk(root):
+        for name in dirs:
+            if name.startswith("_"):
+                dirs.remove(name)
+        for name in files:
+            if name.endswith(".yml") or name.endswith(".yaml"):
+                path: Path = root.joinpath(current, name)
+                yield path

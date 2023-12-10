@@ -8,7 +8,7 @@ from rich.progress import Progress, SpinnerColumn, TextColumn
 
 from .. import BASE_DIR_PATH, SOURCE_DIR_PATH
 
-from .templates import Template, TEMPLATE_FILE_PATTERN
+from .templates import Template, find_templates
 from .formatters import ExporterInfo, EXPORTERS
 
 
@@ -43,7 +43,7 @@ def list_templates() -> None:
     with console.status("Searching templates...") as status:
         valid_templates_count: int = 0
         table: Table = Table("Path", "Name", "Description", "Colors")
-        for file in PALETTES_SOURCE_DIR.glob(TEMPLATE_FILE_PATTERN):
+        for file in find_templates(PALETTES_SOURCE_DIR):
             rel_path: Path = file.relative_to(PALETTES_SOURCE_DIR)
             try:
                 template: Template = Template.load(file)
@@ -108,7 +108,7 @@ def build():
 
     console.print(f"Building palettes...")
     with console.status("Building templates...") as status:
-        for file in PALETTES_SOURCE_DIR.glob(TEMPLATE_FILE_PATTERN):
+        for file in find_templates(PALETTES_SOURCE_DIR):
             rel_path: Path = file.relative_to(PALETTES_SOURCE_DIR)
             console.print(rel_path)
             try:
