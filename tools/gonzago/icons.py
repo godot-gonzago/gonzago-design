@@ -229,7 +229,7 @@ def build_readme():
                     readme.write("  <tr>\n")
 
                 readme.write(
-                    f"    <td><img src=\"{image_src}\"></td>\n"
+                    f"    <td><img src=\"{image_src}\" width=\"24\" height=\"24\"></td>\n"
                     f"    <td><p><b>{meta.get('title', rel_path.stem)}</b>"
                 )
                 relation: str = meta.get("relation")
