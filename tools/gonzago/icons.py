@@ -230,11 +230,12 @@ def build_readme():
 
                 readme.write(
                     f"    <td><img src=\"{image_src}\"></td>\n"
-                    f"    <td>{meta.get('title', rel_path.stem)}"
+                    f"    <td><p>{meta.get('title', rel_path.stem)}"
                 )
                 relation: str = meta.get("relation")
                 if relation:
                     readme.write(f" <a href=\"{relation}\" target=\"_blank\">rel</a>")
+                readme.write("</p>")
                 subject: list[str] = meta["subject"]
                 if subject:
                     if "editor" in subject:
@@ -242,7 +243,10 @@ def build_readme():
                     if "icon" in subject:
                         subject.remove("icon")
                     if len(subject) > 0:
-                        readme.write(f"</br><kbd>{', '.join(subject)}</kbd>")
+                        readme.write("<p>")
+                        for s in subject:
+                            readme.write(f"<kbd>{s}</kbd>")
+                        readme.write("</p>")
                 readme.write("</td>\n")
 
                 if files_in_row == 1:
