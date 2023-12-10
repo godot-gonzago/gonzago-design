@@ -5,10 +5,7 @@ Editor icons for use in Gonzago Framework
 ## Icons
 
 <table>
-<col width="32"><col width="1024"><col width="32"><col width="1024">
-<thead>
-  <tr><th align="left" colspan="4">Gonzago</th></tr>
-</thead>
+<thead><tr><th align="left" colspan="4" width="2048">Gonzago</th></tr></thead>
 <tbody>
   <tr>
     <td><img src="/icons/gonzago.svg"></td>
@@ -16,9 +13,6 @@ Editor icons for use in Gonzago Framework
     <td colspan="2"></td>
   </tr>
 </tbody>
-</table>
-
-<table>
 <thead><tr><th align="left" colspan="4">Achievements</th></tr></thead>
 <tbody>
   <tr>
