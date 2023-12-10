@@ -11,7 +11,7 @@ Editor icons for use in Gonzago Framework
   <col span="1" width="*">
   <col span="1" width="*1000>
 </colgroup>
-<thead><tr><th colspan="4">Gonzago</th></tr></thead>
+<thead><tr><th colspan="4" width="2048">Gonzago</th></tr></thead>
 <tbody>
   <tr>
     <td><img src="/icons/gonzago.svg" width="16" height="16"></td>
