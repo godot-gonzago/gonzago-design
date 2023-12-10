@@ -3,7 +3,7 @@ from typing import (
     Callable,
     List,
     NamedTuple,
-    Optional,
+    Optional
 )
 
 import typer
@@ -45,17 +45,53 @@ class Template(BaseModel):
     colors: List[TemplateEntry]
 
 
-def load_template(file: Path) -> Template:
-    if not file.match(TEMPLATE_FILE_PATTERN) or not file.is_file():
-        raise TypeError("Not a valid file path")
-    with file.open() as file_stream:
-        template_dict: dict = yaml.safe_load(file_stream)
-        template: Template = Template.validate(template_dict)
-        return template
+    @classmethod
+    def default(cls, name: str = "New Palette Template"):
+        data: dict = {
+            "name": name,
+            "description": "A brand new palette template.",
+            "version": Version(1, 0, 0),
+            "author": "David Krummenacher and Gonzago Framework contributors",
+            "source": "https://github.com/godot-gonzago/gonzago-design",
+            "colors": [{
+                "name": "Black",
+                "description": "Black is an achromatic color.",
+                "color": Color("black")
+            },{
+                "name": "White",
+                "description": "White is an achromatic color.",
+                "color": Color("white")
+            }]
+        }
+        return cls.model_validate(data)
 
 
-def save_template(file:Path, template: Template) -> None:
-    pass
+    @classmethod
+    def load(cls, file: Path):
+        if not file.match(TEMPLATE_FILE_PATTERN) or not file.is_file():
+            raise TypeError("Not a valid template path")
+        with file.open() as stream:
+            data: dict = yaml.safe_load(stream)
+            return cls.model_validate(data)
+
+
+    def save(self, file: Path) -> None:
+        if not file.match(TEMPLATE_FILE_PATTERN):
+            raise TypeError(f"{file} is not a valid template path")
+        data: dict = Template.model_dump(self, mode="json")
+        file.parent.mkdir(parents=True, exist_ok=True) # Ensure folders
+        with file.open("w") as stream:
+            yaml.safe_dump(data, stream, sort_keys=False)
+
+
+@app.command("save_template")
+def save_template(name: str = "new_palette_template.yaml") -> None:
+    """
+    Save palette template.
+    """
+    file: Path = PALETTES_SOURCE_DIR.joinpath(name).resolve()
+    template: Template = Template.default()
+    template.save(file)
 
 
 @app.command("templates")
@@ -74,7 +110,7 @@ def list_templates() -> None:
         for file in PALETTES_SOURCE_DIR.glob(TEMPLATE_FILE_PATTERN):
             rel_path: Path = file.relative_to(PALETTES_SOURCE_DIR)
             try:
-                template: Template = load_template(file)
+                template: Template = Template.load(file)
                 table.add_row(
                     str(rel_path),
                     template.name,
@@ -303,7 +339,7 @@ def build():
             rel_path: Path = file.relative_to(PALETTES_SOURCE_DIR)
             console.print(rel_path)
             try:
-                template: Template = load_template(file)
+                template: Template = Template.load(file)
                 console.print(f"Exporting {template.name}")
                 for exporter in EXPORTERS.keys():
                     exporter_info: ExporterInfo = EXPORTERS.get(exporter)
