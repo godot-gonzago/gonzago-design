@@ -230,7 +230,7 @@ def build_readme():
 
                 readme.write(
                     f"    <td><img src=\"{image_src}\"></td>\n"
-                    f"    <td><b>{meta.get('title', rel_path.stem)}</b><br></td>\n"
+                    f"    <td>{meta.get('title', rel_path.stem)}<br></td>\n"
                 )
 
                 if files_in_row == 1:
