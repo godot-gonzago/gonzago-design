@@ -1,4 +1,6 @@
-from typing import List
+import os
+import xml.etree.ElementTree as ET
+from typing import Iterator, List
 from xml.dom import minidom
 from pathlib import Path
 from xml.dom.expatbuilder import TEXT_NODE
@@ -53,6 +55,139 @@ def optimize_svg(rel_path: Path, scour_options=_SCOUR_OPTIONS) -> None:
     scour.start(scour_options, input, output)
 
 
+def find_icons(root: Path) -> Iterator[Path]:
+    root = root.resolve()
+    if not root.exists():
+        raise StopIteration
+
+    if root.is_file():
+        if root.match(ICON_FILE_PATTERN):
+            yield root
+        raise StopIteration
+
+    for current, dirs, files in os.walk(root):
+        for name in dirs:
+            if name.startswith("_"):
+                dirs.remove(name)
+        for name in files:
+            if name.endswith(".svg"):
+                path: Path = root.joinpath(current, name)
+                yield path
+
+
+# TODO: SVG Meta
+# https://docs.python.org/3/library/xml.dom.minidom.html
+# https://docs.python.org/3/library/xml.etree.elementtree.html#tutorial
+# https://inkscape.org/de/entwickeln/das-svg-format/
+
+
+def get_meta_data(file: Path) -> dict:
+    rel_path: Path = file.relative_to(ICONS_SOURCE_DIR)
+    meta: dict = {
+        "rel_path": rel_path.as_posix()
+    }
+
+    namespaces: dict = {
+        # Default SVG namespaces
+        # https://www.w3.org/2000/svg
+        "": "http://www.w3.org/2000/svg",
+        "svg": "http://www.w3.org/2000/svg",
+        # Inkscape namespaces
+        # https://wiki.inkscape.org/wiki/Inkscape-specific_XML_attributes
+        "sodipodi": "http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd",
+        "inkscape": "http://www.inkscape.org/namespaces/inkscape",
+        # Resource Description Framework
+        # https://www.w3.org/TR/1999/REC-rdf-syntax-19990222/
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        # Dublin Core Metadata Initiative
+        # https://www.dublincore.org/specifications/dublin-core/dcmi-terms/
+        "dc": "http://purl.org/dc/elements/1.1/",
+        # Creative Commons Rights Expression Language
+        # https://creativecommons.org/ns
+        "cc": "http://creativecommons.org/ns#"
+    }
+
+    tree: ET.ElementTree = ET.parse(file)
+
+    svg: ET.Element = tree.getroot()
+    if "width" in svg.keys():
+        meta["width"] = int(svg.get("width"))
+    if "height" in svg.keys():
+        meta["height"] = int(svg.get("height"))
+    if "viewBox" in svg.keys():
+        vb: str = svg.get("viewBox")
+        vb_split: list[str] = vb.split(" ")
+        meta["view_box"] = (
+            int(vb_split[0]),
+            int(vb_split[1]),
+            int(vb_split[2]),
+            int(vb_split[3])
+        )
+    if "version" in svg.keys():
+        meta["version"] = svg.get("version")
+
+    metadata: ET.Element = svg.find("metadata", namespaces)
+    if metadata is None:
+        title: str = svg.findtext("title", namespaces=namespaces)
+        if title:
+            meta["title"] = title
+        return meta
+
+    # dc:coverage
+    # dc:format
+    # dc:type
+
+    meta["title"] = metadata.findtext("rdf:RDF/cc:Work/dc:title", namespaces=namespaces)
+    meta["description"] = metadata.findtext("rdf:RDF/cc:Work/dc:description", namespaces=namespaces)
+
+    meta["identifier"] = metadata.findtext("rdf:RDF/cc:Work/dc:identifier", namespaces=namespaces)
+    subject: list[str] = []
+    for element in metadata.findall("rdf:RDF/cc:Work/dc:subject/rdf:Bag/rdf:li", namespaces):
+        subject.append(element.text)
+    meta["subject"] = subject
+
+    meta["date"] = metadata.findtext("rdf:RDF/cc:Work/dc:date", namespaces=namespaces)
+    meta["source"] = metadata.findtext("rdf:RDF/cc:Work/dc:source", namespaces=namespaces)
+    meta["relation"] = metadata.findtext("rdf:RDF/cc:Work/dc:relation", namespaces=namespaces)
+    meta["language"] = metadata.findtext("rdf:RDF/cc:Work/dc:language", namespaces=namespaces)
+
+    meta["creator"] = metadata.findtext("rdf:RDF/cc:Work/dc:creator/cc:Agent/dc:title", namespaces=namespaces)
+    meta["contributor"] = metadata.findtext("rdf:RDF/cc:Work/dc:contributor/cc:Agent/dc:title", namespaces=namespaces)
+    meta["publisher"] = metadata.findtext("rdf:RDF/cc:Work/dc:publisher/cc:Agent/dc:title", namespaces=namespaces)
+    meta["rights"] = metadata.findtext("rdf:RDF/cc:Work/dc:rights/cc:Agent/dc:title", namespaces=namespaces)
+    license: ET.Element = metadata.find("rdf:RDF/cc:Work/cc:license", namespaces)
+    if not license is None:
+        if "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource" in license.keys():
+            meta["license"] = license.get("{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource")
+
+    return meta
+
+#         <metadata/rdf:RDF/cc:Work/dc:subject/rdf:Bag/rdf:li>
+#           <rdf:Bag/rdf:li>
+#             <rdf:li>editor</rdf:li>
+#             <rdf:li>icon</rdf:li>
+#           </rdf:Bag>
+#         </metadata/rdf:RDF/cc:Work/dc:subject>
+
+
+# TODO: Markdown
+# https://medium.com/analytics-vidhya/7-advanced-markdown-tips-5a031620bf52
+# https://docs.github.com/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+# https://github.com/DavidWells/advanced-markdown
+# https://github.com/markdown-templates/markdown-snippets
+# https://www.markdownguide.org/extended-syntax/
+# https://github.github.com/gfm/
+# https://github.github.com/gfm/#html-blocks
+# https://gist.github.com/seanh/13a93686bf4c2cb16e658b3cf96807f2
+
+
+@app.command("meta")
+def test_meta_data():
+    path: Path = ICONS_SOURCE_DIR.joinpath("camera/camera.svg").resolve()
+    #print(path.read_text())
+    meta: dict = get_meta_data(path)
+    print(meta)
+
 @app.command("build")
 def build():
     """
@@ -61,168 +196,12 @@ def build():
 
     console.print(f"Building icons...")
     with console.status("Building templates...") as status:
-        for file in ICONS_SOURCE_DIR.glob(ICON_FILE_PATTERN):
+        for file in find_icons(ICONS_SOURCE_DIR):
             rel_path: Path = file.relative_to(ICONS_SOURCE_DIR)
             console.print(f"Exporting {rel_path}")
-
-            with file.open() as stream:
-                doc: minidom.Document = minidom.parse(stream)
-                svg_nodes = doc.getElementsByTagName("svg")
-                if len(svg_nodes) > 0:
-                    svg_root: minidom.Element = svg_nodes[0]
-                    if svg_root.hasAttribute("width"):
-                        print(svg_root.getAttribute("width"))
-                    if svg_root.hasAttribute("height"):
-                        print(svg_root.getAttribute("height"))
-                    title_nodes = svg_root.getElementsByTagName("title")
-                    if len(title_nodes) > 0:
-                        title_element: minidom.Element = title_nodes[0]
-                        if title_element and title_element.hasChildNodes():
-                            print(title_element.childNodes[0].nodeValue)
-                    meta_data_nodes = svg_root.getElementsByTagName("metadata")
-                    if len(meta_data_nodes) > 0:
-                        meta_data_element: minidom.Element = meta_data_nodes[0]
-                        if meta_data_element:
-                            print("has_meta_data")
-
             optimize_svg(rel_path)
             status.update(f"Exporting [i]{file}[/i]")
         console.print("Done")
-
-
-
-# <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-# <!-- Created with Inkscape (http://www.inkscape.org/) -->
-#
-# <svg
-#    width="16"
-#    height="16"
-#    viewBox="0 0 16 16"
-#    version="1.1"
-#    id="godot_editor_icon"
-#    inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
-#    sodipodi:docname="gonzago.svg"
-#    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-#    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-#    xmlns="http://www.w3.org/2000/svg"
-#    xmlns:svg="http://www.w3.org/2000/svg"
-#    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-#    xmlns:cc="http://creativecommons.org/ns#"
-#    xmlns:dc="http://purl.org/dc/elements/1.1/">
-#   <title
-#      id="title">Gonzago Framework Editor Icon</title>
-#   <metadata
-#      id="metadata">
-#     <rdf:RDF>
-#       <cc:Work
-#          rdf:about="">
-#         <dc:title>Gonzago Framework Editor Icon</dc:title>
-#         <dc:creator>
-#           <cc:Agent>
-#             <dc:title>David Krummenacher</dc:title>
-#           </cc:Agent>
-#         </dc:creator>
-#         <dc:source>https://github.com/godot-gonzago</dc:source>
-#         <dc:publisher>
-#           <cc:Agent>
-#             <dc:title>Gonzago Framework</dc:title>
-#           </cc:Agent>
-#         </dc:publisher>
-#         <dc:subject>
-#           <rdf:Bag>
-#             <rdf:li>editor</rdf:li>
-#             <rdf:li>icon</rdf:li>
-#             <rdf:li>gonzago</rdf:li>
-#           </rdf:Bag>
-#         </dc:subject>
-#         <dc:language>en</dc:language>
-#         <dc:identifier>gonzago.editor_icons.gonzago</dc:identifier>
-#         <dc:date>2023-11-19</dc:date>
-#         <dc:rights>
-#           <cc:Agent>
-#             <dc:title>Copyright (c) 2023 David Krummenacher and Gonzago Framework contributors</dc:title>
-#           </cc:Agent>
-#         </dc:rights>
-#         <cc:license
-#            rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
-#         <dc:description>A skull with a crown in reference to The Murder of Gonzago, a play within The Tragedy of Hamlet, Prince of Denmark.</dc:description>
-#         <dc:contributor>
-#           <cc:Agent>
-#             <dc:title>David Krummenacher</dc:title>
-#           </cc:Agent>
-#         </dc:contributor>
-#       </cc:Work>
-#       <cc:License
-#          rdf:about="http://creativecommons.org/licenses/by/4.0/">
-#         <cc:permits
-#            rdf:resource="http://creativecommons.org/ns#Reproduction" />
-#         <cc:permits
-#            rdf:resource="http://creativecommons.org/ns#Distribution" />
-#         <cc:requires
-#            rdf:resource="http://creativecommons.org/ns#Notice" />
-#         <cc:requires
-#            rdf:resource="http://creativecommons.org/ns#Attribution" />
-#         <cc:permits
-#            rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
-#       </cc:License>
-#     </rdf:RDF>
-#   </metadata>
-#   <sodipodi:namedview
-#      id="base_view"
-#      pagecolor="#333b4f"
-#      bordercolor="#8f939e"
-#      borderopacity="1"
-#      inkscape:pageshadow="0"
-#      inkscape:pageopacity="0"
-#      inkscape:pagecheckerboard="false"
-#      inkscape:document-units="px"
-#      showgrid="true"
-#      units="px"
-#      width="16px"
-#      viewbox-height="16"
-#      inkscape:zoom="22.627417"
-#      inkscape:cx="8.5515726"
-#      inkscape:cy="10.429825"
-#      inkscape:window-width="1368"
-#      inkscape:window-height="850"
-#      inkscape:window-x="-6"
-#      inkscape:window-y="-6"
-#      inkscape:window-maximized="1"
-#      inkscape:current-layer="base_layer"
-#      showborder="true"
-#      inkscape:snap-grids="true"
-#      inkscape:showpageshadow="0"
-#      inkscape:deskcolor="#1c202b">
-#     <inkscape:grid
-#        type="xygrid"
-#        id="base_grid"
-#        dotted="true"
-#        empspacing="4"
-#        originx="0"
-#        originy="0"
-#        spacingy="1"
-#        spacingx="1"
-#        units="px"
-#        visible="true"
-#        color="#699ce8"
-#        opacity="0.29803922"
-#        empcolor="#699ce8"
-#        empopacity="0.29803922" />
-#   </sodipodi:namedview>
-#   <defs
-#      id="base_definitions" />
-#   <g
-#      inkscape:label="Base Layer"
-#      inkscape:groupmode="layer"
-#      id="base_layer">
-#     <path
-#        id="gonzago"
-#        d="M 8,1.4 5,4 2,2.2 V 7 H 14 V 2.2 L 11,4 Z M 2,8 v 2 c 0,1.3 0.8,2.4 2,2.8 V 14 c 0,0.6 0.4,1 1,1 h 6 c 0.6,0 1,-0.4 1,-1 v -1.2 c 1.2,-0.4 2,-1.5 2,-2.8 V 8 Z m 1.2,2 h 4 c 0,1.1 -0.9,2 -2,2 -1.1,0 -2,-0.9 -2,-2 z m 5.6,0 h 4 c 0,1.1 -0.9,2 -2,2 -1.1,0 -2,-0.9 -2,-2 z M 8,11 9,13 H 7 Z"
-#        fill="#e0e0e0" />
-#   </g>
-# </svg>
-
-
 
 
 @app.callback(no_args_is_help=True)
