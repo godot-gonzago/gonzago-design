@@ -1,7 +1,14 @@
 from rich import print
 from typing import Annotated, Optional
-from gonzago import CONFIG_FILE_PATH, SOURCE_DIR_PATH, __app_name__, __version__, palettes, icons
 import typer
+from . import (
+    CONFIG_FILE_PATH,
+    SOURCE_DIR_PATH,
+    __app_name__,
+    __version__,
+    palettes,
+    icons,
+)
 
 
 app = typer.Typer()
