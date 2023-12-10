@@ -174,7 +174,7 @@ def build_readme():
                         #readme.write(f"<br>{svg}")
                         base64: bytes = b64encode(svg.encode())
                         readme.write(
-                            f"<img src=\"data:image/svg+xml;base64,{base64}\" />"
+                            f"<img src=\"data:image/svg+xml;base64,{base64.decode()}\" />"
                         )
                         readme.write(
                             f"<br>{entry.color}</p>"
