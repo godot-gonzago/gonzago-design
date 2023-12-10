@@ -234,7 +234,7 @@ def build_readme():
                 )
                 relation: str = meta.get("relation")
                 if relation:
-                    readme.write(f" <a href=\"{relation}\" target=\"_blank\">&#x1F7B9;</a>")
+                    readme.write(f" <a href=\"{relation}\" target=\"_blank\">:pushpin:</a>")
                 readme.write("</p>")
                 subject: list[str] = meta["subject"]
                 if subject:
@@ -243,10 +243,7 @@ def build_readme():
                     if "icon" in subject:
                         subject.remove("icon")
                     if len(subject) > 0:
-                        readme.write("<p>")
-                        for s in subject:
-                            readme.write(f"<sup><sub><pre>{s}</pre></sub></sup>")
-                        readme.write("</p>")
+                        readme.write(f"<p><var>{', '.join(subject)}</var></p>")
                 readme.write("</td>\n")
 
                 if files_in_row == 1:
