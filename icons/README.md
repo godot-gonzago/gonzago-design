@@ -5,7 +5,7 @@ Editor icons for use in Gonzago Framework
 ## Icons
 
 <table>
-<thead><tr><th colspan="4" width="2048">Gonzago</th></tr></thead>
+<thead><tr><th align="left"  colspan="4" width="2048">Gonzago</th></tr></thead>
 <tbody>
   <tr>
     <td><img src="/icons/gonzago.svg"></td>
@@ -13,7 +13,7 @@ Editor icons for use in Gonzago Framework
     <td colspan="2"></td>
   </tr>
 </tbody>
-<thead><tr><th align="right" colspan="4">Achievements</th></tr></thead>
+<thead><tr><th align="left" colspan="4">Achievements</th></tr></thead>
 <tbody>
   <tr>
     <td><img src="/icons/achievements/achievement.svg"></td>
@@ -22,7 +22,7 @@ Editor icons for use in Gonzago Framework
     <td><b>Achievement Manager Editor Icon</b><br></td>
   </tr>
 </tbody>
-<thead><tr><th colspan="4">Animation</th></tr></thead>
+<thead><tr><th align="left"  colspan="4">Animation</th></tr></thead>
 <tbody>
   <tr>
     <td><img src="/icons/animation/animator.svg" width="16" height="16"></td>
@@ -42,7 +42,7 @@ Editor icons for use in Gonzago Framework
     <td colspan="2"></td>
   </tr>
 </tbody>
-<thead><tr><th colspan="4">Application</th></tr></thead>
+<thead><tr><th align="left" colspan="4">Application</th></tr></thead>
 <tbody>
   <tr>
     <td><img src="/icons/application/credits_label.svg" width="16" height="16"></td>
