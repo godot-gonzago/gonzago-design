@@ -164,6 +164,12 @@ def build_readme():
                             readme.write(
                                 f"<br>{entry.description}"
                             )
+                        readme.write("<br>")
+                        readme.write(
+                            "<svg width=\"24\" height=\"24\" xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">"
+                            f"<rect width=\"24\" height=\"24\" rx=\"8\" fill=\"{entry.color}\" />"
+                            "</svg>"
+                        )
                         readme.write(
                             f"<br>{entry.color}</p>"
                         )
