@@ -133,10 +133,7 @@ def get_meta_data(file: Path) -> dict:
             meta["title"] = title
         return meta
 
-    # dc:coverage
-    # dc:format
-    # dc:type
-
+    # Dublin Core Metadata (dc:format, dc:type are not present in Inkscape)
     meta["title"] = metadata.findtext("rdf:RDF/cc:Work/dc:title", namespaces=namespaces)
     meta["description"] = metadata.findtext("rdf:RDF/cc:Work/dc:description", namespaces=namespaces)
 
@@ -155,19 +152,13 @@ def get_meta_data(file: Path) -> dict:
     meta["contributor"] = metadata.findtext("rdf:RDF/cc:Work/dc:contributor/cc:Agent/dc:title", namespaces=namespaces)
     meta["publisher"] = metadata.findtext("rdf:RDF/cc:Work/dc:publisher/cc:Agent/dc:title", namespaces=namespaces)
     meta["rights"] = metadata.findtext("rdf:RDF/cc:Work/dc:rights/cc:Agent/dc:title", namespaces=namespaces)
+    meta["coverage"] = metadata.findtext("rdf:RDF/cc:Work/dc:coverage", namespaces=namespaces)
     license: ET.Element = metadata.find("rdf:RDF/cc:Work/cc:license", namespaces)
     if not license is None:
         if "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource" in license.keys():
             meta["license"] = license.get("{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource")
 
     return meta
-
-#         <metadata/rdf:RDF/cc:Work/dc:subject/rdf:Bag/rdf:li>
-#           <rdf:Bag/rdf:li>
-#             <rdf:li>editor</rdf:li>
-#             <rdf:li>icon</rdf:li>
-#           </rdf:Bag>
-#         </metadata/rdf:RDF/cc:Work/dc:subject>
 
 
 # TODO: Markdown
