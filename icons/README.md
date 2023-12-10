@@ -2,74 +2,57 @@
 
 Editor icons for use in Gonzago Framework
 
-## Gonzago
-
-<table style="width:100%">
-<tr><td>
-  <img src="/icons/gonzago.svg" width="16" height="16">
-</td><td>
-  <b>Gonzago Framework Editor Icon</b><br>
-</td></tr>
-</table>
-
-## Achievements
+## Icons
 
 <table>
-<tr><td>
-  <img src="/icons/achievements/achievement.svg" width="16" height="16">
-</td><td>
-  <b>Achievement Editor Icon</b><br>
-</td></tr>
-<tr><td>
-  <img src="/icons/achievements/achievement_manager.svg" width="16" height="16">
-</td><td>
-  <b>Achievement Manager Editor Icon</b><br>
-</td></tr>
-</table>
-
-## Animation
-
-<table>
-<tr><td>
-  <img src="/icons/animation/animator.svg" width="16" height="16">
-</td><td>
-  <b>Animator Editor Icon</b><br>
-</td></tr>
-<tr><td>
-  <img src="/icons/animation/body_rig.svg" width="16" height="16">
-</td><td>
-  <b>Body Rig Editor Icon</b><br>
-</td></tr>
-<tr><td>
-  <img src="/icons/animation/face_rig.svg" width="16" height="16">
-</td><td>
-  <b>Face Rig Editor Icon</b><br>
-</td></tr>
-<tr><td>
-  <img src="/icons/animation/hand_rig.svg" width="16" height="16">
-</td><td>
-  <b>Hand Rig Editor Icon</b><br>
-</td></tr>
-<tr><td>
-  <img src="/icons/animation/head_rig.svg" width="16" height="16">
-</td><td>
-  <b>Head Rig Editor Icon</b><br>
-</td></tr>
-</table>
-
-## Application
-
-<table>
-<tr><td>
-  <img src="/icons/application/credits_label.svg" width="16" height="16">
-</td><td>
-  <b>Credits Label Editor Icon</b><br>
-</td></tr>
-<tr><td>
-  <img src="/icons/application/splash.svg" width="16" height="16">
-</td><td>
-  <b>Splash Editor Icon</b><br>
-</td></tr>
+<thead><tr><th colspan="4">Gonzago</th></tr></thead>
+<tbody>
+  <tr>
+    <td><img src="/icons/gonzago.svg" width="16" height="16"></td>
+    <td><b>Gonzago Framework Editor Icon</b><br></td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody>
+<thead><tr><th colspan="4">Achievements</th></tr></thead>
+<tbody>
+  <tr>
+    <td><img src="/icons/achievements/achievement.svg" width="16" height="16"></td>
+    <td><b>Achievement Editor Icon</b><br></td>
+    <td><img src="/icons/achievements/achievement_manager.svg" width="16" height="16"></td>
+    <td><b>Achievement Manager Editor Icon</b><br></td>
+  </tr>
+</tbody>
+<thead><tr><th colspan="4">Animation</th></tr></thead>
+<tbody>
+  <tr>
+    <td><img src="/icons/animation/animator.svg" width="16" height="16"></td>
+    <td><b>Animator Editor Icon</b><br></td>
+    <td><img src="/icons/animation/body_rig.svg" width="16" height="16"></td>
+    <td><b>Body Rig Editor Icon</b><br></td>
+  </tr>
+  <tr>
+    <td><img src="/icons/animation/face_rig.svg" width="16" height="16"></td>
+    <td><b>Face Rig Editor Icon</b><br></td>
+    <td><img src="/icons/animation/hand_rig.svg" width="16" height="16"></td>
+    <td><b>Hand Rig Editor Icon</b><br></td>
+  </tr>
+  <tr>
+    <td><img src="/icons/animation/head_rig.svg" width="16" height="16"></td>
+    <td><b>Head Rig Editor Icon</b><br></td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody>
+<thead><tr><th colspan="4">Application</th></tr></thead>
+<tbody>
+  <tr>
+    <td><img src="/icons/application/credits_label.svg" width="16" height="16"></td>
+    <td><b>Credits Label Editor Icon</b><br></td>
+    <td><img src="/icons/application/splash.svg" width="16" height="16"></td>
+    <td><b>Splash Editor Icon</b><br></td>
+  </tr>
+</tbody>
 </table>
 
 ## Audio

@@ -170,6 +170,9 @@ def get_meta_data(file: Path) -> dict[str, Any]:
 # https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting
 # https://gist.github.com/trusktr/93175b620d47827ffdedbf52433e3b37
 # https://github.com/davidwells/markdown-magic
+# https://www.w3.org/WAI/tutorials/tables/multi-level/
+
+# Width can be defined by table header https://gist.github.com/panoply/176101828af8393adc821e49578ac588
 
 @app.command("meta")
 def test_meta_data():
@@ -190,7 +193,7 @@ def build_readme():
 
             folder: Path = Path(".")
             readme.write("## Gonzago\n\n")
-            readme.write("<table style=\"width:100%\">\n")
+            readme.write("<table>\n")
             for file in find_icons(ICONS_SOURCE_DIR):
                 rel_path: Path = file.relative_to(ICONS_SOURCE_DIR)
                 new_folder: Path = rel_path.parent
