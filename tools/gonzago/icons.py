@@ -234,7 +234,7 @@ def build_readme():
                 )
                 relation: str = meta.get("relation")
                 if relation:
-                    readme.write(f" <a href=\"{relation}\">&#27A6;</a>")
+                    readme.write(f" <a href=\"{relation}\" target=\"_blank\">:link:</a>")
                 subject: list[str] = meta["subject"]
                 if subject:
                     if "editor" in subject:
