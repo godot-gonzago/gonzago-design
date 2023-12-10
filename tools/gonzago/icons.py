@@ -190,28 +190,34 @@ def build_readme():
 
             folder: Path = Path(".")
             readme.write("## Gonzago\n\n")
-            readme.write("<p>\n")
+            readme.write("<table>\n")
             for file in find_icons(ICONS_SOURCE_DIR):
                 rel_path: Path = file.relative_to(ICONS_SOURCE_DIR)
                 new_folder: Path = rel_path.parent
                 if folder != new_folder:
-                    readme.write("</p>\n\n")
+                    readme.write("</table>\n\n")
                     header: str = string.capwords(new_folder.as_posix().replace("/", "."), ".")
                     readme.write(f"## {header}\n\n")
-                    readme.write("<p>\n")
+                    readme.write("<table>\n")
                     folder = new_folder
                 console.print(f"Getting meta {rel_path}")
 
                 image_src: str = Path("/icons").joinpath(rel_path).as_posix()
                 meta: dict[str] = get_meta_data(file)
+                readme.write("<tr><td>\n")
                 readme.write(
                     f"  <img src=\"{image_src}\" "
                     f"width=\"{str(meta.get('width', 16))}\" "
                     f"height=\"{str(meta.get('height', 16))}\">\n"
                 )
+                readme.write("</td><td>\n")
+                readme.write(
+                    f"  <b>{meta.get('title', rel_path.stem)}</b><br>\n"
+                )
+                readme.write("</td></tr>\n")
 
                 status.update(f"Writing readme entry for [i]{file}[/i]")
-            readme.write("</p>\n")
+            readme.write("</table>\n")
 
             readme.write("\n")
         console.print("Done")
