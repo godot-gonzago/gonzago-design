@@ -10,8 +10,7 @@ Editor icons for use in Gonzago Framework
   <tr>
     <td><img src="/icons/gonzago.svg" width="16" height="16"></td>
     <td><b>Gonzago Framework Editor Icon</b><br></td>
-    <td></td>
-    <td></td>
+    <td colspan="2"></td>
   </tr>
 </tbody>
 <thead><tr><th colspan="4">Achievements</th></tr></thead>
@@ -40,8 +39,7 @@ Editor icons for use in Gonzago Framework
   <tr>
     <td><img src="/icons/animation/head_rig.svg" width="16" height="16"></td>
     <td><b>Head Rig Editor Icon</b><br></td>
-    <td></td>
-    <td></td>
+    <td colspan="2"></td>
   </tr>
 </tbody>
 <thead><tr><th colspan="4">Application</th></tr></thead>
