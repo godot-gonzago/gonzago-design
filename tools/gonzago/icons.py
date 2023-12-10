@@ -1,4 +1,5 @@
 import os
+import string
 import xml.etree.ElementTree as ET
 from typing import Any, Iterator
 from pathlib import Path
@@ -187,9 +188,18 @@ def build_readme():
             readme.write("# Gonzago Framework Editor Icons\n\n")
             readme.write("Editor icons for use in Gonzago Framework\n\n")
 
+            folder: Path = Path(".")
+            readme.write("## Gonzago\n\n")
             readme.write("<p>\n")
             for file in find_icons(ICONS_SOURCE_DIR):
                 rel_path: Path = file.relative_to(ICONS_SOURCE_DIR)
+                new_folder: Path = rel_path.parent
+                if folder != new_folder:
+                    readme.write("</p>\n\n")
+                    header: str = string.capwords(new_folder.as_posix().replace("/", "."), ".")
+                    readme.write(f"## {header}\n\n")
+                    readme.write("<p>\n")
+                    folder = new_folder
                 console.print(f"Getting meta {rel_path}")
 
                 image_src: str = Path("/icons").joinpath(rel_path).as_posix()

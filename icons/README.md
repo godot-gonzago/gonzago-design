@@ -2,24 +2,56 @@
 
 Editor icons for use in Gonzago Framework
 
+## Gonzago
+
 <p>
   <img src="/icons/gonzago.svg" width="16" height="16">
+</p>
+
+## Achievements
+
+<p>
   <img src="/icons/achievements/achievement.svg" width="16" height="16">
   <img src="/icons/achievements/achievement_manager.svg" width="16" height="16">
+</p>
+
+## Animation
+
+<p>
   <img src="/icons/animation/animator.svg" width="16" height="16">
   <img src="/icons/animation/body_rig.svg" width="16" height="16">
   <img src="/icons/animation/face_rig.svg" width="16" height="16">
   <img src="/icons/animation/hand_rig.svg" width="16" height="16">
   <img src="/icons/animation/head_rig.svg" width="16" height="16">
+</p>
+
+## Application
+
+<p>
   <img src="/icons/application/credits_label.svg" width="16" height="16">
   <img src="/icons/application/splash.svg" width="16" height="16">
+</p>
+
+## Audio
+
+<p>
   <img src="/icons/audio/audio.svg" width="16" height="16">
   <img src="/icons/audio/audio_manager.svg" width="16" height="16">
   <img src="/icons/audio/music.svg" width="16" height="16">
   <img src="/icons/audio/music_manager.svg" width="16" height="16">
+</p>
+
+## Camera
+
+<p>
   <img src="/icons/camera/camera.svg" width="16" height="16">
   <img src="/icons/camera/camera_manager.svg" width="16" height="16">
   <img src="/icons/camera/camera_mirrored.svg" width="16" height="16">
+</p>
+
+## Controls
+
+<p>
   <img src="/icons/controls/advanced_item_list.svg" width="16" height="16">
   <img src="/icons/controls/advanced_line_edit.svg" width="16" height="16">
   <img src="/icons/controls/advanced_progress_bar.svg" width="16" height="16">
@@ -32,6 +64,11 @@ Editor icons for use in Gonzago Framework
   <img src="/icons/controls/line_edit.svg" width="16" height="16">
   <img src="/icons/controls/progress_bar.svg" width="16" height="16">
   <img src="/icons/controls/search_field.svg" width="16" height="16">
+</p>
+
+## Core
+
+<p>
   <img src="/icons/core/command.svg" width="16" height="16">
   <img src="/icons/core/condition.svg" width="16" height="16">
   <img src="/icons/core/entity.svg" width="16" height="16">
@@ -42,6 +79,11 @@ Editor icons for use in Gonzago Framework
   <img src="/icons/core/settings.svg" width="16" height="16">
   <img src="/icons/core/settings_manager.svg" width="16" height="16">
   <img src="/icons/core/system.svg" width="16" height="16">
+</p>
+
+## Core.Vars
+
+<p>
   <img src="/icons/core/vars/bool.svg" width="16" height="16">
   <img src="/icons/core/vars/color.svg" width="16" height="16">
   <img src="/icons/core/vars/float.svg" width="16" height="16">
@@ -54,8 +96,18 @@ Editor icons for use in Gonzago Framework
   <img src="/icons/core/vars/vector2i.svg" width="16" height="16">
   <img src="/icons/core/vars/vector3.svg" width="16" height="16">
   <img src="/icons/core/vars/vector3i.svg" width="16" height="16">
+</p>
+
+## Debug
+
+<p>
   <img src="/icons/debug/console.svg" width="16" height="16">
   <img src="/icons/debug/monitor.svg" width="16" height="16">
+</p>
+
+## Generic
+
+<p>
   <img src="/icons/generic/aid_kit.svg" width="16" height="16">
   <img src="/icons/generic/body.svg" width="16" height="16">
   <img src="/icons/generic/bone.svg" width="16" height="16">
@@ -103,6 +155,11 @@ Editor icons for use in Gonzago Framework
   <img src="/icons/generic/target.svg" width="16" height="16">
   <img src="/icons/generic/tools.svg" width="16" height="16">
   <img src="/icons/generic/translation.svg" width="16" height="16">
+</p>
+
+## Generic.Actions
+
+<p>
   <img src="/icons/generic/actions/add.svg" width="16" height="16">
   <img src="/icons/generic/actions/clear.svg" width="16" height="16">
   <img src="/icons/generic/actions/cloud_download.svg" width="16" height="16">
@@ -125,6 +182,11 @@ Editor icons for use in Gonzago Framework
   <img src="/icons/generic/actions/save_all.svg" width="16" height="16">
   <img src="/icons/generic/actions/search.svg" width="16" height="16">
   <img src="/icons/generic/actions/upload.svg" width="16" height="16">
+</p>
+
+## Generic.Arrows
+
+<p>
   <img src="/icons/generic/arrows/arrow_down.svg" width="16" height="16">
   <img src="/icons/generic/arrows/arrow_horizontal.svg" width="16" height="16">
   <img src="/icons/generic/arrows/arrow_left.svg" width="16" height="16">
@@ -142,6 +204,11 @@ Editor icons for use in Gonzago Framework
   <img src="/icons/generic/arrows/move_up.svg" width="16" height="16">
   <img src="/icons/generic/arrows/rotate_left.svg" width="16" height="16">
   <img src="/icons/generic/arrows/rotate_right.svg" width="16" height="16">
+</p>
+
+## Generic.Drawing
+
+<p>
   <img src="/icons/generic/drawing/brush.svg" width="16" height="16">
   <img src="/icons/generic/drawing/bucket.svg" width="16" height="16">
   <img src="/icons/generic/drawing/checkerboard.svg" width="64" height="64">
@@ -149,6 +216,11 @@ Editor icons for use in Gonzago Framework
   <img src="/icons/generic/drawing/pin.svg" width="16" height="16">
   <img src="/icons/generic/drawing/pipette.svg" width="16" height="16">
   <img src="/icons/generic/drawing/transparent.svg" width="16" height="16">
+</p>
+
+## Generic.Io
+
+<p>
   <img src="/icons/generic/io/file.svg" width="16" height="16">
   <img src="/icons/generic/io/file_broken.svg" width="16" height="16">
   <img src="/icons/generic/io/file_dead.svg" width="16" height="16">
@@ -160,6 +232,11 @@ Editor icons for use in Gonzago Framework
   <img src="/icons/generic/io/mouse.svg" width="16" height="16">
   <img src="/icons/generic/io/mouse_cursor.svg" width="16" height="16">
   <img src="/icons/generic/io/touch.svg" width="16" height="16">
+</p>
+
+## Generic.Media
+
+<p>
   <img src="/icons/generic/media/auto_end.svg" width="16" height="16">
   <img src="/icons/generic/media/auto_play.svg" width="16" height="16">
   <img src="/icons/generic/media/eject.svg" width="16" height="16">
@@ -178,6 +255,11 @@ Editor icons for use in Gonzago Framework
   <img src="/icons/generic/media/skip_back.svg" width="16" height="16">
   <img src="/icons/generic/media/skip_fwd.svg" width="16" height="16">
   <img src="/icons/generic/media/stop.svg" width="16" height="16">
+</p>
+
+## Generic.Toggles
+
+<p>
   <img src="/icons/generic/toggles/bell.svg" width="16" height="16">
   <img src="/icons/generic/toggles/bell_disabled.svg" width="16" height="16">
   <img src="/icons/generic/toggles/bell_empty.svg" width="16" height="16">
@@ -233,6 +315,11 @@ Editor icons for use in Gonzago Framework
   <img src="/icons/generic/toggles/status_warning.svg" width="16" height="16">
   <img src="/icons/generic/toggles/thumbs_down.svg" width="16" height="16">
   <img src="/icons/generic/toggles/thumbs_up.svg" width="16" height="16">
+</p>
+
+## Generic.Wysiwyg
+
+<p>
   <img src="/icons/generic/wysiwyg/anchor.svg" width="16" height="16">
   <img src="/icons/generic/wysiwyg/checklist.svg" width="16" height="16">
   <img src="/icons/generic/wysiwyg/font.svg" width="16" height="16">
