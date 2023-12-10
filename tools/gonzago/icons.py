@@ -15,7 +15,7 @@ app = typer.Typer()
 console: Console = Console()
 
 
-ICON_FILE_PATTERN: str = "[!_]**/[!_]*.svg"
+ICON_FILE_PATTERN: str = "**/*.svg"
 
 
 _SCOUR_OPTIONS = scour.parse_args(
