@@ -87,6 +87,18 @@ def list_exporters():
     console.print(table)
 
 
+#svg: str = (
+#    "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">"
+#    f"<rect x=\"0\" y=\"0\" width=\"24\" height=\"24\" rx=\"8\" fill=\"{entry.color}\" />"
+#    "</svg>"
+#)
+#readme.write(f"<br>{svg}")
+#base64: bytes = b64encode(svg.encode())
+#readme.write(
+#    f"<img width=\"24\" src=\"data:image/svg+xml;base64,{base64.decode()}\" />\n"
+#)
+
+
 @app.command("readme")
 def build_readme():
     """
@@ -166,23 +178,10 @@ def build_readme():
                                 f"<br>{entry.description}\n"
                             )
                         readme.write("<br>")
-                        #svg: str = (
-                        #    "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">"
-                        #    f"<rect x=\"0\" y=\"0\" width=\"24\" height=\"24\" rx=\"8\" fill=\"{entry.color}\" />"
-                        #    "</svg>"
-                        #)
-                        #readme.write(f"<br>{svg}")
-                        #base64: bytes = b64encode(svg.encode())
-                        #readme.write(
-                        #    f"<img width=\"24\" src=\"data:image/svg+xml;base64,{base64.decode()}\" />\n"
-                        #)
                         c = entry.color.as_rgb_tuple()
                         hex: str = f"{c[0]:02x}{c[1]:02x}{c[2]:02x}"
                         readme.write(
-                            f"<img src=\"https://placehold.co/24x24/{hex}/{hex}/png\" />"
-                        )
-                        readme.write(
-                            f"<br>{entry.color}\n</p>\n"
+                            f"<img src=\"https://placehold.co/24x24/{hex}/{hex}/png\" /> #{hex}"
                         )
                     readme.write(
                             "</td>\n</tr>\n"
