@@ -242,7 +242,7 @@ def build_readme():
                     if "icon" in subject:
                         subject.remove("icon")
                     if len(subject) > 0:
-                        readme.write(f"<br><var>{', '.join(subject)}</var>")
+                        readme.write(f"<br><small><var>{', '.join(subject)}</var></small>")
                 readme.write("</p></td>\n")
 
                 if files_in_row == 1:
