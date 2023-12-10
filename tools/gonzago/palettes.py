@@ -143,6 +143,14 @@ class ExporterInfo(NamedTuple):
 EXPORTERS = dict[str, ExporterInfo]()
 
 
+# TODO: Allow for parameters, so we can only have one method with
+#       multiple decorators.
+# *args, **kwargs
+# https://docs.python.org/3/library/typing.html#annotating-callable-objects
+# https://docs.python.org/3/library/typing.html#typing.ParamSpec
+# https://docs.python.org/3/library/typing.html#typing.Concatenate
+# https://sobolevn.me/2021/12/paramspec-guide
+
 def exporter(id: str, suffix: str, description: str = "") -> Callable:
     def inner(fn: Callable[[Path, Template], None]) -> Callable[[Path, Template], None]:
         EXPORTERS[id] = ExporterInfo(suffix=suffix, description=description, fn=fn)
