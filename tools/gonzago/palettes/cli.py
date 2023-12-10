@@ -159,25 +159,25 @@ def build_readme():
                         )
                     for entry in template.colors:
                         readme.write(
-                            f"<p>{entry.name}"
+                            f"<p>{entry.name}\n"
                         )
                         if entry.description:
                             readme.write(
-                                f"<br>{entry.description}"
+                                f"<br>{entry.description}\n"
                             )
                         readme.write("<br>")
                         svg: str = (
                             "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">"
-                            f"<rect x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" rx=\"10%\" fill=\"{entry.color}\" />"
+                            f"<rect x=\"0\" y=\"0\" width=\"24\" height=\"24\" rx=\"8\" fill=\"{entry.color}\" />"
                             "</svg>"
                         )
                         #readme.write(f"<br>{svg}")
                         base64: bytes = b64encode(svg.encode())
                         readme.write(
-                            f"<img src=\"data:image/svg+xml;base64,{base64.decode()}\" />"
+                            f"<img width=\"24\" src=\"data:image/svg+xml;base64,{base64.decode()}\" />\n"
                         )
                         readme.write(
-                            f"<br>{entry.color}</p>"
+                            f"<br>{entry.color}\n</p>\n"
                         )
                     readme.write(
                             "</td>\n</tr>\n"
