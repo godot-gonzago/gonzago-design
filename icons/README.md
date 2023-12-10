@@ -9,7 +9,7 @@ Editor icons for use in Gonzago Framework
 <tbody>
   <tr>
     <td><img src="/icons/gonzago.svg"></td>
-    <td>Gonzago Framework Editor Icon</br><sub>gonzago</sub></td>
+    <td>Gonzago Framework Editor Icon</br><pre>gonzago</pre></td>
     <td colspan="2"></td>
   </tr>
 </tbody>
@@ -17,28 +17,28 @@ Editor icons for use in Gonzago Framework
 <tbody>
   <tr>
     <td><img src="/icons/achievements/achievement.svg"></td>
-    <td>Achievement Editor Icon</br><sub>achievement, trophy</sub></td>
+    <td>Achievement Editor Icon</br><pre>achievement, trophy</pre></td>
     <td><img src="/icons/achievements/achievement_manager.svg"></td>
-    <td>Achievement Manager Editor Icon</br><sub>achievement, trophy, manager</sub></td>
+    <td>Achievement Manager Editor Icon</br><pre>achievement, trophy, manager</pre></td>
   </tr>
 </tbody>
 <thead><tr><th align="left" colspan="4">Animation</th></tr></thead>
 <tbody>
   <tr>
     <td><img src="/icons/animation/animator.svg"></td>
-    <td>Animator Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/AnimationPlayer.svg" target="_blank">rel</a></br><sub>animator, animation, film, movie, player, play</sub></td>
+    <td>Animator Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/AnimationPlayer.svg" target="_blank">rel</a></br><pre>animator, animation, film, movie, player, play</pre></td>
     <td><img src="/icons/animation/body_rig.svg"></td>
-    <td>Body Rig Editor Icon</br><sub>body, human, pose, rig</sub></td>
+    <td>Body Rig Editor Icon</br><pre>body, human, pose, rig</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/animation/face_rig.svg"></td>
-    <td>Face Rig Editor Icon</br><sub>face, human, rig</sub></td>
+    <td>Face Rig Editor Icon</br><pre>face, human, rig</pre></td>
     <td><img src="/icons/animation/hand_rig.svg"></td>
-    <td>Hand Rig Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ToolPan.svg" target="_blank">rel</a></br><sub>hand, human, open, finger, rig</sub></td>
+    <td>Hand Rig Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ToolPan.svg" target="_blank">rel</a></br><pre>hand, human, open, finger, rig</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/animation/head_rig.svg"></td>
-    <td>Head Rig Editor Icon</br><sub>head, human, rig</sub></td>
+    <td>Head Rig Editor Icon</br><pre>head, human, rig</pre></td>
     <td colspan="2"></td>
   </tr>
 </tbody>
@@ -46,37 +46,37 @@ Editor icons for use in Gonzago Framework
 <tbody>
   <tr>
     <td><img src="/icons/application/credits_label.svg"></td>
-    <td>Credits Label Editor Icon</br><sub>credits, label, ui, gui, control</sub></td>
+    <td>Credits Label Editor Icon</br><pre>credits, label, ui, gui, control</pre></td>
     <td><img src="/icons/application/splash.svg"></td>
-    <td>Splash Editor Icon</br><sub>splash, boot, intro, ui, gui, control</sub></td>
+    <td>Splash Editor Icon</br><pre>splash, boot, intro, ui, gui, control</pre></td>
   </tr>
 </tbody>
 <thead><tr><th align="left" colspan="4">Audio</th></tr></thead>
 <tbody>
   <tr>
     <td><img src="/icons/audio/audio.svg"></td>
-    <td>Audio Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/AudioStreamWAV.svg" target="_blank">rel</a></br><sub>audio, wave, waveform</sub></td>
+    <td>Audio Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/AudioStreamWAV.svg" target="_blank">rel</a></br><pre>audio, wave, waveform</pre></td>
     <td><img src="/icons/audio/audio_manager.svg"></td>
-    <td>Audio Manager Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/AudioStreamWAV.svg" target="_blank">rel</a></br><sub>audio, wave, waveform, manager</sub></td>
+    <td>Audio Manager Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/AudioStreamWAV.svg" target="_blank">rel</a></br><pre>audio, wave, waveform, manager</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/audio/music.svg"></td>
-    <td>Music Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/AudioStreamWAV.svg" target="_blank">rel</a></br><sub>audio, music, note</sub></td>
+    <td>Music Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/AudioStreamWAV.svg" target="_blank">rel</a></br><pre>audio, music, note</pre></td>
     <td><img src="/icons/audio/music_manager.svg"></td>
-    <td>Music Manager Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/AudioStreamWAV.svg" target="_blank">rel</a></br><sub>audio, music, note, manager</sub></td>
+    <td>Music Manager Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/AudioStreamWAV.svg" target="_blank">rel</a></br><pre>audio, music, note, manager</pre></td>
   </tr>
 </tbody>
 <thead><tr><th align="left" colspan="4">Camera</th></tr></thead>
 <tbody>
   <tr>
     <td><img src="/icons/camera/camera.svg"></td>
-    <td>Camera Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Camera3D.svg" target="_blank">rel</a></br><sub>camera, film, video</sub></td>
+    <td>Camera Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Camera3D.svg" target="_blank">rel</a></br><pre>camera, film, video</pre></td>
     <td><img src="/icons/camera/camera_manager.svg"></td>
-    <td>Camera Manager Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Camera3D.svg" target="_blank">rel</a></br><sub>camera, film, video, manager</sub></td>
+    <td>Camera Manager Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Camera3D.svg" target="_blank">rel</a></br><pre>camera, film, video, manager</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/camera/camera_mirrored.svg"></td>
-    <td>Camera Mirrored Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Camera3D.svg" target="_blank">rel</a></br><sub>camera, film, video, mirrored</sub></td>
+    <td>Camera Mirrored Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Camera3D.svg" target="_blank">rel</a></br><pre>camera, film, video, mirrored</pre></td>
     <td colspan="2"></td>
   </tr>
 </tbody>
@@ -84,153 +84,153 @@ Editor icons for use in Gonzago Framework
 <tbody>
   <tr>
     <td><img src="/icons/controls/advanced_item_list.svg"></td>
-    <td>Advanced Item List Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ItemList.svg" target="_blank">rel</a></br><sub>control, item, items, list, table, advanced</sub></td>
+    <td>Advanced Item List Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ItemList.svg" target="_blank">rel</a></br><pre>control, item, items, list, table, advanced</pre></td>
     <td><img src="/icons/controls/advanced_line_edit.svg"></td>
-    <td>Advanced Line Edit Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/LineEdit.svg" target="_blank">rel</a></br><sub>control, line, edit, text, hashtag, regex, advanced</sub></td>
+    <td>Advanced Line Edit Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/LineEdit.svg" target="_blank">rel</a></br><pre>control, line, edit, text, hashtag, regex, advanced</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/controls/advanced_progress_bar.svg"></td>
-    <td>Advanced Progress Bar Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ProgressBar.svg" target="_blank">rel</a></br><sub>control, progress, bar, range, ranged, advanced</sub></td>
+    <td>Advanced Progress Bar Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ProgressBar.svg" target="_blank">rel</a></br><pre>control, progress, bar, range, ranged, advanced</pre></td>
     <td><img src="/icons/controls/chart_pie.svg"></td>
-    <td>Chart Pie Editor Icon</br><sub>control, chart, pie</sub></td>
+    <td>Chart Pie Editor Icon</br><pre>control, chart, pie</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/controls/circular_container.svg"></td>
-    <td>Circular Container Editor Icon</br><sub>control, container, circle, circular</sub></td>
+    <td>Circular Container Editor Icon</br><pre>control, container, circle, circular</pre></td>
     <td><img src="/icons/controls/container.svg"></td>
-    <td>Container Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Container.svg" target="_blank">rel</a></br><sub>control, container</sub></td>
+    <td>Container Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Container.svg" target="_blank">rel</a></br><pre>control, container</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/controls/date_selector.svg"></td>
-    <td>Date Selector Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ItemList.svg" target="_blank">rel</a></br><sub>control, date, selector, calendar</sub></td>
+    <td>Date Selector Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ItemList.svg" target="_blank">rel</a></br><pre>control, date, selector, calendar</pre></td>
     <td><img src="/icons/controls/icon_label.svg"></td>
-    <td>Icon Label Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Label.svg" target="_blank">rel</a></br><sub>control, icon, label, text, image</sub></td>
+    <td>Icon Label Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Label.svg" target="_blank">rel</a></br><pre>control, icon, label, text, image</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/controls/item_list.svg"></td>
-    <td>Item List Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ItemList.svg" target="_blank">rel</a></br><sub>control, item, items, list, table</sub></td>
+    <td>Item List Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ItemList.svg" target="_blank">rel</a></br><pre>control, item, items, list, table</pre></td>
     <td><img src="/icons/controls/line_edit.svg"></td>
-    <td>Line Edit Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/LineEdit.svg" target="_blank">rel</a></br><sub>control, line, edit, text</sub></td>
+    <td>Line Edit Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/LineEdit.svg" target="_blank">rel</a></br><pre>control, line, edit, text</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/controls/progress_bar.svg"></td>
-    <td>Progress Bar Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ProgressBar.svg" target="_blank">rel</a></br><sub>control, progress, bar, range, ranged</sub></td>
+    <td>Progress Bar Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ProgressBar.svg" target="_blank">rel</a></br><pre>control, progress, bar, range, ranged</pre></td>
     <td><img src="/icons/controls/search_field.svg"></td>
-    <td>Search Field Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Search.svg" target="_blank">rel</a></br><sub>control, search, searching, look, looking, magnify, magnifying, glass</sub></td>
+    <td>Search Field Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Search.svg" target="_blank">rel</a></br><pre>control, search, searching, look, looking, magnify, magnifying, glass</pre></td>
   </tr>
 </tbody>
 <thead><tr><th align="left" colspan="4">Core</th></tr></thead>
 <tbody>
   <tr>
     <td><img src="/icons/core/command.svg"></td>
-    <td>Command Editor Icon</br><sub>command, cmd</sub></td>
+    <td>Command Editor Icon</br><pre>command, cmd</pre></td>
     <td><img src="/icons/core/condition.svg"></td>
-    <td>Condition Editor Icon</br><sub>condition, cnd, tick</sub></td>
+    <td>Condition Editor Icon</br><pre>condition, cnd, tick</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/core/entity.svg"></td>
-    <td>Entity Editor Icon</br><sub>entity</sub></td>
+    <td>Entity Editor Icon</br><pre>entity</pre></td>
     <td><img src="/icons/core/entity_manager.svg"></td>
-    <td>Entity Manager Editor Icon</br><sub>entity, manager</sub></td>
+    <td>Entity Manager Editor Icon</br><pre>entity, manager</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/core/event.svg"></td>
-    <td>Event Editor Icon</br><sub>event, evt</sub></td>
+    <td>Event Editor Icon</br><pre>event, evt</pre></td>
     <td><img src="/icons/core/event_manager.svg"></td>
-    <td>Event Manager Editor Icon</br><sub>event, evt, manager</sub></td>
+    <td>Event Manager Editor Icon</br><pre>event, evt, manager</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/core/module.svg"></td>
-    <td>Module Editor Icon</br><sub>module, mod</sub></td>
+    <td>Module Editor Icon</br><pre>module, mod</pre></td>
     <td><img src="/icons/core/settings.svg"></td>
-    <td>Settings Editor Icon</br><sub>settings, settings, cog, wheel</sub></td>
+    <td>Settings Editor Icon</br><pre>settings, settings, cog, wheel</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/core/settings_manager.svg"></td>
-    <td>Settings Manager Editor Icon</br><sub>settings, settings, cog, wheel, manager</sub></td>
+    <td>Settings Manager Editor Icon</br><pre>settings, settings, cog, wheel, manager</pre></td>
     <td><img src="/icons/core/system.svg"></td>
-    <td>System Editor Icon</br><sub>puzzle, piece, jigsaw</sub></td>
+    <td>System Editor Icon</br><pre>puzzle, piece, jigsaw</pre></td>
   </tr>
 </tbody>
 <thead><tr><th align="left" colspan="4">Core.Vars</th></tr></thead>
 <tbody>
   <tr>
     <td><img src="/icons/core/vars/bool.svg"></td>
-    <td>Bool Editor Icon</br><sub>var, bool, boolean, tick</sub></td>
+    <td>Bool Editor Icon</br><pre>var, bool, boolean, tick</pre></td>
     <td><img src="/icons/core/vars/color.svg"></td>
-    <td>Color Editor Icon</br><sub>var, color</sub></td>
+    <td>Color Editor Icon</br><pre>var, color</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/core/vars/float.svg"></td>
-    <td>Float Editor Icon</br><sub>var, float, floating, point, real, decimal, number</sub></td>
+    <td>Float Editor Icon</br><pre>var, float, floating, point, real, decimal, number</pre></td>
     <td><img src="/icons/core/vars/int.svg"></td>
-    <td>Integer Editor Icon</br><sub>var, int, integer, number</sub></td>
+    <td>Integer Editor Icon</br><pre>var, int, integer, number</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/core/vars/quat.svg"></td>
-    <td>Quat Editor Icon</br><sub>var, quat, quaternion, rotation</sub></td>
+    <td>Quat Editor Icon</br><pre>var, quat, quaternion, rotation</pre></td>
     <td><img src="/icons/core/vars/string.svg"></td>
-    <td>String Editor Icon</br><sub>var, string, chars, char, array</sub></td>
+    <td>String Editor Icon</br><pre>var, string, chars, char, array</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/core/vars/string_name.svg"></td>
-    <td>String Name Editor Icon</br><sub>var, string, name, chars, char, array</sub></td>
+    <td>String Name Editor Icon</br><pre>var, string, name, chars, char, array</pre></td>
     <td><img src="/icons/core/vars/variant.svg"></td>
-    <td>Variant Editor Icon</br><sub>var, variant, circle</sub></td>
+    <td>Variant Editor Icon</br><pre>var, variant, circle</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/core/vars/vector2.svg"></td>
-    <td>Vector2 Editor Icon</br><sub>var, vector, vector2</sub></td>
+    <td>Vector2 Editor Icon</br><pre>var, vector, vector2</pre></td>
     <td><img src="/icons/core/vars/vector2i.svg"></td>
-    <td>Vector2i Editor Icon</br><sub>var, vector, vector2, vector2i</sub></td>
+    <td>Vector2i Editor Icon</br><pre>var, vector, vector2, vector2i</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/core/vars/vector3.svg"></td>
-    <td>Vector3 Editor Icon</br><sub>var, vector, vector3</sub></td>
+    <td>Vector3 Editor Icon</br><pre>var, vector, vector3</pre></td>
     <td><img src="/icons/core/vars/vector3i.svg"></td>
-    <td>Vector3i Editor Icon</br><sub>var, vector, vector3, vector3i</sub></td>
+    <td>Vector3i Editor Icon</br><pre>var, vector, vector3, vector3i</pre></td>
   </tr>
 </tbody>
 <thead><tr><th align="left" colspan="4">Debug</th></tr></thead>
 <tbody>
   <tr>
     <td><img src="/icons/debug/console.svg"></td>
-    <td>Console Editor Icon</br><sub>control, debug, console, line, text</sub></td>
+    <td>Console Editor Icon</br><pre>control, debug, console, line, text</pre></td>
     <td><img src="/icons/debug/monitor.svg"></td>
-    <td>Monitor Editor Icon</br><sub>control, debug, monitor, chart, line</sub></td>
+    <td>Monitor Editor Icon</br><pre>control, debug, monitor, chart, line</pre></td>
   </tr>
 </tbody>
 <thead><tr><th align="left" colspan="4">Generic</th></tr></thead>
 <tbody>
   <tr>
     <td><img src="/icons/generic/aid_kit.svg"></td>
-    <td>Aid Kit Editor Icon</br><sub>first, aid, kit, med, medicine, health</sub></td>
+    <td>Aid Kit Editor Icon</br><pre>first, aid, kit, med, medicine, health</pre></td>
     <td><img src="/icons/generic/body.svg"></td>
-    <td>Body Editor Icon</br><sub>body, human, pose</sub></td>
+    <td>Body Editor Icon</br><pre>body, human, pose</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/bone.svg"></td>
-    <td>Bone Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Bone.svg" target="_blank">rel</a></br><sub>bone, bones, skeleton, armature, animation</sub></td>
+    <td>Bone Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Bone.svg" target="_blank">rel</a></br><pre>bone, bones, skeleton, armature, animation</pre></td>
     <td><img src="/icons/generic/calendar.svg"></td>
-    <td>Calendar Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ItemList.svg" target="_blank">rel</a></br><sub>calendar, date</sub></td>
+    <td>Calendar Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ItemList.svg" target="_blank">rel</a></br><pre>calendar, date</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/character.svg"></td>
-    <td>Character Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/CharacterBody3D.svg" target="_blank">rel</a></br><sub>character, body, human, running</sub></td>
+    <td>Character Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/CharacterBody3D.svg" target="_blank">rel</a></br><pre>character, body, human, running</pre></td>
     <td><img src="/icons/generic/clock.svg"></td>
-    <td>Clock Editor Icon</br><sub>clock, time, analog</sub></td>
+    <td>Clock Editor Icon</br><pre>clock, time, analog</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/close.svg"></td>
-    <td>Close Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Close.svg" target="_blank">rel</a></br><sub>close, cross, x</sub></td>
+    <td>Close Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Close.svg" target="_blank">rel</a></br><pre>close, cross, x</pre></td>
     <td><img src="/icons/generic/compass.svg"></td>
-    <td>Compass Editor Icon</br><sub>compass, direction, pointer</sub></td>
+    <td>Compass Editor Icon</br><pre>compass, direction, pointer</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/dice.svg"></td>
-    <td>Dice Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/RandomNumberGenerator.svg" target="_blank">rel</a></br><sub>dice, random, numbers, generators, rng, stack</sub></td>
+    <td>Dice Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/RandomNumberGenerator.svg" target="_blank">rel</a></br><pre>dice, random, numbers, generators, rng, stack</pre></td>
     <td><img src="/icons/generic/die.svg"></td>
-    <td>Die Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/RandomNumberGenerator.svg" target="_blank">rel</a></br><sub>die, dice, random, number, generator, rng</sub></td>
+    <td>Die Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/RandomNumberGenerator.svg" target="_blank">rel</a></br><pre>die, dice, random, number, generator, rng</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/envelope.svg"></td>
@@ -336,13 +336,13 @@ Editor icons for use in Gonzago Framework
   </tr>
   <tr>
     <td><img src="/icons/generic/target.svg"></td>
-    <td>Target Editor Icon</br><sub>target, aim, crosshair</sub></td>
+    <td>Target Editor Icon</br><pre>target, aim, crosshair</pre></td>
     <td><img src="/icons/generic/tools.svg"></td>
-    <td>Tools Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Tools.svg" target="_blank">rel</a></br><sub>tools, tool, screw, driver, screwdriver, wrench</sub></td>
+    <td>Tools Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Tools.svg" target="_blank">rel</a></br><pre>tools, tool, screw, driver, screwdriver, wrench</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/translation.svg"></td>
-    <td>Translation Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Translation.svg" target="_blank">rel</a></br><sub>translation, roman, chinese, character</sub></td>
+    <td>Translation Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Translation.svg" target="_blank">rel</a></br><pre>translation, roman, chinese, character</pre></td>
     <td colspan="2"></td>
   </tr>
 </tbody>
@@ -350,124 +350,124 @@ Editor icons for use in Gonzago Framework
 <tbody>
   <tr>
     <td><img src="/icons/generic/actions/add.svg"></td>
-    <td>Add Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Add.svg" target="_blank">rel</a></br><sub>action, add, plus</sub></td>
+    <td>Add Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Add.svg" target="_blank">rel</a></br><pre>action, add, plus</pre></td>
     <td><img src="/icons/generic/actions/clear.svg"></td>
-    <td>Clear Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Clear.svg" target="_blank">rel</a></br><sub>action, clear, brush</sub></td>
+    <td>Clear Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Clear.svg" target="_blank">rel</a></br><pre>action, clear, brush</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/actions/cloud_download.svg"></td>
-    <td>Cloud Download Editor Icon</br><sub>action, cloud, download</sub></td>
+    <td>Cloud Download Editor Icon</br><pre>action, cloud, download</pre></td>
     <td><img src="/icons/generic/actions/cloud_upload.svg"></td>
-    <td>Cloud Upload Editor Icon</br><sub>action, cloud, upload</sub></td>
+    <td>Cloud Upload Editor Icon</br><pre>action, cloud, upload</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/actions/collapse.svg"></td>
-    <td>Collapse Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/CombineLines.svg" target="_blank">rel</a></br><sub>action, collapse</sub></td>
+    <td>Collapse Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/CombineLines.svg" target="_blank">rel</a></br><pre>action, collapse</pre></td>
     <td><img src="/icons/generic/actions/copy.svg"></td>
-    <td>Copy Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ActionCopy.svg" target="_blank">rel</a></br><sub>action, copy, container, stack</sub></td>
+    <td>Copy Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ActionCopy.svg" target="_blank">rel</a></br><pre>action, copy, container, stack</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/actions/cut.svg"></td>
-    <td>Cut Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ActionCut.svg" target="_blank">rel</a></br><sub>action, cut, scissor, scissors</sub></td>
+    <td>Cut Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ActionCut.svg" target="_blank">rel</a></br><pre>action, cut, scissor, scissors</pre></td>
     <td><img src="/icons/generic/actions/delete.svg"></td>
-    <td>Delete Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Remove.svg" target="_blank">rel</a></br><sub>action, delete, trash, can</sub></td>
+    <td>Delete Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Remove.svg" target="_blank">rel</a></br><pre>action, delete, trash, can</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/actions/download.svg"></td>
-    <td>Download Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/AssetLib.svg" target="_blank">rel</a></br><sub>action, download, arrow, down</sub></td>
+    <td>Download Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/AssetLib.svg" target="_blank">rel</a></br><pre>action, download, arrow, down</pre></td>
     <td><img src="/icons/generic/actions/duplicate.svg"></td>
-    <td>Duplicate Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Duplicate.svg" target="_blank">rel</a></br><sub>action, duplicate, file, files, stack</sub></td>
+    <td>Duplicate Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Duplicate.svg" target="_blank">rel</a></br><pre>action, duplicate, file, files, stack</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/actions/edit.svg"></td>
-    <td>Edit Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Edit.svg" target="_blank">rel</a></br><sub>action, edit, pencil</sub></td>
+    <td>Edit Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Edit.svg" target="_blank">rel</a></br><pre>action, edit, pencil</pre></td>
     <td><img src="/icons/generic/actions/filter.svg"></td>
-    <td>Filter Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/AnimationFilter.svg" target="_blank">rel</a></br><sub>action, filter, funnel</sub></td>
+    <td>Filter Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/AnimationFilter.svg" target="_blank">rel</a></br><pre>action, filter, funnel</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/actions/load.svg"></td>
-    <td>Load Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Load.svg" target="_blank">rel</a></br><sub>action, load, folder, open</sub></td>
+    <td>Load Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Load.svg" target="_blank">rel</a></br><pre>action, load, folder, open</pre></td>
     <td><img src="/icons/generic/actions/paste.svg"></td>
-    <td>Paste Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ActionPaste.svg" target="_blank">rel</a></br><sub>action, paste, clip, board, clipboard</sub></td>
+    <td>Paste Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ActionPaste.svg" target="_blank">rel</a></br><pre>action, paste, clip, board, clipboard</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/actions/print.svg"></td>
-    <td>Print Editor Icon</br><sub>action, print, printer</sub></td>
+    <td>Print Editor Icon</br><pre>action, print, printer</pre></td>
     <td><img src="/icons/generic/actions/reload.svg"></td>
-    <td>Reload Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Reload.svg" target="_blank">rel</a></br><sub>action, reload, arrow, rotate, left</sub></td>
+    <td>Reload Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Reload.svg" target="_blank">rel</a></br><pre>action, reload, arrow, rotate, left</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/actions/remove.svg"></td>
-    <td>Remove Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Add.svg" target="_blank">rel</a></br><sub>action, remove, minus</sub></td>
+    <td>Remove Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Add.svg" target="_blank">rel</a></br><pre>action, remove, minus</pre></td>
     <td><img src="/icons/generic/actions/rename.svg"></td>
-    <td>Rename Editor Icon <a href="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/Rename.svg" target="_blank">rel</a></br><sub>action, rename, name, text, cursor</sub></td>
+    <td>Rename Editor Icon <a href="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/Rename.svg" target="_blank">rel</a></br><pre>action, rename, name, text, cursor</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/actions/save.svg"></td>
-    <td>Save Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Save.svg" target="_blank">rel</a></br><sub>action, save, floppy, disc</sub></td>
+    <td>Save Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Save.svg" target="_blank">rel</a></br><pre>action, save, floppy, disc</pre></td>
     <td><img src="/icons/generic/actions/save_all.svg"></td>
-    <td>Save All Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Save.svg" target="_blank">rel</a></br><sub>action, save, as, floppy, floppies, disc, discs, stack</sub></td>
+    <td>Save All Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Save.svg" target="_blank">rel</a></br><pre>action, save, as, floppy, floppies, disc, discs, stack</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/actions/search.svg"></td>
-    <td>Search Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Search.svg" target="_blank">rel</a></br><sub>action, search, searching, look, looking, magnify, magnifying, glass</sub></td>
+    <td>Search Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Search.svg" target="_blank">rel</a></br><pre>action, search, searching, look, looking, magnify, magnifying, glass</pre></td>
     <td><img src="/icons/generic/actions/upload.svg"></td>
-    <td>Upload Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/AssetLib.svg" target="_blank">rel</a></br><sub>action, upload, arrow, up</sub></td>
+    <td>Upload Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/AssetLib.svg" target="_blank">rel</a></br><pre>action, upload, arrow, up</pre></td>
   </tr>
 </tbody>
 <thead><tr><th align="left" colspan="4">Generic.Arrows</th></tr></thead>
 <tbody>
   <tr>
     <td><img src="/icons/generic/arrows/arrow_down.svg"></td>
-    <td>Arrow Down Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ArrowDown.svg" target="_blank">rel</a></br><sub>arrow, down</sub></td>
+    <td>Arrow Down Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ArrowDown.svg" target="_blank">rel</a></br><pre>arrow, down</pre></td>
     <td><img src="/icons/generic/arrows/arrow_horizontal.svg"></td>
-    <td>Arrow Horizontal Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/MirrorX.svg" target="_blank">rel</a></br><sub>arrow, horizontal, left, right</sub></td>
+    <td>Arrow Horizontal Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/MirrorX.svg" target="_blank">rel</a></br><pre>arrow, horizontal, left, right</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/arrows/arrow_left.svg"></td>
-    <td>Arrow Left Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ArrowLeft.svg" target="_blank">rel</a></br><sub>arrow, left</sub></td>
+    <td>Arrow Left Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ArrowLeft.svg" target="_blank">rel</a></br><pre>arrow, left</pre></td>
     <td><img src="/icons/generic/arrows/arrow_right.svg"></td>
-    <td>Arrow Right Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ArrowRight.svg" target="_blank">rel</a></br><sub>arrow, right</sub></td>
+    <td>Arrow Right Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ArrowRight.svg" target="_blank">rel</a></br><pre>arrow, right</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/arrows/arrow_up.svg"></td>
-    <td>Arrow Up Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ArrowUp.svg" target="_blank">rel</a></br><sub>arrow, up</sub></td>
+    <td>Arrow Up Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ArrowUp.svg" target="_blank">rel</a></br><pre>arrow, up</pre></td>
     <td><img src="/icons/generic/arrows/arrow_vertical.svg"></td>
-    <td>Arrow Vertical Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/MirrorY.svg" target="_blank">rel</a></br><sub>arrow, vertical, up, down</sub></td>
+    <td>Arrow Vertical Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/MirrorY.svg" target="_blank">rel</a></br><pre>arrow, vertical, up, down</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/arrows/circle_down.svg"></td>
-    <td>Circle Down Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/GuiScrollArrowLeft.svg" target="_blank">rel</a></br><sub>arrow, circle, down</sub></td>
+    <td>Circle Down Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/GuiScrollArrowLeft.svg" target="_blank">rel</a></br><pre>arrow, circle, down</pre></td>
     <td><img src="/icons/generic/arrows/circle_left.svg"></td>
-    <td>Circle Left Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/GuiScrollArrowLeft.svg" target="_blank">rel</a></br><sub>arrow, circle, left</sub></td>
+    <td>Circle Left Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/GuiScrollArrowLeft.svg" target="_blank">rel</a></br><pre>arrow, circle, left</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/arrows/circle_right.svg"></td>
-    <td>Circle Right Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/GuiScrollArrowRight.svg" target="_blank">rel</a></br><sub>arrow, circle, right</sub></td>
+    <td>Circle Right Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/GuiScrollArrowRight.svg" target="_blank">rel</a></br><pre>arrow, circle, right</pre></td>
     <td><img src="/icons/generic/arrows/circle_up.svg"></td>
-    <td>Circle Up Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/GuiScrollArrowLeft.svg" target="_blank">rel</a></br><sub>arrow, circle, up</sub></td>
+    <td>Circle Up Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/GuiScrollArrowLeft.svg" target="_blank">rel</a></br><pre>arrow, circle, up</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/arrows/forward.svg"></td>
-    <td>Forward Editor Icon</br><sub>forward, arrow, right</sub></td>
+    <td>Forward Editor Icon</br><pre>forward, arrow, right</pre></td>
     <td><img src="/icons/generic/arrows/move_down.svg"></td>
-    <td>Move Down Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/MoveDown.svg" target="_blank">rel</a></br><sub>arrow, move, down</sub></td>
+    <td>Move Down Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/MoveDown.svg" target="_blank">rel</a></br><pre>arrow, move, down</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/arrows/move_left.svg"></td>
-    <td>Move Left Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/MoveLeft.svg" target="_blank">rel</a></br><sub>arrow, move, left</sub></td>
+    <td>Move Left Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/MoveLeft.svg" target="_blank">rel</a></br><pre>arrow, move, left</pre></td>
     <td><img src="/icons/generic/arrows/move_right.svg"></td>
-    <td>Move Right Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/MoveRight.svg" target="_blank">rel</a></br><sub>arrow, move, right</sub></td>
+    <td>Move Right Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/MoveRight.svg" target="_blank">rel</a></br><pre>arrow, move, right</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/arrows/move_up.svg"></td>
-    <td>Move Up Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/MoveUp.svg" target="_blank">rel</a></br><sub>arrow, move, up</sub></td>
+    <td>Move Up Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/MoveUp.svg" target="_blank">rel</a></br><pre>arrow, move, up</pre></td>
     <td><img src="/icons/generic/arrows/rotate_left.svg"></td>
-    <td>Rotate Left Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/RotateLeft.svg" target="_blank">rel</a></br><sub>arrow, rotate, left</sub></td>
+    <td>Rotate Left Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/RotateLeft.svg" target="_blank">rel</a></br><pre>arrow, rotate, left</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/arrows/rotate_right.svg"></td>
-    <td>Rotate Right Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/RotateRight.svg" target="_blank">rel</a></br><sub>arrow, rotate, right</sub></td>
+    <td>Rotate Right Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/RotateRight.svg" target="_blank">rel</a></br><pre>arrow, rotate, right</pre></td>
     <td colspan="2"></td>
   </tr>
 </tbody>
@@ -475,25 +475,25 @@ Editor icons for use in Gonzago Framework
 <tbody>
   <tr>
     <td><img src="/icons/generic/drawing/brush.svg"></td>
-    <td>Brush Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/CanvasItem.svg" target="_blank">rel</a></br><sub>paint, brush</sub></td>
+    <td>Brush Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/CanvasItem.svg" target="_blank">rel</a></br><pre>paint, brush</pre></td>
     <td><img src="/icons/generic/drawing/bucket.svg"></td>
-    <td>Bucket Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Bucket.svg" target="_blank">rel</a></br><sub>paint, bucket</sub></td>
+    <td>Bucket Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Bucket.svg" target="_blank">rel</a></br><pre>paint, bucket</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/drawing/checkerboard.svg"></td>
-    <td>Checkerboard Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Checkerboard.svg" target="_blank">rel</a></br><sub>paint, checker, checkerboard, board</sub></td>
+    <td>Checkerboard Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Checkerboard.svg" target="_blank">rel</a></br><pre>paint, checker, checkerboard, board</pre></td>
     <td><img src="/icons/generic/drawing/eraser.svg"></td>
-    <td>Eraser Editor Icon <a href="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/Eraser.svg" target="_blank">rel</a></br><sub>paint, eraser</sub></td>
+    <td>Eraser Editor Icon <a href="https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/Eraser.svg" target="_blank">rel</a></br><pre>paint, eraser</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/drawing/pin.svg"></td>
-    <td>Pin Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/PinJoint2D.svg" target="_blank">rel</a></br><sub>paint, pin</sub></td>
+    <td>Pin Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/PinJoint2D.svg" target="_blank">rel</a></br><pre>paint, pin</pre></td>
     <td><img src="/icons/generic/drawing/pipette.svg"></td>
-    <td>Pipette Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ColorPick.svg" target="_blank">rel</a></br><sub>paint, pipette, color, picker</sub></td>
+    <td>Pipette Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ColorPick.svg" target="_blank">rel</a></br><pre>paint, pipette, color, picker</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/drawing/transparent.svg"></td>
-    <td>Transparent Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/GuiMiniCheckerboard.svg" target="_blank">rel</a></br><sub>paint, transparent, transparency, checker, checkerboard, board</sub></td>
+    <td>Transparent Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/GuiMiniCheckerboard.svg" target="_blank">rel</a></br><pre>paint, transparent, transparency, checker, checkerboard, board</pre></td>
     <td colspan="2"></td>
   </tr>
 </tbody>
@@ -501,37 +501,37 @@ Editor icons for use in Gonzago Framework
 <tbody>
   <tr>
     <td><img src="/icons/generic/io/file.svg"></td>
-    <td>File Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/File.svg" target="_blank">rel</a></br><sub>file, document</sub></td>
+    <td>File Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/File.svg" target="_blank">rel</a></br><pre>file, document</pre></td>
     <td><img src="/icons/generic/io/file_broken.svg"></td>
-    <td>File Broken Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/FileBroken.svg" target="_blank">rel</a></br><sub>file, document, broken</sub></td>
+    <td>File Broken Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/FileBroken.svg" target="_blank">rel</a></br><pre>file, document, broken</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/io/file_dead.svg"></td>
-    <td>File Dead Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/FileDead.svg" target="_blank">rel</a></br><sub>file, document, dead</sub></td>
+    <td>File Dead Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/FileDead.svg" target="_blank">rel</a></br><pre>file, document, dead</pre></td>
     <td><img src="/icons/generic/io/file_new.svg"></td>
-    <td>File New Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/New.svg" target="_blank">rel</a></br><sub>file, document, new, add, plus</sub></td>
+    <td>File New Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/New.svg" target="_blank">rel</a></br><pre>file, document, new, add, plus</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/io/folder.svg"></td>
-    <td>Folder Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Folder.svg" target="_blank">rel</a></br><sub>folder, directory, closed</sub></td>
+    <td>Folder Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Folder.svg" target="_blank">rel</a></br><pre>folder, directory, closed</pre></td>
     <td><img src="/icons/generic/io/joypad.svg"></td>
-    <td>Joypad Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Joypad.svg" target="_blank">rel</a></br><sub>input, joypad, pad, controller, gamepad</sub></td>
+    <td>Joypad Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Joypad.svg" target="_blank">rel</a></br><pre>input, joypad, pad, controller, gamepad</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/io/keyboard.svg"></td>
-    <td>Keyboard Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Keyboard.svg" target="_blank">rel</a></br><sub>input, keyboard, key</sub></td>
+    <td>Keyboard Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Keyboard.svg" target="_blank">rel</a></br><pre>input, keyboard, key</pre></td>
     <td><img src="/icons/generic/io/keyboard_error.svg"></td>
-    <td>Keyboard Error Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/KeyboardError.svg" target="_blank">rel</a></br><sub>input, keyboard, key, error</sub></td>
+    <td>Keyboard Error Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/KeyboardError.svg" target="_blank">rel</a></br><pre>input, keyboard, key, error</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/io/mouse.svg"></td>
-    <td>Mouse Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Mouse.svg" target="_blank">rel</a></br><sub>input, mouse</sub></td>
+    <td>Mouse Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Mouse.svg" target="_blank">rel</a></br><pre>input, mouse</pre></td>
     <td><img src="/icons/generic/io/mouse_cursor.svg"></td>
-    <td>Mouse Cursor Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ToolSelect.svg" target="_blank">rel</a></br><sub>input, mouse, cursor, arrow</sub></td>
+    <td>Mouse Cursor Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ToolSelect.svg" target="_blank">rel</a></br><pre>input, mouse, cursor, arrow</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/io/touch.svg"></td>
-    <td>Touch Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/TouchScreenButton.svg" target="_blank">rel</a></br><sub>input, touch, finger</sub></td>
+    <td>Touch Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/TouchScreenButton.svg" target="_blank">rel</a></br><pre>input, touch, finger</pre></td>
     <td colspan="2"></td>
   </tr>
 </tbody>
@@ -539,7 +539,7 @@ Editor icons for use in Gonzago Framework
 <tbody>
   <tr>
     <td><img src="/icons/generic/media/auto_end.svg"></td>
-    <td>Auto End Editor Icon</br><sub>auto, end</sub></td>
+    <td>Auto End Editor Icon</br><pre>auto, end</pre></td>
     <td><img src="/icons/generic/media/auto_play.svg"></td>
     <td>None</td>
   </tr>
@@ -596,7 +596,7 @@ Editor icons for use in Gonzago Framework
 <tbody>
   <tr>
     <td><img src="/icons/generic/toggles/bell.svg"></td>
-    <td>Bell Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Notification.svg" target="_blank">rel</a></br><sub>bell, notification</sub></td>
+    <td>Bell Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Notification.svg" target="_blank">rel</a></br><pre>bell, notification</pre></td>
     <td><img src="/icons/generic/toggles/bell_disabled.svg"></td>
     <td>None</td>
   </tr>
@@ -766,9 +766,9 @@ Editor icons for use in Gonzago Framework
 <tbody>
   <tr>
     <td><img src="/icons/generic/wysiwyg/anchor.svg"></td>
-    <td>Anchor Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Anchor.svg" target="_blank">rel</a></br><sub>anchor</sub></td>
+    <td>Anchor Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Anchor.svg" target="_blank">rel</a></br><pre>anchor</pre></td>
     <td><img src="/icons/generic/wysiwyg/checklist.svg"></td>
-    <td>Checklist Editor Icon</br><sub>list, check, checklist</sub></td>
+    <td>Checklist Editor Icon</br><pre>list, check, checklist</pre></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/wysiwyg/font.svg"></td>
