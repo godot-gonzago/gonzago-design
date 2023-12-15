@@ -772,75 +772,75 @@ Editor icons for use in Gonzago Framework
   </tr>
   <tr>
     <td><img src="/icons/generic/wysiwyg/font.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Font Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Font.svg" target="_blank">:pushpin:</a><br><var>font</var></p></td>
     <td><img src="/icons/generic/wysiwyg/indent_add.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Indent Add Editor Icon<br><var>indent, add</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/wysiwyg/indent_remove.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Indent Remove Editor Icon<br><var>indent, remove</var></p></td>
     <td><img src="/icons/generic/wysiwyg/list.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>List Editor Icon<br><var>list</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/wysiwyg/list_ordered.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>List Ordered Editor Icon<br><var>list, ordered</var></p></td>
     <td><img src="/icons/generic/wysiwyg/page_first.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Page First Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/PageFirst.svg" target="_blank">:pushpin:</a><br><var>page, first, arrow</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/wysiwyg/page_last.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Page Last Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/PageLast.svg" target="_blank">:pushpin:</a><br><var>page, last, arrow</var></p></td>
     <td><img src="/icons/generic/wysiwyg/page_next.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Page Next Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/PageNext.svg" target="_blank">:pushpin:</a><br><var>page, next, arrow</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/wysiwyg/page_previous.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Page Previous Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/PagePrevious.svg" target="_blank">:pushpin:</a><br><var>page, previous, arrow</var></p></td>
     <td><img src="/icons/generic/wysiwyg/sort.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Sort Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Sort.svg" target="_blank">:pushpin:</a><br><var>sort</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/wysiwyg/sort_asc.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Sort Ascending Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Sort.svg" target="_blank">:pushpin:</a><br><var>sort, ascending</var></p></td>
     <td><img src="/icons/generic/wysiwyg/sort_desc.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Sort Descending Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Sort.svg" target="_blank">:pushpin:</a><br><var>sort, descending</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/wysiwyg/table.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Table Editor Icon<br><var>table, grid</var></p></td>
     <td><img src="/icons/generic/wysiwyg/table_cell.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Table Cell Editor Icon<br><var>table, grid, cell</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/wysiwyg/text_align_center.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Text Align Center Editor Icon<br><var>text, align, center</var></p></td>
     <td><img src="/icons/generic/wysiwyg/text_align_justify.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Text Align Justify Editor Icon<br><var>text, align, justify</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/wysiwyg/text_align_left.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Text Align Left Editor Icon<br><var>text, align, left</var></p></td>
     <td><img src="/icons/generic/wysiwyg/text_align_right.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Text Align Right Editor Icon<br><var>text, align, right</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/wysiwyg/text_effect.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Text Effect Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/RichTextEffect.svg" target="_blank">:pushpin:</a><br><var>text, effect</var></p></td>
     <td><img src="/icons/generic/wysiwyg/text_format_bold.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Text Format Bold Editor Icon<br><var>text, format, bold</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/wysiwyg/text_format_code.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Text Format Code Editor Icon<br><var>text, format, code</var></p></td>
     <td><img src="/icons/generic/wysiwyg/text_format_italic.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Text Format Italic Editor Icon<br><var>text, format, italic</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/wysiwyg/text_format_strikethrough.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Text Format Strikethrough Editor Icon<br><var>text, format, strikethrough</var></p></td>
     <td><img src="/icons/generic/wysiwyg/text_format_underline.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Text Format Underline Editor Icon<br><var>text, format, underline</var></p></td>
   </tr>
 </tbody>
 </table>
