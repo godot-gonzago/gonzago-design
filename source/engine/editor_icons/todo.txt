@@ -3,7 +3,6 @@ EditorIcons:
 
 Add meta data:
 - generic/*
-  - * (link.svg - tags.svg)
   - media/*
   - toggles/*
   - wysiwyg/*
