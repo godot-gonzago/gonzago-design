@@ -234,105 +234,105 @@ Editor icons for use in Gonzago Framework
   </tr>
   <tr>
     <td><img src="/icons/generic/envelope.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Envelope Editor Icon<br><var>envelope, mail</var></p></td>
     <td><img src="/icons/generic/flag.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Flag Editor Icon<br><var>flag, pole, goal, target</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/hand.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Hand Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ToolPan.svg" target="_blank">:pushpin:</a><br><var>hand, open</var></p></td>
     <td><img src="/icons/generic/hand_point_down.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Hand Point Down Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/TouchScreenButton.svg" target="_blank">:pushpin:</a><br><var>hand, pointing, down</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/hand_point_left.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Hand Point Left Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/TouchScreenButton.svg" target="_blank">:pushpin:</a><br><var>hand, pointing, left</var></p></td>
     <td><img src="/icons/generic/hand_point_right.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Hand Point Right Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/TouchScreenButton.svg" target="_blank">:pushpin:</a><br><var>hand, pointing, right</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/hand_point_up.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Hand Point Up Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/TouchScreenButton.svg" target="_blank">:pushpin:</a><br><var>hand, pointing, up</var></p></td>
     <td><img src="/icons/generic/history.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>History Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/History.svg" target="_blank">:pushpin:</a><br><var>history, clock, circle, arrow</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/home.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Home Editor Icon<br><var>home, house, building</var></p></td>
     <td><img src="/icons/generic/image.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Image Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Image.svg" target="_blank">:pushpin:</a><br><var>image, polaroid, landscape, terrain</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/key.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Key Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Key.svg" target="_blank">:pushpin:</a><br><var>key</var></p></td>
     <td><img src="/icons/generic/key_alt.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Key Alternative Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/CryptoKey.svg" target="_blank">:pushpin:</a><br><var>key, alt</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/link.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Link Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Instance.svg" target="_blank">:pushpin:</a><br><var>link</var></p></td>
     <td><img src="/icons/generic/link_broken.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Link Broken Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Unlinked.svg" target="_blank">:pushpin:</a><br><var>link, broken</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/link_external.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Link External Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ExternalLink.svg" target="_blank">:pushpin:</a><br><var>link, external</var></p></td>
     <td><img src="/icons/generic/location.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Location Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/NavigationAgent3D.svg" target="_blank">:pushpin:</a><br><var>location, locator, map, position</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/map.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Map Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/AtlasTexture.svg" target="_blank">:pushpin:</a><br><var>map</var></p></td>
     <td><img src="/icons/generic/megaphone.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Megaphone Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Callable.svg" target="_blank">:pushpin:</a><br><var>megaphone, callable, call</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/menu.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Menu Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/GuiTabMenuHl.svg" target="_blank">:pushpin:</a><br><var>menu, dots</var></p></td>
     <td><img src="/icons/generic/moon.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Moon Editor Icon<br><var>moon</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/node.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Node Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Node.svg" target="_blank">:pushpin:</a><br><var>node, circle</var></p></td>
     <td><img src="/icons/generic/object.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Object Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Object.svg" target="_blank">:pushpin:</a><br><var>object, cube</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/onion.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Onion Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Onion.svg" target="_blank">:pushpin:</a><br><var>onion</var></p></td>
     <td><img src="/icons/generic/photo_camera.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Photo Camera Editor Icon<br><var>photo, camera</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/pin.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Pin Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Pin.svg" target="_blank">:pushpin:</a><br><var>pin</var></p></td>
     <td><img src="/icons/generic/rocket.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Rocket Editor Icon<br><var>rocket, ship</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/scene.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Scene Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/PackedScene.svg" target="_blank">:pushpin:</a><br><var>scene, clapper, board, film</var></p></td>
     <td><img src="/icons/generic/script.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Script Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Script.svg" target="_blank">:pushpin:</a><br><var>script, file</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/signal.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Signal Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Signals.svg" target="_blank">:pushpin:</a><br><var>signal, connection</var></p></td>
     <td><img src="/icons/generic/sliders.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Sliders Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/HSlider.svg" target="_blank">:pushpin:</a><br><var>slider, sliders, horizontal</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/stopwatch.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Stopwatch Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Time.svg" target="_blank">:pushpin:</a><br><var>stop, watch, time, timer</var></p></td>
     <td><img src="/icons/generic/sun.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Sun Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/MaterialPreviewLight1.svg" target="_blank">:pushpin:</a><br><var>sun, rays, weather</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/tag.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Tag Editor Icon<br><var>tag</var></p></td>
     <td><img src="/icons/generic/tags.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Tags Editor Icon<br><var>tag, tags</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/target.svg" width="24" height="24"></td>
@@ -541,55 +541,55 @@ Editor icons for use in Gonzago Framework
     <td><img src="/icons/generic/media/auto_end.svg" width="24" height="24"></td>
     <td><p>Auto End Editor Icon<br><var>auto, end</var></p></td>
     <td><img src="/icons/generic/media/auto_play.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Auto Play Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/AutoPlay.svg" target="_blank">:pushpin:</a><br><var>auto, start</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/media/eject.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Eject Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/PlayStart.svg" target="_blank">:pushpin:</a><br><var>eject</var></p></td>
     <td><img src="/icons/generic/media/pause.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Pause Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Pause.svg" target="_blank">:pushpin:</a><br><var>pause</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/media/play.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Play Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Play.svg" target="_blank">:pushpin:</a><br><var>play</var></p></td>
     <td><img src="/icons/generic/media/play_from_end.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Play From End Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/PlayStartBackwards.svg" target="_blank">:pushpin:</a><br><var>play, end</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/media/play_from_start.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Play From Start Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/PlayStart.svg" target="_blank">:pushpin:</a><br><var>play, start</var></p></td>
     <td><img src="/icons/generic/media/record.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Record Editor Icon<br><var>media, record</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/media/repeat.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Repeat Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Loop.svg" target="_blank">:pushpin:</a><br><var>media, repeat</var></p></td>
     <td><img src="/icons/generic/media/repeat_all.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Repear All Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Loop.svg" target="_blank">:pushpin:</a><br><var>media, repeat, all</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/media/repeat_one.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Repeat One Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Loop.svg" target="_blank">:pushpin:</a><br><var>media, repeat, one, single</var></p></td>
     <td><img src="/icons/generic/media/reverse.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Reverse Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/PlayBackwards.svg" target="_blank">:pushpin:</a><br><var>media, play, reverse</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/media/seek_back.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Seek Back Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Play.svg" target="_blank">:pushpin:</a><br><var>media, seek, back, arrows</var></p></td>
     <td><img src="/icons/generic/media/seek_fwd.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Seek Forward Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Play.svg" target="_blank">:pushpin:</a><br><var>media, seek, forward, arrows</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/media/shuffle.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Shuffle Editor Icon<br><var>media, shuffle, arrow, arrows</var></p></td>
     <td><img src="/icons/generic/media/skip_back.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Skip Back Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/PlayStartBackwards.svg" target="_blank">:pushpin:</a><br><var>media, skip, back, arrow</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/media/skip_fwd.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Skip Forward Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/TransitionEnd.svg" target="_blank">:pushpin:</a><br><var>media, skip, forward, arrow</var></p></td>
     <td><img src="/icons/generic/media/stop.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Stop Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Stop.svg" target="_blank">:pushpin:</a><br><var>media, stop</var></p></td>
   </tr>
 </tbody>
 <thead><tr><th align="left" colspan="4">Generic.Toggles</th></tr></thead>
