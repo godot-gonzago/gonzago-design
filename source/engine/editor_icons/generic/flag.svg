@@ -16,6 +16,8 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title">Flag Editor Icon</title>
   <metadata
      id="metadata">
     <rdf:RDF>
@@ -34,6 +36,31 @@
         <dc:source>https://github.com/godot-gonzago</dc:source>
         <cc:license
            rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
+        <dc:title>Flag Editor Icon</dc:title>
+        <dc:date>2023-11-19</dc:date>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Copyright (c) 2023 David Krummenacher and Gonzago Framework contributors</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:identifier>gonzago.editor_icons.flag</dc:identifier>
+        <dc:language>en</dc:language>
+        <dc:contributor>
+          <cc:Agent>
+            <dc:title>David Krummenacher</dc:title>
+          </cc:Agent>
+        </dc:contributor>
+        <dc:description>A flag on a pole.</dc:description>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>editor</rdf:li>
+            <rdf:li>icon</rdf:li>
+            <rdf:li>flag</rdf:li>
+            <rdf:li>pole</rdf:li>
+            <rdf:li>goal</rdf:li>
+            <rdf:li>target</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
       </cc:Work>
       <cc:License
          rdf:about="http://creativecommons.org/licenses/by/4.0/">
@@ -65,7 +92,7 @@
      inkscape:current-layer="base_layer"
      inkscape:showpageshadow="0"
      inkscape:zoom="20"
-     inkscape:cx="9.05"
+     inkscape:cx="9.075"
      inkscape:cy="8.3"
      inkscape:window-width="1368"
      inkscape:window-height="850"

@@ -16,6 +16,8 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title">Key Alternative Editor Icon</title>
   <metadata
      id="metadata">
     <rdf:RDF>
@@ -34,7 +36,30 @@
         <dc:source>https://github.com/godot-gonzago</dc:source>
         <cc:license
            rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
-        <dc:description>Recreation of https://github.com/godotengine/godot/blob/master/editor/icons/CryptoKey.svg</dc:description>
+        <dc:title>Key Alternative Editor Icon</dc:title>
+        <dc:description>A key. Recreation of https://github.com/godotengine/godot/blob/master/editor/icons/CryptoKey.svg</dc:description>
+        <dc:date>2023-11-19</dc:date>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Copyright (c) 2023 David Krummenacher and Gonzago Framework contributors</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:identifier>gonzago.editor_icons.key_alt</dc:identifier>
+        <dc:relation>https://github.com/godotengine/godot/blob/master/editor/icons/CryptoKey.svg</dc:relation>
+        <dc:language>en</dc:language>
+        <dc:contributor>
+          <cc:Agent>
+            <dc:title>David Krummenacher&#10;Godot Engine contributors</dc:title>
+          </cc:Agent>
+        </dc:contributor>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>editor</rdf:li>
+            <rdf:li>icon</rdf:li>
+            <rdf:li>key</rdf:li>
+            <rdf:li>alt</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
       </cc:Work>
       <cc:License
          rdf:about="http://creativecommons.org/licenses/by/4.0/">
