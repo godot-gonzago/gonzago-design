@@ -4,7 +4,6 @@ EditorIcons:
 Add meta data:
 - generic/*
   - toggles/*
-  - wysiwyg/*
 
 
 Die Editor Icon
@@ -12,7 +11,7 @@ Die Editor Icon
 David Krummenacher
 Copyright (c) 2023 David Krummenacher and Gonzago Framework contributors
 Gonzago Framework
-gonzago.editor_icons.die
+gonzago.editor_icons.wysiwyg.
 https://github.com/godot-gonzago
 https://github.com/godotengine/godot/blob/master/editor/icons/RandomNumberGenerator.svg
 en
