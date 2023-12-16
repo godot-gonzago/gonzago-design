@@ -8,7 +8,7 @@ import typer
 from scour import scour
 from rich.console import Console
 
-from gonzago import BASE_DIR_PATH, SOURCE_DIR_PATH
+from .. import BASE_DIR_PATH, SOURCE_DIR_PATH
 
 
 ICONS_SOURCE_DIR: Path = SOURCE_DIR_PATH.joinpath("./engine/editor_icons").resolve()
@@ -198,6 +198,22 @@ def test_meta_data():
     print(meta)
 
 
+@app.command("publish")
+def publish():
+    """
+    Build optimized icons.
+    """
+
+    console.print(f"Building icons...")
+    with console.status("Building templates...") as status:
+        for file in find_icons(ICONS_SOURCE_DIR):
+            rel_path: Path = file.relative_to(ICONS_SOURCE_DIR)
+            console.print(f"Exporting {rel_path}")
+            optimize_svg(rel_path)
+            status.update(f"Exporting [i]{file}[/i]")
+        console.print("Done")
+
+
 @app.command("readme")
 def build_readme():
     console.print(f"Building readme...")
@@ -279,22 +295,6 @@ def build_readme():
                 "\n"
             )
 
-        console.print("Done")
-
-
-@app.command("build")
-def build():
-    """
-    Build optimized icons.
-    """
-
-    console.print(f"Building icons...")
-    with console.status("Building templates...") as status:
-        for file in find_icons(ICONS_SOURCE_DIR):
-            rel_path: Path = file.relative_to(ICONS_SOURCE_DIR)
-            console.print(f"Exporting {rel_path}")
-            optimize_svg(rel_path)
-            status.update(f"Exporting [i]{file}[/i]")
         console.print("Done")
 
 
