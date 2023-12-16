@@ -22,6 +22,12 @@ def write(id: str, file: Path, palette: Palette) -> None:
     """
 
     # https://dev.exiv2.org/projects/exiv2/wiki/The_Metadata_in_PNG_files
+    # https://en.wikipedia.org/wiki/PNG#Ancillary_chunks
+    # http://ftp-osl.osuosl.org/pub/libpng/documents/pngext-1.5.0.html#C.eXIf
+    # https://docs.gimp.org/2.10/en/plug-in-metadata-editor.html
+    # https://gist.github.com/jpstroop/58a21d02370c8ba34dc8f0fdd4206d70
+    # https://github.com/python-pillow/Pillow/blob/main/src/PIL/ExifTags.py
+    # https://www.iptc.org/standards/photo-metadata/iptc-standard/
 
     scale: int = 1
     color_count: int = len(palette.colors)
