@@ -1,19 +1,16 @@
 import os
 from pathlib import Path
 from typing import Callable, Iterator, List, NamedTuple, Optional
-import typer
-from rich.console import Console
-from rich.table import Table
-from rich.panel import Panel
-from rich.progress import Progress, SpinnerColumn, TextColumn
 
+import typer
 import yaml
 from pydantic import BaseModel
 from pydantic_extra_types.color import Color
+from rich.console import Console
+from rich.table import Table
+
 from gonzago import BASE_DIR_PATH, SOURCE_DIR_PATH
-
 from gonzago.pydantic import Version
-
 
 PALETTES_SOURCE_DIR: Path = SOURCE_DIR_PATH.joinpath("./palettes").resolve()
 PALETTES_DST_DIR: Path = BASE_DIR_PATH.joinpath("palettes").resolve()
@@ -254,8 +251,15 @@ def new(
     """
     Create new palette template.
     """
-    # if not file.match(TEMPLATE_FILE_PATTERN):
-    #    raise TypeError(f"{file} is not a valid template path")
+    if not file.is_absolute():
+        file = PALETTES_SOURCE_DIR.joinpath(file)
+    file = file.resolve()
+    if not file.match(TEMPLATE_FILE_PATTERN):
+        console.print(f"[i]{file}[/i] is not a valid template path!", style="red")
+        return
+
+    if file.exists():
+        typer.confirm("File already exists! Override?", abort=True)
 
     data: dict = {
         "name": name if name and len(name) > 0 else "New Palette Template",
@@ -283,6 +287,7 @@ def new(
     file.parent.mkdir(parents=True, exist_ok=True)  # Ensure folders
     with file.open("w") as stream:
         yaml.safe_dump(json, stream, sort_keys=False)
+    console.print(f"Created template file: [i]{file}[/i]", style="green")
 
 
 @app.command("check")
