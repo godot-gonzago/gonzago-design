@@ -1,28 +1,6 @@
 EditorIcons:
 ============
 
-Add meta data:
-- generic/*
-  - toggles/* (ear ... star_half)
-
-
-Die Editor Icon
-2023-11-19
-David Krummenacher
-Copyright (c) 2023 David Krummenacher and Gonzago Framework contributors
-Gonzago Framework
-gonzago.editor_icons.toggles.
-https://github.com/godot-gonzago
-https://github.com/godotengine/godot/blob/master/editor/icons/RandomNumberGenerator.svg
-en
-editor, icon, die, dice, random, number, generator, rng
-A die showing 3 dots. Recreation of https://github.com/godotengine/godot/blob/master/editor/icons/RandomNumberGenerator.svg
-David Krummenacher
-Godot Engine contributors
-
-
-
-
 ViewportZoom (toggles/zoom_in, create toggles/zoom_out and toggles/zoom_reset)
 Zoom (toggles/zoom_in, create toggles/zoom_out and toggles/zoom_reset)
 

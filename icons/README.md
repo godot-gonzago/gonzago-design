@@ -598,167 +598,167 @@ Editor icons for use in Gonzago Framework
     <td><img src="/icons/generic/toggles/bell.svg" width="24" height="24"></td>
     <td><p>Bell Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Notification.svg" target="_blank">:pushpin:</a><br><var>bell, notification</var></p></td>
     <td><img src="/icons/generic/toggles/bell_disabled.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Bell Disabled Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/NotificationDisabled.svg" target="_blank">:pushpin:</a><br><var>bell, notification, disabled</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/toggles/bell_empty.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Bell Empty Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Notification.svg" target="_blank">:pushpin:</a><br><var>bell, notification, empty</var></p></td>
     <td><img src="/icons/generic/toggles/bookmark.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Bookmark Editor Icon <a href="https://github.com/godotengine/godot/blob/master/scene/resources/default_theme/bookmark.svg" target="_blank">:pushpin:</a><br><var>bookmark</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/toggles/bookmarks.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Bookmarks Editor Icon <a href="https://github.com/godotengine/godot/blob/master/scene/resources/default_theme/bookmark.svg" target="_blank">:pushpin:</a><br><var>bookmark, bookmarks</var></p></td>
     <td><img src="/icons/generic/toggles/bookmark_empty.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Bookmark Empty Editor Icon <a href="https://github.com/godotengine/godot/blob/master/scene/resources/default_theme/bookmark.svg" target="_blank">:pushpin:</a><br><var>bookmark, empty</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/toggles/circle_error.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Circle Error Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/StatusError.svg" target="_blank">:pushpin:</a><br><var>status, circle, error</var></p></td>
     <td><img src="/icons/generic/toggles/circle_info.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Circle Info Editor Icon <a href="Recreation of https://github.com/godotengine/godot/blob/master/editor/icons/NodeInfo.svg" target="_blank">:pushpin:</a><br><var>status, circle, info</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/toggles/circle_success.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Circle Success Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/StatusSuccess.svg" target="_blank">:pushpin:</a><br><var>status, circle, success</var></p></td>
     <td><img src="/icons/generic/toggles/circle_warning.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Circle Warning Editor Icon <a href="Recreation of https://github.com/godotengine/godot/blob/master/editor/icons/StatusWarning.svg" target="_blank">:pushpin:</a><br><var>status, circle, warning</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/toggles/cloud.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Cloud Editor Icon<br><var>cloud</var></p></td>
     <td><img src="/icons/generic/toggles/cloud_stormy.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Cloud Stormy Editor Icon<br><var>cloud, stormy, storm</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/toggles/connection_full.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Connection Full Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Signals.svg" target="_blank">:pushpin:</a><br><var>signal, connection, full</var></p></td>
     <td><img src="/icons/generic/toggles/connection_low.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Connection Low Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Signals.svg" target="_blank">:pushpin:</a><br><var>signal, connection, low</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/toggles/connection_mid.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Connection Mid Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Signals.svg" target="_blank">:pushpin:</a><br><var>signal, connection, mid</var></p></td>
     <td><img src="/icons/generic/toggles/connection_none.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Connection None Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Signals.svg" target="_blank">:pushpin:</a><br><var>signal, connection, none</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/toggles/dot_error.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Dot Error Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Error.svg" target="_blank">:pushpin:</a><br><var>status, dot, error</var></p></td>
     <td><img src="/icons/generic/toggles/dot_info.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Dot Info Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Error.svg" target="_blank">:pushpin:</a><br><var>status, dot, info</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/toggles/dot_success.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Dot Success Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Error.svg" target="_blank">:pushpin:</a><br><var>status, dot, success</var></p></td>
     <td><img src="/icons/generic/toggles/dot_warning.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Dot Warning Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Warning.svg" target="_blank">:pushpin:</a><br><var>status, dot, warning</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/toggles/ear.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Ear Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/AudioListener3D.svg" target="_blank">:pushpin:</a><br><var>ear</var></p></td>
     <td><img src="/icons/generic/toggles/ear_listening.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Ear Listening Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/AudioListener3D.svg" target="_blank">:pushpin:</a><br><var>ear, listening</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/toggles/eye.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Eye Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/GuiVisibilityVisible.svg" target="_blank">:pushpin:</a><br><var>eye, open</var></p></td>
     <td><img src="/icons/generic/toggles/eye_closed.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Eye Closed Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/GuiVisibilityHidden.svg" target="_blank">:pushpin:</a><br><var>eye, closed</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/toggles/eye_xray.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Eye XRay Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/GuiVisibilityXray.svg" target="_blank">:pushpin:</a><br><var>eye, open, xray</var></p></td>
     <td><img src="/icons/generic/toggles/heart.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Heart Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Heart.svg" target="_blank">:pushpin:</a><br><var>heart</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/toggles/heart_broken.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Heart Broken Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Heart.svg" target="_blank">:pushpin:</a><br><var>heart, broken</var></p></td>
     <td><img src="/icons/generic/toggles/heart_empty.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Heart Empty Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Heart.svg" target="_blank">:pushpin:</a><br><var>heart, empty</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/toggles/heart_half.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Heart Half Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Heart.svg" target="_blank">:pushpin:</a><br><var>heart, half</var></p></td>
     <td><img src="/icons/generic/toggles/hourglass.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Hourglass Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Timer.svg" target="_blank">:pushpin:</a><br><var>hourglass, time, timer</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/toggles/hourglass_full.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Hourglass Full Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Timer.svg" target="_blank">:pushpin:</a><br><var>hourglass, time, timer, full</var></p></td>
     <td><img src="/icons/generic/toggles/hourglass_running.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Hourglass Running Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Timer.svg" target="_blank">:pushpin:</a><br><var>hourglass, time, timer, running</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/toggles/lock_closed.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Lock Closed Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Lock.svg" target="_blank">:pushpin:</a><br><var>lock, padlock, locked, closed</var></p></td>
     <td><img src="/icons/generic/toggles/lock_open.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Lock Open Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Unlock.svg" target="_blank">:pushpin:</a><br><var>lock, padlock, unlocked, open</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/toggles/mic.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Mic Editor Icon<br><var>mic, microphone</var></p></td>
     <td><img src="/icons/generic/toggles/mic_disabled.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Mic Disabled Editor Icon<br><var>mic, microphone, disabled</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/toggles/mouth.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Mouth Editor Icon<br><var>mouth, open</var></p></td>
     <td><img src="/icons/generic/toggles/progress_1.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Progress 1 Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Progress1.svg" target="_blank">:pushpin:</a><br><var>progress</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/toggles/progress_2.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Progress 2 Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Progress2.svg" target="_blank">:pushpin:</a><br><var>progress</var></p></td>
     <td><img src="/icons/generic/toggles/progress_3.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Progress 3 Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Progress3.svg" target="_blank">:pushpin:</a><br><var>progress</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/toggles/progress_4.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Progress 4 Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Progress4.svg" target="_blank">:pushpin:</a><br><var>progress</var></p></td>
     <td><img src="/icons/generic/toggles/progress_5.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Progress 5 Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Progress5.svg" target="_blank">:pushpin:</a><br><var>progress</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/toggles/progress_6.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Progress 6 Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Progress6.svg" target="_blank">:pushpin:</a><br><var>progress</var></p></td>
     <td><img src="/icons/generic/toggles/progress_7.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Progress 7 Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Progress7.svg" target="_blank">:pushpin:</a><br><var>progress</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/toggles/progress_8.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Progress 8 Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Progress8.svg" target="_blank">:pushpin:</a><br><var>progress</var></p></td>
     <td><img src="/icons/generic/toggles/star_empty.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Star Empty Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/NonFavorite.svg" target="_blank">:pushpin:</a><br><var>star, empty</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/toggles/star_full.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Star Full Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Favorites.svg" target="_blank">:pushpin:</a><br><var>star, full</var></p></td>
     <td><img src="/icons/generic/toggles/star_half.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Star Half Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Favorites.svg" target="_blank">:pushpin:</a><br><var>star, half</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/toggles/status_blocked.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Status Blocked Editor Icon<br><var>status, block, blocked, stop</var></p></td>
     <td><img src="/icons/generic/toggles/status_error.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Status Error Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ImportFail.svg" target="_blank">:pushpin:</a><br><var>status, error</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/toggles/status_info.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Status Info Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/Popup.svg" target="_blank">:pushpin:</a><br><var>status, info</var></p></td>
     <td><img src="/icons/generic/toggles/status_success.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Status Success Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/ImportCheck.svg" target="_blank">:pushpin:</a><br><var>status, success</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/toggles/status_warning.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Status Warning Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/NodeWarning.svg" target="_blank">:pushpin:</a><br><var>status, warning</var></p></td>
     <td><img src="/icons/generic/toggles/thumbs_down.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Thumbs Down Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/TouchScreenButton.svg" target="_blank">:pushpin:</a><br><var>hand, thumb, thumbs, down</var></p></td>
   </tr>
   <tr>
     <td><img src="/icons/generic/toggles/thumbs_up.svg" width="24" height="24"></td>
-    <td><p>None</p></td>
+    <td><p>Thumbs Up Editor Icon <a href="https://github.com/godotengine/godot/blob/master/editor/icons/TouchScreenButton.svg" target="_blank">:pushpin:</a><br><var>hand, thumb, thumbs, up</var></p></td>
     <td colspan="2"></td>
   </tr>
 </tbody>

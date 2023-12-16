@@ -16,6 +16,8 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title">Progress 8 Editor Icon</title>
   <metadata
      id="metadata">
     <rdf:RDF>
@@ -32,7 +34,29 @@
           </cc:Agent>
         </dc:publisher>
         <dc:source>https://github.com/godot-gonzago</dc:source>
-        <dc:description>Recreation of https://github.com/godotengine/godot/blob/master/editor/icons/Progress8.svg</dc:description>
+        <dc:title>Progress 8 Editor Icon</dc:title>
+        <dc:description>Eight segments in a circle with element 8 highlighted. Recreation of https://github.com/godotengine/godot/blob/master/editor/icons/Progress8.svg</dc:description>
+        <dc:date>2023-11-19</dc:date>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Copyright (c) 2023 David Krummenacher and Gonzago Framework contributors</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:language>en</dc:language>
+        <dc:relation>https://github.com/godotengine/godot/blob/master/editor/icons/Progress8.svg</dc:relation>
+        <dc:contributor>
+          <cc:Agent>
+            <dc:title>David Krummenacher&#10;Godot Engine contributors</dc:title>
+          </cc:Agent>
+        </dc:contributor>
+        <dc:identifier>gonzago.editor_icons.toggles.progress_8</dc:identifier>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>editor</rdf:li>
+            <rdf:li>icon</rdf:li>
+            <rdf:li>progress</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -51,7 +75,7 @@
      inkscape:current-layer="icon_svg"
      inkscape:showpageshadow="0"
      inkscape:zoom="20"
-     inkscape:cx="10.375"
+     inkscape:cx="10.425"
      inkscape:cy="9.15"
      inkscape:window-width="1368"
      inkscape:window-height="850"
