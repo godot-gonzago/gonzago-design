@@ -28,6 +28,7 @@ def write(id: str, file: Path, palette: Palette) -> None:
     # https://gist.github.com/jpstroop/58a21d02370c8ba34dc8f0fdd4206d70
     # https://github.com/python-pillow/Pillow/blob/main/src/PIL/ExifTags.py
     # https://www.iptc.org/standards/photo-metadata/iptc-standard/
+    # https://docs.gimp.org/en/plug-in-metadata-viewer.html
 
     scale: int = 1
     color_count: int = len(palette.colors)
