@@ -6,15 +6,19 @@ from . import (
     SOURCE_DIR_PATH,
     __app_name__,
     __version__,
-    palettes,
+    application,
+    assets,
     icons,
+    palettes,
     presskit,
 )
 
 
 app = typer.Typer()
-app.add_typer(palettes.app, name="palettes")
+app.add_typer(application.app, name="application")
+app.add_typer(assets.app, name="assets")
 app.add_typer(icons.app, name="icons")
+app.add_typer(palettes.app, name="palettes")
 app.add_typer(presskit.app, name="presskit")
 
 
