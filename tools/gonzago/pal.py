@@ -95,7 +95,7 @@ def format_png(out_file: Path, template: Template, size: int = 1) -> None:
     """
     PNG
 
-    PNG palette image with size 1px.
+    PNG palette image with default size 1px.
     """
     from PIL import Image, ImageDraw
 
@@ -240,6 +240,15 @@ def format_hex(out_file: Path, template: Template):
 # def format_scribus(out_file: Path, template: Template):
 #    # https://github.com/1j01/anypalette.js
 #    pass
+
+
+def get_valid_formats(formats: list[str]) -> list[str]:
+    valid_formatters: list[str] = []
+    for format in formats:
+        if format in valid_formatters or not format in FORMATTERS.keys():
+            continue
+        valid_formatters.append(format)
+    return valid_formatters
 
 
 app = typer.Typer()
