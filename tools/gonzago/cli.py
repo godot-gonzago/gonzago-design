@@ -8,12 +8,14 @@ from . import (
     __version__,
     palettes,
     icons,
+    presskit,
 )
 
 
 app = typer.Typer()
 app.add_typer(palettes.app, name="palettes")
 app.add_typer(icons.app, name="icons")
+app.add_typer(presskit.app, name="presskit")
 
 
 @app.command("init")
