@@ -5,7 +5,7 @@ from ..io import Palette, register_reader, register_writer
 ID: str = "png"
 PATTERN: str = "*.png"
 SUFFIX: str = ".png"
-DESCRIPTION = "PNG palette image with size 1px."
+DESCRIPTION = "PNG palette image."
 
 
 def read(file: Path) -> Palette:
@@ -18,17 +18,11 @@ def write(id: str, file: Path, palette: Palette) -> None:
 
     PNG palette image with size 1px.
     """
-    # TODO: Parse scale from filename
     from PIL import Image, ImageDraw
 
     size: int = 1
-    if id.endswith("-8"):
-        size = 8
-    elif id.endswith("-32"):
-        size = 32
-
     color_count: int = len(palette.colors)
-    image: Image = Image.new("RGB", (color_count * size, size))
+    image: Image = Image.new("RGB", (color_count, size))
 
     draw = ImageDraw.Draw(image, "RGB")
     for i in range(color_count):
@@ -40,5 +34,3 @@ def write(id: str, file: Path, palette: Palette) -> None:
 
 register_reader(ID, PATTERN, DESCRIPTION, read)
 register_writer(ID, SUFFIX, DESCRIPTION, write)
-register_writer("png-8", ".x8.png", "PNG palette image with size 8px.", write)
-register_writer("png-32", ".x32.png", "PNG palette image with size 32px.", write)
