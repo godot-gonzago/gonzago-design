@@ -1,3 +1,0 @@
-"""
-SVG utility functions.
-"""

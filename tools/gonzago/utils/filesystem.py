@@ -1,3 +1,0 @@
-"""
-Filesystem utility functions.
-"""
