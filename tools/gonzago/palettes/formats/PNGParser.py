@@ -25,7 +25,7 @@ def write(id: str, file: Path, palette: Palette) -> None:
 
     scale: int = 1
     color_count: int = len(palette.colors)
-    image: Image = Image.new("RGB", (color_count, scale))
+    image: Image = Image.new("RGB", (color_count * scale, scale))
 
     draw = ImageDraw.Draw(image, "RGB")
     for i in range(color_count):
