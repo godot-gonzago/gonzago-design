@@ -1,5 +1,5 @@
 from pathlib import Path
-from .parser import register_reader, register_writer
+from ..io import register_reader, register_writer
 
 from ..templates import Template
 

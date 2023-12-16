@@ -1,4 +1,3 @@
-from .parser import get_readers, read, get_writers, write
 from . import (
     TemplateParser,
     PNGParser,
@@ -13,10 +12,6 @@ from . import (
 )
 
 __all__ = [
-    "get_readers",
-    "read",
-    "get_writers",
-    "write",
     "TemplateParser",
     "PNGParser",
     "GIMPParser",

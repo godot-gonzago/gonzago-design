@@ -1,9 +1,9 @@
 # https://play.pixelblaster.ro/blog/2017/12/18/a-quick-and-dirty-mini-plugin-system-for-python/
 # https://kaleidoescape.github.io/decorated-plugins/
 from pathlib import Path
-from typing import Callable, Iterator, NamedTuple, Protocol
+from typing import Callable, Iterator, NamedTuple
 
-from ..templates import Template
+from .templates import Template
 
 
 class NameConflictError(ValueError):

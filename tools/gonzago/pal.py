@@ -9,7 +9,7 @@ from pydantic_extra_types.color import Color
 from rich.console import Console
 from rich.table import Table
 
-from .palettes.formats.parser import get_readers, get_writers
+from .palettes.io import get_readers, get_writers
 
 from . import BASE_DIR_PATH, SOURCE_DIR_PATH
 from .exceptions import PathError, PathNotFoundError
