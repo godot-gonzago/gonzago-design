@@ -52,7 +52,7 @@ class Template(BaseModel):
     @classmethod
     def load(cls, file: Path):
         if not file.match(TEMPLATE_FILE_PATTERN) or not file.is_file():
-            raise TypeError("Not a valid template path")
+            raise TypeError(f"{file} is not a valid template path")
         with file.open() as stream:
             data: dict = yaml.safe_load(stream)
             return cls.model_validate(data)
@@ -69,12 +69,12 @@ class Template(BaseModel):
 def find_templates(root: Path) -> Iterator[Path]:
     root = root.resolve()
     if not root.exists():
-        raise StopIteration
+        raise FileNotFoundError(f"{root} does not exist")
 
     if root.is_file():
         if root.match(TEMPLATE_FILE_PATTERN):
             yield root
-        raise StopIteration
+        raise TypeError(f"{root} is not a valid template path")
 
     for current, dirs, files in os.walk(root):
         for name in dirs:

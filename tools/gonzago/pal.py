@@ -10,13 +10,14 @@ from rich.console import Console
 from rich.table import Table
 
 from gonzago import BASE_DIR_PATH, SOURCE_DIR_PATH
+from gonzago.exceptions import PathError, PathNotFoundError
 from gonzago.pydantic import Version
 
 PALETTES_SOURCE_DIR: Path = SOURCE_DIR_PATH.joinpath("./palettes").resolve()
 PALETTES_DST_DIR: Path = BASE_DIR_PATH.joinpath("palettes").resolve()
 
 
-TEMPLATE_FILE_PATTERN: str = "**/*.y[a]ml"
+TEMPLATE_FILE_PATTERN: str = "*/*.y[a]ml"
 
 
 class TemplateEntry(BaseModel):
@@ -34,10 +35,10 @@ class Template(BaseModel):
     colors: List[TemplateEntry]
 
 
-def find_templates(root: Path) -> Iterator[Path]:
+def get_template_files(root: Path) -> Iterator[Path]:
     root = root.resolve()
     if not root.exists():
-        raise StopIteration
+        raise PathNotFoundError(root)
 
     if root.is_file():
         if root.match(TEMPLATE_FILE_PATTERN):
@@ -55,15 +56,16 @@ def find_templates(root: Path) -> Iterator[Path]:
 
 
 def load_template(file: Path) -> Template:
+    file = file.resolve()
     if not file.match(TEMPLATE_FILE_PATTERN) or not file.is_file():
-        raise TypeError("Not a valid template path")
+        raise PathError(file, "Not a valid template path")
     with file.open() as stream:
         data: dict = yaml.safe_load(stream)
         return Template.model_validate(data)
 
 
 def load_valid_templates(root: Path) -> Iterator[Template]:
-    for file in find_templates(root):
+    for file in get_template_files(root):
         try:
             template: Template = load_template(file)
             yield template
@@ -310,7 +312,7 @@ def list_templates(dir: Path = PALETTES_SOURCE_DIR) -> None:
     with console.status(f"Searching templates at [i]{dir}[/i]...") as status:
         valid_templates_count: int = 0
         table: Table = Table("Path", "Name", "Description", "Colors")
-        for file in find_templates(dir):
+        for file in get_template_files(dir):
             status.update()
             rel_path: str = file.relative_to(dir).as_posix()
             try:
@@ -345,14 +347,44 @@ def list_formats():
     """
     count: int = len(FORMATTERS)
     if count == 0:
-        console.print("No exporters available!", style="yellow")
+        console.print("No formatters available!", style="yellow")
         return
-    console.print(f"Available exporters: {count}")
     table: Table = Table("ID", "Suffix", "Description")
     for id, (suffix, description, _) in FORMATTERS.items():
         table.add_row(id, suffix, description)
     console.print(table)
 
+# src_path: Annotated[
+#     Optional[Path],
+#     typer.Option(
+#         "--in",
+#         "-i",
+#         help="Input template file or directory.",
+#         exists=True,
+#         file_okay=True,
+#         dir_okay=True,
+#         readable=True,
+#         resolve_path=True,
+#         # show_default=False,
+#     ),
+# ] = PALETTES_SOURCE_DIR,
+# out_dir: Annotated[
+#     Optional[Path],
+#     typer.Option(
+#         "--out",
+#         "-o",
+#         help="Palettes output directory.",
+#         file_okay=False,
+#         dir_okay=True,
+#         writable=True,
+#         resolve_path=True,
+#         # show_default=False,
+#     ),
+# ] = PALETTES_DST_DIR,
+# exporters: Annotated[
+#     Optional[List[str]],
+#     typer.Option("--export", "-e", help="List of exporters to use."),
+# ] = list[str](EXPORTERS.keys()),
 
 @app.command("publish")
 def publish(
@@ -363,7 +395,64 @@ def publish(
     """
     Publish palettes in specified formats.
     """
-    pass
+    if src == None:
+        src = PALETTES_SOURCE_DIR
+    elif not src.is_absolute():
+        src = PALETTES_SOURCE_DIR.joinpath(src)
+    src = src.resolve()
+    if not src.exists():
+        console.print(f"Path {PALETTES_SOURCE_DIR} does not exist!", style="red")
+        return
+
+    if dst_dir == None:
+        dst_dir = PALETTES_DST_DIR
+    elif not dst_dir.is_absolute():
+        dst_dir = PALETTES_DST_DIR.joinpath(dst_dir)
+    dst_dir = dst_dir.resolve()
+    if not dst_dir.is_dir():
+        console.print(f"Destination {PALETTES_SOURCE_DIR} is not a folder!", style="red")
+        return
+
+    if len(FORMATTERS.keys()) == 0:
+        console.print(f"No exporters available!", style="red")
+        return
+
+    formatters: list[str] = []
+    for format in formats:
+        if not format in formatters:
+            if not format in FORMATTERS.keys():
+                console.print(f"Format [i]{format}[/i] not supported!", style="yellow")
+                continue
+            formatters.append(format)
+
+    if len(formatters) == 0:
+        console.print(f"No supported formats!", style="yellow")
+        return
+
+    with console.status("Building palettes...") as status:
+        for file in get_template_files(src):
+            rel_path: Path = file.relative_to(src)
+            console.print(rel_path)
+            try:
+                status.update(f"Exporting {rel_path.as_posix()}")
+                template: Template = load_template(file)
+                for exporter in FORMATTERS.keys():
+                    exporter_info: FormatterInfo = FORMATTERS.get(exporter)
+                    export_path: Path = PALETTES_DST_DIR.joinpath(rel_path).with_suffix(
+                        exporter_info.suffix
+                    )
+                    export_path.parent.mkdir(
+                        parents=True, exist_ok=True
+                    )  # Ensure folders
+                    status.update(f"Exporting {exporter} to [i]{export_path}[/i]")
+                    exporter_info.fn(export_path, template)
+                    console.print(f"Exported [i]{export_path}[/i]")
+            except Exception as e:
+                console.print(
+                    f"{type(e).__name__}: {str(e)}" if e else "Export of failed",
+                    style="red",
+                )
+        console.print("Done")
 
 
 @app.command("readme")
