@@ -1,4 +1,6 @@
 from pathlib import Path
+from PIL import Image, ImageDraw
+from PIL.PngImagePlugin import PngInfo
 from ..io import Palette, register_reader, register_writer
 
 
@@ -18,18 +20,31 @@ def write(id: str, file: Path, palette: Palette) -> None:
 
     PNG palette image with size 1px.
     """
-    from PIL import Image, ImageDraw
 
-    size: int = 1
+    # https://dev.exiv2.org/projects/exiv2/wiki/The_Metadata_in_PNG_files
+
+    scale: int = 1
     color_count: int = len(palette.colors)
-    image: Image = Image.new("RGB", (color_count, size))
+    image: Image = Image.new("RGB", (color_count, scale))
 
     draw = ImageDraw.Draw(image, "RGB")
     for i in range(color_count):
         color = palette.colors[i].color
-        draw.rectangle((i * size, 0, i * size + size, size), color.as_rgb_tuple())
+        draw.rectangle((i * scale, 0, i * scale + scale, scale), color.as_rgb_tuple())
 
-    image.save(file, "PNG")
+    info: PngInfo = PngInfo()
+    info.add_text("name", palette.name)
+    if palette.description:
+        info.add_text("description", palette.description)
+    if palette.version:
+        info.add_text("version", str(palette.version))
+    if palette.author:
+        info.add_text("author", palette.author)
+    if palette.author:
+        info.add_text("source", palette.source)
+    info.add_text("scale", str(scale))
+
+    image.save(file, "PNG", pnginfo=info)
 
 
 register_reader(ID, PATTERN, DESCRIPTION, read)
