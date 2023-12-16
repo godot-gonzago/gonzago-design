@@ -68,13 +68,9 @@ def read(file: Path) -> Palette:
     if not file.exists():
         raise FileNotFoundError(file)
     for _, reader in READERS.items():
-        if not file.match(reader.pattern):
-            continue
-        try:
+        if file.match(reader.pattern):
             palette: Palette = reader.read(file)
             return palette
-        except Exception as e:
-            continue
     raise FileTypeError(file)
 
 
@@ -118,21 +114,28 @@ def get_writers(include_non_default: bool = False) -> Iterator[Writer]:
             yield writer
 
 
-def write(id: str, file: Path, palette: Palette) -> None:
-    if not file.is_file():
+def get_writer_from_id(id: str) -> Writer:
+    if id in WRITERS.keys():
+        return WRITERS[id]
+    raise KeyError()
+
+
+def get_writer_path(id: str, file: Path) -> Path:
+    if not file.suffix:
+        raise FileTypeError(file)
+    if id in WRITERS.keys():
+        return file.with_suffix(WRITERS[id].suffix)
+    raise KeyError()
+
+
+def write(file: Path, palette: Palette) -> None:
+    if not file.suffix:
         raise FileTypeError(file)
     for _, writer in WRITERS.items():
-        #if not writer.default:
-        #    continue
-        if not id == writer.id:
-            continue
-        try:
-            #file = file.with_suffix(writer.suffix)
-            #file.parent.mkdir(parents=True, exist_ok=True)  # Ensure folders
+        if file.suffix == writer.suffix:
+            file.parent.mkdir(parents=True, exist_ok=True)  # Ensure folders
             writer.write(id, file, palette)
             return
-        except Exception as e:
-            continue
     raise FileTypeError(file)
 
 

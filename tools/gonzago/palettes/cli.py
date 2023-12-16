@@ -5,7 +5,7 @@ import typer
 from rich.console import Console
 from rich.table import Table
 
-from .io import Palette, Writer, get_readers, get_writers, find_palettes, read, write
+from .io import Palette, Writer, get_readers, get_writers, get_writer_path, find_palettes, read, write
 
 from .. import BASE_DIR_PATH, SOURCE_DIR_PATH
 
@@ -199,7 +199,6 @@ def publish(
     #     console.print(f"No exporters available!", style="red")
     #     return
 
-    writers: list[Writer] = list(get_writers(True))
     # formatters: list[str] = []
     # for format in formats:
     #     if not format in formatters:
@@ -215,28 +214,29 @@ def publish(
     for file in find_palettes(src):
         rel_path: Path = file.relative_to(src)
         console.print(f"Exporting '{rel_path.as_posix()}'...")
+
         palette: Palette
         try:
             palette = read(file)
         except Exception as e:
             console.print(
-                f"{type(e).__name__}: {str(e)}" if e else "Palette load failed",
+                f"Palette load failed: {type(e).__name__}: {str(e)}" if e else "Palette load failed!",
                 style="red",
             )
             continue
-        for writer in writers:
+
+        export_base_path: Path = dst_dir.joinpath(rel_path).resolve()
+        for id in formats:
             try:
-                export_path: Path = PALETTES_DST_DIR.joinpath(rel_path).with_suffix(
-                    writer.suffix
-                )
-                export_path.parent.mkdir(parents=True, exist_ok=True)  # Ensure folders
-                write(writer.id, export_path, palette)
+                export_path: Path = get_writer_path(id, export_base_path)
+                export_rel_path: Path = export_path.relative_to(dst_dir)
+                write(export_path, palette)
                 console.print(
-                    f"Exported '[i]{export_path.relative_to(dst_dir).as_posix()}[/i]'"
+                    f"Exported '[i]{export_rel_path.as_posix()}[/i]'"
                 )
             except Exception as e:
                 console.print(
-                    f"{type(e).__name__}: {str(e)}" if e else "Export of failed",
+                    f"Export '{id}' failed: {type(e).__name__}: {str(e)}" if e else f"Export '{id}' failed!",
                     style="red",
                 )
                 continue
