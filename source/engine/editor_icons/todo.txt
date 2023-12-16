@@ -3,7 +3,7 @@ EditorIcons:
 
 Add meta data:
 - generic/*
-  - toggles/* (cloud ... star_half)
+  - toggles/* (ear ... star_half)
 
 
 Die Editor Icon
