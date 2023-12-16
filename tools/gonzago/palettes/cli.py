@@ -210,7 +210,7 @@ def publish(
     #     console.print(f"No supported formats!", style="yellow")
     #     return
 
-    formats = [w.id for w in get_writers()]
+    #formats = [w.id for w in get_writers()]
 
     for file in find_palettes(src):
         rel_path: Path = file.relative_to(src)
