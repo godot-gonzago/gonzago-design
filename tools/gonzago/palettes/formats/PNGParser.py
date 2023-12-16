@@ -32,6 +32,7 @@ def write(id: str, file: Path, palette: Palette) -> None:
         color = palette.colors[i].color
         draw.rectangle((i * scale, 0, i * scale + scale, scale), color.as_rgb_tuple())
 
+    # Test here https://www.metadata2go.com/view-metadata
     info: PngInfo = PngInfo()
     info.add_text("name", palette.name)
     if palette.description:
@@ -40,8 +41,10 @@ def write(id: str, file: Path, palette: Palette) -> None:
         info.add_text("version", str(palette.version))
     if palette.author:
         info.add_text("author", palette.author)
-    if palette.author:
-        info.add_text("source", palette.source)
+    if palette.source:
+        info.add_text("source", palette.source) # This might not work, might need better ids
+
+    # Maybe add color info?
     info.add_text("scale", str(scale))
 
     image.save(file, "PNG", pnginfo=info)
