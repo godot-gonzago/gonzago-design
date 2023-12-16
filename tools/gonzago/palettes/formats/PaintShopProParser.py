@@ -1,5 +1,7 @@
 from pathlib import Path
-from ..io import Palette, register_reader, register_writer
+
+from ..core import Palette
+from ..io import register_reader, register_writer
 
 ID: str = "paintshop"
 PATTERN: str = "*.pal"

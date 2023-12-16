@@ -1,8 +1,10 @@
 from pathlib import Path
+
 from PIL import Image, ImageDraw
 from PIL.PngImagePlugin import PngInfo
-from ..io import Palette, register_reader, register_writer
 
+from ..core import Palette
+from ..io import register_reader, register_writer
 
 ID: str = "png"
 PATTERN: str = "*.png"
@@ -31,23 +33,20 @@ def write(id: str, file: Path, palette: Palette) -> None:
     # https://docs.gimp.org/en/plug-in-metadata-viewer.html
 
     # Dublin Core Metadata https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-3
-    #meta["title"] = metadata.findtext("rdf:RDF/cc:Work/dc:title", namespaces=namespaces)
-    #meta["description"] = metadata.findtext("rdf:RDF/cc:Work/dc:description", namespaces=namespaces)
-    #meta["identifier"] = metadata.findtext("rdf:RDF/cc:Work/dc:identifier", namespaces=namespaces)
-    #meta["subject"] = subject
-    #meta["date"] = metadata.findtext("rdf:RDF/cc:Work/dc:date", namespaces=namespaces)
-    #meta["source"] = metadata.findtext("rdf:RDF/cc:Work/dc:source", namespaces=namespaces)
-    #meta["relation"] = metadata.findtext("rdf:RDF/cc:Work/dc:relation", namespaces=namespaces)
-    #meta["language"] = metadata.findtext("rdf:RDF/cc:Work/dc:language", namespaces=namespaces)
-    #meta["creator"] = metadata.findtext("rdf:RDF/cc:Work/dc:creator/cc:Agent/dc:title", namespaces=namespaces)
-    #meta["contributor"] = metadata.findtext("rdf:RDF/cc:Work/dc:contributor/cc:Agent/dc:title", namespaces=namespaces)
-    #meta["publisher"] = metadata.findtext("rdf:RDF/cc:Work/dc:publisher/cc:Agent/dc:title", namespaces=namespaces)
-    #meta["rights"] = metadata.findtext("rdf:RDF/cc:Work/dc:rights/cc:Agent/dc:title", namespaces=namespaces)
-    #meta["coverage"] = metadata.findtext("rdf:RDF/cc:Work/dc:coverage", namespaces=namespaces)
-    #meta["license"] = license.get("{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource")
-
-
-
+    # meta["title"] = metadata.findtext("rdf:RDF/cc:Work/dc:title", namespaces=namespaces)
+    # meta["description"] = metadata.findtext("rdf:RDF/cc:Work/dc:description", namespaces=namespaces)
+    # meta["identifier"] = metadata.findtext("rdf:RDF/cc:Work/dc:identifier", namespaces=namespaces)
+    # meta["subject"] = subject
+    # meta["date"] = metadata.findtext("rdf:RDF/cc:Work/dc:date", namespaces=namespaces)
+    # meta["source"] = metadata.findtext("rdf:RDF/cc:Work/dc:source", namespaces=namespaces)
+    # meta["relation"] = metadata.findtext("rdf:RDF/cc:Work/dc:relation", namespaces=namespaces)
+    # meta["language"] = metadata.findtext("rdf:RDF/cc:Work/dc:language", namespaces=namespaces)
+    # meta["creator"] = metadata.findtext("rdf:RDF/cc:Work/dc:creator/cc:Agent/dc:title", namespaces=namespaces)
+    # meta["contributor"] = metadata.findtext("rdf:RDF/cc:Work/dc:contributor/cc:Agent/dc:title", namespaces=namespaces)
+    # meta["publisher"] = metadata.findtext("rdf:RDF/cc:Work/dc:publisher/cc:Agent/dc:title", namespaces=namespaces)
+    # meta["rights"] = metadata.findtext("rdf:RDF/cc:Work/dc:rights/cc:Agent/dc:title", namespaces=namespaces)
+    # meta["coverage"] = metadata.findtext("rdf:RDF/cc:Work/dc:coverage", namespaces=namespaces)
+    # meta["license"] = license.get("{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource")
 
     scale: int = 1
     color_count: int = len(palette.colors)
@@ -68,7 +67,9 @@ def write(id: str, file: Path, palette: Palette) -> None:
     if palette.author:
         info.add_text("author", palette.author)
     if palette.source:
-        info.add_text("source", palette.source) # This might not work, might need better ids
+        info.add_text(
+            "source", palette.source
+        )  # This might not work, might need better ids
 
     # Maybe add color info?
     info.add_text("scale", str(scale))

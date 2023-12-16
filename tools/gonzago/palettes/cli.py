@@ -5,10 +5,9 @@ import typer
 from rich.console import Console
 from rich.table import Table
 
-from .io import Palette, get_readers, get_writers, get_writer_path, find_palettes, read, write
-
 from .. import BASE_DIR_PATH, SOURCE_DIR_PATH
-
+from .core import Palette
+from .io import get_readers, read, get_writers, write, get_writer_path, find_palettes
 
 PALETTES_SOURCE_DIR: Path = SOURCE_DIR_PATH.joinpath("./palettes").resolve()
 PALETTES_DST_DIR: Path = BASE_DIR_PATH.joinpath("palettes").resolve()
@@ -211,6 +210,8 @@ def publish(
     #     console.print(f"No supported formats!", style="yellow")
     #     return
 
+    formats = [w.id for w in get_writers()]
+
     for file in find_palettes(src):
         rel_path: Path = file.relative_to(src)
         console.print(f"Exporting '{rel_path.as_posix()}'...")
@@ -220,7 +221,9 @@ def publish(
             palette = read(file)
         except Exception as e:
             console.print(
-                f"Palette load failed: {type(e).__name__}: {str(e)}" if e else "Palette load failed!",
+                f"Palette load failed: {type(e).__name__}: {str(e)}"
+                if e
+                else "Palette load failed!",
                 style="red",
             )
             continue
@@ -231,12 +234,12 @@ def publish(
                 export_path: Path = get_writer_path(id, export_base_path)
                 export_rel_path: Path = export_path.relative_to(dst_dir)
                 write(export_path, palette)
-                console.print(
-                    f"Exported '[i]{export_rel_path.as_posix()}[/i]'"
-                )
+                console.print(f"Exported '[i]{export_rel_path.as_posix()}[/i]'")
             except Exception as e:
                 console.print(
-                    f"Export '{id}' failed: {type(e).__name__}: {str(e)}" if e else f"Export '{id}' failed!",
+                    f"Export '{id}' failed: {type(e).__name__}: {str(e)}"
+                    if e
+                    else f"Export '{id}' failed!",
                     style="red",
                 )
                 continue

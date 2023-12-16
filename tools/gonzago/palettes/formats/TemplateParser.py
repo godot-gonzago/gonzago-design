@@ -1,8 +1,9 @@
 from pathlib import Path
 
 import yaml
-from ..io import Palette, register_reader, register_writer
 
+from ..core import Palette
+from ..io import register_reader, register_writer
 
 ID: str = "template"
 PATTERN: str = "*.yaml"
