@@ -5,7 +5,7 @@ from ..io import Palette, register_reader, register_writer
 
 
 ID: str = "template"
-PATTERN: str = "*.y[a]ml"
+PATTERN: str = "*.yaml"
 SUFFIX: str = ".yaml"
 DESCRIPTION = "Gonzago palette template."
 

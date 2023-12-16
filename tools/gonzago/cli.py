@@ -6,13 +6,13 @@ from . import (
     SOURCE_DIR_PATH,
     __app_name__,
     __version__,
-    pal,
+    palettes,
     icons,
 )
 
 
 app = typer.Typer()
-app.add_typer(pal.app, name="palettes")
+app.add_typer(palettes.app, name="palettes")
 app.add_typer(icons.app, name="icons")
 
 

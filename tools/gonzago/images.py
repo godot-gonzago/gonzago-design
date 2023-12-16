@@ -39,6 +39,7 @@ def _minimize_svg(src_file: Path, out_file: Path, scour_options=_SCOUR_OPTIONS) 
     (input, output) = scour.getInOut(scour_options)
     scour.start(scour_options, input, output)
 
+
 @app.command()
 def optimize_icons(
     src_dir: Annotated[
@@ -141,9 +142,9 @@ def svg_to_png(
     out_file.parent.mkdir(parents=True, exist_ok=True)
 
     # Convert (https://cairosvg.org/documentation/)
-    #from cairosvg import svg2png
+    # from cairosvg import svg2png
 
-    #svg2png(url=str(src_file), write_to=str(out_file))
+    # svg2png(url=str(src_file), write_to=str(out_file))
 
 
 # @app.command()
@@ -234,3 +235,15 @@ def main() -> None:
 
 if __name__ == "__main__":
     app()
+
+# from base64 import b64encode
+# #svg: str = (
+# #    "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">"
+# #    f"<rect x=\"0\" y=\"0\" width=\"24\" height=\"24\" rx=\"8\" fill=\"{entry.color}\" />"
+# #    "</svg>"
+# #)
+# #readme.write(f"<br>{svg}")
+# #base64: bytes = b64encode(svg.encode())
+# #readme.write(
+# #    f"<img width=\"24\" src=\"data:image/svg+xml;base64,{base64.decode()}\" />\n"
+# #)
