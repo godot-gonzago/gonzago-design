@@ -12,7 +12,7 @@ def read(file: Path) -> Palette:
     raise NotImplementedError()
 
 
-def write(id: str, file: Path, palette: Palette, size: int = 1) -> None:
+def write(id: str, file: Path, palette: Palette) -> None:
     """
     PNG
 
