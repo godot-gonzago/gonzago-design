@@ -4,7 +4,7 @@ from .parser import register_reader, register_writer
 from ..templates import Template
 
 ID: str = "ase"
-PATTERN: str = "*/*.ase"
+PATTERN: str = "*.ase"
 SUFFIX: str = ".ase"
 DESCRIPTION = "Color palette for Adobe products (Adobe Swatch Exchange)."
 

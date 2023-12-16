@@ -4,7 +4,7 @@ from .parser import register_reader, register_writer
 from ..templates import Template
 
 ID: str = "hex"
-PATTERN: str = "*/*.hex"
+PATTERN: str = "*.hex"
 SUFFIX: str = ".hex"
 DESCRIPTION = "Simple HEX color palette."
 

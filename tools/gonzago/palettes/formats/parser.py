@@ -24,7 +24,6 @@ class Reader(NamedTuple):
     pattern: str
     description: str
     read: Read
-    default: bool = True
 
 
 READERS = dict[str, Reader]()
@@ -35,13 +34,12 @@ def register_reader(
     pattern: str,
     description: str,
     read: Read,
-    default: bool = True,
 ) -> None:
     if id in READERS:
         raise NameConflictError(
             f"Reader with id {id} already present. All Readers must have unique ids."
         )
-    READERS[id] = Reader(id, pattern, description, read, default)
+    READERS[id] = Reader(id, pattern, description, read)
 
 
 def get_readers() -> Iterator[Reader]:
@@ -53,7 +51,7 @@ def read(file: Path) -> Template:
     if not file.exists():
         raise FileNotFoundError(file)
     for _, reader in READERS.items():
-        if not reader.default or not file.match(reader.pattern):
+        if not file.match(reader.pattern):
             continue
         try:
             template: Template = reader.read(file)
@@ -94,9 +92,10 @@ def register_writer(
     )
 
 
-def get_writers() -> Iterator[Writer]:
+def get_writers(include_default: bool = False) -> Iterator[Writer]:
     for _, writer in WRITERS.items():
-        yield writer
+        if writer.default or include_default:
+            yield writer
 
 
 def write(id: str, file: Path, template: Template) -> None:

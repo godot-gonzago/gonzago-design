@@ -5,7 +5,7 @@ from ..templates import Template
 
 
 ID: str = "png"
-PATTERN: str = "*/*.png"
+PATTERN: str = "*.png"
 SUFFIX: str = ".png"
 DESCRIPTION = "PNG palette image with size 1px."
 

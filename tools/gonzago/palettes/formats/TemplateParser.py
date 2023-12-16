@@ -7,7 +7,7 @@ from ..templates import Template
 
 
 ID: str = "template"
-PATTERN: str = "*/*.y[a]ml"
+PATTERN: str = "*.y[a]ml"
 SUFFIX: str = ".yaml"
 DESCRIPTION = "Gonzago palette template."
 

@@ -6,7 +6,7 @@ from ..templates import Template
 # https://github.com/1j01/anypalette.js
 
 ID: str = "scribus"
-PATTERN: str = "*/*.xml"
+PATTERN: str = "*.xml"
 SUFFIX: str = ".xml"
 DESCRIPTION = "Color palette for Scribus."
 

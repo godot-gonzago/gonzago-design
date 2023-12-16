@@ -4,7 +4,7 @@ from .parser import register_reader, register_writer
 from ..templates import Template
 
 ID: str = "paintshop"
-PATTERN: str = "*/*.pal"
+PATTERN: str = "*.pal"
 SUFFIX: str = ".pal"
 DESCRIPTION = "Paintshop Pro color palette."
 

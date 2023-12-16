@@ -5,7 +5,7 @@ from ..templates import Template
 
 
 ID: str = "paintnet"
-PATTERN: str = "*/*.txt"
+PATTERN: str = "*.txt"
 SUFFIX: str = ".txt"
 DESCRIPTION = "Paint.NET color palette."
 

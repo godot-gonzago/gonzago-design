@@ -6,7 +6,7 @@ from ..templates import Template
 # http://www.selapa.net/swatches/colors/fileformats.php#ooo_soc
 
 ID: str = "office"
-PATTERN: str = "*/*.soc"
+PATTERN: str = "*.soc"
 SUFFIX: str = ".soc"
 DESCRIPTION = "Color palette for StarOffice/OpenOffice/LibreOffice."
 

@@ -5,7 +5,7 @@ from ..templates import Template
 
 
 ID: str = "gpl"
-PATTERN: str = "*/*.gpl"
+PATTERN: str = "*.gpl"
 SUFFIX: str = ".gpl"
 DESCRIPTION = "Gimp/Inkscape color palette."
 

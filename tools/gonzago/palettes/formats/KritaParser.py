@@ -7,7 +7,7 @@ from ..templates import Template
 
 
 ID: str = "krita"
-PATTERN: str = "*/*.kpl"
+PATTERN: str = "*.kpl"
 SUFFIX: str = ".kpl"
 DESCRIPTION = "Krita color palette."
 
