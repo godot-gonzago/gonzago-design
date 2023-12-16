@@ -25,20 +25,20 @@ class PaletteEntry(BaseModel):
 
 
 # Dublin Core Metadata https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-3
-#meta["title"] = metadata.findtext("rdf:RDF/cc:Work/dc:title", namespaces=namespaces)
-#meta["description"] = metadata.findtext("rdf:RDF/cc:Work/dc:description", namespaces=namespaces)
-#meta["identifier"] = metadata.findtext("rdf:RDF/cc:Work/dc:identifier", namespaces=namespaces)
-#meta["subject"] = subject
-#meta["date"] = metadata.findtext("rdf:RDF/cc:Work/dc:date", namespaces=namespaces)
-#meta["source"] = metadata.findtext("rdf:RDF/cc:Work/dc:source", namespaces=namespaces)
-#meta["relation"] = metadata.findtext("rdf:RDF/cc:Work/dc:relation", namespaces=namespaces)
-#meta["language"] = metadata.findtext("rdf:RDF/cc:Work/dc:language", namespaces=namespaces)
-#meta["creator"] = metadata.findtext("rdf:RDF/cc:Work/dc:creator/cc:Agent/dc:title", namespaces=namespaces)
-#meta["contributor"] = metadata.findtext("rdf:RDF/cc:Work/dc:contributor/cc:Agent/dc:title", namespaces=namespaces)
-#meta["publisher"] = metadata.findtext("rdf:RDF/cc:Work/dc:publisher/cc:Agent/dc:title", namespaces=namespaces)
-#meta["rights"] = metadata.findtext("rdf:RDF/cc:Work/dc:rights/cc:Agent/dc:title", namespaces=namespaces)
-#meta["coverage"] = metadata.findtext("rdf:RDF/cc:Work/dc:coverage", namespaces=namespaces)
-#meta["license"] = license.get("{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource")
+# "title" = Gonzago Framework Editor Icon
+# "description" = A skull with a crown in reference to The Murder of Gonzago
+# "identifier" = gonzago.palettes.name
+# "subject" = palette, gonzago
+# "date" = 2023-11-19
+# "source" = https://github.com/godot-gonzago
+# "relation" = http://asdffasd same as source before
+# "language" = en
+# "creator" = David Krummenacher
+# "contributor" = David Krummenacher, David Krummenacher
+# "publisher" = Gonzago Framework
+# "rights" = Copyright (c) 2023 David Krummenacher and Gonzago Framework contributors
+# "coverage" = ???
+# "license" = http://creativecommons.org/licenses/by/4.0/
 
 
 class Palette(BaseModel):
