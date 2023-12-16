@@ -9,9 +9,9 @@ from pydantic_extra_types.color import Color
 from rich.console import Console
 from rich.table import Table
 
-from gonzago import BASE_DIR_PATH, SOURCE_DIR_PATH
-from gonzago.exceptions import PathError, PathNotFoundError
-from gonzago.pydantic import Version
+from . import BASE_DIR_PATH, SOURCE_DIR_PATH
+from .exceptions import PathError, PathNotFoundError
+from .pydantic import Version
 
 PALETTES_SOURCE_DIR: Path = SOURCE_DIR_PATH.joinpath("./palettes").resolve()
 PALETTES_DST_DIR: Path = BASE_DIR_PATH.joinpath("palettes").resolve()
@@ -438,30 +438,27 @@ def publish(
         console.print(f"No supported formats!", style="yellow")
         return
 
-    with console.status("Building palettes...") as status:
-        for file in get_template_files(src):
-            rel_path: Path = file.relative_to(src)
-            console.print(rel_path)
-            try:
-                status.update(f"Exporting {rel_path.as_posix()}")
-                template: Template = load_template(file)
-                for exporter in FORMATTERS.keys():
-                    exporter_info: FormatterInfo = FORMATTERS.get(exporter)
-                    export_path: Path = PALETTES_DST_DIR.joinpath(rel_path).with_suffix(
-                        exporter_info.suffix
-                    )
-                    export_path.parent.mkdir(
-                        parents=True, exist_ok=True
-                    )  # Ensure folders
-                    status.update(f"Exporting {exporter} to [i]{export_path}[/i]")
-                    exporter_info.fn(export_path, template)
-                    console.print(f"Exported [i]{export_path}[/i]")
-            except Exception as e:
-                console.print(
-                    f"{type(e).__name__}: {str(e)}" if e else "Export of failed",
-                    style="red",
+    for file in get_template_files(src):
+        rel_path: Path = file.relative_to(src)
+        console.print(f"Exporting '{rel_path.as_posix()}'...")
+        try:
+            template: Template = load_template(file)
+            for exporter in FORMATTERS.keys():
+                exporter_info: FormatterInfo = FORMATTERS.get(exporter)
+                export_path: Path = PALETTES_DST_DIR.joinpath(rel_path).with_suffix(
+                    exporter_info.suffix
                 )
-        console.print("Done")
+                export_path.parent.mkdir(
+                    parents=True, exist_ok=True
+                )  # Ensure folders
+                exporter_info.fn(export_path, template)
+                console.print(f"Exported '[i]{export_path.relative_to(dst_dir).as_posix()}[/i]'")
+        except Exception as e:
+            console.print(
+                f"{type(e).__name__}: {str(e)}" if e else "Export of failed",
+                style="red",
+            )
+    console.print("Done")
 
 
 @app.command("readme")
