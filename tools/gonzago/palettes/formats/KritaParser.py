@@ -1,7 +1,5 @@
 from pathlib import Path
-from ..io import register_reader, register_writer
-
-from ..templates import Template
+from ..io import Palette, register_reader, register_writer
 
 # https://docs.krita.org/en/untranslatable_pages/kpl_defintion.html
 
@@ -12,11 +10,11 @@ SUFFIX: str = ".kpl"
 DESCRIPTION = "Krita color palette."
 
 
-def read(file: Path) -> Template:
+def read(file: Path) -> Palette:
     raise NotImplementedError()
 
 
-def write(id: str, file: Path, template: Template) -> None:
+def write(id: str, file: Path, palette: Palette) -> None:
     raise NotImplementedError()
 
 

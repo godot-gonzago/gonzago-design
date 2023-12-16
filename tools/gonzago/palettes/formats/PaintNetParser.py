@@ -1,7 +1,5 @@
 from pathlib import Path
-from ..io import register_reader, register_writer
-
-from ..templates import Template
+from ..io import Palette, register_reader, register_writer
 
 
 ID: str = "paintnet"
@@ -10,11 +8,11 @@ SUFFIX: str = ".txt"
 DESCRIPTION = "Paint.NET color palette."
 
 
-def read(file: Path) -> Template:
+def read(file: Path) -> Palette:
     raise NotImplementedError()
 
 
-def write(id: str, file: Path, template: Template) -> None:
+def write(id: str, file: Path, palette: Palette) -> None:
     #   # https://www.getpaint.net/doc/latest/WorkingWithPalettes.html
     #   with out_file.open("w") as file:
     #        file.write(";paint.net Palette File\n")

@@ -9,7 +9,7 @@ from pydantic_extra_types.color import Color
 from rich.console import Console
 from rich.table import Table
 
-from .palettes.io import get_readers, get_writers
+from .palettes.io import get_readers, read, get_writers, find_palettes
 
 from . import BASE_DIR_PATH, SOURCE_DIR_PATH
 from .exceptions import PathError, PathNotFoundError
@@ -504,6 +504,43 @@ def list_readers():
         console.print(table)
     else:
         console.print("No readers available!", style="yellow")
+
+
+@app.command("list_pal")
+def list_pal(dir: Path = PALETTES_SOURCE_DIR) -> None:
+    if not dir.exists():
+        console.print(f"Path [i]{dir}[/i] does not exist!", style="yellow")
+        return
+
+    with console.status(f"Searching templates at [i]{dir}[/i]...") as status:
+        valid_templates_count: int = 0
+        table: Table = Table("Path", "Name", "Description", "Colors")
+        for file in find_palettes(dir):
+            status.update()
+            rel_path: str = file.relative_to(dir).as_posix()
+            try:
+                template = read(file)
+                table.add_row(
+                    str(rel_path),
+                    template.name,
+                    template.description if template.description else "",
+                    str(len(template.colors)),
+                )
+                valid_templates_count += 1
+            except Exception as e:
+                table.add_row(
+                    str(rel_path),
+                    "Unknown",
+                    f"{type(e).__name__}: {str(e)}" if e else "Template is invalid.",
+                    "-",
+                    style="red",
+                )
+        if valid_templates_count > 0:
+            console.print(f"Found {valid_templates_count} valid palette templates!")
+        else:
+            console.print("No valid palette templates found!", style="yellow")
+        if table.row_count > 0:
+            console.print(table)
 
 
 @app.callback(no_args_is_help=True)

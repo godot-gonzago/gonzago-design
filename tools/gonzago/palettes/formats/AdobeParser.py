@@ -1,7 +1,5 @@
 from pathlib import Path
-from ..io import register_reader, register_writer
-
-from ..templates import Template
+from ..io import Palette, register_reader, register_writer
 
 ID: str = "ase"
 PATTERN: str = "*.ase"
@@ -9,11 +7,11 @@ SUFFIX: str = ".ase"
 DESCRIPTION = "Color palette for Adobe products (Adobe Swatch Exchange)."
 
 
-def read(file: Path) -> Template:
+def read(file: Path) -> Palette:
     raise NotImplementedError()
 
 
-def write(id: str, file: Path, template: Template) -> None:
+def write(id: str, file: Path, palette: Palette) -> None:
     #    # https://medium.com/swlh/mastering-adobe-color-file-formats-d29e43fde8eb
     #    # http://www.selapa.net/swatches/colors/fileformats.php#adobe_ase
     #    with out_file.open("wb") as file:

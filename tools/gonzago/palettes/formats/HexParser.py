@@ -1,7 +1,5 @@
 from pathlib import Path
-from ..io import register_reader, register_writer
-
-from ..templates import Template
+from ..io import Palette, register_reader, register_writer
 
 ID: str = "hex"
 PATTERN: str = "*.hex"
@@ -9,13 +7,13 @@ SUFFIX: str = ".hex"
 DESCRIPTION = "Simple HEX color palette."
 
 
-def read(file: Path) -> Template:
+def read(file: Path) -> Palette:
     raise NotImplementedError()
 
 
-def write(id: str, file: Path, template: Template) -> None:
+def write(id: str, file: Path, palette: Palette) -> None:
     colors: list[str] = []
-    for entry in template.colors:
+    for entry in palette.colors:
         c = entry.color.as_rgb_tuple()
         colors.append(f"{c[0]:02x}{c[1]:02x}{c[2]:02x}")
     with file.open("w") as f:

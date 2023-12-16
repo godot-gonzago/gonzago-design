@@ -1,7 +1,5 @@
 from pathlib import Path
-from ..io import register_reader, register_writer
-
-from ..templates import Template
+from ..io import Palette, register_reader, register_writer
 
 
 ID: str = "png"
@@ -10,11 +8,11 @@ SUFFIX: str = ".png"
 DESCRIPTION = "PNG palette image with size 1px."
 
 
-def read(file: Path) -> Template:
+def read(file: Path) -> Palette:
     raise NotImplementedError()
 
 
-def write(id: str, file: Path, template: Template, size: int = 1) -> None:
+def write(id: str, file: Path, palette: Palette, size: int = 1) -> None:
     """
     PNG
 
@@ -23,12 +21,12 @@ def write(id: str, file: Path, template: Template, size: int = 1) -> None:
     # TODO: Parse scale from filename
     from PIL import Image, ImageDraw
 
-    color_count: int = len(template.colors)
+    color_count: int = len(palette.colors)
     image: Image = Image.new("RGB", (color_count * size, size))
 
     draw = ImageDraw.Draw(image, "RGB")
     for i in range(color_count):
-        color = template.colors[i].color
+        color = palette.colors[i].color
         draw.rectangle((i * size, 0, i * size + size, size), color.as_rgb_tuple())
 
     image.save(file, "PNG")
