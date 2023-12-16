@@ -73,18 +73,37 @@ def load_valid_templates(root: Path) -> Iterator[Template]:
             continue
 
 
-class FormatterInfo(NamedTuple):
+class Formatter(NamedTuple):
     suffix: str
     description: str
     fn: Callable[[Path, Template], None]
 
 
-FORMATTERS = dict[str, FormatterInfo]()
+class FormatInfo(NamedTuple):
+    id: str
+    formatter: Formatter
+
+
+FORMATTERS = dict[str, Formatter]()
+
+
+def get_formats() -> Iterator[FormatInfo]:
+    for id, info in FORMATTERS.items():
+        yield FormatInfo(id, info)
+
+
+def get_valid_formats(formats: list[str]) -> list[str]:
+    valid_formatters: list[str] = []
+    for format in formats:
+        if format in valid_formatters or not format in FORMATTERS.keys():
+            continue
+        valid_formatters.append(format)
+    return valid_formatters
 
 
 def formatter(id: str, suffix: str, description: str = "") -> Callable:
     def inner(fn: Callable[[Path, Template], None]) -> Callable[[Path, Template], None]:
-        FORMATTERS[id] = FormatterInfo(suffix=suffix, description=description, fn=fn)
+        FORMATTERS[id] = Formatter(suffix, description, fn)
         return fn
 
     return inner
@@ -242,15 +261,6 @@ def format_hex(out_file: Path, template: Template):
 #    pass
 
 
-def get_valid_formats(formats: list[str]) -> list[str]:
-    valid_formatters: list[str] = []
-    for format in formats:
-        if format in valid_formatters or not format in FORMATTERS.keys():
-            continue
-        valid_formatters.append(format)
-    return valid_formatters
-
-
 app = typer.Typer()
 console: Console = Console()
 
@@ -354,14 +364,14 @@ def list_formats():
     """
     List available formats.
     """
-    count: int = len(FORMATTERS)
-    if count == 0:
-        console.print("No formatters available!", style="yellow")
-        return
     table: Table = Table("ID", "Suffix", "Description")
-    for id, (suffix, description, _) in FORMATTERS.items():
+    for (id, (suffix, description, _)) in get_formats():
         table.add_row(id, suffix, description)
-    console.print(table)
+    if table.row_count > 0:
+        console.print(table)
+    else:
+        console.print("No formatters available!", style="yellow")
+
 
 # src_path: Annotated[
 #     Optional[Path],
@@ -444,7 +454,7 @@ def publish(
         try:
             template: Template = load_template(file)
             for exporter in FORMATTERS.keys():
-                exporter_info: FormatterInfo = FORMATTERS.get(exporter)
+                exporter_info: Formatter = FORMATTERS.get(exporter)
                 export_path: Path = PALETTES_DST_DIR.joinpath(rel_path).with_suffix(
                     exporter_info.suffix
                 )
