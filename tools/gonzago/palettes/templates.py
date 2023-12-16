@@ -9,7 +9,7 @@ from pydantic_extra_types.color import Color
 from gonzago.pydantic import Version
 
 
-TEMPLATE_FILE_PATTERN: str = "**/*.y[a]ml"
+TEMPLATE_FILE_PATTERN: str = "*/*.y[a]ml"
 
 
 class TemplateEntry(BaseModel):
