@@ -1,7 +1,7 @@
 from pathlib import Path
 from .parser import register_reader, register_writer
 
-from gonzago.palettes.templates import Template
+from ..templates import Template
 
 # https://docs.krita.org/en/untranslatable_pages/kpl_defintion.html
 

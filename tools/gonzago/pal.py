@@ -9,6 +9,8 @@ from pydantic_extra_types.color import Color
 from rich.console import Console
 from rich.table import Table
 
+from .palettes.formats.parser import get_readers, get_writers
+
 from . import BASE_DIR_PATH, SOURCE_DIR_PATH
 from .exceptions import PathError, PathNotFoundError
 from .pydantic import Version
@@ -480,6 +482,28 @@ def build_readme(
     Build readme from all palettes.
     """
     pass
+
+
+@app.command("writers")
+def list_writers():
+    table: Table = Table("ID", "Suffix", "Description")
+    for writer in get_writers():
+        table.add_row(writer.id, writer.suffix, writer.description)
+    if table.row_count > 0:
+        console.print(table)
+    else:
+        console.print("No writers available!", style="yellow")
+
+
+@app.command("readers")
+def list_readers():
+    table: Table = Table("ID", "Pattern", "Description")
+    for reader in get_readers():
+        table.add_row(reader.id, reader.pattern, reader.description)
+    if table.row_count > 0:
+        console.print(table)
+    else:
+        console.print("No readers available!", style="yellow")
 
 
 @app.callback(no_args_is_help=True)

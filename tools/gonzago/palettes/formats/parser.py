@@ -1,9 +1,9 @@
 # https://play.pixelblaster.ro/blog/2017/12/18/a-quick-and-dirty-mini-plugin-system-for-python/
 # https://kaleidoescape.github.io/decorated-plugins/
 from pathlib import Path
-from typing import Callable, NamedTuple, Protocol
+from typing import Callable, Iterator, NamedTuple, Protocol
 
-from gonzago.palettes.templates import Template
+from ..templates import Template
 
 
 class NameConflictError(ValueError):
@@ -44,6 +44,25 @@ def register_reader(
     READERS[id] = Reader(id, pattern, description, read, default)
 
 
+def get_readers() -> Iterator[Reader]:
+    for _, reader in READERS.items():
+        yield reader
+
+
+def read(file: Path) -> Template:
+    if not file.exists():
+        raise FileNotFoundError(file)
+    for _, reader in READERS.items():
+        if not reader.default or not file.match(reader.pattern):
+            continue
+        try:
+            template: Template = reader.read(file)
+            return template
+        except Exception as e:
+            continue
+    raise FileTypeError(file)
+
+
 class Writer(NamedTuple):
     id: str
     suffix: str
@@ -73,3 +92,22 @@ def register_writer(
         write,
         default,
     )
+
+
+def get_writers() -> Iterator[Writer]:
+    for _, writer in WRITERS.items():
+        yield writer
+
+
+def write(id: str, file: Path, template: Template) -> None:
+    if not file.is_file():
+        raise FileTypeError(file)
+    for _, writer in WRITERS.items():
+        if not writer.default:
+            continue
+        try:
+            writer.write(id, file, template)
+            return
+        except Exception as e:
+            continue
+    raise FileTypeError(file)

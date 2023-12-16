@@ -3,7 +3,7 @@ from pathlib import Path
 import yaml
 from .parser import register_reader, register_writer
 
-from gonzago.palettes.templates import Template
+from ..templates import Template
 
 
 ID: str = "template"
@@ -12,7 +12,7 @@ SUFFIX: str = ".yaml"
 DESCRIPTION = "Gonzago palette template."
 
 
-def read(id: str, file: Path) -> Template:
+def read(file: Path) -> Template:
     if not file.match(PATTERN) or not file.is_file():
         raise TypeError(f"{file} is not a valid template path")
     with file.open() as stream:
@@ -29,5 +29,5 @@ def write(id: str, file: Path, template: Template) -> None:
         yaml.safe_dump(data, stream, sort_keys=False)
 
 
-register_reader(ID, PATTERN, DESCRIPTION, read, False)
+register_reader(ID, PATTERN, DESCRIPTION, read)
 register_writer(ID, SUFFIX, DESCRIPTION, write, False)

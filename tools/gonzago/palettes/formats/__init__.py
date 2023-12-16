@@ -1,18 +1,22 @@
-from .parser import register_reader, register_writer
-import TemplateParser
-import PNGParser
-import GIMPParser
-import HexParser
-import AdobeParser
-import KritaParser
-import PaintNetParser
-import PaintShopProParser
-import ScribusParser
-import StarOfficeParser
+from .parser import get_readers, read, get_writers, write
+from . import (
+    TemplateParser,
+    PNGParser,
+    GIMPParser,
+    HexParser,
+    AdobeParser,
+    KritaParser,
+    PaintNetParser,
+    PaintShopProParser,
+    ScribusParser,
+    StarOfficeParser,
+)
 
 __all__ = [
-    "register_reader",
-    "register_writer",
+    "get_readers",
+    "read",
+    "get_writers",
+    "write",
     "TemplateParser",
     "PNGParser",
     "GIMPParser",
@@ -22,5 +26,5 @@ __all__ = [
     "PaintNetParser",
     "PaintShopProParser",
     "ScribusParser",
-    "StarOfficeParser"
+    "StarOfficeParser",
 ]
