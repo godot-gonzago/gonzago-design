@@ -5,31 +5,16 @@ from gonzago.palettes.templates import Template
 
 
 ID: str = "png"
+PATTERN: str = "*/*.png"
 SUFFIX: str = ".png"
 DESCRIPTION = "PNG palette image with size 1px."
-
-
-def can_handle_id(id: str) -> bool:
-    raise NotImplementedError()
-
-
-def can_read(file: Path) -> bool:
-    raise NotImplementedError()
 
 
 def read(file: Path) -> Template:
     raise NotImplementedError()
 
 
-def change_path_from_id(id: str, file: Path) -> Path:
-    raise NotImplementedError()
-
-
-def can_write(file: Path) -> bool:
-    raise NotImplementedError()
-
-
-def write(file: Path, template: Template, size: int = 1) -> None:
+def write(id: str, file: Path, template: Template, size: int = 1) -> None:
     """
     PNG
 
@@ -49,7 +34,7 @@ def write(file: Path, template: Template, size: int = 1) -> None:
     image.save(file, "PNG")
 
 
-register_reader(ID, SUFFIX, DESCRIPTION, can_handle_id, can_read, read)
-register_writer(
-    ID, SUFFIX, DESCRIPTION, can_handle_id, change_path_from_id, can_write, write
-)
+register_reader(ID, PATTERN, DESCRIPTION, read)
+register_writer(ID, SUFFIX, DESCRIPTION, write)
+register_writer("png-8", ".x8.png", "PNG palette image with size 8px.", write)
+register_writer("png-32", ".x32.png", "PNG palette image with size 32px.", write)

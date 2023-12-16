@@ -10,22 +10,19 @@ class NameConflictError(ValueError):
     pass
 
 
-CanHandleId = Callable[[str], bool]
+# raise when file cannot be read.
+class FileTypeError(TypeError):
+    pass
 
-CanRead = Callable[[Path], bool]
+
 Read = Callable[[Path], Template]
-
-ChangePathFromId = Callable[[str, Path], Path]
-CanWrite = Callable[[Path], bool]
-Write = Callable[[Path, Template], None]
+Write = Callable[[str, Path, Template], None]
 
 
 class Reader(NamedTuple):
     id: str
-    suffix: str
+    pattern: str
     description: str
-    can_handle_id: CanHandleId
-    can_read: CanRead
     read: Read
     default: bool = True
 
@@ -35,10 +32,8 @@ READERS = dict[str, Reader]()
 
 def register_reader(
     id: str,
-    suffix: str,
+    pattern: str,
     description: str,
-    can_handle_id: CanHandleId,
-    can_read: CanRead,
     read: Read,
     default: bool = True,
 ) -> None:
@@ -46,18 +41,13 @@ def register_reader(
         raise NameConflictError(
             f"Reader with id {id} already present. All Readers must have unique ids."
         )
-    READERS[id] = Reader(
-        id, suffix, description, can_handle_id, can_read, read, default
-    )
+    READERS[id] = Reader(id, pattern, description, read, default)
 
 
 class Writer(NamedTuple):
     id: str
     suffix: str
     description: str
-    can_handle_id: CanHandleId
-    change_path_from_id: ChangePathFromId
-    can_write: CanWrite
     write: Write
     default: bool = True
 
@@ -69,9 +59,6 @@ def register_writer(
     id: str,
     suffix: str,
     description: str,
-    can_handle_id: CanHandleId,
-    change_path_from_id: ChangePathFromId,
-    can_write: CanWrite,
     write: Write,
     default: bool = True,
 ) -> None:
@@ -83,9 +70,6 @@ def register_writer(
         id,
         suffix,
         description,
-        can_handle_id,
-        change_path_from_id,
-        can_write,
         write,
         default,
     )
