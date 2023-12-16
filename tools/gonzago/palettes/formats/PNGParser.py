@@ -21,6 +21,12 @@ def write(id: str, file: Path, palette: Palette, size: int = 1) -> None:
     # TODO: Parse scale from filename
     from PIL import Image, ImageDraw
 
+    size: int = 1
+    if id.endswith("-8"):
+        size = 8
+    elif id.endswith("-32"):
+        size = 32
+
     color_count: int = len(palette.colors)
     image: Image = Image.new("RGB", (color_count * size, size))
 
