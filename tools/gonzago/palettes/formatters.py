@@ -127,18 +127,28 @@ def export_hex(out_file: Path, template: Template):
 #        file.write(b"\x00\x00\x00\x00")  # Block length (Constant for Group end)
 
 
-# @exporter("paintnet", ".txt", "Paint.NET color palette.")
-# def export_paint_net(out_file: Path, template: Template):
-#    https://www.getpaint.net/doc/latest/WorkingWithPalettes.html
-#    ;paint.net Palette File
-#    ;Downloaded from Lospec.com/palette-list
-#    ;Palette Name: Lospec500
-#    ;Description: A collaboration from the Lospec Discord server to create a palette celebrating 500 palettes hosted on Lospec.
-#    ;Colors: 42
-#    FF10121c
-#    FF2c1e31
-#    FF6b2643
-#    pass
+#@exporter("paintnet", ".txt", "Paint.NET color palette.")
+#def export_paint_net(out_file: Path, template: Template):
+#   # https://www.getpaint.net/doc/latest/WorkingWithPalettes.html
+#   with out_file.open("w") as file:
+#        file.write(";paint.net Palette File\n")
+#        file.write(f";Palette Name: {template.name}\n")
+#        if template.description:
+#            file.write(f";Description: {template.description}\n")
+#        if template.version:
+#            file.write(f";Version: {template.version}\n")
+#        if template.author:
+#            file.write(f";Author: {template.author}\n")
+#        if template.source:
+#            file.write(f";Source: {template.source}\n")
+#        file.write(f";Colors: {len(template.colors)}\n")
+#
+#        colors: List[str] = []
+#        for entry in template.colors:
+#            c = entry.color.as_rgb_tuple()
+#            colors.append(f"FF{c[0]:02X}{c[1]:02X}{c[2]:02X}")
+#        with out_file.open("w") as file:
+#            file.writelines("\n".join(colors))
 
 
 # @exporter("paintshop", ".pal", "Paintshop Pro color palette.")
