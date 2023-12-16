@@ -10,7 +10,7 @@ from rich.progress import Progress, SpinnerColumn, TextColumn
 from .. import BASE_DIR_PATH, SOURCE_DIR_PATH
 
 from .templates import Template, find_templates
-from .formatters import ExporterInfo, EXPORTERS
+from .formatters import FormatterInfo, FORMATTERS
 
 
 PALETTES_SOURCE_DIR: Path = SOURCE_DIR_PATH.joinpath("./palettes").resolve()
@@ -76,13 +76,13 @@ def list_exporters():
     """
     List available exporters.
     """
-    count: int = len(EXPORTERS)
+    count: int = len(FORMATTERS)
     if count == 0:
         console.print("No exporters available!", style="yellow")
         return
     console.print(f"Available exporters: {count}")
     table: Table = Table("ID", "Suffix", "Description")
-    for id, (suffix, description, _) in EXPORTERS.items():
+    for id, (suffix, description, _) in FORMATTERS.items():
         table.add_row(id, suffix, description)
     console.print(table)
 
@@ -127,7 +127,7 @@ def build_readme():
                 "</tr></thead>\n"
                 "<tbody>\n"
             )
-            for id, (suffix, description, _) in EXPORTERS.items():
+            for id, (suffix, description, _) in FORMATTERS.items():
                 readme.write(
                     f"<tr><td>{id}</td><td>{suffix}</td><td>{description}</td></tr>\n"
                 )
@@ -202,7 +202,7 @@ def build():
     """
     Build palettes in all formats.
     """
-    if len(EXPORTERS.keys()) == 0:
+    if len(FORMATTERS.keys()) == 0:
         console.print(f"No exporters available!")
         return
 
@@ -225,8 +225,8 @@ def build():
             try:
                 template: Template = Template.load(file)
                 console.print(f"Exporting {template.name}")
-                for exporter in EXPORTERS.keys():
-                    exporter_info: ExporterInfo = EXPORTERS.get(exporter)
+                for exporter in FORMATTERS.keys():
+                    exporter_info: FormatterInfo = FORMATTERS.get(exporter)
                     export_path: Path = PALETTES_DST_DIR.joinpath(rel_path).with_suffix(
                         exporter_info.suffix
                     )
