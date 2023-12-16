@@ -5,7 +5,7 @@ import typer
 from rich.console import Console
 from rich.table import Table
 
-from .io import Palette, Writer, get_readers, get_writers, get_writer_path, find_palettes, read, write
+from .io import Palette, get_readers, get_writers, get_writer_path, find_palettes, read, write
 
 from .. import BASE_DIR_PATH, SOURCE_DIR_PATH
 
