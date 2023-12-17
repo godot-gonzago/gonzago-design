@@ -3,11 +3,11 @@ from pathlib import Path
 import typer
 from rich.console import Console
 
-from ..config import CONFIG
+from ..config import CONFIG, dst_path, src_path
 
 
-APPLICATION_SOURCE_DIR: Path = Path(CONFIG["paths"]["src"]).joinpath("./engine/application").resolve()
-APPLICATION_DST_DIR: Path = Path(CONFIG["paths"]["dst"]).joinpath("application").resolve()
+APPLICATION_SRC = src_path("./engine/application")
+APPLICATION_DST = dst_path("application")
 
 
 app = typer.Typer()

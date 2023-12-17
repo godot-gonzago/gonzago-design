@@ -8,12 +8,12 @@ import typer
 from scour import scour
 from rich.console import Console
 
-from ..config import CONFIG
+from ..config import CONFIG, dst_path, src_path
 from ..io import gather_files
 
 
-ICONS_SOURCE_DIR: Path = Path(CONFIG["paths"]["src"]).joinpath("./engine/editor_icons").resolve()
-ICONS_DST_DIR: Path = Path(CONFIG["paths"]["dst"]).joinpath("icons").resolve()
+ICONS_SOURCE_DIR: Path = src_path("./engine/editor_icons")
+ICONS_DST_DIR: Path = dst_path("icons")
 
 
 app = typer.Typer()

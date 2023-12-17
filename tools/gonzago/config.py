@@ -22,30 +22,32 @@ def load() -> TOMLDocument:
     dst: Path = Path(__file__).joinpath("../../..").resolve()
     src: Path = dst.joinpath("source").resolve()
     inkscape: str = "inkscape"
-    if sys.platform.startswith('linux'):
+    if sys.platform.startswith("linux"):
         inkscape = "/usr/lib/inkscape"
-    elif sys.platform.startswith('win32'):
+    elif sys.platform.startswith("win32"):
         inkscape = "%ProgramFiles%/Inkscape/bin/inkscape.exe"
-    elif sys.platform.startswith('darwin'):
+    elif sys.platform.startswith("darwin"):
         inkscape = "/Applications/Inkscape.app/Contents/MacOS/inkscape"
     blender: str = "blender"
-    if sys.platform.startswith('linux'):
+    if sys.platform.startswith("linux"):
         blender = "/usr/lib/blender"
-    elif sys.platform.startswith('win32'):
+    elif sys.platform.startswith("win32"):
         blender = "%ProgramFiles%/Blender Foundation/Blender 4.0/blender.exe"
-    elif sys.platform.startswith('darwin'):
+    elif sys.platform.startswith("darwin"):
         blender = "/Applications/Blender/blender.app/Contents/MacOS/blender"
-    return parse((
-        '[paths]\n'
-        f'dst = "{dst.as_posix()}"\n'
-        f'src = "{src.as_posix()}"\n'
-        '\n'
-        '[inkscape]\n'
-        f'path = "{inkscape}"\n'
-        '\n'
-        '[blender]\n'
-        f'path = "{blender}"'
-    ))
+    return parse(
+        (
+            "[paths]\n"
+            f'dst = "{dst.as_posix()}"\n'
+            f'src = "{src.as_posix()}"\n'
+            "\n"
+            "[inkscape]\n"
+            f'path = "{inkscape}"\n'
+            "\n"
+            "[blender]\n"
+            f'path = "{blender}"'
+        )
+    )
 
 
 def save(config: TOMLDocument) -> None:
@@ -59,3 +61,11 @@ def clear() -> None:
 
 
 CONFIG: TOMLDocument = load()
+
+
+def src_path(rel: Path | str) -> Path:
+    return Path(CONFIG["paths"]["src"]).joinpath(rel).resolve()
+
+
+def dst_path(rel: Path | str) -> Path:
+    return Path(CONFIG["paths"]["dst"]).joinpath(rel).resolve()

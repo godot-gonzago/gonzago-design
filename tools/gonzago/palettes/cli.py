@@ -5,7 +5,7 @@ import typer
 from rich.console import Console
 from rich.table import Table
 
-from ..config import CONFIG
+from ..config import CONFIG, dst_path, src_path
 from .core import Palette, generate_default_palette
 from .io import (
     get_readers,
@@ -17,10 +17,8 @@ from .io import (
     find_palettes,
 )
 
-PALETTES_SOURCE_DIR: Path = (
-    Path(CONFIG["paths"]["src"]).joinpath("./palettes").resolve()
-)
-PALETTES_DST_DIR: Path = Path(CONFIG["paths"]["dst"]).joinpath("palettes").resolve()
+PALETTES_SOURCE_DIR: Path = src_path("./palettes")
+PALETTES_DST_DIR: Path = dst_path("palettes")
 
 
 app = typer.Typer()
