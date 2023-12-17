@@ -2,7 +2,7 @@
 # https://kaleidoescape.github.io/decorated-plugins/
 import os
 from pathlib import Path
-from typing import Callable, Iterator, NamedTuple, Optional
+from typing import Any, Callable, Iterator, NamedTuple, Optional, Protocol, runtime_checkable
 
 from ..io import gather_files
 from .core import Palette
@@ -12,13 +12,37 @@ from .exceptions import FileTypeError, NameConflictError
 class Format(NamedTuple):
     id: str
     description: str
-    extentions: set(str)
+    extentions: set[str]
+
+
+@runtime_checkable
+class FileRead(Protocol):
+    def __call__(self, path: Path, *args: Any) -> Palette:
+        ...
+
+
+@runtime_checkable
+class FileWrite(Protocol):
+    def __call__(self, path: Path, palette: Palette, *args: Any) -> None:
+        ...
+
+
+class FileReader(NamedTuple):
+    id: str
+    read: FileRead
+    args: tuple[Any, ...]
+
+
+class FileWriter(NamedTuple):
+    id: str
+    write: FileWrite
+    args: tuple[Any, ...]
 
 
 _FORMATS = dict[str, Format]()
-_EXTENTIONS = dict[str, set(str)]()
-#_READERS = dict[str, Reader]()
-#_WRITERS = dict[str, Writer]()
+_EXTENTIONS = dict[str, set[str]]()
+_READERS = dict[str, FileReader]()
+_WRITERS = dict[str, FileWriter]()
 
 
 Read = Callable[[Path], Palette]
