@@ -15,19 +15,30 @@ def exists() -> bool:
 
 
 def load() -> TOMLDocument:
-    return parse(
-        CONFIG_FILE.read_text() if CONFIG_FILE.is_file() else (
-            '[paths]\n'
-            f'dst = "{Path(__file__).joinpath("../../..").resolve().as_posix()}"\n'
-            f'src = "{Path(__file__).joinpath("../../../source").resolve().as_posix()}"\n'
-            '\n'
-            '[inkscape]\n'
-            'path = ""\n'
-            '\n'
-            '[blender]\n'
-            'path = ""'
-        )
-    )
+    if CONFIG_FILE.is_file():
+        return parse(CONFIG_FILE.read_text())
+
+    dst: Path = Path(__file__).joinpath("../../..").resolve()
+    src: Path = dst.joinpath("source").resolve()
+    inkscape: str = ""
+    # Linux /usr/lib/inkscape
+    # Win %ProgramFiles%/Inkscape/bin/inkscape.exe
+    # OSX /Applications/Inkscape.app/Contents/MacOS/inkscape
+    blender: str = ""
+    # Linux /usr/lib/blender
+    # Win %ProgramFiles%/Blender Foundation/Blender 4.0/blender.exe
+    # OSX /Applications/Blender/blender.app/Contents/MacOS/blender
+    return parse((
+        '[paths]\n'
+        f'dst = "{dst.as_posix()}"\n'
+        f'src = "{src.as_posix()}"\n'
+        '\n'
+        '[inkscape]\n'
+        f'path = "{inkscape}"\n'
+        '\n'
+        '[blender]\n'
+        f'path = "{blender}"'
+    ))
 
 
 def save(config: TOMLDocument) -> None:
@@ -41,11 +52,3 @@ def clear() -> None:
 
 
 CONFIG: TOMLDocument = load()
-
-
-# Inkscape C:\Program Files\Inkscape\bin\inkscape.exe
-# C:\Program Files\Blender Foundation\Blender 4.0\blender.exe
-#
-# Linux /usr/lib/blender
-# Win %ProgramFiles%/Inkscape/bin/inkscape.exe
-# OSX /Applications/Blender/blender.app/Contents/MacOS/blender
