@@ -3,6 +3,8 @@ Name: Gonzago Framework
 Columns: 0
 # Description: Colors used for Gonzago Framework assets.
 # Version: 1.0.0
+# Author: David Krummenacher
+# Source: https://github.com/godot-gonzago
 #
 45	37	35	Base
 255	247	248	Contrast

@@ -2,6 +2,13 @@
 title: Gonzago Framework
 description: Colors used for Gonzago Framework assets.
 version: 1.0.0
+date: '2023-11-19'
+language: en
+source: https://github.com/godot-gonzago
+publisher: Gonzago Framework
+creator: David Krummenacher
+rights: Copyright (c) 2023 David Krummenacher and Gonzago Framework contributors
+license: http://creativecommons.org/licenses/by/4.0/
 colors:
   - name: Base
     color: "#2d2523"
