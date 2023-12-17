@@ -6,11 +6,6 @@ from PIL.PngImagePlugin import PngInfo
 from ..core import Palette
 from ..io import register_reader, register_writer
 
-ID: str = "png"
-PATTERN: str = "*.png"
-SUFFIX: str = ".png"
-DESCRIPTION = "PNG palette image."
-
 
 def read(file: Path) -> Palette:
     raise NotImplementedError()
@@ -84,7 +79,7 @@ def write_32(id: str, file: Path, palette: Palette) -> None:
     write(id, file, palette, 32)
 
 
-register_reader(ID, PATTERN, DESCRIPTION, read)
-register_writer(ID, SUFFIX, DESCRIPTION, write)
-register_writer("png-8", ".x8.png", DESCRIPTION, write_8)
-register_writer("png-32", ".x32.png", DESCRIPTION, write_32)
+register_reader("png", "*.png", "PNG palette image.", read)
+register_writer("png", ".png", "PNG palette image with size 1px.", write)
+register_writer("png-8", ".x8.png", "PNG palette image with size 8px.", write_8)
+register_writer("png-32", ".x32.png", "PNG palette image with size 32px.", write_32)
