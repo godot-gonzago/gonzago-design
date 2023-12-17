@@ -1,5 +1,5 @@
 from pathlib import Path
-import shutil
+from shutil import rmtree
 from tomlkit import TOMLDocument, dumps, parse
 
 import typer
@@ -37,7 +37,7 @@ def save(config: TOMLDocument) -> None:
 
 def clear() -> None:
     if APP_DIR.exists():
-        shutil.shutil.rmtree(APP_DIR)
+        rmtree(APP_DIR)
 
 
 CONFIG: TOMLDocument = load()
