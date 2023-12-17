@@ -2,7 +2,15 @@
 # https://kaleidoescape.github.io/decorated-plugins/
 import os
 from pathlib import Path
-from typing import Any, Callable, Iterator, NamedTuple, Optional, Protocol, runtime_checkable
+from typing import (
+    Any,
+    Callable,
+    Iterator,
+    NamedTuple,
+    Optional,
+    Protocol,
+    runtime_checkable,
+)
 
 from ..io import gather_files
 from .core import Palette
@@ -108,7 +116,7 @@ def write(file: Path, palette: Palette) -> None:
     if not file.suffix:
         raise FileTypeError(file)
     for _, writer in WRITERS.items():
-        if file.suffix == writer.suffix: # Here lies the problem with scaled png
+        if file.suffix == writer.suffix:  # Here lies the problem with scaled png
             file.parent.mkdir(parents=True, exist_ok=True)  # Ensure folders
             writer.write(id, file, palette)
             return

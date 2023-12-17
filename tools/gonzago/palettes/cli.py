@@ -7,9 +7,19 @@ from rich.table import Table
 
 from ..config import CONFIG
 from .core import Palette, generate_default_palette
-from .io import get_readers, get_writer_from_id, read, get_writers, write, get_writer_path, find_palettes
+from .io import (
+    get_readers,
+    get_writer_from_id,
+    read,
+    get_writers,
+    write,
+    get_writer_path,
+    find_palettes,
+)
 
-PALETTES_SOURCE_DIR: Path = Path(CONFIG["paths"]["src"]).joinpath("./palettes").resolve()
+PALETTES_SOURCE_DIR: Path = (
+    Path(CONFIG["paths"]["src"]).joinpath("./palettes").resolve()
+)
 PALETTES_DST_DIR: Path = Path(CONFIG["paths"]["dst"]).joinpath("palettes").resolve()
 
 
@@ -41,7 +51,9 @@ def list_readers():
 
 @app.command("new")
 def new(
-    file: Path = "new_palette_template.yaml", title: str = "New Palette Template", format: str = "template"
+    file: Path = "new_palette_template.yaml",
+    title: str = "New Palette Template",
+    format: str = "template",
 ) -> None:
     """
     Create new palette template.
@@ -188,7 +200,7 @@ def publish(
     #     console.print(f"No supported formats!", style="yellow")
     #     return
 
-    #formats = [w.id for w in get_writers()]
+    # formats = [w.id for w in get_writers()]
 
     for file in find_palettes(src):
         rel_path: Path = file.relative_to(src)
@@ -212,7 +224,7 @@ def publish(
                 export_path: Path = get_writer_path(id, export_base_path)
                 export_rel_path: Path = export_path.relative_to(dst_dir)
                 get_writer_from_id(id).write(id, export_path, palette)
-                #write(export_path, palette)
+                # write(export_path, palette)
                 console.print(f"Exported '[i]{export_rel_path.as_posix()}[/i]'")
             except Exception as e:
                 console.print(
@@ -223,6 +235,7 @@ def publish(
                 )
                 continue
     console.print("Done")
+
 
 # https://www.geeksforgeeks.org/template-class-in-python/
 # https://wiki.python.org/moin/Templating

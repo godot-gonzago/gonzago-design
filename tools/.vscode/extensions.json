@@ -5,6 +5,7 @@
       "ms-python.vscode-pylance",
       "ms-python.isort",
       "njpwerner.autodocstring",
+      "ms-python.black-formatter",
       "yzhang.markdown-all-in-one",
       "davidanson.vscode-markdownlint",
       "redhat.vscode-yaml"
