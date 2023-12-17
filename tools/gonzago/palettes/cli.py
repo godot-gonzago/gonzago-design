@@ -245,7 +245,7 @@ def publish(
                 continue
     console.print("Done")
 
-
+# https://www.geeksforgeeks.org/template-class-in-python/
 @app.command("readme")
 def build_readme(src_dir: Path = PALETTES_SOURCE_DIR, dst_dir: Path = PALETTES_DST_DIR):
     """
