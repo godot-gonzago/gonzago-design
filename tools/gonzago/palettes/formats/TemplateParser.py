@@ -22,7 +22,7 @@ def read(file: Path) -> Palette:
 def write(id: str, file: Path, palette: Palette) -> None:
     if not file.match(PATTERN):
         raise TypeError(f"{file} is not a valid template path")
-    data: dict = Palette.model_dump(mode="json")
+    data: dict = palette.model_dump(mode="json")
     file.parent.mkdir(parents=True, exist_ok=True)  # Ensure folders
     with file.open("w") as stream:
         yaml.safe_dump(data, stream, sort_keys=False)
