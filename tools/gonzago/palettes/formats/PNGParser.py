@@ -53,13 +53,13 @@ def write(id: str, file: Path, palette: Palette, scale: int = 1) -> None:
 
     # Test here https://www.metadata2go.com/view-metadata
     info: PngInfo = PngInfo()
-    info.add_text("name", palette.name)
+    info.add_text("name", palette.title)
     if palette.description:
         info.add_text("description", palette.description)
     if palette.version:
         info.add_text("version", str(palette.version))
-    if palette.author:
-        info.add_text("author", palette.author)
+    if palette.creator:
+        info.add_text("author", palette.creator)
     if palette.source:
         info.add_text(
             "source", palette.source

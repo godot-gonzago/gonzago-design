@@ -113,7 +113,7 @@ def list_palettes(dir: Path = PALETTES_SOURCE_DIR) -> None:
                 template = read(file)
                 table.add_row(
                     str(rel_path),
-                    template.name,
+                    template.title,
                     template.description if template.description else "",
                     str(len(template.colors)),
                 )

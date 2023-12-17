@@ -17,15 +17,15 @@ def read(file: Path) -> Palette:
 def write(id: str, file: Path, palette: Palette) -> None:
     with file.open("w") as f:
         f.write("GIMP Palette\n")
-        f.write(f"Name: {palette.name}\n")
+        f.write(f"Name: {palette.title}\n")
         f.write(f"Columns: 0\n")
 
         if palette.description:
             f.write(f"# Description: {palette.description}\n")
         if palette.version:
             f.write(f"# Version: {palette.version}\n")
-        if palette.author:
-            f.write(f"# Author: {palette.author}\n")
+        if palette.creator:
+            f.write(f"# Author: {palette.creator}\n")
         if palette.source:
             f.write(f"# Source: {palette.source}\n")
 

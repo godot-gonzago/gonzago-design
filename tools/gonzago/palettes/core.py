@@ -1,38 +1,63 @@
-from typing import List, Optional
+from datetime import date, datetime
+from typing import List, Optional, Set
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field, conlist, constr
 from pydantic_extra_types.color import Color
 
 from ..pydantic import Version
 
 
 class PaletteEntry(BaseModel):
-    name: str
+    name: constr(min_length=1)
     description: Optional[str] = None
     color: Color
 
 
 # Dublin Core Metadata https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-3
-# "title" = Gonzago Framework Editor Icon
-# "description" = A skull with a crown in reference to The Murder of Gonzago
-# "identifier" = gonzago.palettes.name
-# "subject" = palette, gonzago
-# "date" = 2023-11-19
-# "source" = https://github.com/godot-gonzago
-# "relation" = http://asdffasd same as source before
-# "language" = en
-# "creator" = David Krummenacher
-# "contributor" = David Krummenacher, David Krummenacher
-# "publisher" = Gonzago Framework
-# "rights" = Copyright (c) 2023 David Krummenacher and Gonzago Framework contributors
-# "coverage" = ???
-# "license" = http://creativecommons.org/licenses/by/4.0/
-
-
 class Palette(BaseModel):
-    name: str
+    title: constr(min_length=1)
     description: Optional[str] = None
+    identifier: Optional[str] = None
     version: Optional[Version] = None
-    author: Optional[str] = None
+    date: Optional[date] = None # datetime.now()
+    language: Optional[str] = None
+    subject: Optional[Set[str]] = None
+    creator: Optional[str] = None
+    contributor: Optional[List[str]] = None
+    publisher: Optional[str] = None
     source: Optional[str] = None
-    colors: List[PaletteEntry]
+    relation: Optional[str] = None
+    rights: Optional[str] = None
+    license: Optional[str] = None
+    coverage: Optional[str] = None
+    colors: conlist(PaletteEntry, min_length=1)
+
+
+def get_default_palette(title: str) -> Palette:
+    return Palette(
+        title = title if title and len(title) > 0 else "New Palette Template",
+        description = "A brand new palette template.",
+        identifier = "gonzago.palettes.new",
+        version = Version(1, 0, 0),
+        date = datetime.now(),
+        language = "en",
+        subject = ["gonzago", "palette", "new"],
+        creator = "David Krummenacher",
+        contributor = ["David Krummenacher"],
+        publisher = "Gonzago Framework",
+        source = "https://github.com/godot-gonzago",
+        rights = "Copyright (c) 2023 David Krummenacher and Gonzago Framework contributors",
+        license = "http://creativecommons.org/licenses/by/4.0/",
+        colors = [
+            PaletteEntry(
+                name="Black",
+                description="Black is an achromatic color.",
+                color=Color("black")
+            ),
+            PaletteEntry(
+                name="White",
+                description="White is an achromatic color.",
+                color=Color("white")
+            )
+        ]
+    )

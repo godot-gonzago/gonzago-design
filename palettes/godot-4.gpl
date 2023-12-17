@@ -3,7 +3,6 @@ Name: Godot 4 Editor
 Columns: 0
 # Description: Colors based on default editor theme of Godot Engine 4. These colors are replaced by Godot's SVG color mapping based on the chosen theme.
 # Version: 1.0.0
-# Source: https://github.com/godotengine/godot/blob/4.0/editor/editor_themes.cpp
 #
 71	140	191	Godot Blue
 65	64	66	Godot Gray
