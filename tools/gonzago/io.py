@@ -1,20 +1,28 @@
 import os
 from pathlib import Path
-from typing import Callable, Iterator, Optional
+from typing import Callable, Iterator
 
 
-# _PathMatch = [Callable[[Path], bool] | str | None]
-PathMatch = Optional[Callable[[Path], bool]]
+PathMatcher = Callable[[Path], bool]
+PathSelector = [PathMatcher | str | None]
 
 
-def default_dir_match(path: Path) -> bool:
-    return path.match("[!._]*")
+def check_path_selector(selector: PathSelector, path: Path) -> bool:
+    match selector:
+        case None:
+            return True
+        case str():
+            return path.match(selector)
+        case _:
+            if selector is PathMatcher:
+                return selector(path)
+            return True
 
 
 def gather_files(
     root: Path,
-    file_match: PathMatch = None,
-    dir_match: PathMatch = default_dir_match,
+    file_match: PathSelector = None,
+    dir_match: PathSelector = "[!._]*",
     max_depth: int = -1,
 ) -> Iterator[Path]:
     root = root.resolve()
@@ -39,16 +47,11 @@ def gather_files(
         if dir_match != None:
             for name in dirs:
                 path: Path = root.joinpath(current, name)
-                # if (
-                #     dir_match is str and not path.match(dir_match)
-                #     or not dir_match(path)
-                # ):
-                #     dirs.remove(name)
-                if not dir_match(path):
+                if not check_path_selector(dir_match, path):
                     dirs.remove(name)
 
         for name in files:
             path: Path = root.joinpath(current, name)
-            if file_match and not file_match(path):
+            if not check_path_selector(file_match, path):
                 continue
             yield path
