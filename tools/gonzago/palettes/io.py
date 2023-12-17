@@ -9,42 +9,6 @@ from .core import Palette
 from .exceptions import FileTypeError, NameConflictError
 
 
-class Format(NamedTuple):
-    id: str
-    description: str
-    extentions: set[str]
-
-
-@runtime_checkable
-class FileRead(Protocol):
-    def __call__(self, path: Path, *args: Any) -> Palette:
-        ...
-
-
-@runtime_checkable
-class FileWrite(Protocol):
-    def __call__(self, path: Path, palette: Palette, *args: Any) -> None:
-        ...
-
-
-class FileReader(NamedTuple):
-    id: str
-    read: FileRead
-    args: tuple[Any, ...]
-
-
-class FileWriter(NamedTuple):
-    id: str
-    write: FileWrite
-    args: tuple[Any, ...]
-
-
-_FORMATS = dict[str, Format]()
-_EXTENTIONS = dict[str, set[str]]()
-_READERS = dict[str, FileReader]()
-_WRITERS = dict[str, FileWriter]()
-
-
 Read = Callable[[Path], Palette]
 
 
@@ -144,7 +108,7 @@ def write(file: Path, palette: Palette) -> None:
     if not file.suffix:
         raise FileTypeError(file)
     for _, writer in WRITERS.items():
-        if file.suffix == writer.suffix:
+        if file.suffix == writer.suffix: # Here lies the problem with scaled png
             file.parent.mkdir(parents=True, exist_ok=True)  # Ensure folders
             writer.write(id, file, palette)
             return

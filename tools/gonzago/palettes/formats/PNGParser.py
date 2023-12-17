@@ -16,7 +16,7 @@ def read(file: Path) -> Palette:
     raise NotImplementedError()
 
 
-def write(id: str, file: Path, palette: Palette) -> None:
+def write(id: str, file: Path, palette: Palette, scale: int = 1) -> None:
     """
     PNG
 
@@ -48,7 +48,6 @@ def write(id: str, file: Path, palette: Palette) -> None:
     # meta["coverage"] = metadata.findtext("rdf:RDF/cc:Work/dc:coverage", namespaces=namespaces)
     # meta["license"] = license.get("{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource")
 
-    scale: int = 1
     color_count: int = len(palette.colors)
     image: Image = Image.new("RGB", (color_count * scale, scale))
 
@@ -77,5 +76,15 @@ def write(id: str, file: Path, palette: Palette) -> None:
     image.save(file, "PNG", pnginfo=info)
 
 
+def write_8(id: str, file: Path, palette: Palette) -> None:
+    write(id, file, palette, 8)
+
+
+def write_32(id: str, file: Path, palette: Palette) -> None:
+    write(id, file, palette, 32)
+
+
 register_reader(ID, PATTERN, DESCRIPTION, read)
 register_writer(ID, SUFFIX, DESCRIPTION, write)
+#register_writer("png-8", ".x8.png", DESCRIPTION, write_8)
+#register_writer("png-32", ".x32.png", DESCRIPTION, write_32)
