@@ -94,6 +94,7 @@ def main(
 
     Command line interface providing tools to automate Gonzago design asset production.
     """
+    # TODO: Check if config exists otherwise force init?
     return
 
 
