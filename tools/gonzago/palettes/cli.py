@@ -246,6 +246,8 @@ def publish(
     console.print("Done")
 
 # https://www.geeksforgeeks.org/template-class-in-python/
+# https://wiki.python.org/moin/Templating
+# https://jinja.palletsprojects.com/en/3.1.x/
 @app.command("readme")
 def build_readme(src_dir: Path = PALETTES_SOURCE_DIR, dst_dir: Path = PALETTES_DST_DIR):
     """
