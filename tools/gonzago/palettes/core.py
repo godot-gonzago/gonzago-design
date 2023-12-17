@@ -78,6 +78,8 @@ def generate_default_palette(title: str, depth: GenerationDepth = GenerationDept
 
     palette.subject = ["gonzago", "palette", "new"]
     palette.contributor = ["David Krummenacher"]
+    palette.relation = "https://www.w3.org/wiki/CSS/Properties/color/keywords"
     palette.rights = "Copyright (c) 2023 David Krummenacher and Gonzago Framework contributors"
     palette.license = "http://creativecommons.org/licenses/by/4.0/"
+    palette.coverage = "Global"
     return palette
