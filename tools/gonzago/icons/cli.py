@@ -9,6 +9,7 @@ from scour import scour
 from rich.console import Console
 
 from ..config import CONFIG
+from ..io import gather_files
 
 
 ICONS_SOURCE_DIR: Path = Path(CONFIG["paths"]["src"]).joinpath("./engine/editor_icons").resolve()
@@ -54,24 +55,12 @@ def optimize_svg(rel_path: Path, scour_options=_SCOUR_OPTIONS) -> None:
     scour.start(scour_options, input, output)
 
 
-def find_icons(root: Path) -> Iterator[Path]:
-    root = root.resolve()
-    if not root.exists():
-        raise StopIteration
+def _match_icon(file: Path) -> bool:
+    return file.match("*.svg")
 
-    if root.is_file():
-        if root.match(ICON_FILE_PATTERN):
-            yield root
-        raise StopIteration
 
-    for current, dirs, files in os.walk(root):
-        for name in dirs:
-            if name.startswith("_"):
-                dirs.remove(name)
-        for name in files:
-            if name.endswith(".svg"):
-                path: Path = root.joinpath(current, name)
-                yield path
+def find_icons(root: Path, max_depth: int = -1) -> Iterator[Path]:
+    return gather_files(root, _match_icon, max_depth=max_depth)
 
 
 def get_meta_data(file: Path) -> dict[str, Any]:
@@ -189,6 +178,13 @@ def get_meta_data(file: Path) -> dict[str, Any]:
 # ```
 #
 # </details>
+
+@app.command("ls")
+def test_ls():
+    for file in find_icons(ICONS_SOURCE_DIR):
+        rel_path: Path = file.relative_to(ICONS_SOURCE_DIR)
+        console.print(f"{rel_path}")
+
 
 @app.command("meta")
 def test_meta_data():

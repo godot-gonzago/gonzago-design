@@ -4,6 +4,7 @@ import os
 from pathlib import Path
 from typing import Callable, Iterator, NamedTuple, Optional
 
+from ..io import gather_files
 from .core import Palette
 from .exceptions import FileTypeError, NameConflictError
 
@@ -113,59 +114,6 @@ def write(file: Path, palette: Palette) -> None:
     raise FileTypeError(file)
 
 
-# TODO: Externalize (can also be used for icons etc.)
-
-# _PathMatch = [Callable[[Path], bool] | str | None]
-_PathMatch = Optional[Callable[[Path], bool]]
-
-
-def _default_dir_match(path: Path) -> bool:
-    return not path.match("[!._]*")
-
-
-def _gather_files(
-    root: Path,
-    file_match: _PathMatch = None,
-    dir_match: _PathMatch = _default_dir_match,
-    max_depth: int = -1,
-) -> Iterator[Path]:
-    root = root.resolve()
-    if not root.exists():
-        raise FileNotFoundError(root)
-
-    if root.is_file():
-        if file_match and not file_match(root):
-            raise TypeError(root)
-        else:
-            yield root
-        raise StopIteration
-
-    depth_check: bool = max_depth > -1
-    depth: int = 0
-
-    for current, dirs, files in os.walk(root):
-        if depth_check and depth >= max_depth:
-            dirs.clear()
-        depth += 1
-
-        if dir_match != None:
-            for name in dirs:
-                path: Path = root.joinpath(current, name)
-                # if (
-                #     dir_match is str and not path.match(dir_match)
-                #     or not dir_match(path)
-                # ):
-                #     dirs.remove(name)
-                if not dir_match(path):
-                    dirs.remove(name)
-
-        for name in files:
-            path: Path = root.joinpath(current, name)
-            if file_match and not file_match(path):
-                continue
-            yield path
-
-
 def _match_reader(file: Path) -> bool:
     for _, reader in READERS.items():
         if file.match(reader.pattern):
@@ -174,7 +122,7 @@ def _match_reader(file: Path) -> bool:
 
 
 def find_palettes(root: Path, max_depth: int = -1) -> Iterator[Path]:
-    return _gather_files(root, _match_reader, max_depth=max_depth)
+    return gather_files(root, _match_reader, max_depth=max_depth)
 
 
 # TODO: For check function create validation function that returns validation results.
