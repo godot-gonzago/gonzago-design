@@ -1,5 +1,6 @@
 from pathlib import Path
 from shutil import rmtree
+import sys
 from tomlkit import TOMLDocument, dumps, parse
 
 import typer
@@ -20,14 +21,20 @@ def load() -> TOMLDocument:
 
     dst: Path = Path(__file__).joinpath("../../..").resolve()
     src: Path = dst.joinpath("source").resolve()
-    inkscape: str = ""
-    # Linux /usr/lib/inkscape
-    # Win %ProgramFiles%/Inkscape/bin/inkscape.exe
-    # OSX /Applications/Inkscape.app/Contents/MacOS/inkscape
-    blender: str = ""
-    # Linux /usr/lib/blender
-    # Win %ProgramFiles%/Blender Foundation/Blender 4.0/blender.exe
-    # OSX /Applications/Blender/blender.app/Contents/MacOS/blender
+    inkscape: str = "inkscape"
+    if sys.platform.startswith('linux'):
+        inkscape = "/usr/lib/inkscape"
+    elif sys.platform.startswith('win32'):
+        inkscape = "%ProgramFiles%/Inkscape/bin/inkscape.exe"
+    elif sys.platform.startswith('darwin'):
+        inkscape = "/Applications/Inkscape.app/Contents/MacOS/inkscape"
+    blender: str = "blender"
+    if sys.platform.startswith('linux'):
+        blender = "/usr/lib/blender"
+    elif sys.platform.startswith('win32'):
+        blender = "%ProgramFiles%/Blender Foundation/Blender 4.0/blender.exe"
+    elif sys.platform.startswith('darwin'):
+        blender = "/Applications/Blender/blender.app/Contents/MacOS/blender"
     return parse((
         '[paths]\n'
         f'dst = "{dst.as_posix()}"\n'
