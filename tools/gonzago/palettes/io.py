@@ -8,6 +8,19 @@ from ..io import gather_files
 from .core import Palette
 from .exceptions import FileTypeError, NameConflictError
 
+
+class Format(NamedTuple):
+    id: str
+    description: str
+    extentions: set(str)
+
+
+_FORMATS = dict[str, Format]()
+_EXTENTIONS = dict[str, set(str)]()
+#_READERS = dict[str, Reader]()
+#_WRITERS = dict[str, Writer]()
+
+
 Read = Callable[[Path], Palette]
 
 
