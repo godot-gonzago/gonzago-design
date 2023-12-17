@@ -1,6 +1,9 @@
+from pathlib import Path
 from rich import print
 from typing import Annotated, Optional
 import typer
+
+from .config import CONFIG, CONFIG_FILE, clear, save
 from . import (
     CONFIG_FILE_PATH,
     SOURCE_DIR_PATH,
@@ -22,13 +25,49 @@ app.add_typer(palettes.app, name="palettes")
 app.add_typer(presskit.app, name="presskit")
 
 
+@app.command("uninit")
+def uninit() -> None:
+    """
+    Uninitialize Gonzago Design Tools.
+    """
+    clear()
+
+
+@app.command("open_config")
+def open_config() -> None:
+    """
+    Open Gonzago Design Tools config.
+    """
+    if not CONFIG_FILE.is_file():
+        print("Config does not exist!")
+        typer.Abort()
+        return
+    print(f"Opening {CONFIG_FILE.as_posix()}")
+    typer.launch(str(CONFIG_FILE), locate=True)
+
+
 @app.command("init")
 def init() -> None:
     """
     Initialize Gonzago Design Tools.
     """
-    print(CONFIG_FILE_PATH)
-    print(SOURCE_DIR_PATH)
+    src: str = CONFIG["paths"]["src"]
+    if not src or not typer.confirm(f"Source files path already set to '{src}'.\nDo you wish to keep it?"):
+        CONFIG["paths"]["src"] = typer.prompt("Source files path")
+
+    dst: str = CONFIG["paths"]["dst"]
+    if not dst or not typer.confirm(f"Output files path already set to '{dst}'.\nDo you wish to keep it?"):
+        CONFIG["paths"]["dst"] = typer.prompt("Output files path")
+
+    inkscape: str = CONFIG["inkscape"]["path"]
+    if not inkscape or not typer.confirm(f"Inkscape path already set to '{inkscape}'.\nDo you wish to keep it?"):
+        CONFIG["inkscape"]["path"] = typer.prompt("Inkscape path")
+
+    blender: str = CONFIG["blender"]["path"]
+    if not blender or not typer.confirm(f"Blender path already set to '{blender}'.\nDo you wish to keep it?"):
+        CONFIG["blender"]["path"] = typer.prompt("Blender path")
+
+    save(CONFIG)
 
 
 def _version_callback(value: bool) -> None:
