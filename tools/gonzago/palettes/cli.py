@@ -7,7 +7,7 @@ from rich.table import Table
 
 from ..config import CONFIG
 from .core import Palette
-from .io import get_readers, read, get_writers, write, get_writer_path, find_palettes
+from .io import get_readers, get_writer_from_id, read, get_writers, write, get_writer_path, find_palettes
 
 PALETTES_SOURCE_DIR: Path = Path(CONFIG["paths"]["src"]).joinpath("./palettes").resolve()
 PALETTES_DST_DIR: Path = Path(CONFIG["paths"]["dst"]).joinpath("palettes").resolve()
@@ -233,7 +233,8 @@ def publish(
             try:
                 export_path: Path = get_writer_path(id, export_base_path)
                 export_rel_path: Path = export_path.relative_to(dst_dir)
-                write(export_path, palette)
+                get_writer_from_id(id).write(id, export_path, palette)
+                #write(export_path, palette)
                 console.print(f"Exported '[i]{export_rel_path.as_posix()}[/i]'")
             except Exception as e:
                 console.print(

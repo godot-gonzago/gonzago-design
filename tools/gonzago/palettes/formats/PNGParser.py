@@ -86,5 +86,5 @@ def write_32(id: str, file: Path, palette: Palette) -> None:
 
 register_reader(ID, PATTERN, DESCRIPTION, read)
 register_writer(ID, SUFFIX, DESCRIPTION, write)
-#register_writer("png-8", ".x8.png", DESCRIPTION, write_8)
-#register_writer("png-32", ".x32.png", DESCRIPTION, write_32)
+register_writer("png-8", ".x8.png", DESCRIPTION, write_8)
+register_writer("png-32", ".x32.png", DESCRIPTION, write_32)
