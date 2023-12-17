@@ -1,4 +1,4 @@
-from datetime import date, datetime
+from datetime import date as Date
 from typing import List, Optional, Set
 
 from pydantic import BaseModel, Field, conlist, constr
@@ -19,7 +19,7 @@ class Palette(BaseModel):
     description: Optional[str] = None
     identifier: Optional[str] = None
     version: Optional[Version] = None
-    date: Optional[date] = None # datetime.now()
+    date: Optional[Date] = None
     language: Optional[str] = None
     subject: Optional[Set[str]] = None
     creator: Optional[str] = None
@@ -33,13 +33,16 @@ class Palette(BaseModel):
     colors: conlist(PaletteEntry, min_length=1)
 
 
-def get_default_palette(title: str) -> Palette:
+def generate_default_palette(title: str) -> Palette:
+    if not title:
+        title = "New Palette Template"
+
     return Palette(
-        title = title if title and len(title) > 0 else "New Palette Template",
+        title = title,
         description = "A brand new palette template.",
         identifier = "gonzago.palettes.new",
         version = Version(1, 0, 0),
-        date = datetime.now(),
+        date = Date.today(),
         language = "en",
         subject = ["gonzago", "palette", "new"],
         creator = "David Krummenacher",

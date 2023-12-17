@@ -6,7 +6,7 @@ from rich.console import Console
 from rich.table import Table
 
 from ..config import CONFIG
-from .core import Palette
+from .core import Palette, generate_default_palette
 from .io import get_readers, get_writer_from_id, read, get_writers, write, get_writer_path, find_palettes
 
 PALETTES_SOURCE_DIR: Path = Path(CONFIG["paths"]["src"]).joinpath("./palettes").resolve()
@@ -41,49 +41,27 @@ def list_readers():
 
 @app.command("new")
 def new(
-    file: Path = "new_palette_template.yaml", name: str = "New Palette Template"
+    file: Path = "new_palette_template.yaml", title: str = "New Palette Template", format: str = "template"
 ) -> None:
     """
     Create new palette template.
     """
-    # if not file.is_absolute():
-    #     file = PALETTES_SOURCE_DIR.joinpath(file)
-    # file = file.resolve()
+    if not file.is_absolute():
+        file = PALETTES_SOURCE_DIR.joinpath(file)
+    file = file.resolve()
+
     # if not file.match(TEMPLATE_FILE_PATTERN):
     #     console.print(f"[i]{file}[/i] is not a valid template path!", style="red")
     #     return
 
-    # if file.exists():
-    #     typer.confirm("File already exists! Override?", abort=True)
+    if file.exists():
+        typer.confirm("File already exists! Override?", abort=True)
 
-    # data: dict = {
-    #     "name": name if name and len(name) > 0 else "New Palette Template",
-    #     "description": "A brand new palette template.",
-    #     "version": Version(1, 0, 0),
-    #     "author": "David Krummenacher and Gonzago Framework contributors",
-    #     "source": "https://github.com/godot-gonzago/gonzago-design",
-    #     "colors": [
-    #         {
-    #             "name": "Black",
-    #             "description": "Black is an achromatic color.",
-    #             "color": Color("black"),
-    #         },
-    #         {
-    #             "name": "White",
-    #             "description": "White is an achromatic color.",
-    #             "color": Color("white"),
-    #         },
-    #     ],
-    # }
+    palette: Palette = generate_default_palette(title)
+    writer = get_writer_from_id(format)
+    writer.write(format, file, palette)
 
-    # template: Template = Template.model_validate(data)
-    # json: dict = Template.model_dump(template, mode="json")
-
-    # file.parent.mkdir(parents=True, exist_ok=True)  # Ensure folders
-    # with file.open("w") as stream:
-    #     yaml.safe_dump(json, stream, sort_keys=False)
-    # console.print(f"Created template file: [i]{file}[/i]", style="green")
-    pass
+    console.print(f"Created template file: [i]{file}[/i]", style="green")
 
 
 @app.command("check")
