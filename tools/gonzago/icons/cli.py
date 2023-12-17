@@ -55,12 +55,8 @@ def optimize_svg(rel_path: Path, scour_options=_SCOUR_OPTIONS) -> None:
     scour.start(scour_options, input, output)
 
 
-def _match_icon(file: Path) -> bool:
-    return file.match("*.svg")
-
-
 def find_icons(root: Path, max_depth: int = -1) -> Iterator[Path]:
-    return gather_files(root, _match_icon, max_depth=max_depth)
+    return gather_files(root, "*.svg", max_depth=max_depth)
 
 
 def get_meta_data(file: Path) -> dict[str, Any]:
