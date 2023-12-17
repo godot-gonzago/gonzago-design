@@ -3,11 +3,11 @@ from pathlib import Path
 import typer
 from rich.console import Console
 
-from .. import BASE_DIR_PATH, SOURCE_DIR_PATH
+from ..config import CONFIG
 
 
-PRESSKIT_SOURCE_DIR: Path = SOURCE_DIR_PATH.joinpath("./engine/presskit").resolve()
-PRESSKIT_DST_DIR: Path = BASE_DIR_PATH.joinpath("presskit").resolve()
+PRESSKIT_SOURCE_DIR: Path = Path(CONFIG["paths"]["src"]).joinpath("./engine/presskit").resolve()
+PRESSKIT_DST_DIR: Path = Path(CONFIG["paths"]["dst"]).joinpath("presskit").resolve()
 
 
 app = typer.Typer()

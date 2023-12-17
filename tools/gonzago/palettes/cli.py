@@ -5,12 +5,12 @@ import typer
 from rich.console import Console
 from rich.table import Table
 
-from .. import BASE_DIR_PATH, SOURCE_DIR_PATH
+from ..config import CONFIG
 from .core import Palette
 from .io import get_readers, read, get_writers, write, get_writer_path, find_palettes
 
-PALETTES_SOURCE_DIR: Path = SOURCE_DIR_PATH.joinpath("./palettes").resolve()
-PALETTES_DST_DIR: Path = BASE_DIR_PATH.joinpath("palettes").resolve()
+PALETTES_SOURCE_DIR: Path = Path(CONFIG["paths"]["src"]).joinpath("./palettes").resolve()
+PALETTES_DST_DIR: Path = Path(CONFIG["paths"]["dst"]).joinpath("palettes").resolve()
 
 
 app = typer.Typer()

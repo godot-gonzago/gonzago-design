@@ -5,8 +5,6 @@ import typer
 
 from .config import CONFIG, CONFIG_FILE, clear, save
 from . import (
-    CONFIG_FILE_PATH,
-    SOURCE_DIR_PATH,
     __app_name__,
     __version__,
     application,

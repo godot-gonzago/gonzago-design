@@ -3,11 +3,11 @@ from pathlib import Path
 import typer
 from rich.console import Console
 
-from .. import BASE_DIR_PATH, SOURCE_DIR_PATH
+from ..config import CONFIG
 
 
-ASSETS_SOURCE_DIR: Path = SOURCE_DIR_PATH.joinpath("./assets").resolve()
-ASSETS_DST_DIR: Path = BASE_DIR_PATH.joinpath("assets").resolve()
+ASSETS_SOURCE_DIR: Path = Path(CONFIG["paths"]["src"]).joinpath("./assets").resolve()
+ASSETS_DST_DIR: Path = Path(CONFIG["paths"]["dst"]).joinpath("assets").resolve()
 
 
 app = typer.Typer()
