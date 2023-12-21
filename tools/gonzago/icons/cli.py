@@ -1,3 +1,4 @@
+from fnmatch import fnmatch
 import os
 import string
 import xml.etree.ElementTree as ET
@@ -205,59 +206,105 @@ def publish():
             status.update(f"Exporting [i]{file}[/i]")
         console.print("Done")
 
+@app.command("alt_readme")
+def _read_me():
+    ICONS_PER_ROW:int = 2
+    COLUMNS_PER_ICON:int = 2
+
+    lines: list[str] = [
+        '# Gonzago Framework Editor Icons',
+        '',
+        'Editor icons for use in Gonzago Framework',
+        '',
+        '## Icons',
+        ''
+        '<table>'
+    ]
+
+    for current, dirs, files in os.walk(ICONS_SOURCE_DIR):
+        for name in dirs:
+            if not fnmatch(name, "[!._]*"):
+                dirs.remove(name)
+
+        file_paths: list[Path] = []
+        for name in files:
+            if fnmatch(name, "*.svg"):
+                file_path: Path = Path(current, name)
+                file_paths.append(file_path)
+
+        files_count: int = len(file_paths)
+        if files_count > 0:
+            folder_path: Path = ICONS_SOURCE_DIR.joinpath(current)
+            folder_rel_path: Path = folder_path.relative_to(ICONS_SOURCE_DIR)
+            folder_name: str = string.capwords(folder_rel_path.as_posix().replace("/", "."), ".") if folder_rel_path.name else "Gonzago"
+            lines.extend([
+                f'  <thead><tr><th align="left" colspan="{str(ICONS_PER_ROW * COLUMNS_PER_ICON)}" width="2048">{folder_name}</th></tr></thead>',
+                '  <tbody>'
+            ])
+
+            for row_start_idx in range(0, files_count, ICONS_PER_ROW):
+                row_end_idx: int = row_start_idx + ICONS_PER_ROW
+                lines.append(
+                    '    <tr>'
+                )
+
+                for icon_idx in range(row_start_idx, min(row_end_idx, files_count)):
+                    full_path: Path = ICONS_SOURCE_DIR.joinpath(file_paths[icon_idx]).resolve()
+                    rel_path: Path = full_path.relative_to(ICONS_SOURCE_DIR)
+                    meta: dict[str] = get_meta_data(full_path)
+
+                    lines.extend([
+                        f'      <td><img src="{Path("/icons").joinpath(rel_path).as_posix()}" width="24" height="24"></td>',
+                        '      <td>',
+                        '        <p>',
+                        f'          {meta.get('title', rel_path.stem)}'
+                    ])
+                    relation: str = meta.get("relation")
+                    if relation:
+                        lines.append(
+                            f'          <a href="{relation}" target="_blank">:pushpin:</a>'
+                        )
+                    subject: list[str] = meta["subject"]
+                    if subject:
+                        if "editor" in subject:
+                            subject.remove("editor")
+                        if "icon" in subject:
+                            subject.remove("icon")
+                        if len(subject) > 0:
+                            lines.append(
+                                f'          <br><var>{", ".join(subject)}</var>'
+                            )
+                    lines.extend([
+                        '        </p>',
+                        '      </td>'
+                    ])
+
+                for _ in range(max(row_start_idx, files_count), row_end_idx):
+                    lines.append(
+                        f'      <td colspan="{str(COLUMNS_PER_ICON)}"></td>'
+                    )
+
+                lines.append(
+                    '    </tr>'
+                )
+
+
+            lines.append(
+            '  </tbody>'
+            )
+
+    lines.extend([
+        '</table>',
+        ''
+    ])
+
+    readme_path: Path = ICONS_DST_DIR.joinpath("README.md").resolve()
+    with readme_path.open("w") as readme_file:
+        readme_file.writelines('\n'.join(lines))
+
 
 @app.command("readme")
 def build_readme():
-#    items_per_row:int = 2
-#    columns_per_item:int = 2
-#
-#    lines: list[str] = [
-#        '# Gonzago Framework Editor Icons',
-#        '',
-#        'Editor icons for use in Gonzago Framework',
-#        '',
-#        '## Icons',
-#        ''
-#        '<table>'
-#    ]
-#
-#    lines.extend([
-#        f'  <thead><tr><th align="left" colspan="{str(items_per_row * columns_per_item)}" width="2048">{folder_name}</th></tr></thead>',
-#        '  <tbody>'
-#    ])
-#
-#    lines.append(
-#        '    <tr>'
-#    )
-#
-#    lines.extend([
-#        '      <td><img src="{image_path}" width="24" height="24"></td>',
-#        '      <td>',
-#        '        <p>',
-#        '          {image_title}',
-#        '          <a href="{image_relation}" target="_blank">:pushpin:</a>',
-#        '          <br><var>{image_subjects}</var>',
-#        '        </p>',
-#        '      </td>'
-#    ])
-#
-#    lines.append(
-#        f'      <td colspan="{str(columns_per_item)}"></td>'
-#    )
-#
-#    lines.append(
-#        '    </tr>'
-#    )
-#
-#    lines.append(
-#        '  </tbody>'
-#    )
-#
-#    lines.extend([
-#        '</table>',
-#        ''
-#    ])
-
     console.print(f"Building readme...")
     with console.status("Building readme...") as status:
         path: Path = ICONS_DST_DIR.joinpath("README.md").resolve()
@@ -338,6 +385,15 @@ def build_readme():
             )
 
         console.print("Done")
+
+
+# TODO: COPYRIGHT.txt https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+# CHANGELOG.md
+# CONTRIBUTING.md
+# AUTHORS.md
+# SUPPORT.md
+# ACKNOWLEDGMENTS.md
+# https://github.com/kmindi/special-files-in-repository-root/blob/master/README.md
 
 
 @app.callback(no_args_is_help=True)
