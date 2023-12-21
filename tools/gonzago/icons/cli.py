@@ -208,6 +208,56 @@ def publish():
 
 @app.command("readme")
 def build_readme():
+#    items_per_row:int = 2
+#    columns_per_item:int = 2
+#
+#    lines: list[str] = [
+#        '# Gonzago Framework Editor Icons',
+#        '',
+#        'Editor icons for use in Gonzago Framework',
+#        '',
+#        '## Icons',
+#        ''
+#        '<table>'
+#    ]
+#
+#    lines.extend([
+#        f'  <thead><tr><th align="left" colspan="{str(items_per_row * columns_per_item)}" width="2048">{folder_name}</th></tr></thead>',
+#        '  <tbody>'
+#    ])
+#
+#    lines.append(
+#        '    <tr>'
+#    )
+#
+#    lines.extend([
+#        '      <td><img src="{image_path}" width="24" height="24"></td>',
+#        '      <td>',
+#        '        <p>',
+#        '          {image_title}',
+#        '          <a href="{image_relation}" target="_blank">:pushpin:</a>',
+#        '          <br><var>{image_subjects}</var>',
+#        '        </p>',
+#        '      </td>'
+#    ])
+#
+#    lines.append(
+#        f'      <td colspan="{str(columns_per_item)}"></td>'
+#    )
+#
+#    lines.append(
+#        '    </tr>'
+#    )
+#
+#    lines.append(
+#        '  </tbody>'
+#    )
+#
+#    lines.extend([
+#        '</table>',
+#        ''
+#    ])
+
     console.print(f"Building readme...")
     with console.status("Building readme...") as status:
         path: Path = ICONS_DST_DIR.joinpath("README.md").resolve()

@@ -69,7 +69,7 @@ def new(
 
     palette: Palette = generate_default_palette(title)
     writer = get_writer_from_id(format)
-    writer.write(format, file, palette)
+    writer.write(palette, file)
 
     console.print(f"Created template file: [i]{file}[/i]", style="green")
 
@@ -221,8 +221,8 @@ def publish(
             try:
                 export_path: Path = get_writer_path(id, export_base_path)
                 export_rel_path: Path = export_path.relative_to(dst_dir)
-                get_writer_from_id(id).write(id, export_path, palette)
-                # write(export_path, palette)
+                get_writer_from_id(id).write(palette, export_path)
+                # write(palette, export_path)
                 console.print(f"Exported '[i]{export_rel_path.as_posix()}[/i]'")
             except Exception as e:
                 console.print(

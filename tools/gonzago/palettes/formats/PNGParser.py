@@ -11,7 +11,7 @@ def read(file: Path) -> Palette:
     raise NotImplementedError()
 
 
-def write(id: str, file: Path, palette: Palette, scale: int = 1) -> None:
+def write(palette: Palette, file: Path, scale: int = 1) -> None:
     """
     PNG
 
@@ -61,12 +61,12 @@ def write(id: str, file: Path, palette: Palette, scale: int = 1) -> None:
     image.save(file, "PNG", pnginfo=info)
 
 
-def write_8(id: str, file: Path, palette: Palette) -> None:
-    write(id, file, palette, 8)
+def write_8(palette: Palette, file: Path) -> None:
+    write(palette, file, 8)
 
 
-def write_32(id: str, file: Path, palette: Palette) -> None:
-    write(id, file, palette, 32)
+def write_32(palette: Palette, file: Path) -> None:
+    write(palette, file, 32)
 
 
 register_reader("png", "*.png", "PNG palette image.", read)

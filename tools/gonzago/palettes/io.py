@@ -58,7 +58,7 @@ def read(file: Path) -> Palette:
     raise FileTypeError(file)
 
 
-Write = Callable[[str, Path, Palette], None]
+Write = Callable[[Palette, Path], None]
 
 
 class Writer(NamedTuple):
@@ -118,7 +118,7 @@ def write(file: Path, palette: Palette) -> None:
     for _, writer in WRITERS.items():
         if file.suffix == writer.suffix:  # Here lies the problem with scaled png
             file.parent.mkdir(parents=True, exist_ok=True)  # Ensure folders
-            writer.write(id, file, palette)
+            writer.write(palette, file)
             return
     raise FileTypeError(file)
 

@@ -19,7 +19,7 @@ def read(file: Path) -> Palette:
         return Palette.model_validate(data)
 
 
-def write(id: str, file: Path, palette: Palette) -> None:
+def write(palette: Palette, file: Path) -> None:
     if not file.match(PATTERN):
         raise TypeError(f"{file} is not a valid template path")
     data: dict = palette.model_dump(mode="json", exclude_defaults=True)

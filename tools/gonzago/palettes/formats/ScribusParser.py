@@ -15,7 +15,7 @@ def read(file: Path) -> Palette:
     raise NotImplementedError()
 
 
-def write(id: str, file: Path, palette: Palette) -> None:
+def write(palette: Palette, file: Path) -> None:
     raise NotImplementedError()
 
 

@@ -13,7 +13,7 @@ def read(file: Path) -> Palette:
     raise NotImplementedError()
 
 
-def write(id: str, file: Path, palette: Palette) -> None:
+def write(palette: Palette, file: Path) -> None:
     #    # https://liero.nl/lierohack/docformats/other-jasc.html
     #    # JASC-PAL      <- constant string
     #    # 0100          <- constant version of palette file format

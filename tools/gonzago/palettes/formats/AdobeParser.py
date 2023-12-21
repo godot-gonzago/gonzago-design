@@ -13,7 +13,7 @@ def read(file: Path) -> Palette:
     raise NotImplementedError()
 
 
-def write(id: str, file: Path, palette: Palette) -> None:
+def write(palette: Palette, file: Path) -> None:
     #    # https://medium.com/swlh/mastering-adobe-color-file-formats-d29e43fde8eb
     #    # http://www.selapa.net/swatches/colors/fileformats.php#adobe_ase
     #    with out_file.open("wb") as file:

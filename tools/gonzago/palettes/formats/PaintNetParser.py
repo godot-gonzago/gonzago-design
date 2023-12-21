@@ -13,7 +13,7 @@ def read(file: Path) -> Palette:
     raise NotImplementedError()
 
 
-def write(id: str, file: Path, palette: Palette) -> None:
+def write(palette: Palette, file: Path) -> None:
     #   # https://www.getpaint.net/doc/latest/WorkingWithPalettes.html
     #   with out_file.open("w") as file:
     #        file.write(";paint.net Palette File\n")

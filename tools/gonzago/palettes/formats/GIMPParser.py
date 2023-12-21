@@ -14,7 +14,7 @@ def read(file: Path) -> Palette:
     raise NotImplementedError()
 
 
-def write(id: str, file: Path, palette: Palette) -> None:
+def write(palette: Palette, file: Path) -> None:
     with file.open("w") as f:
         f.write("GIMP Palette\n")
         f.write(f"Name: {palette.title}\n")

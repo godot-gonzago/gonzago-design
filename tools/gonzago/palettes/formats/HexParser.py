@@ -13,7 +13,7 @@ def read(file: Path) -> Palette:
     raise NotImplementedError()
 
 
-def write(id: str, file: Path, palette: Palette) -> None:
+def write(palette: Palette, file: Path) -> None:
     colors: list[str] = []
     for entry in palette.colors:
         c = entry.color.as_rgb_tuple()
