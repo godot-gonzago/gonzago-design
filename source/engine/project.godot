@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Gonzago.Design"
 run/main_scene="res://main.tscn"
-config/features=PackedStringArray("4.1", "Forward Plus")
+config/features=PackedStringArray("4.2", "Forward Plus")
 boot_splash/bg_color=Color(0.6, 0.835294, 0.584314, 1)
 boot_splash/image="res://application/gonzago-splash.png"
 config/icon="res://application/gonzago-icon-large.svg"
