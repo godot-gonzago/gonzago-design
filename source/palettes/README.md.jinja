@@ -44,8 +44,8 @@ Different palettes for use in Gonzago Framework and its design elements.
   {% endif %}
   <tr>
     <th>Colors</th>
-    {% for color in palette.colors %}
     <td>
+    {% for color in palette.colors %}
       <p>
         {{ color.name }}
         {% if color.description %}
@@ -53,8 +53,8 @@ Different palettes for use in Gonzago Framework and its design elements.
         {% endif %}
         <br><img src="https://placehold.co/24x24/{{ color.color.as_hex() }}/{{ color.color.as_hex() }}/png" /> #{{ color.color.as_hex() }}
       </p>
-    </td>
     {% endfor %}
+    </td>
   </tr>
 </table>
 {% endfor %}
