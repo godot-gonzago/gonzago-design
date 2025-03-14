@@ -851,10 +851,10 @@ layout_mode = 2
 tooltip_text = "This is a test tooltip"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Margin/Objects/UI/Group1/ProgressBar"]
-autoplay = "test"
 libraries = {
-"": SubResource("AnimationLibrary_jf2uf")
+&"": SubResource("AnimationLibrary_jf2uf")
 }
+autoplay = "test"
 
 [node name="ProgressBar2" type="ProgressBar" parent="Margin/Objects/UI/Group1"]
 custom_minimum_size = Vector2(0, 20)
@@ -862,10 +862,10 @@ layout_mode = 2
 show_percentage = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Margin/Objects/UI/Group1/ProgressBar2"]
-autoplay = "test"
 libraries = {
-"": SubResource("AnimationLibrary_jf2uf")
+&"": SubResource("AnimationLibrary_jf2uf")
 }
+autoplay = "test"
 
 [node name="HSlider" type="HSlider" parent="Margin/Objects/UI/Group1"]
 layout_mode = 2
@@ -880,8 +880,8 @@ caret_blink_interval = 0.5
 
 [node name="search" type="LineEdit" parent="Margin/Objects/UI/Group1"]
 layout_mode = 2
-theme_override_styles/normal = ExtResource("99_hcth5")
 theme_override_styles/focus = ExtResource("92_j8qqk")
+theme_override_styles/normal = ExtResource("99_hcth5")
 text = "Search"
 placeholder_text = "Filter..."
 right_icon = ExtResource("35_j5gv3")
@@ -912,7 +912,6 @@ text = "Merp"
 item_count = 6
 popup/item_0/text = "Test"
 popup/item_0/id = 0
-popup/item_1/text = ""
 popup/item_1/id = 1
 popup/item_1/separator = true
 popup/item_2/text = "Test 2"
@@ -956,6 +955,7 @@ layout_mode = 2
 
 [node name="TabBar" type="TabBar" parent="Margin/Objects/UI/Group2/HSplitContainer/PanelContainer"]
 layout_mode = 2
+current_tab = 0
 tab_count = 3
 tab_0/title = "asdf"
 tab_1/title = "fdsa"
@@ -967,6 +967,7 @@ layout_mode = 2
 
 [node name="TabBar" type="TabBar" parent="Margin/Objects/UI/Group2/HSplitContainer/PanelContainer2"]
 layout_mode = 2
+current_tab = 0
 tab_count = 3
 tab_0/title = "asdf"
 tab_1/title = "fdsa"
