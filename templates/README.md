@@ -4,8 +4,10 @@ Template files for use in Gonzago Framework design.
 
 ## Inkscape
 
-godot_editor_icon.svg
+- `godot_editor_icon.svg` \
+  Inkscape template file for Godot editor icons.
 
-Inkscape template file for Godot editor icons.
-Install on Windows:
-'%appdata%\inkscape\templates'
+### Installation
+
+- Copy files to location listed inside Inkscape under `Preferences -> System -> User templates`
+  - Default location on Windows: `%appdata%\inkscape\templates`
