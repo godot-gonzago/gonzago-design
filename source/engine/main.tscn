@@ -118,7 +118,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jf2uf"]
 _data = {
-"test": SubResource("Animation_8oayk")
+&"test": SubResource("Animation_8oayk")
 }
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i74he"]
