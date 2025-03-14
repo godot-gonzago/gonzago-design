@@ -28,13 +28,46 @@ Navigate to your terminal to this folder (if not aleady there) and setup the pro
 2. Activate virtual environment: `.venv/Scripts/Activate.ps1`
 3. Install dependancies via poetry: `poetry install`
 
-### Usage with Poetry
+## Usage
+
+### Usage of automated tools
 
 1. Activate virtual environment: `.venv/Scripts/Activate.ps1`
 2. Run gonzago tools: `gonzago`
 3. You should see a list of all commands. Use the commands: `gonzago [command]`
 
-## Software used
+#### Config
+
+TODO: Describe better.
+
+### Available tools
+
+#### Application
+
+Application assets.
+TODO: Describe better. Location, import settings etc.
+
+#### Icons
+
+Editor icons for use with Godot Engine.
+TODO: Describe better. Location, import settings etc.
+
+#### Palettes
+
+Color palletes.
+TODO: Describe better. Location, import settings etc.
+
+#### Assets
+
+Tool and demo assets.
+TODO: Describe better. Location, import settings etc.
+
+#### Presskit
+
+Presskit assets.
+TODO: Describe better. Location, use etc.
+
+## Creating assets
 
 This is a list of the software used to create design assets.
 The contained automation tools might rely on an installation of certain software.
