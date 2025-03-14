@@ -1,0 +1,60 @@
+# Gonzago Framework Palettes
+
+Different palettes for use in Gonzago Framework and its design elements.
+
+## Formats
+
+<table>
+  <thead>
+    <tr>
+      <th align=\"left\">ID</th>
+      <th align=\"left\">Suffix</th>
+      <th align=\"left\">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for format in formats %}
+    <tr>
+      <td>{{ format.id }}</td>
+      <td>{{ format.suffix }}</td>
+      <td>{{ format.description }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+## Palettes
+
+{% for palette in palettes %}
+### {{ palette.title }}
+
+{% if palette.description is defined %}
+{{ palette.description }}
+
+{% endif %}
+<table>
+  {% if palette.version %}
+  <tr><th>Version</th><td>{{ palette.version }}</td></tr>
+  {% endif %}
+  {% if palette.author %}
+  <tr><th>Author</th><td>{{ palette.author }}</td></tr>
+  {% endif %}
+  {% if palette.source %}
+  <tr><th>Source</th><td>{{ palette.source }}</td></tr>
+  {% endif %}
+  <tr>
+    <th>Colors</th>
+    {% for color in palette.colors %}
+    <td>
+      <p>
+        {{ color.name }}
+        {% if color.description %}
+        <br>{{ color.description }}
+        {% endif %}
+        <br><img src="https://placehold.co/24x24/{{ color.color.as_hex() }}/{{ color.color.as_hex() }}/png" /> #{{ color.color.as_hex() }}
+      </p>
+    </td>
+    {% endfor %}
+  </tr>
+</table>
+{% endfor %}

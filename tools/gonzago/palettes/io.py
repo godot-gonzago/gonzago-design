@@ -134,6 +134,15 @@ def find_palettes(root: Path, max_depth: int = -1) -> Iterator[Path]:
     return gather_files(root, _match_reader, max_depth=max_depth)
 
 
+#def find_valid_palettes(root: Path, max_depth: int = -1) -> Iterator[Palette]:
+#    for file in find_palettes(root):
+#        try:
+#            palette: Palette = read(file)
+#            yield palette
+#        except Exception as e:
+#            continue
+
+
 # TODO: For check function create validation function that returns validation results.
 #       Contains references to file path, possible readers (based on pattern match)
 #       and possible exceptions. No exceptions means validation passed.

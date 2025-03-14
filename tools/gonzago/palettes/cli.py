@@ -1,6 +1,7 @@
 from pathlib import Path
 from typing import Optional
 
+from jinja2 import Environment, FileSystemLoader, Template
 import typer
 from rich.console import Console
 from rich.table import Table
@@ -8,6 +9,7 @@ from rich.table import Table
 from ..config import dst_path, src_path
 from .core import Palette, generate_default_palette
 from .io import (
+    Writer,
     get_readers,
     get_writer_from_id,
     read,
@@ -253,113 +255,38 @@ def build_readme(src_dir: Path = PALETTES_SOURCE_DIR, dst_dir: Path = PALETTES_D
     """
     Build readme from all palettes.
     """
-    #     """
-    #     Build readme from all palettes.
-    #     """
+    console.status("Building readme...")
 
-    #     if not PALETTES_SOURCE_DIR.exists():
-    #         console.print(f"Path {PALETTES_SOURCE_DIR} does not exist!")
-    #         return
+    environment: Environment = Environment(loader=FileSystemLoader(src_dir))
+    environment.trim_blocks = True
+    environment.lstrip_blocks = True
+    template: Template = environment.get_template("README.md.jinja")
+    formats: list[Writer] = list(get_writers())
+    palettes: list[Palette] = list()
 
-    #     with console.status("Building readme...") as status:
-    #         path: Path = PALETTES_DST_DIR.joinpath("README.md").resolve()
-    #         with path.open("w") as readme:
-    #             readme.write(
-    #                 "# Gonzago Framework Palettes\n\n"
-    #                 "Different palettes for use in Gonzago Framework and its design elements.\n\n"
-    #             )
+    for file in find_palettes(src_dir):
+        rel_path: Path = file.relative_to(src_dir)
+        console.print(f"Reading '{rel_path.as_posix()}'...")
+        palette: Palette
+        try:
+            palette = read(file)
+            palettes.append(palette)
+        except Exception as e:
+            console.print(
+                (
+                    f"Palette reading failed: {type(e).__name__}: {str(e)}"
+                    if e
+                    else "Palette reading failed!"
+                ),
+                style="red",
+            )
+            continue
 
-    #             readme.write(
-    #                 "## Formats\n\n"
-    #                 "<table>\n"
-    #                 "<thead><tr>"
-    #                 "<th align=\"left\">ID</th>"
-    #                 "<th align=\"left\">Suffix</th>"
-    #                 "<th align=\"left\">Description</th>"
-    #                 "</tr></thead>\n"
-    #                 "<tbody>\n"
-    #             )
-    #             for id, (suffix, description, _) in FORMATTERS.items():
-    #                 readme.write(
-    #                     f"<tr><td>{id}</td><td>{suffix}</td><td>{description}</td></tr>\n"
-    #                 )
-    #             readme.write(
-    #                 "</tbody>\n"
-    #                 "</table>\n\n"
-    #             )
+    content: str = template.render(formats=formats, palettes=palettes)
+    path: Path = dst_dir.joinpath("README.md").resolve()
+    path.write_text(content)
 
-    #             readme.write(
-    #                 "## Palettes\n\n"
-    #             )
-    #             for file in find_templates(PALETTES_SOURCE_DIR):
-    #                 rel_path: Path = file.relative_to(PALETTES_SOURCE_DIR)
-    #                 console.print(rel_path)
-    #                 status.update(f"Exporting {rel_path}")
-    #                 try:
-    #                     template: Template = Template.load(file)
-    #                     readme.write(
-    #                         f"### {template.name}\n\n"
-    #                     )
-    #                     if template.description:
-    #                         readme.write(f"{template.description}\n\n")
-    #                     readme.write(
-    #                         "<table>\n"
-    #                     )
-    #                     if template.version:
-    #                         readme.write(
-    #                             f"<tr><th>Version</th><td>{template.version}</td></tr>\n"
-    #                         )
-    #                     if template.author:
-    #                         readme.write(
-    #                             f"<tr><th>Author</th><td>{template.author}</td></tr>\n"
-    #                         )
-    #                     if template.source:
-    #                         readme.write(
-    #                             f"<tr><th>Source</th><td>{template.source}</td></tr>\n"
-    #                         )
-
-    #                     readme.write(
-    #                             "<tr>\n<th>Colors</th>\n<td>\n"
-    #                         )
-    #                     for entry in template.colors:
-    #                         readme.write(
-    #                             f"<p>{entry.name}\n"
-    #                         )
-    #                         if entry.description:
-    #                             readme.write(
-    #                                 f"<br>{entry.description}\n"
-    #                             )
-    #                         readme.write("<br>")
-    #                         c = entry.color.as_rgb_tuple()
-    #                         hex: str = f"{c[0]:02x}{c[1]:02x}{c[2]:02x}"
-    #                         readme.write(
-    #                             f"<img src=\"https://placehold.co/24x24/{hex}/{hex}/png\" /> #{hex}"
-    #                         )
-    #                     readme.write(
-    #                             "</td>\n</tr>\n"
-    #                         )
-    #                     readme.write(
-    #                         "</table>\n\n"
-    #                     )
-    #                 except Exception as e:
-    #                     console.print(
-    #                         f"{type(e).__name__}: {str(e)}" if e else "Export failed",
-    #                         style="red",
-    #                     )
-    #             console.print("Done")
-    pass
-
-
-# @app.callback(invoke_without_command=True)
-# def main(ctx: typer.Context) -> None:
-#     """
-#     Color palette tools.
-#     """
-#     if ctx.invoked_subcommand is None:
-#         console.print("Initializing database")
-#         console.print(
-#             Panel("Hello, [red]World!", title="Welcome", subtitle="Thank you")
-#         )
+    console.print("Done")
 
 
 @app.callback(no_args_is_help=True)
