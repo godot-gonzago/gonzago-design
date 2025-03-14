@@ -2,14 +2,6 @@
 
 Tools for Gonzago design assets.
 
-## Tools
-
-- <https://www.blender.org/>
-- <https://inkscape.org/>
-- <https://www.gimp.org/>
-- <https://lmms.io/>
-- <https://godotengine.org/>
-
 ## Gettings started
 
 TODO: Write better instructions
@@ -41,3 +33,14 @@ Navigate to your terminal to this folder (if not aleady there) and setup the pro
 1. Activate virtual environment: `.venv/Scripts/Activate.ps1`
 2. Run gonzago tools: `gonzago`
 3. You should see a list of all commands. Use the commands: `gonzago [command]`
+
+## Software used
+
+This is a list of the software used to create design assets.
+The contained automation tools might rely on an installation of certain software.
+
+- <https://www.blender.org/>
+- <https://inkscape.org/>
+- <https://www.gimp.org/>
+- <https://lmms.io/>
+- <https://godotengine.org/>
