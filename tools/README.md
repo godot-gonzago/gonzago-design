@@ -4,22 +4,35 @@ Tools for Gonzago design assets.
 
 ## Gettings started
 
-<https://python-poetry.org/docs/#installation>
+TODO: Write better instructions
+
+### Setup dependancies
+
+TODO: Write better instructions
 
 Windows User download <https://www.msys2.org/> and prepend System Variable Path with C:\msys64\usr\bin and C:\msys64\mingw64\bin.
 Install <https://packages.msys2.org/package/mingw-w64-x86_64-cairo>. Restart System and enjoy a working CairoSVG.
 
-### Setup with Poetry
+### Setup Poetry
 
-TODO: Write better instructions
+Install Poetry globally.
+<https://python-poetry.org/docs/#installation>
 
-- Install pipx `python -m pip install pipx`
-- `pipx ensurepath`
-- Install Poetry `pipx install poetry`
-- Create virtual environment `python -m venv .venv` TODO: Find naming thingy
-- Activate virtual environment `.venv/Scripts/activate.ps1`
-- Install dependancies `poetry install`
-- Run gonzago tools `gonzago`
+1. Install pipx: `python -m pip install pipx`
+2. Install Poetry: `pipx install poetry`
+3. Poetry needs its paths registered: `pipx ensurepath`
+
+Navigate to your terminal to this folder (if not aleady there) and setup the project locally.
+
+1. Create virtual environment for project: `python -m venv .venv --prompt Gonzago`
+2. Activate virtual environment: `.venv/Scripts/Activate.ps1`
+3. Install dependancies via poetry: `poetry install`
+
+### Usage with Poetry
+
+1. Activate virtual environment: `.venv/Scripts/Activate.ps1`
+2. Run gonzago tools: `gonzago`
+3. You should see a list of all commands. Use the commands: `gonzago [command]`
 
 ## Tools
 
