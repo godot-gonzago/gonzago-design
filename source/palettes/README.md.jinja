@@ -5,56 +5,97 @@ Different palettes for use in Gonzago Framework and its design elements.
 ## Formats
 
 <table>
-  <thead>
-    <tr>
-      <th align=\"left\">ID</th>
-      <th align=\"left\">Suffix</th>
-      <th align=\"left\">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for format in formats %}
-    <tr>
-      <td>{{ format.id }}</td>
-      <td>{{ format.suffix }}</td>
-      <td>{{ format.description }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
+<tr>
+<th align=\"left\">ID</th>
+<th align=\"left\">Suffix</th>
+<th align=\"left\">Description</th>
+</tr>
+{% for format in formats %}
+<tr>
+<td>{{ format.id }}</td>
+<td>{{ format.suffix }}</td>
+<td>{{ format.description }}</td>
+</tr>
+{% else %}
+<tr>
+<td colspan="3">
+There are no palette formats.
+</td>
+</tr>
+{% endfor %}
 </table>
 
 ## Palettes
-
 {% for palette in palettes %}
+
 ### {{ palette.title }}
+{% if palette.description %}
 
-{% if palette.description is defined %}
 {{ palette.description }}
-
 {% endif %}
+
 <table>
-  {% if palette.version %}
-  <tr><th>Version</th><td>{{ palette.version }}</td></tr>
-  {% endif %}
-  {% if palette.author %}
-  <tr><th>Author</th><td>{{ palette.author }}</td></tr>
-  {% endif %}
-  {% if palette.source %}
-  <tr><th>Source</th><td>{{ palette.source }}</td></tr>
-  {% endif %}
-  <tr>
-    <th>Colors</th>
-    <td>
-    {% for color in palette.colors %}
-      <p>
-        {{ color.name }}
-        {% if color.description %}
-        <br>{{ color.description }}
-        {% endif %}
-        <br><img src="https://placehold.co/24x24/{{ color.color.as_hex() }}/{{ color.color.as_hex() }}/png" /> #{{ color.color.as_hex() }}
-      </p>
-    {% endfor %}
-    </td>
-  </tr>
+<tr><th>Version</th><td>{{ palette.version|default('0.0.0', true) }}</td></tr>
+{% if palette.date %}
+<tr><th>Date</th><td>{{ palette.date }}</td></tr>
+{% endif %}
+{% if palette.language %}
+<tr><th>Language</th><td>{{ palette.language }}</td></tr>
+{% endif %}
+{% if palette.identifier %}
+<tr><th>Identifier</th><td>{{ palette.identifier }}</td></tr>
+{% endif %}
+{% if palette.subject %}
+<tr><th>Subject</th><td>{{ palette.subject }}</td></tr>
+{% endif %}
+{% if palette.relation %}
+<tr><th>Relation</th><td>{{ palette.relation }}</td></tr>
+{% endif %}
+{% if palette.source %}
+<tr><th>Source</th><td>{{ palette.source }}</td></tr>
+{% endif %}
+{% if palette.publisher %}
+<tr><th>Publisher</th><td>{{ palette.publisher }}</td></tr>
+{% endif %}
+{% if palette.creator %}
+<tr><th>Creator</th><td>{{ palette.creator }}</td></tr>
+{% endif %}
+{% if palette.contributor %}
+<tr><th>Contributor</th><td>{{ palette.contributor }}</td></tr>
+{% endif %}
+{% if palette.rights %}
+<tr><th>Rights</th><td>{{ palette.rights }}</td></tr>
+{% endif %}
+{% if palette.license %}
+<tr><th>License</th><td>{{ palette.license }}</td></tr>
+{% endif %}
+{% if palette.coverage %}
+<tr><th>Coverage</th><td>{{ palette.coverage }}</td></tr>
+{% endif %}
 </table>
+
+<table>
+<tr>
+<th colspan="2">Color</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+{% for color in palette.colors %}
+<tr>
+<td><img src="https://placehold.co/24x24/{{ color|hex_format }}/{{ color|hex_format }}/png" /></td>
+<td><code>#{{ color|hex_format }}</code></td>
+<td>{{ color.name|default('', true) }}</td>
+<td>{{ color.description|default('', true) }}</td>
+</tr>
+{% else %}
+<tr>
+<td colspan="4">
+There are no colors in this palette.
+</td>
+</tr>
+{% endfor %}
+</table>
+{% else %}
+
+There are no palettes.
 {% endfor %}
