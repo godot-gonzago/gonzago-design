@@ -2,7 +2,7 @@ from fnmatch import fnmatch
 import os
 import string
 import xml.etree.ElementTree as ET
-from typing import Any, Iterator
+from typing import Annotated, Any, Iterator
 from pathlib import Path
 
 import typer
@@ -62,9 +62,7 @@ def find_icons(root: Path, max_depth: int = -1) -> Iterator[Path]:
 
 def get_meta_data(file: Path) -> dict[str, Any]:
     rel_path: Path = file.relative_to(ICONS_SOURCE_DIR)
-    meta: dict[str, Any] = {
-        "rel_path": rel_path.as_posix()
-    }
+    meta: dict[str, Any] = {"rel_path": rel_path.as_posix()}
 
     namespaces: dict[str, str] = {
         # Default SVG namespaces
@@ -83,7 +81,7 @@ def get_meta_data(file: Path) -> dict[str, Any]:
         "dc": "http://purl.org/dc/elements/1.1/",
         # Creative Commons Rights Expression Language
         # https://creativecommons.org/ns
-        "cc": "http://creativecommons.org/ns#"
+        "cc": "http://creativecommons.org/ns#",
     }
 
     tree: ET.ElementTree = ET.parse(file)
@@ -100,7 +98,7 @@ def get_meta_data(file: Path) -> dict[str, Any]:
             float(vb_split[0]),
             float(vb_split[1]),
             float(vb_split[2]),
-            float(vb_split[3])
+            float(vb_split[3]),
         )
     if "version" in svg.keys():
         meta["version"] = svg.get("version")
@@ -114,28 +112,52 @@ def get_meta_data(file: Path) -> dict[str, Any]:
 
     # Dublin Core Metadata (dc:format, dc:type are not present in Inkscape)
     meta["title"] = metadata.findtext("rdf:RDF/cc:Work/dc:title", namespaces=namespaces)
-    meta["description"] = metadata.findtext("rdf:RDF/cc:Work/dc:description", namespaces=namespaces)
+    meta["description"] = metadata.findtext(
+        "rdf:RDF/cc:Work/dc:description", namespaces=namespaces
+    )
 
-    meta["identifier"] = metadata.findtext("rdf:RDF/cc:Work/dc:identifier", namespaces=namespaces)
+    meta["identifier"] = metadata.findtext(
+        "rdf:RDF/cc:Work/dc:identifier", namespaces=namespaces
+    )
     subject: list[str] = []
-    for element in metadata.findall("rdf:RDF/cc:Work/dc:subject/rdf:Bag/rdf:li", namespaces):
+    for element in metadata.findall(
+        "rdf:RDF/cc:Work/dc:subject/rdf:Bag/rdf:li", namespaces
+    ):
         subject.append(element.text)
     meta["subject"] = subject
 
     meta["date"] = metadata.findtext("rdf:RDF/cc:Work/dc:date", namespaces=namespaces)
-    meta["source"] = metadata.findtext("rdf:RDF/cc:Work/dc:source", namespaces=namespaces)
-    meta["relation"] = metadata.findtext("rdf:RDF/cc:Work/dc:relation", namespaces=namespaces)
-    meta["language"] = metadata.findtext("rdf:RDF/cc:Work/dc:language", namespaces=namespaces)
+    meta["source"] = metadata.findtext(
+        "rdf:RDF/cc:Work/dc:source", namespaces=namespaces
+    )
+    meta["relation"] = metadata.findtext(
+        "rdf:RDF/cc:Work/dc:relation", namespaces=namespaces
+    )
+    meta["language"] = metadata.findtext(
+        "rdf:RDF/cc:Work/dc:language", namespaces=namespaces
+    )
 
-    meta["creator"] = metadata.findtext("rdf:RDF/cc:Work/dc:creator/cc:Agent/dc:title", namespaces=namespaces)
-    meta["contributor"] = metadata.findtext("rdf:RDF/cc:Work/dc:contributor/cc:Agent/dc:title", namespaces=namespaces)
-    meta["publisher"] = metadata.findtext("rdf:RDF/cc:Work/dc:publisher/cc:Agent/dc:title", namespaces=namespaces)
-    meta["rights"] = metadata.findtext("rdf:RDF/cc:Work/dc:rights/cc:Agent/dc:title", namespaces=namespaces)
-    meta["coverage"] = metadata.findtext("rdf:RDF/cc:Work/dc:coverage", namespaces=namespaces)
+    meta["creator"] = metadata.findtext(
+        "rdf:RDF/cc:Work/dc:creator/cc:Agent/dc:title", namespaces=namespaces
+    )
+    meta["contributor"] = metadata.findtext(
+        "rdf:RDF/cc:Work/dc:contributor/cc:Agent/dc:title", namespaces=namespaces
+    )
+    meta["publisher"] = metadata.findtext(
+        "rdf:RDF/cc:Work/dc:publisher/cc:Agent/dc:title", namespaces=namespaces
+    )
+    meta["rights"] = metadata.findtext(
+        "rdf:RDF/cc:Work/dc:rights/cc:Agent/dc:title", namespaces=namespaces
+    )
+    meta["coverage"] = metadata.findtext(
+        "rdf:RDF/cc:Work/dc:coverage", namespaces=namespaces
+    )
     license: ET.Element = metadata.find("rdf:RDF/cc:Work/cc:license", namespaces)
     if not license is None:
         if "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource" in license.keys():
-            meta["license"] = license.get("{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource")
+            meta["license"] = license.get(
+                "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+            )
 
     return meta
 
@@ -176,19 +198,42 @@ def get_meta_data(file: Path) -> dict[str, Any]:
 #
 # </details>
 
+
 @app.command("ls")
-def test_ls():
-    for file in find_icons(ICONS_SOURCE_DIR):
-        rel_path: Path = file.relative_to(ICONS_SOURCE_DIR)
+def print_icons_list(
+    path: Annotated[
+        Path,
+        typer.Option(
+            help="The path to start looking for icons. Defaults to icon source directory"
+        ),
+    ] = ICONS_SOURCE_DIR,
+):
+    """
+    Print relative icon file paths at given path. Default path is icons source directory.
+    """
+
+    for file in find_icons(path):
+        rel_path: Path = file.relative_to(path)
         console.print(f"{rel_path}")
 
 
 @app.command("meta")
-def test_meta_data():
-    path: Path = ICONS_SOURCE_DIR.joinpath("camera/camera.svg").resolve()
-    #print(path.read_text())
+def print_meta_data(
+    path: Annotated[
+        Path,
+        typer.Argument(
+            help="The file path of the icon. Can be relative to source directory"
+        ),
+    ],
+):
+    """
+    Print meta data for icon file at path.
+    """
+
+    if not path.is_absolute():
+        path = ICONS_SOURCE_DIR.joinpath(path).resolve()
     meta: dict = get_meta_data(path)
-    print(meta)
+    console.print(meta)
 
 
 @app.command("publish")
@@ -206,19 +251,19 @@ def publish():
             status.update(f"Exporting [i]{file}[/i]")
         console.print("Done")
 
+
 @app.command("alt_readme")
 def _read_me():
-    ICONS_PER_ROW:int = 2
-    COLUMNS_PER_ICON:int = 2
+    ICONS_PER_ROW: int = 2
+    COLUMNS_PER_ICON: int = 2
 
     lines: list[str] = [
-        '# Gonzago Framework Editor Icons',
-        '',
-        'Editor icons for use in Gonzago Framework',
-        '',
-        '## Icons',
-        ''
-        '<table>'
+        "# Gonzago Framework Editor Icons",
+        "",
+        "Editor icons for use in Gonzago Framework",
+        "",
+        "## Icons",
+        "" "<table>",
     ]
 
     for current, dirs, files in os.walk(ICONS_SOURCE_DIR):
@@ -236,29 +281,37 @@ def _read_me():
         if files_count > 0:
             folder_path: Path = ICONS_SOURCE_DIR.joinpath(current)
             folder_rel_path: Path = folder_path.relative_to(ICONS_SOURCE_DIR)
-            folder_name: str = string.capwords(folder_rel_path.as_posix().replace("/", "."), ".") if folder_rel_path.name else "Gonzago"
-            lines.extend([
-                f'  <thead><tr><th align="left" colspan="{str(ICONS_PER_ROW * COLUMNS_PER_ICON)}" width="2048">{folder_name}</th></tr></thead>',
-                '  <tbody>'
-            ])
+            folder_name: str = (
+                string.capwords(folder_rel_path.as_posix().replace("/", "."), ".")
+                if folder_rel_path.name
+                else "Gonzago"
+            )
+            lines.extend(
+                [
+                    f'  <thead><tr><th align="left" colspan="{str(ICONS_PER_ROW * COLUMNS_PER_ICON)}" width="2048">{folder_name}</th></tr></thead>',
+                    "  <tbody>",
+                ]
+            )
 
             for row_start_idx in range(0, files_count, ICONS_PER_ROW):
                 row_end_idx: int = row_start_idx + ICONS_PER_ROW
-                lines.append(
-                    '    <tr>'
-                )
+                lines.append("    <tr>")
 
                 for icon_idx in range(row_start_idx, min(row_end_idx, files_count)):
-                    full_path: Path = ICONS_SOURCE_DIR.joinpath(file_paths[icon_idx]).resolve()
+                    full_path: Path = ICONS_SOURCE_DIR.joinpath(
+                        file_paths[icon_idx]
+                    ).resolve()
                     rel_path: Path = full_path.relative_to(ICONS_SOURCE_DIR)
                     meta: dict[str] = get_meta_data(full_path)
 
-                    lines.extend([
-                        f'      <td><img src="{Path("/icons").joinpath(rel_path).as_posix()}" width="24" height="24"></td>',
-                        '      <td>',
-                        '        <p>',
-                        f'          {meta.get('title', rel_path.stem)}'
-                    ])
+                    lines.extend(
+                        [
+                            f'      <td><img src="{Path("/icons").joinpath(rel_path).as_posix()}" width="24" height="24"></td>',
+                            "      <td>",
+                            "        <p>",
+                            f"          {meta.get('title', rel_path.stem)}",
+                        ]
+                    )
                     relation: str = meta.get("relation")
                     if relation:
                         lines.append(
@@ -274,33 +327,20 @@ def _read_me():
                             lines.append(
                                 f'          <br><var>{", ".join(subject)}</var>'
                             )
-                    lines.extend([
-                        '        </p>',
-                        '      </td>'
-                    ])
+                    lines.extend(["        </p>", "      </td>"])
 
                 for _ in range(max(row_start_idx, files_count), row_end_idx):
-                    lines.append(
-                        f'      <td colspan="{str(COLUMNS_PER_ICON)}"></td>'
-                    )
+                    lines.append(f'      <td colspan="{str(COLUMNS_PER_ICON)}"></td>')
 
-                lines.append(
-                    '    </tr>'
-                )
+                lines.append("    </tr>")
 
+            lines.append("  </tbody>")
 
-            lines.append(
-            '  </tbody>'
-            )
-
-    lines.extend([
-        '</table>',
-        ''
-    ])
+    lines.extend(["</table>", ""])
 
     readme_path: Path = ICONS_DST_DIR.joinpath("README.md").resolve()
     with readme_path.open("w") as readme_file:
-        readme_file.writelines('\n'.join(lines))
+        readme_file.writelines("\n".join(lines))
 
 
 @app.command("readme")
@@ -318,7 +358,7 @@ def build_readme():
             folder: Path = Path(".")
             readme.write(
                 "<table>\n"
-                "<thead><tr><th align=\"left\" colspan=\"4\" width=\"2048\">Gonzago</th></tr></thead>\n"
+                '<thead><tr><th align="left" colspan="4" width="2048">Gonzago</th></tr></thead>\n'
                 "<tbody>\n"
             )
             files_in_row: int = 0
@@ -328,15 +368,14 @@ def build_readme():
 
                 if folder != new_folder:
                     if files_in_row == 1:
-                        readme.write(
-                            "    <td colspan=\"2\"></td>\n"
-                            "  </tr>\n"
-                        )
+                        readme.write('    <td colspan="2"></td>\n' "  </tr>\n")
                         files_in_row = 0
-                    header: str = string.capwords(new_folder.as_posix().replace("/", "."), ".")
+                    header: str = string.capwords(
+                        new_folder.as_posix().replace("/", "."), "."
+                    )
                     readme.write(
                         "</tbody>\n"
-                        f"<thead><tr><th align=\"left\" colspan=\"4\">{header}</th></tr></thead>\n"
+                        f'<thead><tr><th align="left" colspan="4">{header}</th></tr></thead>\n'
                         "<tbody>\n"
                     )
                     folder = new_folder
@@ -350,12 +389,12 @@ def build_readme():
                     readme.write("  <tr>\n")
 
                 readme.write(
-                    f"    <td><img src=\"{image_src}\" width=\"24\" height=\"24\"></td>\n"
+                    f'    <td><img src="{image_src}" width="24" height="24"></td>\n'
                     f"    <td><p>{meta.get('title', rel_path.stem)}"
                 )
                 relation: str = meta.get("relation")
                 if relation:
-                    readme.write(f" <a href=\"{relation}\" target=\"_blank\">:pushpin:</a>")
+                    readme.write(f' <a href="{relation}" target="_blank">:pushpin:</a>')
                 subject: list[str] = meta["subject"]
                 if subject:
                     if "editor" in subject:
@@ -374,15 +413,8 @@ def build_readme():
                     files_in_row = 0
 
             if files_in_row == 1:
-                readme.write(
-                    "    <td colspan=\"2\"></td>\n"
-                    "  </tr>\n"
-                )
-            readme.write(
-                "</tbody>\n"
-                "</table>\n"
-                "\n"
-            )
+                readme.write('    <td colspan="2"></td>\n' "  </tr>\n")
+            readme.write("</tbody>\n" "</table>\n" "\n")
 
         console.print("Done")
 
