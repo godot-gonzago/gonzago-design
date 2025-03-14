@@ -3,7 +3,7 @@ from pathlib import Path
 import typer
 from rich.console import Console
 
-from ..config import CONFIG, dst_path, src_path
+from ..config import dst_path, src_path
 
 
 ASSETS_SRC: Path = src_path("./assets")

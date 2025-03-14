@@ -5,7 +5,7 @@ import typer
 from rich.console import Console
 from rich.table import Table
 
-from ..config import CONFIG, dst_path, src_path
+from ..config import dst_path, src_path
 from .core import Palette, generate_default_palette
 from .io import (
     get_readers,

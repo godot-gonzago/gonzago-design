@@ -1,5 +1,5 @@
 from pathlib import Path
-from rich import print
+from rich.console import Console
 from typing import Annotated, Optional
 import typer
 
@@ -16,6 +16,8 @@ from . import (
 
 
 app = typer.Typer()
+console: Console = Console()
+
 app.add_typer(application.app, name="application")
 app.add_typer(assets.app, name="assets")
 app.add_typer(icons.app, name="icons")
@@ -37,10 +39,10 @@ def open_config() -> None:
     Open Gonzago Design Tools config.
     """
     if not CONFIG_FILE.is_file():
-        print("Config does not exist!")
+        console.print("Config does not exist!")
         typer.Abort()
         return
-    print(f"Opening {CONFIG_FILE.as_posix()}")
+    console.print(f"Opening {CONFIG_FILE.as_posix()}")
     typer.launch(str(CONFIG_FILE), locate=True)
 
 
@@ -70,7 +72,7 @@ def init() -> None:
 
 def _version_callback(value: bool) -> None:
     if value:
-        print(f"{__app_name__} v{__version__}")
+        console.print(f"{__app_name__} v{__version__}")
         raise typer.Exit()
 
 

@@ -9,7 +9,7 @@ import typer
 from scour import scour
 from rich.console import Console
 
-from ..config import CONFIG, dst_path, src_path
+from ..config import dst_path, src_path
 from ..io import gather_files
 
 

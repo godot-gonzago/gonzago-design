@@ -21,6 +21,7 @@ def load() -> TOMLDocument:
 
     dst: Path = Path(__file__).joinpath("../../..").resolve()
     src: Path = dst.joinpath("source").resolve()
+
     inkscape: str = "inkscape"
     if sys.platform.startswith("linux"):
         inkscape = "/usr/lib/inkscape"
@@ -28,6 +29,7 @@ def load() -> TOMLDocument:
         inkscape = "%ProgramFiles%/Inkscape/bin/inkscape.exe"
     elif sys.platform.startswith("darwin"):
         inkscape = "/Applications/Inkscape.app/Contents/MacOS/inkscape"
+
     blender: str = "blender"
     if sys.platform.startswith("linux"):
         blender = "/usr/lib/blender"
@@ -35,6 +37,7 @@ def load() -> TOMLDocument:
         blender = "%ProgramFiles%/Blender Foundation/Blender 4.0/blender.exe"
     elif sys.platform.startswith("darwin"):
         blender = "/Applications/Blender/blender.app/Contents/MacOS/blender"
+
     return parse(
         (
             "[paths]\n"
