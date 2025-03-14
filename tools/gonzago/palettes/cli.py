@@ -27,6 +27,9 @@ console: Console = Console()
 
 @app.command("writers")
 def list_writers():
+    """
+    List all available palette format writers.
+    """
     table: Table = Table("ID", "Suffix", "Description")
     for writer in get_writers():
         table.add_row(writer.id, writer.suffix, writer.description)
@@ -38,6 +41,9 @@ def list_writers():
 
 @app.command("readers")
 def list_readers():
+    """
+    List all available palette format readers.
+    """
     table: Table = Table("ID", "Pattern", "Description")
     for reader in get_readers():
         table.add_row(reader.id, reader.pattern, reader.description)
@@ -209,9 +215,11 @@ def publish(
             palette = read(file)
         except Exception as e:
             console.print(
-                f"Palette load failed: {type(e).__name__}: {str(e)}"
-                if e
-                else "Palette load failed!",
+                (
+                    f"Palette load failed: {type(e).__name__}: {str(e)}"
+                    if e
+                    else "Palette load failed!"
+                ),
                 style="red",
             )
             continue
@@ -226,9 +234,11 @@ def publish(
                 console.print(f"Exported '[i]{export_rel_path.as_posix()}[/i]'")
             except Exception as e:
                 console.print(
-                    f"Export '{id}' failed: {type(e).__name__}: {str(e)}"
-                    if e
-                    else f"Export '{id}' failed!",
+                    (
+                        f"Export '{id}' failed: {type(e).__name__}: {str(e)}"
+                        if e
+                        else f"Export '{id}' failed!"
+                    ),
                     style="red",
                 )
                 continue
