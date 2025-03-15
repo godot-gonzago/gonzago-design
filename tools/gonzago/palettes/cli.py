@@ -118,7 +118,7 @@ def create_new_template(
 
 
 @app.command("import")
-def create_template_from_file(file: Path) -> None:
+def import_palette(file: Path) -> None:
     """
     Validate palette templates.
     """
@@ -167,7 +167,7 @@ def list_palettes(dir: Path = PALETTES_SOURCE_DIR) -> None:
 
 # Merge with publish
 @app.command("export")
-def export_templates(
+def export_palettes(
     src: Annotated[
         Path,
         typer.Option(
