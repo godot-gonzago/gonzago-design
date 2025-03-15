@@ -15,117 +15,38 @@ from typing import (
 
 #from ..exceptions import FileTypeError, NameConflictError
 from ..io import gather_files
-from .core import Palette
-
-
-Read = Callable[[Path], Palette]
-
-
-class Reader(NamedTuple):
-    id: str
-    pattern: str
-    description: str
-    read: Read
-
-
-READERS: Dict[str, Reader] = dict[str, Reader]()
-
-
-def register_reader(
-    id: str,
-    pattern: str,
-    description: str,
-    read: Read,
-) -> None:
-    if id in READERS:
-        raise ValueError(
-            f"Reader with id {id} already present. All Readers must have unique ids."
-        )
-    READERS[id] = Reader(id, pattern, description, read)
-
-
-def get_readers() -> Iterator[Reader]:
-    for _, reader in READERS.items():
-        yield reader
+from .core import Palette, Reader, Writer, get_reader_for_file, get_readers, get_writer_from_id
 
 
 def read(file: Path) -> Palette:
     if not file.exists():
         raise FileNotFoundError(file)
-    for _, reader in READERS.items():
-        if file.match(reader.pattern):
-            palette: Palette = reader.read(file)
-            return palette
-    raise ValueError(f"File at path {file} cannot be read.")
-
-
-Write = Callable[[Palette, Path], None]
-
-
-class Writer(NamedTuple):
-    id: str
-    suffix: str
-    description: str
-    write: Write
-    default: bool = True
-
-
-WRITERS = dict[str, Writer]()
-
-
-def register_writer(
-    id: str,
-    suffix: str,
-    description: str,
-    write: Write,
-    default: bool = True,
-) -> None:
-    if id in WRITERS:
-        raise ValueError(
-            f"Writer with id {id} already present. All Writers must have unique ids."
-        )
-    WRITERS[id] = Writer(
-        id,
-        suffix,
-        description,
-        write,
-        default,
-    )
-
-
-def get_writers(include_non_default: bool = False) -> Iterator[Writer]:
-    for _, writer in WRITERS.items():
-        if writer.default or include_non_default:
-            yield writer
-
-
-def get_writer_from_id(id: str) -> Writer:
-    if id in WRITERS.keys():
-        return WRITERS[id]
-    raise KeyError()
+    reader: Reader = get_reader_for_file(file)
+    palette: Palette = reader.read(file)
+    return palette
+    #raise ValueError(f"File at path {file} cannot be read.")
 
 
 def get_writer_path(id: str, file: Path) -> Path:
     if not file.suffix:
         raise ValueError(f"File path {file} is missing a suffix.")
-    if id in WRITERS.keys():
-        return file.with_suffix(WRITERS[id].suffix)
-    raise KeyError()
+    writer: Writer = get_writer_from_id(id)
+    return file.with_suffix(writer.suffix)
 
 
-def write(file: Path, palette: Palette) -> None:
-    if not file.suffix:
-        raise ValueError(f"File path {file} is missing a suffix.")
-    for _, writer in WRITERS.items():
-        if file.suffix == writer.suffix:  # Here lies the problem with scaled png
-            file.parent.mkdir(parents=True, exist_ok=True)  # Ensure folders
-            writer.write(palette, file)
-            return
-    raise ValueError(f"File at path {file} cannot be written.")
+#def write(file: Path, palette: Palette) -> None:
+#    if not file.suffix:
+#        raise ValueError(f"File path {file} is missing a suffix.")
+#    for _, writer in WRITERS.items():
+#        if file.suffix == writer.suffix:  # Here lies the problem with scaled png
+#            file.parent.mkdir(parents=True, exist_ok=True)  # Ensure folders
+#            writer.write(palette, file)
+#            return
+#    raise ValueError(f"File at path {file} cannot be written.")
 
 
 def _match_reader(file: Path) -> bool:
-    for _, reader in READERS.items():
+    for reader in get_readers():
         if file.match(reader.pattern):
             return True
     return False

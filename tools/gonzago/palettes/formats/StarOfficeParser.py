@@ -1,7 +1,6 @@
 from pathlib import Path
 
-from ..core import Palette
-from ..io import register_reader, register_writer
+from ..core import Palette, register_reader, register_writer
 
 # http://www.selapa.net/swatches/colors/fileformats.php#ooo_soc
 

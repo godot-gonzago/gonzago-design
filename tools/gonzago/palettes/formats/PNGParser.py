@@ -3,8 +3,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 from PIL.PngImagePlugin import PngInfo
 
-from ..core import Palette
-from ..io import register_reader, register_writer
+from ..core import Palette, register_reader, register_writer
 
 
 def read(file: Path) -> Palette:

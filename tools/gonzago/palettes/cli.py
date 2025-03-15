@@ -7,14 +7,10 @@ from rich.console import Console
 from rich.table import Table
 
 from ..config import dst_path, src_path
-from .core import Palette, PaletteEntry, generate_default_palette
+from .core import Palette, PaletteEntry, generate_default_palette, get_readers, get_writers, get_writer_from_id
 from .io import (
     Writer,
-    get_readers,
-    get_writer_from_id,
     read,
-    get_writers,
-    write,
     get_writer_path,
     find_palettes,
 )
@@ -232,7 +228,6 @@ def publish(
                 export_path: Path = get_writer_path(id, export_base_path)
                 export_rel_path: Path = export_path.relative_to(dst_dir)
                 get_writer_from_id(id).write(palette, export_path)
-                # write(palette, export_path)
                 console.print(f"Exported '[i]{export_rel_path.as_posix()}[/i]'")
             except Exception as e:
                 console.print(

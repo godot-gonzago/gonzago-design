@@ -1,5 +1,5 @@
-from .core import Palette, PaletteEntry
-from .io import find_palettes, get_readers, get_writer_path, get_writers, read, write
+from .core import Palette, PaletteEntry, get_readers, get_writers
+from .io import find_palettes, get_writer_path, read
 from .formats import *
 from .cli import app  # import last
 
@@ -10,7 +10,6 @@ __all__ = [
     "read",
     "get_writers",
     "get_writer_path",
-    "write",
     "find_palettes",
     "app",
 ]

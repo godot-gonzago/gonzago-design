@@ -1,7 +1,6 @@
 from pathlib import Path
 
-from ..core import Palette
-from ..io import register_reader, register_writer
+from ..core import Palette, register_reader, register_writer
 
 # https://docs.krita.org/en/untranslatable_pages/kpl_defintion.html
 

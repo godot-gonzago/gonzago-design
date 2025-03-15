@@ -1,6 +1,7 @@
 from datetime import date as Date
 from enum import Enum
-from typing import Annotated, List, Optional, Set
+from pathlib import Path
+from typing import Annotated, Callable, Dict, Iterator, List, NamedTuple, Optional, Set
 
 from pydantic import BaseModel, Field, StringConstraints
 from pydantic_extra_types.color import Color
@@ -78,3 +79,99 @@ def generate_default_palette(
     palette.license = "http://creativecommons.org/licenses/by/4.0/"
     palette.coverage = "Global"
     return palette
+
+
+Read = Callable[[Path], Palette]
+
+
+class Reader(NamedTuple):
+    id: str
+    pattern: str
+    description: str
+    read: Read
+
+
+_READERS: Dict[str, Reader] = dict[str, Reader]()
+
+
+def register_reader(
+    id: str,
+    pattern: str,
+    description: str,
+    read: Read,
+) -> None:
+    if id in _READERS:
+        raise ValueError(
+            f"Reader with id {id} already present. All Readers must have unique ids."
+        )
+    _READERS[id] = Reader(id, pattern, description, read)
+
+
+def get_readers() -> Iterator[Reader]:
+    for _, reader in _READERS.items():
+        yield reader
+
+
+def get_reader_from_id(id: str) -> Reader:
+    if id in _READERS.keys():
+        return _READERS[id]
+    raise ValueError(f"There is no reader with id {id}.")
+
+
+def get_reader_for_file(file: Path) -> Reader:
+    if not file.is_file():
+        raise ValueError(f"Path {file} is not a file.")
+    if not file.suffix:
+        raise ValueError(f"File path {file} is missing a suffix.")
+
+    for _, reader in _READERS.items():
+        if file.match(reader.pattern):
+            return reader
+
+    raise ValueError(f"No reader found for path {file}.")
+
+
+Write = Callable[[Palette, Path], None]
+
+
+class Writer(NamedTuple):
+    id: str
+    suffix: str
+    description: str
+    write: Write
+    default: bool = True
+
+
+_WRITERS: Dict[str, Writer] = dict[str, Writer]()
+
+
+def register_writer(
+    id: str,
+    suffix: str,
+    description: str,
+    write: Write,
+    default: bool = True,
+) -> None:
+    if id in _WRITERS:
+        raise ValueError(
+            f"Writer with id {id} already present. All Writers must have unique ids."
+        )
+    _WRITERS[id] = Writer(
+        id,
+        suffix,
+        description,
+        write,
+        default,
+    )
+
+
+def get_writers(include_non_default: bool = False) -> Iterator[Writer]:
+    for _, writer in _WRITERS.items():
+        if writer.default or include_non_default:
+            yield writer
+
+
+def get_writer_from_id(id: str) -> Writer:
+    if id in _WRITERS.keys():
+        return _WRITERS[id]
+    raise ValueError(f"There is no writer with id {id}.")
