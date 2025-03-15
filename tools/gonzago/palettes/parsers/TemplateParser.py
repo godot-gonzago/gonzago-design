@@ -3,7 +3,7 @@ from pathlib import Path
 import yaml
 
 from ..models import Palette
-from ..parsing import _register_reader, _register_writer
+from ..parsing import register_reader, register_writer
 
 ID: str = "template"
 PATTERN: str = "*.yaml"
@@ -32,5 +32,5 @@ def write(palette: Palette, file: Path) -> None:
         yaml.safe_dump(data, stream, sort_keys=False)
 
 
-_register_reader(ID, PATTERN, DESCRIPTION, read, validate, True)
-_register_writer(ID, SUFFIX, DESCRIPTION, write, True)
+register_reader(ID, PATTERN, DESCRIPTION, read, validate, True)
+register_writer(ID, SUFFIX, DESCRIPTION, write, True)

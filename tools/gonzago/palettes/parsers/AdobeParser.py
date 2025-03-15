@@ -1,7 +1,7 @@
 from pathlib import Path
 
 from ..models import Palette
-from ..parsing import _register_reader, _register_writer
+from ..parsing import register_reader, register_writer
 
 ID: str = "ase"
 PATTERN: str = "*.ase"
@@ -49,5 +49,5 @@ def write(palette: Palette, file: Path) -> None:
     raise NotImplementedError()
 
 
-_register_reader(ID, PATTERN, DESCRIPTION, read, validate)
-_register_writer(ID, SUFFIX, DESCRIPTION, write)
+register_reader(ID, PATTERN, DESCRIPTION, read, validate)
+register_writer(ID, SUFFIX, DESCRIPTION, write)

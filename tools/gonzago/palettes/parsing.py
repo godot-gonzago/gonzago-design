@@ -20,7 +20,7 @@ class Reader(NamedTuple):
 _READERS: Dict[str, Reader] = dict[str, Reader]()
 
 
-def _register_reader(
+def register_reader(
     id: str, pattern: str, description: str, read: Read, validate: Validate, internal: bool = False
 ) -> None:
     if id in _READERS:
@@ -76,7 +76,7 @@ class Writer(NamedTuple):
 _WRITERS: Dict[str, Writer] = dict[str, Writer]()
 
 
-def _register_writer(
+def register_writer(
     id: str,
     suffix: str,
     description: str,

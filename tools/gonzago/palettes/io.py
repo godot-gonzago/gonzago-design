@@ -56,7 +56,7 @@ class PaletteFile(NamedTuple):
     reader: Optional[Reader] = None
 
 
-def load_palettes(root: Path, max_depth: int = -1) -> Iterator[PaletteFile]:
+def get_palette_files(root: Path, max_depth: int = -1) -> Iterator[PaletteFile]:
     for file in gather_files(root, max_depth=max_depth):
         for reader in get_readers(internal=True):
             if file.match(reader.pattern):
