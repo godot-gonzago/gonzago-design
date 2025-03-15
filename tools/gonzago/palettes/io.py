@@ -79,6 +79,8 @@ def load_palettes(root: Path, max_depth: int = -1) -> Iterator[PaletteFile]:
 #       and possible exceptions. No exceptions means validation passed.
 
 
+# https://docs.pydantic.dev/latest/concepts/models/#validating-data
+
 class ValidationResult(NamedTuple):
     file: Path
     reader: Optional[Reader] = None
