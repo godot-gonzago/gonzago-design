@@ -279,6 +279,33 @@ def build_readme(src_dir: Path = PALETTES_SOURCE_DIR, dst_dir: Path = PALETTES_D
     console.print("Done")
 
 
+# TODO: Externalize steps to allow for better commands.
+#def _gather_formats(include_internal: bool = False) -> List[Writer]:
+#    console.print("Gathering export formats")
+#    return list[get_writers(include_internal)]
+#
+#def _gather_palettes() -> None:
+#    pass
+#
+#def _export_palettes(formats: List[Writer]) -> None:
+#    pass
+#
+#def _create_readme(src_dir: Path, dst_dir: Path, formats: List[Writer], palettes: list[Palette]) -> None:
+#    console.status("Building [i]'README.md'[/i]...")
+#
+#    environment: Environment = Environment(loader=FileSystemLoader(src_dir))
+#    environment.trim_blocks = True
+#    environment.lstrip_blocks = True
+#    template: Template = environment.get_template("README.md.jinja")
+#    content: str = template.render(formats=formats, palettes=palettes)
+#
+#    console.status("Writing [i]'README.md'[/i]...")
+#    path: Path = dst_dir.joinpath("README.md").resolve()
+#    path.write_text(content)
+#
+#    console.print("Done")
+
+
 # TODO: https://typer.tiangolo.com/tutorial/progressbar/#spinner
 # TODO: https://typer.tiangolo.com/tutorial/progressbar/#progress-bar_1
 # TODO: https://rich.readthedocs.io/en/stable/progress.html#basic-usage
