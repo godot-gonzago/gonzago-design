@@ -19,6 +19,9 @@ class PaletteFile(BaseModel):
     rel_path: Path
     palette: Optional[Palette] = None
 
+    def as_posix(self) -> str:
+        return self.rel_path.as_posix()
+
 
 class WritablePaletteFile(PaletteFile):
     writer: Writer

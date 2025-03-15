@@ -1,10 +1,11 @@
 from pathlib import Path
-from typing import Annotated, Iterable, List, Optional
+from typing import Annotated
 
 from jinja2 import Environment, FileSystemLoader, Template
 import typer
 from rich.console import Console
 from rich.table import Table
+from stringcase import snakecase
 
 from ..config import dst_path, src_path
 from .models import (
@@ -105,27 +106,19 @@ def list_readers(
 
 @app.command("create")
 def create_new_template(
-    file: Path = "new_palette_template.yaml",
     title: str = "New Palette Template",
-    format: Optional[str] = None,  # TODO: if set then handle path suffix
     # depth: GenerationDepth,
 ) -> None:
     """
     Create new palette template.
     """
-    if not file.is_absolute():
-        file = PALETTES_SOURCE_DIR.joinpath(file)
-    file = file.resolve()
 
-    # if not file.match(TEMPLATE_FILE_PATTERN):
-    #     console.print(f"[i]{file}[/i] is not a valid template path!", style="red")
-    #     return
-
+    file: Path = PALETTES_SOURCE_DIR.joinpath(snakecase(title)+".yaml")
     if file.exists():
         typer.confirm("File already exists! Override?", abort=True)
 
     palette: Palette = generate_default_palette(title)
-    writer = get_writer_from_id(format)
+    writer = get_writer_from_id("template")
     writer.write(palette, file)
 
     console.print(f"Created template file: [i]{file}[/i]", style="green")
@@ -180,13 +173,12 @@ def list_palettes(
         valid_templates_count: int = 0
         table: Table = Table("Path", "Name", "Description", "Colors")
 
-        for palette_file in get_palette_files(dir):
+        for file in get_palette_files(dir):
             status.update()
-            rel_path: str = palette_file.rel_path.as_posix()
             try:
-                template = palette_file.read()
+                template = file.read()
                 table.add_row(
-                    rel_path,
+                    file.as_posix(),
                     template.title,
                     template.description if template.description else "",
                     str(len(template.colors)),
@@ -194,7 +186,7 @@ def list_palettes(
                 valid_templates_count += 1
             except Exception as e:
                 table.add_row(
-                    rel_path,
+                    file.as_posix(),
                     "Unknown",
                     f"{type(e).__name__}: {str(e)}" if e else "Template is invalid.",
                     "-",
@@ -206,142 +198,6 @@ def list_palettes(
             console.print("No valid palette templates found!", style="yellow")
         if table.row_count > 0:
             console.print(table)
-
-
-# Merge with publish
-@app.command("export")
-def export_palettes(
-    src: Annotated[
-        Path,
-        typer.Option(
-            "--in",
-            "-i",
-            help="Input template file or directory.",
-            exists=True,
-            file_okay=True,
-            dir_okay=True,
-            readable=True,
-            resolve_path=True,
-        ),
-    ] = PALETTES_SOURCE_DIR,
-    dst_dir: Annotated[
-        Path,
-        typer.Option(
-            "--out",
-            "-o",
-            help="Palettes output directory.",
-            file_okay=False,
-            dir_okay=True,
-            writable=True,
-            resolve_path=True,
-        ),
-    ] = PALETTES_DST_DIR,
-    formats: Annotated[
-        list[str], typer.Option("--export", "-e", help="List of exporters to use.")
-    ] = [w.id for w in get_writers()],
-) -> None:
-    """
-    Export palettes in specified formats.
-    """
-    for palette_file in get_palette_files(src):
-        console.print(f"Exporting '{palette_file.rel_path.as_posix()}'...")
-
-        try:
-            palette_file.read()
-        except Exception as e:
-            console.print(
-                (
-                    f"Palette load failed: {type(e).__name__}: {str(e)}"
-                    if e
-                    else "Palette load failed!"
-                ),
-                style="red",
-            )
-            continue
-
-        for id in formats:
-            try:
-                writer: Writer = get_writer_from_id(id)
-                palette_file_out = palette_file.create_output_file(dst_dir, writer)
-                palette_file_out.write()
-                console.print(f"Exported '[i]{palette_file_out.rel_path.as_posix()}[/i]'")
-            except Exception as e:
-                console.print(
-                    (
-                        f"Export '{id}' failed: {type(e).__name__}: {str(e)}"
-                        if e
-                        else f"Export '{id}' failed!"
-                    ),
-                    style="red",
-                )
-                continue
-    console.print("Done")
-
-
-# Merge with publish
-@app.command("readme")
-def build_readme(src_dir: Path = PALETTES_SOURCE_DIR, dst_dir: Path = PALETTES_DST_DIR):
-    """
-    Build readme from all palettes.
-    """
-    console.status("Building readme...")
-
-    environment: Environment = Environment(loader=FileSystemLoader(src_dir))
-    environment.trim_blocks = True
-    environment.lstrip_blocks = True
-    template: Template = environment.get_template("README.md.jinja")
-    formats: list[Writer] = list(get_writers())
-    palettes: list[Palette] = list()
-
-    for palette_file in get_palette_files(src_dir):
-        console.print(f"Reading '{palette_file.rel_path.as_posix()}'...")
-        palette: Palette
-        try:
-            palette = palette_file.read()
-            palettes.append(palette)
-        except Exception as e:
-            console.print(
-                (
-                    f"Palette reading failed: {type(e).__name__}: {str(e)}"
-                    if e
-                    else "Palette reading failed!"
-                ),
-                style="red",
-            )
-            continue
-
-    content: str = template.render(formats=formats, palettes=palettes)
-    path: Path = dst_dir.joinpath("README.md").resolve()
-    path.write_text(content)
-
-    console.print("Done")
-
-
-# TODO: Externalize steps to allow for better commands.
-# def _gather_formats(include_internal: bool = False) -> List[Writer]:
-#    console.print("Gathering export formats")
-#    return list[get_writers(include_internal)]
-#
-# def _gather_palettes() -> None:
-#    pass
-#
-# def _export_palettes(formats: List[Writer]) -> None:
-#    pass
-#
-# def _create_readme(src_dir: Path, dst_dir: Path, formats: List[Writer], palettes: list[Palette]) -> None:
-#    console.status("Building [i]'README.md'[/i]...")
-#
-#    environment: Environment = Environment(loader=FileSystemLoader(src_dir))
-#    environment.trim_blocks = True
-#    environment.lstrip_blocks = True
-#    template: Template = environment.get_template("README.md.jinja")
-#    content: str = template.render(formats=formats, palettes=palettes)
-#
-#    console.status("Writing [i]'README.md'[/i]...")
-#    path: Path = dst_dir.joinpath("README.md").resolve()
-#    path.write_text(content)
-#
-#    console.print("Done")
 
 
 # TODO: https://typer.tiangolo.com/tutorial/progressbar/#spinner
@@ -358,22 +214,22 @@ def publish() -> None:
 
     console.print("Gathering palettes")
     palettes: list[Palette] = list()
-    for palette_file in get_palette_files(PALETTES_SOURCE_DIR):
-        console.print(f"Reading [i]'{palette_file.rel_path.as_posix()}'[/i]...")
+    for file in get_palette_files(PALETTES_SOURCE_DIR):
+        console.print(f"Reading [i]'{file.as_posix()}'[/i]...")
         palette: Palette
         try:
-            palette = palette_file.read()
+            palette = file.read()
             palettes.append(palette)
         except Exception as e:
             console.print(e, style="red")
             continue
 
-        console.print(f"Exporting [i]'{palette_file.rel_path.as_posix()}'[/i]...")
+        console.print(f"Exporting [i]'{file.as_posix()}'[/i]...")
         for format in formats:
             try:
-                palette_file_out = palette_file.create_output_file(PALETTES_DST_DIR, format)
-                palette_file_out.write()
-                console.print(f"Exported [i]'{palette_file_out.rel_path.as_posix()}'[/i]")
+                file_out = file.create_output_file(PALETTES_DST_DIR, format)
+                file_out.write()
+                console.print(f"Exported [i]'{file_out.as_posix()}'[/i]")
             except Exception as e:
                 console.print(e, style="red")
                 continue

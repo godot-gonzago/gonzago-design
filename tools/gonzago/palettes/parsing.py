@@ -42,19 +42,19 @@ def get_reader_from_id(id: str) -> Reader:
     raise ValueError(f"There is no reader with id {id}.")
 
 
-#def get_reader_for_file(file: Path) -> Reader:
-#    if not file.is_file():
-#        raise ValueError(f"Path {file} is not a file.")
-#    if not file.suffix:
-#        raise ValueError(f"File path {file} is missing a suffix.")
-#    if not file.exists(follow_symlinks=True):
-#        raise FileNotFoundError(f"File at path {file} does not exist.")
-#
-#    for _, reader in _READERS.items():
-#        if file.match(reader.pattern):
-#            return reader
-#
-#    raise ValueError(f"No reader found for path {file}.")
+def get_reader_for_file(file: Path) -> Reader:
+    if not file.is_file():
+        raise ValueError(f"Path {file} is not a file.")
+    if not file.suffix:
+        raise ValueError(f"File path {file} is missing a suffix.")
+    if not file.exists(follow_symlinks=True):
+        raise FileNotFoundError(f"File at path {file} does not exist.")
+
+    for _, reader in _READERS.items():
+        if file.match(reader.pattern):
+            return reader
+
+    raise ValueError(f"No reader found for path {file}.")
 
 
 Write = Callable[[Palette, Path], None]
@@ -103,15 +103,15 @@ def get_writer_from_id(id: str) -> Writer:
     raise ValueError(f"There is no writer with id {id}.")
 
 
-#def get_writers_for_file(file: Path) -> Iterator[Writer]:
-#    if not file.is_file():
-#        raise ValueError(f"Path {file} is not a file.")
-#    if not file.suffix:
-#        raise ValueError(f"File path {file} is missing a suffix.")
-#
-#    posix: str = file.as_posix()
-#    for _, writer in _WRITERS.items():
-#        if posix.endswith(writer.suffix):
-#            yield writer
-#
-#    raise ValueError(f"No reader found for path {file}.")
+def get_writers_for_file(file: Path) -> Iterator[Writer]:
+    if not file.is_file():
+        raise ValueError(f"Path {file} is not a file.")
+    if not file.suffix:
+        raise ValueError(f"File path {file} is missing a suffix.")
+
+    posix: str = file.as_posix()
+    for _, writer in _WRITERS.items():
+        if posix.endswith(writer.suffix):
+            yield writer
+
+    raise ValueError(f"No reader found for path {file}.")

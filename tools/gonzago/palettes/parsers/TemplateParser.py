@@ -26,7 +26,7 @@ def validate(file: Path) -> bool:
 def write(palette: Palette, file: Path) -> None:
     if not file.match(PATTERN):
         raise TypeError(f"{file} is not a valid template path")
-    data: dict = palette.model_dump(mode="json", exclude_defaults=True)
+    data: dict = palette.model_dump(mode="json", exclude_unset=True)
     file.parent.mkdir(parents=True, exist_ok=True)  # Ensure folders
     with file.open("w") as stream:
         yaml.safe_dump(data, stream, sort_keys=False)

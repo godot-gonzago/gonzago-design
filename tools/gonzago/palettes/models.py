@@ -60,17 +60,19 @@ def generate_default_palette(
     if not title:
         title = "New Palette Template"
 
-    black: PaletteEntry = PaletteEntry.model_construct()
-    black.name = "Black"
-    black.color = Color("black")
+    black: PaletteEntry = PaletteEntry(
+        name="Black",
+        color=Color("black")
+    )
+    white: PaletteEntry = PaletteEntry(
+        name="White",
+        color=Color("white")
+    )
 
-    white: PaletteEntry = PaletteEntry.model_construct()
-    black.name = "White"
-    black.color = Color("white")
-
-    palette: Palette = PaletteEntry.model_construct()
-    palette.title = title
-    palette.colors = [black, white]
+    palette: Palette = Palette(
+        title=title,
+        colors=[black, white]
+    )
 
     if depth.value < GenerationDepth.BASIC.value:
         return palette
