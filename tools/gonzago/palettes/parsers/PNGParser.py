@@ -3,7 +3,8 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 from PIL.PngImagePlugin import PngInfo
 
-from ..core import Palette, register_reader, register_writer
+from ..models import Palette
+from ..parsing import _register_reader, _register_writer
 
 
 def read(file: Path) -> Palette:
@@ -72,7 +73,7 @@ def write_32(palette: Palette, file: Path) -> None:
     write(palette, file, 32)
 
 
-register_reader("png", "*.png", "PNG palette image.", read, validate)
-register_writer("png", ".png", "PNG palette image with size 1px.", write)
-register_writer("png-8", ".x8.png", "PNG palette image with size 8px.", write_8)
-register_writer("png-32", ".x32.png", "PNG palette image with size 32px.", write_32)
+_register_reader("png", "*.png", "PNG palette image.", read, validate)
+_register_writer("png", ".png", "PNG palette image with size 1px.", write)
+_register_writer("png-8", ".x8.png", "PNG palette image with size 8px.", write_8)
+_register_writer("png-32", ".x32.png", "PNG palette image with size 32px.", write_32)

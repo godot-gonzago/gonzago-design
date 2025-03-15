@@ -1,6 +1,7 @@
 from pathlib import Path
 
-from ..core import Palette, register_reader, register_writer
+from ..models import Palette
+from ..parsing import _register_reader, _register_writer
 
 ID: str = "paintshop"
 PATTERN: str = "*.pal"
@@ -29,5 +30,5 @@ def write(palette: Palette, file: Path) -> None:
     raise NotImplementedError()
 
 
-register_reader(ID, PATTERN, DESCRIPTION, read, validate)
-register_writer(ID, SUFFIX, DESCRIPTION, write)
+_register_reader(ID, PATTERN, DESCRIPTION, read, validate)
+_register_writer(ID, SUFFIX, DESCRIPTION, write)

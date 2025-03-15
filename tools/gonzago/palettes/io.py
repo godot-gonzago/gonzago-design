@@ -15,13 +15,8 @@ from typing import (
 
 #from ..exceptions import FileTypeError, NameConflictError
 from ..io import gather_files
-from .core import Palette, Reader, Writer, get_reader_for_file, get_readers, get_writer_from_id
-
-
-class PaletteFile(NamedTuple):
-    path: Path
-    rel_path: Path
-    palette: Palette
+from .models import Palette
+from .parsing import Reader, Writer, get_reader_for_file, get_readers, get_writer_from_id
 
 
 def read(file: Path) -> Palette:
@@ -55,14 +50,18 @@ def find_palettes(root: Path, max_depth: int = -1) -> Iterator[Path]:
     return gather_files(root, _match_reader, max_depth=max_depth)
 
 
+class PaletteFile(NamedTuple):
+    path: Path
+    rel_path: Optional[Path] = None
+    reader: Optional[Reader] = None
+
+
 def load_palettes(root: Path, max_depth: int = -1) -> Iterator[PaletteFile]:
-    for file_path in gather_files(root, _match_reader, max_depth=max_depth):
-        try:
-            palette: Palette = read(file_path)
-            rel_path: Path = file_path.relative_to(root)
-            yield PaletteFile(file_path, rel_path, palette)
-        except Exception as e:
-            continue
+    for file in gather_files(root, max_depth=max_depth):
+        for reader in get_readers(internal=True):
+            if file.match(reader.pattern):
+                rel_path: Path = file.relative_to(root)
+                yield PaletteFile(file, rel_path, reader)
 
 
 # def find_valid_palettes(root: Path, max_depth: int = -1) -> Iterator[Palette]:
