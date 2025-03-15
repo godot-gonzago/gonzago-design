@@ -1,0 +1,109 @@
+---
+title: Unity 6 Editor
+description: Colors based on default editor theme (light) of Unity 6.
+version: 1.0.0
+date: 2025-03-16
+language: en
+identifier: gonzago.palettes.unity6
+subject: [Unity, Editor, Theme]
+relation: https://www.foundations.unity.com/fundamentals/iconography
+source: https://github.com/godot-gonzago
+publisher: Gonzago Framework
+creator: David Krummenacher
+contributor:
+  [David Krummenacher, Gonzago Framework contributors, Unity Technologies]
+rights: Copyright (c) 2024 David Krummenacher, Gonzago Framework contributors and Unity Technologies
+license: http://creativecommons.org/licenses/by/4.0/
+
+mapped_title: Unity 6 Editor (dark)
+mapped_description: Colors based on default editor theme (dark) of Unity 6.
+mapped_suffix: dark
+
+colors:
+  - name: Primary palette - Gray
+    description: Icons that don’t require to be color coded uses this color.
+    color: "#555555"
+    mapped_color: "#C4C4C4"
+
+  - name: Secondary palette - Blue
+    description: Primarily for Graphics product area.
+    color: "#0C6CCB"
+    mapped_color: "#80D8FF"
+  - name: Secondary palette - Charcoal / White
+    description: Primarily for Unity logo symbol.
+    color: "#f0f0f0"
+    mapped_color: "#2F2F2F"
+  - name: Secondary palette - Coral
+    description: Primarily for Navigation feature area.
+    color: "#B73C15"
+    mapped_color: "#FF6E40"
+  - name: Secondary palette - Cyan
+    description: Primarily for Animation product area.
+    color: "#0F7686"
+    mapped_color: "#80FFE6"
+  - name: Secondary palette - Green 1
+    description: Primarily for Physics feature area.
+    color: "#2E7D32"
+    mapped_color: "#B2FF59"
+  - name: Secondary palette - Magenta
+    description: Primarily for components and assets icons for Network and Constraints feature area.
+    color: "#CD237F"
+    mapped_color: "#E78DDC"
+  - name: Secondary palette - Purple
+    description: Primarily for 2D product area.
+    color: "#673AB7"
+    mapped_color: "#AF91F4"
+  - name: Secondary palette - Yellow
+    description: Primarily for Lights feature area.
+    color: "#C99700"
+    mapped_color: "#FFC107"
+
+  - name: Feedback colors - 50% Gray
+    description: It is for when there is no ways to create depth or segment visually an element in an icon. Minimally used.
+    color: "rgba(85, 85, 85, 0.5)"
+    mapped_color: "rgba(196, 196, 196, 0.5)"
+  - name: Feedback colors - Cobalt
+    description: Primarily for suggesting active states and messages. e.g.) Active, On
+    color: "#0F49BD"
+    mapped_color: "#57AEFF"
+  - name: Feedback colors - Gray
+    description: Primarily for suggesting neutral state. e.g. standing by
+    color: "#C4C4C4"
+    mapped_color: "#555555"
+  - name: Feedback colors - Green 2
+    description: Primarily for suggesting positive states and messages. e.g.) Success, Good, Done
+    color: "#008126"
+    mapped_color: "#14D368"
+  - name: Feedback colors - Scarlet
+    description: Primarily for suggesting error states and messages.
+    color: "#B10C0C"
+    mapped_color: "#FF534A"
+  - name: Feedback colors - White
+    description: Primarily for icons that need to change color on a selected state.
+    color: "#F0F0F0"
+    mapped_color: "#F0F0F0"
+  - name: Feedback colors - Yellow
+    description: Primarily for suggesting warning states and messages.
+    color: "#C99700"
+    mapped_color: "#FFC107"
+
+  - name: Accent colors - Antique Red
+    description: Accent color used to communicate to remove. It is often used for tool mode icons to help rows of icons distinguishable. It also help with associating icons that have commonality between their tool functionality.
+    color: "#B25553"
+    mapped_color: "#FD8678"
+  - name: Accent colors - Iris / Purple
+    description: Accent color used to communicate to modify. It is often used for tool mode icons to help rows of icons distinguishable. It also help with associating icons that have commonality between their tool functionality.
+    color: "#6D66CC"
+    mapped_color: "#A1A3FF"
+  - name: Accent colors - Orange
+    description: Accent color used to communicate to select. It is often used for tool mode icons to help rows of icons distinguishable. It also help with associating icons that have commonality between their tool functionality.
+    color: "#B76106"
+    mapped_color: "#FFBA6B"
+  - name: Accent colors - Sea / Spring Green
+    description: Accent color used to communicate to add. It is often used for tool mode icons to help rows of icons distinguishable. It also help with associating icons that have commonality between their tool functionality.
+    color: "#00876A"
+    mapped_color: "#69E39F"
+  - name: Accent colors - Steel Blue
+    description: This accent color is for generic use. It is used when an element is placed on a White (#f0f0f0) color shape. This color may not work directly on Dark Theme backgrounds.
+    color: "#4B88AC"
+    mapped_color: "#4B88AC"

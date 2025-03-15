@@ -1,0 +1,29 @@
+GIMP Palette
+Name: Unity 6 Editor
+Columns: 0
+# Description: Colors based on default editor theme (light) of Unity 6.
+# Version: 1.0.0
+# Author: David Krummenacher
+# Source: https://github.com/godot-gonzago
+#
+85	85	85	Primary palette - Gray - Icons that don’t require to be color coded uses this color.
+12	108	203	Secondary palette - Blue - Primarily for Graphics product area.
+240	240	240	Secondary palette - Charcoal / White - Primarily for Unity logo symbol.
+183	60	21	Secondary palette - Coral - Primarily for Navigation feature area.
+15	118	134	Secondary palette - Cyan - Primarily for Animation product area.
+46	125	50	Secondary palette - Green 1 - Primarily for Physics feature area.
+205	35	127	Secondary palette - Magenta - Primarily for components and assets icons for Network and Constraints feature area.
+103	58	183	Secondary palette - Purple - Primarily for 2D product area.
+201	151	0	Secondary palette - Yellow - Primarily for Lights feature area.
+85	85	85	Feedback colors - 50% Gray - It is for when there is no ways to create depth or segment visually an element in an icon. Minimally used.
+15	73	189	Feedback colors - Cobalt - Primarily for suggesting active states and messages. e.g.) Active, On
+196	196	196	Feedback colors - Gray - Primarily for suggesting neutral state. e.g. standing by
+0	129	38	Feedback colors - Green 2 - Primarily for suggesting positive states and messages. e.g.) Success, Good, Done
+177	12	12	Feedback colors - Scarlet - Primarily for suggesting error states and messages.
+240	240	240	Feedback colors - White - Primarily for icons that need to change color on a selected state.
+201	151	0	Feedback colors - Yellow - Primarily for suggesting warning states and messages.
+178	85	83	Accent colors - Antique Red - Accent color used to communicate to remove. It is often used for tool mode icons to help rows of icons distinguishable. It also help with associating icons that have commonality between their tool functionality.
+109	102	204	Accent colors - Iris / Purple - Accent color used to communicate to modify. It is often used for tool mode icons to help rows of icons distinguishable. It also help with associating icons that have commonality between their tool functionality.
+183	97	6	Accent colors - Orange - Accent color used to communicate to select. It is often used for tool mode icons to help rows of icons distinguishable. It also help with associating icons that have commonality between their tool functionality.
+0	135	106	Accent colors - Sea / Spring Green - Accent color used to communicate to add. It is often used for tool mode icons to help rows of icons distinguishable. It also help with associating icons that have commonality between their tool functionality.
+75	136	172	Accent colors - Steel Blue - This accent color is for generic use. It is used when an element is placed on a White (#f0f0f0) color shape. This color may not work directly on Dark Theme backgrounds.

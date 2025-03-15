@@ -53,7 +53,12 @@ def write(palette: Palette, file: Path, scale: int = 1) -> None:
     draw = ImageDraw.Draw(image, "RGB")
     for i in range(color_count):
         color = palette.colors[i].color
-        draw.rectangle((i * scale, 0, i * scale + scale, scale), color.as_rgb_tuple())
+        draw.rectangle(
+            (i * scale, 0, i * scale + scale, scale),
+            color.as_rgb_tuple(
+                alpha=False
+            ),  # TODO: Alpha handling doesn't seems to work here
+        )
 
     # Test here https://www.metadata2go.com/view-metadata
     info: PngInfo = PngInfo()

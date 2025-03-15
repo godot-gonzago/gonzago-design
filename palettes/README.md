@@ -637,3 +637,156 @@ Colors used for Gonzago Framework assets.
 <td></td>
 </tr>
 </table>
+
+### Unity 6 Editor
+
+Colors based on default editor theme (light) of Unity 6.
+
+<table>
+<tr><th>Version</th><td>1.0.0</td></tr>
+<tr><th>Date</th><td>2025-03-16</td></tr>
+<tr><th>Language</th><td>en</td></tr>
+<tr><th>Identifier</th><td>gonzago.palettes.unity6</td></tr>
+<tr><th>Subject</th><td><code>Unity</code>, <code>Editor</code>, <code>Theme</code></td></tr>
+<tr><th>Relation</th><td>https://www.foundations.unity.com/fundamentals/iconography</td></tr>
+<tr><th>Source</th><td>https://github.com/godot-gonzago</td></tr>
+<tr><th>Publisher</th><td>Gonzago Framework</td></tr>
+<tr><th>Creator</th><td>David Krummenacher</td></tr>
+<tr><th>Contributor</th><td>David Krummenacher, Gonzago Framework contributors, Unity Technologies</td></tr>
+<tr><th>Rights</th><td>Copyright (c) 2024 David Krummenacher, Gonzago Framework contributors and Unity Technologies</td></tr>
+<tr><th>License</th><td>http://creativecommons.org/licenses/by/4.0/</td></tr>
+</table>
+
+<table>
+<tr>
+<th colspan="2">Color</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/555/555/png" /></td>
+<td><code>#555555</code></td>
+<td>Primary palette - Gray</td>
+<td>Icons that don’t require to be color coded uses this color.</td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/0c6ccb/0c6ccb/png" /></td>
+<td><code>#0c6ccb</code></td>
+<td>Secondary palette - Blue</td>
+<td>Primarily for Graphics product area.</td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/f0f0f0/f0f0f0/png" /></td>
+<td><code>#f0f0f0</code></td>
+<td>Secondary palette - Charcoal / White</td>
+<td>Primarily for Unity logo symbol.</td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/b73c15/b73c15/png" /></td>
+<td><code>#b73c15</code></td>
+<td>Secondary palette - Coral</td>
+<td>Primarily for Navigation feature area.</td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/0f7686/0f7686/png" /></td>
+<td><code>#0f7686</code></td>
+<td>Secondary palette - Cyan</td>
+<td>Primarily for Animation product area.</td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/2e7d32/2e7d32/png" /></td>
+<td><code>#2e7d32</code></td>
+<td>Secondary palette - Green 1</td>
+<td>Primarily for Physics feature area.</td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/cd237f/cd237f/png" /></td>
+<td><code>#cd237f</code></td>
+<td>Secondary palette - Magenta</td>
+<td>Primarily for components and assets icons for Network and Constraints feature area.</td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/673ab7/673ab7/png" /></td>
+<td><code>#673ab7</code></td>
+<td>Secondary palette - Purple</td>
+<td>Primarily for 2D product area.</td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/c99700/c99700/png" /></td>
+<td><code>#c99700</code></td>
+<td>Secondary palette - Yellow</td>
+<td>Primarily for Lights feature area.</td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/55555580/55555580/png" /></td>
+<td><code>#55555580</code></td>
+<td>Feedback colors - 50% Gray</td>
+<td>It is for when there is no ways to create depth or segment visually an element in an icon. Minimally used.</td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/0f49bd/0f49bd/png" /></td>
+<td><code>#0f49bd</code></td>
+<td>Feedback colors - Cobalt</td>
+<td>Primarily for suggesting active states and messages. e.g.) Active, On</td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/c4c4c4/c4c4c4/png" /></td>
+<td><code>#c4c4c4</code></td>
+<td>Feedback colors - Gray</td>
+<td>Primarily for suggesting neutral state. e.g. standing by</td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/008126/008126/png" /></td>
+<td><code>#008126</code></td>
+<td>Feedback colors - Green 2</td>
+<td>Primarily for suggesting positive states and messages. e.g.) Success, Good, Done</td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/b10c0c/b10c0c/png" /></td>
+<td><code>#b10c0c</code></td>
+<td>Feedback colors - Scarlet</td>
+<td>Primarily for suggesting error states and messages.</td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/f0f0f0/f0f0f0/png" /></td>
+<td><code>#f0f0f0</code></td>
+<td>Feedback colors - White</td>
+<td>Primarily for icons that need to change color on a selected state.</td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/c99700/c99700/png" /></td>
+<td><code>#c99700</code></td>
+<td>Feedback colors - Yellow</td>
+<td>Primarily for suggesting warning states and messages.</td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/b25553/b25553/png" /></td>
+<td><code>#b25553</code></td>
+<td>Accent colors - Antique Red</td>
+<td>Accent color used to communicate to remove. It is often used for tool mode icons to help rows of icons distinguishable. It also help with associating icons that have commonality between their tool functionality.</td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/6d66cc/6d66cc/png" /></td>
+<td><code>#6d66cc</code></td>
+<td>Accent colors - Iris / Purple</td>
+<td>Accent color used to communicate to modify. It is often used for tool mode icons to help rows of icons distinguishable. It also help with associating icons that have commonality between their tool functionality.</td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/b76106/b76106/png" /></td>
+<td><code>#b76106</code></td>
+<td>Accent colors - Orange</td>
+<td>Accent color used to communicate to select. It is often used for tool mode icons to help rows of icons distinguishable. It also help with associating icons that have commonality between their tool functionality.</td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/00876a/00876a/png" /></td>
+<td><code>#00876a</code></td>
+<td>Accent colors - Sea / Spring Green</td>
+<td>Accent color used to communicate to add. It is often used for tool mode icons to help rows of icons distinguishable. It also help with associating icons that have commonality between their tool functionality.</td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/4b88ac/4b88ac/png" /></td>
+<td><code>#4b88ac</code></td>
+<td>Accent colors - Steel Blue</td>
+<td>This accent color is for generic use. It is used when an element is placed on a White (#f0f0f0) color shape. This color may not work directly on Dark Theme backgrounds.</td>
+</tr>
+</table>
