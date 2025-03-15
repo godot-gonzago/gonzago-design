@@ -17,10 +17,7 @@ from .parsing import (
     get_writers,
     get_writer_from_id,
 )
-from .io import (
-    read,
-    find_palettes,
-)
+from .io import get_palette_files
 
 PALETTES_SOURCE_DIR: Path = src_path("./palettes")
 PALETTES_DST_DIR: Path = dst_path("palettes")
@@ -182,13 +179,14 @@ def list_palettes(
     with console.status(f"Searching templates at [i]{dir}[/i]...") as status:
         valid_templates_count: int = 0
         table: Table = Table("Path", "Name", "Description", "Colors")
-        for file in find_palettes(dir):
+
+        for palette_file in get_palette_files(dir):
             status.update()
-            rel_path: str = file.relative_to(dir).as_posix()
+            rel_path: str = palette_file.rel_path.as_posix()
             try:
-                template = read(file)
+                template = palette_file.reader.read(palette_file.path)
                 table.add_row(
-                    str(rel_path),
+                    rel_path,
                     template.title,
                     template.description if template.description else "",
                     str(len(template.colors)),
@@ -196,7 +194,7 @@ def list_palettes(
                 valid_templates_count += 1
             except Exception as e:
                 table.add_row(
-                    str(rel_path),
+                    rel_path,
                     "Unknown",
                     f"{type(e).__name__}: {str(e)}" if e else "Template is invalid.",
                     "-",
@@ -245,13 +243,12 @@ def export_palettes(
     """
     Export palettes in specified formats.
     """
-    for file in find_palettes(src):
-        rel_path: Path = file.relative_to(src)
-        console.print(f"Exporting '{rel_path.as_posix()}'...")
+    for palette_file in get_palette_files(src):
+        console.print(f"Exporting '{palette_file.rel_path.as_posix()}'...")
 
         palette: Palette
         try:
-            palette = read(file)
+            palette = palette_file.reader.read(palette_file.path)
         except Exception as e:
             console.print(
                 (
@@ -263,7 +260,7 @@ def export_palettes(
             )
             continue
 
-        export_base_path: Path = dst_dir.joinpath(rel_path).resolve()
+        export_base_path: Path = dst_dir.joinpath(palette_file.rel_path).resolve()
         for id in formats:
             try:
                 writer: Writer = get_writer_from_id(id)
@@ -299,12 +296,11 @@ def build_readme(src_dir: Path = PALETTES_SOURCE_DIR, dst_dir: Path = PALETTES_D
     formats: list[Writer] = list(get_writers())
     palettes: list[Palette] = list()
 
-    for file in find_palettes(src_dir):
-        rel_path: Path = file.relative_to(src_dir)
-        console.print(f"Reading '{rel_path.as_posix()}'...")
+    for palette_file in get_palette_files(src_dir):
+        console.print(f"Reading '{palette_file.rel_path.as_posix()}'...")
         palette: Palette
         try:
-            palette = read(file)
+            palette = palette_file.reader.read(palette_file.path)
             palettes.append(palette)
         except Exception as e:
             console.print(
@@ -365,19 +361,18 @@ def publish() -> None:
 
     console.print("Gathering palettes")
     palettes: list[Palette] = list()
-    for file in find_palettes(PALETTES_SOURCE_DIR):
-        rel_path: Path = file.relative_to(PALETTES_SOURCE_DIR)
-        console.print(f"Reading [i]'{rel_path.as_posix()}'[/i]...")
+    for palette_file in get_palette_files(PALETTES_SOURCE_DIR):
+        console.print(f"Reading [i]'{palette_file.rel_path.as_posix()}'[/i]...")
         palette: Palette
         try:
-            palette = read(file)
+            palette = palette_file.reader.read(palette_file.path)
             palettes.append(palette)
         except Exception as e:
             console.print(e, style="red")
             continue
 
-        console.print(f"Exporting [i]'{rel_path.as_posix()}'[/i]...")
-        export_base_path: Path = PALETTES_DST_DIR.joinpath(rel_path).resolve()
+        console.print(f"Exporting [i]'{palette_file.rel_path.as_posix()}'[/i]...")
+        export_base_path: Path = PALETTES_DST_DIR.joinpath(palette_file.rel_path).resolve()
         for format in formats:
             try:
                 export_path: Path = format.build_file_path(export_base_path)
