@@ -98,31 +98,31 @@ Colors based on default editor theme of Godot Engine 4. These colors are replace
 </tr>
 <tr>
 <td><img src="https://placehold.co/24x24/fff/fff/png" /></td>
-<td><code>#fff</code></td>
+<td><code>#ffffff</code></td>
 <td>Pure white</td>
 <td></td>
 </tr>
 <tr>
 <td><img src="https://placehold.co/24x24/000/000/png" /></td>
-<td><code>#000</code></td>
+<td><code>#000000</code></td>
 <td>Pure black</td>
 <td></td>
 </tr>
 <tr>
 <td><img src="https://placehold.co/24x24/f00/f00/png" /></td>
-<td><code>#f00</code></td>
+<td><code>#ff0000</code></td>
 <td>Pure red</td>
 <td></td>
 </tr>
 <tr>
 <td><img src="https://placehold.co/24x24/0f0/0f0/png" /></td>
-<td><code>#0f0</code></td>
+<td><code>#00ff00</code></td>
 <td>Pure green</td>
 <td></td>
 </tr>
 <tr>
 <td><img src="https://placehold.co/24x24/00f/00f/png" /></td>
-<td><code>#00f</code></td>
+<td><code>#0000ff</code></td>
 <td>Pure blue</td>
 <td></td>
 </tr>
