@@ -2,22 +2,23 @@ from datetime import date as Date
 from enum import Enum
 from typing import List, Optional, Set
 
-from pydantic import BaseModel, Field, conlist, constr
+from pydantic import BaseModel, conlist, constr
 from pydantic_extra_types.color import Color
 
 from ..pydantic import Version
 
 
 class PaletteEntry(BaseModel):
-    name: constr(min_length=1)
+    name: str = constr(min_length=1)
     description: Optional[str] = None
     color: Color
+    #mapped_color: Optional[Color]
 
 
 # Dublin Core Metadata
 # https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-3
 class Palette(BaseModel):
-    title: constr(min_length=1)
+    title: str = constr(min_length=1)
     description: Optional[str] = None
     version: Optional[Version] = None
     date: Optional[Date] = None
@@ -32,7 +33,9 @@ class Palette(BaseModel):
     rights: Optional[str] = None
     license: Optional[str] = None
     coverage: Optional[str] = None
-    colors: conlist(PaletteEntry, min_length=1)
+    #mapped_description: Optional[str] = None
+    #mapped_identifier: Optional[str] = None
+    colors: list[PaletteEntry] = conlist(PaletteEntry, min_length=1)
 
 
 class GenerationDepth(Enum):
