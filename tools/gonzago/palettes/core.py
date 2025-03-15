@@ -1,29 +1,34 @@
 from datetime import date as Date
 from enum import Enum
+import getpass
 from pathlib import Path
-from typing import Annotated, Callable, Dict, Iterator, List, NamedTuple, Optional, Set
+from typing import Annotated, Callable, Dict, Iterator, List, NamedTuple, Optional
 
 from pydantic import BaseModel, Field, StringConstraints
 from pydantic_extra_types.color import Color
 from pydantic_extra_types.semantic_version import SemanticVersion as Version
+from pydantic_extra_types.language_code import LanguageAlpha2
 
 
 class PaletteEntry(BaseModel):
     name: Annotated[str, StringConstraints(min_length=1)]
-    description: Optional[str] = None
+    description: Annotated[Optional[str], StringConstraints(min_length=1)] = None
     color: Color
+    mapped_color: Optional[Color] = None
 
 
 # Dublin Core Metadata
 # https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-3
 class Palette(BaseModel):
     title: Annotated[str, StringConstraints(min_length=1)]
-    description: Optional[str] = None
+    description: Annotated[Optional[str], StringConstraints(min_length=1)] = None
     version: Optional[Version] = None
     date: Optional[Date] = None
-    language: Optional[str] = None
-    identifier: Optional[str] = None
-    subject: Optional[Set[str]] = None
+    language: Optional[LanguageAlpha2] = None
+    identifier: Annotated[
+        Optional[str], StringConstraints(pattern=r"^\w*(?:\.\w*)*$")
+    ] = None
+    subject: Optional[List[str]] = None
     relation: Optional[str] = None
     source: Optional[str] = None
     publisher: Optional[str] = None
@@ -33,6 +38,9 @@ class Palette(BaseModel):
     license: Optional[str] = None
     coverage: Optional[str] = None
     colors: Annotated[List[PaletteEntry], Field(min_length=1)]
+    mapped_title: Annotated[Optional[str], StringConstraints(min_length=1)] = None
+    mapped_description: Annotated[Optional[str], StringConstraints(min_length=1)] = None
+    mapped_suffix: Annotated[Optional[str], StringConstraints(min_length=1)] = None
 
 
 class GenerationDepth(Enum):
@@ -48,17 +56,26 @@ def generate_default_palette(
     if not title:
         title = "New Palette Template"
 
-    black = PaletteEntry(name="Black", color=Color("black"))
-    white = PaletteEntry(name="White", color=Color("white"))
-    palette = Palette(title=title, colors=[black, white])
+    black: PaletteEntry = PaletteEntry.model_construct()
+    black.name = "Black"
+    black.color = Color("black")
+
+    white: PaletteEntry = PaletteEntry.model_construct()
+    black.name = "White"
+    black.color = Color("white")
+
+    palette: Palette = PaletteEntry.model_construct()
+    palette.title = title
+    palette.colors = [black, white]
+
     if depth.value < GenerationDepth.BASIC.value:
         return palette
 
     palette.description = "A brand new palette template."
-    palette.version = Version.validate_from_str("1.0.0")
+    palette.version = Version(1, 0, 0)
     palette.source = "https://github.com/godot-gonzago"
     palette.publisher = "Gonzago Framework"
-    palette.creator = "David Krummenacher"
+    palette.creator = getpass.getuser()
     black.description = "Black is an achromatic color."
     white.description = "White is an achromatic color."
     if depth.value < GenerationDepth.ADVANCED.value:
@@ -89,45 +106,52 @@ class Reader(NamedTuple):
     pattern: str
     description: str
     read: Read
+    internal: bool = False
 
 
 _READERS: Dict[str, Reader] = dict[str, Reader]()
 
 
 def register_reader(
-    id: str,
-    pattern: str,
-    description: str,
-    read: Read,
+    id: str, pattern: str, description: str, read: Read, internal: bool = False
 ) -> None:
     if id in _READERS:
         raise ValueError(
             f"Reader with id {id} already present. All Readers must have unique ids."
         )
-    _READERS[id] = Reader(id, pattern, description, read)
+    _READERS[id] = Reader(id, pattern, description, read, internal)
 
 
-def get_readers() -> Iterator[Reader]:
+def get_readers(include_internal: bool = False) -> Iterator[Reader]:
     for _, reader in _READERS.items():
-        yield reader
+        if not reader.internal or include_internal:
+            yield reader
 
 
-def get_reader_from_id(id: str) -> Reader:
+def get_reader_from_id(id: str, include_internal: bool = True) -> Reader:
     if id in _READERS.keys():
-        return _READERS[id]
+        reader: Reader = _READERS[id]
+        if not reader.internal or include_internal:
+            return reader
+        else:
+            raise ValueError(f"Only internal reader found with id {id}.")
     raise ValueError(f"There is no reader with id {id}.")
 
 
-def get_reader_for_file(file: Path) -> Reader:
+def get_reader_for_file(file: Path, include_internal: bool = True) -> Reader:
     if not file.is_file():
         raise ValueError(f"Path {file} is not a file.")
     if not file.suffix:
         raise ValueError(f"File path {file} is missing a suffix.")
+    if not file.exists(follow_symlinks=True):
+        raise FileNotFoundError(f"File at path {file} does not exist.")
 
     for _, reader in _READERS.items():
         if file.match(reader.pattern):
-            return reader
-
+            if not reader.internal or include_internal:
+                return reader
+            else:
+                raise ValueError(f"Only internal reader found for path {file}.")
     raise ValueError(f"No reader found for path {file}.")
 
 
@@ -139,7 +163,12 @@ class Writer(NamedTuple):
     suffix: str
     description: str
     write: Write
-    default: bool = True
+    internal: bool = False
+
+    def build_file_path(self, file: Path) -> Path:
+        if not file.suffix:
+            raise ValueError(f"File path {file} is missing a suffix.")
+        return file.with_suffix(self.suffix)
 
 
 _WRITERS: Dict[str, Writer] = dict[str, Writer]()
@@ -150,7 +179,7 @@ def register_writer(
     suffix: str,
     description: str,
     write: Write,
-    default: bool = True,
+    internal: bool = False,
 ) -> None:
     if id in _WRITERS:
         raise ValueError(
@@ -161,17 +190,40 @@ def register_writer(
         suffix,
         description,
         write,
-        default,
+        internal,
     )
 
 
-def get_writers(include_non_default: bool = False) -> Iterator[Writer]:
+def get_writers(include_internal: bool = False) -> Iterator[Writer]:
     for _, writer in _WRITERS.items():
-        if writer.default or include_non_default:
+        if not writer.internal or include_internal:
             yield writer
 
 
-def get_writer_from_id(id: str) -> Writer:
+def get_writer_from_id(id: str, include_internal: bool = True) -> Writer:
     if id in _WRITERS.keys():
-        return _WRITERS[id]
+        writer: Writer = _WRITERS[id]
+        if not writer.internal or include_internal:
+            return writer
+        else:
+            raise ValueError(f"Only internal writer found with id {id}.")
     raise ValueError(f"There is no writer with id {id}.")
+
+
+class PaletteFile(NamedTuple):
+    path: Path
+    rel_path: Path
+
+    def read(file: Path) -> Palette:
+        if not file.exists():
+            raise FileNotFoundError(f"File not found at path {file}.")
+        reader: Reader = get_reader_for_file(file)
+        palette: Palette = reader.read(file)
+        return palette
+
+    def write(writer: Writer, palette: Palette, file: Path) -> None:
+        if not file.suffix:
+            raise ValueError(
+                f"File path {file} has wrong suffix. Writer needs suffix {writer.suffix}."
+            )
+        writer.write(palette, file)

@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import Optional
+from typing import Annotated, Iterable, List, Optional
 
 from jinja2 import Environment, FileSystemLoader, Template
 import typer
@@ -7,11 +7,16 @@ from rich.console import Console
 from rich.table import Table
 
 from ..config import dst_path, src_path
-from .core import Palette, PaletteEntry, generate_default_palette, get_readers, get_writers, get_writer_from_id
+from .core import (
+    Palette,
+    generate_default_palette,
+    get_readers,
+    get_writers,
+    get_writer_from_id,
+)
 from .io import (
     Writer,
     read,
-    get_writer_path,
     find_palettes,
 )
 
@@ -24,13 +29,30 @@ console: Console = Console()
 
 
 @app.command("writers")
-def list_writers():
+def list_writers(
+    include_internal: Annotated[
+        bool,
+        typer.Option(
+            "--include_internal/--exlude_internal",
+            "-i",
+            help="Include internal palette writers.",
+        ),
+    ] = False,
+):
     """
     List all available palette format writers.
     """
     table: Table = Table("ID", "Suffix", "Description")
-    for writer in get_writers():
-        table.add_row(writer.id, writer.suffix, writer.description)
+    for writer in get_writers(include_internal):
+        if not writer.internal:
+            table.add_row(writer.id, writer.suffix, writer.description)
+        else:
+            table.add_row(
+                writer.id + " (internal)",
+                writer.suffix,
+                writer.description,
+                style="bright_black",
+            )
     if table.row_count > 0:
         console.print(table)
     else:
@@ -38,21 +60,38 @@ def list_writers():
 
 
 @app.command("readers")
-def list_readers():
+def list_readers(
+    include_internal: Annotated[
+        bool,
+        typer.Option(
+            "--include_internal/--exlude_internal",
+            "-i",
+            help="Include internal palette readers.",
+        ),
+    ] = False,
+):
     """
     List all available palette format readers.
     """
     table: Table = Table("ID", "Pattern", "Description")
-    for reader in get_readers():
-        table.add_row(reader.id, reader.pattern, reader.description)
+    for reader in get_readers(include_internal):
+        if not reader.internal:
+            table.add_row(reader.id, reader.pattern, reader.description)
+        else:
+            table.add_row(
+                reader.id + " (internal)",
+                reader.pattern,
+                reader.description,
+                style="bright_black",
+            )
     if table.row_count > 0:
         console.print(table)
     else:
         console.print("No readers available!", style="yellow")
 
 
-@app.command("new")
-def new(
+@app.command("create")
+def create_new_template(
     file: Path = "new_palette_template.yaml",
     title: str = "New Palette Template",
     format: str = "template",
@@ -78,15 +117,15 @@ def new(
     console.print(f"Created template file: [i]{file}[/i]", style="green")
 
 
-@app.command("check")
-def check(path: Path = PALETTES_SOURCE_DIR) -> None:
+@app.command("import")
+def create_template_from_file(file: Path) -> None:
     """
     Validate palette templates.
     """
     pass
 
 
-@app.command("ls")
+@app.command("list")
 def list_palettes(dir: Path = PALETTES_SOURCE_DIR) -> None:
     """
     List palette templates.
@@ -126,84 +165,41 @@ def list_palettes(dir: Path = PALETTES_SOURCE_DIR) -> None:
             console.print(table)
 
 
-# src_path: Annotated[
-#     Optional[Path],
-#     typer.Option(
-#         "--in",
-#         "-i",
-#         help="Input template file or directory.",
-#         exists=True,
-#         file_okay=True,
-#         dir_okay=True,
-#         readable=True,
-#         resolve_path=True,
-#         # show_default=False,
-#     ),
-# ] = PALETTES_SOURCE_DIR,
-# out_dir: Annotated[
-#     Optional[Path],
-#     typer.Option(
-#         "--out",
-#         "-o",
-#         help="Palettes output directory.",
-#         file_okay=False,
-#         dir_okay=True,
-#         writable=True,
-#         resolve_path=True,
-#         # show_default=False,
-#     ),
-# ] = PALETTES_DST_DIR,
-# exporters: Annotated[
-#     Optional[List[str]],
-#     typer.Option("--export", "-e", help="List of exporters to use."),
-# ] = list[str](EXPORTERS.keys()),
-
-
-@app.command("publish")
-def publish(
-    src: Path = PALETTES_SOURCE_DIR,
-    dst_dir: Path = PALETTES_DST_DIR,
-    formats: list[str] = [w.id for w in get_writers()],
+# Merge with publish
+@app.command("export")
+def export_templates(
+    src: Annotated[
+        Path,
+        typer.Option(
+            "--in",
+            "-i",
+            help="Input template file or directory.",
+            exists=True,
+            file_okay=True,
+            dir_okay=True,
+            readable=True,
+            resolve_path=True,
+        ),
+    ] = PALETTES_SOURCE_DIR,
+    dst_dir: Annotated[
+        Path,
+        typer.Option(
+            "--out",
+            "-o",
+            help="Palettes output directory.",
+            file_okay=False,
+            dir_okay=True,
+            writable=True,
+            resolve_path=True,
+        ),
+    ] = PALETTES_DST_DIR,
+    formats: Annotated[
+        list[str], typer.Option("--export", "-e", help="List of exporters to use.")
+    ] = [w.id for w in get_writers()],
 ) -> None:
     """
-    Publish palettes in specified formats.
+    Export palettes in specified formats.
     """
-    # if src == None:
-    #     src = PALETTES_SOURCE_DIR
-    # elif not src.is_absolute():
-    #     src = PALETTES_SOURCE_DIR.joinpath(src)
-    # src = src.resolve()
-    # if not src.exists():
-    #     console.print(f"Path {PALETTES_SOURCE_DIR} does not exist!", style="red")
-    #     return
-
-    # if dst_dir == None:
-    #     dst_dir = PALETTES_DST_DIR
-    # elif not dst_dir.is_absolute():
-    #     dst_dir = PALETTES_DST_DIR.joinpath(dst_dir)
-    # dst_dir = dst_dir.resolve()
-    # if not dst_dir.is_dir():
-    #     console.print(f"Destination {PALETTES_SOURCE_DIR} is not a folder!", style="red")
-    #     return
-
-    # if len(FORMATTERS.keys()) == 0:
-    #     console.print(f"No exporters available!", style="red")
-    #     return
-
-    # formatters: list[str] = []
-    # for format in formats:
-    #     if not format in formatters:
-    #         if not format in FORMATTERS.keys():
-    #             console.print(f"Format [i]{format}[/i] not supported!", style="yellow")
-    #             continue
-    #         formatters.append(format)
-
-    # if len(formatters) == 0:
-    #     console.print(f"No supported formats!", style="yellow")
-    #     return
-
-    # formats = [w.id for w in get_writers()]
-
     for file in find_palettes(src):
         rel_path: Path = file.relative_to(src)
         console.print(f"Exporting '{rel_path.as_posix()}'...")
@@ -225,9 +221,10 @@ def publish(
         export_base_path: Path = dst_dir.joinpath(rel_path).resolve()
         for id in formats:
             try:
-                export_path: Path = get_writer_path(id, export_base_path)
+                writer: Writer = get_writer_from_id(id)
+                export_path: Path = writer.build_file_path(export_base_path)
                 export_rel_path: Path = export_path.relative_to(dst_dir)
-                get_writer_from_id(id).write(palette, export_path)
+                writer.write(palette, export_path)
                 console.print(f"Exported '[i]{export_rel_path.as_posix()}[/i]'")
             except Exception as e:
                 console.print(
@@ -242,9 +239,7 @@ def publish(
     console.print("Done")
 
 
-# https://www.geeksforgeeks.org/template-class-in-python/
-# https://wiki.python.org/moin/Templating
-# https://jinja.palletsprojects.com/en/3.1.x/
+# Merge with publish
 @app.command("readme")
 def build_readme(src_dir: Path = PALETTES_SOURCE_DIR, dst_dir: Path = PALETTES_DST_DIR):
     """
@@ -282,6 +277,67 @@ def build_readme(src_dir: Path = PALETTES_SOURCE_DIR, dst_dir: Path = PALETTES_D
     path.write_text(content)
 
     console.print("Done")
+
+
+# TODO: https://typer.tiangolo.com/tutorial/progressbar/#spinner
+# TODO: https://typer.tiangolo.com/tutorial/progressbar/#progress-bar_1
+# TODO: https://rich.readthedocs.io/en/stable/progress.html#basic-usage
+@app.command("publish")
+def publish() -> None:
+    """
+    Publish palettes in full.
+    """
+
+    console.print("Gathering export formats")
+    formats: list[Writer] = list(get_writers())
+
+    console.print("Gathering palettes")
+    palettes: list[Palette] = list()
+    for file in find_palettes(PALETTES_SOURCE_DIR):
+        rel_path: Path = file.relative_to(PALETTES_SOURCE_DIR)
+        console.print(f"Reading [i]'{rel_path.as_posix()}'[/i]...")
+        palette: Palette
+        try:
+            palette = read(file)
+            palettes.append(palette)
+        except Exception as e:
+            console.print(e, style="red")
+            continue
+
+        console.print(f"Exporting [i]'{rel_path.as_posix()}'[/i]...")
+        export_base_path: Path = PALETTES_DST_DIR.joinpath(rel_path).resolve()
+        for format in formats:
+            try:
+                export_path: Path = format.build_file_path(export_base_path)
+                export_rel_path: Path = export_path.relative_to(PALETTES_DST_DIR)
+                format.write(palette, export_path)
+                console.print(f"Exported [i]'{export_rel_path.as_posix()}'[/i]")
+            except Exception as e:
+                console.print(e, style="red")
+                continue
+
+    console.status("Building [i]'README.md'[/i]...")
+
+    environment: Environment = Environment(loader=FileSystemLoader(PALETTES_SOURCE_DIR))
+    environment.trim_blocks = True
+    environment.lstrip_blocks = True
+    template: Template = environment.get_template("README.md.jinja")
+    content: str = template.render(formats=formats, palettes=palettes)
+
+    console.status("Writing [i]'README.md'[/i]...")
+    path: Path = PALETTES_DST_DIR.joinpath("README.md").resolve()
+    path.write_text(content)
+
+    console.print("Done")
+
+
+# TODO: COPYRIGHT.txt https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+# CHANGELOG.md
+# CONTRIBUTING.md
+# AUTHORS.md
+# SUPPORT.md
+# ACKNOWLEDGMENTS.md
+# https://github.com/kmindi/special-files-in-repository-root/blob/master/README.md
 
 
 @app.callback(no_args_is_help=True)

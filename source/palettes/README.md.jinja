@@ -46,7 +46,7 @@ There are no palette formats.
 <tr><th>Identifier</th><td>{{ palette.identifier }}</td></tr>
 {% endif %}
 {% if palette.subject %}
-<tr><th>Subject</th><td>{{ palette.subject }}</td></tr>
+<tr><th>Subject</th><td><code>{{ palette.subject|join('</code>, <code>') }}</code></td></tr>
 {% endif %}
 {% if palette.relation %}
 <tr><th>Relation</th><td>{{ palette.relation }}</td></tr>
@@ -61,7 +61,7 @@ There are no palette formats.
 <tr><th>Creator</th><td>{{ palette.creator }}</td></tr>
 {% endif %}
 {% if palette.contributor %}
-<tr><th>Contributor</th><td>{{ palette.contributor }}</td></tr>
+<tr><th>Contributor</th><td>{{ palette.contributor|join(', ') }}</td></tr>
 {% endif %}
 {% if palette.rights %}
 <tr><th>Rights</th><td>{{ palette.rights }}</td></tr>

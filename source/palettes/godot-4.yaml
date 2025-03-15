@@ -1,173 +1,287 @@
 ---
 title: Godot 4 Editor
-description: Colors based on default editor theme of Godot Engine 4. These colors are replaced by Godot's SVG color mapping based on the chosen theme.
+description: Colors based on default editor theme (dark) of Godot Engine 4. These colors are replaced by Godot's SVG color mapping based on the chosen theme.
 version: 1.0.0
-relation: https://github.com/godotengine/godot/blob/4.0/editor/editor_themes.cpp
+date: 2024-11-01
+language: en
+identifier: gonzago.palettes.godot4
+subject: [Godot, Editor, Theme]
+relation: https://github.com/godotengine/godot/blob/4.4-stable/editor/themes/editor_color_map.cpp
+source: https://github.com/godot-gonzago
+publisher: Gonzago Framework
+creator: David Krummenacher
+contributor:
+  [
+    David Krummenacher,
+    Gonzago Framework contributors,
+    Godot Engine contributors,
+  ]
+rights: Copyright (c) 2024 David Krummenacher, Gonzago Framework contributors and Godot Engine contributors
+license: http://creativecommons.org/licenses/by/4.0/
+
+mapped_title: Godot 4 Editor (light)
+mapped_description: Colors based on default editor theme (light) of Godot Engine 4.
+mapped_suffix: light
+
 colors:
   - name: Godot Blue
     color: "#478cbf"
+    mapped_color: "#478cbf"
   - name: Godot Gray
     color: "#414042"
+    mapped_color: "#414042"
+
   - name: Pure white
     color: "#ffffff"
+    mapped_color: "#414141"
+  - name: Forced light color
+    color: "#fefefe"
+    mapped_color: "#fefefe"
   - name: Pure black
     color: "#000000"
+    mapped_color: "#bfbfbf"
+  - name: Forced dark color
+    color: "#010101"
+    mapped_color: "#010101"
+
   - name: Pure red
     color: "#ff0000"
+    mapped_color: "#ff0000"
   - name: Pure green
     color: "#00ff00"
+    mapped_color: "#00ff00"
   - name: Pure blue
     color: "#0000ff"
+    mapped_color: "#0000ff"
 
   - name: GUI - Common icon color
     color: "#e0e0e0"
-  - name: GUI - Forced light color
-    color: "#fefefe"
+    mapped_color: "#5a5a5a"
   - name: GUI - GUI disabled color
     color: "#808080"
+    mapped_color: "#808080"
   - name: GUI - GUI disabled light color
     color: "#b3b3b3"
+    mapped_color: "#363636"
   - name: GUI - GUI highlight color
     color: "#699ce8"
+    mapped_color: "#699ce8"
   - name: GUI - Scrollbar grabber highlight color
     color: "#f9f9f9"
+    mapped_color: "#606060"
 
-  - name: Animation
+  - name: GUI - Animation
     color: "#c38ef1"
-  - name: Spatial
-    color: "#fc7f7f"
-  - name: 2D
+    mapped_color: "#a85de9"
+  - name: GUI - 2D
     color: "#8da5f3"
-  - name: 2D Dark
-    color: "#4b70ea"
-  - name: Control
+    mapped_color: "#3d64dd"
+  - name: GUI - 2D Abstract
+    color: "#7582a8"
+    mapped_color: "#6d83c8"
+  - name: GUI - 3D
+    color: "#fc7f7f"
+    mapped_color: "#cd3838"
+  - name: GUI - 3D Abstract
+    color: "#b56d6d"
+    mapped_color: "#be6a6a"
+  - name: GUI - GUI Control
     color: "#8eef97"
+    mapped_color: "#2fa139"
+  - name: GUI - GUI Control Abstract
+    color: "#76ad7b"
+    mapped_color: "#64a66a"
 
-  - name: Selection (blue)
+  - name: GUI - Selection (blue)
     color: "#5fb2ff"
-  - name: Selection (darker blue)
+    mapped_color: "#0079f0"
+  - name: GUI - Selection (darker blue)
     color: "#003e7a"
-  - name: Gizmo (yellow)
+    mapped_color: "#2b74bb"
+  - name: GUI - Gizmo (yellow)
     color: "#f7f5cf"
+    mapped_color: "#615f3a"
 
   - name: Rainbow - Red
     color: "#ff4545"
+    mapped_color: "#ff2929"
   - name: Rainbow - Yellow
     color: "#ffe345"
+    mapped_color: "#ffe337"
   - name: Rainbow - Green
     color: "#80ff45"
+    mapped_color: "#74ff34"
   - name: Rainbow - Aqua
     color: "#45ffa2"
+    mapped_color: "#2cff98"
   - name: Rainbow - Blue
     color: "#45d7ff"
+    mapped_color: "#22ccff"
   - name: Rainbow - Purple
     color: "#8045ff"
+    mapped_color: "#702aff"
   - name: Rainbow - Pink
     color: "#ff4596"
+    mapped_color: "#ff2781"
 
   - name: Audio gradients - Yellow
     color: "#e1da5b"
+    mapped_color: "#d6cf4b"
+
   - name: Audio gradients - Frozen gradient top
     color: "#62aeff"
+    mapped_color: "#1678e0"
   - name: Audio gradients - Frozen gradient middle
     color: "#75d1e6"
+    mapped_color: "#41acc5"
   - name: Audio gradients - Frozen gradient bottom
     color: "#84ffee"
+    mapped_color: "#49ccba"
+
   - name: Audio gradients - Color track red
     color: "#f70000"
+    mapped_color: "#c91616"
   - name: Audio gradients - Color track orange
     color: "#eec315"
+    mapped_color: "#d58c0b"
   - name: Audio gradients - Color track yellow
     color: "#dbee15"
+    mapped_color: "#b7d10a"
   - name: Audio gradients - Color track green
     color: "#288027"
+    mapped_color: "#218309"
 
-  - name: Mesh resource (orange)
+  - name: Other objects - Mesh resource (orange)
     color: "#ffca5f"
-  - name: Shape resource (blue)
+    mapped_color: "#fea900"
+  - name: Other objects - Shape resource (blue)
     color: "#2998ff"
-  - name: Shape resource (light blue)
+    mapped_color: "#68b6ff"
+  - name: Other objects - Shape resource (light blue)
     color: "#a2d2ff"
+    mapped_color: "#4998e3"
+  - name: Other objects - Input event highlight (light blue)
+    color: "#69c4d4"
+    mapped_color: "#29a3cc"
 
   - name: Animation editor - 3D Position track
     color: "#ea7940"
+    mapped_color: "#bd5e2c"
   - name: Animation editor - 3D Rotation track
     color: "#ff2b88"
+    mapped_color: "#bd165f"
   - name: Animation editor - 3D Scale track
     color: "#eac840"
+    mapped_color: "#bd9d1f"
   - name: Animation editor - Call Method track
     color: "#3cf34e"
+    mapped_color: "#16a827"
   - name: Animation editor - Bezier Curve track
     color: "#2877f6"
+    mapped_color: "#236be6"
   - name: Animation editor - Audio Playback track
     color: "#eae440"
+    mapped_color: "#9f9722"
   - name: Animation editor - Animation Playback track
     color: "#a448f0"
+    mapped_color: "#9853ce"
   - name: Animation editor - Blend Shape track
     color: "#5ad5c4"
+    mapped_color: "#0a9c88"
 
   - name: Control layouts - Highlighted part
     color: "#d6d6d6"
+    mapped_color: "#474747"
   - name: Control layouts - Background part
     color: "#474747"
+    mapped_color: "#d6d6d6"
   - name: Control layouts - Border part
     color: "#919191"
+    mapped_color: "#6e6e6e"
 
   - name: TileSet - New Single Tile
     color: "#fce00e"
+    mapped_color: "#aa8d24"
   - name: TileSet - New Autotile
     color: "#0e71fc"
+    mapped_color: "#0350bd"
   - name: TileSet - New Atlas
     color: "#c6ced4"
+    mapped_color: "#828f9b"
 
-  - name: VisualScript - Variant
+  - name: Variant types - Variant
     color: "#41ecad"
-  - name: VisualScript - Bool
+    mapped_color: "#25e3a0"
+  - name: Variant types - bool
     color: "#6f91f0"
-  - name: VisualScript - Int
+    mapped_color: "#6d8eeb"
+  - name: Variant types - int/uint
     color: "#5abbef"
-  - name: VisualScript - Float
+    mapped_color: "#4fb2e9"
+  - name: Variant types - float
     color: "#35d4f4"
-  - name: VisualScript - String
+    mapped_color: "#27ccf0"
+  - name: Variant types - String
     color: "#4593ec"
-  - name: VisualScript - Vector2
-    color: "#ac73f1"
-  - name: VisualScript - Rect2
-    color: "#f1738f"
-  - name: VisualScript - Vector3
-    color: "#de66f0"
-  - name: VisualScript - Transform2D
-    color: "#b9ec41"
-  - name: VisualScript - Plane
-    color: "#f74949"
-  - name: VisualScript - Quat
-    color: "#ec418e"
-  - name: VisualScript - AABB
+    mapped_color: "#4690e7"
+  - name: Variant types - AABB
     color: "#ee5677"
-  - name: VisualScript - Basis
+    mapped_color: "#ee7991"
+  - name: Variant types - Array
+    color: "#e0e0e0"
+    mapped_color: "#5a5a5a"
+  - name: Variant types - Basis
     color: "#e1ec41"
-  - name: VisualScript - Transform
-    color: "#f68f45"
-  - name: VisualScript - NodePath
-    color: "#417aec"
-  - name: VisualScript - RID
-    color: "#41ec80"
-  - name: VisualScript - Object
-    color: "#55f3e3"
-  - name: VisualScript - Dictionary
+    mapped_color: "#b2bb19"
+  - name: Variant types - Dictionary
     color: "#54ed9e"
+    mapped_color: "#57e99f"
+  - name: Variant types - NodePath
+    color: "#417aec"
+    mapped_color: "#6993ec"
+  - name: Variant types - Object
+    color: "#55f3e3"
+    mapped_color: "#12d5c3"
+  - name: Variant types - Plane
+    color: "#f74949"
+    mapped_color: "#f77070"
+  - name: Variant types - Projection
+    color: "#44bd44"
+    mapped_color: "#46b946"
+  - name: Variant types - Quaternion
+    color: "#ec418e"
+    mapped_color: "#ec69a3"
+  - name: Variant types - Rect2
+    color: "#f1738f"
+    mapped_color: "#ee758e"
+  - name: Variant types - RID
+    color: "#41ec80"
+    mapped_color: "#2ce573"
+  - name: Variant types - Transform2D
+    color: "#b9ec41"
+    mapped_color: "#96ce1a"
+  - name: Variant types - Transform3D
+    color: "#f68f45"
+    mapped_color: "#f49047"
+  - name: Variant types - Vector2
+    color: "#ac73f1"
+    mapped_color: "#ad76ee"
+  - name: Variant types - Vector3
+    color: "#de66f0"
+    mapped_color: "#dc6aed"
+  - name: Variant types - Vector4
+    color: "#f066bd"
+    mapped_color: "#ed6abd"
+
   - name: Visual shaders - Vector funcs
     color: "#77ce57"
+    mapped_color: "#67c046"
   - name: Visual shaders - Vector transforms
     color: "#ea686c"
+    mapped_color: "#d95256"
   - name: Visual shaders - Textures and cubemaps
     color: "#eac968"
+    mapped_color: "#d9b64f"
   - name: Visual shaders - Functions and expressions
     color: "#cf68ea"
-
-  - name: Error
-    color: "#ff5f5f"
-  - name: Success
-    color: "#5fff97"
-  - name: Warning
-    color: "#ffdd65"
+    mapped_color: "#c050dd"

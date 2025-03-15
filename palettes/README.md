@@ -71,11 +71,21 @@ Different palettes for use in Gonzago Framework and its design elements.
 
 ### Godot 4 Editor
 
-Colors based on default editor theme of Godot Engine 4. These colors are replaced by Godot's SVG color mapping based on the chosen theme.
+Colors based on default editor theme (dark) of Godot Engine 4. These colors are replaced by Godot's SVG color mapping based on the chosen theme.
 
 <table>
 <tr><th>Version</th><td>1.0.0</td></tr>
-<tr><th>Relation</th><td>https://github.com/godotengine/godot/blob/4.0/editor/editor_themes.cpp</td></tr>
+<tr><th>Date</th><td>2024-11-01</td></tr>
+<tr><th>Language</th><td>en</td></tr>
+<tr><th>Identifier</th><td>gonzago.palettes.godot4</td></tr>
+<tr><th>Subject</th><td><code>Godot</code>, <code>Editor</code>, <code>Theme</code></td></tr>
+<tr><th>Relation</th><td>https://github.com/godotengine/godot/blob/4.4-stable/editor/themes/editor_color_map.cpp</td></tr>
+<tr><th>Source</th><td>https://github.com/godot-gonzago</td></tr>
+<tr><th>Publisher</th><td>Gonzago Framework</td></tr>
+<tr><th>Creator</th><td>David Krummenacher</td></tr>
+<tr><th>Contributor</th><td>David Krummenacher, Gonzago Framework contributors, Godot Engine contributors</td></tr>
+<tr><th>Rights</th><td>Copyright (c) 2024 David Krummenacher, Gonzago Framework contributors and Godot Engine contributors</td></tr>
+<tr><th>License</th><td>http://creativecommons.org/licenses/by/4.0/</td></tr>
 </table>
 
 <table>
@@ -103,9 +113,21 @@ Colors based on default editor theme of Godot Engine 4. These colors are replace
 <td></td>
 </tr>
 <tr>
+<td><img src="https://placehold.co/24x24/fefefe/fefefe/png" /></td>
+<td><code>#fefefe</code></td>
+<td>Forced light color</td>
+<td></td>
+</tr>
+<tr>
 <td><img src="https://placehold.co/24x24/000/000/png" /></td>
 <td><code>#000000</code></td>
 <td>Pure black</td>
+<td></td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/010101/010101/png" /></td>
+<td><code>#010101</code></td>
+<td>Forced dark color</td>
 <td></td>
 </tr>
 <tr>
@@ -130,12 +152,6 @@ Colors based on default editor theme of Godot Engine 4. These colors are replace
 <td><img src="https://placehold.co/24x24/e0e0e0/e0e0e0/png" /></td>
 <td><code>#e0e0e0</code></td>
 <td>GUI - Common icon color</td>
-<td></td>
-</tr>
-<tr>
-<td><img src="https://placehold.co/24x24/fefefe/fefefe/png" /></td>
-<td><code>#fefefe</code></td>
-<td>GUI - Forced light color</td>
 <td></td>
 </tr>
 <tr>
@@ -165,49 +181,61 @@ Colors based on default editor theme of Godot Engine 4. These colors are replace
 <tr>
 <td><img src="https://placehold.co/24x24/c38ef1/c38ef1/png" /></td>
 <td><code>#c38ef1</code></td>
-<td>Animation</td>
-<td></td>
-</tr>
-<tr>
-<td><img src="https://placehold.co/24x24/fc7f7f/fc7f7f/png" /></td>
-<td><code>#fc7f7f</code></td>
-<td>Spatial</td>
+<td>GUI - Animation</td>
 <td></td>
 </tr>
 <tr>
 <td><img src="https://placehold.co/24x24/8da5f3/8da5f3/png" /></td>
 <td><code>#8da5f3</code></td>
-<td>2D</td>
+<td>GUI - 2D</td>
 <td></td>
 </tr>
 <tr>
-<td><img src="https://placehold.co/24x24/4b70ea/4b70ea/png" /></td>
-<td><code>#4b70ea</code></td>
-<td>2D Dark</td>
+<td><img src="https://placehold.co/24x24/7582a8/7582a8/png" /></td>
+<td><code>#7582a8</code></td>
+<td>GUI - 2D Abstract</td>
+<td></td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/fc7f7f/fc7f7f/png" /></td>
+<td><code>#fc7f7f</code></td>
+<td>GUI - 3D</td>
+<td></td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/b56d6d/b56d6d/png" /></td>
+<td><code>#b56d6d</code></td>
+<td>GUI - 3D Abstract</td>
 <td></td>
 </tr>
 <tr>
 <td><img src="https://placehold.co/24x24/8eef97/8eef97/png" /></td>
 <td><code>#8eef97</code></td>
-<td>Control</td>
+<td>GUI - GUI Control</td>
+<td></td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/76ad7b/76ad7b/png" /></td>
+<td><code>#76ad7b</code></td>
+<td>GUI - GUI Control Abstract</td>
 <td></td>
 </tr>
 <tr>
 <td><img src="https://placehold.co/24x24/5fb2ff/5fb2ff/png" /></td>
 <td><code>#5fb2ff</code></td>
-<td>Selection (blue)</td>
+<td>GUI - Selection (blue)</td>
 <td></td>
 </tr>
 <tr>
 <td><img src="https://placehold.co/24x24/003e7a/003e7a/png" /></td>
 <td><code>#003e7a</code></td>
-<td>Selection (darker blue)</td>
+<td>GUI - Selection (darker blue)</td>
 <td></td>
 </tr>
 <tr>
 <td><img src="https://placehold.co/24x24/f7f5cf/f7f5cf/png" /></td>
 <td><code>#f7f5cf</code></td>
-<td>Gizmo (yellow)</td>
+<td>GUI - Gizmo (yellow)</td>
 <td></td>
 </tr>
 <tr>
@@ -303,19 +331,25 @@ Colors based on default editor theme of Godot Engine 4. These colors are replace
 <tr>
 <td><img src="https://placehold.co/24x24/ffca5f/ffca5f/png" /></td>
 <td><code>#ffca5f</code></td>
-<td>Mesh resource (orange)</td>
+<td>Other objects - Mesh resource (orange)</td>
 <td></td>
 </tr>
 <tr>
 <td><img src="https://placehold.co/24x24/2998ff/2998ff/png" /></td>
 <td><code>#2998ff</code></td>
-<td>Shape resource (blue)</td>
+<td>Other objects - Shape resource (blue)</td>
 <td></td>
 </tr>
 <tr>
 <td><img src="https://placehold.co/24x24/a2d2ff/a2d2ff/png" /></td>
 <td><code>#a2d2ff</code></td>
-<td>Shape resource (light blue)</td>
+<td>Other objects - Shape resource (light blue)</td>
+<td></td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/69c4d4/69c4d4/png" /></td>
+<td><code>#69c4d4</code></td>
+<td>Other objects - Input event highlight (light blue)</td>
 <td></td>
 </tr>
 <tr>
@@ -405,109 +439,127 @@ Colors based on default editor theme of Godot Engine 4. These colors are replace
 <tr>
 <td><img src="https://placehold.co/24x24/41ecad/41ecad/png" /></td>
 <td><code>#41ecad</code></td>
-<td>VisualScript - Variant</td>
+<td>Variant types - Variant</td>
 <td></td>
 </tr>
 <tr>
 <td><img src="https://placehold.co/24x24/6f91f0/6f91f0/png" /></td>
 <td><code>#6f91f0</code></td>
-<td>VisualScript - Bool</td>
+<td>Variant types - bool</td>
 <td></td>
 </tr>
 <tr>
 <td><img src="https://placehold.co/24x24/5abbef/5abbef/png" /></td>
 <td><code>#5abbef</code></td>
-<td>VisualScript - Int</td>
+<td>Variant types - int/uint</td>
 <td></td>
 </tr>
 <tr>
 <td><img src="https://placehold.co/24x24/35d4f4/35d4f4/png" /></td>
 <td><code>#35d4f4</code></td>
-<td>VisualScript - Float</td>
+<td>Variant types - float</td>
 <td></td>
 </tr>
 <tr>
 <td><img src="https://placehold.co/24x24/4593ec/4593ec/png" /></td>
 <td><code>#4593ec</code></td>
-<td>VisualScript - String</td>
-<td></td>
-</tr>
-<tr>
-<td><img src="https://placehold.co/24x24/ac73f1/ac73f1/png" /></td>
-<td><code>#ac73f1</code></td>
-<td>VisualScript - Vector2</td>
-<td></td>
-</tr>
-<tr>
-<td><img src="https://placehold.co/24x24/f1738f/f1738f/png" /></td>
-<td><code>#f1738f</code></td>
-<td>VisualScript - Rect2</td>
-<td></td>
-</tr>
-<tr>
-<td><img src="https://placehold.co/24x24/de66f0/de66f0/png" /></td>
-<td><code>#de66f0</code></td>
-<td>VisualScript - Vector3</td>
-<td></td>
-</tr>
-<tr>
-<td><img src="https://placehold.co/24x24/b9ec41/b9ec41/png" /></td>
-<td><code>#b9ec41</code></td>
-<td>VisualScript - Transform2D</td>
-<td></td>
-</tr>
-<tr>
-<td><img src="https://placehold.co/24x24/f74949/f74949/png" /></td>
-<td><code>#f74949</code></td>
-<td>VisualScript - Plane</td>
-<td></td>
-</tr>
-<tr>
-<td><img src="https://placehold.co/24x24/ec418e/ec418e/png" /></td>
-<td><code>#ec418e</code></td>
-<td>VisualScript - Quat</td>
+<td>Variant types - String</td>
 <td></td>
 </tr>
 <tr>
 <td><img src="https://placehold.co/24x24/ee5677/ee5677/png" /></td>
 <td><code>#ee5677</code></td>
-<td>VisualScript - AABB</td>
+<td>Variant types - AABB</td>
+<td></td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/e0e0e0/e0e0e0/png" /></td>
+<td><code>#e0e0e0</code></td>
+<td>Variant types - Array</td>
 <td></td>
 </tr>
 <tr>
 <td><img src="https://placehold.co/24x24/e1ec41/e1ec41/png" /></td>
 <td><code>#e1ec41</code></td>
-<td>VisualScript - Basis</td>
-<td></td>
-</tr>
-<tr>
-<td><img src="https://placehold.co/24x24/f68f45/f68f45/png" /></td>
-<td><code>#f68f45</code></td>
-<td>VisualScript - Transform</td>
-<td></td>
-</tr>
-<tr>
-<td><img src="https://placehold.co/24x24/417aec/417aec/png" /></td>
-<td><code>#417aec</code></td>
-<td>VisualScript - NodePath</td>
-<td></td>
-</tr>
-<tr>
-<td><img src="https://placehold.co/24x24/41ec80/41ec80/png" /></td>
-<td><code>#41ec80</code></td>
-<td>VisualScript - RID</td>
-<td></td>
-</tr>
-<tr>
-<td><img src="https://placehold.co/24x24/55f3e3/55f3e3/png" /></td>
-<td><code>#55f3e3</code></td>
-<td>VisualScript - Object</td>
+<td>Variant types - Basis</td>
 <td></td>
 </tr>
 <tr>
 <td><img src="https://placehold.co/24x24/54ed9e/54ed9e/png" /></td>
 <td><code>#54ed9e</code></td>
-<td>VisualScript - Dictionary</td>
+<td>Variant types - Dictionary</td>
+<td></td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/417aec/417aec/png" /></td>
+<td><code>#417aec</code></td>
+<td>Variant types - NodePath</td>
+<td></td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/55f3e3/55f3e3/png" /></td>
+<td><code>#55f3e3</code></td>
+<td>Variant types - Object</td>
+<td></td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/f74949/f74949/png" /></td>
+<td><code>#f74949</code></td>
+<td>Variant types - Plane</td>
+<td></td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/44bd44/44bd44/png" /></td>
+<td><code>#44bd44</code></td>
+<td>Variant types - Projection</td>
+<td></td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/ec418e/ec418e/png" /></td>
+<td><code>#ec418e</code></td>
+<td>Variant types - Quaternion</td>
+<td></td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/f1738f/f1738f/png" /></td>
+<td><code>#f1738f</code></td>
+<td>Variant types - Rect2</td>
+<td></td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/41ec80/41ec80/png" /></td>
+<td><code>#41ec80</code></td>
+<td>Variant types - RID</td>
+<td></td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/b9ec41/b9ec41/png" /></td>
+<td><code>#b9ec41</code></td>
+<td>Variant types - Transform2D</td>
+<td></td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/f68f45/f68f45/png" /></td>
+<td><code>#f68f45</code></td>
+<td>Variant types - Transform3D</td>
+<td></td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/ac73f1/ac73f1/png" /></td>
+<td><code>#ac73f1</code></td>
+<td>Variant types - Vector2</td>
+<td></td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/de66f0/de66f0/png" /></td>
+<td><code>#de66f0</code></td>
+<td>Variant types - Vector3</td>
+<td></td>
+</tr>
+<tr>
+<td><img src="https://placehold.co/24x24/f066bd/f066bd/png" /></td>
+<td><code>#f066bd</code></td>
+<td>Variant types - Vector4</td>
 <td></td>
 </tr>
 <tr>
@@ -534,24 +586,6 @@ Colors based on default editor theme of Godot Engine 4. These colors are replace
 <td>Visual shaders - Functions and expressions</td>
 <td></td>
 </tr>
-<tr>
-<td><img src="https://placehold.co/24x24/ff5f5f/ff5f5f/png" /></td>
-<td><code>#ff5f5f</code></td>
-<td>Error</td>
-<td></td>
-</tr>
-<tr>
-<td><img src="https://placehold.co/24x24/5fff97/5fff97/png" /></td>
-<td><code>#5fff97</code></td>
-<td>Success</td>
-<td></td>
-</tr>
-<tr>
-<td><img src="https://placehold.co/24x24/ffdd65/ffdd65/png" /></td>
-<td><code>#ffdd65</code></td>
-<td>Warning</td>
-<td></td>
-</tr>
 </table>
 
 ### Gonzago Framework
@@ -562,9 +596,12 @@ Colors used for Gonzago Framework assets.
 <tr><th>Version</th><td>1.0.0</td></tr>
 <tr><th>Date</th><td>2023-11-19</td></tr>
 <tr><th>Language</th><td>en</td></tr>
+<tr><th>Identifier</th><td>gonzago.palettes.gonzago</td></tr>
+<tr><th>Subject</th><td><code>Gonzago</code></td></tr>
 <tr><th>Source</th><td>https://github.com/godot-gonzago</td></tr>
 <tr><th>Publisher</th><td>Gonzago Framework</td></tr>
 <tr><th>Creator</th><td>David Krummenacher</td></tr>
+<tr><th>Contributor</th><td>David Krummenacher, Gonzago Framework contributors</td></tr>
 <tr><th>Rights</th><td>Copyright (c) 2023 David Krummenacher and Gonzago Framework contributors</td></tr>
 <tr><th>License</th><td>http://creativecommons.org/licenses/by/4.0/</td></tr>
 </table>

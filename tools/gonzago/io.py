@@ -1,41 +1,41 @@
 import os
 from pathlib import Path
-from typing import Iterator, Optional, Protocol, runtime_checkable
+from typing import Callable, Iterator, Optional
 
 
-@runtime_checkable
-class _PathMatcher(Protocol):
-    def __call__(self, path: Path) -> bool:
-        ...
-
-_PathFilter = Optional[_PathMatcher | str]
+PathMatcher = Callable[[Path], bool]
+PathFilter = Optional[PathMatcher | str]
 
 
-def filter_path(path: Path, filter: _PathFilter) -> bool:
+def filter_path(path: Path, filter: PathFilter) -> bool:
     match filter:
         case None:
             return True
         case str():
             return path.match(filter)
-        case _PathMatcher():
-            return filter(path)
+        case fn if PathMatcher:
+            return fn(path)
         case _:
             return True
 
 
 def gather_files(
     root: Path,
-    file_filter: _PathFilter = None,
-    dir_filter: _PathFilter = "[!._]*",
+    file_filter: PathFilter = None,
+    dir_filter: PathFilter = "[!._]*",
     max_depth: int = -1,
 ) -> Iterator[Path]:
     root = root.resolve()
     if not root.exists():
-        raise FileNotFoundError(root)
+        raise FileNotFoundError(
+            f"File does not exist at {root}."
+            if root.is_file()
+            else f"Directory does not exist at {root}."
+        )
 
     if root.is_file():
         if not filter_path(root, file_filter):
-            raise TypeError(root)
+            raise TypeError(f"File at path {root} failes filter.")
         yield root
         return
 

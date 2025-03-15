@@ -27,5 +27,5 @@ def write(palette: Palette, file: Path) -> None:
         yaml.safe_dump(data, stream, sort_keys=False)
 
 
-register_reader(ID, PATTERN, DESCRIPTION, read)
-register_writer(ID, SUFFIX, DESCRIPTION, write, False)
+register_reader(ID, PATTERN, DESCRIPTION, read, True)
+register_writer(ID, SUFFIX, DESCRIPTION, write, True)

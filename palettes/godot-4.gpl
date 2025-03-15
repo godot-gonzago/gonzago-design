@@ -1,30 +1,35 @@
 GIMP Palette
 Name: Godot 4 Editor
 Columns: 0
-# Description: Colors based on default editor theme of Godot Engine 4. These colors are replaced by Godot's SVG color mapping based on the chosen theme.
+# Description: Colors based on default editor theme (dark) of Godot Engine 4. These colors are replaced by Godot's SVG color mapping based on the chosen theme.
 # Version: 1.0.0
+# Author: David Krummenacher
+# Source: https://github.com/godot-gonzago
 #
 71	140	191	Godot Blue
 65	64	66	Godot Gray
 255	255	255	Pure white
+254	254	254	Forced light color
 0	0	0	Pure black
+1	1	1	Forced dark color
 255	0	0	Pure red
 0	255	0	Pure green
 0	0	255	Pure blue
 224	224	224	GUI - Common icon color
-254	254	254	GUI - Forced light color
 128	128	128	GUI - GUI disabled color
 179	179	179	GUI - GUI disabled light color
 105	156	232	GUI - GUI highlight color
 249	249	249	GUI - Scrollbar grabber highlight color
-195	142	241	Animation
-252	127	127	Spatial
-141	165	243	2D
-75	112	234	2D Dark
-142	239	151	Control
-95	178	255	Selection (blue)
-0	62	122	Selection (darker blue)
-247	245	207	Gizmo (yellow)
+195	142	241	GUI - Animation
+141	165	243	GUI - 2D
+117	130	168	GUI - 2D Abstract
+252	127	127	GUI - 3D
+181	109	109	GUI - 3D Abstract
+142	239	151	GUI - GUI Control
+118	173	123	GUI - GUI Control Abstract
+95	178	255	GUI - Selection (blue)
+0	62	122	GUI - Selection (darker blue)
+247	245	207	GUI - Gizmo (yellow)
 255	69	69	Rainbow - Red
 255	227	69	Rainbow - Yellow
 128	255	69	Rainbow - Green
@@ -40,9 +45,10 @@ Columns: 0
 238	195	21	Audio gradients - Color track orange
 219	238	21	Audio gradients - Color track yellow
 40	128	39	Audio gradients - Color track green
-255	202	95	Mesh resource (orange)
-41	152	255	Shape resource (blue)
-162	210	255	Shape resource (light blue)
+255	202	95	Other objects - Mesh resource (orange)
+41	152	255	Other objects - Shape resource (blue)
+162	210	255	Other objects - Shape resource (light blue)
+105	196	212	Other objects - Input event highlight (light blue)
 234	121	64	Animation editor - 3D Position track
 255	43	136	Animation editor - 3D Rotation track
 234	200	64	Animation editor - 3D Scale track
@@ -57,28 +63,28 @@ Columns: 0
 252	224	14	TileSet - New Single Tile
 14	113	252	TileSet - New Autotile
 198	206	212	TileSet - New Atlas
-65	236	173	VisualScript - Variant
-111	145	240	VisualScript - Bool
-90	187	239	VisualScript - Int
-53	212	244	VisualScript - Float
-69	147	236	VisualScript - String
-172	115	241	VisualScript - Vector2
-241	115	143	VisualScript - Rect2
-222	102	240	VisualScript - Vector3
-185	236	65	VisualScript - Transform2D
-247	73	73	VisualScript - Plane
-236	65	142	VisualScript - Quat
-238	86	119	VisualScript - AABB
-225	236	65	VisualScript - Basis
-246	143	69	VisualScript - Transform
-65	122	236	VisualScript - NodePath
-65	236	128	VisualScript - RID
-85	243	227	VisualScript - Object
-84	237	158	VisualScript - Dictionary
+65	236	173	Variant types - Variant
+111	145	240	Variant types - bool
+90	187	239	Variant types - int/uint
+53	212	244	Variant types - float
+69	147	236	Variant types - String
+238	86	119	Variant types - AABB
+224	224	224	Variant types - Array
+225	236	65	Variant types - Basis
+84	237	158	Variant types - Dictionary
+65	122	236	Variant types - NodePath
+85	243	227	Variant types - Object
+247	73	73	Variant types - Plane
+68	189	68	Variant types - Projection
+236	65	142	Variant types - Quaternion
+241	115	143	Variant types - Rect2
+65	236	128	Variant types - RID
+185	236	65	Variant types - Transform2D
+246	143	69	Variant types - Transform3D
+172	115	241	Variant types - Vector2
+222	102	240	Variant types - Vector3
+240	102	189	Variant types - Vector4
 119	206	87	Visual shaders - Vector funcs
 234	104	108	Visual shaders - Vector transforms
 234	201	104	Visual shaders - Textures and cubemaps
 207	104	234	Visual shaders - Functions and expressions
-255	95	95	Error
-95	255	151	Success
-255	221	101	Warning

@@ -18,6 +18,12 @@ from ..io import gather_files
 from .core import Palette, Reader, Writer, get_reader_for_file, get_readers, get_writer_from_id
 
 
+class PaletteFile(NamedTuple):
+    path: Path
+    rel_path: Path
+    palette: Palette
+
+
 def read(file: Path) -> Palette:
     if not file.exists():
         raise FileNotFoundError(file)
@@ -25,13 +31,6 @@ def read(file: Path) -> Palette:
     palette: Palette = reader.read(file)
     return palette
     #raise ValueError(f"File at path {file} cannot be read.")
-
-
-def get_writer_path(id: str, file: Path) -> Path:
-    if not file.suffix:
-        raise ValueError(f"File path {file} is missing a suffix.")
-    writer: Writer = get_writer_from_id(id)
-    return file.with_suffix(writer.suffix)
 
 
 #def write(file: Path, palette: Palette) -> None:
@@ -46,7 +45,7 @@ def get_writer_path(id: str, file: Path) -> Path:
 
 
 def _match_reader(file: Path) -> bool:
-    for reader in get_readers():
+    for reader in get_readers(True):
         if file.match(reader.pattern):
             return True
     return False
@@ -54,6 +53,16 @@ def _match_reader(file: Path) -> bool:
 
 def find_palettes(root: Path, max_depth: int = -1) -> Iterator[Path]:
     return gather_files(root, _match_reader, max_depth=max_depth)
+
+
+def load_palettes(root: Path, max_depth: int = -1) -> Iterator[PaletteFile]:
+    for file_path in gather_files(root, _match_reader, max_depth=max_depth):
+        try:
+            palette: Palette = read(file_path)
+            rel_path: Path = file_path.relative_to(root)
+            yield PaletteFile(file_path, rel_path, palette)
+        except Exception as e:
+            continue
 
 
 # def find_valid_palettes(root: Path, max_depth: int = -1) -> Iterator[Palette]:
@@ -81,7 +90,7 @@ def validate(file: Path, include_mismatch: bool = False) -> Iterator[ValidationR
     if not file.exists():
         yield ValidationResult(file, exception=FileNotFoundError(file))
         raise StopIteration
-    for _, reader in READERS.items():
+    for reader in get_readers():
         if not file.match(reader.pattern):
             if include_mismatch:
                 yield ValidationResult(file, reader, ValueError(f"File at path {file} cannot be read by reader with id {reader.id}."))
