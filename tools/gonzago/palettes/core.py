@@ -40,7 +40,12 @@ class Palette(BaseModel):
     colors: Annotated[List[PaletteEntry], Field(min_length=1)]
     mapped_title: Annotated[Optional[str], StringConstraints(min_length=1)] = None
     mapped_description: Annotated[Optional[str], StringConstraints(min_length=1)] = None
-    mapped_suffix: Annotated[Optional[str], StringConstraints(min_length=1)] = None
+    mapped_suffix: Annotated[
+        Optional[str],
+        StringConstraints(
+            min_length=1, pattern=r"^[a-z]+(?:\_[a-z]+)*(?:\.[a-z]+(?:\_[a-z]+)*)*$"
+        ),
+    ] = None
 
 
 class GenerationDepth(Enum):
