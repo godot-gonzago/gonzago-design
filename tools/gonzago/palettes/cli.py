@@ -5,8 +5,8 @@ from jinja2 import Environment, FileSystemLoader, Template
 import typer
 from rich.console import Console
 from rich.table import Table
-from stringcase import snakecase
 
+from ..utils import snake_case
 from ..config import dst_path, src_path
 from .models import (
     Palette,
@@ -113,7 +113,7 @@ def create_new_template(
     Create new palette template.
     """
 
-    file: Path = PALETTES_SOURCE_DIR.joinpath(snakecase(title)+".yaml")
+    file: Path = PALETTES_SOURCE_DIR.joinpath(snake_case(title) + ".yaml")
     if file.exists():
         typer.confirm("File already exists! Override?", abort=True)
 

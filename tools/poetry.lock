@@ -662,17 +662,6 @@ files = [
 ]
 
 [[package]]
-name = "stringcase"
-version = "1.2.0"
-description = "String case converter."
-optional = false
-python-versions = "*"
-groups = ["main"]
-files = [
-    {file = "stringcase-1.2.0.tar.gz", hash = "sha256:48a06980661908efe8d9d34eab2b6c13aefa2163b3ced26972902e3bdfd87008"},
-]
-
-[[package]]
 name = "tomli"
 version = "2.2.1"
 description = "A lil' TOML parser"
@@ -767,4 +756,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.10"
-content-hash = "10b10733df43769c39ba0cacc728cbf0f715fca4ddaea8a4480b986ab205a450"
+content-hash = "1c825634b49a98542108640b8be40e6b106bb40c452ac69c5f82c59ca52204ee"
