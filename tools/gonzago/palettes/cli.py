@@ -30,20 +30,27 @@ console: Console = Console()
 
 @app.command("writers")
 def list_writers(
-    include_internal: Annotated[
+    external: Annotated[
         bool,
         typer.Option(
-            "--include_internal/--exlude_internal",
+            "--external/--no_external",
+            help="List external palette writers.",
+        ),
+    ] = True,
+    internal: Annotated[
+        bool,
+        typer.Option(
+            "--internal/--no_internal",
             "-i",
-            help="Include internal palette writers.",
+            help="List internal palette writers.",
         ),
     ] = False,
 ):
     """
-    List all available palette format writers.
+    List available palette format writers.
     """
     table: Table = Table("ID", "Suffix", "Description")
-    for writer in get_writers(include_internal):
+    for writer in get_writers(external, internal):
         if not writer.internal:
             table.add_row(writer.id, writer.suffix, writer.description)
         else:
@@ -61,20 +68,27 @@ def list_writers(
 
 @app.command("readers")
 def list_readers(
-    include_internal: Annotated[
+    external: Annotated[
         bool,
         typer.Option(
-            "--include_internal/--exlude_internal",
+            "--external/--no_external",
+            help="List external palette readers.",
+        ),
+    ] = True,
+    internal: Annotated[
+        bool,
+        typer.Option(
+            "--internal/--no_internal",
             "-i",
-            help="Include internal palette readers.",
+            help="List internal palette readers.",
         ),
     ] = False,
 ):
     """
-    List all available palette format readers.
+    List available palette format readers.
     """
     table: Table = Table("ID", "Pattern", "Description")
-    for reader in get_readers(include_internal):
+    for reader in get_readers(external, internal):
         if not reader.internal:
             table.add_row(reader.id, reader.pattern, reader.description)
         else:
@@ -94,7 +108,8 @@ def list_readers(
 def create_new_template(
     file: Path = "new_palette_template.yaml",
     title: str = "New Palette Template",
-    format: str = "template",
+    format: Optional[str] = None,  # TODO: if set then handle path suffix
+    # depth: GenerationDepth,
 ) -> None:
     """
     Create new palette template.
@@ -118,15 +133,43 @@ def create_new_template(
 
 
 @app.command("import")
-def import_palette(file: Path) -> None:
+def import_palette(
+    file: Annotated[
+        Path,
+        typer.Option(
+            "--file",
+            "-f",
+            help="File to import.",
+            exists=True,
+            file_okay=True,
+            dir_okay=False,
+            readable=True,
+            resolve_path=True,
+        ),
+    ],
+) -> None:
     """
-    Validate palette templates.
+    Import a palette from a file.
     """
     pass
 
 
 @app.command("list")
-def list_palettes(dir: Path = PALETTES_SOURCE_DIR) -> None:
+def list_palettes(
+    dir: Annotated[
+        Path,
+        typer.Option(
+            "--dir",
+            "-d",
+            help="Directory to search for palettes.",
+            exists=True,
+            file_okay=False,
+            dir_okay=True,
+            readable=True,
+            resolve_path=True,
+        ),
+    ] = PALETTES_SOURCE_DIR,
+) -> None:
     """
     List palette templates.
     """
@@ -280,17 +323,17 @@ def build_readme(src_dir: Path = PALETTES_SOURCE_DIR, dst_dir: Path = PALETTES_D
 
 
 # TODO: Externalize steps to allow for better commands.
-#def _gather_formats(include_internal: bool = False) -> List[Writer]:
+# def _gather_formats(include_internal: bool = False) -> List[Writer]:
 #    console.print("Gathering export formats")
 #    return list[get_writers(include_internal)]
 #
-#def _gather_palettes() -> None:
+# def _gather_palettes() -> None:
 #    pass
 #
-#def _export_palettes(formats: List[Writer]) -> None:
+# def _export_palettes(formats: List[Writer]) -> None:
 #    pass
 #
-#def _create_readme(src_dir: Path, dst_dir: Path, formats: List[Writer], palettes: list[Palette]) -> None:
+# def _create_readme(src_dir: Path, dst_dir: Path, formats: List[Writer], palettes: list[Palette]) -> None:
 #    console.status("Building [i]'README.md'[/i]...")
 #
 #    environment: Environment = Environment(loader=FileSystemLoader(src_dir))

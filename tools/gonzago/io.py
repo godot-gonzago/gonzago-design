@@ -57,3 +57,13 @@ def gather_files(
             path: Path = root.joinpath(current, name)
             if filter_path(path, file_filter):
                 yield path
+
+
+def ensure_folders(absolute_path: Path) -> None:
+    if not absolute_path.is_absolute():
+        raise ValueError(
+            f"Cannot ensure folders along path {absolute_path} as it is not absolute."
+        )
+    if absolute_path.is_file():
+        absolute_path = absolute_path.parent
+    absolute_path.parent.mkdir(parents=True, exist_ok=True)  # Ensure folders

@@ -104,6 +104,7 @@ def generate_default_palette(
 
 
 Read = Callable[[Path], Palette]
+Validate = Callable[[Path], bool]
 
 
 class Reader(NamedTuple):
@@ -111,6 +112,7 @@ class Reader(NamedTuple):
     pattern: str
     description: str
     read: Read
+    validate: Validate
     internal: bool = False
 
 
@@ -118,32 +120,28 @@ _READERS: Dict[str, Reader] = dict[str, Reader]()
 
 
 def register_reader(
-    id: str, pattern: str, description: str, read: Read, internal: bool = False
+    id: str, pattern: str, description: str, read: Read, validate: Validate, internal: bool = False
 ) -> None:
     if id in _READERS:
         raise ValueError(
             f"Reader with id {id} already present. All Readers must have unique ids."
         )
-    _READERS[id] = Reader(id, pattern, description, read, internal)
+    _READERS[id] = Reader(id, pattern, description, read, validate, internal)
 
 
-def get_readers(include_internal: bool = False) -> Iterator[Reader]:
+def get_readers(external: bool = True, internal: bool = False) -> Iterator[Reader]:
     for _, reader in _READERS.items():
-        if not reader.internal or include_internal:
+        if (not reader.internal and external) or (reader.internal and internal):
             yield reader
 
 
-def get_reader_from_id(id: str, include_internal: bool = True) -> Reader:
+def get_reader_from_id(id: str) -> Reader:
     if id in _READERS.keys():
-        reader: Reader = _READERS[id]
-        if not reader.internal or include_internal:
-            return reader
-        else:
-            raise ValueError(f"Only internal reader found with id {id}.")
+        return _READERS[id]
     raise ValueError(f"There is no reader with id {id}.")
 
 
-def get_reader_for_file(file: Path, include_internal: bool = True) -> Reader:
+def get_reader_for_file(file: Path) -> Reader:
     if not file.is_file():
         raise ValueError(f"Path {file} is not a file.")
     if not file.suffix:
@@ -153,10 +151,8 @@ def get_reader_for_file(file: Path, include_internal: bool = True) -> Reader:
 
     for _, reader in _READERS.items():
         if file.match(reader.pattern):
-            if not reader.internal or include_internal:
-                return reader
-            else:
-                raise ValueError(f"Only internal reader found for path {file}.")
+            return reader
+
     raise ValueError(f"No reader found for path {file}.")
 
 
@@ -199,36 +195,32 @@ def register_writer(
     )
 
 
-def get_writers(include_internal: bool = False) -> Iterator[Writer]:
+def get_writers(external: bool = True, internal: bool = False) -> Iterator[Writer]:
     for _, writer in _WRITERS.items():
-        if not writer.internal or include_internal:
+        if (not writer.internal and external) or (writer.internal and internal):
             yield writer
 
 
-def get_writer_from_id(id: str, include_internal: bool = True) -> Writer:
+def get_writer_from_id(id: str) -> Writer:
     if id in _WRITERS.keys():
-        writer: Writer = _WRITERS[id]
-        if not writer.internal or include_internal:
-            return writer
-        else:
-            raise ValueError(f"Only internal writer found with id {id}.")
+        return _WRITERS[id]
     raise ValueError(f"There is no writer with id {id}.")
 
 
-class PaletteFile(NamedTuple):
-    path: Path
-    rel_path: Path
-
-    def read(file: Path) -> Palette:
-        if not file.exists():
-            raise FileNotFoundError(f"File not found at path {file}.")
-        reader: Reader = get_reader_for_file(file)
-        palette: Palette = reader.read(file)
-        return palette
-
-    def write(writer: Writer, palette: Palette, file: Path) -> None:
-        if not file.suffix:
-            raise ValueError(
-                f"File path {file} has wrong suffix. Writer needs suffix {writer.suffix}."
-            )
-        writer.write(palette, file)
+#class PaletteFile(NamedTuple):
+#    path: Path
+#    rel_path: Path
+#
+#    def read(file: Path) -> Palette:
+#        if not file.exists():
+#            raise FileNotFoundError(f"File not found at path {file}.")
+#        reader: Reader = get_reader_for_file(file)
+#        palette: Palette = reader.read(file)
+#        return palette
+#
+#    def write(writer: Writer, palette: Palette, file: Path) -> None:
+#        if not file.suffix:
+#            raise ValueError(
+#                f"File path {file} has wrong suffix. Writer needs suffix {writer.suffix}."
+#            )
+#        writer.write(palette, file)

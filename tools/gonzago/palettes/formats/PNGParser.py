@@ -10,6 +10,10 @@ def read(file: Path) -> Palette:
     raise NotImplementedError()
 
 
+def validate(file: Path) -> bool:
+    raise NotImplementedError()
+
+
 def write(palette: Palette, file: Path, scale: int = 1) -> None:
     """
     PNG
@@ -68,7 +72,7 @@ def write_32(palette: Palette, file: Path) -> None:
     write(palette, file, 32)
 
 
-register_reader("png", "*.png", "PNG palette image.", read)
+register_reader("png", "*.png", "PNG palette image.", read, validate)
 register_writer("png", ".png", "PNG palette image with size 1px.", write)
 register_writer("png-8", ".x8.png", "PNG palette image with size 8px.", write_8)
 register_writer("png-32", ".x32.png", "PNG palette image with size 32px.", write_32)

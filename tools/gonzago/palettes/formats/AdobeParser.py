@@ -12,6 +12,10 @@ def read(file: Path) -> Palette:
     raise NotImplementedError()
 
 
+def validate(file: Path) -> bool:
+    raise NotImplementedError()
+
+
 def write(palette: Palette, file: Path) -> None:
     #    # https://medium.com/swlh/mastering-adobe-color-file-formats-d29e43fde8eb
     #    # http://www.selapa.net/swatches/colors/fileformats.php#adobe_ase
@@ -44,5 +48,5 @@ def write(palette: Palette, file: Path) -> None:
     raise NotImplementedError()
 
 
-register_reader(ID, PATTERN, DESCRIPTION, read)
+register_reader(ID, PATTERN, DESCRIPTION, read, validate)
 register_writer(ID, SUFFIX, DESCRIPTION, write)

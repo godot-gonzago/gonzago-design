@@ -45,7 +45,7 @@ def read(file: Path) -> Palette:
 
 
 def _match_reader(file: Path) -> bool:
-    for reader in get_readers(True):
+    for reader in get_readers(internal=True):
         if file.match(reader.pattern):
             return True
     return False

@@ -18,6 +18,10 @@ def read(file: Path) -> Palette:
         return Palette.model_validate(data)
 
 
+def validate(file: Path) -> bool:
+    return True
+
+
 def write(palette: Palette, file: Path) -> None:
     if not file.match(PATTERN):
         raise TypeError(f"{file} is not a valid template path")
@@ -27,5 +31,5 @@ def write(palette: Palette, file: Path) -> None:
         yaml.safe_dump(data, stream, sort_keys=False)
 
 
-register_reader(ID, PATTERN, DESCRIPTION, read, True)
+register_reader(ID, PATTERN, DESCRIPTION, read, validate, True)
 register_writer(ID, SUFFIX, DESCRIPTION, write, True)

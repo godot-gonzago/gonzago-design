@@ -13,6 +13,10 @@ def read(file: Path) -> Palette:
     raise NotImplementedError()
 
 
+def validate(file: Path) -> bool:
+    raise NotImplementedError()
+
+
 def write(palette: Palette, file: Path) -> None:
     with file.open("w") as f:
         f.write("GIMP Palette\n")
@@ -37,5 +41,5 @@ def write(palette: Palette, file: Path) -> None:
                 f.write(f" - {entry.description}")
 
 
-register_reader(ID, PATTERN, DESCRIPTION, read)
+register_reader(ID, PATTERN, DESCRIPTION, read, validate)
 register_writer(ID, SUFFIX, DESCRIPTION, write)

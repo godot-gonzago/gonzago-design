@@ -30,9 +30,13 @@ def read(file: Path) -> Palette:
     raise NotImplementedError()
 
 
+def validate(file: Path) -> bool:
+    raise NotImplementedError()
+
+
 def write(palette: Palette, file: Path) -> None:
     raise NotImplementedError()
 
 
-register_reader(ID, PATTERN, DESCRIPTION, read)
+register_reader(ID, PATTERN, DESCRIPTION, read, validate)
 register_writer(ID, SUFFIX, DESCRIPTION, write)
