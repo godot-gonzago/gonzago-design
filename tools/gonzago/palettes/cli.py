@@ -184,7 +184,7 @@ def list_palettes(
             status.update()
             rel_path: str = palette_file.rel_path.as_posix()
             try:
-                template = palette_file.reader.read(palette_file.path)
+                template = palette_file.read()
                 table.add_row(
                     rel_path,
                     template.title,
@@ -246,9 +246,8 @@ def export_palettes(
     for palette_file in get_palette_files(src):
         console.print(f"Exporting '{palette_file.rel_path.as_posix()}'...")
 
-        palette: Palette
         try:
-            palette = palette_file.reader.read(palette_file.path)
+            palette_file.read()
         except Exception as e:
             console.print(
                 (
@@ -260,14 +259,12 @@ def export_palettes(
             )
             continue
 
-        export_base_path: Path = dst_dir.joinpath(palette_file.rel_path).resolve()
         for id in formats:
             try:
                 writer: Writer = get_writer_from_id(id)
-                export_path: Path = writer.build_file_path(export_base_path)
-                export_rel_path: Path = export_path.relative_to(dst_dir)
-                writer.write(palette, export_path)
-                console.print(f"Exported '[i]{export_rel_path.as_posix()}[/i]'")
+                palette_file_out = palette_file.create_output_file(dst_dir, writer)
+                palette_file_out.write()
+                console.print(f"Exported '[i]{palette_file_out.rel_path.as_posix()}[/i]'")
             except Exception as e:
                 console.print(
                     (
@@ -300,7 +297,7 @@ def build_readme(src_dir: Path = PALETTES_SOURCE_DIR, dst_dir: Path = PALETTES_D
         console.print(f"Reading '{palette_file.rel_path.as_posix()}'...")
         palette: Palette
         try:
-            palette = palette_file.reader.read(palette_file.path)
+            palette = palette_file.read()
             palettes.append(palette)
         except Exception as e:
             console.print(
@@ -365,20 +362,18 @@ def publish() -> None:
         console.print(f"Reading [i]'{palette_file.rel_path.as_posix()}'[/i]...")
         palette: Palette
         try:
-            palette = palette_file.reader.read(palette_file.path)
+            palette = palette_file.read()
             palettes.append(palette)
         except Exception as e:
             console.print(e, style="red")
             continue
 
         console.print(f"Exporting [i]'{palette_file.rel_path.as_posix()}'[/i]...")
-        export_base_path: Path = PALETTES_DST_DIR.joinpath(palette_file.rel_path).resolve()
         for format in formats:
             try:
-                export_path: Path = format.build_file_path(export_base_path)
-                export_rel_path: Path = export_path.relative_to(PALETTES_DST_DIR)
-                format.write(palette, export_path)
-                console.print(f"Exported [i]'{export_rel_path.as_posix()}'[/i]")
+                palette_file_out = palette_file.create_output_file(PALETTES_DST_DIR, format)
+                palette_file_out.write()
+                console.print(f"Exported [i]'{palette_file_out.rel_path.as_posix()}'[/i]")
             except Exception as e:
                 console.print(e, style="red")
                 continue

@@ -67,11 +67,6 @@ class Writer(NamedTuple):
     write: Write
     internal: bool = False
 
-    def build_file_path(self, file: Path) -> Path:
-        if not file.suffix:
-            raise ValueError(f"File path {file} is missing a suffix.")
-        return file.with_suffix(self.suffix)
-
 
 _WRITERS: Dict[str, Writer] = dict[str, Writer]()
 
