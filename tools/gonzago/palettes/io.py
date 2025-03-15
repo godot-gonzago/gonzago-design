@@ -53,6 +53,13 @@ class ReadablePaletteFile(PaletteFile):
         )
 
 
+def get_palette_file(file: Path) -> ReadablePaletteFile:
+    for reader in get_readers(internal=True):
+        if file.match(reader.pattern):
+            rel_path: Path = file.relative_to(file.parent)
+            return ReadablePaletteFile(path=file, rel_path=rel_path, reader=reader)
+
+
 def get_palette_files(root: Path, max_depth: int = -1) -> Iterator[ReadablePaletteFile]:
     for file in gather_files(root, max_depth=max_depth):
         for reader in get_readers(internal=True):

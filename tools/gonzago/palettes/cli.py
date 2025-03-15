@@ -18,7 +18,7 @@ from .parsing import (
     get_writers,
     get_writer_from_id,
 )
-from .io import get_palette_files
+from .io import get_palette_file, get_palette_files
 
 PALETTES_SOURCE_DIR: Path = src_path("./palettes")
 PALETTES_DST_DIR: Path = dst_path("palettes")
@@ -126,7 +126,7 @@ def create_new_template(
 
 @app.command("import")
 def import_palette(
-    file: Annotated[
+    path: Annotated[
         Path,
         typer.Option(
             "--file",
@@ -137,13 +137,22 @@ def import_palette(
             dir_okay=False,
             readable=True,
             resolve_path=True,
+            # prompt=True
         ),
     ],
 ) -> None:
     """
     Import a palette from a file.
     """
-    pass
+    try:
+        file = get_palette_file(path)
+        file.read()
+        file_out = file.create_output_file(PALETTES_SOURCE_DIR, get_writer_from_id("template"))
+        file_out.write()
+        console.print(file_out.as_posix())
+    except Exception as e:
+        console.print_exception()
+        #console.print(e, style="red")
 
 
 @app.command("list")
