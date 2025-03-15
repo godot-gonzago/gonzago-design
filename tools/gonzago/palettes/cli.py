@@ -260,7 +260,6 @@ def build_readme(src_dir: Path = PALETTES_SOURCE_DIR, dst_dir: Path = PALETTES_D
     environment: Environment = Environment(loader=FileSystemLoader(src_dir))
     environment.trim_blocks = True
     environment.lstrip_blocks = True
-    environment.filters["hex_format"] = hex_format
     template: Template = environment.get_template("README.md.jinja")
     formats: list[Writer] = list(get_writers())
     palettes: list[Palette] = list()
@@ -288,12 +287,6 @@ def build_readme(src_dir: Path = PALETTES_SOURCE_DIR, dst_dir: Path = PALETTES_D
     path.write_text(content)
 
     console.print("Done")
-
-
-def hex_format(color: PaletteEntry) -> str:
-    c = color.color.as_rgb_tuple()
-    hex: str = f"{c[0]:02x}{c[1]:02x}{c[2]:02x}"
-    return hex
 
 
 @app.callback(no_args_is_help=True)

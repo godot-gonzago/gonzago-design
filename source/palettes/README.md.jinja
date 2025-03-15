@@ -82,8 +82,8 @@ There are no palette formats.
 </tr>
 {% for color in palette.colors %}
 <tr>
-<td><img src="https://placehold.co/24x24/{{ color|hex_format }}/{{ color|hex_format }}/png" /></td>
-<td><code>#{{ color|hex_format }}</code></td>
+<td><img src="https://placehold.co/24x24/{{ color.color.as_hex().lstrip('#') }}/{{ color.color.as_hex().lstrip('#') }}/png" /></td>
+<td><code>{{ color.color.as_hex() }}</code></td>
 <td>{{ color.name|default('', true) }}</td>
 <td>{{ color.description|default('', true) }}</td>
 </tr>
