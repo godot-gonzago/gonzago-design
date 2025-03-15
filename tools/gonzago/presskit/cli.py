@@ -5,7 +5,6 @@ from rich.console import Console
 
 from ..config import dst_path, src_path
 
-
 PRESSKIT_SRC: Path = src_path("./engine/presskit")
 PRESSKIT_DST: Path = dst_path("presskit")
 

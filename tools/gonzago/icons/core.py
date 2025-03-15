@@ -1,9 +1,9 @@
 from datetime import date as Date
-from pathlib import Path
 from typing import Annotated, List, Optional
-from pydantic import BaseModel, PositiveInt, constr, FilePath, StringConstraints
-from pydantic_extra_types.semantic_version import SemanticVersion as Version
+
+from pydantic import BaseModel, FilePath, PositiveInt, StringConstraints
 from pydantic_extra_types.language_code import LanguageAlpha2
+from pydantic_extra_types.semantic_version import SemanticVersion as Version
 
 
 class ViewBox(BaseModel):

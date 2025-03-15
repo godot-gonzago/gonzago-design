@@ -1,12 +1,11 @@
 from pathlib import Path
 from typing import Optional
 
-
-#class GonzagoError(Exception):
+# class GonzagoError(Exception):
 #    pass
 #
 #
-#class PathError(ValueError, GonzagoError):
+# class PathError(ValueError, GonzagoError):
 #    def __init__(self, path: Path, message: str = "Invalid path"):
 #        self.path = path
 #        if message is None:
@@ -14,13 +13,13 @@ from typing import Optional
 #        super().__init__(message)
 #
 #
-#class PathNotFoundError(FileNotFoundError, GonzagoError):
+# class PathNotFoundError(FileNotFoundError, GonzagoError):
 #    def __init__(self, path: Path, message: Optional[str] = "Path does not exist") -> None:
 #        super().__init__(message)
 #        self.path = path
 #
 #
-#class ParsingError(ValueError, GonzagoError):
+# class ParsingError(ValueError, GonzagoError):
 #    def __init__(self, file: Path, message: Optional[str] = None) -> None:
 #        self._file = file
 #
@@ -34,7 +33,7 @@ from typing import Optional
 #        return self._file
 #
 #
-#class NameConflictError(KeyError, GonzagoError):
+# class NameConflictError(KeyError, GonzagoError):
 #    def __init__(self, name: str, message: Optional[str]):
 #        self._name = name
 #
@@ -49,13 +48,13 @@ from typing import Optional
 #
 #
 ## raise when file cannot be read.
-#class FileTypeError(TypeError):
+# class FileTypeError(TypeError):
 #    msg: str = "File type cannot be handled"
 #    file: Optional[Path]
 #
 #
 ## raise when no writer or reader could be found.
-#class MissingFileHandlerError(LookupError):
+# class MissingFileHandlerError(LookupError):
 #    msg: str = "No matching file handler found"
 #    file: Optional[Path]
 #    format: Optional[str]

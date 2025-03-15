@@ -5,7 +5,6 @@ from rich.console import Console
 
 from ..config import dst_path, src_path
 
-
 ASSETS_SRC: Path = src_path("./assets")
 ASSETS_DST: Path = dst_path("assets")
 

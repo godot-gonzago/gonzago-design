@@ -1,19 +1,11 @@
 from pathlib import Path
-from rich.console import Console
 from typing import Annotated, Optional
+
 import typer
+from rich.console import Console
 
+from . import __app_name__, __version__, application, assets, icons, palettes, presskit
 from .config import CONFIG, CONFIG_FILE, clear, save
-from . import (
-    __app_name__,
-    __version__,
-    application,
-    assets,
-    icons,
-    palettes,
-    presskit,
-)
-
 
 app = typer.Typer()
 console: Console = Console()
@@ -52,19 +44,27 @@ def init() -> None:
     Initialize Gonzago Design Tools.
     """
     src: str = CONFIG["paths"]["src"]
-    if not src or not typer.confirm(f"Source files path already set to '{src}'.\nDo you wish to keep it?"):
+    if not src or not typer.confirm(
+        f"Source files path already set to '{src}'.\nDo you wish to keep it?"
+    ):
         CONFIG["paths"]["src"] = typer.prompt("Source files path")
 
     dst: str = CONFIG["paths"]["dst"]
-    if not dst or not typer.confirm(f"Output files path already set to '{dst}'.\nDo you wish to keep it?"):
+    if not dst or not typer.confirm(
+        f"Output files path already set to '{dst}'.\nDo you wish to keep it?"
+    ):
         CONFIG["paths"]["dst"] = typer.prompt("Output files path")
 
     inkscape: str = CONFIG["inkscape"]["path"]
-    if not inkscape or not typer.confirm(f"Inkscape path already set to '{inkscape}'.\nDo you wish to keep it?"):
+    if not inkscape or not typer.confirm(
+        f"Inkscape path already set to '{inkscape}'.\nDo you wish to keep it?"
+    ):
         CONFIG["inkscape"]["path"] = typer.prompt("Inkscape path")
 
     blender: str = CONFIG["blender"]["path"]
-    if not blender or not typer.confirm(f"Blender path already set to '{blender}'.\nDo you wish to keep it?"):
+    if not blender or not typer.confirm(
+        f"Blender path already set to '{blender}'.\nDo you wish to keep it?"
+    ):
         CONFIG["blender"]["path"] = typer.prompt("Blender path")
 
     save(CONFIG)
@@ -87,7 +87,7 @@ def main(
             callback=_version_callback,
             is_eager=True,
         ),
-    ] = None
+    ] = None,
 ) -> None:
     """
     Gonzago Design Tools.

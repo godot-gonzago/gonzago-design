@@ -5,7 +5,6 @@ from rich.console import Console
 
 from ..config import dst_path, src_path
 
-
 APPLICATION_SRC = src_path("./engine/application")
 APPLICATION_DST = dst_path("application")
 

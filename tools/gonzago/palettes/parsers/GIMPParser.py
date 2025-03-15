@@ -3,7 +3,6 @@ from pathlib import Path
 from ..models import Palette
 from ..parsing import register_reader, register_writer
 
-
 ID: str = "gpl"
 PATTERN: str = "*.gpl"
 SUFFIX: str = ".gpl"

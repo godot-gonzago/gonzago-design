@@ -1,24 +1,16 @@
 from pathlib import Path
 from typing import Annotated
 
-from jinja2 import Environment, FileSystemLoader, Template
 import typer
+from jinja2 import Environment, FileSystemLoader, Template
 from rich.console import Console
 from rich.table import Table
 
-from ..utils import snake_case
 from ..config import dst_path, src_path
-from .models import (
-    Palette,
-    generate_default_palette,
-)
-from .parsing import (
-    Writer,
-    get_readers,
-    get_writers,
-    get_writer_from_id,
-)
+from ..utils import snake_case
 from .io import get_palette_file, get_palette_files
+from .models import Palette, generate_default_palette
+from .parsing import Writer, get_readers, get_writer_from_id, get_writers
 
 PALETTES_SOURCE_DIR: Path = src_path("./palettes")
 PALETTES_DST_DIR: Path = dst_path("palettes")
@@ -147,12 +139,14 @@ def import_palette(
     try:
         file = get_palette_file(path)
         file.read()
-        file_out = file.create_output_file(PALETTES_SOURCE_DIR, get_writer_from_id("template"))
+        file_out = file.create_output_file(
+            PALETTES_SOURCE_DIR, get_writer_from_id("template")
+        )
         file_out.write()
         console.print(file_out.as_posix())
     except Exception as e:
         console.print_exception()
-        #console.print(e, style="red")
+        # console.print(e, style="red")
 
 
 @app.command("list")

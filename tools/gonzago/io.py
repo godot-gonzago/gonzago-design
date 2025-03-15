@@ -2,7 +2,6 @@ import os
 from pathlib import Path
 from typing import Callable, Iterator, Optional
 
-
 PathMatcher = Callable[[Path], bool]
 PathFilter = Optional[PathMatcher | str]
 

@@ -1,12 +1,12 @@
+import getpass
 from datetime import date as Date
 from enum import Enum
-import getpass
 from typing import Annotated, List, Optional
 
 from pydantic import BaseModel, Field, StringConstraints
 from pydantic_extra_types.color import Color
-from pydantic_extra_types.semantic_version import SemanticVersion as Version
 from pydantic_extra_types.language_code import LanguageAlpha2
+from pydantic_extra_types.semantic_version import SemanticVersion as Version
 
 
 class PaletteEntry(BaseModel):
@@ -60,19 +60,10 @@ def generate_default_palette(
     if not title:
         title = "New Palette Template"
 
-    black: PaletteEntry = PaletteEntry(
-        name="Black",
-        color=Color("black")
-    )
-    white: PaletteEntry = PaletteEntry(
-        name="White",
-        color=Color("white")
-    )
+    black: PaletteEntry = PaletteEntry(name="Black", color=Color("black"))
+    white: PaletteEntry = PaletteEntry(name="White", color=Color("white"))
 
-    palette: Palette = Palette(
-        title=title,
-        colors=[black, white]
-    )
+    palette: Palette = Palette(title=title, colors=[black, white])
 
     if depth.value < GenerationDepth.BASIC.value:
         return palette

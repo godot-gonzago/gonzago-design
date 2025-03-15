@@ -1,13 +1,9 @@
 # https://play.pixelblaster.ro/blog/2017/12/18/a-quick-and-dirty-mini-plugin-system-for-python/
 # https://kaleidoescape.github.io/decorated-plugins/
 from pathlib import Path
-from typing import (
-    Iterator,
-    Optional,
-)
+from typing import Iterator, Optional
 
 from pydantic import BaseModel
-
 
 from ..io import gather_files
 from .models import Palette

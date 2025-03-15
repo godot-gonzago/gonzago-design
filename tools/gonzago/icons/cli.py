@@ -1,17 +1,16 @@
-from fnmatch import fnmatch
 import os
 import string
 import xml.etree.ElementTree as ET
-from typing import Annotated, Any, Iterator
+from fnmatch import fnmatch
 from pathlib import Path
+from typing import Annotated, Any, Iterator
 
 import typer
-from scour import scour
 from rich.console import Console
+from scour import scour
 
 from ..config import dst_path, src_path
 from ..io import gather_files
-
 
 ICONS_SOURCE_DIR: Path = src_path("./engine/editor_icons")
 ICONS_DST_DIR: Path = dst_path("icons")

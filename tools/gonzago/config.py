@@ -1,9 +1,9 @@
+import sys
 from pathlib import Path
 from shutil import rmtree
-import sys
-from tomlkit import TOMLDocument, dumps, parse
 
 import typer
+from tomlkit import TOMLDocument, dumps, parse
 
 from gonzago import __app_name__
 

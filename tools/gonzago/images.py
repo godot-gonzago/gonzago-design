@@ -4,7 +4,6 @@ import typer
 from scour import scour
 from typing_extensions import Annotated
 
-
 app = typer.Typer()
 
 

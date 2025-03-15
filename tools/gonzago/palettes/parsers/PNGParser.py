@@ -57,7 +57,9 @@ def write(palette: Palette, file: Path, scale: int = 1) -> None:
 
     # Test here https://www.metadata2go.com/view-metadata
     info: PngInfo = PngInfo()
-    metadata: dict = palette.model_dump(exclude=['colors'], mode="json", exclude_defaults=True)
+    metadata: dict = palette.model_dump(
+        exclude=["colors"], mode="json", exclude_defaults=True
+    )
     for key, value in metadata.items():
         info.add_text(f"dcm_{key}", str(value))
     info.add_text("dcm_scale", str(scale))
