@@ -1,24 +1,22 @@
 from datetime import date as Date
 from enum import Enum
-from typing import List, Optional, Set
+from typing import Annotated, List, Optional, Set
 
-from pydantic import BaseModel, conlist, constr
+from pydantic import BaseModel, Field, StringConstraints
 from pydantic_extra_types.color import Color
-
-from ..pydantic import Version
+from pydantic_extra_types.semantic_version import SemanticVersion as Version
 
 
 class PaletteEntry(BaseModel):
-    name: str = constr(min_length=1)
+    name: Annotated[str, StringConstraints(min_length=1)]
     description: Optional[str] = None
     color: Color
-    #mapped_color: Optional[Color]
 
 
 # Dublin Core Metadata
 # https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-3
 class Palette(BaseModel):
-    title: str = constr(min_length=1)
+    title: Annotated[str, StringConstraints(min_length=1)]
     description: Optional[str] = None
     version: Optional[Version] = None
     date: Optional[Date] = None
@@ -33,9 +31,7 @@ class Palette(BaseModel):
     rights: Optional[str] = None
     license: Optional[str] = None
     coverage: Optional[str] = None
-    #mapped_description: Optional[str] = None
-    #mapped_identifier: Optional[str] = None
-    colors: list[PaletteEntry] = conlist(PaletteEntry, min_length=1)
+    colors: Annotated[List[PaletteEntry], Field(min_length=1)]
 
 
 class GenerationDepth(Enum):
@@ -58,7 +54,7 @@ def generate_default_palette(
         return palette
 
     palette.description = "A brand new palette template."
-    palette.version = Version(1, 0, 0)
+    palette.version = Version.validate_from_str("1.0.0")
     palette.source = "https://github.com/godot-gonzago"
     palette.publisher = "Gonzago Framework"
     palette.creator = "David Krummenacher"
