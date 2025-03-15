@@ -9,13 +9,13 @@ from rich.table import Table
 from ..config import dst_path, src_path
 from .core import (
     Palette,
+    Writer,
     generate_default_palette,
     get_readers,
     get_writers,
     get_writer_from_id,
 )
 from .io import (
-    Writer,
     read,
     find_palettes,
 )
