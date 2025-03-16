@@ -22,6 +22,13 @@ CONFIG_FILE: Path = APP_DIR.joinpath("config.yaml").resolve()
 # https://maxb2.github.io/typer-config/latest/
 # https://github.com/pypae/pydantic-typer#readme
 
+# Installed software discovery
+# https://www.geeksforgeeks.org/get-a-list-of-installed-softwares-in-windows-using-python/
+# https://medium.com/@tubelwj/winreg-python-library-to-retrieve-installed-software-information-on-windows-machines-f1f14b39650f
+# https://docs.python.org/3/library/winreg.html
+# https://github.com/rominf/winapps
+# Probably easier just to ask on init
+
 
 # https://docs.pydantic.dev/latest/concepts/pydantic_settings/
 class Settings(BaseSettings):
