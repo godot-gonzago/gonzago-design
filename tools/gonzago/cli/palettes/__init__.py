@@ -7,20 +7,18 @@ from .list_readers import list_readers
 from .list_writers import list_writers
 from .publish import publish
 
-palettes = typer.Typer(
-    name="palettes", help="Color palette tools.", no_args_is_help=True
-)
+palettes_app = typer.Typer()
 
-palettes.command("create")(create)
-palettes.command("import")(import_palette)
-palettes.command("list")(list_palettes)
-palettes.command("readers")(list_readers)
-palettes.command("writers")(list_writers)
-palettes.command("publish")(publish)
+palettes_app.command("create")(create)
+palettes_app.command("import")(import_palette)
+palettes_app.command("list")(list_palettes)
+palettes_app.command("readers")(list_readers)
+palettes_app.command("writers")(list_writers)
+palettes_app.command("publish")(publish)
 
 
-@palettes.callback(no_args_is_help=True)
-def main() -> None:
+@palettes_app.callback(no_args_is_help=True)
+def palettes_callback() -> None:
     """
     Color palette tools.
     """
