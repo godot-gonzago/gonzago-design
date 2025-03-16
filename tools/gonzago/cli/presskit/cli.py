@@ -1,10 +1,8 @@
 import typer
 from rich.console import Console
 
-from ..config import CONFIG
-
-APPLICATION_SRC = CONFIG.src_path("./engine/application")
-APPLICATION_DST = CONFIG.dst_path("application")
+# PRESSKIT_SRC: Path = CONFIG.src_path("./engine/presskit")
+# PRESSKIT_DST: Path = CONFIG.dst_path("presskit")
 
 
 app = typer.Typer()
@@ -27,7 +25,7 @@ def build_readme():
 @app.callback(no_args_is_help=True)
 def main() -> None:
     """
-    Application asset tools.
+    Presskit tools.
     """
 
 

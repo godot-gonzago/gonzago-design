@@ -6,11 +6,11 @@ from jinja2 import Environment, FileSystemLoader, Template
 from rich.console import Console
 from rich.table import Table
 
-from ..config import CONFIG
-from ..utils import snake_case
-from .io import get_palette_file, get_palette_files
-from .models import Palette
-from .parsing import PaletteReader, PaletteWriter
+from ...core.config import CONFIG
+from ...core.palettes.io import get_palette_file, get_palette_files
+from ...core.palettes.models import Palette
+from ...core.palettes.parsing import PaletteReader, PaletteWriter
+from ...core.utils import snake_case
 
 PALETTES_SOURCE_DIR: Path = CONFIG.src_path("./palettes")
 PALETTES_DST_DIR: Path = CONFIG.dst_path("palettes")

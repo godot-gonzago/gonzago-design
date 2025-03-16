@@ -4,7 +4,7 @@ import typer
 from scour import scour
 from typing_extensions import Annotated
 
-app = typer.Typer()
+# app = typer.Typer()
 
 
 _SCOUR_OPTIONS = scour.parse_args(
@@ -39,7 +39,7 @@ def _minimize_svg(src_file: Path, out_file: Path, scour_options=_SCOUR_OPTIONS) 
     scour.start(scour_options, input, output)
 
 
-@app.command()
+# @app.command()
 def optimize_icons(
     src_dir: Annotated[
         Path,
@@ -69,7 +69,7 @@ def optimize_icons(
 
 # https://wiki.inkscape.org/wiki/Using_the_Command_Line
 # https://inkscape.org/doc/inkscape-man.html
-@app.command()
+# @app.command()
 def inkscape_to_png(
     src_file: Annotated[
         Path,
@@ -113,7 +113,7 @@ def inkscape_to_png(
     pass
 
 
-@app.command()
+# @app.command()
 def svg_to_png(
     src_file: Annotated[
         Path,
@@ -220,20 +220,20 @@ def build_os_icons(src_files: set[Path], out_dir: Path) -> None:
     pass
 
 
-@app.command()
+# @app.command()
 def build_splash_image() -> None:
     pass
 
 
-@app.callback(no_args_is_help=True)
+# @app.callback(no_args_is_help=True)
 def main() -> None:
     """
     Editor images tools.
     """
 
 
-if __name__ == "__main__":
-    app()
+# if __name__ == "__main__":
+#    app()
 
 # from base64 import b64encode
 # #svg: str = (

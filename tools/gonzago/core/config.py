@@ -19,6 +19,8 @@ APP_DIR: Path = Path(typer.get_app_dir(__app_name__)).resolve()
 CONFIG_FILE: Path = APP_DIR.joinpath("config.yaml").resolve()
 
 # TODO: Look at https://github.com/lincolnloop/goodconf/tree/main
+# https://maxb2.github.io/typer-config/latest/
+# https://github.com/pypae/pydantic-typer#readme
 
 
 # https://docs.pydantic.dev/latest/concepts/pydantic_settings/
@@ -40,7 +42,7 @@ class Settings(BaseSettings):
             YamlConfigSettingsSource(settings_cls),
         )
 
-    dst: DirectoryPath = Path(__file__).joinpath("../../..").resolve()
+    dst: DirectoryPath = Path(__file__).joinpath("../../../..").resolve()
     src: DirectoryPath = dst.joinpath("source").resolve()
 
     max_depth: int = 8

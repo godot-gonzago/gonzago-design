@@ -32,7 +32,7 @@ scour = "^0.38.2"
 pytest = "^7.4.3"
 
 [tool.poetry.scripts]
-gonzago = 'gonzago.cli:app'
+gonzago = 'gonzago.cli.main:app'
 
 [build-system]
 requires = ["poetry-core"]

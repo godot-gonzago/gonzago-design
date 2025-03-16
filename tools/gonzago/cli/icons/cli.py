@@ -9,8 +9,8 @@ import typer
 from rich.console import Console
 from scour import scour
 
-from ..config import CONFIG
-from ..io import gather_files
+from gonzago.core.config import CONFIG
+from gonzago.core.io import gather_files
 
 ICONS_SOURCE_DIR: Path = CONFIG.src_path("./engine/editor_icons")
 ICONS_DST_DIR: Path = CONFIG.dst_path("icons")

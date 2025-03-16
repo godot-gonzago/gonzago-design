@@ -3,15 +3,22 @@ from typing import Annotated, Optional
 import typer
 from rich.console import Console
 
-from . import __app_name__, __version__, application, assets, icons, palettes, presskit
-from .config import CONFIG
+from gonzago import __app_name__, __version__
+from gonzago.cli import (
+    application,
+    assets,
+    # icons,
+    palettes,
+    presskit,
+)
+from gonzago.core.config import CONFIG
 
 app = typer.Typer()
 console: Console = Console()
 
 app.add_typer(application.app, name="application")
 app.add_typer(assets.app, name="assets")
-app.add_typer(icons.app, name="icons")
+# app.add_typer(icons.app, name="icons")
 app.add_typer(palettes.app, name="palettes")
 app.add_typer(presskit.app, name="presskit")
 
