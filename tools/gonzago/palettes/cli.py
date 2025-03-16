@@ -9,7 +9,7 @@ from rich.table import Table
 from ..config import dst_path, src_path
 from ..utils import snake_case
 from .io import get_palette_file, get_palette_files
-from .models import Palette, generate_default_palette
+from .models import Palette
 from .parsing import Writer, get_readers, get_writer_from_id, get_writers
 
 PALETTES_SOURCE_DIR: Path = src_path("./palettes")
@@ -109,7 +109,7 @@ def create_new_template(
     if file.exists():
         typer.confirm("File already exists! Override?", abort=True)
 
-    palette: Palette = generate_default_palette(title)
+    palette: Palette = Palette.generate_default(title)
     writer = get_writer_from_id("template")
     writer.write(palette, file)
 
