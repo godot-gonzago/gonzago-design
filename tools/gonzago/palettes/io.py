@@ -7,7 +7,7 @@ from pydantic import BaseModel
 
 from ..io import gather_files
 from .models import Palette
-from .parsing import Reader, Writer, get_readers
+from .parsing import PaletteReader, PaletteWriter
 
 
 class PaletteFile(BaseModel):
@@ -20,7 +20,7 @@ class PaletteFile(BaseModel):
 
 
 class WritablePaletteFile(PaletteFile):
-    writer: Writer
+    writer: PaletteWriter
 
     def write(self) -> None:
         if not self.writer:
@@ -29,7 +29,7 @@ class WritablePaletteFile(PaletteFile):
 
 
 class ReadablePaletteFile(PaletteFile):
-    reader: Reader
+    reader: PaletteReader
 
     def read(self) -> Palette:
         if not self.reader:
@@ -38,7 +38,9 @@ class ReadablePaletteFile(PaletteFile):
             self.palette = self.reader.read(self.path)
         return self.palette
 
-    def create_output_file(self, dir: Path, writer: Writer) -> WritablePaletteFile:
+    def create_output_file(
+        self, dir: Path, writer: PaletteWriter
+    ) -> WritablePaletteFile:
         # if not file.suffix:
         #    raise ValueError(f"File path {file} is missing a suffix.")
         rel_path: Path = self.rel_path.with_suffix(writer.suffix)
@@ -50,7 +52,7 @@ class ReadablePaletteFile(PaletteFile):
 
 
 def get_palette_file(file: Path) -> ReadablePaletteFile:
-    for reader in get_readers(internal=True):
+    for reader in PaletteReader.get_readers(internal=True):
         if file.match(reader.pattern):
             rel_path: Path = file.relative_to(file.parent)
             return ReadablePaletteFile(path=file, rel_path=rel_path, reader=reader)
@@ -58,7 +60,7 @@ def get_palette_file(file: Path) -> ReadablePaletteFile:
 
 def get_palette_files(root: Path, max_depth: int = -1) -> Iterator[ReadablePaletteFile]:
     for file in gather_files(root, max_depth=max_depth):
-        for reader in get_readers(internal=True):
+        for reader in PaletteReader.get_readers(internal=True):
             if file.match(reader.pattern):
                 rel_path: Path = file.relative_to(root)
                 yield ReadablePaletteFile(path=file, rel_path=rel_path, reader=reader)

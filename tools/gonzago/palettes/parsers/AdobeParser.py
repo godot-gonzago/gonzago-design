@@ -1,23 +1,28 @@
 from pathlib import Path
 
 from ..models import Palette
-from ..parsing import register_reader, register_writer
+from ..parsing import PaletteReader, PaletteWriter
 
 ID: str = "ase"
 PATTERN: str = "*.ase"
 SUFFIX: str = ".ase"
 DESCRIPTION = "Color palette for Adobe products (Adobe Swatch Exchange)."
+INTERNAL = False
 
 
-def read(file: Path) -> Palette:
-    raise NotImplementedError()
+class AdobePaletteReader(PaletteReader):
+    def read(self, file: Path) -> Palette:
+        raise NotImplementedError()
+
+    def validate(self, file: Path) -> bool:
+        raise NotImplementedError()
 
 
-def validate(file: Path) -> bool:
-    raise NotImplementedError()
+class AdobePaletteWriter(PaletteWriter):
+    def write(self, palette: Palette, file: Path) -> None:
+        raise NotImplementedError()
 
-
-def write(palette: Palette, file: Path) -> None:
+    # def write(palette: Palette, file: Path) -> None:
     #    # https://medium.com/swlh/mastering-adobe-color-file-formats-d29e43fde8eb
     #    # http://www.selapa.net/swatches/colors/fileformats.php#adobe_ase
     #    with out_file.open("wb") as file:
@@ -46,8 +51,13 @@ def write(palette: Palette, file: Path) -> None:
     #        # Group end
     #        file.write(b"\xC0\x02")  # Block type (Group end)
     #        file.write(b"\x00\x00\x00\x00")  # Block length (Constant for Group end)
-    raise NotImplementedError()
 
 
-register_reader(ID, PATTERN, DESCRIPTION, read, validate)
-register_writer(ID, SUFFIX, DESCRIPTION, write)
+PaletteReader._register_reader(
+    AdobePaletteReader(
+        id=ID, description=DESCRIPTION, pattern=PATTERN, internal=INTERNAL
+    )
+)
+PaletteWriter._register_writer(
+    AdobePaletteWriter(id=ID, description=DESCRIPTION, suffix=SUFFIX, internal=INTERNAL)
+)

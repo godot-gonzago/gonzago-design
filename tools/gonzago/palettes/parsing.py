@@ -1,117 +1,119 @@
+from __future__ import annotations
+from abc import ABC, abstractmethod
 from pathlib import Path
-from typing import Callable, Dict, Iterator, NamedTuple
+from typing import Annotated, ClassVar, Iterator, List, Optional
+
+from pydantic import BaseModel, ConfigDict, StringConstraints
 
 from .models import Palette
 
 
-Read = Callable[[Path], Palette]
-Validate = Callable[[Path], bool]
+class PaletteReader(BaseModel, ABC):
+    model_config = ConfigDict(frozen=True)
 
+    _READERS: ClassVar[List[PaletteReader]] = []
 
-class Reader(NamedTuple):
-    id: str
-    pattern: str
-    description: str
-    read: Read
-    validate: Validate
+    id: Annotated[str, StringConstraints(min_length=1)]
+    description: Annotated[Optional[str], StringConstraints(min_length=1)]
+    pattern: Annotated[
+        str, StringConstraints(pattern=r"^(?:/?\*{0,2}\.?[a-zA-Z][a-zA-Z0-9]*)+$")
+    ]
     internal: bool = False
 
+    @abstractmethod
+    def read(self, file: Path) -> Palette:
+        pass
 
-_READERS: Dict[str, Reader] = dict[str, Reader]()
+    @abstractmethod
+    def validate(self, file: Path) -> bool:
+        pass
+
+    @classmethod
+    def _register_reader(cls, instance: PaletteReader) -> None:
+        if any(e.id == instance.id for e in cls._READERS):
+            raise ValueError(
+                f"Reader with id {instance.id} already present. All Readers must have unique ids."
+            )
+        cls._READERS.append(instance)
+
+    @classmethod
+    def get_readers(
+        cls, external: bool = True, internal: bool = False
+    ) -> Iterator[PaletteReader]:
+        for reader in cls._READERS:
+            if (not reader.internal and external) or (reader.internal and internal):
+                yield reader
+
+    @classmethod
+    def get_reader_from_id(cls, id: str) -> PaletteReader:
+        for reader in cls._READERS:
+            if reader.id == id:
+                return reader
+        raise ValueError(f"There is no reader with id {id}.")
+
+    @classmethod
+    def get_reader_for_file(cls, file: Path) -> PaletteReader:
+        if not file.is_file():
+            raise ValueError(f"Path {file} is not a file.")
+        if not file.suffix:
+            raise ValueError(f"File path {file} is missing a suffix.")
+        if not file.exists(follow_symlinks=True):
+            raise FileNotFoundError(f"File at path {file} does not exist.")
+
+        for reader in cls._READERS:
+            if file.match(reader.pattern):
+                return reader
+
+        raise ValueError(f"No reader found for path {file}.")
 
 
-def register_reader(
-    id: str, pattern: str, description: str, read: Read, validate: Validate, internal: bool = False
-) -> None:
-    if id in _READERS:
-        raise ValueError(
-            f"Reader with id {id} already present. All Readers must have unique ids."
-        )
-    _READERS[id] = Reader(id, pattern, description, read, validate, internal)
+class PaletteWriter(BaseModel, ABC):
+    model_config = ConfigDict(frozen=True)
 
+    _WRITERS: ClassVar[List[PaletteWriter]] = []
 
-def get_readers(external: bool = True, internal: bool = False) -> Iterator[Reader]:
-    for _, reader in _READERS.items():
-        if (not reader.internal and external) or (reader.internal and internal):
-            yield reader
-
-
-def get_reader_from_id(id: str) -> Reader:
-    if id in _READERS.keys():
-        return _READERS[id]
-    raise ValueError(f"There is no reader with id {id}.")
-
-
-def get_reader_for_file(file: Path) -> Reader:
-    if not file.is_file():
-        raise ValueError(f"Path {file} is not a file.")
-    if not file.suffix:
-        raise ValueError(f"File path {file} is missing a suffix.")
-    if not file.exists(follow_symlinks=True):
-        raise FileNotFoundError(f"File at path {file} does not exist.")
-
-    for _, reader in _READERS.items():
-        if file.match(reader.pattern):
-            return reader
-
-    raise ValueError(f"No reader found for path {file}.")
-
-
-Write = Callable[[Palette, Path], None]
-
-
-class Writer(NamedTuple):
-    id: str
-    suffix: str
-    description: str
-    write: Write
+    id: Annotated[str, StringConstraints(min_length=1)]
+    description: Annotated[Optional[str], StringConstraints(min_length=1)]
+    suffix: Annotated[str, StringConstraints(pattern=r"^(?:\.[a-zA-Z][a-zA-Z0-9]*)+$")]
     internal: bool = False
 
+    @abstractmethod
+    def write(self, palette: Palette, file: Path) -> None:
+        pass
 
-_WRITERS: Dict[str, Writer] = dict[str, Writer]()
+    @classmethod
+    def _register_writer(cls, instance: PaletteWriter) -> None:
+        if any(e.id == instance.id for e in cls._WRITERS):
+            raise ValueError(
+                f"Writer with id {instance.id} already present. All Writers must have unique ids."
+            )
+        cls._WRITERS.append(instance)
 
+    @classmethod
+    def get_writers(
+        cls, external: bool = True, internal: bool = False
+    ) -> Iterator[PaletteWriter]:
+        for writer in cls._WRITERS:
+            if (not writer.internal and external) or (writer.internal and internal):
+                yield writer
 
-def register_writer(
-    id: str,
-    suffix: str,
-    description: str,
-    write: Write,
-    internal: bool = False,
-) -> None:
-    if id in _WRITERS:
-        raise ValueError(
-            f"Writer with id {id} already present. All Writers must have unique ids."
-        )
-    _WRITERS[id] = Writer(
-        id,
-        suffix,
-        description,
-        write,
-        internal,
-    )
+    @classmethod
+    def get_writer_from_id(cls, id: str) -> PaletteWriter:
+        for writer in cls._WRITERS:
+            if writer.id == id:
+                return writer
+        raise ValueError(f"There is no writer with id {id}.")
 
+    @classmethod
+    def get_writers_for_file(cls, file: Path) -> Iterator[PaletteWriter]:
+        if not file.is_file():
+            raise ValueError(f"Path {file} is not a file.")
+        if not file.suffix:
+            raise ValueError(f"File path {file} is missing a suffix.")
 
-def get_writers(external: bool = True, internal: bool = False) -> Iterator[Writer]:
-    for _, writer in _WRITERS.items():
-        if (not writer.internal and external) or (writer.internal and internal):
-            yield writer
+        posix: str = file.as_posix()
+        for writer in cls._WRITERS:
+            if posix.endswith(writer.suffix):
+                yield writer
 
-
-def get_writer_from_id(id: str) -> Writer:
-    if id in _WRITERS.keys():
-        return _WRITERS[id]
-    raise ValueError(f"There is no writer with id {id}.")
-
-
-def get_writers_for_file(file: Path) -> Iterator[Writer]:
-    if not file.is_file():
-        raise ValueError(f"Path {file} is not a file.")
-    if not file.suffix:
-        raise ValueError(f"File path {file} is missing a suffix.")
-
-    posix: str = file.as_posix()
-    for _, writer in _WRITERS.items():
-        if posix.endswith(writer.suffix):
-            yield writer
-
-    raise ValueError(f"No reader found for path {file}.")
+        raise ValueError(f"No reader found for path {file}.")

@@ -1,5 +1,5 @@
 from .models import Palette, PaletteEntry
-from .parsing import get_readers, get_writers
+from .parsing import PaletteReader, PaletteWriter
 from .io import get_palette_files
 from .parsers import *
 from .cli import app  # import last
@@ -7,8 +7,8 @@ from .cli import app  # import last
 __all__ = [
     "Palette",
     "PaletteEntry",
-    "get_readers",
-    "get_writers",
+    "PaletteReader",
+    "PaletteWriter",
     "get_palette_files",
     "app",
 ]

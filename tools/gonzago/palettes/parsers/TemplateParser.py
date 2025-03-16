@@ -3,34 +3,44 @@ from pathlib import Path
 import yaml
 
 from ..models import Palette
-from ..parsing import register_reader, register_writer
+from ..parsing import PaletteReader, PaletteWriter
 
 ID: str = "template"
 PATTERN: str = "*.yaml"
 SUFFIX: str = ".yaml"
 DESCRIPTION = "Gonzago palette template."
+INTERNAL = True
 
 
-def read(file: Path) -> Palette:
-    if not file.match(PATTERN) or not file.is_file():
-        raise TypeError(f"{file} is not a valid template path")
-    with file.open() as stream:
-        data: dict = yaml.safe_load(stream)
-        return Palette.model_validate(data)
+class TemplatePaletteReader(PaletteReader):
+    def read(self, file: Path) -> Palette:
+        if not file.match(PATTERN) or not file.is_file():
+            raise TypeError(f"{file} is not a valid template path")
+        with file.open() as stream:
+            data: dict = yaml.safe_load(stream)
+            return Palette.model_validate(data)
+
+    def validate(self, file: Path) -> bool:
+        return True
 
 
-def validate(file: Path) -> bool:
-    return True
+class TemplatePaletteWriter(PaletteWriter):
+    def write(self, palette: Palette, file: Path) -> None:
+        if not file.match(PATTERN):
+            raise TypeError(f"{file} is not a valid template path")
+        data: dict = palette.model_dump(mode="json", exclude_unset=True)
+        file.parent.mkdir(parents=True, exist_ok=True)  # Ensure folders
+        with file.open("w") as stream:
+            yaml.safe_dump(data, stream, sort_keys=False)
 
 
-def write(palette: Palette, file: Path) -> None:
-    if not file.match(PATTERN):
-        raise TypeError(f"{file} is not a valid template path")
-    data: dict = palette.model_dump(mode="json", exclude_unset=True)
-    file.parent.mkdir(parents=True, exist_ok=True)  # Ensure folders
-    with file.open("w") as stream:
-        yaml.safe_dump(data, stream, sort_keys=False)
-
-
-register_reader(ID, PATTERN, DESCRIPTION, read, validate, True)
-register_writer(ID, SUFFIX, DESCRIPTION, write, True)
+PaletteReader._register_reader(
+    TemplatePaletteReader(
+        id=ID, description=DESCRIPTION, pattern=PATTERN, internal=INTERNAL
+    )
+)
+PaletteWriter._register_writer(
+    TemplatePaletteWriter(
+        id=ID, description=DESCRIPTION, suffix=SUFFIX, internal=INTERNAL
+    )
+)

@@ -1,6 +1,7 @@
+from __future__ import annotations
 import getpass
 from datetime import date as Date
-from enum import Enum
+from enum import IntEnum
 from typing import Annotated, List, Optional
 
 from pydantic import BaseModel, Field, StringConstraints
@@ -9,7 +10,7 @@ from pydantic_extra_types.language_code import LanguageAlpha2
 from pydantic_extra_types.semantic_version import SemanticVersion as Version
 
 
-class GenerationDepth(Enum):
+class GenerationDepth(IntEnum):
     MINIMAL = 1
     BASIC = 2
     ADVANCED = 3
@@ -53,17 +54,17 @@ class Palette(BaseModel):
         ),
     ] = None
 
-    @classmethod
+    @staticmethod
     def generate_default(
-        cls, title: str, depth: GenerationDepth = GenerationDepth.BASIC
-    ):
+        title: str, depth: GenerationDepth = GenerationDepth.BASIC
+    ) -> Palette:
         if not title:
             title = "New Palette Template"
 
         black: PaletteEntry = PaletteEntry(name="Black", color=Color("black"))
         white: PaletteEntry = PaletteEntry(name="White", color=Color("white"))
 
-        palette: Palette = cls(title=title, colors=[black, white])
+        palette: Palette = Palette(title=title, colors=[black, white])
 
         if depth.value < GenerationDepth.BASIC.value:
             return palette

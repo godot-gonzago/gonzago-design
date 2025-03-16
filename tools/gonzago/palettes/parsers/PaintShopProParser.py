@@ -1,23 +1,27 @@
 from pathlib import Path
 
 from ..models import Palette
-from ..parsing import register_reader, register_writer
+from ..parsing import PaletteReader, PaletteWriter
 
 ID: str = "paintshop"
 PATTERN: str = "*.pal"
 SUFFIX: str = ".pal"
 DESCRIPTION = "Paintshop Pro color palette."
+INTERNAL = False
 
 
-def read(file: Path) -> Palette:
-    raise NotImplementedError()
+class PaintShopProPaletteReader(PaletteReader):
+    def read(self, file: Path) -> Palette:
+        raise NotImplementedError()
+
+    def validate(self, file: Path) -> bool:
+        raise NotImplementedError()
 
 
-def validate(file: Path) -> bool:
-    raise NotImplementedError()
+class PaintShopProPaletteWriter(PaletteWriter):
+    def write(self, palette: Palette, file: Path) -> None:
+        raise NotImplementedError()
 
-
-def write(palette: Palette, file: Path) -> None:
     #    # https://liero.nl/lierohack/docformats/other-jasc.html
     #    # JASC-PAL      <- constant string
     #    # 0100          <- constant version of palette file format
@@ -27,8 +31,15 @@ def write(palette: Palette, file: Path) -> None:
     #    # 0 0 255
     #    # 255 255 0
     #    pass
-    raise NotImplementedError()
 
 
-register_reader(ID, PATTERN, DESCRIPTION, read, validate)
-register_writer(ID, SUFFIX, DESCRIPTION, write)
+PaletteReader._register_reader(
+    PaintShopProPaletteReader(
+        id=ID, description=DESCRIPTION, pattern=PATTERN, internal=INTERNAL
+    )
+)
+PaletteWriter._register_writer(
+    PaintShopProPaletteWriter(
+        id=ID, description=DESCRIPTION, suffix=SUFFIX, internal=INTERNAL
+    )
+)

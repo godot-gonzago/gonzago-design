@@ -10,7 +10,7 @@ from ..config import dst_path, src_path
 from ..utils import snake_case
 from .io import get_palette_file, get_palette_files
 from .models import Palette
-from .parsing import Writer, get_readers, get_writer_from_id, get_writers
+from .parsing import PaletteReader, PaletteWriter
 
 PALETTES_SOURCE_DIR: Path = src_path("./palettes")
 PALETTES_DST_DIR: Path = dst_path("palettes")
@@ -42,7 +42,7 @@ def list_writers(
     List available palette format writers.
     """
     table: Table = Table("ID", "Suffix", "Description")
-    for writer in get_writers(external, internal):
+    for writer in PaletteWriter.get_writers(external, internal):
         if not writer.internal:
             table.add_row(writer.id, writer.suffix, writer.description)
         else:
@@ -80,7 +80,7 @@ def list_readers(
     List available palette format readers.
     """
     table: Table = Table("ID", "Pattern", "Description")
-    for reader in get_readers(external, internal):
+    for reader in PaletteReader.get_readers(external, internal):
         if not reader.internal:
             table.add_row(reader.id, reader.pattern, reader.description)
         else:
@@ -110,7 +110,7 @@ def create_new_template(
         typer.confirm("File already exists! Override?", abort=True)
 
     palette: Palette = Palette.generate_default(title)
-    writer = get_writer_from_id("template")
+    writer = PaletteWriter.get_writer_from_id("template")
     writer.write(palette, file)
 
     console.print(f"Created template file: [i]{file}[/i]", style="green")
@@ -140,7 +140,7 @@ def import_palette(
         file = get_palette_file(path)
         file.read()
         file_out = file.create_output_file(
-            PALETTES_SOURCE_DIR, get_writer_from_id("template")
+            PALETTES_SOURCE_DIR, PaletteWriter.get_writer_from_id("template")
         )
         file_out.write()
         console.print(file_out.as_posix())
@@ -213,7 +213,7 @@ def publish() -> None:
     """
 
     console.print("Gathering export formats")
-    formats: list[Writer] = list(get_writers())
+    formats: list[PaletteWriter] = list(PaletteWriter.get_writers())
 
     console.print("Gathering palettes")
     palettes: list[Palette] = list()

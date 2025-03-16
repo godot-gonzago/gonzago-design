@@ -1,23 +1,27 @@
 from pathlib import Path
 
 from ..models import Palette
-from ..parsing import register_reader, register_writer
+from ..parsing import PaletteReader, PaletteWriter
 
 ID: str = "paintnet"
 PATTERN: str = "*.txt"
 SUFFIX: str = ".txt"
 DESCRIPTION = "Paint.NET color palette."
+INTERNAL = False
 
 
-def read(file: Path) -> Palette:
-    raise NotImplementedError()
+class PaintNetPaletteReader(PaletteReader):
+    def read(self, file: Path) -> Palette:
+        raise NotImplementedError()
+
+    def validate(self, file: Path) -> bool:
+        raise NotImplementedError()
 
 
-def validate(file: Path) -> bool:
-    raise NotImplementedError()
+class PaintNetPaletteWriter(PaletteWriter):
+    def write(self, palette: Palette, file: Path) -> None:
+        raise NotImplementedError()
 
-
-def write(palette: Palette, file: Path) -> None:
     #   # https://www.getpaint.net/doc/latest/WorkingWithPalettes.html
     #   with out_file.open("w") as file:
     #        file.write(";paint.net Palette File\n")
@@ -38,8 +42,15 @@ def write(palette: Palette, file: Path) -> None:
     #            colors.append(f"FF{c[0]:02X}{c[1]:02X}{c[2]:02X}")
     #        with out_file.open("w") as file:
     #            file.writelines("\n".join(colors))
-    raise NotImplementedError()
 
 
-register_reader(ID, PATTERN, DESCRIPTION, read, validate)
-register_writer(ID, SUFFIX, DESCRIPTION, write)
+PaletteReader._register_reader(
+    PaintNetPaletteReader(
+        id=ID, description=DESCRIPTION, pattern=PATTERN, internal=INTERNAL
+    )
+)
+PaletteWriter._register_writer(
+    PaintNetPaletteWriter(
+        id=ID, description=DESCRIPTION, suffix=SUFFIX, internal=INTERNAL
+    )
+)

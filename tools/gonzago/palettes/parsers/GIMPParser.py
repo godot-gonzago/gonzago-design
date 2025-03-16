@@ -1,45 +1,53 @@
 from pathlib import Path
 
 from ..models import Palette
-from ..parsing import register_reader, register_writer
+from ..parsing import PaletteReader, PaletteWriter
 
 ID: str = "gpl"
 PATTERN: str = "*.gpl"
 SUFFIX: str = ".gpl"
 DESCRIPTION = "Gimp/Inkscape color palette."
+INTERNAL = False
 
 
-def read(file: Path) -> Palette:
-    raise NotImplementedError()
+class GIMPPaletteReader(PaletteReader):
+    def read(self, file: Path) -> Palette:
+        raise NotImplementedError()
+
+    def validate(self, file: Path) -> bool:
+        raise NotImplementedError()
 
 
-def validate(file: Path) -> bool:
-    raise NotImplementedError()
+class GIMPPaletteWriter(PaletteWriter):
+    def write(self, palette: Palette, file: Path) -> None:
+        with file.open("w") as f:
+            f.write("GIMP Palette\n")
+            f.write(f"Name: {palette.title}\n")
+            f.write(f"Columns: 0\n")
+
+            if palette.description:
+                f.write(f"# Description: {palette.description}\n")
+            if palette.version:
+                f.write(f"# Version: {palette.version}\n")
+            if palette.creator:
+                f.write(f"# Author: {palette.creator}\n")
+            if palette.source:
+                f.write(f"# Source: {palette.source}\n")
+
+            f.write(f"#")
+
+            for entry in palette.colors:
+                c = entry.color.as_rgb_tuple()
+                f.write(f"\n{c[0]:d}\t{c[1]:d}\t{c[2]:d}\t{entry.name}")
+                if entry.description:
+                    f.write(f" - {entry.description}")
 
 
-def write(palette: Palette, file: Path) -> None:
-    with file.open("w") as f:
-        f.write("GIMP Palette\n")
-        f.write(f"Name: {palette.title}\n")
-        f.write(f"Columns: 0\n")
-
-        if palette.description:
-            f.write(f"# Description: {palette.description}\n")
-        if palette.version:
-            f.write(f"# Version: {palette.version}\n")
-        if palette.creator:
-            f.write(f"# Author: {palette.creator}\n")
-        if palette.source:
-            f.write(f"# Source: {palette.source}\n")
-
-        f.write(f"#")
-
-        for entry in palette.colors:
-            c = entry.color.as_rgb_tuple()
-            f.write(f"\n{c[0]:d}\t{c[1]:d}\t{c[2]:d}\t{entry.name}")
-            if entry.description:
-                f.write(f" - {entry.description}")
-
-
-register_reader(ID, PATTERN, DESCRIPTION, read, validate)
-register_writer(ID, SUFFIX, DESCRIPTION, write)
+PaletteReader._register_reader(
+    GIMPPaletteReader(
+        id=ID, description=DESCRIPTION, pattern=PATTERN, internal=INTERNAL
+    )
+)
+PaletteWriter._register_writer(
+    GIMPPaletteWriter(id=ID, description=DESCRIPTION, suffix=SUFFIX, internal=INTERNAL)
+)
