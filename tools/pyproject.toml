@@ -17,7 +17,7 @@ dependencies = [
   "pillow",
   "scour",
 ]
-requires-python = "^3.10"
+requires-python = ">=3.10"
 authors = [
   {name = "David Krummenacher"},
   {name = "Gonzago Framework contributors"}

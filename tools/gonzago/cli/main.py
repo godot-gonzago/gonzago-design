@@ -6,9 +6,9 @@ from rich.console import Console
 from gonzago import __app_name__, __version__
 from gonzago.core.config import CONFIG
 
-# from .icons import icons_app
 from .application import application_app
 from .assets import assets_app
+from .icons import icons_app
 from .palettes import palettes_app
 from .presskit import presskit_app
 
@@ -17,7 +17,7 @@ console: Console = Console()
 
 app.add_typer(application_app, name="application")
 app.add_typer(assets_app, name="assets")
-# app.add_typer(icons_app, name="icons")
+app.add_typer(icons_app, name="icons")
 app.add_typer(palettes_app, name="palettes")
 app.add_typer(presskit_app, name="presskit")
 
