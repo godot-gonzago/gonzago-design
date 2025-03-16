@@ -4,7 +4,7 @@ import typer
 from rich.console import Console
 
 from . import __app_name__, __version__, application, assets, icons, palettes, presskit
-from .config import CONFIG, CONFIG_FILE, clear, exists, get_default, load, save
+from .config import SETTINGS, clear
 
 app = typer.Typer()
 console: Console = Console()
@@ -29,12 +29,14 @@ def open_config() -> None:
     """
     Open Gonzago Design Tools config.
     """
-    if not exists():
-        console.print("Config does not exist!")
+    # https://typer.tiangolo.com/tutorial/launch/
+    file = SETTINGS.get_yaml_file_location()
+    if not file.exists():
+        console.print(f"'{file.as_posix()}' does not exist!")
         typer.Abort()
         return
-    console.print(f"Opening {CONFIG_FILE.as_posix()}")
-    typer.launch(str(CONFIG_FILE), locate=True)
+    console.print(f"Opening '{file.as_posix()}'")
+    typer.launch(str(file), locate=True)
 
 
 @app.command("init")
@@ -42,42 +44,13 @@ def init() -> None:
     """
     Initialize Gonzago Design Tools.
     """
-    persistent = load(False)
-    persistent_keys = persistent.keys()
-    default = get_default()
-    default_keys = default.keys()
-
-    # TODO: Ask for input if default value is ok if missing in persistent (in default but not persistent)
-    # TODO: Log if setting is obsolete (in persistent but not default) and ask for removal from config
-    # TODO: Find way to validate?
-
-    # persistent_value = persistent.get(key)
-
-    src: str = CONFIG["paths"]["src"]
-    if not src or not typer.confirm(
-        f"Source files path already set to '{src}'.\nDo you wish to keep it?"
+    file = SETTINGS.get_yaml_file_location()
+    if file.exists() and not typer.confirm(
+        f"'{file.as_posix()}' already exists. Do you wish to override it?"
     ):
-        CONFIG["paths"]["src"] = typer.prompt("Source files path")
-
-    dst: str = CONFIG["paths"]["dst"]
-    if not dst or not typer.confirm(
-        f"Output files path already set to '{dst}'.\nDo you wish to keep it?"
-    ):
-        CONFIG["paths"]["dst"] = typer.prompt("Output files path")
-
-    inkscape: str = CONFIG["inkscape"]["path"]
-    if not inkscape or not typer.confirm(
-        f"Inkscape path already set to '{inkscape}'.\nDo you wish to keep it?"
-    ):
-        CONFIG["inkscape"]["path"] = typer.prompt("Inkscape path")
-
-    blender: str = CONFIG["blender"]["path"]
-    if not blender or not typer.confirm(
-        f"Blender path already set to '{blender}'.\nDo you wish to keep it?"
-    ):
-        CONFIG["blender"]["path"] = typer.prompt("Blender path")
-
-    save(CONFIG)
+        return
+    SETTINGS.save_to_yaml()
+    console.print(f"Saved config under '{file.as_posix()}'")
 
 
 def _version_callback(value: bool) -> None:

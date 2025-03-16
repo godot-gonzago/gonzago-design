@@ -3,14 +3,18 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 from shutil import rmtree
+from typing import Optional, Tuple, Type
 
 import tomlkit
 import tomlkit.toml_file
 import typer
+import yaml
 from pydantic import DirectoryPath
 from pydantic_settings import (
     BaseSettings,
+    PydanticBaseSettingsSource,
     SettingsConfigDict,
+    YamlConfigSettingsSource,
 )
 
 from gonzago import __app_name__
@@ -19,29 +23,55 @@ APP_DIR: Path = Path(typer.get_app_dir(__app_name__)).resolve()
 CONFIG_FILE: Path = APP_DIR.joinpath("config.toml").resolve()
 
 
+# https://docs.pydantic.dev/latest/concepts/pydantic_settings/
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(
-        env_file=".env",
-        env_file_encoding="utf-8",
-        yaml_file=APP_DIR.joinpath("config.yaml").resolve(),
-        yaml_file_encoding="utf-8",
+        env_file=".env", yaml_file=APP_DIR.joinpath("config.yaml").resolve()
     )
 
-    src: DirectoryPath = Path(__file__).joinpath("../../..").resolve()
-    dst: DirectoryPath = (
-        Path(__file__).joinpath("../../..").joinpath("source").resolve()
-    )
+    @classmethod
+    def settings_customise_sources(
+        cls,
+        settings_cls: Type[BaseSettings],
+        init_settings: PydanticBaseSettingsSource,
+        env_settings: PydanticBaseSettingsSource,
+        dotenv_settings: PydanticBaseSettingsSource,
+        file_secret_settings: PydanticBaseSettingsSource,
+    ) -> Tuple[PydanticBaseSettingsSource, ...]:
+        return (
+            init_settings,
+            dotenv_settings,
+            YamlConfigSettingsSource(settings_cls),
+        )
+
+    dst: DirectoryPath = Path(__file__).joinpath("../../..").resolve()
+    src: DirectoryPath = dst.joinpath("source").resolve()
 
     max_depth: int = 8
 
-    inkscape: Path
-    blender: Path
+    inkscape: Optional[Path] = None
+    blender: Optional[Path] = None
 
     def src_path(self, rel: Path | str) -> Path:
         return self.src.joinpath(rel).resolve()
 
     def dst_path(self, rel: Path | str) -> Path:
         return self.dst.joinpath(rel).resolve()
+
+    def get_yaml_file_location(self) -> Path:
+        return self.model_config.get(
+            "yaml_file"  # , APP_DIR.joinpath("config.yaml").resolve()
+        )
+
+    def save_to_yaml(self) -> None:
+        data: dict = self.model_dump(mode="json", exclude_unset=False)
+        file = self.get_yaml_file_location()
+        file.parent.mkdir(parents=True, exist_ok=True)  # Ensure folders
+        with file.open("w") as stream:
+            yaml.safe_dump(data, stream, sort_keys=False)
+
+
+SETTINGS: Settings = Settings()
 
 
 def get_default() -> tomlkit.TOMLDocument:
