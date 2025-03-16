@@ -1,7 +1,7 @@
 from pathlib import Path
 
 from ..models import Palette
-from ..parsing import PaletteReader, PaletteWriter
+from . import PaletteReader, PaletteWriter
 
 ID: str = "hex"
 PATTERN: str = "*.hex"

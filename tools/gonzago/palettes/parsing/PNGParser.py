@@ -5,7 +5,7 @@ from PIL.PngImagePlugin import PngInfo
 from pydantic import PositiveInt
 
 from ..models import Palette
-from ..parsing import PaletteReader, PaletteWriter
+from . import PaletteReader, PaletteWriter
 
 
 class PNGPaletteReader(PaletteReader):

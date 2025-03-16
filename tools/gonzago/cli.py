@@ -1,4 +1,3 @@
-from pathlib import Path
 from typing import Annotated, Optional
 
 import typer

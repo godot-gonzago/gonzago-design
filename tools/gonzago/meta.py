@@ -1,8 +1,7 @@
 from datetime import date as Date
-from enum import Enum
 from typing import Annotated, List, Optional
 
-from pydantic import BaseModel, Field, HttpUrl, StringConstraints
+from pydantic import BaseModel, HttpUrl, StringConstraints
 from pydantic_extra_types.language_code import LanguageAlpha2
 from pydantic_extra_types.semantic_version import SemanticVersion as Version
 

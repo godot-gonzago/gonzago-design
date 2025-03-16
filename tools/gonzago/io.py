@@ -46,7 +46,7 @@ def gather_files(
             dirs.clear()
         depth += 1
 
-        if not dir_filter is None:
+        if dir_filter is not None:
             for name in dirs:
                 path: Path = root.joinpath(current, name)
                 if not filter_path(path, dir_filter):

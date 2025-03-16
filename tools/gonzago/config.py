@@ -44,6 +44,9 @@ def load() -> TOMLDocument:
             f'dst = "{dst.as_posix()}"\n'
             f'src = "{src.as_posix()}"\n'
             "\n"
+            "[io]\n"
+            f"max_depth = 8\n"
+            "\n"
             "[inkscape]\n"
             f'path = "{inkscape}"\n'
             "\n"

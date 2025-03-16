@@ -11,19 +11,9 @@ Different palettes for use in Gonzago Framework and its design elements.
 <th align=\"left\">Description</th>
 </tr>
 <tr>
-<td>png</td>
-<td>.png</td>
-<td>PNG palette image with size 1px.</td>
-</tr>
-<tr>
-<td>png-8</td>
-<td>.x8.png</td>
-<td>PNG palette image with size 8px.</td>
-</tr>
-<tr>
-<td>png-32</td>
-<td>.x32.png</td>
-<td>PNG palette image with size 32px.</td>
+<td>ase</td>
+<td>.ase</td>
+<td>Color palette for Adobe products (Adobe Swatch Exchange).</td>
 </tr>
 <tr>
 <td>gpl</td>
@@ -34,11 +24,6 @@ Different palettes for use in Gonzago Framework and its design elements.
 <td>hex</td>
 <td>.hex</td>
 <td>Simple HEX color palette.</td>
-</tr>
-<tr>
-<td>ase</td>
-<td>.ase</td>
-<td>Color palette for Adobe products (Adobe Swatch Exchange).</td>
 </tr>
 <tr>
 <td>krita</td>
@@ -54,6 +39,21 @@ Different palettes for use in Gonzago Framework and its design elements.
 <td>paintshop</td>
 <td>.pal</td>
 <td>Paintshop Pro color palette.</td>
+</tr>
+<tr>
+<td>png</td>
+<td>.png</td>
+<td>PNG palette image with size 1px.</td>
+</tr>
+<tr>
+<td>png-8</td>
+<td>.x8.png</td>
+<td>PNG palette image with size 8px.</td>
+</tr>
+<tr>
+<td>png-32</td>
+<td>.x32.png</td>
+<td>PNG palette image with size 32px.</td>
 </tr>
 <tr>
 <td>scribus</td>

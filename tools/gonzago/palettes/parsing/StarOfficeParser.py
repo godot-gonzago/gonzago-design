@@ -1,7 +1,7 @@
 from pathlib import Path
 
 from ..models import Palette
-from ..parsing import PaletteReader, PaletteWriter
+from . import PaletteReader, PaletteWriter
 
 # http://www.selapa.net/swatches/colors/fileformats.php#ooo_soc
 

@@ -3,7 +3,7 @@ from pathlib import Path
 import yaml
 
 from ..models import Palette
-from ..parsing import PaletteReader, PaletteWriter
+from . import PaletteReader, PaletteWriter
 
 ID: str = "template"
 PATTERN: str = "*.yaml"

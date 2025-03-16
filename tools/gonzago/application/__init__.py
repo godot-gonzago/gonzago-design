@@ -1,4 +1,4 @@
-from .cli import app  # import last
+from .cli import app
 
 __all__ = [
     "app",

@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 import getpass
 from datetime import date as Date
 from enum import IntEnum

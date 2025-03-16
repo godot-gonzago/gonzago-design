@@ -144,7 +144,7 @@ def import_palette(
         )
         file_out.write()
         console.print(file_out.as_posix())
-    except Exception as e:
+    except Exception:
         console.print_exception()
         # console.print(e, style="red")
 
