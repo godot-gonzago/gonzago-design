@@ -45,7 +45,7 @@ class Palette(BaseModel):
     rights: Optional[str] = None
     license: Optional[str] = None
     coverage: Optional[str] = None
-    colors: Annotated[List[PaletteEntry], Field(min_length=1)]
+    colors: Annotated[List[PaletteEntry], Field(min_length=1, default_factory=list)]
     mapped_title: Annotated[Optional[str], StringConstraints(min_length=1)] = None
     mapped_description: Annotated[Optional[str], StringConstraints(min_length=1)] = None
     mapped_suffix: Annotated[

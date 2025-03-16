@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import sys
 from pathlib import Path
 from shutil import rmtree
@@ -5,11 +7,41 @@ from shutil import rmtree
 import tomlkit
 import tomlkit.toml_file
 import typer
+from pydantic import DirectoryPath
+from pydantic_settings import (
+    BaseSettings,
+    SettingsConfigDict,
+)
 
 from gonzago import __app_name__
 
 APP_DIR: Path = Path(typer.get_app_dir(__app_name__)).resolve()
 CONFIG_FILE: Path = APP_DIR.joinpath("config.toml").resolve()
+
+
+class Settings(BaseSettings):
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        env_file_encoding="utf-8",
+        yaml_file=APP_DIR.joinpath("config.yaml").resolve(),
+        yaml_file_encoding="utf-8",
+    )
+
+    src: DirectoryPath = Path(__file__).joinpath("../../..").resolve()
+    dst: DirectoryPath = (
+        Path(__file__).joinpath("../../..").joinpath("source").resolve()
+    )
+
+    max_depth: int = 8
+
+    inkscape: Path
+    blender: Path
+
+    def src_path(self, rel: Path | str) -> Path:
+        return self.src.joinpath(rel).resolve()
+
+    def dst_path(self, rel: Path | str) -> Path:
+        return self.dst.joinpath(rel).resolve()
 
 
 def get_default() -> tomlkit.TOMLDocument:
