@@ -8,19 +8,20 @@ from gonzago.cli import (
     application,
     assets,
     # icons,
-    palettes,
     presskit,
 )
 from gonzago.core.config import CONFIG
 
+from .palettes import palettes
+
 app = typer.Typer()
 console: Console = Console()
 
-app.add_typer(application.app, name="application")
-app.add_typer(assets.app, name="assets")
+app.add_typer(application.app)
+app.add_typer(assets.app)
 # app.add_typer(icons.app, name="icons")
-app.add_typer(palettes.app, name="palettes")
-app.add_typer(presskit.app, name="presskit")
+app.add_typer(palettes)
+app.add_typer(presskit.app)
 
 
 @app.command("uninit")
