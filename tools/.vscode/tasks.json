@@ -4,6 +4,11 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "CreateVirtualEnvironment",
+      "type": "shell",
+      "command":"python -m venv .venv --prompt Gonzago"
+    },
+    {
       "label": "PoetryShell",
       "type": "shell",
       "command": "poetry shell"
