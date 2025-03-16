@@ -4,7 +4,7 @@ import typer
 from rich.console import Console
 
 from . import __app_name__, __version__, application, assets, icons, palettes, presskit
-from .config import CONFIG, CONFIG_FILE, clear, save
+from .config import CONFIG, CONFIG_FILE, clear, exists, get_default, load, save
 
 app = typer.Typer()
 console: Console = Console()
@@ -29,7 +29,7 @@ def open_config() -> None:
     """
     Open Gonzago Design Tools config.
     """
-    if not CONFIG_FILE.is_file():
+    if not exists():
         console.print("Config does not exist!")
         typer.Abort()
         return
@@ -42,6 +42,17 @@ def init() -> None:
     """
     Initialize Gonzago Design Tools.
     """
+    persistent = load(False)
+    persistent_keys = persistent.keys()
+    default = get_default()
+    default_keys = default.keys()
+
+    # TODO: Ask for input if default value is ok if missing in persistent (in default but not persistent)
+    # TODO: Log if setting is obsolete (in persistent but not default) and ask for removal from config
+    # TODO: Find way to validate?
+
+    # persistent_value = persistent.get(key)
+
     src: str = CONFIG["paths"]["src"]
     if not src or not typer.confirm(
         f"Source files path already set to '{src}'.\nDo you wish to keep it?"

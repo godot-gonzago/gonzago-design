@@ -3,6 +3,7 @@ from pathlib import Path
 from shutil import rmtree
 
 import tomlkit
+import tomlkit.toml_file
 import typer
 
 from gonzago import __app_name__
@@ -11,7 +12,7 @@ APP_DIR: Path = Path(typer.get_app_dir(__app_name__)).resolve()
 CONFIG_FILE: Path = APP_DIR.joinpath("config.toml").resolve()
 
 
-def build_default() -> tomlkit.TOMLDocument:
+def get_default() -> tomlkit.TOMLDocument:
     doc = tomlkit.document()
     doc.add(tomlkit.comment(__app_name__))
     doc.add(tomlkit.nl())
@@ -63,12 +64,18 @@ def exists() -> bool:
     return CONFIG_FILE.is_file()
 
 
-def load() -> tomlkit.TOMLDocument:
-    doc = build_default()
+def load(use_fallback: bool = True) -> tomlkit.TOMLDocument:
+    if use_fallback:
+        default = get_default()
+        if exists():
+            persistent = tomlkit.parse(CONFIG_FILE.read_text())
+            default.update(persistent)
+        return default
+
     if exists():
-        persitent = tomlkit.parse(CONFIG_FILE.read_text())
-        doc.update(persitent)
-    return doc
+        return tomlkit.parse(CONFIG_FILE.read_text())
+
+    return tomlkit.document()
 
 
 def save(config: tomlkit.TOMLDocument) -> None:
@@ -81,7 +88,7 @@ def clear() -> None:
         rmtree(APP_DIR)
 
 
-CONFIG: tomlkit.TOMLDocument = load()
+CONFIG = load()
 
 
 def src_path(rel: Path | str) -> Path:
