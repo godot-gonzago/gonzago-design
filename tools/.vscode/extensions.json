@@ -3,6 +3,7 @@
       "editorconfig.editorconfig",
       "ms-python.python",
       "ms-python.vscode-pylance",
+      "ms-python.mypy-type-checker",
       "charliermarsh.ruff",
       "redhat.vscode-yaml",
       "yzhang.markdown-all-in-one",

@@ -4,7 +4,7 @@ import typer
 from rich.console import Console
 
 from . import __app_name__, __version__, application, assets, icons, palettes, presskit
-from .config import SETTINGS, clear
+from .config import CONFIG
 
 app = typer.Typer()
 console: Console = Console()
@@ -21,7 +21,7 @@ def uninit() -> None:
     """
     Uninitialize Gonzago Design Tools.
     """
-    clear()
+    CONFIG.clear_yaml()
 
 
 @app.command("open_config")
@@ -30,7 +30,7 @@ def open_config() -> None:
     Open Gonzago Design Tools config.
     """
     # https://typer.tiangolo.com/tutorial/launch/
-    file = SETTINGS.get_yaml_file_location()
+    file = CONFIG.get_yaml_file_location()
     if not file.exists():
         console.print(f"'{file.as_posix()}' does not exist!")
         typer.Abort()
@@ -44,12 +44,12 @@ def init() -> None:
     """
     Initialize Gonzago Design Tools.
     """
-    file = SETTINGS.get_yaml_file_location()
+    file = CONFIG.get_yaml_file_location()
     if file.exists() and not typer.confirm(
         f"'{file.as_posix()}' already exists. Do you wish to override it?"
     ):
         return
-    SETTINGS.save_to_yaml()
+    CONFIG.save_to_yaml()
     console.print(f"Saved config under '{file.as_posix()}'")
 
 

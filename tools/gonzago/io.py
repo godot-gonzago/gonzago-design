@@ -66,3 +66,13 @@ def ensure_folders(absolute_path: Path) -> None:
     if absolute_path.is_file():
         absolute_path = absolute_path.parent
     absolute_path.parent.mkdir(parents=True, exist_ok=True)  # Ensure folders
+
+
+# shutil.rmtree(path)
+def rmtree(path: Path) -> None:
+    if path.is_file():
+        path.unlink
+    else:
+        for child in path.iterdir():
+            rmtree(child)
+        path.rmdir()

@@ -3,10 +3,10 @@ from pathlib import Path
 import typer
 from rich.console import Console
 
-from ..config import dst_path, src_path
+from ..config import CONFIG
 
-ASSETS_SRC: Path = src_path("./assets")
-ASSETS_DST: Path = dst_path("assets")
+ASSETS_SRC: Path = CONFIG.src_path("./assets")
+ASSETS_DST: Path = CONFIG.dst_path("assets")
 
 
 app = typer.Typer()

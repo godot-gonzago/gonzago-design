@@ -1,10 +1,10 @@
 import typer
 from rich.console import Console
 
-from ..config import dst_path, src_path
+from ..config import CONFIG
 
-APPLICATION_SRC = src_path("./engine/application")
-APPLICATION_DST = dst_path("application")
+APPLICATION_SRC = CONFIG.src_path("./engine/application")
+APPLICATION_DST = CONFIG.dst_path("application")
 
 
 app = typer.Typer()

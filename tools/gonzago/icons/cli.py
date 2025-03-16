@@ -9,11 +9,11 @@ import typer
 from rich.console import Console
 from scour import scour
 
-from ..config import dst_path, src_path
+from ..config import CONFIG
 from ..io import gather_files
 
-ICONS_SOURCE_DIR: Path = src_path("./engine/editor_icons")
-ICONS_DST_DIR: Path = dst_path("icons")
+ICONS_SOURCE_DIR: Path = CONFIG.src_path("./engine/editor_icons")
+ICONS_DST_DIR: Path = CONFIG.dst_path("icons")
 
 
 app = typer.Typer()
@@ -152,7 +152,7 @@ def get_meta_data(file: Path) -> dict[str, Any]:
         "rdf:RDF/cc:Work/dc:coverage", namespaces=namespaces
     )
     license: ET.Element = metadata.find("rdf:RDF/cc:Work/cc:license", namespaces)
-    if not license is None:
+    if license is not None:
         if "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource" in license.keys():
             meta["license"] = license.get(
                 "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
@@ -241,7 +241,7 @@ def publish():
     Build optimized icons.
     """
 
-    console.print(f"Building icons...")
+    console.print("Building icons...")
     with console.status("Building templates...") as status:
         for file in find_icons(ICONS_SOURCE_DIR):
             rel_path: Path = file.relative_to(ICONS_SOURCE_DIR)
@@ -262,7 +262,7 @@ def _read_me():
         "Editor icons for use in Gonzago Framework",
         "",
         "## Icons",
-        "" "<table>",
+        "<table>",
     ]
 
     for current, dirs, files in os.walk(ICONS_SOURCE_DIR):
@@ -324,7 +324,7 @@ def _read_me():
                             subject.remove("icon")
                         if len(subject) > 0:
                             lines.append(
-                                f'          <br><var>{", ".join(subject)}</var>'
+                                f"          <br><var>{', '.join(subject)}</var>"
                             )
                     lines.extend(["        </p>", "      </td>"])
 
@@ -344,7 +344,7 @@ def _read_me():
 
 @app.command("readme")
 def build_readme():
-    console.print(f"Building readme...")
+    console.print("Building readme...")
     with console.status("Building readme...") as status:
         path: Path = ICONS_DST_DIR.joinpath("README.md").resolve()
         with path.open("w") as readme:
@@ -367,7 +367,7 @@ def build_readme():
 
                 if folder != new_folder:
                     if files_in_row == 1:
-                        readme.write('    <td colspan="2"></td>\n' "  </tr>\n")
+                        readme.write('    <td colspan="2"></td>\n  </tr>\n')
                         files_in_row = 0
                     header: str = string.capwords(
                         new_folder.as_posix().replace("/", "."), "."
@@ -412,8 +412,8 @@ def build_readme():
                     files_in_row = 0
 
             if files_in_row == 1:
-                readme.write('    <td colspan="2"></td>\n' "  </tr>\n")
-            readme.write("</tbody>\n" "</table>\n" "\n")
+                readme.write('    <td colspan="2"></td>\n  </tr>\n')
+            readme.write("</tbody>\n</table>\n\n")
 
         console.print("Done")
 
