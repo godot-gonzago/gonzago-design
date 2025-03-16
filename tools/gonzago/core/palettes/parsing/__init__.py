@@ -121,9 +121,6 @@ class PaletteWriter(BaseModel, ABC):
         raise ValueError(f"No reader found for path {file}.")
 
 
-__all__ = ["PaletteReader", "PaletteWriter"]
-
-
 # Import all modules
 for f in Path(__file__).parent.glob("*.py"):
     module_name = f.stem
