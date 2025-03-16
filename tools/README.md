@@ -21,6 +21,7 @@ Install Poetry globally.
 1. Install pipx: `python -m pip install pipx`
 2. Install Poetry: `pipx install poetry`
 3. Poetry needs its paths registered: `pipx ensurepath`
+4. Install Poetry Shell plugin `pipx inject poetry poetry-plugin-shell`, see <https://github.com/python-poetry/poetry-plugin-shell>
 
 Navigate to your terminal to this folder (if not aleady there) and setup the project locally.
 
