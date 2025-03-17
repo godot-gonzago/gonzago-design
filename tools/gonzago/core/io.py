@@ -1,9 +1,38 @@
+from __future__ import annotations
+
 import os
 from pathlib import Path
 from typing import Callable, Iterator, Optional
 
+from pydantic import BaseModel
+
 PathMatcher = Callable[[Path], bool]
 PathFilter = Optional[PathMatcher | str]
+
+# TODO: File system walker with filters that generates file info.
+#       If folder path is provided iterate through files with filder path as root,
+#       if file is provided return only file with file base path as root and filename as relative path.
+#       Allow dynamic filtering. Allow meta data (like filetype or relevant file info) for future transformers/data handlers or console output.
+#       Already handle console output here? https://typer.tiangolo.com/tutorial/progressbar/#spinner
+#       Add way to handle exceptions/console output?
+# TODO: File info with root and relative path info for transformation (match structure on output) later
+
+
+class FileInfo(BaseModel):
+    path: Path  # Full absolute path
+    root: Path  # Root folder
+    rel: Path  # Relative path to root folder
+    meta: dict = dict()
+
+
+class FileWalker(BaseModel):
+    root: Path
+
+    def with_validator(self, validator) -> FileWalker:
+        return self
+
+    def walk(self) -> Iterator[FileInfo]:
+        pass
 
 
 def filter_path(path: Path, filter: PathFilter) -> bool:
