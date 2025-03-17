@@ -38,6 +38,12 @@ class Target:
     pass
 
 
+class Provider[T](Protocol):
+    @abstractmethod
+    def get(self) -> T:
+        raise NotImplementedError
+
+
 class Validator[T](Protocol):
     @abstractmethod
     def validate(self, item: T) -> bool:
@@ -48,7 +54,3 @@ class Transformer[TIn, TOut](Protocol):
     @abstractmethod
     def transform(self, item: TIn) -> TOut:
         raise NotImplementedError
-
-
-class Task:
-    pass
