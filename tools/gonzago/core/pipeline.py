@@ -32,6 +32,9 @@ from typing import Protocol, TypeVar
 # https://medium.com/@bonnotguillaume/software-architecture-the-pipeline-design-pattern-from-zero-to-hero-b5c43d8a4e60
 # https://levelup.gitconnected.com/design-patterns-implementing-pipeline-design-pattern-824bd2d42bab
 
+# This is all to large for what this is.
+# Just use https://rivery.io/data-learning-center/etl-pipeline-python/
+
 T = TypeVar("T")
 TIn = TypeVar("TIn")
 TOut = TypeVar("TOut")
