@@ -39,7 +39,6 @@ def open_config() -> None:
     file = CONFIG.get_yaml_file_location()
     if not file.exists():
         console.print(f"'{file.as_posix()}' does not exist!")
-        typer.Abort()
         return
     console.print(f"Opening '{file.as_posix()}'")
     typer.launch(str(file), locate=True)

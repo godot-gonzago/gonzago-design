@@ -5,6 +5,8 @@ from pydantic import BaseModel, HttpUrl, StringConstraints
 from pydantic_extra_types.language_code import LanguageAlpha2
 from pydantic_extra_types.semantic_version import SemanticVersion as Version
 
+# https://rich.readthedocs.io/en/stable/protocol.html
+
 
 # Dublin Core Metadata
 # https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-3
