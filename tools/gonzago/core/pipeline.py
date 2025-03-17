@@ -28,6 +28,9 @@ from typing import Protocol, TypeVar
 # https://medium.com/@dkraczkowski/the-elegance-of-modular-data-processing-with-pythons-pipeline-approach-e63bec11d34f
 # https://github.com/dkraczkowski/dkraczkowski.github.io/tree/main/articles/crafting-data-processing-pipeline
 
+# https://dagster.io/guides/data-pipeline/data-pipeline-architecture-5-design-patterns-with-examples
+# https://medium.com/@bonnotguillaume/software-architecture-the-pipeline-design-pattern-from-zero-to-hero-b5c43d8a4e60
+# https://levelup.gitconnected.com/design-patterns-implementing-pipeline-design-pattern-824bd2d42bab
 
 T = TypeVar("T")
 TIn = TypeVar("TIn")
